@@ -1,0 +1,19 @@
+[33m4f4b8d5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m4f4b8d5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: pull --ff-only origin main: Fast-forward
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{2}: checkout: moving from corrigindo-orcament-form to main
+[33m6b972aa[m[33m ([m[1;32mcorrigindo-orcament-form[m[33m)[m HEAD@{3}: rebase (abort): returning to refs/heads/corrigindo-orcament-form
+[33m4f4b8d5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{4}: pull --rebase origin main (start): checkout 4f4b8d50627709495153fbf30d0890325b90be07
+[33m6b972aa[m[33m ([m[1;32mcorrigindo-orcament-form[m[33m)[m HEAD@{5}: commit: Atualiza ORCAMENT.FRM e remove ORCAMENT.frx
+[33mc642db8[m HEAD@{6}: commit: Resolve conflito: mantém CorrigeRateioDesconto
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{7}: checkout: moving from main to corrigindo-orcament-form
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{8}: checkout: moving from correcao-orcament-form to main
+[33mbfe2db2[m[33m ([m[1;32mcorrecao-orcament-form[m[33m)[m HEAD@{9}: reset: moving to HEAD
+[33mbfe2db2[m[33m ([m[1;32mcorrecao-orcament-form[m[33m)[m HEAD@{10}: commit: Atualiza 2 ORCAMENT.FRM
+[33mef83f8d[m[33m ([m[1;31morigin/corrigir-orcament-form[m[33m, [m[1;32mcorrigir-orcament-form[m[33m)[m HEAD@{11}: checkout: moving from corrigir-orcament-form to correcao-orcament-form
+[33mef83f8d[m[33m ([m[1;31morigin/corrigir-orcament-form[m[33m, [m[1;32mcorrigir-orcament-form[m[33m)[m HEAD@{12}: commit: Atualiza ORCAMENT.FRM
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{13}: checkout: moving from main to corrigir-orcament-form
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{14}: checkout: moving from main to main
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{15}: checkout: moving from substituir-notafisc to main
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{16}: checkout: moving from main to substituir-notafisc
+[33m7483a9a[m[33m ([m[1;31morigin/substituir-notafisc[m[33m, [m[1;32msubstituir-notafisc[m[33m)[m HEAD@{17}: commit: Substitui NOTAFISC.FRM pela versão corrigida
+[33m4f2357c[m HEAD@{18}: commit (initial): Inicio commit

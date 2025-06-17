@@ -1,0 +1,12 @@
+use IRRIGACAO
+go
+
+ALTER TABLE [Nota Fiscal]
+ALTER COLUMN Frete VARCHAR(35);
+
+
+use IRRIGACAO
+go
+
+ALTER TABLE Orçamento
+ALTER COLUMN Frete VARCHAR(35);

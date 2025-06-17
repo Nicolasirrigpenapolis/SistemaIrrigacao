@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PROJETO>
+   <BANCO NOME="DADOSNFE">
+      <TABELA NOME="Baixa Casco">
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Baixado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Seq_Casco" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da baixa"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Baixa contas pagar">
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor pago" TITULO="Valor Pago" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do juros" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Numero do cheque" TITULO="Numero do Cheque" TIPO="Texto" TAMANHO="10" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da Cobrança" TITULO="Sequencia da cobrança" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da baixa pg" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da baixa"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Baixa contas receber">
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor pago" TITULO="Valor Pago" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do juros" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Numero do cheque" TITULO="Numero do Cheque" TIPO="Texto" TAMANHO="10" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Bloqueado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Cobrança" TITULO="Sequencia da cobrança" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Seq_Bx_Receber" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da baixa"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Bancos">
+         <CAMPO NOME="Codigo do Banco" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Nome do Banco" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Codigo do Banco" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Codigo do Banco"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Carta de correção nfe">
+         <CAMPO NOME="Sequencia da correção" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da correção" TIPO="Numerico" TAMANHO="2" MASCARA="99" DEFAULT="0"/>
+         <CAMPO NOME="Justificativa cce" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Data correção" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+   <INDICE NOME="Sequencia da correção" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da correção"/>
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+   </INDICE>
+   <INDICE NOME="SeqCorrecao" TIPO="2" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+            <CAMPO NOME="Numero da correção"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Centro de Custo">
+         <CAMPO NOME="Codigo do Centro" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição do Centro" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Codigo do Centro" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Codigo do Centro"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Cheques Pre">
+         <CAMPO NOME="Sequencia do Cheque" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Codigo do Banco" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Agencia" TIPO="Texto" TAMANHO="10" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Data da entrada" TITULO="Data da Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Data Boa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor do Cheque" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Compensado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Data da Compessação" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Vendedor Responsavel" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero do cheque" TITULO="Numero do Cheque" TIPO="Texto" TAMANHO="10" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Emitente do Cheque" TIPO="Texto" TAMANHO="60" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Devolvido" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Motivo da Devolução" TIPO="Texto" TAMANHO="100" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Sequencia do Cheque" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do Cheque"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Classificação fiscal">
+         <CAMPO NOME="Sequencia da classificação" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Ncm" TIPO="Texto" TAMANHO="8" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Descrição do ncm" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Percentual de ipi" TIPO="Numerico" TAMANHO="8" DECIMAL="4" MASCARA="999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Produto diferido" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Iva" TIPO="Numerico" TAMANHO="7" DECIMAL="4" MASCARA="99,9999" DEFAULT="0"/>
+         <CAMPO NOME="Cest" TIPO="Texto" TAMANHO="7" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Redução da Bc" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da classificação" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da classificação"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Comissão Auxiliar">
+         <CAMPO NOME="Sequencia da Comissão" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Parcela" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor pago" TITULO="Valor Pago" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor restante" TITULO="Valor Restante" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Vendedor" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da Comissão" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Comissão"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Devolução de compra">
+         <CAMPO NOME="Sequencia da devolução" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da entrada" TITULO="Data da Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Data da devolução" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do ipi" TITULO="Valor Total do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total da devolução" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor total icms st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+      </TABELA>
+      <TABELA NOME="Empresa" PARAMETRO="1">
+         <CAMPO NOME="Razão social" TITULO="Razão Social" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Nome fantasia" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Cpf do emitente" TITULO="Cpf" TIPO="Texto" TAMANHO="14" MASCARA="999.999.999-99" DEFAULT="''"/>
+         <CAMPO NOME="Inscrição estadual" TIPO="Texto" TAMANHO="20" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Cnpj" TIPO="Texto" TAMANHO="18" MASCARA="99.999.999/9999-99" DEFAULT="''"/>
+         <CAMPO NOME="Rua" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Nro" TIPO="Texto" TAMANHO="8" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Bairro" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Município" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Codigo do municipio" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Uf" TIPO="Texto" TAMANHO="3" MASCARA="!!" DEFAULT="''"/>
+         <CAMPO NOME="Cep" TIPO="Texto" TAMANHO="9" MASCARA="99999-999" DEFAULT="''"/>
+         <CAMPO NOME="Fone" TIPO="Texto" TAMANHO="13" MASCARA="(99)9999-9999" DEFAULT="''"/>
+         <CAMPO NOME="Aliquota do pis" TIPO="Numerico" TAMANHO="8" DECIMAL="4" MASCARA="999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do cofins" TIPO="Numerico" TAMANHO="8" DECIMAL="4" MASCARA="999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Chave flexdocs" TIPO="Texto" TAMANHO="130" MASCARA="@a" DEFAULT="''"/>
+         <CAMPO NOME="Email" TIPO="Texto" TAMANHO="255" MASCARA="@a" DEFAULT="''"/>
+         <CAMPO NOME="Data Inicial da Ativação" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Senha Admin" TIPO="Numerico" TAMANHO="8" MASCARA="99999999" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do Iss" TITULO="Aliquota do ISS" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Baixa Pagar Auto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Baixa Receber Auto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Incrição Municipal" TIPO="Texto" TAMANHO="10" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Emite NFe" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Percentual da redução" TITULO="Percentual da Redução" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Não Controlar Estoque" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Impressão do Relatorio" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="LogoTipo" TIPO="Imagem" TAMANHO="0" NULO="1"/>
+         <CAMPO NOME="Numeração Auto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+      </TABELA>
+      <TABELA NOME="Entrada Contas Pagar">
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Tipo de conta" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da entrada pg" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da entrada"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Entrada Contas Receber">
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Tipo de conta" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da entrada" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da entrada"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Finalidade da nfe">
+         <CAMPO NOME="Codigo" TIPO="Numerico" TAMANHO="1" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Descrição" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Codigo" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Codigo"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Geral">
+         <CAMPO NOME="Cliente" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Transportadora" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Consumidor final" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Isento" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Razão social" TITULO="Razão Social" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Nome fantasia" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Tipo" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Endereço" TIPO="Texto" TAMANHO="100" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Complemento" TIPO="Texto" TAMANHO="30" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Nro" TIPO="Texto" TAMANHO="8" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Bairro" TIPO="Texto" TAMANHO="60" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do municipio" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Cep" TIPO="Texto" TAMANHO="9" MASCARA="99999-999" DEFAULT="''"/>
+         <CAMPO NOME="Fone" TIPO="Texto" TAMANHO="13" MASCARA="(99)9999-9999" DEFAULT="''"/>
+         <CAMPO NOME="Celular" TIPO="Texto" TAMANHO="14" MASCARA="(99)99999-9999" DEFAULT="''"/>
+         <CAMPO NOME="Codigo do suframa" TIPO="Texto" TAMANHO="9" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Cpf e cnpj" TIPO="Texto" TAMANHO="20" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Rg e ie" TIPO="Texto" TAMANHO="20" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Observação" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Data do cadastro" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Fornecedor" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Email" TIPO="Texto" TAMANHO="255" MASCARA="@a" DEFAULT="''"/>
+         <CAMPO NOME="Codigo da antt" TIPO="Texto" TAMANHO="20" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Data de Nascimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Despesa" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Vendedor" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Funcionario" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Imposto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Produtor" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia do geral" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do geral"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Icms">
+         <CAMPO NOME="Sequencia do icms" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Uf" TIPO="Texto" TAMANHO="3" MASCARA="!!" DEFAULT="''"/>
+         <CAMPO NOME="Região" TIPO="Texto" TAMANHO="20" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Aliquota do icms" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota interna" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Codigo da uf" TIPO="Numerico" TAMANHO="2" MASCARA="99" DEFAULT="0"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia do icms" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do icms"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Itens da OS">
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="Seq_e_ItemOS" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Ordem"/>
+            <CAMPO NOME="Sequencia do produto"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Manutenção Cascos">
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Virabrequim" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Baixado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Seq_Manu_Casco" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Manutenção"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Manutenção contas pagar">
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Parcela" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor pago" TITULO="Valor Pago" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do juros" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor restante" TITULO="Valor Restante" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Tipo de conta" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da manutenção Pg" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Manutenção"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Manutenção contas receber">
+         <CAMPO NOME="Sequencia da Manutenção" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Parcela" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Especie de pagamento" TITULO="Especie de Pagamento" TIPO="Texto" TAMANHO="14" DEFAULT="''"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor pago" TITULO="Valor Pago" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do juros" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor restante" TITULO="Valor Restante" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Data da baixa" TITULO="Data da Baixa" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da baixa" TITULO="Sequencia da Baixa" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da devolução" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da nfe" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da saida" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Cobrança" TITULO="Sequencia da cobrança" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Tipo de conta" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Seq_ManuReceber" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Manutenção"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Marcas">
+         <CAMPO NOME="Sequencia da Marca" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da Marca" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Marca"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Modelo do Virabrequim">
+         <CAMPO NOME="Sequencia do Modelo" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição do Modelo" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da Marca" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Peso do Virabrequim" TIPO="Numerico" TAMANHO="7" DECIMAL="3" MASCARA="999,999" DEFAULT="0"/>
+         <CAMPO NOME="Linha do Modelo" TIPO="Texto" TAMANHO="6" DEFAULT="''"/>
+   <INDICE NOME="Sequencia do Modelo" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do Modelo"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Movimento do estoque">
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de entrada" TITULO="Data de Entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do ipi" TITULO="Valor Total do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do movimento" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total icms st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Entrada Conserto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Tipo de conta" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Sequencia do movimento" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do movimento"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Municipios">
+         <CAMPO NOME="Sequencia do municipio" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição do municipio" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Uf" TIPO="Texto" TAMANHO="3" MASCARA="!!" DEFAULT="''"/>
+         <CAMPO NOME="Codigo do ibge" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Cep" TIPO="Texto" TAMANHO="9" MASCARA="99999-999" DEFAULT="''"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia do municipio" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do municipio"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Natureza de operação">
+         <CAMPO NOME="Sequencia da natureza" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Cfop" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição do cfop" TIPO="Texto" TAMANHO="40" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da natureza" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da natureza"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="NFe devolução">
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Chave da nfe" TIPO="Texto" TAMANHO="44" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="SeqNFe Devolucao" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+            <CAMPO NOME="Chave da nfe"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Nota fiscal">
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da nfe" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de emissão" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da natureza" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da transportadora" TITULO="Sequencia da Transportadora" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Placa do veiculo" TIPO="Texto" TAMANHO="8" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Uf do veiculo" TIPO="Texto" TAMANHO="3" MASCARA="!!" DEFAULT="''"/>
+         <CAMPO NOME="Frete" TIPO="Texto" TAMANHO="12" DEFAULT="''"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Volumes" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Especie" TIPO="Texto" TAMANHO="30" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Data de saida" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da saida" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Valor total do ipi" TITULO="Valor Total do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do icms" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total da nfe" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Tipo de nota" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da classificação" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Nota cancelada" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Nota avulsa" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Peso bruto" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Peso liquido" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Nfe complementar" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Chave nfe referenciada" TIPO="Texto" TAMANHO="45" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Chave de acesso da nfe" TIPO="Texto" TAMANHO="50" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Protocolo de autorização" TIPO="Texto" TAMANHO="50" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Data e hora da nfe" TIPO="Texto" TAMANHO="25" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Transmitido" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Autorizada" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Numero do recibo" TIPO="Texto" TAMANHO="20" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Observação" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Valor total da bc" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do pis" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do cofins" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total base st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total icms st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Imprimiu" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos tributos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Finalidade nfe" TIPO="Numerico" TAMANHO="1" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Devolução" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="XmlAssinado" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="XmlAutorizado" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da devolução" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Conserto" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da saida" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Valor Total dos Serviços" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do Iss" TITULO="Valor do ISS" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Qual Empresa" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da nota fiscal" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Ordem de Serviço">
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999"/>
+         <CAMPO NOME="Data da Ordem" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Vendedor" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor Total dos Serviços" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor da OS" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do Iss" TITULO="Aliquota do ISS" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do Iss" TITULO="Valor do ISS" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Obs" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Transportador" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de Cancelamento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Qual Empresa" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da Ordem" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Ordem"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Outras saidas estoque">
+         <CAMPO NOME="Sequencia da saida" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Documento" TIPO="Texto" TAMANHO="25" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data de emissão" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Historico" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do ipi" TITULO="Valor Total do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total icms st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total do movimento" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da saida" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da saida"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parametros da nfe" PARAMETRO="1">
+         <CAMPO NOME="Codigo da uf" TIPO="Numerico" TAMANHO="2" MASCARA="99" DEFAULT="0"/>
+         <CAMPO NOME="Serie da nfe" TIPO="Numerico" TAMANHO="1" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Ambiente" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
+         <CAMPO NOME="Horario de verao" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota simples nacional" TIPO="Numerico" TAMANHO="8" DECIMAL="4" MASCARA="999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Diretorio 1 nfe homologação" TIPO="Texto" TAMANHO="255" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Diretorio 2 nfe homologação" TIPO="Texto" TAMANHO="255" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Diretorio 1 nfe produção" TIPO="Texto" TAMANHO="255" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Diretorio 2 nfe produção" TIPO="Texto" TAMANHO="255" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Certificado digital" TIPO="Texto" TAMANHO="255" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Simples nacional" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Percentual tributos" TIPO="Numerico" TAMANHO="8" DECIMAL="4" MASCARA="999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Micro Empresa" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Usa Resp Tecnico" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="CNPJ do Contador" TIPO="Texto" TAMANHO="18" MASCARA="99.999.999/9999-99" DEFAULT="''"/>
+      </TABELA>
+      <TABELA NOME="Parametros da OS" PARAMETRO="1">
+         <CAMPO NOME="Letra Inicial" TIPO="Texto" TAMANHO="1" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Letra Final" TIPO="Texto" TAMANHO="1" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Lote Inicial" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+      </TABELA>
+      <TABELA NOME="Parcelas da os">
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Especie de pagamento" TITULO="Especie de Pagamento" TIPO="Texto" TAMANHO="14" DEFAULT="''"/>
+   <INDICE NOME="Seq_Ordem_e_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Ordem"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas da Venda">
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Especie de pagamento" TITULO="Especie de Pagamento" TIPO="Texto" TAMANHO="14" DEFAULT="''"/>
+   <INDICE NOME="SeqVenda_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Venda"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas dev compra">
+         <CAMPO NOME="Sequencia da devolução" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Especie de pagamento" TITULO="Especie de Pagamento" TIPO="Texto" TAMANHO="14" DEFAULT="''"/>
+   <INDICE NOME="SeqDev_e_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da devolução"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas Entradas Pagar">
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="SeqEntrada_e_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da entrada"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas Entradas Receber">
+         <CAMPO NOME="Sequencia da entrada" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="Seq_e_Pc_Receber" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da entrada"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas movimento estoque">
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="SeqMov_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do movimento"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas nota fiscal">
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="SeqNF_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Parcelas outras saidas">
+         <CAMPO NOME="Sequencia da saida" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Numero da parcela" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Dias" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Data de vencimento" TITULO="Data de Vencimento" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor da parcela" TITULO="Valor da Parcela" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Especie de pagamento" TITULO="Especie de Pagamento" TIPO="Texto" TAMANHO="14" DEFAULT="''"/>
+   <INDICE NOME="SeqSaida_Pc" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da saida"/>
+            <CAMPO NOME="Numero da parcela"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos">
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Estoque" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da unidade" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da classificação" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Usado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Material adquirido de terceiro" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Importado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Ultima nfe" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Ultima entrada" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Ultimo fornecedor" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Despesa" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor de custo" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Ultima venda" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Codigo de Barras" TIPO="Texto" TAMANHO="13" MASCARA="9999999999999" DEFAULT="''"/>
+   <INDICE NOME="Sequencia do produto" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do produto"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos da nota fiscal">
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia produto nota fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" SEQINTERNO="1" SEQUENCIA="1"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do ipi" TITULO="Valor do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do icms" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do ipi" TITULO="Aliquota do IPI" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do icms" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Percentual da redução" TITULO="Percentual da Redução" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor da base de calculo" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do pis" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do cofins" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Iva" TIPO="Numerico" TAMANHO="7" DECIMAL="4" MASCARA="99,9999" DEFAULT="0"/>
+         <CAMPO NOME="Base de calculo st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor icms st" TITULO="Valor Icms St" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Cfop" TIPO="Numerico" TAMANHO="5" MASCARA="99999" DEFAULT="0"/>
+         <CAMPO NOME="Cst" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota icms st" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor dos tributos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="SeqNf_e_produto" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+            <CAMPO NOME="Sequencia produto nota fiscal"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos da Venda">
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do ipi" TITULO="Valor do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do ipi" TITULO="Aliquota do IPI" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor icms st" TITULO="Valor Icms St" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="Seq_Venda_e_Item" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Venda"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos devolução compra">
+         <CAMPO NOME="Sequencia da devolução" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do ipi" TITULO="Valor do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor icms st" TITULO="Valor Icms St" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do ipi" TITULO="Aliquota do IPI" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+   <INDICE NOME="Seq_dev_item" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da devolução"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos movimento estoque">
+         <CAMPO NOME="Sequencia do movimento" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do ipi" TITULO="Valor do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor icms st" TITULO="Valor Icms St" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do ipi" TITULO="Aliquota do IPI" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+   <INDICE NOME="Seq_Mov_Prod" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do movimento"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Produtos saidas estoque">
+         <CAMPO NOME="Sequencia da saida" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do produto" TITULO="Sequencia do Produto" TIPO="Numerico" TAMANHO="10" MASCARA="9999999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do ipi" TITULO="Valor do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor icms st" TITULO="Valor Icms St" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Aliquota do ipi" TITULO="Aliquota do IPI" TIPO="Numerico" TAMANHO="5" DECIMAL="2" MASCARA="99,99" DEFAULT="0"/>
+   <INDICE NOME="Seq_Saida_Item" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da saida"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Serviços">
+         <CAMPO NOME="Sequencia do Serviço" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição do Serviço" TIPO="Texto" TAMANHO="200" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Valor do Serviço" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia do Serviço" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do Serviço"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Serviços da Nota Fiscal">
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Serviço" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="NFe_Serviço" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da nota fiscal"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Serviços da OS">
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Serviço" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Virabrequim" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+   <INDICE NOME="SeqOS_e_Servico" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Ordem"/>
+            <CAMPO NOME="Sequencia do item"/>
+            <CAMPO NOME="Sequencia do Serviço"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Serviços da Venda">
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do item" TITULO="Sequencia do Item" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Serviço" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor total" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+   <INDICE NOME="Seq_venda_Item" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Venda"/>
+            <CAMPO NOME="Sequencia do item"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Tipo da Cobrança">
+         <CAMPO NOME="Sequencia da Cobrança" TITULO="Sequencia da cobrança" TIPO="Numerico" TAMANHO="3" MASCARA="999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição da Cobrança" TIPO="Texto" TAMANHO="45" MASCARA="@x" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da Cobrança" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Cobrança"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Unidades">
+         <CAMPO NOME="Sequencia da unidade" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Descrição" TIPO="Texto" TAMANHO="80" MASCARA="@x" DEFAULT="''"/>
+         <CAMPO NOME="Sigla da unidade" TIPO="Texto" TAMANHO="20" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Inativo" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Sequencia da unidade" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da unidade"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Vendas">
+         <CAMPO NOME="Sequencia da Venda" TIPO="Numerico" TAMANHO="7" MASCARA="9999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da Venda" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Observações" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Valor total do ipi" TITULO="Valor Total do IPI" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total dos produtos" TITULO="Valor Total dos Produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor Total dos Serviços" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor Total da Venda" TIPO="Numerico" TAMANHO="12" DECIMAL="2" MASCARA="999.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor total icms st" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Vendedor" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Forma de pagamento" TIPO="Texto" TAMANHO="5" DEFAULT="''"/>
+         <CAMPO NOME="Valor Total do ISS" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do frete" TITULO="Valor do Frete" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Valor do desconto" TITULO="Valor do Desconto" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Cancelado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Fechado" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da transportadora" TITULO="Sequencia da Transportadora" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Data da Alteração" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Hora da Alteração" TIPO="Data" TAMANHO="8" MASCARA="99:99:99" NULO="1"/>
+         <CAMPO NOME="Usuario da Alteração" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da nota fiscal" TITULO="Sequencia da Nota Fiscal" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Tipo de Venda" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+         <CAMPO NOME="Teste" TIPO="Texto" TAMANHO="3" MASCARA="@!" DEFAULT="''"/>
+   <INDICE NOME="Sequencia da Venda" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Venda"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Virabrequim">
+         <CAMPO NOME="Sequencia do Virabrequim" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Identificação" TIPO="Texto" TAMANHO="9" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do geral" TITULO="Sequencia do Geral" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Ultima Os" TIPO="Data" TAMANHO="10" MASCARA="99/99/9999" NULO="1"/>
+         <CAMPO NOME="Valor do Virabrequim" TIPO="Numerico" TAMANHO="10" DECIMAL="2" MASCARA="9.999.999,99" DEFAULT="0"/>
+         <CAMPO NOME="Modelo" TIPO="Texto" TAMANHO="30" MASCARA="@!" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia da Marca" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Obs" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
+         <CAMPO NOME="Sequencia do Modelo" TIPO="Numerico" TAMANHO="4" MASCARA="9999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+   <INDICE NOME="Sequencia do Virabrequim" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia do Virabrequim"/>
+   </INDICE>
+   <INDICE NOME="ID_Virabrequim" TIPO="2" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Identificação"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="Virabrequim da OS">
+         <CAMPO NOME="Sequencia da Ordem" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Sequencia do Virabrequim" TIPO="Numerico" TAMANHO="6" MASCARA="999999" DEFAULT="0"/>
+         <CAMPO NOME="Quantidade" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Valor unitario" TITULO="Valor Unitario" TIPO="Numerico" TAMANHO="11" DECIMAL="4" MASCARA="999.999,9999" DEFAULT="0"/>
+         <CAMPO NOME="Tem Casco" TIPO="Logico" TAMANHO="1" DEFAULT="0"/>
+   <INDICE NOME="Seq_Virabrequim" TIPO="1" CLUSTERIZADO="1" FILLFACTOR=" 90 ">
+            <CAMPO NOME="Sequencia da Ordem"/>
+            <CAMPO NOME="Sequencia do Virabrequim"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="PW~Grupos" SISTEMA="1">
+         <CAMPO NOME="PW~Nome" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+   <INDICE NOME="PW~Nome" TIPO="1" SISTEMA="1">
+            <CAMPO NOME="PW~Nome" SISTEMA="1"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="PW~Usuarios" SISTEMA="1">
+         <CAMPO NOME="PW~Grupo" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+         <CAMPO NOME="PW~Nome" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+         <CAMPO NOME="PW~Senha" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+         <CAMPO NOME="PW~Obs" TIPO="Texto" TAMANHO="100" SISTEMA="1" NULO="1"/>
+   <INDICE NOME="Chave usuario" TIPO="1" SISTEMA="1">
+            <CAMPO NOME="PW~Nome" SISTEMA="1"/>
+            <CAMPO NOME="PW~Senha" SISTEMA="1"/>
+   </INDICE>
+   <INDICE NOME="PW~Grupo" SISTEMA="1">
+            <CAMPO NOME="PW~Grupo" SISTEMA="1"/>
+   </INDICE>
+      </TABELA>
+      <TABELA NOME="PW~Tabelas" SISTEMA="1">
+         <CAMPO NOME="PW~Projeto" TIPO="Texto" TAMANHO="10" SISTEMA="1"/>
+         <CAMPO NOME="PW~Grupo" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+         <CAMPO NOME="PW~Nome" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+         <CAMPO NOME="PW~Permissoes" TIPO="Texto" TAMANHO="100" SISTEMA="1"/>
+   <INDICE NOME="Chave tabelas" TIPO="1" SISTEMA="1">
+            <CAMPO NOME="PW~Projeto" SISTEMA="1"/>
+            <CAMPO NOME="PW~Grupo" SISTEMA="1"/>
+            <CAMPO NOME="PW~Nome" SISTEMA="1"/>
+   </INDICE>
+      </TABELA>
+      <INTEGRIDADE NOME="Baixa contas pagar-Manutenção Bx Pagar" BASE="Manutenção contas pagar" ESTRANGEIRA="Baixa contas pagar" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da Manutenção-Sequencia da Manutenção" BASE="Sequencia da Manutenção" ESTRANGEIRO="Sequencia da Manutenção"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Baixa contas receber-Manutenção contas receber" BASE="Manutenção contas receber" ESTRANGEIRA="Baixa contas receber" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da Manutenção-Sequencia da Manutenção" BASE="Sequencia da Manutenção" ESTRANGEIRO="Sequencia da Manutenção"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Baixa contas receber-Cobranca" BASE="Tipo da Cobrança" ESTRANGEIRA="Baixa contas receber" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da Cobrança-Sequencia da Cobrança" BASE="Sequencia da Cobrança" ESTRANGEIRO="Sequencia da Cobrança"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Cheques Pre-Bancos_ChequePre" BASE="Bancos" ESTRANGEIRA="Cheques Pre" ATUALIZA="1">
+         <CAMPO NOME="Codigo do Banco-Codigo do Banco" BASE="Codigo do Banco" ESTRANGEIRO="Codigo do Banco"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Cheques Pre-Geral_ChequePre" BASE="Geral" ESTRANGEIRA="Cheques Pre" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Entrada Contas Pagar-Geral_EPagar" BASE="Geral" ESTRANGEIRA="Entrada Contas Pagar" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Entrada Contas Receber-Geral_EReceber" BASE="Geral" ESTRANGEIRA="Entrada Contas Receber" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Geral-Municipios Geral" BASE="Municipios" ESTRANGEIRA="Geral" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do municipio-Sequencia do municipio" BASE="Sequencia do municipio" ESTRANGEIRO="Sequencia do municipio"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Itens da OS-Produtos_da_OS" BASE="Produtos" ESTRANGEIRA="Itens da OS" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do produto-Sequencia do produto" BASE="Sequencia do produto" ESTRANGEIRO="Sequencia do produto"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Manutenção contas pagar-Geral_ContasPagar" BASE="Geral" ESTRANGEIRA="Manutenção contas pagar" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Manutenção contas receber-Geral_Manu_Receber" BASE="Geral" ESTRANGEIRA="Manutenção contas receber" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Modelo do Virabrequim-Marcas" BASE="Marcas" ESTRANGEIRA="Modelo do Virabrequim" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da Marca-Sequencia da Marca" BASE="Sequencia da Marca" ESTRANGEIRO="Sequencia da Marca"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Movimento do estoque-Geral_Estoque" BASE="Geral" ESTRANGEIRA="Movimento do estoque" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Nota fiscal-Geral nf" BASE="Geral" ESTRANGEIRA="Nota fiscal" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Nota fiscal-NapOp nf" BASE="Natureza de operação" ESTRANGEIRA="Nota fiscal" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da natureza-Sequencia da natureza" BASE="Sequencia da natureza" ESTRANGEIRO="Sequencia da natureza"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Nota fiscal-Ncm nf" BASE="Classificação fiscal" ESTRANGEIRA="Nota fiscal" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da classificação-Sequencia da classificação" BASE="Sequencia da classificação" ESTRANGEIRO="Sequencia da classificação"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Ordem de Serviço-Geral_OS" BASE="Geral" ESTRANGEIRA="Ordem de Serviço" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Outras saidas estoque-Geral_OutrasSaidas" BASE="Geral" ESTRANGEIRA="Outras saidas estoque" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos-Produto ncm" BASE="Classificação fiscal" ESTRANGEIRA="Produtos" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da classificação-Sequencia da classificação" BASE="Sequencia da classificação" ESTRANGEIRO="Sequencia da classificação"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos-Unidades Produtos" BASE="Unidades" ESTRANGEIRA="Produtos" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da unidade-Sequencia da unidade" BASE="Sequencia da unidade" ESTRANGEIRO="Sequencia da unidade"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos da nota fiscal-Produto_NFe" BASE="Produtos" ESTRANGEIRA="Produtos da nota fiscal" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do produto-Sequencia do produto" BASE="Sequencia do produto" ESTRANGEIRO="Sequencia do produto"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos da Venda-Produtos_Venda" BASE="Produtos" ESTRANGEIRA="Produtos da Venda" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do produto-Sequencia do produto" BASE="Sequencia do produto" ESTRANGEIRO="Sequencia do produto"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos devolução compra-Produtos_devCompra" BASE="Produtos" ESTRANGEIRA="Produtos devolução compra" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do produto-Sequencia do produto" BASE="Sequencia do produto" ESTRANGEIRO="Sequencia do produto"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Produtos movimento estoque-Prod_Mvto" BASE="Produtos" ESTRANGEIRA="Produtos movimento estoque" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do produto-Sequencia do produto" BASE="Sequencia do produto" ESTRANGEIRO="Sequencia do produto"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Serviços da Nota Fiscal-Serviços_NFe" BASE="Serviços" ESTRANGEIRA="Serviços da Nota Fiscal" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do Serviço-Sequencia do Serviço" BASE="Sequencia do Serviço" ESTRANGEIRO="Sequencia do Serviço"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Serviços da OS-Servicos_os" BASE="Serviços" ESTRANGEIRA="Serviços da OS" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do Serviço-Sequencia do Serviço" BASE="Sequencia do Serviço" ESTRANGEIRO="Sequencia do Serviço"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Serviços da Venda-Serviços_Vendas" BASE="Serviços" ESTRANGEIRA="Serviços da Venda" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do Serviço-Sequencia do Serviço" BASE="Sequencia do Serviço" ESTRANGEIRO="Sequencia do Serviço"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Vendas-Geral_Vendas" BASE="Geral" ESTRANGEIRA="Vendas" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Virabrequim-Geral_Virabrequim" BASE="Geral" ESTRANGEIRA="Virabrequim" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do geral-Sequencia do geral" BASE="Sequencia do geral" ESTRANGEIRO="Sequencia do geral"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Virabrequim-Marca_Virabrequim" BASE="Marcas" ESTRANGEIRA="Virabrequim" ATUALIZA="1">
+         <CAMPO NOME="Sequencia da Marca-Sequencia da Marca" BASE="Sequencia da Marca" ESTRANGEIRO="Sequencia da Marca"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="Virabrequim da OS-Virabrequim_OS" BASE="Virabrequim" ESTRANGEIRA="Virabrequim da OS" ATUALIZA="1">
+         <CAMPO NOME="Sequencia do Virabrequim-Sequencia do Virabrequim" BASE="Sequencia do Virabrequim" ESTRANGEIRO="Sequencia do Virabrequim"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="PW~Usuarios em PW~Grupo" BASE="PW~Grupos" ESTRANGEIRA="PW~Usuarios" ATUALIZA="1" EXCLUI="1" SISTEMA="1">
+         <CAMPO NOME="PW~Nome-PW~Grupo" BASE="PW~Nome" ESTRANGEIRO="PW~Grupo" SISTEMA="1"/>
+      </INTEGRIDADE>
+      <INTEGRIDADE NOME="PW~Tabelas em PW~Grupo" BASE="PW~Grupos" ESTRANGEIRA="PW~Tabelas" ATUALIZA="1" EXCLUI="1" SISTEMA="1">
+         <CAMPO NOME="PW~Nome-PW~Grupo" BASE="PW~Nome" ESTRANGEIRO="PW~Grupo" SISTEMA="1"/>
+      </INTEGRIDADE>
+   </BANCO>
+</PROJETO>
