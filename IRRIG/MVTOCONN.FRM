@@ -2565,7 +2565,7 @@ Attribute VB_Exposed = False
 '* Função....: Movimento do Estoque Contábil (Novo)
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 30/05/2025 16:33:21
+'* Data......: 17/06/2025 13:59:23
 '* * * * * * *
 
 Option Explicit

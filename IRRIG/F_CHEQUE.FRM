@@ -915,7 +915,7 @@ Attribute VB_Exposed = False
 '* Função....: Cheques
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 30/05/2025 16:33:27
+'* Data......: 17/06/2025 13:59:29
 '* * * * * * *
 
 Option Explicit
