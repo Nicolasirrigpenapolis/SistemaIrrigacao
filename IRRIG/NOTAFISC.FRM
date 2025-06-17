@@ -433,168 +433,168 @@ Begin VB.Form frmNotaFisc
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Label(10)"
-         Tab(1).Control(1)=   "Grid(0)"
+         Tab(1).Control(0)=   "Grid(0)"
+         Tab(1).Control(1)=   "Label(10)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(13)"
-         Tab(2).Control(1)=   "Grid(1)"
+         Tab(2).Control(0)=   "Grid(1)"
+         Tab(2).Control(1)=   "Label(13)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "txtCp(58)"
-         Tab(3).Control(1)=   "ChkCp(4)"
-         Tab(3).Control(1).Enabled=   0   'False
-         Tab(3).Control(2)=   "Botao(7)"
-         Tab(3).Control(3)=   "txtCp(49)"
-         Tab(3).Control(4)=   "bottxtCampo49(2)"
+         Tab(3).Control(0)=   "Grid(2)"
+         Tab(3).Control(1)=   "Label(11)"
+         Tab(3).Control(2)=   "Label(53)"
+         Tab(3).Control(3)=   "labFdo49"
+         Tab(3).Control(4)=   "bottxtCampo49(1)"
          Tab(3).Control(4).Enabled=   0   'False
-         Tab(3).Control(5)=   "bottxtCampo49(1)"
+         Tab(3).Control(5)=   "bottxtCampo49(2)"
          Tab(3).Control(5).Enabled=   0   'False
-         Tab(3).Control(6)=   "labFdo49"
-         Tab(3).Control(7)=   "Label(53)"
-         Tab(3).Control(8)=   "Label(11)"
-         Tab(3).Control(9)=   "Grid(2)"
+         Tab(3).Control(6)=   "txtCp(49)"
+         Tab(3).Control(7)=   "Botao(7)"
+         Tab(3).Control(8)=   "ChkCp(4)"
+         Tab(3).Control(8).Enabled=   0   'False
+         Tab(3).Control(9)=   "txtCp(58)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Label(12)"
-         Tab(4).Control(1)=   "Grid(3)"
+         Tab(4).Control(0)=   "Grid(3)"
+         Tab(4).Control(1)=   "Label(12)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Label(66)"
-         Tab(5).Control(1)=   "Label(64)"
-         Tab(5).Control(2)=   "Label(63)"
-         Tab(5).Control(3)=   "Formato(2)"
-         Tab(5).Control(4)=   "Label(62)"
-         Tab(5).Control(5)=   "Formato(1)"
-         Tab(5).Control(6)=   "Label(61)"
-         Tab(5).Control(7)=   "Formato(0)"
-         Tab(5).Control(8)=   "Label(60)"
-         Tab(5).Control(9)=   "Label(57)"
-         Tab(5).Control(10)=   "Label(56)"
-         Tab(5).Control(11)=   "Label(30)"
-         Tab(5).Control(12)=   "Label(29)"
-         Tab(5).Control(13)=   "Label(28)"
-         Tab(5).Control(14)=   "Label(27)"
-         Tab(5).Control(15)=   "Label(26)"
-         Tab(5).Control(16)=   "Label(25)"
-         Tab(5).Control(17)=   "Label(24)"
-         Tab(5).Control(18)=   "Label(23)"
-         Tab(5).Control(19)=   "Label(22)"
-         Tab(5).Control(20)=   "Label(21)"
-         Tab(5).Control(21)=   "Label(20)"
-         Tab(5).Control(22)=   "Label(19)"
-         Tab(5).Control(23)=   "Label(18)"
-         Tab(5).Control(24)=   "Label(17)"
-         Tab(5).Control(25)=   "Label(16)"
-         Tab(5).Control(26)=   "Linha(2)"
-         Tab(5).Control(27)=   "Label(15)"
-         Tab(5).Control(28)=   "Label(14)"
-         Tab(5).Control(29)=   "Label(9)"
-         Tab(5).Control(30)=   "labFdo29"
-         Tab(5).Control(31)=   "labFdo28"
-         Tab(5).Control(32)=   "labFdo27"
-         Tab(5).Control(33)=   "labFdo18"
-         Tab(5).Control(34)=   "Label(4)"
+         Tab(5).Control(0)=   "Botao(6)"
+         Tab(5).Control(1)=   "bottxtCampo0(0)"
+         Tab(5).Control(1).Enabled=   0   'False
+         Tab(5).Control(2)=   "txtCp(0)"
+         Tab(5).Control(3)=   "bottxtCampo1(0)"
+         Tab(5).Control(3).Enabled=   0   'False
+         Tab(5).Control(4)=   "txtCp(1)"
+         Tab(5).Control(5)=   "bottxtCampo18(0)"
+         Tab(5).Control(5).Enabled=   0   'False
+         Tab(5).Control(6)=   "txtCp(18)"
+         Tab(5).Control(7)=   "bottxtCampo27(0)"
+         Tab(5).Control(7).Enabled=   0   'False
+         Tab(5).Control(8)=   "txtCp(27)"
+         Tab(5).Control(9)=   "bottxtCampo28(2)"
+         Tab(5).Control(9).Enabled=   0   'False
+         Tab(5).Control(10)=   "txtCp(28)"
+         Tab(5).Control(11)=   "bottxtCampo29(1)"
+         Tab(5).Control(11).Enabled=   0   'False
+         Tab(5).Control(12)=   "bottxtCampo29(2)"
+         Tab(5).Control(12).Enabled=   0   'False
+         Tab(5).Control(13)=   "txtCp(29)"
+         Tab(5).Control(14)=   "ChkCp(0)"
+         Tab(5).Control(14).Enabled=   0   'False
+         Tab(5).Control(15)=   "Grid(4)"
+         Tab(5).Control(16)=   "txtCp(36)"
+         Tab(5).Control(16).Enabled=   0   'False
+         Tab(5).Control(17)=   "txtCp(37)"
+         Tab(5).Control(17).Enabled=   0   'False
+         Tab(5).Control(18)=   "txtCp(38)"
+         Tab(5).Control(18).Enabled=   0   'False
+         Tab(5).Control(19)=   "txtCp(39)"
+         Tab(5).Control(19).Enabled=   0   'False
+         Tab(5).Control(20)=   "txtCp(40)"
+         Tab(5).Control(20).Enabled=   0   'False
+         Tab(5).Control(21)=   "txtCp(41)"
+         Tab(5).Control(21).Enabled=   0   'False
+         Tab(5).Control(22)=   "txtCp(42)"
+         Tab(5).Control(22).Enabled=   0   'False
+         Tab(5).Control(23)=   "txtCp(43)"
+         Tab(5).Control(23).Enabled=   0   'False
+         Tab(5).Control(24)=   "txtCp(44)"
+         Tab(5).Control(24).Enabled=   0   'False
+         Tab(5).Control(25)=   "txtCp(45)"
+         Tab(5).Control(25).Enabled=   0   'False
+         Tab(5).Control(26)=   "txtCp(46)"
+         Tab(5).Control(26).Enabled=   0   'False
+         Tab(5).Control(27)=   "txtCp(47)"
+         Tab(5).Control(27).Enabled=   0   'False
+         Tab(5).Control(28)=   "txtCp(48)"
+         Tab(5).Control(28).Enabled=   0   'False
+         Tab(5).Control(29)=   "Painel(2)"
+         Tab(5).Control(30)=   "txtCp(52)"
+         Tab(5).Control(30).Enabled=   0   'False
+         Tab(5).Control(31)=   "txtCp(53)"
+         Tab(5).Control(31).Enabled=   0   'False
+         Tab(5).Control(32)=   "txtCp(57)"
+         Tab(5).Control(32).Enabled=   0   'False
+         Tab(5).Control(33)=   "labFdo0"
+         Tab(5).Control(34)=   "Label(0)"
          Tab(5).Control(35)=   "labFdo1"
-         Tab(5).Control(36)=   "Label(0)"
-         Tab(5).Control(37)=   "labFdo0"
-         Tab(5).Control(38)=   "txtCp(57)"
-         Tab(5).Control(38).Enabled=   0   'False
-         Tab(5).Control(39)=   "txtCp(53)"
-         Tab(5).Control(39).Enabled=   0   'False
-         Tab(5).Control(40)=   "txtCp(52)"
-         Tab(5).Control(40).Enabled=   0   'False
-         Tab(5).Control(41)=   "Painel(2)"
-         Tab(5).Control(42)=   "txtCp(48)"
-         Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "txtCp(47)"
-         Tab(5).Control(43).Enabled=   0   'False
-         Tab(5).Control(44)=   "txtCp(46)"
-         Tab(5).Control(44).Enabled=   0   'False
-         Tab(5).Control(45)=   "txtCp(45)"
-         Tab(5).Control(45).Enabled=   0   'False
-         Tab(5).Control(46)=   "txtCp(44)"
-         Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "txtCp(43)"
-         Tab(5).Control(47).Enabled=   0   'False
-         Tab(5).Control(48)=   "txtCp(42)"
-         Tab(5).Control(48).Enabled=   0   'False
-         Tab(5).Control(49)=   "txtCp(41)"
-         Tab(5).Control(49).Enabled=   0   'False
-         Tab(5).Control(50)=   "txtCp(40)"
-         Tab(5).Control(50).Enabled=   0   'False
-         Tab(5).Control(51)=   "txtCp(39)"
-         Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "txtCp(38)"
-         Tab(5).Control(52).Enabled=   0   'False
-         Tab(5).Control(53)=   "txtCp(37)"
-         Tab(5).Control(53).Enabled=   0   'False
-         Tab(5).Control(54)=   "txtCp(36)"
-         Tab(5).Control(54).Enabled=   0   'False
-         Tab(5).Control(55)=   "Grid(4)"
-         Tab(5).Control(56)=   "ChkCp(0)"
-         Tab(5).Control(56).Enabled=   0   'False
-         Tab(5).Control(57)=   "txtCp(29)"
-         Tab(5).Control(58)=   "bottxtCampo29(2)"
-         Tab(5).Control(58).Enabled=   0   'False
-         Tab(5).Control(59)=   "bottxtCampo29(1)"
-         Tab(5).Control(59).Enabled=   0   'False
-         Tab(5).Control(60)=   "txtCp(28)"
-         Tab(5).Control(61)=   "bottxtCampo28(2)"
-         Tab(5).Control(61).Enabled=   0   'False
-         Tab(5).Control(62)=   "txtCp(27)"
-         Tab(5).Control(63)=   "bottxtCampo27(0)"
-         Tab(5).Control(63).Enabled=   0   'False
-         Tab(5).Control(64)=   "txtCp(18)"
-         Tab(5).Control(65)=   "bottxtCampo18(0)"
-         Tab(5).Control(65).Enabled=   0   'False
-         Tab(5).Control(66)=   "txtCp(1)"
-         Tab(5).Control(67)=   "bottxtCampo1(0)"
-         Tab(5).Control(67).Enabled=   0   'False
-         Tab(5).Control(68)=   "txtCp(0)"
-         Tab(5).Control(69)=   "bottxtCampo0(0)"
-         Tab(5).Control(69).Enabled=   0   'False
-         Tab(5).Control(70)=   "Botao(6)"
+         Tab(5).Control(36)=   "Label(4)"
+         Tab(5).Control(37)=   "labFdo18"
+         Tab(5).Control(38)=   "labFdo27"
+         Tab(5).Control(39)=   "labFdo28"
+         Tab(5).Control(40)=   "labFdo29"
+         Tab(5).Control(41)=   "Label(9)"
+         Tab(5).Control(42)=   "Label(14)"
+         Tab(5).Control(43)=   "Label(15)"
+         Tab(5).Control(44)=   "Linha(2)"
+         Tab(5).Control(45)=   "Label(16)"
+         Tab(5).Control(46)=   "Label(17)"
+         Tab(5).Control(47)=   "Label(18)"
+         Tab(5).Control(48)=   "Label(19)"
+         Tab(5).Control(49)=   "Label(20)"
+         Tab(5).Control(50)=   "Label(21)"
+         Tab(5).Control(51)=   "Label(22)"
+         Tab(5).Control(52)=   "Label(23)"
+         Tab(5).Control(53)=   "Label(24)"
+         Tab(5).Control(54)=   "Label(25)"
+         Tab(5).Control(55)=   "Label(26)"
+         Tab(5).Control(56)=   "Label(27)"
+         Tab(5).Control(57)=   "Label(28)"
+         Tab(5).Control(58)=   "Label(29)"
+         Tab(5).Control(59)=   "Label(30)"
+         Tab(5).Control(60)=   "Label(56)"
+         Tab(5).Control(61)=   "Label(57)"
+         Tab(5).Control(62)=   "Label(60)"
+         Tab(5).Control(63)=   "Formato(0)"
+         Tab(5).Control(64)=   "Label(61)"
+         Tab(5).Control(65)=   "Formato(1)"
+         Tab(5).Control(66)=   "Label(62)"
+         Tab(5).Control(67)=   "Formato(2)"
+         Tab(5).Control(68)=   "Label(63)"
+         Tab(5).Control(69)=   "Label(64)"
+         Tab(5).Control(70)=   "Label(66)"
          Tab(5).ControlCount=   71
          TabCaption(6)   =   "&7 - Dados NFe/NFSe"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "txtCp(63)"
-         Tab(6).Control(1)=   "Label(71)"
-         Tab(6).Control(2)=   "txtCp(62)"
-         Tab(6).Control(3)=   "Label(70)"
-         Tab(6).Control(4)=   "txtCp(60)"
-         Tab(6).Control(5)=   "Label(68)"
-         Tab(6).Control(6)=   "ChkCp(6)"
-         Tab(6).Control(7)=   "txtCp(55)"
+         Tab(6).Control(0)=   "ChkCp(1)"
+         Tab(6).Control(1)=   "labFdo30"
+         Tab(6).Control(2)=   "bottxtCampo30(1)"
+         Tab(6).Control(2).Enabled=   0   'False
+         Tab(6).Control(3)=   "bottxtCampo30(2)"
+         Tab(6).Control(3).Enabled=   0   'False
+         Tab(6).Control(4)=   "txtCp(30)"
+         Tab(6).Control(5)=   "txtCp(31)"
+         Tab(6).Control(5).Enabled=   0   'False
+         Tab(6).Control(6)=   "txtCp(32)"
+         Tab(6).Control(6).Enabled=   0   'False
+         Tab(6).Control(7)=   "txtCp(33)"
          Tab(6).Control(7).Enabled=   0   'False
-         Tab(6).Control(8)=   "Label(59)"
-         Tab(6).Control(9)=   "Label(51)"
-         Tab(6).Control(10)=   "Label(50)"
-         Tab(6).Control(11)=   "Label(49)"
+         Tab(6).Control(8)=   "txtCp(34)"
+         Tab(6).Control(8).Enabled=   0   'False
+         Tab(6).Control(9)=   "txtCp(35)"
+         Tab(6).Control(9).Enabled=   0   'False
+         Tab(6).Control(10)=   "Label(46)"
+         Tab(6).Control(11)=   "Label(47)"
          Tab(6).Control(12)=   "Label(48)"
-         Tab(6).Control(13)=   "Label(47)"
-         Tab(6).Control(14)=   "Label(46)"
-         Tab(6).Control(15)=   "txtCp(35)"
-         Tab(6).Control(15).Enabled=   0   'False
-         Tab(6).Control(16)=   "txtCp(34)"
-         Tab(6).Control(16).Enabled=   0   'False
-         Tab(6).Control(17)=   "txtCp(33)"
+         Tab(6).Control(13)=   "Label(49)"
+         Tab(6).Control(14)=   "Label(50)"
+         Tab(6).Control(15)=   "Label(51)"
+         Tab(6).Control(16)=   "Label(59)"
+         Tab(6).Control(17)=   "txtCp(55)"
          Tab(6).Control(17).Enabled=   0   'False
-         Tab(6).Control(18)=   "txtCp(32)"
-         Tab(6).Control(18).Enabled=   0   'False
-         Tab(6).Control(19)=   "txtCp(31)"
-         Tab(6).Control(19).Enabled=   0   'False
-         Tab(6).Control(20)=   "txtCp(30)"
-         Tab(6).Control(21)=   "bottxtCampo30(2)"
-         Tab(6).Control(21).Enabled=   0   'False
-         Tab(6).Control(22)=   "bottxtCampo30(1)"
-         Tab(6).Control(22).Enabled=   0   'False
-         Tab(6).Control(23)=   "labFdo30"
-         Tab(6).Control(24)=   "ChkCp(1)"
+         Tab(6).Control(18)=   "ChkCp(6)"
+         Tab(6).Control(19)=   "Label(68)"
+         Tab(6).Control(20)=   "txtCp(60)"
+         Tab(6).Control(21)=   "Label(70)"
+         Tab(6).Control(22)=   "txtCp(62)"
+         Tab(6).Control(23)=   "Label(71)"
+         Tab(6).Control(24)=   "txtCp(63)"
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
@@ -6957,7 +6957,7 @@ Private Sub BlasterNFe()
          icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
          icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
          icms_pICMS = Item![Alíquota Do ICMS]        ' alíquota do ICMS
-         icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
+         icms_vICMS = Item![Valor Do ICMS]           ' valor do ICMS
          icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
          icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
          icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
@@ -6993,7 +6993,7 @@ Private Sub BlasterNFe()
          ipi_cSelo = ""
          ipi_qSelo = 0
          ipi_cEnq = "999"
-         If Item![Valor do IPI] > 0 Then
+         If Item![Valor Do IPI] > 0 Then
             ipi_CST = "50"
          Else
             Select Case Item!CFOP
@@ -7009,7 +7009,7 @@ Private Sub BlasterNFe()
          ipi_pIPI = Item![Alíquota Do IPI]
          ipi_qUnid = 0
          ipi_vUnid = 0
-         ipi_vIPI = Item![Valor do IPI]
+         ipi_vIPI = Item![Valor Do IPI]
           
          'Gera Grupo do IPI
          det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
@@ -7771,82 +7771,52 @@ Private Function ReservadoFisco(Usado As Boolean, Reducao As Boolean, Diferido A
   
 End Function
 
+
+
 Private Sub GeraNota()
-   Dim Arq As String
-   Dim UltimaEletronica As New GRecordSet
-   Dim tpAmb As Integer
-   Dim DataEmissaoAtual As Date
+    Dim Arq As String
+    Dim UltimaEletronica As New GRecordSet
+    Dim tpAmb As Integer
+    Dim DataEmissaoAtual As Date
 
-   On Error Resume Next
-   
-   ' Se já tiver Número da Nota Fiscal > 0, sai
-   If Nota_Fiscal![Número da Nota Fiscal] > 0 Then Exit Sub
-   ' Se Número da NFe < 9000 e usuário não for YGOR, sai
-   If Nota_Fiscal![Número da NFe] < 9000 And vgPWUsuario <> "YGOR" Then Exit Sub
-   
-   ' Pede confirmação se ainda não foi transmitida
-   If Not Transmitido Then
-      If MsgBox("Deseja Enviar essa Nota Fiscal?", vbQuestion + vbYesNo, vaTitulo) = vbNo Then
-         Exit Sub
-      End If
-   End If
-   
-   ' Abre recordset para descobrir o próximo número de NFe e NFSe
-   Set UltimaEletronica = vgDb.OpenRecordSet( _
-      "SELECT MAX([Número da NFe]) AS NFe, " & _
-      "MAX([Número da NFSe]) AS NFSe, " & _
-      "MAX([Número do Contrato]) AS Contrato " & _
-      "FROM [Nota Fiscal]" _
-   )
-           
-   ' Se ainda não tiver número de NFe, atribui um novo
-   If Numero_da_NFe = 0 Then
-      vgDb.Execute "UPDATE [Nota Fiscal] " & _
-                   "SET [Número da NFe] = " & UltimaEletronica!NFe + 1 & " " & _
-                   "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal
-      Reposition
-   End If
+    On Error Resume Next
 
-   ' Se ainda não foi transmitida, faz a pré-validação
-   If Not Transmitido Then
-      ' ? Pegamos qual o ambiente atual (0 = produção, 1 = homologação, ou conforme sua configuração)
-      tpAmb = Parametros_da_NFe!ambiente
-      
-      ' ? Guardamos a data de emissão que está no campo de tela (txtCampo(68))
-      '    Se, no seu formulário, a “Data de Emissão” for outro índice, ajuste o número abaixo (68).
-      DataEmissaoAtual = txtCampo(68).Value
+    If Nota_Fiscal![Número da Nota Fiscal] > 0 Then Exit Sub
+    If Nota_Fiscal![Número da NFe] < 9000 And vgPWUsuario <> "YGOR" Then Exit Sub
 
-      ' ? Se estiver em HOMOLOGAÇÃO, exibe a msgBox com a data que vai no XML
-      If tpAmb <> 0 Then   ' supondo que 0 = Produção, 1 = Homologação (ajuste conforme seu sistema)
-         MsgBox "Você está EMITINDO EM HOMOLOGAÇÃO." & vbCrLf & _
-                "Data de Emissão que será usada no XML: " & _
-                Format(DataEmissaoAtual, "dd\/mm\/yyyy"), _
-                vbInformation + vbOKOnly, "Aviso de Homologação"
-      End If
+    If Not Transmitido Then
+        If MsgBox("Deseja Enviar essa Nota Fiscal?", vbQuestion + vbYesNo, vaTitulo) = vbNo Then Exit Sub
+    End If
 
-      ' ? Após o aviso, continua com a pré-validação da NFe
-      PreValidaNFe  ' Validação e montagem do XML
-   Else
-      ' Se já foi transmitida, montamos o nome do arquivo para buscar o retorno
-      Arq = FreeFile
-      If Parametros_da_NFe!ambiente = 0 Then
-         ' PRODUÇÃO
-         Open Parametros_da_NFe![Diretório 2 NFe Produção] & _
-              Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As Arq
-      Else
-         ' HOMOLOGAÇÃO
-         Open Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-              Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As Arq
-      End If
+    Set UltimaEletronica = vgDb.OpenRecordSet( _
+        "SELECT MAX([Número da NFe]) AS NFe, MAX([Número da NFSe]) AS NFSe, MAX([Número do Contrato]) AS Contrato FROM [Nota Fiscal]" _
+    )
 
-      ' Decide qual rotina de retorno usar (layout 3.10 ou antigo)
-      If Not Novo_Layout Then
-         RetornoNFe310 Arq, Numero_do_Recibo_da_NFe
-      Else
-         RetornoNFe Arq, Numero_do_Recibo_da_NFe
-      End If
-   End If
+    If Numero_da_NFe = 0 Then
+        vgDb.Execute "UPDATE [Nota Fiscal] SET [Número da NFe] = " & UltimaEletronica!NFe + 1 & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal
+        Reposition
+    End If
+
+    If Not Transmitido Then
+        tpAmb = Parametros_da_NFe!ambiente
+        DataEmissaoAtual = txtCampo(68).Value
+        If tpAmb <> 0 Then MsgBox "Você está EMITINDO EM HOMOLOGAÇÃO." & vbCrLf & "Data de Emissão que será usada no XML: " & Format(DataEmissaoAtual, "dd/mm/yyyy"), vbInformation, "Aviso de Homologação"
+        PreValidaNFe
+    Else
+        Arq = FreeFile
+        If Parametros_da_NFe!ambiente = 0 Then
+            Open Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As Arq
+        Else
+            Open Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As Arq
+        End If
+        If Not Novo_Layout Then
+            RetornoNFe310 Arq, Numero_do_Recibo_da_NFe
+        Else
+            RetornoNFe Arq, Numero_do_Recibo_da_NFe
+        End If
+    End If
 End Sub
+
 
 
 Private Sub Tabs_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
@@ -9433,7 +9403,7 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                With Produtos_da_Nota_Fiscal
                   .Edit
                   ![Valor da Base de Cálculo] = 0
-                  ![Valor Do Icms] = 0
+                  ![Valor Do ICMS] = 0
                   ![Alíquota Do ICMS] = 0
                   ![Percentual da Redução] = 0
                   ![Valor ICMS ST] = 0
@@ -9441,7 +9411,7 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                   ![Base de Cálculo ST] = 0
                   !IVA = 0
                   ![Alíquota Do IPI] = 0
-                  ![Valor do IPI] = 0
+                  ![Valor Do IPI] = 0
                   ![Valor Do Tributo] = 0
                   !Diferido = False
                   .Update
@@ -9493,13 +9463,13 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                 End If
                    ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) + ValorFrete + OutrasDespesas
                    '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)  'Round((VrItem * AliquotaIcms / 100),2)
-                   ![Valor Do Icms] = ![Valor da Base de Cálculo] * CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) / 100
-                    Tributos = Tributos + ![Valor Do Icms]
+                   ![Valor Do ICMS] = ![Valor da Base de Cálculo] * CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) / 100
+                    Tributos = Tributos + ![Valor Do ICMS]
                    ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                    ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                    !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade])
-                   ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                    Tributos = Tributos + ![Valor do IPI] 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   ![Valor Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                    Tributos = Tributos + ![Valor Do IPI] 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                    ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                    !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 9, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                  Select Case !CFOP
@@ -9515,9 +9485,9 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                   !IVA = 0
                   ![Valor Do Tributo] = Tributos
                Case Else
-                  ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                  ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do ICMS])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                   Tributos = Tributos + ![Valor Do PIS]
-                  ![Valor Do Cofins] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                  ![Valor Do Cofins] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do ICMS])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                   Tributos = Tributos + ![Valor Do Cofins]
                   ![Valor Do Tributo] = Tributos 'Tributos
                    End Select
@@ -9555,7 +9525,7 @@ Private Sub SuperAtualizaPecas(Opcao As Byte)
                With Pecas_da_Nota_Fiscal
                   .Edit
                   ![Valor da Base de Cálculo] = 0
-                  ![Valor Do Icms] = 0
+                  ![Valor Do ICMS] = 0
                   ![Alíquota Do ICMS] = 0
                   ![Percentual da Redução] = 0
                   !Diferido = False
@@ -9596,7 +9566,7 @@ Private Sub SuperAtualizaConjuntos(Opcao As Byte)
                With Conjuntos_da_Nota_Fiscal
                   .Edit
                   ![Valor da Base de Cálculo] = 0
-                  ![Valor Do Icms] = 0
+                  ![Valor Do ICMS] = 0
                   ![Alíquota Do ICMS] = 0
                   ![Percentual da Redução] = 0
                   !Diferido = False
@@ -9615,6 +9585,54 @@ Private Sub SuperAtualizaConjuntos(Opcao As Byte)
       
    End If
   
+SaiDaSub:
+   Screen.MousePointer = vbDefault
+
+End Sub
+
+
+Private Sub AtualizaValoresConjuntos()
+   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
+
+   Screen.MousePointer = vbHourglass
+
+   If Conjuntos_da_Nota_Fiscal.RecordCount > 0 Then
+
+      ValorFrete = 0
+      ValorSeguro = 0
+      ValorAcresDesc = 0
+
+      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
+         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
+      End If
+
+      Conjuntos_da_Nota_Fiscal.MoveFirst
+      Do While Not Conjuntos_da_Nota_Fiscal.EOF
+         With Conjuntos_da_Nota_Fiscal
+            .Edit
+            ![Valor da Base de Clculo] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 6, 2, (!Quantidade * ![Valor Unitrio]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], True, MunicipioAux!UF)
+            ![Valor Do ICMS] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 7, 2, (!Quantidade * ![Valor Unitrio]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], True, MunicipioAux!UF)
+            ![Alquota Do ICMS] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 3, 2, !Quantidade * ![Valor Unitrio], 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], True, MunicipioAux!UF)
+            ![Percentual da Reduo] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 2, 2, !Quantidade * ![Valor Unitrio], 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], True, MunicipioAux!UF)
+            If ![Porcentagem Do IPI] > 0 Then
+               ![Valor Do IPI] = Round(![Porcentagem Do IPI] * (![Valor Total] + ValorFrete + ValorAcresDesc + ValorSeguro) / 100, 2)
+            Else
+               ![Valor Do IPI] = 0
+            End If
+            ![Valor Do PIS] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 10, 2, (!Quantidade * ![Valor Unitrio]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], , MunicipioAux!UF)
+            ![Valor Do Cofins] = CalculaImposto(![Seqncia Do Conjunto], Nota_Fiscal![Seqncia Do Geral], 11, 2, (!Quantidade * ![Valor Unitrio]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqncia da Propriedade], Nota_Fiscal![Seqncia da Classificao], , MunicipioAux!UF)
+
+            .Update
+            .BookMark = .LastModified
+            .MoveNext
+         End With
+      Loop
+
+      grdConjuntos.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulrio
+
+   End If
+
 SaiDaSub:
    Screen.MousePointer = vbDefault
 
@@ -9658,11 +9676,11 @@ Private Sub AtualizaValoresPecas()
             ![Valor da Base de Cálculo] = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
             '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-            Tributos = Tributos + ![Valor Do Icms]
+            ![Valor Do ICMS] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+            Tributos = Tributos + ![Valor Do ICMS]
             ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
+            ![Valor Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor Do IPI]
             ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
@@ -9674,15 +9692,15 @@ Private Sub AtualizaValoresPecas()
                   Tributos = Tributos + ![Valor Do Cofins]
                Case Else
                  If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
-                    ![Valor Do PIS] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                    ![Valor Do PIS] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do ICMS])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
                  Else
-                    ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 1.65 / 100
+                    ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100
                  End If
                   Tributos = Tributos + ![Valor Do PIS]
                  If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
-                    ![Valor Do Cofins] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                    ![Valor Do Cofins] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do ICMS])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
                  Else
-                    ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 7.6 / 100
+                    ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100
                  End If
                   Tributos = Tributos + ![Valor Do Cofins]
             End Select
@@ -9734,11 +9752,11 @@ Private Sub AtualizaValoresProdutos()
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
                6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
                0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Valor Do Icms] = CalculaImposto( _
+            ![Valor Do ICMS] = CalculaImposto( _
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
                7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
                0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do Icms]
+            Tributos = Tributos + ![Valor Do ICMS]
             
             ![Alíquota Do ICMS] = CalculaImposto( _
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
@@ -9747,26 +9765,25 @@ Private Sub AtualizaValoresProdutos()
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
                2, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
             
-            ![Valor do IPI] = CalculaImposto( _
+            ![Valor Do IPI] = CalculaImposto( _
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
                8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
+            Tributos = Tributos + ![Valor Do IPI]
             ![Alíquota Do IPI] = CalculaImposto( _
                ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
                4, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
             
             '---- nova regra: revenda .102 + NCM 84248 ? zera PIS/Cofins ----
-            NCMProd = Nz(![Ncm], "")
+              NCMProd = IIf(IsNull(![Ncm]), "", ![Ncm])
             If Right(Trim(![CFOP]), 3) = "102" And Left(NCMProd, 5) = "84248" Then
                ![Alíquota Do PIS] = 0
                ![Valor Do PIS] = 0
                ![Alíquota Do Cofins] = 0
                ![Valor Do Cofins] = 0
             Else
-               '---- lógica original de PIS/Cofins ----
+          
                Select Case !CFOP
-                 Case "5116","6116","6910","5910","6912","2913",_
-                      "1913","5912","3101","3102","5949","6949"
+                 Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "3101", "3102", "5949", "6949"
                    ![Valor Do PIS] = 0
                    Tributos = Tributos + ![Valor Do PIS]
                    ![Valor Do Cofins] = 0
@@ -9774,7 +9791,7 @@ Private Sub AtualizaValoresProdutos()
                  Case Else
                    ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) _
                                        - Abs(ValorAcresDesc) + ValorFrete + Outros) _
-                                       - ![Valor Do Icms])) * 1.65 / 100
+                                       - ![Valor Do ICMS])) * 1.65 / 100
                    Tributos = Tributos + ![Valor Do PIS]
                    ![Valor Do Cofins] = ![Valor Do PIS]
                    Tributos = Tributos + ![Valor Do Cofins]
@@ -10639,7 +10656,7 @@ Private Sub BlasterNFe310()
          icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
          icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
          icms_pICMS = Item![Alíquota Do ICMS]        ' alíquota do ICMS
-         icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
+         icms_vICMS = Item![Valor Do ICMS]           ' valor do ICMS
          icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
          icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
          icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
@@ -10726,7 +10743,7 @@ Private Sub BlasterNFe310()
          Else
          ipi_cEnq = IpicEnc
          End If
-         If Item![Valor do IPI] > 0 Then
+         If Item![Valor Do IPI] > 0 Then
             ipi_CST = "50"
          Else
             Select Case Item!CFOP
@@ -10751,7 +10768,7 @@ Private Sub BlasterNFe310()
          ipi_pIPI = Item![Alíquota Do IPI]
          ipi_qUnid = 0
          ipi_vUnid = 0
-         ipi_vIPI = Item![Valor do IPI]
+         ipi_vIPI = Item![Valor Do IPI]
           
          'Gera Grupo do IPI
          det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
@@ -11032,7 +11049,7 @@ OcultaValor:
    Else
    ipi_cEnq = IpicEnc
    End If
-   If Item![Valor do IPI] > 0 Then
+   If Item![Valor Do IPI] > 0 Then
       ipi_CST = "50"
    Else
    Select Case Item!CFOP
@@ -12405,7 +12422,7 @@ End If
              icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
              icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
              icms_pICMS = IIf(Nota_Fiscal!FinNFe = 3, 100, Item![Alíquota Do ICMS])  ' alíquota do ICMS com tratamento para finalidade 3
-             icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
+             icms_vICMS = Item![Valor Do ICMS]           ' valor do ICMS
              icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
              icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
              icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
@@ -12506,7 +12523,7 @@ End If
              Else
                 ipi_cEnq = IpicEnc
              End If
-             If Item![Valor do IPI] > 0 Then
+             If Item![Valor Do IPI] > 0 Then
                 ipi_CST = "50"
              Else
                 Select Case Item!CFOP
@@ -12531,7 +12548,7 @@ End If
              ipi_pIPI = Item![Alíquota Do IPI]
              ipi_qUnid = 0
              ipi_vUnid = 0
-             ipi_vIPI = Item![Valor do IPI]
+             ipi_vIPI = Item![Valor Do IPI]
               
              'Gera Grupo do IPI
              det_IPI = objNFeUtil.IPI400(ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
@@ -12860,7 +12877,7 @@ OcultaValor:
        Else
        ipi_cEnq = IpicEnc
        End If
-       If Item![Valor do IPI] > 0 Then
+       If Item![Valor Do IPI] > 0 Then
           ipi_CST = "50"
        Else
        Select Case Item!CFOP
@@ -13546,7 +13563,7 @@ End Sub
 
 Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
-End Sub
+End Property
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
@@ -14145,7 +14162,6 @@ Public Sub LigaDesligaAlterar()
    PrepBotoes Me, vgSituacao                           'acerta icones dos botoes
 End Sub
 
-…
 Private Sub Form_KeyPress(KeyAscii As Integer)
    Dim Ok As Boolean
    If Not Me.ActiveControl Is Nothing Then
@@ -14182,9 +14198,8 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
         End If
         
         If ambienteAtual = 0 Then
-            ' Se está em Produção, muda para Homologação
-            MsgBox "ATENÇÃO: Ambiente de Homologação. Notas Fiscais Emitidas NÃO terão validade jurídica.", _
-                   vbExclamation + vbOKOnly, vaTitulo
+    MsgBox "ATENÇÃO: Ambiente de Homologação. NF Emitidas NÃO terão validade jurídica.", vbExclamation Or vbOKOnly, vaTitulo
+
 
             With Parametros_da_NFe
                 .Edit
@@ -14204,9 +14219,10 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
             End With
 
         Else
-            ' Se está em Homologação, volta para Produção
-            MsgBox "ATENÇÃO: Ambiente de Produção. Notas Fiscais Emitidas terão validade jurídica.", _
-                   vbExclamation + vbOKOnly, vaTitulo
+             MsgBox _
+      "ATENÇÃO: Ambiente de Produção. Notas Fiscais Emitidas terão validade jurídica.", _
+      vbExclamation Or vbOKOnly, _
+      vaTitulo
 
             With Parametros_da_NFe
                 .Edit
@@ -16865,8 +16881,8 @@ IniApDaTb:
       Quantidade = Produtos_da_Nota_Fiscal!Quantidade
       Valor_Unitario = Produtos_da_Nota_Fiscal![Valor Unitário]
       Valor_Total = Produtos_da_Nota_Fiscal![Valor Total]
-      Valor_do_IPI = Produtos_da_Nota_Fiscal![Valor do IPI]
-      Valor_do_ICMS = Produtos_da_Nota_Fiscal![Valor Do Icms]
+      Valor_do_IPI = Produtos_da_Nota_Fiscal![Valor Do IPI]
+      Valor_do_ICMS = Produtos_da_Nota_Fiscal![Valor Do ICMS]
       Aliquota_do_IPI = Produtos_da_Nota_Fiscal![Alíquota Do IPI]
       Aliquota_do_ICMS = Produtos_da_Nota_Fiscal![Alíquota Do ICMS]
       Percentual_da_Reducao = Produtos_da_Nota_Fiscal![Percentual da Redução]
@@ -17332,8 +17348,8 @@ IniApDaTb:
       Quantidade = Conjuntos_da_Nota_Fiscal!Quantidade
       Valor_Unitario = Conjuntos_da_Nota_Fiscal![Valor Unitário]
       Valor_Total = Conjuntos_da_Nota_Fiscal![Valor Total]
-      Valor_do_IPI = Conjuntos_da_Nota_Fiscal![Valor do IPI]
-      Valor_do_ICMS = Conjuntos_da_Nota_Fiscal![Valor Do Icms]
+      Valor_do_IPI = Conjuntos_da_Nota_Fiscal![Valor Do IPI]
+      Valor_do_ICMS = Conjuntos_da_Nota_Fiscal![Valor Do ICMS]
       Aliquota_do_IPI = Conjuntos_da_Nota_Fiscal![Alíquota Do IPI]
       Aliquota_do_ICMS = Conjuntos_da_Nota_Fiscal![Alíquota Do ICMS]
       Percentual_da_Reducao = Conjuntos_da_Nota_Fiscal![Percentual da Redução]
@@ -17610,8 +17626,8 @@ IniApDaTb:
       Quantidade = Pecas_da_Nota_Fiscal!Quantidade
       Valor_Unitario = Pecas_da_Nota_Fiscal![Valor Unitário]
       Valor_Total = Pecas_da_Nota_Fiscal![Valor Total]
-      Valor_do_IPI = Pecas_da_Nota_Fiscal![Valor do IPI]
-      Valor_do_ICMS = Pecas_da_Nota_Fiscal![Valor Do Icms]
+      Valor_do_IPI = Pecas_da_Nota_Fiscal![Valor Do IPI]
+      Valor_do_ICMS = Pecas_da_Nota_Fiscal![Valor Do ICMS]
       Aliquota_do_IPI = Pecas_da_Nota_Fiscal![Alíquota Do IPI]
       Aliquota_do_ICMS = Pecas_da_Nota_Fiscal![Alíquota Do ICMS]
       Percentual_da_Reducao = Pecas_da_Nota_Fiscal![Percentual da Redução]
@@ -18000,5 +18016,6 @@ End Sub
 Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
+
 
 

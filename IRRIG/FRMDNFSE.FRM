@@ -25,13 +25,13 @@ Begin VB.Form frmDNFSe
    ScaleHeight     =   8100
    ScaleWidth      =   10050
    Begin SHDocVwCtl.WebBrowser IE_Web 
-      Height          =   3975
-      Left            =   1200
+      Height          =   5415
+      Left            =   1320
       TabIndex        =   0
-      Top             =   720
-      Width           =   6975
-      ExtentX         =   12303
-      ExtentY         =   7011
+      Top             =   1080
+      Width           =   6255
+      ExtentX         =   11033
+      ExtentY         =   9551
       ViewMode        =   0
       Offline         =   0
       Silent          =   0
