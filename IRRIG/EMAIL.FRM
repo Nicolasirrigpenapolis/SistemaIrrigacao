@@ -534,7 +534,7 @@ Attribute VB_Exposed = False
 '* Função....: Envia relatório via Email
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 30/05/2025 16:35:05
+'* Data......: 17/06/2025 14:01:27
 '* * * * * * *
 
 Option Explicit
