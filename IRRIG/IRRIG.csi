@@ -3,7 +3,7 @@
 2=#P0#=mb	#P1#=AlteraRegistro	#P2#=IRRIG/frmMvtoConN/AlteraRegistro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619153500	#P7#=0	#P8#=-1	.
 3=#P0#=mb	#P1#=DeletaBaixa	#P2#=IRRIG/frmMvtoConN/DeletaBaixa	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619153450	#P7#=0	#P8#=32	.
 4=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmMvtoConN/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619152535	#P7#=0	#P8#=262	.
-5=#P0#=mb	#P1#=AnalisaCondicoes	#P2#=IRRIG/frmMvtoConN/AnalisaCondicoes	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619160818	#P7#=0	#P8#=7	.
+5=#P0#=mb	#P1#=AnalisaCondicoes	#P2#=IRRIG/frmMvtoConN/AnalisaCondicoes	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619160818	#P7#=0	#P8#=10	.
 6=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250619150358	#P7#=0	#P8#=20	.
 7=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmMvtoConN/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250619150155	#P7#=0	#P8#=9	.
 8=#P0#=mb	#P1#=ComandosProdutos	#P2#=IRRIG/frmMvtoConN/ComandosProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619132614	#P7#=0	#P8#=16	.
