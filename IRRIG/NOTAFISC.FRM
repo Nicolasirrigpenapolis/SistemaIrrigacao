@@ -5416,7 +5416,7 @@ Public txtCNPJCPF As Object, txtDocumento As Object, txtMunicipio As Object
 Public txtIE As Object, txtEndereco As Object, txtRGIE As Object
 Public txtDtSaida As Object, Bruto As Object, GrdProdutos As Object
 Public grdServicos As Object, grdConjuntos As Object, grdPecas As Object
-Public txtForma_de_Pagamento As Object, lblParcelamento As Object, Grdparcelamento As Object
+Public txtForma_de_Pagamento As Object, lblParcelamento As Object, grdParcelamento As Object
 Public Ncm As Object, txtEmbarque As Object, txtPais As Object
 Public lblNota2 As Object, lblAjuste As Object, lblNota As Object
 Public lblNNota As Object, txtPropriedade As Object, txtOrigem1 As Object
@@ -6033,7 +6033,7 @@ Private Sub CarregaTotalizador()
       .ShowFilterBar = False
       .HideStatus = True
    End With
-   With Grdparcelamento
+   With grdParcelamento
       .ShowSumBar = True
       .ShowSumCol(.Columns("Vr. Total").Index) = True
       .ShowSumCol(.Columns("Número da Parcela").Index) = False
@@ -6518,7 +6518,7 @@ Private Function UltimoVencimento() As Variant
       
    Set Tb = vgDb.OpenRecordSet("SELECT MAX([Data de Vencimento]) [Data de Vencimento] FROM [Parcelas Nota Fiscal] WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
       
-   RetVal = Grdparcelamento.ColumnValue(Grdparcelamento.Row + 1, Grdparcelamento.Col - 1)
+   RetVal = grdParcelamento.ColumnValue(grdParcelamento.Row + 1, grdParcelamento.Col - 1)
       
    If Nota_Fiscal![Forma de Pagamento] = "Prazo" Then
       If Not IsNull(Tb![Data de Vencimento]) Then
@@ -7015,7 +7015,7 @@ Private Sub BlasterNFe()
          det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
                
          '=========Dados do PIS=====================
-         If Item![Valor Do PIS] > 0 Then
+         If Item![Valor do PIS] > 0 Then
             pis_CST = "01"
          Else
             pis_CST = "49"
@@ -7024,13 +7024,13 @@ Private Sub BlasterNFe()
          pis_pPIS = 1.65
          pis_qBCProd = 0
          pis_vAliqProd = 0
-         pis_vPIS = Item![Valor Do PIS]
+         pis_vPIS = Item![Valor do PIS]
          
          'Gera Grupo do PIS
          det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
          
          '=========Dados do COFINS=====================
-         If Item![Valor Do Cofins] > 0 Then
+         If Item![Valor do Cofins] > 0 Then
             cofins_CST = "01"
          Else
             cofins_CST = "49"
@@ -7039,7 +7039,7 @@ Private Sub BlasterNFe()
          cofins_pCOFINS = 7.6
          cofins_qBCProd = 0
          cofins_vAliqProd = 0
-         cofins_vCOFINS = Item![Valor Do Cofins]
+         cofins_vCOFINS = Item![Valor do Cofins]
          
          'Gera Grupo do COFINS
          det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
@@ -8486,6 +8486,18 @@ Private Sub PreValidaNFe()
 
    On Error GoTo DeuErro
    
+    If FinNFe <> 3 Then
+   If Trim(txtCp(24).Text) = "" Or Trim(txtCp(19).Text) = "" Or _
+      Trim(txtCp(23).Text) = "" Or _
+      Val(txtCp(24).Text) = 0 Or Val(txtCp(19).Text) = 0 Or Val(txtCp(23).Text) = 0 Then
+
+      MsgBox "Preencha Peso Bruto, Peso Líquido e Volumes antes de autorizar a nota." & vbCrLf & _
+             "Os valores não podem ficar em branco nem ser zero.", _
+             vbExclamation + vbOKOnly, vaTitulo
+      Exit Sub
+   End If
+End If
+   
    'ALGUNS CAMPOS OBRIGATÓRIOS
    '==========================================================================
    '======Identificação da NFe
@@ -9504,21 +9516,21 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                    !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 9, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                  Select Case !CFOP
                 Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "3101", "3102", "5949", "6949"
-                  ![Valor Do PIS] = 0
-                   Tributos = Tributos + ![Valor Do PIS]
-                  ![Valor Do Cofins] = 0
-                   Tributos = Tributos + ![Valor Do Cofins]
+                  ![Valor do PIS] = 0
+                   Tributos = Tributos + ![Valor do PIS]
+                  ![Valor do Cofins] = 0
+                   Tributos = Tributos + ![Valor do Cofins]
                   ![Valor ICMS ST] = 0
-                   Tributos = Tributos + ![Valor Do Cofins]
+                   Tributos = Tributos + ![Valor do Cofins]
                   ![Alíquota Do ICMS ST] = 0
                   ![Base de Cálculo ST] = 0
                   !IVA = 0
                   ![Valor Do Tributo] = Tributos
                Case Else
-                  ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                  Tributos = Tributos + ![Valor Do PIS]
-                  ![Valor Do Cofins] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                  Tributos = Tributos + ![Valor Do Cofins]
+                  ![Valor do PIS] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                  Tributos = Tributos + ![Valor do PIS]
+                  ![Valor do Cofins] = ((((!Quantidade * ![Valor Unitário]) - Abs(ValorAcresDesc) + ValorFrete + OutrasDespesas) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 1, !Quantidade * ![Valor Unitário] + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                  Tributos = Tributos + ![Valor do Cofins]
                   ![Valor Do Tributo] = Tributos 'Tributos
                    End Select
                   .Update
@@ -9668,23 +9680,23 @@ Private Sub AtualizaValoresPecas()
             !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             Select Case !CFOP
                Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "6912", "3101", "3102", "5949", "6949"
-                  ![Valor Do PIS] = 0
-                  Tributos = Tributos + ![Valor Do PIS]
-                  ![Valor Do Cofins] = 0
-                  Tributos = Tributos + ![Valor Do Cofins]
+                  ![Valor do PIS] = 0
+                  Tributos = Tributos + ![Valor do PIS]
+                  ![Valor do Cofins] = 0
+                  Tributos = Tributos + ![Valor do Cofins]
                Case Else
                  If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
-                    ![Valor Do PIS] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                    ![Valor do PIS] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
                  Else
-                    ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 1.65 / 100
+                    ![Valor do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 1.65 / 100
                  End If
-                  Tributos = Tributos + ![Valor Do PIS]
+                  Tributos = Tributos + ![Valor do PIS]
                  If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
-                    ![Valor Do Cofins] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                    ![Valor do Cofins] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
                  Else
-                    ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 7.6 / 100
+                    ![Valor do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 7.6 / 100
                  End If
-                  Tributos = Tributos + ![Valor Do Cofins]
+                  Tributos = Tributos + ![Valor do Cofins]
             End Select
             Tributos = Tributos + ![Valor ICMS ST]
             ![Valor Do Tributo] = Tributos 'Tributos
@@ -9759,25 +9771,25 @@ Private Sub AtualizaValoresProdutos()
             NCMProd = Nz(![Ncm], "")
             If Right(Trim(![CFOP]), 3) = "102" And Left(NCMProd, 5) = "84248" Then
                ![Alíquota Do PIS] = 0
-               ![Valor Do PIS] = 0
+               ![Valor do PIS] = 0
                ![Alíquota Do Cofins] = 0
-               ![Valor Do Cofins] = 0
+               ![Valor do Cofins] = 0
             Else
                '---- lógica original de PIS/Cofins ----
                Select Case !CFOP
                  Case "5116","6116","6910","5910","6912","2913",_
                       "1913","5912","3101","3102","5949","6949"
-                   ![Valor Do PIS] = 0
-                   Tributos = Tributos + ![Valor Do PIS]
-                   ![Valor Do Cofins] = 0
-                   Tributos = Tributos + ![Valor Do Cofins]
+                   ![Valor do PIS] = 0
+                   Tributos = Tributos + ![Valor do PIS]
+                   ![Valor do Cofins] = 0
+                   Tributos = Tributos + ![Valor do Cofins]
                  Case Else
-                   ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) _
+                   ![Valor do PIS] = ((((!Quantidade * ![Valor Unitário]) _
                                        - Abs(ValorAcresDesc) + ValorFrete + Outros) _
                                        - ![Valor Do Icms])) * 1.65 / 100
-                   Tributos = Tributos + ![Valor Do PIS]
-                   ![Valor Do Cofins] = ![Valor Do PIS]
-                   Tributos = Tributos + ![Valor Do Cofins]
+                   Tributos = Tributos + ![Valor do PIS]
+                   ![Valor do Cofins] = ![Valor do PIS]
+                   Tributos = Tributos + ![Valor do Cofins]
                End Select
             End If
             
@@ -10757,7 +10769,7 @@ Private Sub BlasterNFe310()
          det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
                
          '=========Dados do PIS=====================
-         If Item![Valor Do PIS] > 0 Then
+         If Item![Valor do PIS] > 0 Then
             pis_CST = "01"
          Else
             pis_CST = "49"
@@ -10766,13 +10778,13 @@ Private Sub BlasterNFe310()
          pis_pPIS = 1.65
          pis_qBCProd = 0
          pis_vAliqProd = 0
-         pis_vPIS = Item![Valor Do PIS]
+         pis_vPIS = Item![Valor do PIS]
          
          'Gera Grupo do PIS
          det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
          
          '=========Dados do COFINS=====================
-         If Item![Valor Do Cofins] > 0 Then
+         If Item![Valor do Cofins] > 0 Then
             cofins_CST = "01"
          Else
             cofins_CST = "49"
@@ -10781,7 +10793,7 @@ Private Sub BlasterNFe310()
          cofins_pCOFINS = 7.6
          cofins_qBCProd = 0
          cofins_vAliqProd = 0
-         cofins_vCOFINS = Item![Valor Do Cofins]
+         cofins_vCOFINS = Item![Valor do Cofins]
          
          'Gera Grupo do COFINS
          det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
@@ -12537,7 +12549,7 @@ End If
              det_IPI = objNFeUtil.IPI400(ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
               
              '=========Dados do PIS=====================
-             If Item![Valor Do PIS] > 0 Then
+             If Item![Valor do PIS] > 0 Then
                 If Item![Aliq Do Pis] = 2 Then
                    pis_CST = "02"
                 Else
@@ -12561,13 +12573,13 @@ End If
               End If
              pis_qBCProd = 0
              pis_vAliqProd = 0
-             pis_vPIS = Item![Valor Do PIS]
+             pis_vPIS = Item![Valor do PIS]
              
              'Gera Grupo do PIS
              det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
              
              '=========Dados do COFINS=====================
-             If Item![Valor Do Cofins] > 0 Then
+             If Item![Valor do Cofins] > 0 Then
                 If Item![Aliq Do Cofins] = 9.6 Then
                    cofins_CST = "02"
                 Else
@@ -12589,7 +12601,7 @@ End If
              
              cofins_qBCProd = 0
              cofins_vAliqProd = 0
-             cofins_vCOFINS = Item![Valor Do Cofins]
+             cofins_vCOFINS = Item![Valor do Cofins]
              
              'Gera Grupo do COFINS
              det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
@@ -14928,7 +14940,7 @@ Private Sub Form_Load()
    Set grdPecas = Grid(3)
    Set txtForma_de_Pagamento = txtCampo(28)
    Set lblParcelamento = Label(9)
-   Set Grdparcelamento = Grid(4)
+   Set grdParcelamento = Grid(4)
    Set Ncm = txtCampo(49)
    Set txtEmbarque = txtCampo(50)
    Set txtPais = txtCampo(51)
@@ -16350,7 +16362,7 @@ Private Sub Form_Unload(Cancel As Integer)
    Set grdPecas = Nothing
    Set txtForma_de_Pagamento = Nothing
    Set lblParcelamento = Nothing
-   Set Grdparcelamento = Nothing
+   Set grdParcelamento = Nothing
    Set Ncm = Nothing
    Set txtEmbarque = Nothing
    Set txtPais = Nothing
@@ -16872,8 +16884,8 @@ IniApDaTb:
       Percentual_da_Reducao = Produtos_da_Nota_Fiscal![Percentual da Redução]
       Diferido = Produtos_da_Nota_Fiscal!Diferido
       Valor_da_Base_de_Calculo = Produtos_da_Nota_Fiscal![Valor da Base de Cálculo]
-      Valor_do_PIS = Produtos_da_Nota_Fiscal![Valor Do PIS]
-      Valor_do_Cofins = Produtos_da_Nota_Fiscal![Valor Do Cofins]
+      Valor_do_PIS = Produtos_da_Nota_Fiscal![Valor do PIS]
+      Valor_do_Cofins = Produtos_da_Nota_Fiscal![Valor do Cofins]
       IVA = Produtos_da_Nota_Fiscal!IVA
       Base_de_Calculo_ST = Produtos_da_Nota_Fiscal![Base de Cálculo ST]
       Valor_ICMS_ST = Produtos_da_Nota_Fiscal![Valor ICMS ST]
@@ -17340,8 +17352,8 @@ IniApDaTb:
       Diferido = Conjuntos_da_Nota_Fiscal!Diferido
       Valor_da_Base_de_Calculo = Conjuntos_da_Nota_Fiscal![Valor da Base de Cálculo]
       Valor_do_Tributo = Conjuntos_da_Nota_Fiscal![Valor Do Tributo]
-      Valor_do_PIS = Conjuntos_da_Nota_Fiscal![Valor Do PIS]
-      Valor_do_Cofins = Conjuntos_da_Nota_Fiscal![Valor Do Cofins]
+      Valor_do_PIS = Conjuntos_da_Nota_Fiscal![Valor do PIS]
+      Valor_do_Cofins = Conjuntos_da_Nota_Fiscal![Valor do Cofins]
       IVA = Conjuntos_da_Nota_Fiscal!IVA
       Base_de_Calculo_ST = Conjuntos_da_Nota_Fiscal![Base de Cálculo ST]
       Valor_ICMS_ST = Conjuntos_da_Nota_Fiscal![Valor ICMS ST]
@@ -17618,8 +17630,8 @@ IniApDaTb:
       Diferido = Pecas_da_Nota_Fiscal!Diferido
       Valor_da_Base_de_Calculo = Pecas_da_Nota_Fiscal![Valor da Base de Cálculo]
       Valor_do_Tributo = Pecas_da_Nota_Fiscal![Valor Do Tributo]
-      Valor_do_PIS = Pecas_da_Nota_Fiscal![Valor Do PIS]
-      Valor_do_Cofins = Pecas_da_Nota_Fiscal![Valor Do Cofins]
+      Valor_do_PIS = Pecas_da_Nota_Fiscal![Valor do PIS]
+      Valor_do_Cofins = Pecas_da_Nota_Fiscal![Valor do Cofins]
       IVA = Pecas_da_Nota_Fiscal!IVA
       Base_de_Calculo_ST = Pecas_da_Nota_Fiscal![Base de Cálculo ST]
       Valor_ICMS_ST = Pecas_da_Nota_Fiscal![Valor ICMS ST]
