@@ -25,13 +25,13 @@ Begin VB.Form frmDNFSe
    ScaleHeight     =   8100
    ScaleWidth      =   10050
    Begin SHDocVwCtl.WebBrowser IE_Web 
-      Height          =   3975
-      Left            =   1200
+      Height          =   10000
+      Left            =   0
       TabIndex        =   0
-      Top             =   720
-      Width           =   6975
-      ExtentX         =   12303
-      ExtentY         =   7011
+      Top             =   0
+      Width           =   10320
+      ExtentX         =   18203
+      ExtentY         =   17639
       ViewMode        =   0
       Offline         =   0
       Silent          =   0
@@ -56,48 +56,15 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-Private Const READYSTATE_COMPLETE As Long = 4
-Public Endereco As String
-
-Private Sub Form_Load()
-    Me.Visible = False
-End Sub
+Public endereco As String
 
 Private Sub Form_Unload(Cancel As Integer)
-    Unload Me
+   Unload Me
 End Sub
 
-Public Sub AbreSite(ByVal Site As String)
-    On Error GoTo TrataErro
-    Dim url As String
-    Dim t0 As Single
-    t0 = Timer
-
-    If Left$(Site, 2) = "\\" Then
-        url = "file://" & Replace$(Site, "\", "/")
-    ElseIf InStr(Site, "://") = 0 Then
-        url = "http://" & Site
-    Else
-        url = Site
-    End If
-
-    Endereco = url
-    IE_Web.Navigate url
-
-    Do While IE_Web.Busy Or IE_Web.readyState <> READYSTATE_COMPLETE
-        DoEvents
-        If Timer - t0 > 15 Then Err.Raise vbObjectError + 1, , "Timeout ao carregar: " & url
-    Loop
-
-    Me.Visible = True
-    Exit Sub
-
-TrataErro:
-    MsgBox Err.Description, vbExclamation, "AbreSite"
-    Me.Visible = False
-End Sub
-
-Private Sub IE_Web_StatusTextChange(ByVal Text As String)
-    Debug.Print Text
+Public Sub AbreSite(Site As String)
+   Do While IE_Web.ReadyState <> 4: DoEvents: Loop
+   IE_Web.Navigate Site
+   Me.Show
 End Sub
 

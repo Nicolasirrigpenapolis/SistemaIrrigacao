@@ -15,7 +15,7 @@ Attribute VB_Ext_KEY = "Top_Level" ,"Yes"
 '* Função....: Grava imagem no formato GIF
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 17/06/2025 14:01:27
+'* Data......: 23/06/2025 11:13:30
 '* * * * * * *
 
 Option Explicit                                   'variáveis devem ser declaradas

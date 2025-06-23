@@ -706,7 +706,7 @@ Attribute VB_Exposed = False
 '* Função....: Gerar Mvto do Estoque(Pedido)
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 17/06/2025 13:59:27
+'* Data......: 23/06/2025 11:09:24
 '* * * * * * *
 
 Option Explicit
