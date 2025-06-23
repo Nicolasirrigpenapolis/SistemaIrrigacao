@@ -1862,11 +1862,7 @@ Attribute VB_Exposed = False
 '* Função....: Conjuntos
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-<<<<<<< HEAD
 '* Data......: 23/06/2025 11:09:20
-=======
-'* Data......: 20/06/2025 15:31:43
->>>>>>> 43abc5ea82816db8ad37da7ed94bcda0f6c79d69
 '* * * * * * *
 
 Option Explicit

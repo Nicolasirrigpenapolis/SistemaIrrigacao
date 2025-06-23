@@ -5,13 +5,8 @@ ALTER TABLE [Nota Fiscal]
 ALTER COLUMN Frete VARCHAR(35);
 
 
+use IRRIGACAO
+go
+
 ALTER TABLE Orçamento
 ALTER COLUMN Frete VARCHAR(35);
-
-
-ALTER TABLE dbo.Orçamento
-ADD
-    PlacaVeiculo varchar(8) NULL,  
-    UfPlaca      char(2)    NULL,   
-    NumAntt      char(8)    NULL;   
-GO

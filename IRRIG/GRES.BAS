@@ -5,11 +5,7 @@ Attribute VB_Name = "modResources"
 '* Função....: Módulo de funções para resource
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-<<<<<<< HEAD
 '* Data......: 23/06/2025 11:13:29
-=======
-'* Data......: 20/06/2025 15:34:17
->>>>>>> 43abc5ea82816db8ad37da7ed94bcda0f6c79d69
 '* * * * * * *
 
 Option Explicit                                   'requer variáveis explicitamente declaradas

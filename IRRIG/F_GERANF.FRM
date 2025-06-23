@@ -25,15 +25,14 @@ Begin VB.Form frmF_GeraNF
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   0
+         Index           =   2
          Left            =   8535
-         TabIndex        =   6
+         TabIndex        =   9
          TabStop         =   0   'False
-         Top             =   1710
+         Top             =   2640
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
-         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -45,26 +44,25 @@ Begin VB.Form frmF_GeraNF
          EndProperty
          CaptionOffset   =   50
       End
-      Begin IRRIG.GBotao botOk 
-         Height          =   360
-         Left            =   5805
-         TabIndex        =   5
-         Top             =   4050
-         Width           =   1485
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   1
+         Left            =   6390
+         TabIndex        =   7
+         TabStop         =   0   'False
+         Top             =   2175
+         Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
-         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Prossegue"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao botCancela 
@@ -75,7 +73,6 @@ Begin VB.Form frmF_GeraNF
          Width           =   1485
          _ExtentX        =   0
          _ExtentY        =   0
-         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Microsoft Sans Serif"
             Size            =   9.75
@@ -89,39 +86,37 @@ Begin VB.Form frmF_GeraNF
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   1
-         Left            =   6390
-         TabIndex        =   7
-         TabStop         =   0   'False
-         Top             =   2175
-         Width           =   240
+      Begin IRRIG.GBotao botOk 
+         Height          =   360
+         Left            =   5805
+         TabIndex        =   5
+         Top             =   4050
+         Width           =   1485
          _ExtentX        =   0
          _ExtentY        =   0
-         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         Caption         =   "Prossegue"
+         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   2
+         Index           =   0
          Left            =   8535
-         TabIndex        =   9
+         TabIndex        =   6
          TabStop         =   0   'False
-         Top             =   2640
+         Top             =   1710
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
-         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1041,9 +1036,6 @@ Private Sub Gerar()
          Nota!Volume = Orcamento!Volumes
          Nota![Peso Bruto] = Orcamento![Peso Bruto]
          Nota![Peso Líquido] = Orcamento![Peso Líquido]
-         Nota![Placa do veiculo] = Orcamento!PlacaVeiculo
-         Nota![Uf do veiculo] = Orcamento!UfPlaca
-         Nota![Código da ANTT] = Orcamento!NumAntt
       Nota!FinNFe = 1
       Nota!Financiamento = Orcamento![Nao Movimentar Estoque]
       Nota!Refaturamento = Orcamento!Refaturamento
@@ -1133,8 +1125,8 @@ Private Sub Gerar()
                PProdutos![Alíquota Do ICMS] = OProdutos![Alíquota Do ICMS]
                PProdutos![Percentual da Redução] = OProdutos![Percentual da Redução]
             End If
-            PProdutos![Valor Do PIS] = OProdutos![Valor Do PIS]
-            PProdutos![Valor Do Cofins] = OProdutos![Valor Do Cofins]
+            PProdutos![Valor do PIS] = OProdutos![Valor do PIS]
+            PProdutos![Valor do Cofins] = OProdutos![Valor do Cofins]
             PProdutos!CST = OProdutos!CST
             PProdutos!CFOP = OProdutos!CFOP
             PProdutos!IVA = OProdutos!IVA
@@ -1181,10 +1173,10 @@ Private Sub Gerar()
                NProdutos!Diferido = !Diferido
                NProdutos![Bc Pis] = OProdutos![Bc Pis]
                NProdutos![Aliq Do Pis] = OProdutos![Aliq Do Pis]
-               NProdutos![Valor Do PIS] = ![Valor Do PIS]
+               NProdutos![Valor do PIS] = ![Valor do PIS]
                NProdutos![Bc Cofins] = OProdutos![Bc Cofins]
                NProdutos![Aliq Do Cofins] = OProdutos![Aliq Do Cofins]
-               NProdutos![Valor Do Cofins] = ![Valor Do Cofins]
+               NProdutos![Valor do Cofins] = ![Valor do Cofins]
                NProdutos!CST = !CST
                NProdutos!CFOP = !CFOP
                NProdutos!IVA = !IVA
@@ -1257,8 +1249,8 @@ Private Sub Gerar()
                PConjuntos![Valor da Base de Cálculo] = OConjuntos![Valor da Base de Cálculo]
             End If
             PConjuntos!Diferido = OConjuntos!Diferido
-            PConjuntos![Valor Do PIS] = OConjuntos![Valor Do PIS]
-            PConjuntos![Valor Do Cofins] = OConjuntos![Valor Do Cofins]
+            PConjuntos![Valor do PIS] = OConjuntos![Valor do PIS]
+            PConjuntos![Valor do Cofins] = OConjuntos![Valor do Cofins]
             PConjuntos!CST = OConjuntos!CST
             PConjuntos!CFOP = OConjuntos!CFOP
             PConjuntos!IVA = OConjuntos!IVA
@@ -1306,9 +1298,9 @@ Private Sub Gerar()
                
                NConjuntos![Bc Pis] = ![Bc Pis]
                NConjuntos![Aliq Do Pis] = ![Aliq Do Pis]
-               NConjuntos![Valor Do PIS] = ![Valor Do PIS]
+               NConjuntos![Valor do PIS] = ![Valor do PIS]
                
-               NConjuntos![Valor Do Cofins] = ![Valor Do Cofins]
+               NConjuntos![Valor do Cofins] = ![Valor do Cofins]
                NConjuntos![Bc Cofins] = ![Bc Cofins]
                NConjuntos![Aliq Do Cofins] = ![Aliq Do Cofins]
                
@@ -1348,8 +1340,8 @@ Private Sub Gerar()
             End If
             PPecas![Alíquota Do IPI] = OPecas![Alíquota Do IPI]
             PPecas!Diferido = OPecas!Diferido
-            PPecas![Valor Do PIS] = OPecas![Valor Do PIS]
-            PPecas![Valor Do Cofins] = OPecas![Valor Do Cofins]
+            PPecas![Valor do PIS] = OPecas![Valor do PIS]
+            PPecas![Valor do Cofins] = OPecas![Valor do Cofins]
             PPecas!CST = OPecas!CST
             PPecas!CFOP = OPecas!CFOP
             PPecas!IVA = OPecas!IVA
@@ -1397,11 +1389,11 @@ Private Sub Gerar()
                
                NPecas![Bc Pis] = ![Bc Pis]
                NPecas![Aliq Do Pis] = ![Aliq Do Pis]
-               NPecas![Valor Do PIS] = ![Valor Do PIS]
+               NPecas![Valor do PIS] = ![Valor do PIS]
                
                NPecas![Bc Cofins] = ![Bc Cofins]
                NPecas![Aliq Do Cofins] = ![Aliq Do Cofins]
-               NPecas![Valor Do Cofins] = ![Valor Do Cofins]
+               NPecas![Valor do Cofins] = ![Valor do Cofins]
                
                NPecas!CST = !CST
                NPecas!CFOP = !CFOP
