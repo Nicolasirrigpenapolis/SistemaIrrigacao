@@ -1,4 +1,5 @@
 [History]
+<<<<<<< Updated upstream
 1=#P0#=mb	#P1#=DeletaFilhos	#P2#=IRRIG/frmMvtoConN/DeletaFilhos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619153825	#P7#=0	#P8#=10	.
 2=#P0#=mb	#P1#=AlteraRegistro	#P2#=IRRIG/frmMvtoConN/AlteraRegistro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619153500	#P7#=0	#P8#=-1	.
 3=#P0#=mb	#P1#=DeletaBaixa	#P2#=IRRIG/frmMvtoConN/DeletaBaixa	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619153450	#P7#=0	#P8#=32	.
@@ -10,3 +11,20 @@
 9=#P0#=mb	#P1#=CarregaTotalizador	#P2#=IRRIG/frmMvtoConN/CarregaTotalizador	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250619132602	#P7#=0	#P8#=0	.
 10=#P0#=mb	#P1#=Form_KeyPress	#P2#=IRRIG/frmAbout/Form_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250619132315	#P7#=-2147483640	#P8#=0	.
 11=#P0#=mb	#P1#=botOk_Click	#P2#=IRRIG/frmProcura/botOk_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250619132530	#P7#=0	#P8#=51	.
+=======
+1=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmOrcament/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623091632	#P7#=0	#P8#=-2	.
+2=#P0#=mb	#P1#=SuperAtualizaConjuntos	#P2#=IRRIG/frmNotaFisc/SuperAtualizaConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623090645	#P7#=0	#P8#=19	.
+3=#P0#=mb	#P1#=ExecutaGrid4	#P2#=IRRIG/frmOrcament/ExecutaGrid4	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623090452	#P7#=0	#P8#=30	.
+4=#P0#=mb	#P1#=ExecutaGrid3	#P2#=IRRIG/frmOrcament/ExecutaGrid3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623090419	#P7#=0	#P8#=80	.
+5=#P0#=mb	#P1#=ExecutaGrid2	#P2#=IRRIG/frmOrcament/ExecutaGrid2	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623090342	#P7#=0	#P8#=17	.
+6=#P0#=mb	#P1#=ExecutaGrid1	#P2#=IRRIG/frmOrcament/ExecutaGrid1	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623090242	#P7#=0	#P8#=104	.
+7=#P0#=mb	#P1#=PreValidaNFe	#P2#=IRRIG/frmNotaFisc/PreValidaNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623085951	#P7#=0	#P8#=9	.
+8=#P0#=mb	#P1#=Gerar	#P2#=IRRIG/frmF_GeraNF/Gerar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623085233	#P7#=0	#P8#=86	.
+9=#P0#=mb	#P1#=Grid_SkipRecord	#P2#=IRRIG/frmOrcament/Grid_SkipRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623080314	#P7#=0	#P8#=-3	.
+10=#P0#=mb	#P1#=Form_Unload	#P2#=IRRIG/frmOrcament/Form_Unload	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623080307	#P7#=0	#P8#=134	.
+11=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623075831	#P7#=0	#P8#=10	.
+12=#P0#=mb	#P1#=Grid_KeyPress	#P2#=IRRIG/frmOrcament/Grid_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623080721	#P7#=0	#P8#=7	.
+13=#P0#=mb	#P1#=grdBrowse_MouseUp	#P2#=IRRIG/frmOrcament/grdBrowse_MouseUp	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623074936	#P7#=0	#P8#=-2	.
+14=#P0#=mb	#P1#=Tabs_Click	#P2#=IRRIG/frmOrcament/Tabs_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250623074730	#P7#=0	#P8#=0	.
+15=#P0#=mb	#P1#=PreValidaNFe	#P2#=IRRIG/frmOrcament/PreValidaNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250623085733	#P7#=0	#P8#=4	.
+>>>>>>> Stashed changes
