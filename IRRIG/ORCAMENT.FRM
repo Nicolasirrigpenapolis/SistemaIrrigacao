@@ -10698,7 +10698,7 @@ DeuErro:
    
 End Sub
 
-Private Sub Tabs_Click(Index As Integer, PreviousTab As Integer)
+Private Sub Tabs_Click(Index As Integer)
    MudaTamCampos Me
 End Sub
 
@@ -13583,6 +13583,13 @@ Private Sub PreValidaNFe()
              vbExclamation + vbOKOnly, vaTitulo
       Exit Sub
    End If
+   
+   'Obrigat�rio informar Placa e UF do Ve�culo
+   If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
+      MsgBox "Preencha Placa e UF do Ve�culo antes de gerar a nota.", _
+             vbExclamation + vbOKOnly, vaTitulo
+      Exit Sub
+   End If
   
    Set Itens = vgDb.OpenRecordSet("SELECT * FROM(" & _
                                   "SELECT PO.[Seqüência do Orçamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seqüência do Produto], P.Descrição, U.[Sigla da Unidade], PO.[Valor Unitário] " & _
@@ -14615,7 +14622,7 @@ Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
 End Sub
 
 'apresenta popup menu para trabalhar com o grid
-Private Sub grdBrowse_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single, ByVal vgCurCol As Integer)
+Private Sub grdBrowse_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
    MostraPopGrid Me, Button
 End Sub
 
@@ -18134,21 +18141,27 @@ Private Sub Form_Unload(Cancel As Integer)
    Set frmOrcament = Nothing                      'libera o segmento de código do form
 End Sub
 
-'evento - quando qq tecla for digitada no grid filho
-Private Sub Grid_KeyPress(Index As Integer, ByVal KeyAscii As Integer, ByVal Shift As Integer, vgColumns() As Variant)
+
+' evento � toda vez que uma tecla for pressionada no Grid (controle de array)
+Private Sub Grid_KeyPress( _
+      Index As Integer, _
+      KeyAscii As Integer)
+
+   Dim vgCols() As Variant
+   vgCols = Grid(Index).GetColumnValues(Grid(Index).SelectedItem)
+
    Select Case Index
       Case 0
-         ExecutaGrid0 vgColumns(), KEYPRESS_NO_GRID, , , , , , KeyAscii
+         ExecutaGrid0 vgCols(), KEYPRESS_NO_GRID, , , , , , KeyAscii
       Case 1
-         ExecutaGrid1 vgColumns(), KEYPRESS_NO_GRID, , , , , , KeyAscii
+         ExecutaGrid1 vgCols(), KEYPRESS_NO_GRID, , , , , , KeyAscii
       Case 3
-         ExecutaGrid3 vgColumns(), KEYPRESS_NO_GRID, , , , , , KeyAscii
+         ExecutaGrid3 vgCols(), KEYPRESS_NO_GRID, , , , , , KeyAscii
       Case 4
-         ExecutaGrid4 vgColumns(), KEYPRESS_NO_GRID, , , , , , KeyAscii
+         ExecutaGrid4 vgCols(), KEYPRESS_NO_GRID, , , , , , KeyAscii
    End Select
-End Sub
 
-'evento - está mudando a linha selecionada do grid
+End Sub
 Private Sub Grid_SkipRecord(Index As Integer, vgColumns() As Variant, ByVal vgBookMark As Variant)
    ExecutaGrid Index, vgColumns(), CONDICOES_ESPECIAIS
 End Sub
@@ -18748,7 +18761,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
          Grid(1).AllowInsert = (((Sequencia_do_Pedido = 0) And Cancelado = 0 And Produtos_do_Orcamento.RecordCount = 0 And Venda_Fechada = 0) Or Ordem_Interna = 1)
       On Error Resume Next
-         Grid(1).AllowEdit = ((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0 Or vgPWUsuario = "YGOR")
+         Grid(1).AllowEdit = ((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0 Or vgPWUsuario = "YGOR" Or vgPWUsuario = "JUCELI")
       On Error Resume Next
          Grid(1).AllowDelete = ((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0)
       End If
@@ -19006,7 +19019,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
          Grid(2).AllowInsert = (((Sequencia_do_Pedido = 0) And Cancelado = 0) And Not Vazio(Orcamento![Forma de Pagamento]) And TotalParcelas < Valor_Total_do_Orcamento)
       On Error Resume Next
-         Grid(2).AllowEdit = (((Sequencia_do_Pedido = 0) And Cancelado = 0) And Not Vazio(Orcamento![Forma de Pagamento]))
+         Grid(2).AllowEdit = (((Sequencia_do_Pedido = 0) And Cancelado = 0) And Not Vazio(Orcamento![Forma de Pagamento]) Or vgPWUsuario = "YGOR" Or vgPWUsuario = "JUCELI")
       On Error Resume Next
          Grid(2).AllowDelete = (((Sequencia_do_Pedido = 0) And Cancelado = 0) And Not Vazio(Orcamento![Forma de Pagamento]))
       End If
@@ -19203,7 +19216,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
          Grid(3).AllowInsert = (((Sequencia_do_Pedido = 0) And Cancelado = 0 And Conjuntos_do_Orcamento.RecordCount = 0 And Pecas_do_Orcamento.RecordCount = 0 And Venda_Fechada = 0) Or Ordem_Interna = 1)
       On Error Resume Next
-         Grid(3).AllowEdit = (((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0) Or Ordem_Interna = 1)
+         Grid(3).AllowEdit = (((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0) Or Ordem_Interna = 1 Or vgPWUsuario = "YGOR" Or vgPWUsuario = "JUCELI")
       On Error Resume Next
          Grid(3).AllowDelete = ((Sequencia_do_Pedido = 0) And Cancelado = 0 And Venda_Fechada = 0)
       End If
@@ -19491,7 +19504,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
          Grid(4).AllowInsert = ((Sequencia_do_Pedido = 0) And Cancelado = 0)
       On Error Resume Next
-         Grid(4).AllowEdit = ((Sequencia_do_Pedido = 0) And Cancelado = 0)
+         Grid(4).AllowEdit = ((Sequencia_do_Pedido = 0) And Cancelado = 0 Or vgPWUsuario = "YGOR" Or vgPWUsuario = "JUCELI")
       On Error Resume Next
          Grid(4).AllowDelete = ((Sequencia_do_Pedido = 0) And Cancelado = 0 And vgPWUsuario <> "RAFAEL")
       End If
