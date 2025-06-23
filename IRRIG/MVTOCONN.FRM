@@ -1,3004 +1,2563 @@
-Version 5.00
+VERSION 5.00
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
-Begin VB.Form frmMvtoConN
-   ForeColor                =   &H80000008
-   BorderStyle              =   2
-   Height                   =   8760
-   Left                     =   1635
-   LinkTopic                =   "MvtoConN"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   8325
-   ScaleWidth               =   16020
-   Top                      =   1285
-   Width                    =   16110
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   1
-      BevelInner               =   1
-      BorderWidth              =   2
-      BevelWidth               =   2
-      BorderStyle              =   2
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   8145
-      Left                     =   15
-      Width                    =   15840
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   27925
-      _extenty                 =   14359
-      Index                    =   0 
-      Begin VB.PictureBox picBox
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Height                   =   1395
-         Left                     =   150
-         Width                    =   1350
-         Top                      =   90
-         Index                    =   0 
+Begin VB.Form frmMvtoConN 
+   ClientHeight    =   8175
+   ClientLeft      =   1755
+   ClientTop       =   1755
+   ClientWidth     =   15870
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "MvtoConN"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   8175
+   ScaleWidth      =   15870
+   Begin IRRIG.GPainel Painel 
+      Height          =   8145
+      Index           =   0
+      Left            =   15
+      TabIndex        =   48
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   15840
+      _ExtentX        =   27914
+      _ExtentY        =   14367
+      BevelOuter      =   1
+      BevelInner      =   1
+      BevelWidth      =   2
+      BorderWidth     =   2
+      Stretch         =   -1  'True
+      Begin VB.PictureBox picBox 
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   1395
+         Index           =   0
+         Left            =   150
+         ScaleHeight     =   1395
+         ScaleWidth      =   1350
+         TabIndex        =   49
+         Top             =   90
+         Width           =   1350
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   465
-         Left                     =   1605
-         Width                    =   7620
-         Top                      =   195
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   20.25
-            Underline                =   -1
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H0
-         Caption                  =   "Movimento do Estoque Contábil (Novo)"
-         Index                    =   0 
-      End
-      Begin IRRIG.GPainel Painel
-         BackColor                =   &H8000000F
-         BevelOuter               =   0
-         BevelInner               =   0
-         BorderWidth              =   1
-         BevelWidth               =   1
-         BorderStyle              =   0
-         Stretch                  =   -1
-         Stripes                  =   0
-         SaveGridBars             =   0
-         Height                   =   240
-         Left                     =   2145
-         Width                    =   2610
-         Top                      =   825
-         TabStop                  =  0
-         _extentx                 =   4601
-         _extenty                 =   423
-         Index                    =   1 
-         Begin             VB.Label labopcPainel1
-            BorderStyle              =   1
-            DataField                =   "Tipo do Movimento"
-            Height                   =   120
-            Left                     =   1110
-            Top                      =   180
-            Visible                  =   0
-            Width                    =   240
-            End
-         Begin VB.OptionButton opcPainel1Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+      Begin IRRIG.GPainel Painel 
+         Height          =   240
+         Index           =   1
+         Left            =   2145
+         TabIndex        =   51
+         TabStop         =   0   'False
+         Top             =   825
+         Width           =   2610
+         _ExtentX        =   4604
+         _ExtentY        =   423
+         BevelOuter      =   0
+         Stretch         =   -1  'True
+         Begin VB.OptionButton opcPainel1Cp 
+            Caption         =   "Entrada"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   0
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   0
-            Width                    =   1350
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Entrada"
-            Index                    =   0 
+            ForeColor       =   &H00800000&
+            Height          =   300
+            Index           =   0
+            Left            =   0
+            TabIndex        =   0
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   1350
          End
-         Begin VB.OptionButton opcPainel1Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+         Begin VB.OptionButton opcPainel1Cp 
+            Caption         =   "Saída"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   1
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   1395
-            Width                    =   1215
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Saída"
-            Index                    =   1 
+            ForeColor       =   &H00800000&
+            Height          =   300
+            Index           =   1
+            Left            =   1395
+            TabIndex        =   1
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   1215
+         End
+         Begin VB.Label labopcPainel1 
+            BorderStyle     =   1  'Fixed Single
+            DataField       =   "Tipo do Movimento"
+            Height          =   120
+            Left            =   1110
+            TabIndex        =   52
+            Top             =   180
+            Visible         =   0   'False
+            Width           =   240
          End
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   1605
-         Width                    =   510
-         Top                      =   825
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CheckBox ChkCp 
+         Caption         =   "Devolução"
+         DataField       =   "Devolução"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H800000
-         Caption                  =   "Tipo:"
-         Index                    =   1 
+         ForeColor       =   &H00000000&
+         Height          =   300
+         Index           =   0
+         Left            =   10980
+         TabIndex        =   7
+         TabStop         =   0   'False
+         Top             =   405
+         Width           =   1695
       End
-      Begin VB.CheckBox ChkCp
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         DataField       =   "Seqüência do Movimento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H0
-         Alignment                =   0
-         TabIndex                 =   7
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   10980
-         Width                    =   1695
-         Top                      =   405
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+         Height          =   330
+         Index           =   0
+         Left            =   2220
+         Locked          =   -1  'True
+         MultiLine       =   -1  'True
+         TabIndex        =   2
+         TabStop         =   0   'False
+         Top             =   1350
+         Width           =   1095
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         DataField       =   "Documento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H0
-         Alignment                =   0
-         Caption                  =   "Devolução"
-         Index                    =   0 
-         DataField                =   "Devolução"
+         Height          =   330
+         Index           =   1
+         Left            =   5415
+         MaxLength       =   20
+         TabIndex        =   5
+         Top             =   1710
+         Width           =   1560
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   1650
-         Width                    =   555
-         Top                      =   1320
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo2 
+         Height          =   300
+         Index           =   1
+         Left            =   15045
+         Style           =   1  'Graphical
+         TabIndex        =   58
+         TabStop         =   0   'False
+         Top             =   1335
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo2 
+         Height          =   300
+         Index           =   2
+         Left            =   14790
+         Style           =   1  'Graphical
+         TabIndex        =   59
+         TabStop         =   0   'False
+         Top             =   1335
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência do Geral"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Seq.:"
-         Index                    =   2 
+         Height          =   300
+         Index           =   2
+         Left            =   7935
+         TabIndex        =   6
+         Top             =   1335
+         Width           =   6840
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   330
+         Index           =   0
+         Left            =   15330
+         TabIndex        =   8
+         TabStop         =   0   'False
+         Top             =   1320
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   2
-         TabStop                  =   -1
-         Height                   =   330
-         Left                     =   2220
-         Width                    =   1095
-         Top                      =   1350
-         DataField                =   "Seqüência do Movimento"
-         TabStop                  =  0
-         Index                    =   0 
-         MultiLine                =   -1
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   3435
-         Width                    =   1935
-         Top                      =   1710
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin TabDlg.SSTab Tabs 
+         Height          =   5100
+         Index           =   0
+         Left            =   300
+         TabIndex        =   10
+         Top             =   2640
+         Width           =   15255
+         _ExtentX        =   26882
+         _ExtentY        =   8996
+         _Version        =   393216
+         Style           =   1
+         Tabs            =   5
+         TabsPerRow      =   5
+         TabHeight       =   519
+         BackColor       =   12648384
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   11.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "*Documento.........:"
-         Index                    =   3 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   20
-         BorderStyle              =   1
-         Alignment                =   0
-         TabIndex                 =   5
-         TabStop                  =   -1
-         Height                   =   330
-         Left                     =   5415
-         Width                    =   1560
-         Top                      =   1710
-         DataField                =   "Documento"
-         Index                    =   1 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   7140
-         Width                    =   645
-         Top                      =   1320
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Geral:"
-         Index                    =   4 
-      End
-      Begin VB.Label labFdo2
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   7920
-         Top                      =   1320
-         Width                    =   7395
-         Height                   =   330
-      End
-      Begin VB.CommandButton bottxtCampo2
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   15045
-         Top                      =   1335
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo2
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   14790
-         Top                      =   1335
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   6
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   7935
-         Width                    =   6840
-         Top                      =   1335
-         DataField                =   "Seqüência do Geral"
-         Index                    =   2 
-      End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   8
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   330
-         Left                     =   15330
-         Width                    =   240
-         Top                      =   1320
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   ""
-         Index                    =   0 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   15645
-         Width                    =   45
-         Top                      =   7875
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "-"
-         Index                    =   5 
-      End
-      Begin TabDlg.SSTab Tabs
-         TabsPerRow               =   5
-         TabHeight                =   519
-         BackColor                =   &HC0FFC0
-         Style                    =   1
-         TabOrientation           =   0
-         Tabs                     =   5
-         TabIndex                 =   10
-         TabStop                  =   -1
-         Height                   =   5100
-         Left                     =   300
-         Width                    =   15255
-         Top                      =   2640
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   11.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H0
-         Caption                  =   "&1 - Dados Principais"
-         Index                    =   0 
-         _version                 =   65536
-         _extentx                 =   26894
-         _extenty                 =   8991
-         _stockprops              =   15
-         TabCaption(0)            =   "&1 - Dados Principais"
-         Tab(0).ControlCount=   2
-         Tab(0).ControlEnabled=   -1
+         TabCaption(0)   =   "&1 - Dados Principais"
+         Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Label(6)"
+         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).Control(1)=   "txtCp(3)"
-         TabCaption(1)            =   "&2 - Produtos"
-         Tab(1).ControlCount=   31
-         Tab(1).ControlEnabled=   0
-         Tab(1).Control(0)=   "Grid(0)"
-         Tab(1).Control(1)=   "Label(7)"
-         Tab(1).Control(2)=   "labFdo14"
-         Tab(1).Control(3)=   "bottxtCampo14(1)"
-         Tab(1).Control(4)=   "bottxtCampo14(2)"
-         Tab(1).Control(5)=   "txtCp(14)"
-         Tab(1).Control(6)=   "Label(26)"
-         Tab(1).Control(7)=   "txtCp(15)"
-         Tab(1).Control(8)=   "Label(27)"
-         Tab(1).Control(9)=   "Botao(2)"
-         Tab(1).Control(10)=   "labFdo16"
-         Tab(1).Control(11)=   "bottxtCampo16(2)"
-         Tab(1).Control(12)=   "txtCp(16)"
-         Tab(1).Control(13)=   "Label(28)"
-         Tab(1).Control(14)=   "Botao(3)"
+         Tab(0).Control(1).Enabled=   0   'False
+         Tab(0).ControlCount=   2
+         TabCaption(1)   =   "&2 - Produtos"
+         Tab(1).ControlEnabled=   0   'False
+         Tab(1).Control(0)=   "Botao(8)"
+         Tab(1).Control(1)=   "txtCp(24)"
+         Tab(1).Control(2)=   "txtCp(23)"
+         Tab(1).Control(3)=   "bottxtCampo23(2)"
+         Tab(1).Control(4)=   "bottxtCampo23(1)"
+         Tab(1).Control(5)=   "labFdo23"
+         Tab(1).Control(6)=   "Botao(7)"
+         Tab(1).Control(7)=   "txtCp(22)"
+         Tab(1).Control(8)=   "bottxtCampo22(2)"
+         Tab(1).Control(9)=   "labFdo22"
+         Tab(1).Control(10)=   "Botao(6)"
+         Tab(1).Control(11)=   "txtCp(21)"
+         Tab(1).Control(12)=   "txtCp(20)"
+         Tab(1).Control(13)=   "bottxtCampo20(2)"
+         Tab(1).Control(14)=   "bottxtCampo20(1)"
          Tab(1).Control(15)=   "labFdo20"
-         Tab(1).Control(16)=   "bottxtCampo20(1)"
-         Tab(1).Control(17)=   "bottxtCampo20(2)"
-         Tab(1).Control(18)=   "txtCp(20)"
-         Tab(1).Control(19)=   "txtCp(21)"
-         Tab(1).Control(20)=   "Botao(6)"
-         Tab(1).Control(21)=   "labFdo22"
-         Tab(1).Control(22)=   "bottxtCampo22(2)"
-         Tab(1).Control(23)=   "txtCp(22)"
-         Tab(1).Control(24)=   "Botao(7)"
-         Tab(1).Control(25)=   "labFdo23"
-         Tab(1).Control(26)=   "bottxtCampo23(1)"
-         Tab(1).Control(27)=   "bottxtCampo23(2)"
-         Tab(1).Control(28)=   "txtCp(23)"
-         Tab(1).Control(29)=   "txtCp(24)"
-         Tab(1).Control(30)=   "Botao(8)"
-         TabCaption(2)            =   "&3 - Conjuntos"
-         Tab(2).ControlCount=   15
-         Tab(2).ControlEnabled=   0
-         Tab(2).Control(0)=   "Grid(1)"
-         Tab(2).Control(1)=   "Label(8)"
-         Tab(2).Control(2)=   "Label(29)"
-         Tab(2).Control(3)=   "labFdo17"
-         Tab(2).Control(4)=   "bottxtCampo17(1)"
-         Tab(2).Control(5)=   "bottxtCampo17(2)"
-         Tab(2).Control(6)=   "txtCp(17)"
+         Tab(1).Control(16)=   "Botao(3)"
+         Tab(1).Control(17)=   "Label(28)"
+         Tab(1).Control(18)=   "txtCp(16)"
+         Tab(1).Control(19)=   "bottxtCampo16(2)"
+         Tab(1).Control(20)=   "labFdo16"
+         Tab(1).Control(21)=   "Botao(2)"
+         Tab(1).Control(22)=   "Label(27)"
+         Tab(1).Control(23)=   "txtCp(15)"
+         Tab(1).Control(24)=   "Label(26)"
+         Tab(1).Control(25)=   "txtCp(14)"
+         Tab(1).Control(26)=   "bottxtCampo14(2)"
+         Tab(1).Control(27)=   "bottxtCampo14(1)"
+         Tab(1).Control(28)=   "labFdo14"
+         Tab(1).Control(29)=   "Label(7)"
+         Tab(1).Control(30)=   "Grid(0)"
+         Tab(1).ControlCount=   31
+         TabCaption(2)   =   "&3 - Conjuntos"
+         Tab(2).ControlEnabled=   0   'False
+         Tab(2).Control(0)=   "Botao(5)"
+         Tab(2).Control(1)=   "txtCp(19)"
+         Tab(2).Control(2)=   "bottxtCampo19(2)"
+         Tab(2).Control(3)=   "labFdo19"
+         Tab(2).Control(4)=   "Label(31)"
+         Tab(2).Control(5)=   "Botao(4)"
+         Tab(2).Control(6)=   "Label(30)"
          Tab(2).Control(7)=   "txtCp(18)"
-         Tab(2).Control(8)=   "Label(30)"
-         Tab(2).Control(9)=   "Botao(4)"
-         Tab(2).Control(10)=   "Label(31)"
-         Tab(2).Control(11)=   "labFdo19"
-         Tab(2).Control(12)=   "bottxtCampo19(2)"
-         Tab(2).Control(13)=   "txtCp(19)"
-         Tab(2).Control(14)=   "Botao(5)"
-         TabCaption(3)            =   "&4 - Despesas"
+         Tab(2).Control(8)=   "txtCp(17)"
+         Tab(2).Control(9)=   "bottxtCampo17(2)"
+         Tab(2).Control(10)=   "bottxtCampo17(1)"
+         Tab(2).Control(11)=   "labFdo17"
+         Tab(2).Control(12)=   "Label(29)"
+         Tab(2).Control(13)=   "Label(8)"
+         Tab(2).Control(14)=   "Grid(1)"
+         Tab(2).ControlCount=   15
+         TabCaption(3)   =   "&4 - Despesas"
+         Tab(3).ControlEnabled=   0   'False
+         Tab(3).Control(0)=   "Label(9)"
+         Tab(3).Control(1)=   "Grid(2)"
          Tab(3).ControlCount=   2
-         Tab(3).ControlEnabled=   0
-         Tab(3).Control(0)=   "Grid(2)"
-         Tab(3).Control(1)=   "Label(9)"
-         TabCaption(4)            =   "5 - Financeiro"
-         Tab(4).ControlCount=   53
-         Tab(4).ControlEnabled=   0
-         Tab(4).Control(0)=   "Label(10)"
-         Tab(4).Control(1)=   "Label(11)"
-         Tab(4).Control(2)=   "labFdo4"
-         Tab(4).Control(3)=   "bottxtCampo4(1)"
-         Tab(4).Control(4)=   "bottxtCampo4(2)"
-         Tab(4).Control(5)=   "txtCp(4)"
-         Tab(4).Control(6)=   "Botao(1)"
-         Tab(4).Control(7)=   "Label(12)"
-         Tab(4).Control(8)=   "labFdo5"
-         Tab(4).Control(9)=   "bottxtCampo5(1)"
-         Tab(4).Control(10)=   "bottxtCampo5(2)"
-         Tab(4).Control(11)=   "txtCp(5)"
-         Tab(4).Control(12)=   "Label(13)"
-         Tab(4).Control(13)=   "Label(14)"
-         Tab(4).Control(14)=   "labFdo6"
-         Tab(4).Control(15)=   "bottxtCampo6(1)"
-         Tab(4).Control(16)=   "bottxtCampo6(2)"
-         Tab(4).Control(17)=   "txtCp(6)"
-         Tab(4).Control(18)=   "Label(15)"
-         Tab(4).Control(19)=   "Label(16)"
-         Tab(4).Control(20)=   "labFdo7"
-         Tab(4).Control(21)=   "bottxtCampo7(2)"
-         Tab(4).Control(22)=   "txtCp(7)"
-         Tab(4).Control(23)=   "labFdo8"
-         Tab(4).Control(24)=   "bottxtCampo8(0)"
-         Tab(4).Control(25)=   "txtCp(8)"
+         TabCaption(4)   =   "5 - Financeiro"
+         Tab(4).ControlEnabled=   0   'False
+         Tab(4).Control(0)=   "txtCp(25)"
+         Tab(4).Control(1)=   "bottxtCampo25(2)"
+         Tab(4).Control(2)=   "bottxtCampo25(1)"
+         Tab(4).Control(3)=   "labFdo25"
+         Tab(4).Control(4)=   "Label(34)"
+         Tab(4).Control(5)=   "Label(33)"
+         Tab(4).Control(6)=   "Label(32)"
+         Tab(4).Control(7)=   "Grid(3)"
+         Tab(4).Control(8)=   "Label(25)"
+         Tab(4).Control(9)=   "Formato(2)"
+         Tab(4).Control(10)=   "Label(24)"
+         Tab(4).Control(11)=   "Formato(1)"
+         Tab(4).Control(12)=   "Label(23)"
+         Tab(4).Control(13)=   "Formato(0)"
+         Tab(4).Control(14)=   "Label(22)"
+         Tab(4).Control(15)=   "Label(21)"
+         Tab(4).Control(16)=   "txtCp(13)"
+         Tab(4).Control(17)=   "Label(20)"
+         Tab(4).Control(18)=   "txtCp(12)"
+         Tab(4).Control(19)=   "txtCp(11)"
+         Tab(4).Control(20)=   "Label(19)"
+         Tab(4).Control(21)=   "Label(18)"
+         Tab(4).Control(22)=   "txtCp(10)"
+         Tab(4).Control(23)=   "Label(17)"
+         Tab(4).Control(24)=   "txtCp(9)"
+         Tab(4).Control(25)=   "bottxtCampo9(0)"
          Tab(4).Control(26)=   "labFdo9"
-         Tab(4).Control(27)=   "bottxtCampo9(0)"
-         Tab(4).Control(28)=   "txtCp(9)"
-         Tab(4).Control(29)=   "Label(17)"
-         Tab(4).Control(30)=   "txtCp(10)"
-         Tab(4).Control(31)=   "Label(18)"
-         Tab(4).Control(32)=   "Label(19)"
-         Tab(4).Control(33)=   "txtCp(11)"
-         Tab(4).Control(34)=   "txtCp(12)"
-         Tab(4).Control(35)=   "Label(20)"
-         Tab(4).Control(36)=   "txtCp(13)"
-         Tab(4).Control(37)=   "Label(21)"
-         Tab(4).Control(38)=   "Label(22)"
-         Tab(4).Control(39)=   "Formato(0)"
-         Tab(4).Control(40)=   "Label(23)"
-         Tab(4).Control(41)=   "Formato(1)"
-         Tab(4).Control(42)=   "Label(24)"
-         Tab(4).Control(43)=   "Formato(2)"
-         Tab(4).Control(44)=   "Label(25)"
-         Tab(4).Control(45)=   "Grid(3)"
-         Tab(4).Control(46)=   "Label(32)"
-         Tab(4).Control(47)=   "Label(33)"
-         Tab(4).Control(48)=   "Label(34)"
-         Tab(4).Control(49)=   "labFdo25"
-         Tab(4).Control(50)=   "bottxtCampo25(1)"
-         Tab(4).Control(51)=   "bottxtCampo25(2)"
-         Tab(4).Control(52)=   "txtCp(25)"
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   240
-            Left                     =   180
-            Width                    =   1170
-            Top                      =   345
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Observação:"
-            Index                    =   6 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   1
-            Alignment                =   0
-            TabIndex                 =   9
-            TabStop                  =   -1
-            Height                   =   4230
-            Left                     =   120
-            Width                    =   14865
-            Top                      =   645
-            DataField                =   "Observação"
-            Index                    =   3 
-            MultiLine                =   -1
-            ScrollBars               =   2
-         End
-         Begin IRRIG.GListV Grid
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Arial"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            CellTextColor            =   &H80000008
-            EditTextColor            =   &H80000008
-            FilterBackColor          =   8454143
-            LeftBackColor            =   -2147483633
-            MaxBackColor             =   -2147483633
-            AvgBackColor             =   -2147483633
-            MinBackColor             =   -2147483633
-            SumBackColor             =   -2147483633
-            StatusBackColor          =   -2147483633
-            ColSelectBackColor       =   -2147483633
-            CellBackColor            =   -2147483643
-            EditBackColor            =   16777152
-            SelectBackColor          =   -2147483635
-            StripesBackColor         =   14737632
-            BackColor                =   -2147483643
-            CaptionBackColor         =   -2147483633
-            ColHeaderBackColor       =   -2147483633
-            GridLinesColor           =   14737632
-            FilterTextColor          =   -2147483640
-            AvgTextColor             =   16512
-            MinTextColor             =   255
-            MaxTextColor             =   49152
-            StatusTextColor          =   -2147483630
-            SumTextColor             =   16711680
-            ColTextBackColor         =   12582912
-            CellTextColor            =   -2147483640
-            SelectTextColor          =   -2147483634
-            EditTextColor            =   -2147483640
-            StripesTextColor         =   -2147483630
-            CaptionTextColor         =   -2147483630
-            ColHeaderTextColor       =   -2147483630
-            TabIndex                 =   11
-            TabStop                  =   -1
-            Stripes                  =   -1
-            SaveGridBars             =   0
-            Height                   =   3570
-            Left                     =   -74940
-            Width                    =   14955
-            Top                      =   1260
-            Caption                  =   "Produtos"
-            ShowGridCaption          =   -1
-            Index                    =   0 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   225
-            Left                     =   -73365
-            Width                    =   11925
-            Top                      =   4740
-            Alignment                =   2
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "F12 - Abre Cadastro de Produtos"
-            Index                    =   7 
-         End
-         Begin IRRIG.GListV Grid
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Arial"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            CellTextColor            =   &H80000008
-            EditTextColor            =   &H80000008
-            FilterBackColor          =   8454143
-            LeftBackColor            =   -2147483633
-            MaxBackColor             =   -2147483633
-            AvgBackColor             =   -2147483633
-            MinBackColor             =   -2147483633
-            SumBackColor             =   -2147483633
-            StatusBackColor          =   -2147483633
-            ColSelectBackColor       =   -2147483633
-            CellBackColor            =   -2147483643
-            EditBackColor            =   16777152
-            SelectBackColor          =   -2147483635
-            StripesBackColor         =   14737632
-            BackColor                =   -2147483643
-            CaptionBackColor         =   -2147483633
-            ColHeaderBackColor       =   -2147483633
-            GridLinesColor           =   14737632
-            FilterTextColor          =   -2147483640
-            AvgTextColor             =   16512
-            MinTextColor             =   255
-            MaxTextColor             =   49152
-            StatusTextColor          =   -2147483630
-            SumTextColor             =   16711680
-            ColTextBackColor         =   12582912
-            CellTextColor            =   -2147483640
-            SelectTextColor          =   -2147483634
-            EditTextColor            =   -2147483640
-            StripesTextColor         =   -2147483630
-            CaptionTextColor         =   -2147483630
-            ColHeaderTextColor       =   -2147483630
-            TabIndex                 =   12
-            TabStop                  =   -1
-            Stripes                  =   -1
-            SaveGridBars             =   0
-            Height                   =   3870
-            Left                     =   -74880
-            Width                    =   14895
-            Top                      =   915
-            Caption                  =   "Conjuntos"
-            ShowGridCaption          =   -1
-            Index                    =   1 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   225
-            Left                     =   -73380
-            Width                    =   11910
-            Top                      =   4785
-            Alignment                =   2
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "F12 - Abre Cadastro de Conjuntos"
-            Index                    =   8 
-         End
-         Begin IRRIG.GListV Grid
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Arial"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            CellTextColor            =   &H80000008
-            EditTextColor            =   &H80000008
-            FilterBackColor          =   8454143
-            LeftBackColor            =   -2147483633
-            MaxBackColor             =   -2147483633
-            AvgBackColor             =   -2147483633
-            MinBackColor             =   -2147483633
-            SumBackColor             =   -2147483633
-            StatusBackColor          =   -2147483633
-            ColSelectBackColor       =   -2147483633
-            CellBackColor            =   -2147483643
-            EditBackColor            =   16777152
-            SelectBackColor          =   -2147483635
-            StripesBackColor         =   14737632
-            BackColor                =   -2147483643
-            CaptionBackColor         =   -2147483633
-            ColHeaderBackColor       =   -2147483633
-            GridLinesColor           =   14737632
-            FilterTextColor          =   -2147483640
-            AvgTextColor             =   16512
-            MinTextColor             =   255
-            MaxTextColor             =   49152
-            StatusTextColor          =   -2147483630
-            SumTextColor             =   16711680
-            ColTextBackColor         =   12582912
-            CellTextColor            =   -2147483640
-            SelectTextColor          =   -2147483634
-            EditTextColor            =   -2147483640
-            StripesTextColor         =   -2147483630
-            CaptionTextColor         =   -2147483630
-            ColHeaderTextColor       =   -2147483630
-            TabIndex                 =   13
-            TabStop                  =   -1
-            Stripes                  =   -1
-            SaveGridBars             =   0
-            Height                   =   4305
-            Left                     =   -74880
-            Width                    =   15015
-            Top                      =   420
-            Caption                  =   "Despesas"
-            ShowGridCaption          =   -1
-            Index                    =   2 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   225
-            Left                     =   -74880
-            Width                    =   15015
-            Top                      =   4785
-            Alignment                =   2
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "F12 - Abre Cadastro de Despesas"
-            Index                    =   9 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   195
-            Left                     =   -74640
-            Width                    =   45
-            Top                      =   600
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "MS Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   8.25
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   ""
-            Index                    =   10 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74625
-            Width                    =   930
-            Top                      =   675
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "*Grupo:"
-            Index                    =   11 
-         End
-         Begin VB.Label labFdo4
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73635
-            Top                      =   675
-            Width                    =   6480
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo4
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -67425
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo4
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -67680
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   15
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73620
-            Width                    =   6195
-            Top                      =   690
-            DataField                =   "Seqüência Grupo Despesa"
-            Index                    =   4 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   16
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -67155
-            Width                    =   240
-            Top                      =   675
-            CaptionAlign             =   0
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "MS Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   8.25
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   ""
-            Index                    =   1 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74925
-            Width                    =   1230
-            Top                      =   1065
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Sub Grupo:"
-            Index                    =   12 
-         End
-         Begin VB.Label labFdo5
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73635
-            Top                      =   1095
-            Width                    =   6720
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo5
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -67185
-            Top                      =   1110
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo5
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -67440
-            Top                      =   1110
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   17
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73620
-            Width                    =   6435
-            Top                      =   1110
-            DataField                =   "Seqüência SubGrupo Despesa"
-            Index                    =   5 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74295
-            Width                    =   615
-            Top                      =   2775
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Desc:"
-            Index                    =   13 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   240
-            Left                     =   -74445
-            Width                    =   750
-            Top                      =   1515
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Conta:"
-            Index                    =   14 
-         End
-         Begin VB.Label labFdo6
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73620
-            Top                      =   1515
-            Width                    =   3300
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo6
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -70590
-            Top                      =   1530
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo6
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -70845
-            Top                      =   1530
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   18
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73605
-            Width                    =   3015
-            Top                      =   1530
-            DataField                =   "Titulo"
-            Index                    =   6 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74385
-            Width                    =   690
-            Top                      =   1935
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Pagto:"
-            Index                    =   15 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74325
-            Width                    =   630
-            Top                      =   2355
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Frete:"
-            Index                    =   16 
-         End
-         Begin VB.Label labFdo7
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73620
-            Top                      =   1935
-            Width                    =   1860
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo7
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -72030
-            Top                      =   1950
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   19
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73605
-            Width                    =   1575
-            Top                      =   1950
-            DataField                =   "Forma de Pagamento"
-            Index                    =   7 
-         End
-         Begin VB.Label labFdo8
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73620
-            Top                      =   2355
-            Width                    =   1860
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo8
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   0
-            Left                     =   -72030
-            Top                      =   2370
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   1
-            TabIndex                 =   20
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73605
-            Width                    =   1575
-            Top                      =   2370
-            DataField                =   "Valor do Frete"
-            Index                    =   8 
-            MultiLine                =   -1
-         End
-         Begin VB.Label labFdo9
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -73620
-            Top                      =   2775
-            Width                    =   1860
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo9
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   0
-            Left                     =   -72030
-            Top                      =   2790
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   1
-            TabIndex                 =   21
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -73605
-            Width                    =   1575
-            Top                      =   2790
-            DataField                =   "Valor do Desconto"
-            Index                    =   9 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -70320
-            Width                    =   1215
-            Top                      =   3375
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Total de IPI"
-            Index                    =   17 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HE0E0E0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   1
-            Alignment                =   2
-            Locked                   =   -1
-            TabIndex                 =   22
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -70320
-            Width                    =   1200
-            Top                      =   3675
-            DataField                =   "Valor Total IPI dos Produtos"
-            TabStop                  =  0
-            Index                    =   10 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74520
-            Width                    =   1875
-            Top                      =   3375
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Total de Produtos"
-            Index                    =   18 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -72480
-            Width                    =   1995
-            Top                      =   3375
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Total de Despesas"
-            Index                    =   19 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HE0E0E0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   1
-            Alignment                =   2
-            Locked                   =   -1
-            TabIndex                 =   23
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -74520
-            Width                    =   1920
-            Top                      =   3675
-            DataField                =   "Valor Total dos Produtos"
-            TabStop                  =  0
-            Index                    =   11 
-            MultiLine                =   -1
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HE0E0E0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   1
-            Alignment                =   2
-            Locked                   =   -1
-            TabIndex                 =   24
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -72480
-            Width                    =   2040
-            Top                      =   3675
-            DataField                =   "Valor Total das Despesas"
-            TabStop                  =  0
-            Index                    =   12 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -68985
-            Width                    =   2070
-            Top                      =   3360
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Total do Movimento"
-            Index                    =   20 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HE0E0E0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   1
-            Alignment                =   2
-            Locked                   =   -1
-            TabIndex                 =   25
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -68940
-            Width                    =   1980
-            Top                      =   3675
-            DataField                =   "Valor Total do Movimento"
-            TabStop                  =  0
-            Index                    =   13 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   0
-            BackColor                =   &H0
-            BackStyle                =   1
-            BorderStyle              =   1
-            AutoSize                 =   0
-            Height                   =   255
-            Left                     =   -66645
-            Width                    =   6690
-            Top                      =   1035
-            Alignment                =   2
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &HFFFFFF
-            Caption                  =   "Parcelamento"
-            Index                    =   21 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   240
-            Left                     =   -66285
-            Width                    =   600
-            Top                      =   4680
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Status:"
-            Index                    =   22 
-         End
-         Begin VB.Shape Formato
-            FillColor                =   255
-            BackColor                =   &HFF
-            FillStyle                =   1
-            Shape                    =   1
-            BackStyle                =   1
-            BorderColor              =   -2147483640
-            BorderStyle              =   1
-            BorderWidth              =   1
-            Height                   =   165
-            Left                     =   -65610
-            Width                    =   165
-            Top                      =   4725
-            Index                    =   0 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   240
-            Left                     =   -65385
-            Width                    =   990
-            Top                      =   4680
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Incompleto"
-            Index                    =   23 
-         End
-         Begin VB.Shape Formato
-            FillColor                =   255
-            BackColor                =   &H80FFFF
-            FillStyle                =   1
-            Shape                    =   1
-            BackStyle                =   1
-            BorderColor              =   -2147483640
-            BorderStyle              =   1
-            BorderWidth              =   1
-            Height                   =   165
-            Left                     =   -64230
-            Width                    =   165
-            Top                      =   4725
-            Index                    =   1 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   240
-            Left                     =   -63990
-            Width                    =   1050
-            Top                      =   4680
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "S/ Parcelas"
-            Index                    =   24 
-         End
-         Begin VB.Shape Formato
-            FillColor                =   255
-            BackColor                =   &H0
-            FillStyle                =   1
-            Shape                    =   1
-            BackStyle                =   1
-            BorderColor              =   -2147483640
-            BorderStyle              =   1
-            BorderWidth              =   1
-            Height                   =   150
-            Left                     =   -62775
-            Width                    =   150
-            Top                      =   4725
-            Index                    =   2 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   240
-            Left                     =   -62550
-            Width                    =   300
-            Top                      =   4680
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Ok."
-            Index                    =   25 
-         End
-         Begin IRRIG.GListV Grid
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            CellTextColor            =   &H80000008
-            EditTextColor            =   &H80000008
-            FilterBackColor          =   8454143
-            LeftBackColor            =   -2147483633
-            MaxBackColor             =   -2147483633
-            AvgBackColor             =   -2147483633
-            MinBackColor             =   -2147483633
-            SumBackColor             =   -2147483633
-            StatusBackColor          =   -2147483633
-            ColSelectBackColor       =   -2147483633
-            CellBackColor            =   -2147483643
-            EditBackColor            =   8454143
-            SelectBackColor          =   -2147483635
-            StripesBackColor         =   13750737
-            BackColor                =   -2147483643
-            CaptionBackColor         =   -2147483633
-            ColHeaderBackColor       =   -2147483633
-            GridLinesColor           =   14737632
-            FilterTextColor          =   -2147483640
-            AvgTextColor             =   16512
-            MinTextColor             =   255
-            MaxTextColor             =   49152
-            StatusTextColor          =   -2147483630
-            SumTextColor             =   16711680
-            ColTextBackColor         =   12582912
-            CellTextColor            =   -2147483640
-            SelectTextColor          =   -2147483634
-            EditTextColor            =   -2147483640
-            StripesTextColor         =   -2147483630
-            CaptionTextColor         =   -2147483630
-            ColHeaderTextColor       =   -2147483630
-            TabIndex                 =   26
-            TabStop                  =   -1
-            Stripes                  =   0
-            SaveGridBars             =   0
-            Height                   =   3270
-            Left                     =   -66645
-            Width                    =   6690
-            Top                      =   1335
-            Caption                  =   ""
-            ShowGridCaption          =   0
-            Index                    =   3 
-         End
-         Begin VB.Label labFdo14
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &HC0FFC0
-            Left                     =   -74865
-            Top                      =   675
-            Width                    =   9060
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo14
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -66075
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo14
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -66330
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   27
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -74850
-            Width                    =   8775
-            Top                      =   690
-            Index                    =   14 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74865
-            Width                    =   945
-            Top                      =   375
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Produto"
-            Index                    =   26 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            MaxLength                =   254
-            BorderStyle              =   1
-            Alignment                =   1
-            TabIndex                 =   28
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -65730
-            Width                    =   900
-            Top                      =   675
-            Index                    =   15 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -65715
-            Width                    =   585
-            Top                      =   375
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Qtde"
-            Index                    =   27 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   29
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -64710
-            Width                    =   1425
-            Top                      =   735
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Incluir"
-            Index                    =   2 
-         End
-         Begin VB.Label labFdo16
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &HC0C0FF
-            Left                     =   -62955
-            Top                      =   675
-            Width                    =   1125
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo16
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -62100
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0C0FF
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   30
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   -62940
-            Width                    =   840
-            Top                      =   690
-            Index                    =   16 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -62955
-            Width                    =   285
-            Top                      =   375
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "ID"
-            Index                    =   28 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   31
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -61635
-            Width                    =   1635
-            Top                      =   675
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Extornar"
-            Index                    =   3 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -74865
-            Width                    =   1080
-            Top                      =   435
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Conjunto"
-            Index                    =   29 
-         End
-         Begin VB.Label labFdo17
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &HC0FFC0
-            Left                     =   -74865
-            Top                      =   435
-            Width                    =   8910
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo17
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -66225
-            Top                      =   450
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo17
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -66480
-            Top                      =   450
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   32
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -74850
-            Width                    =   8625
-            Top                      =   450
-            Index                    =   17 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            MaxLength                =   254
-            BorderStyle              =   1
-            Alignment                =   1
-            TabIndex                 =   33
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -65850
-            Width                    =   840
-            Top                      =   435
-            Index                    =   18 
-            MultiLine                =   -1
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -65655
-            Width                    =   585
-            Top                      =   435
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Qtde"
-            Index                    =   30 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   34
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -64920
-            Width                    =   1425
-            Top                      =   435
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Incluir"
-            Index                    =   4 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -62865
-            Width                    =   285
-            Top                      =   435
-            Alignment                =   1
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "ID"
-            Index                    =   31 
-         End
-         Begin VB.Label labFdo19
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -62865
-            Top                      =   435
-            Width                    =   1125
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo19
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -62010
-            Top                      =   450
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   35
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   -62850
-            Width                    =   840
-            Top                      =   450
-            Index                    =   19 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   36
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -61665
-            Width                    =   1650
-            Top                      =   435
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Extornar"
-            Index                    =   5 
-         End
-         Begin VB.Label labFdo20
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &HC0FFC0
-            Left                     =   -74865
-            Top                      =   675
-            Width                    =   9060
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo20
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -66075
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo20
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -66330
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   37
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -74850
-            Width                    =   8775
-            Top                      =   690
-            Index                    =   20 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            MaxLength                =   254
-            BorderStyle              =   1
-            Alignment                =   1
-            TabIndex                 =   38
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -65730
-            Width                    =   900
-            Top                      =   675
-            Index                    =   21 
-            MultiLine                =   -1
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   39
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -64770
-            Width                    =   1455
-            Top                      =   735
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   9
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Incluir"
-            Index                    =   6 
-         End
-         Begin VB.Label labFdo22
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -62955
-            Top                      =   675
-            Width                    =   1140
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo22
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -62085
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   40
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   -62940
-            Width                    =   855
-            Top                      =   690
-            Index                    =   22 
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   41
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -61635
-            Width                    =   1635
-            Top                      =   675
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Extornar"
-            Index                    =   7 
-         End
-         Begin VB.Label labFdo23
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &HC0FFC0
-            Left                     =   -74865
-            Top                      =   675
-            Width                    =   9060
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo23
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -66075
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo23
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -66330
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   42
-            TabStop                  =   -1
-            Height                   =   300
-            Left                     =   -74850
-            Width                    =   8775
-            Top                      =   690
-            Index                    =   23 
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &HC0FFC0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            MaxLength                =   254
-            BorderStyle              =   1
-            Alignment                =   1
-            TabIndex                 =   43
-            TabStop                  =   -1
-            Height                   =   330
-            Left                     =   -65730
-            Width                    =   900
-            Top                      =   675
-            Index                    =   24 
-            MultiLine                =   -1
-         End
-         Begin IRRIG.GBotao Botao
-            ButtonStyle              =   0
-            JoinSeparators           =   0
-            LeftSeparator            =   0
-            TopSeparator             =   0
-            TabIndex                 =   44
-            TabStop                  =   0
-            ButtonType               =   0
-            Height                   =   330
-            Left                     =   -64770
-            Width                    =   1455
-            Top                      =   735
-            CaptionAlign             =   4
-            CaptionOffset            =   50
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   9
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000012
-            Caption                  =   "Incluir"
-            Index                    =   8 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   330
-            Left                     =   -74160
-            Width                    =   6540
-            Top                      =   4215
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   -1
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H0
-            Caption                  =   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-            Index                    =   32 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   0
-            Height                   =   330
-            Left                     =   -74145
-            Width                    =   6390
-            Top                      =   4515
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Verdana"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   -1
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H0
-            Caption                  =   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-            Index                    =   33 
-         End
-         Begin VB.Label Label
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BackStyle                =   1
-            BorderStyle              =   0
-            AutoSize                 =   -1
-            Height                   =   300
-            Left                     =   -66645
-            Width                    =   2955
-            Top                      =   375
-            Alignment                =   0
-            BeginProperty Font
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   700
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            Caption                  =   "Codigo Contábil (Débito)"
-            Index                    =   34 
-         End
-         Begin VB.Label labFdo25
-            Appearance               =  0
-            BorderStyle              =  1
-            BackColor                =  &H80000005
-            Left                     =   -66645
-            Top                      =   675
-            Width                    =   6690
-            Height                   =   330
-         End
-         Begin VB.CommandButton bottxtCampo25
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   1
-            Left                     =   -60225
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.CommandButton bottxtCampo25
-            Style                    =   1
-            TabStop                  =   0
-            Index                    =   2
-            Left                     =   -60480
-            Top                      =   690
-            Width                    =   255
-            Height                   =   300
-         End
-         Begin VB.TextBox txtCp
-            Appearance               =   0
-            BackColor                =   &H80000005
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   12
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H80000008
-            BorderStyle              =   0
-            Alignment                =   0
-            TabIndex                 =   47
-            TabStop                  =   0
-            Height                   =   300
-            Left                     =   -66630
-            Width                    =   6405
-            Top                      =   690
-            DataField                =   "Codigo do Debito"
-            Index                    =   25 
+         Tab(4).Control(27)=   "txtCp(8)"
+         Tab(4).Control(28)=   "bottxtCampo8(0)"
+         Tab(4).Control(29)=   "labFdo8"
+         Tab(4).Control(30)=   "txtCp(7)"
+         Tab(4).Control(31)=   "bottxtCampo7(2)"
+         Tab(4).Control(32)=   "labFdo7"
+         Tab(4).Control(33)=   "Label(16)"
+         Tab(4).Control(34)=   "Label(15)"
+         Tab(4).Control(35)=   "txtCp(6)"
+         Tab(4).Control(36)=   "bottxtCampo6(2)"
+         Tab(4).Control(37)=   "bottxtCampo6(1)"
+         Tab(4).Control(38)=   "labFdo6"
+         Tab(4).Control(39)=   "Label(14)"
+         Tab(4).Control(40)=   "Label(13)"
+         Tab(4).Control(41)=   "txtCp(5)"
+         Tab(4).Control(42)=   "bottxtCampo5(2)"
+         Tab(4).Control(43)=   "bottxtCampo5(1)"
+         Tab(4).Control(44)=   "labFdo5"
+         Tab(4).Control(45)=   "Label(12)"
+         Tab(4).Control(46)=   "Botao(1)"
+         Tab(4).Control(47)=   "txtCp(4)"
+         Tab(4).Control(48)=   "bottxtCampo4(2)"
+         Tab(4).Control(49)=   "bottxtCampo4(1)"
+         Tab(4).Control(50)=   "labFdo4"
+         Tab(4).Control(51)=   "Label(11)"
+         Tab(4).Control(52)=   "Label(10)"
+         Tab(4).ControlCount=   53
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            DataField       =   "Observação"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   4230
+            Index           =   3
+            Left            =   120
+            MultiLine       =   -1  'True
+            ScrollBars      =   2  'Vertical
+            TabIndex        =   9
+            Top             =   645
+            Width           =   14865
+         End
+         Begin IRRIG.GListV Grid 
+            Height          =   3570
+            Index           =   0
+            Left            =   -74940
+            TabIndex        =   11
+            Top             =   1260
+            Width           =   14955
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Produtos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin IRRIG.GListV Grid 
+            Height          =   3870
+            Index           =   1
+            Left            =   -74880
+            TabIndex        =   12
+            Top             =   915
+            Width           =   14895
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Conjuntos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin IRRIG.GListV Grid 
+            Height          =   4305
+            Index           =   2
+            Left            =   -74880
+            TabIndex        =   13
+            Top             =   420
+            Width           =   15015
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Despesas"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin VB.CommandButton bottxtCampo4 
+            Height          =   300
+            Index           =   1
+            Left            =   -67425
+            Style           =   1  'Graphical
+            TabIndex        =   68
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo4 
+            Height          =   300
+            Index           =   2
+            Left            =   -67680
+            Style           =   1  'Graphical
+            TabIndex        =   69
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Seqüência Grupo Despesa"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   4
+            Left            =   -73620
+            TabIndex        =   15
+            Top             =   690
+            Width           =   6195
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   1
+            Left            =   -67155
+            TabIndex        =   16
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo5 
+            Height          =   300
+            Index           =   1
+            Left            =   -67185
+            Style           =   1  'Graphical
+            TabIndex        =   72
+            TabStop         =   0   'False
+            Top             =   1110
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo5 
+            Height          =   300
+            Index           =   2
+            Left            =   -67440
+            Style           =   1  'Graphical
+            TabIndex        =   73
+            TabStop         =   0   'False
+            Top             =   1110
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Seqüência SubGrupo Despesa"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   5
+            Left            =   -73620
+            TabIndex        =   17
+            Top             =   1110
+            Width           =   6435
+         End
+         Begin VB.CommandButton bottxtCampo6 
+            Height          =   300
+            Index           =   1
+            Left            =   -70590
+            Style           =   1  'Graphical
+            TabIndex        =   77
+            TabStop         =   0   'False
+            Top             =   1530
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo6 
+            Height          =   300
+            Index           =   2
+            Left            =   -70845
+            Style           =   1  'Graphical
+            TabIndex        =   78
+            TabStop         =   0   'False
+            Top             =   1530
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Titulo"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   6
+            Left            =   -73605
+            TabIndex        =   18
+            Top             =   1530
+            Width           =   3015
+         End
+         Begin VB.CommandButton bottxtCampo7 
+            Height          =   300
+            Index           =   2
+            Left            =   -72030
+            Style           =   1  'Graphical
+            TabIndex        =   82
+            TabStop         =   0   'False
+            Top             =   1950
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Forma de Pagamento"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   7
+            Left            =   -73605
+            TabIndex        =   19
+            Top             =   1950
+            Width           =   1575
+         End
+         Begin VB.CommandButton bottxtCampo8 
+            Height          =   300
+            Index           =   0
+            Left            =   -72030
+            Style           =   1  'Graphical
+            TabIndex        =   84
+            TabStop         =   0   'False
+            Top             =   2370
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Valor do Frete"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   8
+            Left            =   -73605
+            MultiLine       =   -1  'True
+            TabIndex        =   20
+            Top             =   2370
+            Width           =   1575
+         End
+         Begin VB.CommandButton bottxtCampo9 
+            Height          =   300
+            Index           =   0
+            Left            =   -72030
+            Style           =   1  'Graphical
+            TabIndex        =   86
+            TabStop         =   0   'False
+            Top             =   2790
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Valor do Desconto"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   9
+            Left            =   -73605
+            MultiLine       =   -1  'True
+            TabIndex        =   21
+            Top             =   2790
+            Width           =   1575
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   2  'Center
+            Appearance      =   0  'Flat
+            BackColor       =   &H00E0E0E0&
+            DataField       =   "Valor Total IPI dos Produtos"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   10
+            Left            =   -70320
+            Locked          =   -1  'True
+            MultiLine       =   -1  'True
+            TabIndex        =   22
+            TabStop         =   0   'False
+            Top             =   3675
+            Width           =   1200
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   2  'Center
+            Appearance      =   0  'Flat
+            BackColor       =   &H00E0E0E0&
+            DataField       =   "Valor Total dos Produtos"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   11
+            Left            =   -74520
+            Locked          =   -1  'True
+            MultiLine       =   -1  'True
+            TabIndex        =   23
+            TabStop         =   0   'False
+            Top             =   3675
+            Width           =   1920
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   2  'Center
+            Appearance      =   0  'Flat
+            BackColor       =   &H00E0E0E0&
+            DataField       =   "Valor Total das Despesas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   12
+            Left            =   -72480
+            Locked          =   -1  'True
+            MultiLine       =   -1  'True
+            TabIndex        =   24
+            TabStop         =   0   'False
+            Top             =   3675
+            Width           =   2040
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   2  'Center
+            Appearance      =   0  'Flat
+            BackColor       =   &H00E0E0E0&
+            DataField       =   "Valor Total do Movimento"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   13
+            Left            =   -68940
+            Locked          =   -1  'True
+            MultiLine       =   -1  'True
+            TabIndex        =   25
+            TabStop         =   0   'False
+            Top             =   3675
+            Width           =   1980
+         End
+         Begin IRRIG.GListV Grid 
+            Height          =   3270
+            Index           =   3
+            Left            =   -66645
+            TabIndex        =   26
+            Top             =   1335
+            Width           =   6690
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            RowHeight       =   390
+            ShowGridCaption =   0   'False
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin VB.CommandButton bottxtCampo14 
+            Height          =   300
+            Index           =   1
+            Left            =   -66075
+            Style           =   1  'Graphical
+            TabIndex        =   97
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo14 
+            Height          =   300
+            Index           =   2
+            Left            =   -66330
+            Style           =   1  'Graphical
+            TabIndex        =   98
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   14
+            Left            =   -74850
+            TabIndex        =   27
+            Top             =   690
+            Width           =   8775
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   15
+            Left            =   -65730
+            MaxLength       =   254
+            MultiLine       =   -1  'True
+            TabIndex        =   28
+            Top             =   675
+            Width           =   900
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   2
+            Left            =   -64710
+            TabIndex        =   29
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo16 
+            Height          =   300
+            Index           =   2
+            Left            =   -62100
+            Style           =   1  'Graphical
+            TabIndex        =   102
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0C0FF&
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   16
+            Left            =   -62940
+            TabIndex        =   30
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   840
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   3
+            Left            =   -61635
+            TabIndex        =   31
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo17 
+            Height          =   300
+            Index           =   1
+            Left            =   -66225
+            Style           =   1  'Graphical
+            TabIndex        =   106
+            TabStop         =   0   'False
+            Top             =   450
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo17 
+            Height          =   300
+            Index           =   2
+            Left            =   -66480
+            Style           =   1  'Graphical
+            TabIndex        =   107
+            TabStop         =   0   'False
+            Top             =   450
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   17
+            Left            =   -74850
+            TabIndex        =   32
+            Top             =   450
+            Width           =   8625
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   18
+            Left            =   -65850
+            MaxLength       =   254
+            MultiLine       =   -1  'True
+            TabIndex        =   33
+            Top             =   435
+            Width           =   840
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   4
+            Left            =   -64920
+            TabIndex        =   34
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo19 
+            Height          =   300
+            Index           =   2
+            Left            =   -62010
+            Style           =   1  'Graphical
+            TabIndex        =   111
+            TabStop         =   0   'False
+            Top             =   450
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   19
+            Left            =   -62850
+            TabIndex        =   35
+            TabStop         =   0   'False
+            Top             =   450
+            Width           =   840
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   5
+            Left            =   -61665
+            TabIndex        =   36
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo20 
+            Height          =   300
+            Index           =   1
+            Left            =   -66075
+            Style           =   1  'Graphical
+            TabIndex        =   113
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo20 
+            Height          =   300
+            Index           =   2
+            Left            =   -66330
+            Style           =   1  'Graphical
+            TabIndex        =   114
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   20
+            Left            =   -74850
+            TabIndex        =   37
+            Top             =   690
+            Width           =   8775
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   21
+            Left            =   -65730
+            MaxLength       =   254
+            MultiLine       =   -1  'True
+            TabIndex        =   38
+            Top             =   675
+            Width           =   900
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   6
+            Left            =   -64770
+            TabIndex        =   39
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1455
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo22 
+            Height          =   300
+            Index           =   2
+            Left            =   -62085
+            Style           =   1  'Graphical
+            TabIndex        =   116
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   22
+            Left            =   -62940
+            TabIndex        =   40
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   855
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   7
+            Left            =   -61635
+            TabIndex        =   41
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo23 
+            Height          =   300
+            Index           =   1
+            Left            =   -66075
+            Style           =   1  'Graphical
+            TabIndex        =   118
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo23 
+            Height          =   300
+            Index           =   2
+            Left            =   -66330
+            Style           =   1  'Graphical
+            TabIndex        =   119
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   23
+            Left            =   -74850
+            TabIndex        =   42
+            Top             =   690
+            Width           =   8775
+         End
+         Begin VB.TextBox txtCp 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   24
+            Left            =   -65730
+            MaxLength       =   254
+            MultiLine       =   -1  'True
+            TabIndex        =   43
+            Top             =   675
+            Width           =   900
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   8
+            Left            =   -64770
+            TabIndex        =   44
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1455
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin VB.CommandButton bottxtCampo25 
+            Height          =   300
+            Index           =   1
+            Left            =   -60225
+            Style           =   1  'Graphical
+            TabIndex        =   124
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.CommandButton bottxtCampo25 
+            Height          =   300
+            Index           =   2
+            Left            =   -60480
+            Style           =   1  'Graphical
+            TabIndex        =   125
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   255
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            BorderStyle     =   0  'None
+            DataField       =   "Codigo do Debito"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   25
+            Left            =   -66630
+            TabIndex        =   47
+            TabStop         =   0   'False
+            Top             =   690
+            Width           =   6405
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Observação:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   6
+            Left            =   180
+            TabIndex        =   61
+            Top             =   345
+            Width           =   1170
+         End
+         Begin VB.Label Label 
+            Alignment       =   2  'Center
+            Caption         =   "F12 - Abre Cadastro de Produtos"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   225
+            Index           =   7
+            Left            =   -73365
+            TabIndex        =   62
+            Top             =   4740
+            Width           =   11925
+         End
+         Begin VB.Label Label 
+            Alignment       =   2  'Center
+            Caption         =   "F12 - Abre Cadastro de Conjuntos"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   225
+            Index           =   8
+            Left            =   -73380
+            TabIndex        =   63
+            Top             =   4785
+            Width           =   11910
+         End
+         Begin VB.Label Label 
+            Alignment       =   2  'Center
+            Caption         =   "F12 - Abre Cadastro de Despesas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   225
+            Index           =   9
+            Left            =   -74880
+            TabIndex        =   64
+            Top             =   4785
+            Width           =   15015
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            ForeColor       =   &H80000008&
+            Height          =   195
+            Index           =   10
+            Left            =   -74640
+            TabIndex        =   65
+            Top             =   600
+            Width           =   45
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "*Grupo:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   11
+            Left            =   -74625
+            TabIndex        =   66
+            Top             =   675
+            Width           =   930
+         End
+         Begin VB.Label labFdo4 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73635
+            TabIndex        =   67
+            Top             =   675
+            Width           =   6480
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Sub Grupo:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   12
+            Left            =   -74925
+            TabIndex        =   70
+            Top             =   1065
+            Width           =   1230
+         End
+         Begin VB.Label labFdo5 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73635
+            TabIndex        =   71
+            Top             =   1095
+            Width           =   6720
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Desc:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   13
+            Left            =   -74295
+            TabIndex        =   74
+            Top             =   2775
+            Width           =   615
+         End
+         Begin VB.Label Label 
+            Caption         =   "Conta:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   14
+            Left            =   -74445
+            TabIndex        =   75
+            Top             =   1515
+            Width           =   750
+         End
+         Begin VB.Label labFdo6 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73620
+            TabIndex        =   76
+            Top             =   1515
+            Width           =   3300
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Pagto:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   15
+            Left            =   -74385
+            TabIndex        =   79
+            Top             =   1935
+            Width           =   690
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Frete:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   16
+            Left            =   -74325
+            TabIndex        =   80
+            Top             =   2355
+            Width           =   630
+         End
+         Begin VB.Label labFdo7 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73620
+            TabIndex        =   81
+            Top             =   1935
+            Width           =   1860
+         End
+         Begin VB.Label labFdo8 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73620
+            TabIndex        =   83
+            Top             =   2355
+            Width           =   1860
+         End
+         Begin VB.Label labFdo9 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -73620
+            TabIndex        =   85
+            Top             =   2775
+            Width           =   1860
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Total de IPI"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   17
+            Left            =   -70320
+            TabIndex        =   87
+            Top             =   3375
+            Width           =   1215
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Total de Produtos"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   18
+            Left            =   -74520
+            TabIndex        =   88
+            Top             =   3375
+            Width           =   1875
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Total de Despesas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   19
+            Left            =   -72480
+            TabIndex        =   89
+            Top             =   3375
+            Width           =   1995
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "Total do Movimento"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   20
+            Left            =   -68985
+            TabIndex        =   90
+            Top             =   3360
+            Width           =   2070
+         End
+         Begin VB.Label Label 
+            Alignment       =   2  'Center
+            Appearance      =   0  'Flat
+            BackColor       =   &H00000000&
+            BorderStyle     =   1  'Fixed Single
+            Caption         =   "Parcelamento"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FFFFFF&
+            Height          =   255
+            Index           =   21
+            Left            =   -66645
+            TabIndex        =   91
+            Top             =   1035
+            Width           =   6690
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Status:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   22
+            Left            =   -66285
+            TabIndex        =   92
+            Top             =   4680
+            Width           =   600
+         End
+         Begin VB.Shape Formato 
+            BackColor       =   &H000000FF&
+            BackStyle       =   1  'Opaque
+            FillColor       =   &H000000FF&
+            Height          =   165
+            Index           =   0
+            Left            =   -65610
+            Shape           =   1  'Square
+            Top             =   4725
+            Width           =   165
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Incompleto"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   23
+            Left            =   -65385
+            TabIndex        =   93
+            Top             =   4680
+            Width           =   990
+         End
+         Begin VB.Shape Formato 
+            BackColor       =   &H0080FFFF&
+            BackStyle       =   1  'Opaque
+            FillColor       =   &H000000FF&
+            Height          =   165
+            Index           =   1
+            Left            =   -64230
+            Shape           =   1  'Square
+            Top             =   4725
+            Width           =   165
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "S/ Parcelas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   24
+            Left            =   -63990
+            TabIndex        =   94
+            Top             =   4680
+            Width           =   1050
+         End
+         Begin VB.Shape Formato 
+            BackColor       =   &H00000000&
+            BackStyle       =   1  'Opaque
+            FillColor       =   &H000000FF&
+            Height          =   150
+            Index           =   2
+            Left            =   -62775
+            Shape           =   1  'Square
+            Top             =   4725
+            Width           =   150
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Ok."
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   25
+            Left            =   -62550
+            TabIndex        =   95
+            Top             =   4680
+            Width           =   300
+         End
+         Begin VB.Label labFdo14 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -74865
+            TabIndex        =   96
+            Top             =   675
+            Width           =   9060
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "Produto"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   26
+            Left            =   -74865
+            TabIndex        =   99
+            Top             =   375
+            Width           =   945
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "Qtde"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   27
+            Left            =   -65715
+            TabIndex        =   100
+            Top             =   375
+            Width           =   585
+         End
+         Begin VB.Label labFdo16 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0C0FF&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -62955
+            TabIndex        =   101
+            Top             =   675
+            Width           =   1125
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "ID"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   28
+            Left            =   -62955
+            TabIndex        =   103
+            Top             =   375
+            Width           =   285
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "Conjunto"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   29
+            Left            =   -74865
+            TabIndex        =   104
+            Top             =   435
+            Width           =   1080
+         End
+         Begin VB.Label labFdo17 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -74865
+            TabIndex        =   105
+            Top             =   435
+            Width           =   8910
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "Qtde"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   30
+            Left            =   -65655
+            TabIndex        =   108
+            Top             =   435
+            Width           =   585
+         End
+         Begin VB.Label Label 
+            Alignment       =   1  'Right Justify
+            AutoSize        =   -1  'True
+            Caption         =   "ID"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   31
+            Left            =   -62865
+            TabIndex        =   109
+            Top             =   435
+            Width           =   285
+         End
+         Begin VB.Label labFdo19 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -62865
+            TabIndex        =   110
+            Top             =   435
+            Width           =   1125
+         End
+         Begin VB.Label labFdo20 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -74865
+            TabIndex        =   112
+            Top             =   675
+            Width           =   9060
+         End
+         Begin VB.Label labFdo22 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -62955
+            TabIndex        =   115
+            Top             =   675
+            Width           =   1140
+         End
+         Begin VB.Label labFdo23 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFC0&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -74865
+            TabIndex        =   117
+            Top             =   675
+            Width           =   9060
+         End
+         Begin VB.Label Label 
+            Caption         =   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            BeginProperty Font 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   330
+            Index           =   32
+            Left            =   -74160
+            TabIndex        =   120
+            Top             =   4215
+            Width           =   6540
+         End
+         Begin VB.Label Label 
+            Caption         =   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            BeginProperty Font 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   330
+            Index           =   33
+            Left            =   -74145
+            TabIndex        =   121
+            Top             =   4515
+            Width           =   6390
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Codigo Contábil (Débito)"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   300
+            Index           =   34
+            Left            =   -66645
+            TabIndex        =   122
+            Top             =   375
+            Width           =   2955
+         End
+         Begin VB.Label labFdo25 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            BorderStyle     =   1  'Fixed Single
+            Height          =   330
+            Left            =   -66645
+            TabIndex        =   123
+            Top             =   675
+            Width           =   6690
          End
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   3435
-         Width                    =   1920
-         Top                      =   1320
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo26 
+         Height          =   300
+         Index           =   0
+         Left            =   6705
+         Style           =   1  'Graphical
+         TabIndex        =   128
+         TabStop         =   0   'False
+         Top             =   1365
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Data do Movimento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "*Data de Entrada:"
-         Index                    =   35 
+         Height          =   300
+         Index           =   26
+         Left            =   5430
+         TabIndex        =   3
+         Top             =   1365
+         Width           =   1260
       End
-      Begin VB.Label labFdo26
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5415
-         Top                      =   1350
-         Width                    =   1560
-         Height                   =   330
-      End
-      Begin VB.CommandButton bottxtCampo26
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   6705
-         Top                      =   1365
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   9
+         Left            =   13815
+         TabIndex        =   14
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1665
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   3
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   5430
-         Width                    =   1260
-         Top                      =   1365
-         DataField                =   "Data do Movimento"
-         Index                    =   26 
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   14
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   435
-         Left                     =   13815
-         Width                    =   1665
-         Top                      =   180
-         CaptionAlign             =   4
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo27 
+         Height          =   300
+         Index           =   2
+         Left            =   3045
+         Style           =   1  'Graphical
+         TabIndex        =   131
+         TabStop         =   0   'False
+         Top             =   1725
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Sequencia da Compra"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Imprimir"
-         Index                    =   9 
+         Height          =   300
+         Index           =   27
+         Left            =   2235
+         TabIndex        =   4
+         Top             =   1725
+         Width           =   795
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   180
-         Width                    =   2025
-         Top                      =   1710
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo28 
+         Height          =   300
+         Index           =   2
+         Left            =   15210
+         Style           =   1  'Graphical
+         TabIndex        =   134
+         TabStop         =   0   'False
+         Top             =   720
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Pedido de Compra:"
-         Index                    =   36 
+         Height          =   300
+         Index           =   28
+         Left            =   13830
+         TabIndex        =   45
+         TabStop         =   0   'False
+         Top             =   720
+         Width           =   1365
       End
-      Begin VB.Label labFdo27
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   2220
-         Top                      =   1710
-         Width                    =   1095
-         Height                   =   330
-      End
-      Begin VB.CommandButton bottxtCampo27
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   3045
-         Top                      =   1725
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         DataField       =   "Seqüência do Orçamento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   4
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   2235
-         Width                    =   795
-         Top                      =   1725
-         DataField                =   "Sequencia da Compra"
-         Index                    =   27 
+         Height          =   330
+         Index           =   29
+         Left            =   2220
+         MultiLine       =   -1  'True
+         TabIndex        =   46
+         Top             =   2100
+         Width           =   1095
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   10980
-         Width                    =   2715
-         Top                      =   705
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Movimento do Estoque Contábil (Novo)"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Nota Ref OBS(de Venda)"
-         Index                    =   37 
+         ForeColor       =   &H00000000&
+         Height          =   465
+         Index           =   0
+         Left            =   1605
+         TabIndex        =   50
+         Top             =   195
+         Width           =   7620
       End
-      Begin VB.Label labFdo28
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   13815
-         Top                      =   705
-         Width                    =   1665
-         Height                   =   330
-      End
-      Begin VB.CommandButton bottxtCampo28
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   15210
-         Top                      =   720
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Tipo:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   45
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   13830
-         Width                    =   1365
-         Top                      =   720
-         Index                    =   28 
+         ForeColor       =   &H00800000&
+         Height          =   300
+         Index           =   1
+         Left            =   1605
+         TabIndex        =   53
+         Top             =   825
+         Width           =   510
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   300
-         Left                     =   315
-         Width                    =   1890
-         Top                      =   2100
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "Seq.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Pedido de Venda:"
-         Index                    =   38 
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   2
+         Left            =   1650
+         TabIndex        =   54
+         Top             =   1320
+         Width           =   555
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "*Documento.........:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         TabIndex                 =   46
-         TabStop                  =   -1
-         Height                   =   330
-         Left                     =   2220
-         Width                    =   1095
-         Top                      =   2100
-         DataField                =   "Seqüência do Orçamento"
-         Index                    =   29 
-         MultiLine                =   -1
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   3
+         Left            =   3435
+         TabIndex        =   55
+         Top             =   1710
+         Width           =   1935
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   345
-         Left                     =   3495
-         Width                    =   2535
-         Top                      =   2100
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   14.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "Geral:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Pedido de Venda:"
-         Index                    =   39 
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   4
+         Left            =   7140
+         TabIndex        =   56
+         Top             =   1320
+         Width           =   645
+      End
+      Begin VB.Label labFdo2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   330
+         Left            =   7920
+         TabIndex        =   57
+         Top             =   1320
+         Width           =   7395
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "-"
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   5
+         Left            =   15645
+         TabIndex        =   60
+         Top             =   7875
+         Width           =   45
+      End
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "*Data de Entrada:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   35
+         Left            =   3435
+         TabIndex        =   126
+         Top             =   1320
+         Width           =   1920
+      End
+      Begin VB.Label labFdo26 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   330
+         Left            =   5415
+         TabIndex        =   127
+         Top             =   1350
+         Width           =   1560
+      End
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "Pedido de Compra:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   36
+         Left            =   180
+         TabIndex        =   129
+         Top             =   1710
+         Width           =   2025
+      End
+      Begin VB.Label labFdo27 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   330
+         Left            =   2220
+         TabIndex        =   130
+         Top             =   1710
+         Width           =   1095
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Nota Ref OBS(de Venda)"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   37
+         Left            =   10980
+         TabIndex        =   132
+         Top             =   705
+         Width           =   2715
+      End
+      Begin VB.Label labFdo28 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   330
+         Left            =   13815
+         TabIndex        =   133
+         Top             =   705
+         Width           =   1665
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Pedido de Venda:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   300
+         Index           =   38
+         Left            =   315
+         TabIndex        =   135
+         Top             =   2100
+         Width           =   1890
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Pedido de Venda:"
+         BeginProperty Font 
+            Name            =   "Verdana"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   345
+         Index           =   39
+         Left            =   3495
+         TabIndex        =   136
+         Top             =   2100
+         Width           =   2535
       End
    End
-         Begin IRRIG.GListV grdBrowse 
-                  Height          =   795
-                  Left            =   60
-                  TabIndex        =   0
-                  Top             =   330
-                  Width           =   1575
-                  _ExtentX        =   2778
-                  _ExtentY        =   1402
-                  FullRowSelect   =   0                           'False
-                  RowHeight       =   225
-                  AllowEdit       =   -1                          'True
-                  AllowInsert     =   -1                          'True
-                  AllowDelete     =   -1                          'True
-                  ManualUpdate    =   -1                          'True
-                  ManualDelete    =   -1                          'True
-                  NavigationAddMode=   1
-                  ShowGridCaption =   0                           'False
-                  ShowFilterBar   =   -1                          'True
-                  Caption         =   ""
-                  CacheSize       =   100
-                  BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
-                           Size            =   8.25
-                           Charset         =   0
-                           Weight          =   400
-                           Underline       =   0                  'False
-                           Italic          =   0                  'False
-                           StrikeThrough   =   0                  'False
-                  EndProperty
-         End
-         Begin VB.Timer timUnLoad
-                  Enabled         =   0
-                  Interval        =   5
-                  left            =   30
-                  top             =   950
-         End
+   Begin IRRIG.GListV grdBrowse 
+      Height          =   795
+      Left            =   60
+      TabIndex        =   137
+      Top             =   330
+      Width           =   1575
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
+   End
+   Begin VB.Timer timUnLoad 
+      Enabled         =   0   'False
+      Interval        =   5
+      Left            =   30
+      Top             =   950
+   End
 End
-Attribute VB_name = "frmMvtoConN"
+Attribute VB_Name = "frmMvtoConN"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -3006,7 +2565,7 @@ Attribute VB_Exposed = False
 '* Função....: Movimento do Estoque Contábil (Novo)
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 23/06/2025 10:01:07
+'* Data......: 17/06/2025 13:59:23
 '* * * * * * *
 
 Option Explicit
@@ -3015,36 +2574,37 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgFiltroInicial As String                  'filtro inicial do módulo   
+Public vgFiltroInicial As String                  'filtro inicial do módulo
 Public vgOrdemInicial As String                   'ordem inicial do módulo
-Public vgUltimaOrdem As String                    'última ordenação feita no módulo    
-Public vgUltimoFiltro As String                   'último filtro definido no módulo   
+Public vgUltimaOrdem As String                    'última ordenação feita no módulo
+Public vgUltimoFiltro As String                   'último filtro definido no módulo
 Public vgUltimoFiltroComTit As String             'titulo do último filtro definido no módulo
-Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo 
+Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo
 Public vgUltimoTabIndex As Integer                'último campo com foco do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
+Public vgPriVez As Integer                        'flag de carregamento do módulo
 Public WithEvents vgTb As GRecordSet              'tabela de dados do módulo
+Attribute vgTb.VB_VarHelpID = -1
 Public vgSQL As String                            'expressão SQL que define o módulo
-Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo 
-Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo 
-Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo 
+Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo
+Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo
+Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo 
+Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo
 Public vgTemAlteracaoGrids As Integer              'flag se tem ou não alteração nos grids
 Public vgTemBrowse As Integer                     'flag se tem ou não janela em grade no módulo
 Public vgSemVincDados As Integer                  'Flag para definir formulários sem vinculo com dados
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgRepeticao As Integer                     'flag de repetição do último reg digitado
 Public vgAlterar As Integer                       'flag de Alteracao de registros
 Public vgUltAlterar As Integer                    'flag de última situação de "pode alterar"
-Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso 
-Public vgIndDefault As String                     'indice default do módulo 
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
+Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso
+Public vgIndDefault As String                     'indice default do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
 Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
-Dim txtCampo(29) As New FormataCampos             'classe dos campos tipo texto do módulo  
+Dim txtCampo(29) As New FormataCampos             'classe dos campos tipo texto do módulo
 Dim chkCampo(0) As New FormataCampos              'classe dos campos tipo lógico do módulo
 Dim vgPodeFazerUnLoad As Boolean                  'flag se o módulo pode ou nao ser removido da memória
 Dim opcPainel1(1) As New FormataCampos
@@ -3061,11 +2621,11 @@ Dim Sequencia_do_Orcamento As Long, Codigo_do_Debito As Long, Ajuste As String
 Dim Produto_inclui As Double, Qtde_Caixinha As Double, Identificacao As Double
 Dim Conjunto_inclui As Double, Qtde_caixinhaconjunto As Double, Idconj As Double
 Dim Consumo_inclui As Double, Qtde_caixinhaconsumo As Double, Idconsumo As Double
-Dim Devolucao_inclui As Double, Qtde_devolucao As Double, Nfe As Double
-Public Txtbuscageral As Object, lblAjuste As Object, grdProdutos As Object
-Public grdConjuntos As Object, grdDespesas As Object, Txtforma_de_pagamento As Object
-Public lblParcelamento As Object, Grdparcelamento As Object, Txtproduto As Object
-Public txtQtde_Caixinha As Object, Txtid As Object, Txtconjunto As Object
+Dim Devolucao_inclui As Double, Qtde_devolucao As Double, NFe As Double
+Public Txtbuscageral As Object, lblAjuste As Object, GrdProdutos As Object
+Public grdConjuntos As Object, GrdDespesas As Object, txtForma_de_Pagamento As Object
+Public lblParcelamento As Object, Grdparcelamento As Object, txtProduto As Object
+Public txtQtde_Caixinha As Object, Txtid As Object, txtConjunto As Object
 Public Txtqtde_caixinhaconjunto As Object, Txtidconj As Object, Txtconsumo As Object
 Public Txtqtde_caixinhaconsumo As Object, Txtidconsumo As Object, Txtdevolucao_inclui As Object
 Public Txtqtde_devolucao As Object, LblTemConta As Object, LblTemConta2 As Object
@@ -3074,7 +2634,7 @@ Public lblOrc As Object
 Dim Movimento_Contabil_Novo As New GRecordSet, Conjuntos_Mvto_Contabil_N As New GRecordSet, Despesas_Mvto_Contabil_No As New GRecordSet
 Dim Produtos_Mvto_Contabil_No As New GRecordSet, Parcelas_mvto_contabil As New GRecordSet
 
-Private ProdutoAux As New GRecordset, ConjuntoAux As New GRecordset, UnidadeAux As New GRecordset, DespesaAux As New GRecordset
+Private ProdutoAux As New GRecordSet, ConjuntoAux As New GRecordSet, UnidadeAux As New GRecordSet, DespesaAux As New GRecordSet
 Public TpProduto As Byte, Tipo As Byte
 
 'evento - quando uma opção for selecionada
@@ -3098,7 +2658,7 @@ Private Sub opcPainel1Cp_Click(Index As Integer)
       'End If 'Manual
    End If
    opcPainel1(0).CtPri.TabStop = False
-   opcPainel1(1).CtPri.TabStop = False   
+   opcPainel1(1).CtPri.TabStop = False
 End Sub
 
 Private Function ProcessaProdutos(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, _
@@ -3121,7 +2681,7 @@ Private Function ProcessaProdutos(Sequencia_do_Movimento As Long, Sequencia_do_P
    vgDb.BeginTrans
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Quantidade * Valor_Unitario), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo Do Movimento]  = 1 Then 'Saída
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then  'Saída
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Custo
    End If
@@ -3129,7 +2689,7 @@ Private Function ProcessaProdutos(Sequencia_do_Movimento As Long, Sequencia_do_P
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = " & Substitui(Round(Round(Quantidade * Valor_Unitario, 2) * Valor_do_IPI / 100, 2), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor do IPI
    Else
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = 0 WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor do IPI
-   End If  
+   End If
    vgDb.CommitTrans
          
 DeuErro:
@@ -3174,7 +2734,7 @@ Private Function ProcessaConjuntos(Sequencia_do_Movimento As Long, Sequencia_Con
    Quantidade As Double, Valor_Unitario As Double, Valor_de_Custo As Double, _
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
-   Valor_da_Substituicao As Double) As Boolean      
+   Valor_da_Substituicao As Double) As Boolean
    Dim Tb As New GRecordSet
    
    On Error GoTo DeuErro
@@ -3185,12 +2745,12 @@ Private Function ProcessaConjuntos(Sequencia_do_Movimento As Long, Sequencia_Con
    
    Set Tb = vgDb.OpenRecordSet("SELECT * FROM Conjuntos WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto)
      
-   vgDb.BeginTrans   
+   vgDb.BeginTrans
    vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo 'Valor Total
    If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then 'Saída
-      vgdb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Unitario      
-      vgdb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Custo
-   End If    
+      vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Unitario
+      vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Custo
+   End If
    vgDb.CommitTrans
       
 DeuErro:
@@ -3203,21 +2763,21 @@ End Function
 Private Sub CarregaTotalizador()
    On Error Resume Next
 
-   With grdProdutos
+   With GrdProdutos
       .ShowSumBar = True
       .ShowSumCol(.Columns("Vr. Total").Index) = True
       .ShowFilterBar = False
-      .HideStatus = True      
-   End With   
-   With grdDespesas
+      .HideStatus = True
+   End With
+   With GrdDespesas
       .ShowSumBar = True
       .ShowSumCol(.Columns("Vr. Total").Index) = True
       .ShowFilterBar = False
-      .HideStatus = True      
+      .HideStatus = True
    End With
    With grdConjuntos
       .ShowSumBar = True
-      .ShowSumCol(.Columns("Vr. Total").Index) = True      
+      .ShowSumCol(.Columns("Vr. Total").Index) = True
       .ShowFilterBar = False
       .HideStatus = True
    End With
@@ -3233,11 +2793,11 @@ Private Sub ComandosProdutos(KeyAscii As Integer, Sequencia_do_Movimento As Long
    On Error GoTo DeuErro
       
    If KeyAscii = vbKeyF12 Then
-      With grdProdutos
+      With GrdProdutos
          Select Case .ColumnField(.Col)
             Case "Seqüência do Produto"
                seqRegistro = .ColumnValue(.Row + 1, .Col)
-               frmProdutos.Show            
+               frmProdutos.Show
          End Select
       End With
    End If
@@ -3257,11 +2817,11 @@ Private Sub ComandosDespesas(KeyAscii As Integer, Sequencia_do_Movimento As Long
    On Error GoTo DeuErro
       
    If KeyAscii = vbKeyF12 Then
-      With grdDespesas
+      With GrdDespesas
          Select Case .ColumnField(.Col)
             Case "Seqüência da Despesa"
                seqRegistro = .ColumnValue(.Row + 1, .Col)
-               frmDespesas.Show            
+               frmDespesas.Show
          End Select
       End With
    End If
@@ -3285,7 +2845,7 @@ Private Sub ComandosConjuntos(KeyAscii As Integer, Sequencia_do_Movimento As Lon
          Select Case .ColumnField(.Col)
             Case "Seqüência do Conjunto"
                seqRegistro = .ColumnValue(.Row + 1, .Col)
-               frmConjunto.Show            
+               frmConjunto.Show
          End Select
       End With
    End If
@@ -3298,14 +2858,14 @@ DeuErro:
 End Sub
 
 Private Function PodeIncluir(ByVal Produto As Long, Quantidade As Variant, Principal As Boolean) As Boolean
-   Dim Tb As New GRecordset
+   Dim Tb As New GRecordSet
   
-   Set Tb = vgdb.OpenRecordset("SELECT * FROM Produtos LEFT JOIN [Matéria Prima] ON Produtos.[Seqüência do Produto] = [Matéria Prima].[Seqüência do Produto] WHERE Produtos.[Seqüência do Produto] = " & Produto)
+   Set Tb = vgDb.OpenRecordSet("SELECT * FROM Produtos LEFT JOIN [Matéria Prima] ON Produtos.[Seqüência do Produto] = [Matéria Prima].[Seqüência do Produto] WHERE Produtos.[Seqüência do Produto] = " & Produto)
    If Tb.RecordCount = 0 Then Exit Function
       
    If IIf((Tb![Tipo Do Produto] = 0 And Principal) Or Principal, True, Tb.RecordCount = 1 And TemNoEstoque(Produto, Data_do_Movimento, Quantidade)) Then
       PodeIncluir = True
-   End If   
+   End If
       
 End Function
 
@@ -3316,12 +2876,12 @@ Private Function TemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_Produto
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
    Valor_total_compra As Double) As Boolean
-   Dim B As New GRecordset
+   Dim B As New GRecordSet
    
    If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoque = True: GoTo Fim
    
    On Error Resume Next
-   Set B = vgdb.OpenRecordset("SELECT [Quantidade Contábil] FROM Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
+   Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
 
    If B![Quantidade Contábil] < Quantidade Then
       TemEstoque = False
@@ -3329,7 +2889,7 @@ Private Function TemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_Produto
    End If
    TemEstoque = True
    
-Fim:   
+Fim:
 End Function
 
 'Mostra as receitas que nw tem no estoque
@@ -3466,12 +3026,12 @@ Private Function TemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequencia_Des
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Valor_do_ipi_compra As Double, Valor_total_compra As Double) As Boolean
-   Dim B As New GRecordset
+   Dim B As New GRecordSet
    
    If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoqueDespesa = True: GoTo Fim
    
    On Error Resume Next
-   Set B = vgdb.OpenRecordset("SELECT [Quantidade Contábil] FROM Despesas WHERE [Seqüência da Despesa] = " & Sequencia_da_Despesa)
+   Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Despesas WHERE [Seqüência da Despesa] = " & Sequencia_da_Despesa)
 
    If B![Quantidade Contábil] < Quantidade Then
       TemEstoqueDespesa = False
@@ -3479,7 +3039,7 @@ Private Function TemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequencia_Des
    End If
    TemEstoqueDespesa = True
    
-Fim: 
+Fim:
 End Function
 
 Private Function BlasterTemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa_Mvto_Novo As Long, Sequencia_da_Despesa As Long, _
@@ -3560,32 +3120,32 @@ Private Sub IncluiRegistro(ByVal Codigo As Long, ByVal Produto As Long, ByVal Qu
    Set TbProduto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Codigo & " AND [Seqüência do Produto] = " & Produto & " AND [Seqüência do Produto Mvto Novo] = " & SeqProduto & " ORDER BY [Seqüência do Produto Mvto Novo]")
    Set Tb = vgDb.OpenRecordSet("SELECT [Tipo do Produto] FROM Produtos WHERE [Seqüência do Produto] = " & Produto)
    
-   'If Tb![Tipo Do Produto] = 4 Then Exit Sub' Imobilizado 
+   'If Tb![Tipo Do Produto] = 4 Then Exit Sub' Imobilizado
          
    With BxEstoque
       .AddNew
-      ![Seqüência Do Movimento] = Sequencia_do_Movimento
+      ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqProduto
       ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
-      ![Data Do Movimento] = B![Data Do Movimento]
+      ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "P"
       If ![Tipo Do Movimento] = 0 Then 'Entrada
-         ![Seqüência Do Produto] = TbProduto![Seqüência Do Produto]
+         ![Seqüência do Produto] = TbProduto![Seqüência do Produto]
          ![Valor Do PIS] = TbProduto![Valor Do PIS]
          ![Valor Do Cofins] = TbProduto![Valor Do Cofins]
-         ![Valor Do ICMS] = TbProduto![Valor Do ICMS]
-         ![Valor Do IPI] = TbProduto![Valor Do IPI]
+         ![Valor Do Icms] = TbProduto![Valor Do Icms]
+         ![Valor do IPI] = TbProduto![Valor do IPI]
          ![Valor Do Frete] = TbProduto![Valor Do Frete]
          ![Valor da Substituição] = TbProduto![Valor da Substituição]
          !Quantidade = Quantidade
          ![Valor Unitário] = TbProduto![Valor Unitário]
          ![Valor de Custo] = TbProduto![Valor de Custo]
       Else 'Saída
-         ![Seqüência Do Produto] = Produto
+         ![Seqüência do Produto] = Produto
          !Quantidade = Quantidade
       End If
       .Update
@@ -3602,32 +3162,32 @@ Private Sub IncluiDespesa(ByVal Codigo As Long, ByVal Despesa As Long, ByVal Qua
    Set TbDespesa = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Despesas Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Codigo & " AND [Seqüência da Despesa] = " & Despesa & " ORDER BY [Seqüência Despesa Mvto Novo]")
    Set Tb = vgDb.OpenRecordSet("SELECT [Tipo do Produto], [Movimenta Ficha] FROM Despesas WHERE [Seqüência da Despesa] = " & Despesa)
     
-   If Not Tb![Movimenta Ficha] Then Exit Sub 
+   If Not Tb![Movimenta ficha] Then Exit Sub
          
    With BxEstoque
       .AddNew
-      ![Seqüência Do Movimento] = Sequencia_do_Movimento
+      ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqDespesa
       ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
-      ![Data Do Movimento] = B![Data Do Movimento]
+      ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "D"
       If ![Tipo Do Movimento] = 0 Then 'Entrada
-         ![Seqüência da Despesa] = TbDespesa![Seqüência da Despesa]
+         ![Seqüência Da Despesa] = TbDespesa![Seqüência Da Despesa]
          ![Valor Do PIS] = TbDespesa![Valor Do PIS]
          ![Valor Do Cofins] = TbDespesa![Valor Do Cofins]
-         ![Valor Do ICMS] = TbDespesa![Valor Do ICMS]
-         ![Valor Do IPI] = TbDespesa![Valor Do IPI]
+         ![Valor Do Icms] = TbDespesa![Valor Do Icms]
+         ![Valor do IPI] = TbDespesa![Valor do IPI]
          ![Valor Do Frete] = TbDespesa![Valor Do Frete]
          ![Valor da Substituição] = TbDespesa![Valor da Substituição]
          !Quantidade = TbDespesa!Quantidade
          ![Valor Unitário] = TbDespesa![Valor Unitário]
          ![Valor de Custo] = TbDespesa![Valor de Custo]
       Else 'Saída
-         ![Seqüência da Despesa] = Despesa
+         ![Seqüência Da Despesa] = Despesa
          !Quantidade = Quantidade
       End If
       .Update
@@ -3721,7 +3281,7 @@ DeuErro:
 End Function
 
 Public Function BaixaConjunto(ByVal Código As Long, ByVal Quantidade As Variant, Tipo As String, Op As String, CódigoContábil As Long, SeqConjunto As Long) As Boolean
-   Dim Tb1 As GRecordSet, TB2 As GRecordSet, Tb3 As GRecordSet, TB4 As GRecordSet, TB5 As GRecordSet, TB6 As GRecordSet, Tb7 As GRecordSet, Operador As String
+   Dim Tb1 As GRecordSet, TB2 As GRecordSet, Tb3 As GRecordSet, TB4 As GRecordSet, Tb5 As GRecordSet, TB6 As GRecordSet, Tb7 As GRecordSet, Operador As String
    
    On Error GoTo DeuErro
    
@@ -3742,8 +3302,8 @@ Public Function BaixaConjunto(ByVal Código As Long, ByVal Quantidade As Variant,
                                    "FROM [Itens Do Conjunto] IC INNER JOIN Produtos P ON IC.[Seqüência do Produto] = P.[Seqüência do Produto] " & _
                                    "WHERE [Seqüência Do Conjunto] = " & Código & " AND P.Industrialização = 0")
                                    'Se nw for Industrialização entao vamos baixar, caso seja, ex.: galvanização e etc... nw baixar
-      Do While Not Tb1.EOF         
-          IncluiRegistroC CódigoContábil, Tb1![Seqüência Do Produto], Quantidade * Tb1![Quantidade Do Produto], True, True, SeqConjunto         
+      Do While Not Tb1.EOF
+          IncluiRegistroC CódigoContábil, Tb1![Seqüência do Produto], Quantidade * Tb1![Quantidade Do Produto], True, True, SeqConjunto
          'QtdeEstoqueCont 0, Tb1![Seqüência Do Produto]
          'Coloquei a nova Rotina nos Processos: MegaEstoqueContabil
          Tb1.MoveNext
@@ -3786,27 +3346,27 @@ Private Sub IncluiRegistroC(ByVal Codigo As Long, ByVal Produto As Long, ByVal Q
    
    With BxEstoque
       .AddNew
-      ![Seqüência Do Movimento] = Sequencia_do_Movimento
+      ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqConjunto
       ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
-      ![Data Do Movimento] = B![Data Do Movimento]
+      ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       If ![Tipo Do Movimento] = 0 Then 'Entrada
          If LancaProduto Then
-            ![Seqüência Do Produto] = TbProduto![Seqüência Do Conjunto]
+            ![Seqüência do Produto] = TbProduto![Seqüência do Conjunto]
          Else
-            ![Seqüência Do Conjunto] = TbProduto![Seqüência Do Conjunto]
+            ![Seqüência do Conjunto] = TbProduto![Seqüência do Conjunto]
          End If
          !Quantidade = TbProduto!Quantidade
          ![Valor Unitário] = TbProduto![Valor Unitário]
          ![Valor de Custo] = TbProduto![Valor de Custo]
       Else 'Saída
          If LancaProduto Then
-            ![Seqüência Do Produto] = Produto
+            ![Seqüência do Produto] = Produto
          Else
-            ![Seqüência Do Conjunto] = Produto
+            ![Seqüência do Conjunto] = Produto
          End If
          !Quantidade = Quantidade
       End If
@@ -3863,7 +3423,7 @@ Private Function CalculaValorEntrada(Sequencia_do_Movimento As Long, Sequencia_d
       Loop
       Subordinado.MoveFirst: Subordinado.MoveLast
                                                 
-      If TemNoEstoque(ReceitaPrincipal!MateriaPrima, Data_Do_Movimento, Qtde) Then
+      If TemNoEstoque(ReceitaPrincipal!MateriaPrima, Data_do_Movimento, Qtde) Then
          Preco = Preco + (ReceitaPrincipal!Quantidade * Qtde * ReceitaPrincipal!VrContabil)
       End If
       ReceitaPrincipal.MoveNext
@@ -3880,11 +3440,11 @@ Private Function CalculaValorEntrada2(Sequencia_do_Movimento As Long, Sequencia_
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
    Valor_total_compra As Double) As Double
    Dim Preco As Currency, Qtde As Variant, Subordinado As New GRecordSet
-   Dim VrCusto As Double, VrTotal As Double, CodProd As Long
+   Dim Vrcusto As Double, VrTotal As Double, CodProd As Long
    
    On Error Resume Next
    
-   If grdProdutos.ColumnCaption(grdProdutos.Col) <> "Vr. Unitário" Then Exit Function
+   If GrdProdutos.ColumnCaption(GrdProdutos.Col) <> "Vr. Unitário" Then Exit Function
                                              
       Set Subordinado = vgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
                                            "SELECT M.[Seqüência da Matéria Prima], M.[Quantidade de Matéria Prima], P.[Seqüência do Produto], P.Descrição " & _
@@ -3893,20 +3453,20 @@ Private Function CalculaValorEntrada2(Sequencia_do_Movimento As Long, Sequencia_
                                            " UNION ALL " & _
                                            "SELECT M.[Seqüência da Matéria Prima], CAST(M.[Quantidade de Matéria Prima] * S.QtdeUsada AS Decimal(9,3)), P.[Seqüência do Produto], P.Descrição " & _
                                            "FROM Produtos AS P INNER JOIN [Matéria Prima] AS M ON P.[Seqüência do Produto] = M.[Seqüência do Produto] " & _
-                                           "INNER JOIN SuperQtde AS S ON P.[Seqüência do Produto] = S.MateriaPrima) " & _         
+                                           "INNER JOIN SuperQtde AS S ON P.[Seqüência do Produto] = S.MateriaPrima) " & _
                                            "SELECT S.MateriaPrima, P.Descrição AS DescMat, U.[Sigla da Unidade] As Unidade, P.[Quantidade no Estoque] As QtdeEstoque, P.[Quantidade Contábil] As QtdeContabil, " & _
                                            "P.[Valor Contábil Atual] As CustoMaterial, S.QtdeUsada, Round(S.QtdeUsada * P.[Valor de Custo], 4) AS CustoTotal, S.Produto, S.Descricao " & _
                                            "FROM SuperQtde AS S LEFT JOIN [Matéria Prima] AS M ON S.MateriaPrima = M.[Seqüência Do Produto] " & _
                                            "INNER JOIN Produtos AS P ON S.MateriaPrima = P.[Seqüência Do Produto] " & _
-                                           "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _                  
+                                           "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
                                            "WHERE M.[Seqüência Do Produto] IS NULL " & _
                                            "ORDER BY S.MateriaPrima")
 
       Do While Not Subordinado.EOF
          CodProd = Subordinado!MateriaPrima
          Qtde = Subordinado!QtdeUsada
-         VrCusto = Ultimo("Custo",CodProd)
-         VrTotal = Qtde * VrCusto
+         Vrcusto = Ultimo("Custo", CodProd)
+         VrTotal = Qtde * Vrcusto
          Preco = Preco + VrTotal
          Subordinado.MoveNext
       Loop
@@ -3958,13 +3518,13 @@ Private Function ConjuntoProduzido(Sequencia_do_Movimento As Long, Sequencia_Con
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double) As Boolean
-   Dim B As New GRecordset
+   Dim B As New GRecordSet
    
-   Set B = vgdb.OpenRecordset("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto)
+   Set B = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto)
    
    If B.RecordCount > 0 Then
       ConjuntoProduzido = True
-   End If   
+   End If
    
    TbAuxiliar "Conjuntos", "[Seqüência do Conjunto] = " & Sequencia_do_Conjunto, ConjuntoAux
    
@@ -3986,7 +3546,7 @@ Private Function CalculaConjunto(Sequencia_do_Movimento As Long, Sequencia_Conju
       Set Subordinado = vgDb.OpenRecordSet("WITH SuperCusto (MateriaPrima, Quantidade, VrContabil) AS( " & _
                                            "SELECT [Seqüência da Matéria Prima], [Quantidade de Matéria Prima], [Valor Contábil Atual] " & _
                                            "FROM Produtos P INNER JOIN [Matéria Prima] M ON P.[Seqüência Do Produto] = M.[Seqüência Do Produto] " & _
-                                           "WHERE P.[Seqüência Do Produto] = " & ReceitaPrincipal![Seqüência Do Produto] & _
+                                           "WHERE P.[Seqüência Do Produto] = " & ReceitaPrincipal![Seqüência do Produto] & _
                                            " UNION ALL " & _
                                            "SELECT [Seqüência da Matéria Prima], [Quantidade de Matéria Prima], [Valor Contábil Atual] " & _
                                            "FROM Produtos P INNER JOIN [Matéria Prima] M ON P.[Seqüência Do Produto] = M.[Seqüência Do Produto] " & _
@@ -4015,13 +3575,13 @@ Private Function CalculaConjunto2(Sequencia_do_Movimento As Long, Sequencia_Conj
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double) As Double
    Dim Preco As Currency, Qtde As Currency, Subordinado As New GRecordSet
-   Dim CodItem As Long, VrCusto As Double, VrTotal As Double
+   Dim CodItem As Long, Vrcusto As Double, VrTotal As Double
     
    On Error Resume Next
    
     If grdConjuntos.ColumnCaption(grdConjuntos.Col) <> "Vr. Unitário" Then Exit Function
    
-    Set Subordinado = VgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
+    Set Subordinado = vgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
                                          "SELECT M.[Seqüência Do Produto], M.[Quantidade Do Produto], P.[Seqüência Do Produto], P.Descrição " & _
                                          "FROM Conjuntos AS C INNER JOIN [Itens Do Conjunto] AS M ON C.[Seqüência Do Conjunto] = M.[Seqüência Do Conjunto] " & _
                                          "INNER JOIN Produtos P ON M.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -4029,26 +3589,26 @@ Private Function CalculaConjunto2(Sequencia_do_Movimento As Long, Sequencia_Conj
                                          " UNION ALL " & _
                                          "SELECT M.[Seqüência da Matéria Prima], CAST(M.[Quantidade de Matéria Prima] * S.QtdeUsada AS Decimal(9,3)), P.[Seqüência Do Produto], P.Descrição " & _
                                          "FROM Produtos AS P INNER JOIN [Matéria Prima] AS M ON P.[Seqüência Do Produto] = M.[Seqüência Do Produto] " & _
-                                         "INNER JOIN SuperQtde AS S ON P.[Seqüência Do Produto] = S.MateriaPrima) " & _         
+                                         "INNER JOIN SuperQtde AS S ON P.[Seqüência Do Produto] = S.MateriaPrima) " & _
                                          "SELECT S.MateriaPrima, P.Descrição AS DescMat, U.[Sigla da Unidade] As Unidade, P.[Quantidade no Estoque] As QtdeEstoque, P.[Valor Contábil Atual] As VrContabil, " & _
                                          "S.QtdeUsada, S.Produto, S.Descricao " & _
                                          "FROM SuperQtde AS S LEFT JOIN [Matéria Prima] AS M ON S.MateriaPrima = M.[Seqüência Do Produto] " & _
                                          "INNER JOIN Produtos AS P ON S.MateriaPrima = P.[Seqüência Do Produto] " & _
-                                         "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _                  
+                                         "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
                                          "WHERE M.[Seqüência Do Produto] IS NULL " & _
                                          "ORDER BY S.MateriaPrima")
 
     Do While Not Subordinado.EOF
          CodItem = Subordinado!MateriaPrima
          Qtde = Subordinado!QtdeUsada
-         VrCusto = Ultimo("Custo",CodItem)
-         VrTotal = Qtde * VrCusto
+         Vrcusto = Ultimo("Custo", CodItem)
+         VrTotal = Qtde * Vrcusto
          Preco = Preco + VrTotal
          Subordinado.MoveNext
       Loop
-      Subordinado.MoveFirst: Subordinado.MoveLast 
+      Subordinado.MoveFirst: Subordinado.MoveLast
       
-      CalculaConjunto2 = Preco                                
+      CalculaConjunto2 = Preco
          
 End Function
 
@@ -4085,7 +3645,7 @@ End Function
    
   ' TbAuxiliar "Unidades", "[Seqüência da Unidade] = " & ProdutoAux![Seqüência da Unidade] & " AND [Seqüência da Unidade] > 0", UnidadeAux
    
-   'Select Case Oq      
+   'Select Case Oq
     '  Case "Sigla"
      '    InfoProdutos = UnidadeAux![Sigla da Unidade]
       'Case "Custo"
@@ -4097,7 +3657,7 @@ End Function
 Private Function InfoProdutos(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, _
    Quantidade As Double, Valor_Unitario As Double, Valor_de_Custo As Double, _
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
-   Valor_do_Ipi As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
+   Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
    Valor_total_compra As Double, Oq As String) As Variant
    
@@ -4132,7 +3692,7 @@ Private Function InfoDespesas(Sequencia_do_Movimento As Long, Sequencia_Despesa_
    
    TbAuxiliar "Unidades", "[Seqüência da Unidade] = " & DespesaAux![Seqüência da Unidade] & " AND [Seqüência da Unidade] > 0", UnidadeAux
    
-   Select Case Oq      
+   Select Case Oq
       Case "Sigla"
          InfoDespesas = UnidadeAux![Sigla da Unidade]
       Case "Custo"
@@ -4146,16 +3706,16 @@ Private Sub Tabs_Click(Index As Integer, PreviousTab As Integer)
 End Sub
 
 Private Sub RepositionMvtoContabil()
-   On error Resume Next
+   On Error Resume Next
    Tipo = Tipo_do_Movimento
-   TpProduto = vgtb![Tipo Do Produto] 
-   txtForma_de_Pagamento.ListFields = "Prazo" 
+   TpProduto = vgTb![Tipo Do Produto]
+   txtForma_de_Pagamento.ListFields = "Prazo"
    If vgSituacao = ACAO_INCLUINDO Then
-      Set Parcelas_Mvto_Contabil = Nothing
+      Set Parcelas_mvto_contabil = Nothing
       Set Produtos_Mvto_Contabil_No = Nothing
       Set Despesas_Mvto_Contabil_No = Nothing
       Set Conjuntos_Mvto_Contabil_N = Nothing
-   End If 
+   End If
 End Sub
 
 'Retorna valor inicial' para 'VALOR UNITÁRIO
@@ -4187,7 +3747,7 @@ Private Function VrUnit(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvt
       RetVal = 0
    End If
 
-   VrUnit = RetVal 
+   VrUnit = RetVal
 End Function
 
 Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa_Mvto_Novo As Long, Sequencia_da_Despesa As Long, _
@@ -4203,8 +3763,8 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
    
    If DespesaAux.RecordCount = 0 Then Exit Function
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then      
-      RetVal = DespesaAux![Valor Contábil Atual]      
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+      RetVal = DespesaAux![Valor Contábil Atual]
    Else
       RetVal = 0
    End If
@@ -4212,16 +3772,16 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
    VrUnitDespesa = RetVal
 End Function
 
-Private Function Executa As Boolean
-   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência Do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência Do Movimento], Movimento_Contabil_Novo![Data Do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
+Private Function Executa() As Boolean
+   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
 End Function
 
-Private Function Executa2 As Boolean
-   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência Do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
+Private Function Executa2() As Boolean
+   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
 End Function
 
-Private Function Executa3 As Boolean
-   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência Do Movimento], Movimento_Contabil_Novo![Data Do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
+Private Function Executa3() As Boolean
+   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência Da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
 End Function
 
 'Quando deletar o Registro Pai deletar os filhos também
@@ -4231,47 +3791,47 @@ Private Sub DeletaBaixa()
 
    On Error GoTo DeuErro
    
-   If Seq_Prod_Propria > 0 And VgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 0 Then   
+   If Seq_Prod_Propria > 0 And vgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 0 Then
       DeletaProdPropria
    End If
    
-   If Seq_Baixa_Consumo > 0 And VgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 1 Then
-      DeletaBxConsumo  
-   End If 
+   If Seq_Baixa_Consumo > 0 And vgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 1 Then
+      DeletaBxConsumo
+   End If
    
-   Set BxContabil = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)   
+   Set BxContabil = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
    If BxContabil.RecordCount = 0 Then Exit Sub
       
-   'Set Conta = VgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] Where [Seqüência do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência da Baixa] = 0  And [Seqüência do Movimento] > 0")   
+   'Set Conta = VgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] Where [Seqüência do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência da Baixa] = 0  And [Seqüência do Movimento] > 0")
    
    'If Conta.RecordCount > 0 Then
    '   vgDb.Execute "DELETE FROM [Manutenção Contas] " & _
    '                "WHERE [Seqüência do Movimento] = " & Conta![Seqüência Do Movimento]
-   'End If     
+   'End If
         
    vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] " & _
-                "WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento      
+                "WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento
 
 DeuErro:
    If Err.Number <> 0 Then
       MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
       vgDb.RollBackTrans
-   End If   
+   End If
 End Sub
 
 Private Sub AlteraRegistro()
-   On error Resume Next
+   On Error Resume Next
    
-   vgdb.Execute "Update [Baixa do Estoque Contábil] Set Documento = '" & Documento & "', [Seqüência do Geral] = " & Sequencia_Do_Geral & _
-                ", [Data do Movimento] = " & D(Data_Do_Movimento) & " WHERE [Seqüência do Movimento] = " & Sequencia_Do_Movimento & " And [Seqüência da Baixa] > 302543"
+   vgDb.Execute "Update [Baixa do Estoque Contábil] Set Documento = '" & Documento & "', [Seqüência do Geral] = " & Sequencia_do_Geral & _
+                ", [Data do Movimento] = " & D(Data_do_Movimento) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência da Baixa] > 302543"
                 
-   If E_Producao_Propria = True And Tipo_do_Movimento = 0 And VgSituacao = ACAO_EDITANDO And Seq_Prod_Propria = 0 Then
+   If E_Producao_Propria = True And Tipo_do_Movimento = 0 And vgSituacao = ACAO_EDITANDO And Seq_Prod_Propria = 0 Then
       AlteraEntraPPropria
-   End If 
+   End If
    
-   If Baixa_Consumo = True And Tipo_do_Movimento = 1 And VgSituacao = ACAO_EDITANDO And Seq_Baixa_Consumo = 0 Then
+   If Baixa_Consumo = True And Tipo_do_Movimento = 1 And vgSituacao = ACAO_EDITANDO And Seq_Baixa_Consumo = 0 Then
       AlteraBxConsumo
-   End If                            
+   End If
    AjustaValores
    AlteraManutencao
 End Sub
@@ -4285,21 +3845,21 @@ Private Function ExcluiBaixaReceitaProduto(ByVal SeqProduto As Long) As Boolean
    MegaEstoqueContabil 0, 0 'Nova Rotina Super Rapida
    
    'Exclui os Itens do Mvto Irrig
-   If VgSituacao = -ACAO_EXCLUINDO Then
+   If vgSituacao = -ACAO_EXCLUINDO Then
    If Baixa_Consumo = True And Tipo_do_Movimento = 1 And Seq_Baixa_Consumo > 0 Then
-     vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência Do Produto]
-     AtualizaEstoque 1, 0 
+     vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
+     AtualizaEstoque 1, 0
    End If
    End If
    
    'Se Vier do Grid Produtos e For Produção Propria Entao Exclui a Baixa
-   If VgSituacao = -ACAO_EXCLUINDO Then
-   If E_Producao_Propria = False Then Exit Function 
+   If vgSituacao = -ACAO_EXCLUINDO Then
+   If E_Producao_Propria = False Then Exit Function
    If Tipo_do_Movimento = 0 Then
-   If Seq_Prod_Propria > 0 Then 
-   vgDb.Execute "DELETE FROM [Baixa MP Produto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Produtos_Mvto_Contabil_No![Seqüência Do Produto] 
-   vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência Do Produto]
-   AtualizaEstoque 1, 0  
+   If Seq_Prod_Propria > 0 Then
+   vgDb.Execute "DELETE FROM [Baixa MP Produto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
+   vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
+   AtualizaEstoque 1, 0
    End If
    End If
    End If
@@ -4314,14 +3874,14 @@ Private Function ExcluiBaixaReceitaConjunto(ByVal SeqConjunto As Integer) As Boo
    
    MegaEstoqueContabil 1, 0 'Nova Rotina Super Rapida
    
-   If VgSituacao = -ACAO_EXCLUINDO Then
-   If E_Producao_Propria = False Then Exit Function 
+   If vgSituacao = -ACAO_EXCLUINDO Then
+   If E_Producao_Propria = False Then Exit Function
    If Tipo_do_Movimento = 0 Then
-   If Seq_Prod_Propria > 0 Then 
-   vgDb.Execute "DELETE FROM [Baixa MP Conjunto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto] 
-   vgDb.Execute "DELETE FROM [Conjuntos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Conjunto] = " & Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto]
-   AtualizaEstoque 2, 0  
-   AtualizaEstoque 1, 0  
+   If Seq_Prod_Propria > 0 Then
+   vgDb.Execute "DELETE FROM [Baixa MP Conjunto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
+   vgDb.Execute "DELETE FROM [Conjuntos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Conjunto] = " & Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
+   AtualizaEstoque 2, 0
+   AtualizaEstoque 1, 0
    End If
    End If
    End If
@@ -4441,7 +4001,7 @@ Private Function ValidaPeriodoContabil(Data As Variant) As Boolean
  
    On Error Resume Next
    
-   If vgPWUsuario = "YGOR" Then  ValidaPeriodoContabil = True: Exit Function
+   If vgPWUsuario = "YGOR" Then ValidaPeriodoContabil = True: Exit Function
    
    DtaBase = Date - 15
    
@@ -4496,9 +4056,9 @@ Private Sub Grid_BeforeDeleteRecord(Index As Integer, ByVal vgItem As Long, vgCo
    End Select
 End Sub
 
-Private Sub IncluiPPropria()' Qdo Estiver Marcado Produção Propria Criar Registro na (Entrada de Produção Propria Irrigação)
+Private Sub IncluiPPropria() ' Qdo Estiver Marcado Produção Propria Criar Registro na (Entrada de Produção Propria Irrigação)
   Dim Mvto As GRecordSet, UltMvto As New GRecordSet
-    If VgSituacao = ACAO_INCLUINDO And E_Producao_Propria = True And Tipo_do_Movimento = 0 Then
+    If vgSituacao = ACAO_INCLUINDO And E_Producao_Propria = True And Tipo_do_Movimento = 0 Then
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
@@ -4510,10 +4070,10 @@ Private Sub IncluiPPropria()' Qdo Estiver Marcado Produção Propria Criar Registr
          .Update
       End With
    End If
-   If VgSituacao = ACAO_INCLUINDO And E_Producao_Propria = True And Tipo_do_Movimento = 0 Then
+   If vgSituacao = ACAO_INCLUINDO And E_Producao_Propria = True And Tipo_do_Movimento = 0 Then
    Set UltMvto = vgDb.OpenRecordSet("Select Max([Seqüência do Movimento])Ultimo From [Movimento do Estoque]")
-   vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Prod Propria] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 
-   vgDb.CommitTrans 
+   vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Prod Propria] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento
+   vgDb.CommitTrans
    End If
    
    If Baixa_Consumo = True Then
@@ -4525,10 +4085,10 @@ End Sub
 Private Sub AlteraEntraPPropria()
   Dim Mvto As GRecordSet, UltMvto As New GRecordSet
   
-  If Produtos_Mvto_Contabil_No.RecordCount > 0 or Conjuntos_Mvto_Contabil_N.RecordCount > 0 or Despesas_Mvto_Contabil_No.RecordCount > 0 Then Exit Sub
+  If Produtos_Mvto_Contabil_No.RecordCount > 0 Or Conjuntos_Mvto_Contabil_N.RecordCount > 0 Or Despesas_Mvto_Contabil_No.RecordCount > 0 Then Exit Sub
   
    If E_Producao_Propria = False And Seq_Prod_Propria > 0 Then Exit Sub
-    If E_Producao_Propria = True And Tipo_do_Movimento = 0 And VgSituacao = ACAO_EDITANDO And Seq_Prod_Propria = 0 Then
+    If E_Producao_Propria = True And Tipo_do_Movimento = 0 And vgSituacao = ACAO_EDITANDO And Seq_Prod_Propria = 0 Then
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
@@ -4539,66 +4099,66 @@ Private Sub AlteraEntraPPropria()
          ![Observação] = "Gerado Pelo Movimento do Estoque Contábil Nº " & " " & Sequencia_do_Movimento & " " & Observacao
          .Update
        End With
-    If VgSituacao = ACAO_EDITANDO And E_Producao_Propria = True And Seq_Prod_Propria = 0 And Tipo_do_Movimento = 0 Then
+    If vgSituacao = ACAO_EDITANDO And E_Producao_Propria = True And Seq_Prod_Propria = 0 And Tipo_do_Movimento = 0 Then
     Set UltMvto = vgDb.OpenRecordSet("Select Max([Seqüência do Movimento])Ultimo From [Movimento do Estoque]")
-    vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Prod Propria] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 
-    vgDb.CommitTrans 
-    End If    
+    vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Prod Propria] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento
+    vgDb.CommitTrans
+    End If
    End If
 End Sub
 
 Private Function EProducaoPropria()
-   Dim BxMpProduto As New GrecordSet, MPrima As New GrecordSet
+   Dim BxMpProduto As New GRecordSet, MPrima As New GRecordSet
    Dim p As Long, Q As Double, Mvto As GRecordSet, ProdMvto As GRecordSet
    Dim UltMvto As New GRecordSet
    
    If Tipo_do_Movimento = 1 And Seq_Baixa_Consumo > 0 Then ' Se for saida e Consumo Cria Mvto irrig
-      EntradaProdBxConsumo  
+      EntradaProdBxConsumo
    End If
          
-     If Tipo_do_Movimento = 0 And VgSituacao = -ACAO_INCLUINDO And Seq_Prod_Propria > 0 Then 
+     If Tipo_do_Movimento = 0 And vgSituacao = -ACAO_INCLUINDO And Seq_Prod_Propria > 0 Then
      If E_Producao_Propria = False Then Exit Function
      
      Set MPrima = vgDb.OpenRecordSet("SELECT MP.[Seqüência da Matéria Prima], MP.[Quantidade de Matéria Prima] " & _
                                   "FROM [Matéria Prima] MP INNER JOIN Produtos P ON MP.[Seqüência da Matéria Prima] = P.[Seqüência do Produto] " & _
-                                  "WHERE MP.[Seqüência Do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência Do Produto] & " AND P.Industrialização = 0")
+                                  "WHERE MP.[Seqüência Do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto] & " AND P.Industrialização = 0")
                                   'Se nw for industrialização enta vamos baixar normal
-      Set BxMpProduto = vgDb.OpenRecordSet("SELECT * FROM [Baixa MP Produto]") 
+      Set BxMpProduto = vgDb.OpenRecordSet("SELECT * FROM [Baixa MP Produto]")
       Set ProdMvto = vgDb.OpenRecordSet("Produtos do Movimento Estoque")
       
-      If VgSituacao = -ACAO_INCLUINDO Then 
+      If vgSituacao = -ACAO_INCLUINDO Then
        ProdMvto.AddNew
-       ProdMvto![Seqüência Do Movimento] = Seq_Prod_Propria
-       ProdMvto![Seqüência Do Produto] =  Produtos_Mvto_Contabil_No![Seqüência Do Produto]
-       ProdMvto!Quantidade = Produtos_Mvto_Contabil_No!Quantidade 
-       ProdMvto.Update 
+       ProdMvto![Seqüência do Movimento] = Seq_Prod_Propria
+       ProdMvto![Seqüência do Produto] = Produtos_Mvto_Contabil_No![Seqüência do Produto]
+       ProdMvto!Quantidade = Produtos_Mvto_Contabil_No!Quantidade
+       ProdMvto.Update
       End If
     
-      Do While Not MPrima.EOF      
+      Do While Not MPrima.EOF
        p = MPrima![Seqüência da Matéria Prima]
-       Q = Mprima![Quantidade de Matéria Prima]
-       GoSub Baixa      
-       MPrima.MoveNext         
+       Q = MPrima![Quantidade de Matéria Prima]
+       GoSub Baixa
+       MPrima.MoveNext
      Loop
    GoTo CaiFora
    
-   Baixa:
+Baixa:
    
-   With BxMpProduto 
+   With BxMpProduto
       .AddNew
-      ![Seqüência Do Movimento] = Seq_Prod_Propria
+      ![Seqüência do Movimento] = Seq_Prod_Propria
       ![Data da Baixa] = Data_do_Movimento
       ![Hora da Baixa] = Time()
-      ![Seqüência Do Item] = Produtos_Mvto_Contabil_No![Seqüência Do Produto]
-      ![Seqüência Do Produto] = Produtos_Mvto_Contabil_No![Seqüência Do Produto]
+      ![Seqüência Do Item] = Produtos_Mvto_Contabil_No![Seqüência do Produto]
+      ![Seqüência do Produto] = Produtos_Mvto_Contabil_No![Seqüência do Produto]
       ![Quantidade Do Produto] = Produtos_Mvto_Contabil_No!Quantidade
       ![Seqüência da Matéria Prima] = p
       ![Quantidade da Matéria Prima] = Q * Produtos_Mvto_Contabil_No!Quantidade
       ![Calcular Estoque] = 1
-      .Update 
-   End With     
-   Return 
-   End If 
+      .Update
+   End With
+   Return
+   End If
 CaiFora:
    Set BxMpProduto = Nothing
    Set MPrima = Nothing
@@ -4608,24 +4168,24 @@ CaiFora:
 End Function
 
 Private Sub DeletaProdPropria()
-  Dim Mvto As New GrecordSet,Tpo As Integer, BxMPrima As New GRecordSet
+  Dim Mvto As New GRecordSet, Tpo As Integer, BxMPrima As New GRecordSet
   
   On Error GoTo DeuErro
    
-   Set Mvto = VgDb.OpenRecordSet("Select * From [Movimento do Estoque] Where [Seqüência do Movimento] = " & Seq_Prod_Propria)
+   Set Mvto = vgDb.OpenRecordSet("Select * From [Movimento do Estoque] Where [Seqüência do Movimento] = " & Seq_Prod_Propria)
    Tpo = Mvto![Tipo Movimento]
      If Mvto.RecordCount > 0 And Tpo = 1 Then
         vgDb.Execute "DELETE FROM [Movimento do Estoque] " & _
-        "WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria     
+        "WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria
      End If
    
-   Set BxMPrima = VgDb.OpenRecordSet("Select * From [Baixa MP Produto] Where [Seqüência do Movimento] = " & Seq_Prod_Propria)  
+   Set BxMPrima = vgDb.OpenRecordSet("Select * From [Baixa MP Produto] Where [Seqüência do Movimento] = " & Seq_Prod_Propria)
      If BxMPrima.RecordCount > 0 Then
         vgDb.Execute "DELETE FROM [Baixa MP Produto] " & _
-        "WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria     
+        "WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria
      End If
      
-   AtualizaEstoque 1, 0  
+   AtualizaEstoque 1, 0
     
 DeuErro:
    If Err.Number <> 0 Then
@@ -4635,45 +4195,45 @@ DeuErro:
 End Sub
 
 Private Function EConjuntoProdPropria()
-   Dim BxMpConjunto As New GrecordSet, MPrima As New GrecordSet
-   Dim  p As Long, Q As Double, Mvto As GRecordSet, ConjMvto As GRecordSet
-   Dim  UltMvto As New GRecordSet
+   Dim BxMpConjunto As New GRecordSet, MPrima As New GRecordSet
+   Dim p As Long, Q As Double, Mvto As GRecordSet, ConjMvto As GRecordSet
+   Dim UltMvto As New GRecordSet
          
-     If Tipo_do_Movimento = 0 And VgSituacao = -ACAO_INCLUINDO And Seq_Prod_Propria > 0 Then 
+     If Tipo_do_Movimento = 0 And vgSituacao = -ACAO_INCLUINDO And Seq_Prod_Propria > 0 Then
      If E_Producao_Propria = False Then Exit Function
      
       Set MPrima = vgDb.OpenRecordSet("SELECT IC.[Seqüência do Produto], IC.[Quantidade do Produto] " & _
                                       "FROM [Itens Do Conjunto] IC INNER JOIN Produtos P ON IC.[Seqüência do Produto] = P.[Seqüência do Produto] " & _
-                                      "WHERE IC.[Seqüência Do Conjunto] = " & Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto] & " AND P.Industrialização = 0")
+                                      "WHERE IC.[Seqüência Do Conjunto] = " & Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto] & " AND P.Industrialização = 0")
                                       'Se nw for industrialização entao vamos baixar normal
                                       
-      Set BxMpConjunto = vgDb.OpenRecordSet("SELECT * FROM [Baixa MP Conjunto]") 
+      Set BxMpConjunto = vgDb.OpenRecordSet("SELECT * FROM [Baixa MP Conjunto]")
      
-      Do While Not MPrima.EOF      
-       p = MPrima![Seqüência Do Produto]
-       Q = Mprima![Quantidade Do Produto]
-       GoSub Baixa      
-       MPrima.MoveNext         
+      Do While Not MPrima.EOF
+       p = MPrima![Seqüência do Produto]
+       Q = MPrima![Quantidade Do Produto]
+       GoSub Baixa
+       MPrima.MoveNext
      Loop
    GoTo CaiFora
    
-   Baixa:
+Baixa:
    
-   With BxMpConjunto 
+   With BxMpConjunto
       .AddNew
-      ![Seqüência Do Movimento] = Seq_Prod_Propria
+      ![Seqüência do Movimento] = Seq_Prod_Propria
       ![Data da Baixa] = Data_do_Movimento
       ![Hora da Baixa] = Time()
-      ![Seqüência Do Item] = Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto]
-      ![Seqüência Do Conjunto] = Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto]
+      ![Seqüência Do Item] = Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
+      ![Seqüência do Conjunto] = Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
       ![Quantidade Do Conjunto] = Conjuntos_Mvto_Contabil_N!Quantidade
       ![Seqüência da Matéria Prima] = p
       ![Quantidade da Matéria Prima] = Q * Conjuntos_Mvto_Contabil_N!Quantidade
       ![Calcular Estoque] = 1
-      .Update 
-   End With     
-   Return 
-   End If 
+      .Update
+   End With
+   Return
+   End If
 CaiFora:
    Set BxMpConjunto = Nothing
    Set MPrima = Nothing
@@ -4688,21 +4248,21 @@ Private Sub IncluiConjProdPropria()
     If E_Producao_Propria = False Then Exit Sub
      If Tipo_do_Movimento = 1 Then Exit Sub
       If Seq_Prod_Propria > 0 And Conjuntos_Mvto_Contabil_N.RecordCount > 0 Then
-         With ConjIrrig 
+         With ConjIrrig
          .AddNew
-         ![Seqüência Do Movimento] = Seq_Prod_Propria
-         ![Seqüência Do Conjunto] = Conjuntos_Mvto_Contabil_N![Seqüência Do Conjunto]
-         !Quantidade = Conjuntos_Mvto_Contabil_N!Quantidade 
+         ![Seqüência do Movimento] = Seq_Prod_Propria
+         ![Seqüência do Conjunto] = Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
+         !Quantidade = Conjuntos_Mvto_Contabil_N!Quantidade
          .Update
          End With
          AtualizaEstoque 2, 0
-      End If       
+      End If
 End Sub
 
 'O Povo tem preguissa de fazer os movimento entao vamos gerar automatico as saidas de material de consumo no mvto do estoque da irrigação
 Private Sub IncluiBxConsumo()
   Dim Mvto As GRecordSet, UltMvto As New GRecordSet
-    If VgSituacao = ACAO_INCLUINDO And Baixa_Consumo = True And Tipo_do_Movimento = 1 Then ' So Mvto de Saida
+    If vgSituacao = ACAO_INCLUINDO And Baixa_Consumo = True And Tipo_do_Movimento = 1 Then ' So Mvto de Saida
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
@@ -4714,21 +4274,21 @@ Private Sub IncluiBxConsumo()
          .Update
       End With
    End If
-   If VgSituacao = ACAO_INCLUINDO And Baixa_Consumo = True And Tipo_do_Movimento = 1 Then
+   If vgSituacao = ACAO_INCLUINDO And Baixa_Consumo = True And Tipo_do_Movimento = 1 Then
    Set UltMvto = vgDb.OpenRecordSet("Select Max([Seqüência do Movimento])Ultimo From [Movimento do Estoque]")
-   vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Baixa Consumo] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 
-   vgDb.CommitTrans 
-   End If    
+   vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Baixa Consumo] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento
+   vgDb.CommitTrans
+   End If
 End Sub
 
 
 Private Sub AlteraBxConsumo()
   Dim Mvto As GRecordSet, UltMvto As New GRecordSet
   
-  If Produtos_Mvto_Contabil_No.RecordCount > 0 or Conjuntos_Mvto_Contabil_N.RecordCount > 0 or Despesas_Mvto_Contabil_No.RecordCount > 0 Then Exit Sub
+  If Produtos_Mvto_Contabil_No.RecordCount > 0 Or Conjuntos_Mvto_Contabil_N.RecordCount > 0 Or Despesas_Mvto_Contabil_No.RecordCount > 0 Then Exit Sub
   
    If Baixa_Consumo = False And Seq_Baixa_Consumo > 0 Then Exit Sub
-    If Baixa_Consumo = True And Tipo_do_Movimento = 1 And VgSituacao = ACAO_EDITANDO And Seq_Baixa_Consumo = 0 Then
+    If Baixa_Consumo = True And Tipo_do_Movimento = 1 And vgSituacao = ACAO_EDITANDO And Seq_Baixa_Consumo = 0 Then
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
@@ -4739,34 +4299,34 @@ Private Sub AlteraBxConsumo()
          ![Observação] = "Gerado Pelo Movimento do Estoque Contábil Nº " & " " & Sequencia_do_Movimento & " " & Observacao
          .Update
        End With
-    If VgSituacao = ACAO_EDITANDO And Baixa_Consumo = True And Seq_Baixa_Consumo = 0 And Tipo_do_Movimento = 1 Then
+    If vgSituacao = ACAO_EDITANDO And Baixa_Consumo = True And Seq_Baixa_Consumo = 0 And Tipo_do_Movimento = 1 Then
     Set UltMvto = vgDb.OpenRecordSet("Select Max([Seqüência do Movimento])Ultimo From [Movimento do Estoque]")
-    vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Baixa Consumo] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 
-    vgDb.CommitTrans 
-    End If    
+    vgDb.Execute "Update [Movimento Contábil Novo] Set [Seq Baixa Consumo] = " & Substitui(UltMvto!Ultimo, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento
+    vgDb.CommitTrans
+    End If
    End If
 End Sub
 
 
 Private Sub DeletaBxConsumo()
-  Dim Mvto As New GrecordSet, Tpo As Integer, ProdMvto As New GRecordSet
+  Dim Mvto As New GRecordSet, Tpo As Integer, ProdMvto As New GRecordSet
   
   On Error GoTo DeuErro
    
-   Set Mvto = VgDb.OpenRecordSet("Select * From [Movimento do Estoque] Where [Seqüência do Movimento] = " & Seq_Baixa_Consumo)
+   Set Mvto = vgDb.OpenRecordSet("Select * From [Movimento do Estoque] Where [Seqüência do Movimento] = " & Seq_Baixa_Consumo)
    Tpo = Mvto![Tipo Movimento]
      If Mvto.RecordCount > 0 And Tpo = 0 Then
         vgDb.Execute "DELETE FROM [Movimento do Estoque] " & _
-        "WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo    
+        "WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo
      End If
    
-   Set ProdMvto = VgDb.OpenRecordSet("Select * From [Produtos do Movimento Estoque] Where [Seqüência do Movimento] = " & Seq_Baixa_Consumo)  
+   Set ProdMvto = vgDb.OpenRecordSet("Select * From [Produtos do Movimento Estoque] Where [Seqüência do Movimento] = " & Seq_Baixa_Consumo)
      If ProdMvto.RecordCount > 0 Then
         vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] " & _
-        "WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo     
+        "WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo
      End If
      
-   AtualizaEstoque 1, 0  
+   AtualizaEstoque 1, 0
     
 DeuErro:
    If Err.Number <> 0 Then
@@ -4777,44 +4337,44 @@ End Sub
 
 
 Private Function EntradaProdBxConsumo()
-   Dim  ProdMvto As New GRecordSet
+   Dim ProdMvto As New GRecordSet
      
-   If Tipo_do_Movimento = 1 And VgSituacao = -ACAO_INCLUINDO And Seq_Baixa_Consumo > 0 Then 
+   If Tipo_do_Movimento = 1 And vgSituacao = -ACAO_INCLUINDO And Seq_Baixa_Consumo > 0 Then
      If Baixa_Consumo = False Then Exit Function
      
       Set ProdMvto = vgDb.OpenRecordSet("Produtos do Movimento Estoque")
       
-      If VgSituacao = -ACAO_INCLUINDO Then 
+      If vgSituacao = -ACAO_INCLUINDO Then
        ProdMvto.AddNew
-       ProdMvto![Seqüência Do Movimento] = Seq_Baixa_Consumo
-       ProdMvto![Seqüência Do Produto] =  Produtos_Mvto_Contabil_No![Seqüência Do Produto]
-       ProdMvto!Quantidade = Produtos_Mvto_Contabil_No!Quantidade 
-       ProdMvto.Update 
+       ProdMvto![Seqüência do Movimento] = Seq_Baixa_Consumo
+       ProdMvto![Seqüência do Produto] = Produtos_Mvto_Contabil_No![Seqüência do Produto]
+       ProdMvto!Quantidade = Produtos_Mvto_Contabil_No!Quantidade
+       ProdMvto.Update
       End If
    
        Set ProdMvto = Nothing
        AtualizaEstoque 1, 0
-   End If     
+   End If
 End Function
 
 
-Private Function Ultimo(OQue As String, Produto As Long) As Currency
+Private Function Ultimo(Oque As String, Produto As Long) As Currency
    Dim Tb As New GRecordSet, Custo As Currency, Total As Currency, Estoque As Double
-   If OQue = "Qtde" Then
+   If Oque = "Qtde" Then
       Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Produto & " AND [Data do Movimento] <= " & D(Data_do_Movimento))
       If Not IsNull(Tb!Estoque) Then Ultimo = Tb!Estoque
-   ElseIf OQue = "Custo" Or OQue = "Total" Then
+   ElseIf Oque = "Custo" Or Oque = "Total" Then
       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Produto & " AND [Data do Movimento] <= " & D(Data_do_Movimento) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
       Do While Not Tb.EOF
          Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo Do Movimento] = 1, -1, 1)
          'If Estoque <> 0 Then
             If Tb![Tipo Do Movimento] = 0 Then
                If Custo = 0 Then
-                  Custo = Tb![Valor De Custo]
-                  Total = Round(Tb!Quantidade * Tb![Valor De Custo], 2)
+                  Custo = Tb![Valor de Custo]
+                  Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
                Else
-                  Custo = Round((Total + Tb!Quantidade * Tb![Valor De Custo]) / Estoque, 4)
-                  Total = Round(Total + Tb!Quantidade * Tb![Valor De Custo], 2)
+                  Custo = Round((Total + Tb!Quantidade * Tb![Valor de Custo]) / Estoque, 4)
+                  Total = Round(Total + Tb!Quantidade * Tb![Valor de Custo], 2)
                End If
             ElseIf Tb![Tipo Do Movimento] = 1 Then
                Total = Total - Round(Tb!Quantidade * Custo, 2)
@@ -4825,7 +4385,7 @@ Private Function Ultimo(OQue As String, Produto As Long) As Currency
         ' End If
          Tb.MoveNext
       Loop
-      Ultimo = IIf(OQue = "Custo", Custo, Total)
+      Ultimo = IIf(Oque = "Custo", Custo, Total)
    End If
    Set Tb = Nothing
    
@@ -4841,14 +4401,14 @@ Private Function ValidaProduto(Sequencia_do_Movimento As Long, Sequencia_do_Prod
 
  Dim Tb As New GRecordSet
  
- Set Tb = VgDb.OpenRecordSet("SELECT * From Produtos Where [Seqüência do Produto] = " & Sequencia_do_produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT * From Produtos Where [Seqüência do Produto] = " & Sequencia_do_Produto)
  
  If Tb.RecordCount > 0 Then
    If Tb!Inativo Then
       ValidaProduto = False
-      MDIIRRIG.CancelaAlteracoes: Exit Function
+      mdiIRRIG.CancelaAlteracoes: Exit Function
    Else
-      ValidaProduto = True: Exit Function      
+      ValidaProduto = True: Exit Function
    End If
  End If
   
@@ -4860,11 +4420,11 @@ Private Sub AtuLan(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Nov
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
-   Valor_total_compra As Double) 
-  UltimoFornecedor(Sequencia_do_Produto) 
-  UltimaCompra(Sequencia_do_Produto)
-  UltimaMvto 1, Sequencia_do_Produto 
-  ContaEstoque(Sequencia_do_Produto)
+   Valor_total_compra As Double)
+  UltimoFornecedor (Sequencia_do_Produto)
+  UltimaCompra (Sequencia_do_Produto)
+  UltimaMvto 1, Sequencia_do_Produto
+  ContaEstoque (Sequencia_do_Produto)
   AjustaValores
 End Sub
 
@@ -4874,47 +4434,47 @@ End Sub
 '  If Tipo_do_Movimento  = 0 And Vazio(Titulo) Then
 '     ValidaTitulo = False
 '  Else
-'     ValidaTitulo = True     
-'  End If 
+'     ValidaTitulo = True
+'  End If
    
 'End Function
 
 
 Private Sub AjustaValores()
-   Dim IPIProdutos As New GRecordSet, IPIDespesas As New GRecordset
+   Dim IPIProdutos As New GRecordSet, IPIDespesas As New GRecordSet
    Dim ValorProdutos As New GRecordSet
-   Dim ValorMvto As Currency, Produtos As New GRecordSet, Despesas As New GRecordset
-   Dim ValorDespesas As New GRecordset
+   Dim ValorMvto As Currency, Produtos As New GRecordSet, Despesas As New GRecordSet
+   Dim ValorDespesas As New GRecordSet
  
    On Error GoTo DeuErro
     
-   If Tipo_do_Movimento = 1 Then Exit Sub 'Saida 
-   If Documento = "Produção" Or Documento = "Producao" Then Exit Sub 
+   If Tipo_do_Movimento = 1 Then Exit Sub 'Saida
+   If Documento = "Produção" Or Documento = "Producao" Then Exit Sub
     
-   Set Produtos = VgDb.OpenRecordSet("SELECT Quantidade, [Seqüência do Produto], [Valor de Custo], [Valor Unitário], [Valor do IPI], [Seqüência Do Produto Mvto Novo] From [Produtos Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento) 
-   Set Despesas = VgDb.OpenRecordSet("SELECT Quantidade, [Valor de Custo], [Valor Unitário], [Valor do IPI], [Seqüência Despesa Mvto Novo] From [Despesas Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento) 
+   Set Produtos = vgDb.OpenRecordSet("SELECT Quantidade, [Seqüência do Produto], [Valor de Custo], [Valor Unitário], [Valor do IPI], [Seqüência Do Produto Mvto Novo] From [Produtos Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
+   Set Despesas = vgDb.OpenRecordSet("SELECT Quantidade, [Valor de Custo], [Valor Unitário], [Valor do IPI], [Seqüência Despesa Mvto Novo] From [Despesas Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
    
    
     Do While Not Produtos.EOF
-       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Produtos!Quantidade * Produtos![Valor de Custo]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo] 
-       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Produtos!Quantidade * Produtos![Valor Unitário]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo] 
-       If Produtos![Valor Do Ipi] > 0 And Tipo_do_Movimento = 0 Then 'Entrada
-          vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = " & Substitui(Round(Round(Produtos!Quantidade * Produtos![Valor Unitário], 2) * Produtos![Valor Do IPI] / 100, 2), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo]  'Valor do IPI
+       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Produtos!Quantidade * Produtos![Valor de Custo]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo]
+       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Produtos!Quantidade * Produtos![Valor Unitário]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo]
+       If Produtos![Valor do IPI] > 0 And Tipo_do_Movimento = 0 Then 'Entrada
+          vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = " & Substitui(Round(Round(Produtos!Quantidade * Produtos![Valor Unitário], 2) * Produtos![Valor do IPI] / 100, 2), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo]  'Valor do IPI
        Else
-          vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = 0 WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " &  Produtos![Seqüência Do Produto Mvto Novo] 'Valor do IPI
-       End If  
-       ContaEstoque(Produtos![Seqüência Do Produto])
+          vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor do IPI Compra] = 0 WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Produtos![Seqüência Do Produto Mvto Novo]  'Valor do IPI
+       End If
+       ContaEstoque (Produtos![Seqüência do Produto])
     Produtos.MoveNext
     Loop
     
     Do While Not Despesas.EOF
-       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Despesas!Quantidade * Despesas![Valor de Custo]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo] 
-       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Despesas!Quantidade * Despesas![Valor Unitário]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo] 
-       If Despesas![Valor Do Ipi] > 0 And Tipo_do_Movimento = 0 Then 'Entrada
-          vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor do IPI Compra] = " & Substitui(Round(Round(Despesas!Quantidade * Despesas![Valor Unitário], 2) * Despesas![Valor Do IPI] / 100, 2), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo]  'Valor do IPI
+       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Despesas!Quantidade * Despesas![Valor de Custo]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo]
+       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Despesas!Quantidade * Despesas![Valor Unitário]), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo]
+       If Despesas![Valor do IPI] > 0 And Tipo_do_Movimento = 0 Then 'Entrada
+          vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor do IPI Compra] = " & Substitui(Round(Round(Despesas!Quantidade * Despesas![Valor Unitário], 2) * Despesas![Valor do IPI] / 100, 2), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo]  'Valor do IPI
        Else
-          vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor do IPI Compra] = 0 WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " &  Despesas![Seqüência Despesa Mvto Novo] 'Valor do IPI
-       End If  
+          vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor do IPI Compra] = 0 WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Despesas![Seqüência Despesa Mvto Novo]  'Valor do IPI
+       End If
     Despesas.MoveNext
     Loop
         
@@ -4923,14 +4483,14 @@ Private Sub AjustaValores()
    Set ValorProdutos = vgDb.OpenRecordSet("SELECT SUM([Valor Total Compra]) Total FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento) 'Produtos Novos
    Set ValorDespesas = vgDb.OpenRecordSet("SELECT SUM([Valor Total Compra]) Total FROM [Despesas Mvto Contábil Novo] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento) 'Despesas
                                                                                                   
-   ValorMvto = IPIProdutos!Total + IPIDespesas!Total + ValorProdutos!Total +  ValorDespesas!Total + Valor_do_Frete - Valor_do_Desconto
+   ValorMvto = IPIProdutos!Total + IPIDespesas!Total + ValorProdutos!Total + ValorDespesas!Total + Valor_do_Frete - Valor_do_Desconto
    ValorMvto = Format(ValorMvto, "##,###,##0.00")
 
    'Atualizando
    vgDb.BeginTrans
    vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total IPI dos Produtos] = " & Substitui(IPIProdutos!Total, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'IPI Produtos
    vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total IPI das Despesas] = " & Substitui(IPIDespesas!Total, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'IPI Despesas
-   vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total das Despesas] = " & Substitui(ValorDespesas!Total, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'Despesas   
+   vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total das Despesas] = " & Substitui(ValorDespesas!Total, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'Despesas
    vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total dos Produtos] = " & Substitui(ValorProdutos!Total, ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'Produtos Novos
    vgDb.Execute "Update [Movimento Contábil Novo] Set [Valor Total do Movimento] = " & Substitui(CStr(ValorMvto), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento 'Valor da Entrada
    vgDb.CommitTrans
@@ -4947,17 +4507,17 @@ End Sub
 
 
 Private Function UltimaParcela() As Long
-   Dim Tb As GRecordset
+   Dim Tb As GRecordSet
    
    On Error Resume Next
    
    Set Tb = vgDb.OpenRecordSet("SELECT MAX([Número da Parcela]) Pc FROM [Parcelas Mvto Contabil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
          
    If Tb.RecordCount > 0 Then
-      UltimaParcela = Tb!PC + 1
+      UltimaParcela = Tb!Pc + 1
    Else
       UltimaParcela = 1
-   End If  
+   End If
 
 End Function
 
@@ -4992,14 +4552,14 @@ End Function
 
 Private Function UltimoVencimento() As Variant
    Dim Tb As New GRecordSet, RetVal As Variant
-   Dim Feriado As New GRecordSet,Venc As Date 'Alterado
+   Dim Feriado As New GRecordSet, Venc As Date 'Alterado
    
    On Error Resume Next
    
-   Venc = grdParcelamento.ColumnValue(grdParcelamento.Row + 1, CInt(grdParcelamento.Columns("Data de Vencimento").Index))   
+   Venc = Grdparcelamento.ColumnValue(Grdparcelamento.Row + 1, CInt(Grdparcelamento.Columns("Data de Vencimento").Index))
    Set Tb = vgDb.OpenRecordSet("SELECT MAX([Data de Vencimento]) [Data de Vencimento] FROM [Parcelas Mvto Contabil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
-   Set Feriado = vgDb.OpenRecordSet("SELECT * FROM Calendario WHERE [Dta do Feriado] = " & D(Venc))      
-   RetVal = grdParcelamento.ColumnValue(grdParcelamento.Row + 1, CInt(grdParcelamento.Columns("Data de Vencimento").Index))
+   Set Feriado = vgDb.OpenRecordSet("SELECT * FROM Calendario WHERE [Dta do Feriado] = " & D(Venc))
+   RetVal = Grdparcelamento.ColumnValue(Grdparcelamento.Row + 1, CInt(Grdparcelamento.Columns("Data de Vencimento").Index))
       
    If Movimento_Contabil_Novo![Forma de Pagamento] = "Prazo" Then
       If Not IsNull(Tb![Data de Vencimento]) Then
@@ -5008,13 +4568,13 @@ Private Function UltimoVencimento() As Variant
          'UltimoVencimento = RetVal >= Tb![Data de Vencimento]
          UltimoVencimento = True
       Else
-         UltimoVencimento = RetVal >= Movimento_Contabil_Novo![Data Do Movimento]
+         UltimoVencimento = RetVal >= Movimento_Contabil_Novo![Data do Movimento]
       End If
    Else
-      UltimoVencimento = RetVal = Movimento_Contabil_Novo![Data Do Movimento]
+      UltimoVencimento = RetVal = Movimento_Contabil_Novo![Data do Movimento]
    End If
    If Feriado.RecordCount > 0 And Tipo_do_Movimento = 0 Then
-      MsgBox("ATENÇÃO  " & vgPWUsuario & "!" & "  "  & "Dia" & "  " & Venc & "  " & "Não é Um Dia Util Para o Financeiro")
+      MsgBox ("ATENÇÃO  " & vgPWUsuario & "!" & "  " & "Dia" & "  " & Venc & "  " & "Não é Um Dia Util Para o Financeiro")
       UltimoVencimento = False
    End If
 End Function
@@ -5042,7 +4602,7 @@ Private Sub MostraFormulas()
    '   txtTitulo.ForeColor = &H8FF
    'Else
    '   txtTitulo.ForeColor = &H0
-   'End If   
+   'End If
    'Fim
    lblOrc.Caption = "Cliente : " + ClienteAux
    LblTemConta = MostraContas
@@ -5054,7 +4614,7 @@ End Sub
 
 Private Sub LancaParcelas()
    Dim Manutencao As New GRecordSet, Parcelas As New GRecordSet, Baixa As New GRecordSet
-   Dim Manu2 As New GRecordSet 
+   Dim Manu2 As New GRecordSet
    
    On Error GoTo DeuErro
       
@@ -5078,7 +4638,7 @@ Private Sub LancaParcelas()
          ![Codigo Do Debito] = Codigo_do_Debito
          !Documento = Documento
          !Titulo = Titulo
-         ![Seqüência da Cobrança] = Parcelas![Seqüência da Cobrança] 
+         ![Seqüência da Cobrança] = Parcelas![Seqüência da Cobrança]
          ![Sequencia da Compra] = Sequencia_da_Compra
          ![Data de Entrada] = Data_do_Movimento
          !Histórico = "Lançamento Referente ao Documento: " + Format(Documento, "000000")
@@ -5093,10 +4653,10 @@ Private Sub LancaParcelas()
             ![Data da Baixa] = Null
          'End If
          ![Data de Vencimento] = Parcelas![Data de Vencimento]
-          If Manu2.RecordCount > 0 Then 
+          If Manu2.RecordCount > 0 Then
             ![Vencimento Original] = Manu2![Vencimento Original]
           Else
-            ![Vencimento Original] = Parcelas![Data de Vencimento]     
+            ![Vencimento Original] = Parcelas![Data de Vencimento]
           End If
          ![Valor Total] = Valor_Total_do_Movimento
          ![Valor da Parcela] = Parcelas![Valor da Parcela]
@@ -5104,7 +4664,7 @@ Private Sub LancaParcelas()
          ![Seqüência SubGrupo Despesa] = Sequencia_SubGrupo_Despesa
          ![Tipo da Conta] = "NFe"
          !Conta = "P"
-         ![Seqüência Do Movimento] = Sequencia_do_Movimento
+         ![Seqüência do Movimento] = Sequencia_do_Movimento
          .Update
          .BookMark = .LastModified
       End With
@@ -5126,80 +4686,80 @@ End Sub
 
 Private Sub AlteraParcela(Sequencia_do_Movimento As Long, Numero_da_Parcela As Integer, Dias As Integer, _
    Data_de_Vencimento As Variant, Valor_da_Parcela As Double, Sequencia_da_Cobranca As Integer)
-   Dim Manutencao As New GRecordset, Baixa As New GRecordset, RetVal As Variant
+   Dim Manutencao As New GRecordSet, Baixa As New GRecordSet, RetVal As Variant
    
    On Error GoTo DeuErro
 
-   Set Manutencao = vgdb.OpenRecordset("SELECT * FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência Do Movimento] & " AND Parcela = " & Numero_da_Parcela)
+   Set Manutencao = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência do Movimento] & " AND Parcela = " & Numero_da_Parcela)
 
-   vgdb.BeginTrans
+   vgDb.BeginTrans
    
-   RetVal = grdParcelamento.ColumnValue(grdParcelamento.Row + 1, CInt(grdParcelamento.Columns("Data de Vencimento").Index))
+   RetVal = Grdparcelamento.ColumnValue(Grdparcelamento.Row + 1, CInt(Grdparcelamento.Columns("Data de Vencimento").Index))
    
    If Manutencao.RecordCount > 0 Then
       With Manutencao
          !Parcela = Numero_da_Parcela
          ![Seqüência Do Geral] = Movimento_Contabil_Novo![Seqüência Do Geral]
-         !Documento = Movimento_Contabil_Novo!Documento 
+         !Documento = Movimento_Contabil_Novo!Documento
          !Titulo = Titulo
          ![Seqüência da Cobrança] = Sequencia_da_Cobranca
-         ![Data de Entrada] = Movimento_Contabil_Novo![Data Do Movimento]
+         ![Data de Entrada] = Movimento_Contabil_Novo![Data do Movimento]
          !Histórico = "Lançamento Referente ao Documento: " + Format(Movimento_Contabil_Novo!Documento, "000000")
-         ![Forma de Pagamento] = Movimento_Contabil_Novo![Forma de Pagamento] 
+         ![Forma de Pagamento] = Movimento_Contabil_Novo![Forma de Pagamento]
          'If ![Forma de Pagamento] = "Vista" Then
-         '   ![Valor Pago] = Valor_da_Parcela 
+         '   ![Valor Pago] = Valor_da_Parcela
          '   ![Valor Restante] = 0
-         '   ![Data da Baixa] = Movimento_do_Estoque![Data da Compra] 
+         '   ![Data da Baixa] = Movimento_do_Estoque![Data da Compra]
          'Else
             ![Valor Pago] = 0
-            ![Valor Restante] = Valor_da_Parcela 
+            ![Valor Restante] = Valor_da_Parcela
             ![Data da Baixa] = Null
          'End If
          '![Data de Vencimento] = Data_de_Vencimento
          ![Codigo Do Debito] = Codigo_do_Debito
-         ![Data de Vencimento] = RetVal 
-         ![Valor Total] = Movimento_Contabil_Novo![Valor Total Do Movimento] 
-         ![Valor da Parcela] = Valor_da_Parcela          
+         ![Data de Vencimento] = RetVal
+         ![Valor Total] = Movimento_Contabil_Novo![Valor Total Do Movimento]
+         ![Valor da Parcela] = Valor_da_Parcela
          ![Seqüência Grupo Despesa] = Movimento_Contabil_Novo![Seqüência Grupo Despesa]
-         ![Seqüência SubGrupo Despesa] = Movimento_Contabil_Novo![Seqüência SubGrupo Despesa]        
+         ![Seqüência SubGrupo Despesa] = Movimento_Contabil_Novo![Seqüência SubGrupo Despesa]
          !Conta = "P"
-         ![Seqüência Do Movimento] = Movimento_Contabil_Novo![Seqüência Do Movimento]
+         ![Seqüência do Movimento] = Movimento_Contabil_Novo![Seqüência do Movimento]
          .Update
-         .BookMark = .LastModified         
-      End With     
-   End If  
+         .BookMark = .LastModified
+      End With
+   End If
    
-   vgdb.CommitTrans
+   vgDb.CommitTrans
 
 DeuErro:
    If Err Then
       MsgBox Err.Descption, vbCritical + vbOKOnly, vaTitulo
       vgDb.RollBackTrans
-   End If 
+   End If
    
 End Sub
 
 Private Sub DeletaParcela(Sequencia_do_Movimento As Long, Numero_da_Parcela As Integer, Dias As Integer, _
    Data_de_Vencimento As Variant, Valor_da_Parcela As Double, Sequencia_da_Cobranca As Integer)
-   Dim Manutencao As New GRecordset, Baixa As New GRecordset
+   Dim Manutencao As New GRecordSet, Baixa As New GRecordSet
    
    On Error GoTo DeuErro
    
-   Set Manutencao = vgdb.OpenRecordset("SELECT * FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência Do Movimento] & " AND Parcela = " & Numero_da_Parcela)
+   Set Manutencao = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência do Movimento] & " AND Parcela = " & Numero_da_Parcela)
 
-   vgdb.BeginTrans
+   vgDb.BeginTrans
    
    If Manutencao.RecordCount > 0 Then
-      vgdb.Execute "DELETE FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência Do Movimento] & " AND Parcela = " & Numero_da_Parcela 
-   End If      
+      vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Seqüência do Movimento] = " & Movimento_Contabil_Novo![Seqüência do Movimento] & " AND Parcela = " & Numero_da_Parcela
+   End If
      
-   vgdb.CommitTrans
+   vgDb.CommitTrans
    
 DeuErro:
    If Err Then
       MsgBox Err.Descption, vbCritical + vbOKOnly, vaTitulo
       vgDb.RollBackTrans
-   End If   
+   End If
 
 End Sub
 
@@ -5209,7 +4769,7 @@ Private Sub AlteraManutencao()
    
    On Error GoTo DeuErro
             
-   Set Parcelas = Parcelas_Mvto_Contabil
+   Set Parcelas = Parcelas_mvto_contabil
    
    If Parcelas.RecordCount = 0 Then Exit Sub
          
@@ -5219,14 +4779,14 @@ Private Sub AlteraManutencao()
    If Manutencao.RecordCount = 0 Then Exit Sub
    Do While Not Manutencao.EOF
       With Manutencao
-         ![Seqüência Do Geral] = Movimento_Contabil_Novo![Seqüência Do Geral] 
-         ![Data de Entrada] = Movimento_Contabil_Novo![Data Do Movimento] 
+         ![Seqüência Do Geral] = Movimento_Contabil_Novo![Seqüência Do Geral]
+         ![Data de Entrada] = Movimento_Contabil_Novo![Data do Movimento]
          !Histórico = "Lançamento Referente ao Documento: " + Format(Movimento_Contabil_Novo!Documento, "000000")
          ![Forma de Pagamento] = Movimento_Contabil_Novo![Forma de Pagamento]
-         ![Valor Total] = Movimento_Contabil_Novo![Valor Total Do Movimento] 
-         ![Seqüência Grupo Despesa] = Movimento_Contabil_Novo![Seqüência Grupo Despesa] 
-         ![Seqüência SubGrupo Despesa] = Movimento_Contabil_Novo![Seqüência SubGrupo Despesa] 
-         !Documento = Movimento_Contabil_Novo!Documento 
+         ![Valor Total] = Movimento_Contabil_Novo![Valor Total Do Movimento]
+         ![Seqüência Grupo Despesa] = Movimento_Contabil_Novo![Seqüência Grupo Despesa]
+         ![Seqüência SubGrupo Despesa] = Movimento_Contabil_Novo![Seqüência SubGrupo Despesa]
+         !Documento = Movimento_Contabil_Novo!Documento
          ![Codigo Do Debito] = Codigo_do_Debito
          !Titulo = Titulo
          !Conta = "P"
@@ -5265,7 +4825,7 @@ Private Function VerificaDocumento() As Boolean
          Exit Function
       End If
    ElseIf Tabela.RecordCount = 1 Then
-      If Tabela![Seqüência Do Geral] = Sequencia_do_Geral And Tabela!Documento = Documento And Tabela![Seqüência Do Movimento] <> Sequencia_do_Movimento Then
+      If Tabela![Seqüência Do Geral] = Sequencia_do_Geral And Tabela!Documento = Documento And Tabela![Seqüência do Movimento] <> Sequencia_do_Movimento Then
          If MsgBox("Já Existe Esse Documento Deseja Prosseguir?", vbYesNo + vbQuestion, vaTitulo) = vbNo Then
             VerificaDocumento = False
             Exit Function
@@ -5279,7 +4839,7 @@ Private Function VerificaDocumento() As Boolean
    If Sequencia_do_Geral = 0 Then
       VerificaDocumento = False
       Exit Function
-   End If  
+   End If
    
    VerificaDocumento = True
     
@@ -5299,14 +4859,14 @@ Private Function VerificaNFeSaida() As Boolean
                                    "Where Documento = '" & Documento & "' And [Tipo do Movimento] = 1")
                                     
    If Tabela.RecordCount > 1 Then
-      MsgBox("ATENÇÃO Esta Nota Fiscal ja foi Lançada!")
+      MsgBox ("ATENÇÃO Esta Nota Fiscal ja foi Lançada!")
       VerificaNFeSaida = False
       Exit Function
    End If
    
    If Tabela.RecordCount = 1 Then
-      If Tabela!Documento = Documento And Tabela![Seqüência Do Movimento] <> Sequencia_do_Movimento Then
-         MsgBox("ATENÇÃO Esta Nota Fiscal ja foi Lançada!")
+      If Tabela!Documento = Documento And Tabela![Seqüência do Movimento] <> Sequencia_do_Movimento Then
+         MsgBox ("ATENÇÃO Esta Nota Fiscal ja foi Lançada!")
          VerificaNFeSaida = False
          Exit Function
       End If
@@ -5319,13 +4879,13 @@ End Function
 
 Private Sub BuscaGeral()
  Dim Tb As New GRecordSet, Entrada As New GRecordSet
- Dim Conta As New GRecordSet, PcEntrada As New GRecordSet  
+ Dim Conta As New GRecordSet, PcEntrada As New GRecordSet
  
- If sequencia_da_compra = 0 Then Exit Sub  
- If Tipo_do_Movimento = 1 Then Exit Sub  
+ If Sequencia_da_Compra = 0 Then Exit Sub
+ If Tipo_do_Movimento = 1 Then Exit Sub
  
- Set Tb = VgDb.OpenRecordSet("Select [Codigo Do Fornecedor] Cod, [Total do Pedido] From [Pedido de Compra Novo] Where [Id do Pedido] = " & Sequencia_da_Compra)
- txtBuscaGeral.Value = Tb!Cod
+ Set Tb = vgDb.OpenRecordSet("Select [Codigo Do Fornecedor] Cod, [Total do Pedido] From [Pedido de Compra Novo] Where [Id do Pedido] = " & Sequencia_da_Compra)
+ Txtbuscageral.Value = Tb!Cod
  PreValidaPedido
   
 End Sub
@@ -5348,7 +4908,7 @@ End Sub
 ' If TbValida.RecordCount > 0 Then
 '    MsgBox "Ja existe uma Entrada com essa Nota Fiscal para esse Fornecedor", vbCritical + vbOKOnly, "Atenção Duplicidade"
 '     Screen.MousePointer = vbDefault
-'    Exit Sub   
+'    Exit Sub
 ' End If
  
 ' If Pedido.RecordCount = 0 Then MsgBox "Pedido Invalido", vbCritical + vbOKOnly, "": Exit Sub
@@ -5358,18 +4918,18 @@ End Sub
 '  .AddNew
 '    !Documento = NroNFe
 '    ![Seqüência Do Geral] = Pedido![Codigo Do Fornecedor]
-'     If Tipo_da_Licitacao = "MPrima" Then 
+'     If Tipo_da_Licitacao = "MPrima" Then
 '        ![Seqüência Grupo Despesa] = 25
 '        ![Seqüência SubGrupo Despesa] = 140 'MPrima
 '     ElseIf Tipo_da_Licitacao = "MRevenda" Then
 '        ![Seqüência Grupo Despesa] = 25
 '        ![Seqüência SubGrupo Despesa] = 142 'MRevenda
-'    ElseIf Tipo_da_Licitacao = "Ativo" Then 
-'        ![Seqüência SubGrupo Despesa] = 29 
+'    ElseIf Tipo_da_Licitacao = "Ativo" Then
+'        ![Seqüência SubGrupo Despesa] = 29
 '        ![Seqüência SubGrupo Despesa] = 198 'Ativo
 '     ElseIf Tipo_da_Licitacao = "MConsumo" Then
 '        ![Seqüência Grupo Despesa] = 25
-'        ![Seqüência SubGrupo Despesa] = 141 'MConsumo           
+'        ![Seqüência SubGrupo Despesa] = 141 'MConsumo
 '     End If
    
 '    !Observação = "Ref Pedido de Compra nº " & Format(PedidoTela,"000000")
@@ -5386,7 +4946,7 @@ End Sub
 
 '  Do While Not ProdutosPedido.EOF
 '     Set ProdutoAux = VgDb.OpenRecordSet("SELECT Descrição Nome, [Tipo do Produto] From Produtos WHERE [Seqüência Do Produto] = " & ProdutosPedido![Id Do Produto])
-'     If MsgBox("O Item " & ProdutosPedido![Id Do Produto] & " - " & ProdutoAux!Nome & " chegou? " & vbCrLf, vbExclamation + vbYesNo, vaTitulo) = vbYes Then 
+'     If MsgBox("O Item " & ProdutosPedido![Id Do Produto] & " - " & ProdutoAux!Nome & " chegou? " & vbCrLf, vbExclamation + vbYesNo, vaTitulo) = vbYes Then
 '        With ProdutosMvto
 '         .AddNew
 '          ![Seqüência Do Movimento] = SeqRegistro
@@ -5394,42 +4954,42 @@ End Sub
 '          ![Seqüência Do Produto Mvto Novo] = SeqProd
 '          ![Seqüência Do Produto] = ProdutosPedido![Id Do Produto]
 '           Caixinha:
-'            SuperInput3 
-'            If QtdEstoqueAux = 0 Then GoTo Caixinha 
-'               If QtdEstoqueAux > ProdutosPedido!Qtde Then 
-'                  If MsgBox("ATENÇÃO! a Quantidade que você esta digitando é maior que a Quantidade do Pedido deseja prosseguir?", vbExclamation + vbYesNo, vaTitulo) = vbNo Then 
-'                     Goto Caixinha 
-'                  Else      
-'                     ![Quantidade] = QtdEstoqueAux    
-'                  End If 
+'            SuperInput3
+'            If QtdEstoqueAux = 0 Then GoTo Caixinha
+'               If QtdEstoqueAux > ProdutosPedido!Qtde Then
+'                  If MsgBox("ATENÇÃO! a Quantidade que você esta digitando é maior que a Quantidade do Pedido deseja prosseguir?", vbExclamation + vbYesNo, vaTitulo) = vbNo Then
+'                     Goto Caixinha
+'                  Else
+'                     ![Quantidade] = QtdEstoqueAux
+'                  End If
 '            Else
-'               ![Quantidade] = QtdEstoqueAux    
-'            End If    
+'               ![Quantidade] = QtdEstoqueAux
+'            End If
 '          ![Valor Unitário] = ProdutosPedido![Vr Unitario]
 '          ![Valor Total] = ![Valor Unitário] * ![Quantidade]
 '           If ProdutoAux![Tipo Do Produto] = 2 Then
  '             ![Valor Do IPI] = ![Valor Total] * ProdutosPedido![Aliquota Do IPI] / 100
  ''          Else
  '             ![Valor Do IPI] = 0
- '          End If   
- '         ![Valor Do ICMS] = 0 
-  '        ![Valor Do Frete] = 0 
+ '          End If
+ '         ![Valor Do ICMS] = 0
+  '        ![Valor Do Frete] = 0
   '        ![Valor Do Pis] = ![Valor Total] * 1.65 / 100
   '         ![Valor Do Cofins] = ![Valor Total] * 7.6 / 100
   '        ![Valor da Substituição] = 0
-  '        ![Valor de Custo] = ![Valor Unitário] - ![Valor Do Pis] - ![Valor Do Cofins] - ![Valor Do ICMS] + ![Valor Do Frete] + ![Valor da Substituição] + ![Valor Do IPI]         
-  '         QtdEstoqueAux = 0 
+  '        ![Valor de Custo] = ![Valor Unitário] - ![Valor Do Pis] - ![Valor Do Cofins] - ![Valor Do ICMS] + ![Valor Do Frete] + ![Valor da Substituição] + ![Valor Do IPI]
+  '         QtdEstoqueAux = 0
   '       .Update
   '       .BookMark = .LastModified
-  '      End With 
+  '      End With
   '      AtualizaEstoque 1, CLng(ProdutosPedido![Id Do Produto])
   '      ValorCusto ProdutosPedido![Id Do Produto] 'Valor de Custo
   '      UltimoFornecedor ProdutosPedido![Id Do Produto] 'Ultimo Fornecedor
   '      UltimaCompra ProdutosPedido![Id Do Produto] 'Ultima Compra
   '      CustoMedio ProdutosPedido![Id Do Produto] 'Custo Medio
   ''      ValorTotal ProdutosPedido![Id Do Produto]'Valor Total
-  '      UltimaMvto 1, ProdutosPedido![Id Do Produto] 'Ultimo Mvto  
-  '  End If         
+  '      UltimaMvto 1, ProdutosPedido![Id Do Produto] 'Ultimo Mvto
+  '  End If
   'ProdutosPedido.MoveNext
   'Loop
  
@@ -5457,12 +5017,12 @@ End Sub
 'End Function
 
 Private Function MostraFin() As String
- Dim Tb As New GRecordSet 
+ Dim Tb As New GRecordSet
  
- Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência Do Geral] = " & Sequencia_do_Geral & " And Documento = '" & Documento & "'")
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência Do Geral] = " & Sequencia_do_Geral & " And Documento = '" & Documento & "'")
  
    If Tb.RecordCount > 0 Then
-      MostraFin = "(ATENÇÃO! ja existe uma conta com esse Documento!)" 
+      MostraFin = "(ATENÇÃO! ja existe uma conta com esse Documento!)"
    Else
        MostraFin = ""
    End If
@@ -5479,22 +5039,22 @@ Private Sub PreValidaPedido()
   
    On Error GoTo DeuErro
    
- If Sequencia_da_Compra > 0 Then 
+ If Sequencia_da_Compra > 0 Then
    
    Set Tb = vgDb.OpenRecordSet("SELECT [Total do Pedido], [Total do IPI], [Total do ICMS], [Total dos Produtos], [Total das Despesas], [CifFob], [Vr do Frete] " & _
                                "From [Pedido de Compra Novo] WHERE [Id do Pedido] = " & Sequencia_da_Compra)
                                
    Set Itens = vgDb.OpenRecordSet("SELECT * From [Produtos do Pedido Compra] Where [Id do Pedido] = " & Sequencia_da_Compra)
    Set Despesas = vgDb.OpenRecordSet("SELECT * From [Despesas do Pedido Compra] Where [Id do Pedido] = " & Sequencia_da_Compra)
-   Set Consumo = vgDb.OpenRecordSet("SELECT * From [Consumo do Pedido Compra] Where [Id do Pedido] = " & Sequencia_da_Compra)    
-   Set Conta = VgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)   
-   Set ProdMvto = VgDb.OpenRecordSet("SELECT SUM([Quantidade] * [Valor Unitário]) Total FROM [Produtos Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Produtos Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)
-   Set DespesasMvto = VgDb.OpenRecordSet("SELECT SUM([Quantidade] * [Valor Unitário]) Total FROM [Despesas Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Despesas Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)
+   Set Consumo = vgDb.OpenRecordSet("SELECT * From [Consumo do Pedido Compra] Where [Id do Pedido] = " & Sequencia_da_Compra)
+   Set Conta = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)
+   Set ProdMvto = vgDb.OpenRecordSet("SELECT SUM([Quantidade] * [Valor Unitário]) Total FROM [Produtos Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Produtos Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)
+   Set DespesasMvto = vgDb.OpenRecordSet("SELECT SUM([Quantidade] * [Valor Unitário]) Total FROM [Despesas Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Despesas Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra)
    
-    If Tb!CIFFOB = "FOB" Then
-       TotAux = ProdMvto!Total + DespesasMvto!Total + Tb![Total Do IPI] + Tb![Vr Do Frete]  
+    If Tb!CifFob = "FOB" Then
+       TotAux = ProdMvto!Total + DespesasMvto!Total + Tb![Total Do IPI] + Tb![Vr Do Frete]
     Else
-       TotAux = ProdMvto!Total + DespesasMvto!Total + Tb![Total Do IPI]     
+       TotAux = ProdMvto!Total + DespesasMvto!Total + Tb![Total Do IPI]
     End If
                              
    If Tb.RecordCount = 0 Then Exit Sub
@@ -5521,7 +5081,7 @@ Private Sub PreValidaPedido()
       Next
       If Mensagem <> "" Then
          MsgBox Mensagem, vbCritical + vbOKOnly, vaTitulo
-         MDIIRRIG.CancelaAlteracoes
+         mdiIRRIG.CancelaAlteracoes
          Exit Sub
       End If
    End If
@@ -5540,7 +5100,7 @@ Private Function ValidaSeqItem(Sequencia_do_Movimento As Long, Sequencia_do_Prod
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
-   Valor_total_compra As Double) As Boolean 
+   Valor_total_compra As Double) As Boolean
  Dim Tb As New GRecordSet
  
  If Sequencia_da_Compra = 0 Then
@@ -5548,12 +5108,12 @@ Private Function ValidaSeqItem(Sequencia_do_Movimento As Long, Sequencia_do_Prod
     Exit Function
  End If
  
- Set Tb = VgDb.OpenRecordSet("SELECT * From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT * From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto)
  
   If Tb.RecordCount > 0 Then
      ValidaSeqItem = True
   Else
-      ValidaSeqItem = False 
+      ValidaSeqItem = False
   End If
 
 End Function
@@ -5564,10 +5124,10 @@ Private Function ValidaUnitario(Sequencia_do_Movimento As Long, Sequencia_do_Pro
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
-   Valor_total_compra As Double) As Boolean 
+   Valor_total_compra As Double) As Boolean
  Dim Tb As New GRecordSet
  
- Set Tb = VgDb.OpenRecordSet("SELECT [Vr Unitario] From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto & " And [Id do Pedido] = " & Sequencia_da_Compra)
+ Set Tb = vgDb.OpenRecordSet("SELECT [Vr Unitario] From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto & " And [Id do Pedido] = " & Sequencia_da_Compra)
  
  If Sequencia_da_Compra = 0 Then
     ValidaUnitario = True
@@ -5583,14 +5143,14 @@ Private Function ValidaUnitario(Sequencia_do_Movimento As Long, Sequencia_do_Pro
  Else
     Do While Not Tb.EOF
        If Tb![Vr Unitario] = Valor_Unitario Then
-          ValidaUnitario = True 
-       End If   
+          ValidaUnitario = True
+       End If
     Tb.MoveNext
     Loop
  
- End If   
+ End If
  
-End Function 
+End Function
 
 
 Private Function ValidaQtde(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, _
@@ -5598,7 +5158,7 @@ Private Function ValidaQtde(Sequencia_do_Movimento As Long, Sequencia_do_Produto
    Valor_Total As Double, Valor_do_PIS As Double, Valor_do_Cofins As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Valor_do_Frete As Double, _
    Valor_da_Substituicao As Double, Sequencia_Unidade_Speed As Long, Valor_do_ipi_compra As Double, _
-   Valor_total_compra As Double) As Boolean 
+   Valor_total_compra As Double) As Boolean
  Dim Tb As New GRecordSet
  Dim Tb1 As New GRecordSet
  
@@ -5607,8 +5167,8 @@ Private Function ValidaQtde(Sequencia_do_Movimento As Long, Sequencia_do_Produto
     Exit Function
  End If
  
- Set Tb = VgDb.OpenRecordSet("SELECT Sum([Qtde]) Tot From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto & " And [Id do Pedido] = " & Sequencia_da_Compra)
- Set Tb1 = VgDb.OpenRecordSet("SELECT Sum([Quantidade]) Tot From [Produtos Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Produtos Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] Where [Seqüência do Produto] = " & Sequencia_do_Produto & " And [Sequencia da Compra] = " & Sequencia_da_Compra)
+ Set Tb = vgDb.OpenRecordSet("SELECT Sum([Qtde]) Tot From [Produtos do Pedido Compra] Where [Id do Produto] = " & Sequencia_do_Produto & " And [Id do Pedido] = " & Sequencia_da_Compra)
+ Set Tb1 = vgDb.OpenRecordSet("SELECT Sum([Quantidade]) Tot From [Produtos Mvto Contábil Novo] Left Join [Movimento Contábil Novo] On [Produtos Mvto Contábil Novo].[Seqüência do Movimento] = [Movimento Contábil Novo].[Seqüência do Movimento] Where [Seqüência do Produto] = " & Sequencia_do_Produto & " And [Sequencia da Compra] = " & Sequencia_da_Compra)
  
    If Tb1!Tot + Quantidade > Tb!Tot Then
       ValidaQtde = False
@@ -5616,7 +5176,7 @@ Private Function ValidaQtde(Sequencia_do_Movimento As Long, Sequencia_do_Produto
       ValidaQtde = True
    End If
  
-End Function 
+End Function
 
 
 Private Function ValidarProducao(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, _
@@ -5627,7 +5187,7 @@ Private Function ValidarProducao(Sequencia_do_Movimento As Long, Sequencia_do_Pr
    Valor_total_compra As Double) As Boolean
  Dim Tb As New GRecordSet
  
- Set Tb = Vgdb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência Do Produto] = " & Sequencia_do_Produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência Do Produto] = " & Sequencia_do_Produto)
  
  If Tb.RecordCount > 0 Then
     ValidarProducao = True
@@ -5641,30 +5201,30 @@ End Function
 Private Sub IncluiProd()
  Dim Receita As New GRecordSet
  Dim BxEstoque As New GRecordSet
- Dim ProdutosMvto As New GRecordSet 
+ Dim ProdutosMvto As New GRecordSet
  Dim Item2Aux As Long, Custo As Currency
  Dim Subordinado As New GRecordSet, NomeItem As New GRecordSet
- Dim CodProd As Long, Preco As Currency, VrTotal As Currency 
- Dim Tb As New GRecordSet, VrCusto As Currency 
+ Dim CodProd As Long, Preco As Currency, VrTotal As Currency
+ Dim Tb As New GRecordSet, Vrcusto As Currency
  Dim B As New GRecordSet, Materias() As Long, i As Long, Seq As Variant, Mensagem As String, MP As New GRecordSet, Produto As New GRecordSet
  Dim C As New GRecordSet, E As New GRecordSet, ProdAux As Long
  
  Screen.MousePointer = vbHourglass
  
  Preco = 0
- ProdAux = Produto_inclui 
- Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & Produto_inclui)
+ ProdAux = Produto_inclui
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & Produto_inclui)
  
  If Tb.RecordCount = 0 Then
-    MsgBox("Impossivel Produzir Item sem Receita") 
+    MsgBox ("Impossivel Produzir Item sem Receita")
     Exit Sub
  End If
  If Documento <> "Produção" Then
-    MsgBox("Documento tem que ser PRODUÇÃO!")
+    MsgBox ("Documento tem que ser PRODUÇÃO!")
     Exit Sub
  End If
  If Qtde_Caixinha = 0 Then
-    MsgBox("Informe a Quantidade!")
+    MsgBox ("Informe a Quantidade!")
     Exit Sub
  End If
  
@@ -5674,7 +5234,7 @@ Private Sub IncluiProd()
                               "LEFT JOIN [SubGrupo do Produto] SP ON P2.[Seqüência do SubGrupo Produto] = SP.[Seqüência do SubGrupo Produto] AND P2.[Seqüência do Grupo Produto] = SP.[Seqüência do Grupo Produto] " & _
                               "WHERE P.[Seqüência Do Produto] = " & Produto_inclui & " AND P2.Industrialização = 0")
                               'Se for industrialização nw vamos baixar
- Set Produto = vgDb.OpenRecordSet("SELECT SP.Descrição Sub FROM Produtos P LEFT JOIN [SubGrupo do Produto] SP ON P.[Seqüência do Subgrupo Produto] = SP.[Seqüência do SubGrupo Produto] AND P.[Seqüência do Grupo Produto] = SP.[Seqüência do Grupo Produto] WHERE P.[Seqüência do Produto] = " & Produto_inclui)                             
+ Set Produto = vgDb.OpenRecordSet("SELECT SP.Descrição Sub FROM Produtos P LEFT JOIN [SubGrupo do Produto] SP ON P.[Seqüência do Subgrupo Produto] = SP.[Seqüência do SubGrupo Produto] AND P.[Seqüência do Grupo Produto] = SP.[Seqüência do Grupo Produto] WHERE P.[Seqüência do Produto] = " & Produto_inclui)
    
  i = 0 'Contador para interagir com o vetor
  ReDim Preserve Materias(0) As Long
@@ -5734,8 +5294,8 @@ Private Sub IncluiProd()
       Mensagem = "Matéria(s) Prima Insuficiente:" & vbCrLf
       For Each Seq In Materias
          If Seq > 0 Then
-            Set NomeItem = VgDb.OpenRecordSet("SELECT Descrição From Produtos WHERE [Seqüência do Produto] = " & Seq & " And [Seqüência do Produto] > 0") 
-            Mensagem = Mensagem & vbCrLf & Format(Seq,"000000") & " - " & NomeItem!Descrição
+            Set NomeItem = vgDb.OpenRecordSet("SELECT Descrição From Produtos WHERE [Seqüência do Produto] = " & Seq & " And [Seqüência do Produto] > 0")
+            Mensagem = Mensagem & vbCrLf & Format(Seq, "000000") & " - " & NomeItem!Descrição
          End If
       Next
       MsgBox Mensagem, vbCritical + vbOKOnly, "Estoque Insuficiente"
@@ -5745,8 +5305,8 @@ Private Sub IncluiProd()
    End If
    
                         
-   Set BxEstoque = VgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
-   Set ProdutosMvto = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")
+   Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
+   Set ProdutosMvto = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")
  
    Set Subordinado = vgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
                                              "SELECT M.[Seqüência da Matéria Prima], M.[Quantidade de Matéria Prima], P.[Seqüência do Produto], P.Descrição " & _
@@ -5755,12 +5315,12 @@ Private Sub IncluiProd()
                                              " UNION ALL " & _
                                              "SELECT M.[Seqüência da Matéria Prima], CAST(M.[Quantidade de Matéria Prima] * S.QtdeUsada AS Decimal(9,3)), P.[Seqüência do Produto], P.Descrição " & _
                                              "FROM Produtos AS P INNER JOIN [Matéria Prima] AS M ON P.[Seqüência do Produto] = M.[Seqüência do Produto] " & _
-                                             "INNER JOIN SuperQtde AS S ON P.[Seqüência do Produto] = S.MateriaPrima) " & _         
+                                             "INNER JOIN SuperQtde AS S ON P.[Seqüência do Produto] = S.MateriaPrima) " & _
                                              "SELECT S.MateriaPrima, P.Descrição AS DescMat, U.[Sigla da Unidade] As Unidade, P.[Quantidade no Estoque] As QtdeEstoque, P.[Quantidade Contábil] As QtdeContabil, " & _
                                              "P.[Valor Contábil Atual] As CustoMaterial, S.QtdeUsada, Round(S.QtdeUsada * P.[Valor de Custo], 4) AS CustoTotal, S.Produto, S.Descricao " & _
                                              "FROM SuperQtde AS S LEFT JOIN [Matéria Prima] AS M ON S.MateriaPrima = M.[Seqüência Do Produto] " & _
                                              "INNER JOIN Produtos AS P ON S.MateriaPrima = P.[Seqüência Do Produto] " & _
-                                             "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _                  
+                                             "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
                                              "WHERE M.[Seqüência Do Produto] IS NULL " & _
                                              "ORDER BY S.MateriaPrima")
 
@@ -5768,8 +5328,8 @@ If Subordinado.RecordCount > 0 Then
 
       Do While Not Subordinado.EOF
          CodProd = Subordinado!MateriaPrima
-         VrCusto = Ultimo("Custo",CodProd)
-         VrTotal = Subordinado!QtdeUsada * VrCusto
+         Vrcusto = Ultimo("Custo", CodProd)
+         VrTotal = Subordinado!QtdeUsada * Vrcusto
          Preco = Preco + VrTotal
          Subordinado.MoveNext
       Loop
@@ -5777,30 +5337,30 @@ If Subordinado.RecordCount > 0 Then
                                                        
  With ProdutosMvto
   .AddNew
-    ![Seqüência Do Movimento] = Sequencia_do_Movimento           
-    ![Seqüência Do Produto] = Produto_inclui                                  
-    ![Quantidade] = Qtde_Caixinha        
+    ![Seqüência do Movimento] = Sequencia_do_Movimento
+    ![Seqüência do Produto] = Produto_inclui
+    ![Quantidade] = Qtde_Caixinha
     ![Valor Unitário] = Preco
-    ![Valor de Custo] = Preco           
-    ![Valor Total] = ![Quantidade] * ![Valor de Custo]                       
+    ![Valor de Custo] = Preco
+    ![Valor Total] = ![Quantidade] * ![Valor de Custo]
    .Update
-   .BookMark = .LastModified 
-    Item2Aux = ![Seqüência Do Produto Mvto Novo]          
+   .BookMark = .LastModified
+    Item2Aux = ![Seqüência Do Produto Mvto Novo]
  End With
 Else
-    MsgBox("Impossivel Produzir Item sem Receita") 
+    MsgBox ("Impossivel Produzir Item sem Receita")
     Screen.MousePointer = vbDefault
     Exit Sub
-End If 
+End If
 
 'Baixa Contabil
 
 
- ValorCustoContabilNovo 1,ProdAux,0 
+ ValorCustoContabilNovo 1, ProdAux, 0
  MegaEstoqueContabil 0, 0
- BaixaReceita Produto_inclui, Qtde_Caixinha, 0, "-", Sequencia_do_Movimento, Movimento_Contabil_Novo![Data Do Movimento], Item2Aux
+ BaixaReceita Produto_inclui, Qtde_Caixinha, 0, "-", Sequencia_do_Movimento, Movimento_Contabil_Novo![Data do Movimento], Item2Aux
 
- grdProdutos.Rebind 
+ GrdProdutos.ReBind
  Reposition True
  txtQtde_Caixinha.Text = ""
  txtProduto.Text = ""
@@ -5810,15 +5370,15 @@ End Sub
 
 Private Sub Extornar()
  If Identificacao = 0 Then
-    MsgBox("Informe o ID do Produto")
-    Exit Sub 
+    MsgBox ("Informe o ID do Produto")
+    Exit Sub
  Else
-    ExcluiBaixaReceitaProduto(Identificacao) 
-    VgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência do Produto Mvto Novo] = " & Identificacao 
-    grdProdutos.Rebind 
+    ExcluiBaixaReceitaProduto (Identificacao)
+    vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência do Produto Mvto Novo] = " & Identificacao
+    GrdProdutos.ReBind
     Reposition True
-    Txtid.text = ""
-    MegaEstoqueContabil 1, 0  
+    Txtid.Text = ""
+    MegaEstoqueContabil 1, 0
  End If
  
 End Sub
@@ -5827,25 +5387,25 @@ End Sub
 Private Sub IncluiConjunto()
  Dim Receita As New GRecordSet
  Dim BxEstoque As New GRecordSet
- Dim ConjuntosMvto As New GRecordSet 
+ Dim ConjuntosMvto As New GRecordSet
  Dim Item2Aux As Long, Custo As Currency
  Dim Subordinado As New GRecordSet, NomeItem As New GRecordSet
- Dim CodConj As Long, Preco As Currency, VrTotal As Currency 
- Dim Tb As New GRecordSet, VrCusto As Currency 
+ Dim CodConj As Long, Preco As Currency, VrTotal As Currency
+ Dim Tb As New GRecordSet, Vrcusto As Currency
  Dim B As New GRecordSet, Materias() As Long, i As Long, Seq As Variant, Mensagem As String, MP As New GRecordSet, Conjunto As New GRecordSet
  Dim C As New GRecordSet, E As New GRecordSet, ConjuntoAux As Long
- Dim Tb1 As New GRecordSet, CodItem As Long, Qtde As Double 
+ Dim Tb1 As New GRecordSet, CodItem As Long, Qtde As Double
  
  Screen.MousePointer = vbHourglass
  
  Preco = 0
- ConjuntoAux = Conjunto_inclui 
+ ConjuntoAux = Conjunto_inclui
  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Conjunto] = " & Conjunto_inclui)
  
  
  Set Receita = vgDb.OpenRecordSet("SELECT IC.[Seqüência do Produto] As MateriaPrima, IC.[Quantidade do Produto] As QtdeUsada, P.[Quantidade Contábil] As QtdeContabil " & _
                                   "FROM [Itens Do Conjunto] IC INNER JOIN Produtos P ON IC.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
-                                  "WHERE IC.[Seqüência Do Conjunto] = " & Conjunto_Inclui & " AND P.Industrialização = 0")
+                                  "WHERE IC.[Seqüência Do Conjunto] = " & Conjunto_inclui & " AND P.Industrialização = 0")
                                      'Se for industrialização nw vamos baixar
    
   If Receita.RecordCount = 0 Then 'Vamos deixar baixar, mas vamos informar que nw tem receita
@@ -5855,13 +5415,13 @@ Private Sub IncluiConjunto()
   End If
 
   If Documento <> "Produção" Then
-    MsgBox("Documento tem que ser PRODUÇÃO!")
+    MsgBox ("Documento tem que ser PRODUÇÃO!")
     Screen.MousePointer = vbDefault
     Exit Sub
   End If
   
   If Qtde_caixinhaconjunto = 0 Then
-     MsgBox("Informe a Quantidade!")
+     MsgBox ("Informe a Quantidade!")
      Screen.MousePointer = vbDefault
      Exit Sub
   End If
@@ -5900,22 +5460,22 @@ Private Sub IncluiConjunto()
    If UBound(Materias) > 0 Then
       Mensagem = "Matéria(s) Prima Insuficiente:" & vbCrLf
         For Each Seq In Materias
-            If Seq > 0 Then 
-               Set NomeItem = VgDb.OpenRecordSet("SELECT Descrição From Produtos WHERE [Seqüência do Produto] = " & Seq & " And [Seqüência do Produto] > 0") 
-               Mensagem = Mensagem & vbCrLf & Format(Seq,"000000") & " - " & NomeItem!Descrição
-            End If    
+            If Seq > 0 Then
+               Set NomeItem = vgDb.OpenRecordSet("SELECT Descrição From Produtos WHERE [Seqüência do Produto] = " & Seq & " And [Seqüência do Produto] > 0")
+               Mensagem = Mensagem & vbCrLf & Format(Seq, "000000") & " - " & NomeItem!Descrição
+            End If
         Next
         MsgBox Mensagem, vbCritical + vbOKOnly, vaTitulo
         Screen.MousePointer = vbDefault
-        Exit Sub   
+        Exit Sub
    End If
                       
-   Set BxEstoque = VgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
-   Set ConjuntosMvto = VgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo]")
+   Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
+   Set ConjuntosMvto = vgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo]")
      
     
    
-   Set Subordinado = VgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
+   Set Subordinado = vgDb.OpenRecordSet(";WITH SuperQtde(MateriaPrima, QtdeUsada, Produto, Descricao) AS( " & _
                                          "SELECT M.[Seqüência Do Produto], M.[Quantidade Do Produto], P.[Seqüência Do Produto], P.Descrição " & _
                                          "FROM Conjuntos AS C INNER JOIN [Itens Do Conjunto] AS M ON C.[Seqüência Do Conjunto] = M.[Seqüência Do Conjunto] " & _
                                          "INNER JOIN Produtos P ON M.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -5923,44 +5483,44 @@ Private Sub IncluiConjunto()
                                          " UNION ALL " & _
                                          "SELECT M.[Seqüência da Matéria Prima], CAST(M.[Quantidade de Matéria Prima] * S.QtdeUsada AS Decimal(9,3)), P.[Seqüência Do Produto], P.Descrição " & _
                                          "FROM Produtos AS P INNER JOIN [Matéria Prima] AS M ON P.[Seqüência Do Produto] = M.[Seqüência Do Produto] " & _
-                                         "INNER JOIN SuperQtde AS S ON P.[Seqüência Do Produto] = S.MateriaPrima) " & _         
+                                         "INNER JOIN SuperQtde AS S ON P.[Seqüência Do Produto] = S.MateriaPrima) " & _
                                          "SELECT S.MateriaPrima, P.Descrição AS DescMat, U.[Sigla da Unidade] As Unidade, P.[Quantidade no Estoque] As QtdeEstoque, P.[Valor Contábil Atual] As VrContabil, " & _
                                          "S.QtdeUsada, S.Produto, S.Descricao " & _
                                          "FROM SuperQtde AS S LEFT JOIN [Matéria Prima] AS M ON S.MateriaPrima = M.[Seqüência Do Produto] " & _
                                          "INNER JOIN Produtos AS P ON S.MateriaPrima = P.[Seqüência Do Produto] " & _
-                                         "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _                  
+                                         "LEFT JOIN Unidades AS U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
                                          "WHERE M.[Seqüência Do Produto] IS NULL " & _
                                          "ORDER BY S.MateriaPrima")
 
       Do While Not Subordinado.EOF
          CodItem = Subordinado!MateriaPrima
          Qtde = Subordinado!QtdeUsada
-         VrCusto = Ultimo("Custo",CodItem)
-         VrTotal = Qtde * VrCusto
+         Vrcusto = Ultimo("Custo", CodItem)
+         VrTotal = Qtde * Vrcusto
          Preco = Preco + VrTotal
          Subordinado.MoveNext
       Loop
-      Subordinado.MoveFirst: Subordinado.MoveLast 
+      Subordinado.MoveFirst: Subordinado.MoveLast
                                 
      With ConjuntosMvto
        .AddNew
-        ![Seqüência Do Movimento] = Sequencia_do_Movimento           
-        ![Seqüência Do Conjunto] = Conjunto_inclui                                  
-        ![Quantidade] = Qtde_caixinhaconjunto       
+        ![Seqüência do Movimento] = Sequencia_do_Movimento
+        ![Seqüência do Conjunto] = Conjunto_inclui
+        ![Quantidade] = Qtde_caixinhaconjunto
         ![Valor Unitário] = Preco
-        ![Valor de Custo] = Preco           
-        ![Valor Total] = ![Quantidade] * ![Valor de Custo]                       
+        ![Valor de Custo] = Preco
+        ![Valor Total] = ![Quantidade] * ![Valor de Custo]
        .Update
-       .BookMark = .LastModified 
-        Item2Aux = ![Seqüência Conjunto Mvto Novo]          
-     End With                                
+       .BookMark = .LastModified
+        Item2Aux = ![Seqüência Conjunto Mvto Novo]
+     End With
                                    
      BaixaConjunto Conjunto_inclui, Qtde_caixinhaconjunto, 0, "-", Sequencia_do_Movimento, Item2Aux
     
      ValorCustoContabilNovo 2, ConjuntoAux, 0
      MegaEstoqueContabil 1, 0
     
- grdConjuntos.Rebind 
+ grdConjuntos.ReBind
  Reposition True
  Txtqtde_caixinhaconjunto.Text = ""
  txtConjunto.Text = ""
@@ -5971,15 +5531,15 @@ End Sub
 
 Private Sub ExtornarConj()
  If Idconj = 0 Then
-    MsgBox("Informe o ID do Conjunto")
-    Exit Sub 
+    MsgBox ("Informe o ID do Conjunto")
+    Exit Sub
  Else
-    ExcluiBaixaReceitaConjunto(Idconj)
-    VgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência Conjunto Mvto Novo] = " & IdConj
-    grdConjuntos.Rebind 
+    ExcluiBaixaReceitaConjunto (Idconj)
+    vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência Conjunto Mvto Novo] = " & Idconj
+    grdConjuntos.ReBind
     Reposition True
-    TxtidConj.text = "" 
-    MegaEstoqueContabil 1, 0 
+    Txtidconj.Text = ""
+    MegaEstoqueContabil 1, 0
  End If
  
 End Sub
@@ -5988,74 +5548,74 @@ End Sub
 Private Sub GerarConsumo()
  Dim BxEstoque As New GRecordSet, ProdutosMvto As New GRecordSet
  Dim Item2Aux As Long, Tb As New GRecordSet
- Dim Valida As New GRecordSet 
+ Dim Valida As New GRecordSet
   
- Set Valida = VgDb.OpenRecordSet ("SELECT [Tipo do Produto] Tipo From Produtos WHERE [Seqüência do Produto] = " & Consumo_inclui)     
- Set Tb = vgdb.OpenRecordset("SELECT SUM(Quantidade * CASE [Tipo do Movimento] WHEN 0 THEN 1 ELSE -1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Data do Movimento] < " & D(Data_do_Movimento) & " AND [Seqüência do Produto] = " & Consumo_inclui)
+ Set Valida = vgDb.OpenRecordSet("SELECT [Tipo do Produto] Tipo From Produtos WHERE [Seqüência do Produto] = " & Consumo_inclui)
+ Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE [Tipo do Movimento] WHEN 0 THEN 1 ELSE -1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Data do Movimento] < " & D(Data_do_Movimento) & " AND [Seqüência do Produto] = " & Consumo_inclui)
  
  If vgPWUsuario = "GIOVANE" Then
  ElseIf Valida!Tipo <> 3 And Valida!Tipo <> 5 And Valida!Tipo <> 8 And Valida!Tipo <> 9 Then
-    MsgBox("So é permitido Itens de Consumo!")
-    Exit Sub   
+    MsgBox ("So é permitido Itens de Consumo!")
+    Exit Sub
  End If
  
- If IsNull(Tb!Estoque) Or Tb!Estoque = 0 Or Tb!Estoque < Qtde_caixinhaconsumo Then 
-    MsgBox("Estoque Insuficiente")
+ If IsNull(Tb!Estoque) Or Tb!Estoque = 0 Or Tb!Estoque < Qtde_caixinhaconsumo Then
+    MsgBox ("Estoque Insuficiente")
     Exit Sub
  End If
    
  Screen.MousePointer = vbHourglass 'Ampulheta
  
- Set BxEstoque = VgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
- Set ProdutosMvto = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")   
+ Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
+ Set ProdutosMvto = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")
  
  With ProdutosMvto
    .AddNew
-    ![Seqüência Do Movimento] = Sequencia_do_Movimento 
-    ![Seqüência Do Produto] = Consumo_inclui 
-    ![Quantidade] = Qtde_caixinhaconsumo      
+    ![Seqüência do Movimento] = Sequencia_do_Movimento
+    ![Seqüência do Produto] = Consumo_inclui
+    ![Quantidade] = Qtde_caixinhaconsumo
    .Update
    .BookMark = .LastModified
   Item2Aux = ![Seqüência Do Produto Mvto Novo]
- End With 
+ End With
      
  With BxEstoque
   .AddNew
-    ![Seqüência Do Movimento] = Sequencia_do_Movimento 
-    ![Tipo Do Movimento] = 1 
-    ![Data Do Movimento] = Data_do_Movimento  
+    ![Seqüência do Movimento] = Sequencia_do_Movimento
+    ![Tipo Do Movimento] = 1
+    ![Data do Movimento] = Data_do_Movimento
     !Documento = "Consumo"
-    ![Seqüência Do Produto] = Consumo_inclui
-    !Quantidade = Qtde_caixinhaconsumo              
+    ![Seqüência do Produto] = Consumo_inclui
+    !Quantidade = Qtde_caixinhaconsumo
     ![Tipo Do Produto] = 3
-    !Estoque = "P" 
+    !Estoque = "P"
     ![Seqüência Do Item 2] = Item2Aux
   .Update
   .BookMark = .LastModified
  End With
  
- MegaEstoqueContabil 0, 0 'Atualiza Estoque 
+ MegaEstoqueContabil 0, 0 'Atualiza Estoque
   
- grdProdutos.Rebind 
+ GrdProdutos.ReBind
  Reposition True
  Txtconsumo.Text = ""
  Txtqtde_caixinhaconsumo.Text = ""
- Screen.MousePointer = vbDefault 
+ Screen.MousePointer = vbDefault
   
 End Sub
 
 
 Private Sub ExtornarConsumo()
  If Idconsumo = 0 Then
-    MsgBox("Informe o ID do Produto")
-    Exit Sub 
+    MsgBox ("Informe o ID do Produto")
+    Exit Sub
  Else
-    VgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência do Produto Mvto Novo] = " & Idconsumo 
+    vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Sequencia_do_Movimento & " And [Seqüência do Produto Mvto Novo] = " & Idconsumo
     vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Item 2] = " & Idconsumo
     MegaEstoqueContabil 0, 0 'Nova Rotina Super Rapida
-    grdProdutos.Rebind 
+    GrdProdutos.ReBind
     Reposition True
-    TxtidConsumo.text = ""  
+    Txtidconsumo.Text = ""
  End If
  
 End Sub
@@ -6064,75 +5624,75 @@ End Sub
 Private Sub GerarDevolucao()
  Dim BxEstoque As New GRecordSet, ProdutosMvto As New GRecordSet
  Dim Item2Aux As Long, Tb As New GRecordSet, ProdAux As New GRecordSet
- Dim Tbx As New GRecordSet     
+ Dim Tbx As New GRecordSet
   
-  Set Tbx = VgDb.OpenRecordSet("SELECT SUM(Quantidade) Total From [Produtos da Nota Fiscal] Where [Seqüência da Nota Fiscal] = " & Nfe & " And [Seqüência do Produto] = " & Devolucao_inclui) 
+  Set Tbx = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Total From [Produtos da Nota Fiscal] Where [Seqüência da Nota Fiscal] = " & NFe & " And [Seqüência do Produto] = " & Devolucao_inclui)
      If Tbx!Total = 0 Then
-        Set Tbx = VgDb.OpenRecordSet("SELECT SUM(Quantidade) Total From [Peças da Nota Fiscal] Where [Seqüência da Nota Fiscal] = " & Nfe & " And [Seqüência do Produto] = " & Devolucao_inclui)
+        Set Tbx = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Total From [Peças da Nota Fiscal] Where [Seqüência da Nota Fiscal] = " & NFe & " And [Seqüência do Produto] = " & Devolucao_inclui)
      End If
      
      If Tbx!Total = 0 Then
-        MsgBox("Item Invalido!") 
-        Exit Sub  
+        MsgBox ("Item Invalido!")
+        Exit Sub
      End If
  
      If Qtde_devolucao > Tbx!Total Then
-        MsgBox("Quantidade maior que a nota de Venda!")
+        MsgBox ("Quantidade maior que a nota de Venda!")
         Exit Sub
-     End If 
+     End If
   
  Screen.MousePointer = vbHourglass 'Ampulheta
  
- Set BxEstoque = VgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
- Set ProdutosMvto = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")   
+ Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil]")
+ Set ProdutosMvto = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo]")
  
 
  With ProdutosMvto
    .AddNew
-    ![Seqüência Do Movimento] = Sequencia_do_Movimento 
-    ![Seqüência Do Produto] = Devolucao_inclui 
-    ![Quantidade] = Qtde_devolucao 
-    ![Valor Unitário] = TotalInicial("Custo")    
+    ![Seqüência do Movimento] = Sequencia_do_Movimento
+    ![Seqüência do Produto] = Devolucao_inclui
+    ![Quantidade] = Qtde_devolucao
+    ![Valor Unitário] = TotalInicial("Custo")
    .Update
    .BookMark = .LastModified
   Item2Aux = ![Seqüência Do Produto Mvto Novo]
- End With 
+ End With
      
  With BxEstoque
   .AddNew
-    ![Seqüência Do Movimento] = Sequencia_do_Movimento 
-    ![Tipo Do Movimento] = 0 
-    ![Data Do Movimento] = Data_do_Movimento  
-    !Documento = Documento 
-    ![Seqüência Do Produto] =Devolucao_inclui
-    !Quantidade = Qtde_devolucao 
-     Set ProdAux = VgDb.OpenRecordSet("SELECT [Tipo Do Produto] X From Produtos WHERE [Seqüência Do Produto] = " & Devolucao_inclui)            
-    ![Tipo Do Produto] = ProdAux!X
-    !Estoque = "P" 
-    ![Valor de Custo] = TotalInicial("Custo")  
+    ![Seqüência do Movimento] = Sequencia_do_Movimento
+    ![Tipo Do Movimento] = 0
+    ![Data do Movimento] = Data_do_Movimento
+    !Documento = Documento
+    ![Seqüência do Produto] = Devolucao_inclui
+    !Quantidade = Qtde_devolucao
+     Set ProdAux = vgDb.OpenRecordSet("SELECT [Tipo Do Produto] X From Produtos WHERE [Seqüência Do Produto] = " & Devolucao_inclui)
+    ![Tipo Do Produto] = ProdAux!x
+    !Estoque = "P"
+    ![Valor de Custo] = TotalInicial("Custo")
     ![Seqüência Do Item 2] = Item2Aux
   .Update
   .BookMark = .LastModified
  End With
  
- MegaEstoqueContabil 0, 0 'Atualiza Estoque 
+ MegaEstoqueContabil 0, 0 'Atualiza Estoque
   
- grdProdutos.Rebind 
+ GrdProdutos.ReBind
  Reposition True
- TxtDevolucao_inclui.Text = ""
- TxtQtde_devolucao.Text = ""
- Screen.MousePointer = vbDefault 
+ Txtdevolucao_inclui.Text = ""
+ Txtqtde_devolucao.Text = ""
+ Screen.MousePointer = vbDefault
   
 End Sub
 
 
 Private Function TotalInicial(Qual As String) As Currency
-   Dim BxEstoque As New GRecordset, Qtde As Currency, Custo As Currency, Total As Currency
-   Dim Nota As New GRecordset
+   Dim BxEstoque As New GRecordSet, Qtde As Currency, Custo As Currency, Total As Currency
+   Dim Nota As New GRecordSet
    
    
-   Set Nota = VgDb.OpenRecordSet("SELECT * FROM [Nota Fiscal] WHERE [Seqüência da Nota Fiscal] = " & Nfe)
-   Set BxEstoque = vgdb.OpenRecordset("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Devolucao_inclui & " AND [Data do Movimento] <= " & D(Nota![Data de Emissão]) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
+   Set Nota = vgDb.OpenRecordSet("SELECT * FROM [Nota Fiscal] WHERE [Seqüência da Nota Fiscal] = " & NFe)
+   Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Devolucao_inclui & " AND [Data do Movimento] <= " & D(Nota![Data de Emissão]) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
    
    Do While Not BxEstoque.EOF
       Qtde = Qtde + BxEstoque!Quantidade * IIf(BxEstoque![Tipo Do Movimento] = 0, 1, -1)
@@ -6155,29 +5715,29 @@ End Function
 
 
 Private Function MostraContas() As String
- Dim Conta As New GRecordSet 
+ Dim Conta As New GRecordSet
  
- If sequencia_da_compra > 0 Then 
-    Set Conta = VgDb.OpenRecordSet("SELECT Documento, [Valor Pago] FROM [Manutenção Contas] WHERE Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
+ If Sequencia_da_Compra > 0 Then
+    Set Conta = vgDb.OpenRecordSet("SELECT Documento, [Valor Pago] FROM [Manutenção Contas] WHERE Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
       If Conta.RecordCount > 0 Then
-         MostraContas = "Tem Previsão gerada pelo Compras " & Conta!Documento & IIf(Conta![Valor Pago] > 0, " Tem Pagto", "") 
+         MostraContas = "Tem Previsão gerada pelo Compras " & Conta!Documento & IIf(Conta![Valor Pago] > 0, " Tem Pagto", "")
       Else
-         MostraContas = ""      
-      End If  
+         MostraContas = ""
+      End If
  End If
 
 End Function
 
 Private Function MostraContas2() As String
- Dim Conta As New GRecordSet 
+ Dim Conta As New GRecordSet
  
- Set Conta = VgDb.OpenRecordSet("SELECT Documento, [Valor Pago] FROM [Manutenção Contas] WHERE Previsão = 0 And [Seqüência do Geral] = " & Sequencia_do_Geral & " And Documento = '" & Documento & "'")
+ Set Conta = vgDb.OpenRecordSet("SELECT Documento, [Valor Pago] FROM [Manutenção Contas] WHERE Previsão = 0 And [Seqüência do Geral] = " & Sequencia_do_Geral & " And Documento = '" & Documento & "'")
     
      If Conta.RecordCount > 0 Then
-        MostraContas2 = "Tem Conta gerada pela NFe " & Conta!Documento & IIf(Conta![Valor Pago] > 0, " Tem Pagto", "") 
+        MostraContas2 = "Tem Conta gerada pela NFe " & Conta!Documento & IIf(Conta![Valor Pago] > 0, " Tem Pagto", "")
      Else
-        MostraContas2 = ""      
-     End If  
+        MostraContas2 = ""
+     End If
  
 End Function
 
@@ -6191,30 +5751,30 @@ Private Sub LancaPrevisao()
  Dim Cobranca As New GRecordSet
  Dim Valida As New GRecordSet
  Dim Conta As New GRecordSet
- Dim ULTPC As New GRecordSet
+ Dim UltPc As New GRecordSet
  
  If Sequencia_da_Compra = 0 Then Exit Sub
   
  Set Parcelas = vgDb.OpenRecordSet("SELECT SUM([Valor da Parcela]) Total FROM [Parcelas Mvto Contabil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
- Set Pedido = VgDb.OpenRecordSet("SELECT * FROM [Pedido de Compra Novo] Where [Id do Pedido] = " & Sequencia_da_Compra)
- Set Manutencao = vgDb.OpenRecordSet("Manutenção Contas") 
+ Set Pedido = vgDb.OpenRecordSet("SELECT * FROM [Pedido de Compra Novo] Where [Id do Pedido] = " & Sequencia_da_Compra)
+ Set Manutencao = vgDb.OpenRecordSet("Manutenção Contas")
  Set Cobranca = vgDb.OpenRecordSet("SELECT [Seqüência da Cobrança] From [Manutenção Contas] Where Parcela = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
- Set Valida = vgDb.OpenRecordSet("SELECT * From [Manutenção Contas] Where Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)  
+ Set Valida = vgDb.OpenRecordSet("SELECT * From [Manutenção Contas] Where Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
  
- If Valida.RecordCount > 0 Then 
-    Set Conta = VgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Sequencia da Compra] > 0 And [Valor Pago] = 0 And Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
+ If Valida.RecordCount > 0 Then
+    Set Conta = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Sequencia da Compra] > 0 And [Valor Pago] = 0 And Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra)
  
      If Conta.RecordCount > 0 Then
-        VgDb.Execute "DELETE FROM [Manutenção Contas] WHERE Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra  
-        VgDb.Execute "DELETE FROM [Entrada Contas] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra
-        VgDb.Execute "DELETE FROM [Parcelas Entrada Contas] WHERE [Seqüência da Entrada] = " & Conta![Seqüência da Origem]   
-     End If 
+        vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE Previsão = 1 And [Sequencia da Compra] = " & Sequencia_da_Compra
+        vgDb.Execute "DELETE FROM [Entrada Contas] WHERE [Sequencia da Compra] = " & Sequencia_da_Compra
+        vgDb.Execute "DELETE FROM [Parcelas Entrada Contas] WHERE [Seqüência da Entrada] = " & Conta![Seqüência da Origem]
+     End If
      
  End If
  
  ValorPrevisao = Pedido![Total Do Pedido] - Parcelas!Total
- Set ULTPC = VgDb.OpenRecordSet("SELECT MAX([Data de Vencimento]) Venc FROM [Parcelas Ped Compra Novo] WHERE [Id do Pedido] = " & Sequencia_da_Compra)
- If ULTPC.RecordCount = 0 Then Exit Sub
+ Set UltPc = vgDb.OpenRecordSet("SELECT MAX([Data de Vencimento]) Venc FROM [Parcelas Ped Compra Novo] WHERE [Id do Pedido] = " & Sequencia_da_Compra)
+ If UltPc.RecordCount = 0 Then Exit Sub
   
   If Parcelas!Total = Pedido![Total Do Pedido] Or ValorPrevisao = 0 Then Exit Sub
   
@@ -6225,26 +5785,26 @@ Private Sub LancaPrevisao()
          !Documento = "Prev. " & Sequencia_da_Compra
          !Titulo = Titulo
          If Cobranca.RecordCount > 0 Then
-            ![Seqüência da Cobrança] = Cobranca![Seqüência da Cobrança] 
-         End If   
+            ![Seqüência da Cobrança] = Cobranca![Seqüência da Cobrança]
+         End If
          ![Data de Entrada] = Date
         
          ![Forma de Pagamento] = Forma_de_Pagamento
          ![Valor Pago] = 0
          ![Valor Restante] = ValorPrevisao
          ![Data da Baixa] = Null
-         ![Data de Vencimento] = ULTPC!Venc
-         ![Vencimento Original] = ![Data de Vencimento]   
+         ![Data de Vencimento] = UltPc!Venc
+         ![Vencimento Original] = ![Data de Vencimento]
          ![Valor Total] = ValorPrevisao
          ![Valor da Parcela] = ValorPrevisao
          ![Seqüência Grupo Despesa] = Pedido![Seqüência Grupo Despesa]
          ![Seqüência SubGrupo Despesa] = Pedido![Seqüência SubGrupo Despesa]
          !Conta = "P"
          !Previsão = 1
-         ![Sequencia da compra] = Sequencia_da_Compra
+         ![Sequencia da Compra] = Sequencia_da_Compra
        .Update
        .BookMark = .LastModified
-     End With 
+     End With
     
      Reposition True
      
@@ -6254,14 +5814,14 @@ Private Function ClienteAux() As String
  Dim Tb As New GRecordSet
  Dim Nome As New GRecordSet
  
-  If Sequencia_do_Orcamento = 0 Then 
+  If Sequencia_do_Orcamento = 0 Then
      ClienteAux = ""
      Exit Function
   Else
-     Set Tb = VgDb.OpenRecordSet("SELECT [Seqüência do Geral] Cod From Orçamento WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-     Set Nome = VgDb.OpenRecordSet("SELECT [Razão Social] X From Geral WHERE [Seqüência do Geral] = " & Tb!Cod)
-     ClienteAux = Nome!X 
-  End If    
+     Set Tb = vgDb.OpenRecordSet("SELECT [Seqüência do Geral] Cod From Orçamento WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+     Set Nome = vgDb.OpenRecordSet("SELECT [Razão Social] X From Geral WHERE [Seqüência do Geral] = " & Tb!Cod)
+     ClienteAux = Nome!x
+  End If
  
 End Function
 
@@ -6277,28 +5837,28 @@ Public Sub ContaEstoque(Produto As Long)
  
  Estoque = 0
  
- Set Produtos = vgDb.OpenRecordSet("SELECT * FROM Produtos Where Inativo = 0 And Produtos.[Seqüência do Produto] = " & Produto)  
+ Set Produtos = vgDb.OpenRecordSet("SELECT * FROM Produtos Where Inativo = 0 And Produtos.[Seqüência do Produto] = " & Produto)
  
    Do While Not Produtos.EOF
       Estoque = Produtos![Quantidade Contábil]
        
-      Set Saidas2 = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência Do Produto] & Filtro2() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Entregar
-      Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência Do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
+      Set Saidas2 = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro2() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Entregar
+      Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
       
-      If Saidas2.RecordCount > 0 Then 
+      If Saidas2.RecordCount > 0 Then
          Estoque = Estoque - Saidas2!Qtd
-         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]
+         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
-      If Saidas.RecordCount > 0 Then 
+      If Saidas.RecordCount > 0 Then
          Estoque = Estoque - Saidas!Qtd
-         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]
+         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Produtos![Material Adquirido de Terceiro] Then
-         Comprados = QtdeRecebida(Produtos![Seqüência Do Produto])
+         Comprados = QtdeRecebida(Produtos![Seqüência do Produto])
          Estoque = Estoque + Comprados
       End If
       
-   vgDb.Execute "Update Produtos Set [Quantidade Fisica] = " & Substitui(CDbl(Estoque), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]  
+   vgDb.Execute "Update Produtos Set [Quantidade Fisica] = " & Substitui(CDbl(Estoque), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
    Produtos.MoveNext
    Loop
     
@@ -6306,7 +5866,7 @@ End Sub
 
 Private Function QtdeRecebida(Produto As Long) As Double
  Dim Tb As New GRecordSet
- Dim Tb1 As New GRecordSet 
+ Dim Tb1 As New GRecordSet
 
  Set Tb = vgDb.OpenRecordSet("SELECT SUM([Qtde Restante]) X From [Bx Produtos Pedido Compra] Left Join [Pedido de Compra Novo] On [Bx Produtos Pedido Compra].[Id do Pedido] = [Pedido de Compra Novo].[Id do Pedido] Where [Bx Produtos Pedido Compra].[Id do Produto] = " & Produto & " And Cancelado = 0 And [Pedido Fechado] = 0 And Prepedido = 0")
  Set Tb1 = vgDb.OpenRecordSet("SELECT SUM(Qtde) X From [Produtos do Pedido Compra] Left Join [Pedido de Compra Novo] On [Produtos do Pedido Compra].[Id do Pedido] = [Pedido de Compra Novo].[Id do Pedido] Where [Produtos do Pedido Compra].[Id do Produto] = " & Produto & " And Cancelado = 0 And [Pedido Fechado] = 0 And Prepedido = 0")
@@ -6315,11 +5875,11 @@ Private Function QtdeRecebida(Produto As Long) As Double
    If Tb1.RecordCount > 0 Or Tb.RecordCount > 0 Then
    
       If Tb!x > 0 Then
-         QtdeRecebida = Tb!X
+         QtdeRecebida = Tb!x
       Else
-         QtdeRecebida = Tb1!X     
-      End If   
-      vgDb.Execute "Update Produtos Set [Comprados Aguardando] = " & Substitui(Cdbl(QtdeRecebida), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
+         QtdeRecebida = Tb1!x
+      End If
+      vgDb.Execute "Update Produtos Set [Comprados Aguardando] = " & Substitui(CDbl(QtdeRecebida), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
       
    End If
  
@@ -6353,9 +5913,9 @@ Private Sub ExtornaProducao()
       Set Baixa = vgDb.OpenRecordSet("SELECT * From [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
           
           Do While Not Baixa.EOF
-             If Tb![Seqüência Do Produto] = Baixa![Seqüência Do Produto] Then
+             If Tb![Seqüência do Produto] = Baixa![Seqüência do Produto] Then
                ' If Baixa!Quantidade = Tb!Quantidade Then
-                   vgDb.Execute "Delete From [Itens Saidas Balcao] Where [Seqüência Do Produto] = " & Baixa![Seqüência Do Produto]
+                   vgDb.Execute "Delete From [Itens Saidas Balcao] Where [Seqüência Do Produto] = " & Baixa![Seqüência do Produto]
                ' End If
              End If
           Baixa.MoveNext
@@ -6366,19 +5926,19 @@ Private Sub ExtornaProducao()
   
 End Sub
 
-Public Sub LigaDesligaBotoes
-   Botao( 0 ).Enabled =    Botao( 0 ).Enabled And Permitido("Geral", ACAO_NAVEGANDO)
-   Botao( 1 ).Enabled =    Botao( 1 ).Enabled And Permitido("Grupo da Despesa", ACAO_NAVEGANDO)
+Public Sub LigaDesligaBotoes()
+   Botao(0).Enabled = Botao(0).Enabled And Permitido("Geral", ACAO_NAVEGANDO)
+   Botao(1).Enabled = Botao(1).Enabled And Permitido("Grupo da Despesa", ACAO_NAVEGANDO)
 End Sub
 
-Public Property Get txtCampoTab(Index As Integer) As FormataCampos   
+Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
 End Sub
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
-   If (vgTb.RecordCount > 0 And vgTb.Eof = False And vgTb.Bof = False) Or vgComOQue = COM_TEXTBOX Then
+   If (vgTb.RecordCount > 0 And vgTb.EOF = False And vgTb.BOF = False) Or vgComOQue = COM_TEXTBOX Then
       If vgComOQue = COM_TEXTBOX Then
          Sequencia_do_Movimento = txtCampo(0).Value
          Data_do_Movimento = txtCampo(26).Value
@@ -6387,10 +5947,10 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_do_Geral = txtCampo(2).Value
          Observacao = txtCampo(3).Value
          Devolucao = chkCampo(0).Value
-         Seq_Prod_Propria = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seq Prod Propria])
-         E_Producao_Propria = Iif(vgSituacao = ACAO_INCLUINDO,False, vgTb![E Produção Propria])
-         Baixa_Consumo = Iif(vgSituacao = ACAO_INCLUINDO,False, vgTb![Baixa Consumo])
-         Seq_Baixa_Consumo = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seq Baixa Consumo])
+         Seq_Prod_Propria = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seq Prod Propria])
+         E_Producao_Propria = IIf(vgSituacao = ACAO_INCLUINDO, False, vgTb![E Produção Propria])
+         Baixa_Consumo = IIf(vgSituacao = ACAO_INCLUINDO, False, vgTb![Baixa Consumo])
+         Seq_Baixa_Consumo = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seq Baixa Consumo])
          Sequencia_da_Compra = txtCampo(27).Value
          Sequencia_Grupo_Despesa = txtCampo(4).Value
          Sequencia_SubGrupo_Despesa = txtCampo(5).Value
@@ -6400,21 +5960,21 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_dos_Produtos = txtCampo(11).Value
          Valor_Total_IPI_dos_Produtos = txtCampo(10).Value
          Valor_Total_do_Movimento = txtCampo(13).Value
-         Data_da_Alteracao = Iif(vgSituacao = ACAO_INCLUINDO,Null, vgTb![Data da Alteração])
-         Hora_da_Alteracao = Iif(vgSituacao = ACAO_INCLUINDO,Null, vgTb![Hora da Alteração])
-         Usuario_da_Alteracao = Iif(vgSituacao = ACAO_INCLUINDO,"", vgTb![Usuário da Alteração])
+         Data_da_Alteracao = IIf(vgSituacao = ACAO_INCLUINDO, Null, vgTb![Data da Alteração])
+         Hora_da_Alteracao = IIf(vgSituacao = ACAO_INCLUINDO, Null, vgTb![Hora da Alteração])
+         Usuario_da_Alteracao = IIf(vgSituacao = ACAO_INCLUINDO, "", vgTb![Usuário da Alteração])
          Valor_Total_das_Despesas = txtCampo(12).Value
-         Valor_Total_IPI_das_Despesas = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Valor Total IPI das Despesas])
+         Valor_Total_IPI_das_Despesas = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Valor Total IPI das Despesas])
          Titulo = txtCampo(6).Value
-         Fechado = Iif(vgSituacao = ACAO_INCLUINDO,False, vgTb!Fechado)
+         Fechado = IIf(vgSituacao = ACAO_INCLUINDO, False, vgTb!Fechado)
          Sequencia_do_Orcamento = txtCampo(29).Value
          Codigo_do_Debito = txtCampo(25).Value
       Else
          Sequencia_do_Movimento = IIf(IsNull(vgTb![Seqüência do Movimento]), 0, vgTb![Seqüência do Movimento])
          Data_do_Movimento = vgTb![Data do Movimento]
-         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo do Movimento]), 0, vgTb![Tipo do Movimento])
+         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo Do Movimento]), 0, vgTb![Tipo Do Movimento])
          Documento = IIf(IsNull(vgTb!Documento), "", vgTb!Documento)
-         Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência do Geral]), 0, vgTb![Seqüência do Geral])
+         Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
          Devolucao = IIf(IsNull(vgTb!Devolução), 0, vgTb!Devolução)
          Seq_Prod_Propria = IIf(IsNull(vgTb![Seq Prod Propria]), 0, vgTb![Seq Prod Propria])
@@ -6425,11 +5985,11 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_Grupo_Despesa = IIf(IsNull(vgTb![Seqüência Grupo Despesa]), 0, vgTb![Seqüência Grupo Despesa])
          Sequencia_SubGrupo_Despesa = IIf(IsNull(vgTb![Seqüência SubGrupo Despesa]), 0, vgTb![Seqüência SubGrupo Despesa])
          Forma_de_Pagamento = IIf(IsNull(vgTb![Forma de Pagamento]), "", vgTb![Forma de Pagamento])
-         Valor_do_Frete = IIf(IsNull(vgTb![Valor do Frete]), 0, vgTb![Valor do Frete])
-         Valor_do_Desconto = IIf(IsNull(vgTb![Valor do Desconto]), 0, vgTb![Valor do Desconto])
+         Valor_do_Frete = IIf(IsNull(vgTb![Valor Do Frete]), 0, vgTb![Valor Do Frete])
+         Valor_do_Desconto = IIf(IsNull(vgTb![Valor Do Desconto]), 0, vgTb![Valor Do Desconto])
          Valor_Total_dos_Produtos = IIf(IsNull(vgTb![Valor Total dos Produtos]), 0, vgTb![Valor Total dos Produtos])
          Valor_Total_IPI_dos_Produtos = IIf(IsNull(vgTb![Valor Total IPI dos Produtos]), 0, vgTb![Valor Total IPI dos Produtos])
-         Valor_Total_do_Movimento = IIf(IsNull(vgTb![Valor Total do Movimento]), 0, vgTb![Valor Total do Movimento])
+         Valor_Total_do_Movimento = IIf(IsNull(vgTb![Valor Total Do Movimento]), 0, vgTb![Valor Total Do Movimento])
          Data_da_Alteracao = vgTb![Data da Alteração]
          Hora_da_Alteracao = vgTb![Hora da Alteração]
          Usuario_da_Alteracao = IIf(IsNull(vgTb![Usuário da Alteração]), "", vgTb![Usuário da Alteração])
@@ -6438,7 +5998,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Titulo = IIf(IsNull(vgTb!Titulo), "", vgTb!Titulo)
          Fechado = IIf(IsNull(vgTb!Fechado), 0, vgTb!Fechado)
          Sequencia_do_Orcamento = IIf(IsNull(vgTb![Seqüência do Orçamento]), 0, vgTb![Seqüência do Orçamento])
-         Codigo_do_Debito = IIf(IsNull(vgTb![Codigo do Debito]), 0, vgTb![Codigo do Debito])
+         Codigo_do_Debito = IIf(IsNull(vgTb![Codigo Do Debito]), 0, vgTb![Codigo Do Debito])
       End If
       Produto_inclui = txtCampo(14).Value
       Qtde_Caixinha = txtCampo(15).Value
@@ -6451,7 +6011,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
       Idconsumo = txtCampo(22).Value
       Devolucao_inclui = txtCampo(23).Value
       Qtde_devolucao = txtCampo(24).Value
-      Nfe = txtCampo(28).Value
+      NFe = txtCampo(28).Value
    End If
    If Err Then Err.Clear                          'se deu algum erro, vamos resetá-lo
 End Sub
@@ -6465,13 +6025,13 @@ Private Sub AnalisaCondicoes()
       If mdiIRRIG.ActiveForm.Name <> Me.Name And Me.Visible Then Exit Sub
    End If
    With mdiIRRIG
-      i = (vgPWUsuario = "YGOR") and Permitido(vgIdentTab, ACAO_INCLUINDO)
+      i = (vgPWUsuario = "YGOR") And Permitido(vgIdentTab, ACAO_INCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemInclusao = i
       grdBrowse.AllowInsert = i
       .botInclui.Enabled = i
       .Menu_Inclui.Enabled = i
-      i = (Produtos_Mvto_Contabil_No.RecordCount = 0 And Conjuntos_Mvto_Contabil_N.RecordCount = 0 And Parcelas_mvto_contabil.RecordCount = 0) and Permitido(vgIdentTab, ACAO_EXCLUINDO)
+      i = (Produtos_Mvto_Contabil_No.RecordCount = 0 And Conjuntos_Mvto_Contabil_N.RecordCount = 0 And Parcelas_mvto_contabil.RecordCount = 0) And Permitido(vgIdentTab, ACAO_EXCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemExclusao = i
       grdBrowse.AllowDelete = i
@@ -6497,7 +6057,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
    vgNVez = 0                                     'porque não fez o processo/validacoes
    If vgOq = VALIDACOES Then
       InicializaApelidos COM_TEXTBOX
-      If VgSituacao = ACAO_INCLUINDO Then
+      If vgSituacao = ACAO_INCLUINDO Then
          vgOk = ((ValidaPeriodoContabil(Data_do_Movimento)) And (IsDate(Data_do_Movimento) Or Vazio(Data_do_Movimento)))
          vgMsg$ = "Data do Movimento não pode ser vazio ou Período Contábil Inválido!"
          If Not vgOk Then vgColumn = 27
@@ -6556,7 +6116,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       End If
       If vgOk Then
          If Consumo_inclui > 0 Then
-            vgOk = (Qtde_CaixinhaConsumo > 0)
+            vgOk = (Qtde_caixinhaconsumo > 0)
             vgMsg$ = "Informe a Quantidade!"
             If Not vgOk Then vgColumn = 22
          End If
@@ -6584,7 +6144,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       End If
       If vgOk Then
          vgMsg$ = ""
-      ElseIf vgColumn <> -1  And Not vgEmBrowse  Then
+      ElseIf vgColumn <> -1 And Not vgEmBrowse Then
          txtCampo(vgColumn - 1).SetFocus
       End If
       DoEvents
@@ -6601,7 +6161,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          opcPainel1(0).Value = True
          opcPainel1(0).CtPri.TabStop = False
          chkCampo(0).Value = False
-         On Error Goto DeuErro
+         On Error GoTo DeuErro
          InicializaApelidos COM_TEXTBOX
          PoeRelEFiltroCbo 2
          PoeRelEFiltroCbo 4
@@ -6692,7 +6252,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       Next
       InicializaApelidos COM_TEXTBOX
-      vgTb![Tipo do Movimento] = Tipo_do_Movimento
+      vgTb![Tipo Do Movimento] = Tipo_do_Movimento
       vgTb!Devolução = Devolucao
       Seq_Prod_Propria = IIf(IsNull(vgTb![Seq Prod Propria]), 0, vgTb![Seq Prod Propria])
       E_Producao_Propria = IIf(IsNull(vgTb![E Produção Propria]), 0, vgTb![E Produção Propria])
@@ -6738,7 +6298,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       If Abs(vgSituacao) = ACAO_INCLUINDO Then
          AjustaValores
       ElseIf Abs(vgSituacao) = ACAO_EDITANDO Then
-         vgdb.Execute "Update [Movimento Contábil Novo] Set [Tipo do Movimento] = " & Tipo & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento: AlteraRegistro
+         vgDb.Execute "Update [Movimento Contábil Novo] Set [Tipo do Movimento] = " & Tipo & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento: AlteraRegistro
       ElseIf Abs(vgSituacao) = ACAO_EXCLUINDO Then
          DeletaBaixa
       End If
@@ -6773,7 +6333,7 @@ DeuErro:
          PrepBotoes Me, vgSituacao                'acerta icones dos botoes
 
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
    If Err = 3265 Then Executar = Executar & vbCrLf & vbCrLf & txtCampo(i).DataField
    If Not vgRsError Is Nothing Then
       vgRsError.CancelUpdate
@@ -6820,7 +6380,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.Recordset.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -6834,7 +6394,7 @@ End Sub
 
 'liga/desliga flag de repetição do último reg visualizado
 Public Sub LigaDesligaAlterar()
-   vgAlterar = Not vgAlterar          
+   vgAlterar = Not vgAlterar
    vgUltAlterar = vgAlterar                            'guarda situação de "pode alterar"
    AnalisaCondicoes                                    'vamos atualizar as condições para inclusão, exclusão, alteração...
    MostraFormulas
@@ -6889,62 +6449,62 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
    Set Movimento_Contabil_Novo = vgTb
    If vgSituacao <> ACAO_INCLUINDO And vgSituacao <> ACAO_EDITANDO Then Executar PEGA_DO_ARQUIVO
    If vgSituacao = ACAO_NAVEGANDO Then
-      AnalisaCondicoes 
+      AnalisaCondicoes
    End If
    On Error Resume Next
    For i = 0 To 3
       Select Case i
          Case 0
-            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse)          Then
+            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(0).CloseRecordset
             Else
                x$ = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
                MudouFiltro = (x$ <> Grid(0).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
-                  If Len(Grid(0).Recordset.RsSource) > 0 Then
-                     Grid(0).CloseRecordSet
+                  If Len(Grid(0).RecordSet.RsSource) > 0 Then
+                     Grid(0).CloseRecordset
                   End If
                   Grid(0).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
                x$ = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
          Case 1
-            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse)          Then
+            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(1).CloseRecordset
             Else
                x$ = ExecutaGrid(1, vgCols(), ABRE_TABELA_GRID)
                MudouFiltro = (x$ <> Grid(1).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(1).Status = ACAO_NAVEGANDO Then
-                  If Len(Grid(0).Recordset.RsSource) > 0 Then
-                     Grid(1).CloseRecordSet
+                  If Len(Grid(0).RecordSet.RsSource) > 0 Then
+                     Grid(1).CloseRecordset
                   End If
                   Grid(1).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
                x$ = ExecutaGrid(1, vgCols(), CONDICOES_ESPECIAIS)
          Case 2
-            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse)          Then
+            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(2).CloseRecordset
             Else
                x$ = ExecutaGrid(2, vgCols(), ABRE_TABELA_GRID)
                MudouFiltro = (x$ <> Grid(2).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(2).Status = ACAO_NAVEGANDO Then
-                  If Len(Grid(0).Recordset.RsSource) > 0 Then
-                     Grid(2).CloseRecordSet
+                  If Len(Grid(0).RecordSet.RsSource) > 0 Then
+                     Grid(2).CloseRecordset
                   End If
                   Grid(2).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
                x$ = ExecutaGrid(2, vgCols(), CONDICOES_ESPECIAIS)
          Case 3
-            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse)          Then
+            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(3).CloseRecordset
             Else
                x$ = ExecutaGrid(3, vgCols(), ABRE_TABELA_GRID)
                MudouFiltro = (x$ <> Grid(3).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(3).Status = ACAO_NAVEGANDO Then
-                  If Len(Grid(0).Recordset.RsSource) > 0 Then
-                     Grid(3).CloseRecordSet
+                  If Len(Grid(0).RecordSet.RsSource) > 0 Then
+                     Grid(3).CloseRecordset
                   End If
                   Grid(3).OpenRecordSet x$, CURSOR_TABLE
                End If
@@ -6997,7 +6557,7 @@ Private Sub ExecutaPreValidacao()
    Botao(1).Enabled = Ok
    Ok = (Sequencia_do_Geral > 0)
    Label(12).Enabled = Ok And vgAlterar
-   Ok = ((Sequencia_do_Geral > 0) AND Sequencia_Grupo_Despesa > 0)
+   Ok = ((Sequencia_do_Geral > 0) And Sequencia_Grupo_Despesa > 0)
    txtCampo(5).Locked = Not (vgAlterar And txtCampo(5).Editable)
    txtCampo(5).Enabled = Ok Or Not vgAlterar
    Ok = (Sequencia_do_Geral > 0)
@@ -7012,45 +6572,45 @@ Private Sub ExecutaPreValidacao()
    Label(18).Enabled = Ok And vgAlterar
    Ok = (Sequencia_do_Geral > 0)
    Label(19).Enabled = Ok And vgAlterar
-   Ok = ((Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = ((Documento = "Produção") And Tipo_do_Movimento = 0)
    txtCampo(14).Locked = Not (vgAlterar And txtCampo(14).Editable)
    txtCampo(14).Enabled = Ok Or Not vgAlterar
-   Ok = ((Documento = "Consumo") OR Documento = "Produção")
+   Ok = ((Documento = "Consumo") Or Documento = "Produção")
    Label(26).Enabled = Ok And vgAlterar
    Ok = (Produto_inclui > 0)
    txtCampo(15).Locked = Not (vgAlterar And txtCampo(15).Editable)
    txtCampo(15).Enabled = Ok Or Not vgAlterar
-   Ok = ((Documento = "Consumo") OR Documento = "Produção")
+   Ok = ((Documento = "Consumo") Or Documento = "Produção")
    Label(27).Enabled = Ok And vgAlterar
    Ok = (Devolucao_inclui > 0)
    Botao(2).Enabled = Ok
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") And Tipo_do_Movimento = 0)
    txtCampo(16).Locked = Not (vgAlterar And txtCampo(16).Editable)
    txtCampo(16).Enabled = Ok Or Not vgAlterar
    Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    Label(28).Enabled = Ok And vgAlterar
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" and (Documento = "Produção") AND Tipo_do_Movimento = 0 And Identificacao > 0)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") And Tipo_do_Movimento = 0 And Identificacao > 0)
    Botao(3).Enabled = Ok
-   Ok = ((Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = ((Documento = "Produção") And Tipo_do_Movimento = 0)
    Label(29).Enabled = Ok And vgAlterar
-   Ok = ((Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = ((Documento = "Produção") And Tipo_do_Movimento = 0)
    txtCampo(17).Locked = Not (vgAlterar And txtCampo(17).Editable)
    txtCampo(17).Enabled = Ok Or Not vgAlterar
    Ok = (Conjunto_inclui > 0)
    txtCampo(18).Locked = Not (vgAlterar And txtCampo(18).Editable)
    txtCampo(18).Enabled = Ok Or Not vgAlterar
-   Ok = ((Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = ((Documento = "Produção") And Tipo_do_Movimento = 0)
    Label(30).Enabled = Ok And vgAlterar
    Ok = (Conjunto_inclui > 0)
    Botao(4).Enabled = Ok
    Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    Label(31).Enabled = Ok And vgAlterar
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") And Tipo_do_Movimento = 0)
    txtCampo(19).Locked = Not (vgAlterar And txtCampo(19).Editable)
    txtCampo(19).Enabled = Ok Or Not vgAlterar
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" and (Documento = "Produção") AND Tipo_do_Movimento = 0)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Produção") And Tipo_do_Movimento = 0)
    Botao(5).Enabled = Ok
-   Ok = ((Documento = "Consumo") AND Tipo_do_Movimento = 1)
+   Ok = ((Documento = "Consumo") And Tipo_do_Movimento = 1)
    txtCampo(20).Locked = Not (vgAlterar And txtCampo(20).Editable)
    txtCampo(20).Enabled = Ok Or Not vgAlterar
    Ok = (Consumo_inclui > 0)
@@ -7058,10 +6618,10 @@ Private Sub ExecutaPreValidacao()
    txtCampo(21).Enabled = Ok Or Not vgAlterar
    Ok = (Consumo_inclui > 0)
    Botao(6).Enabled = Ok
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Consumo") AND Tipo_do_Movimento = 1)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Consumo") And Tipo_do_Movimento = 1)
    txtCampo(22).Locked = Not (vgAlterar And txtCampo(22).Editable)
    txtCampo(22).Enabled = Ok Or Not vgAlterar
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" and (Documento = "Consumo") AND Tipo_do_Movimento = 1)
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" And (Documento = "Consumo") And Tipo_do_Movimento = 1)
    Botao(7).Enabled = Ok
    Ok = (Tipo_do_Movimento = 0 And Devolucao)
    txtCampo(23).Locked = Not (vgAlterar And txtCampo(23).Editable)
@@ -7074,7 +6634,7 @@ Private Sub ExecutaPreValidacao()
    Ok = (Tipo_do_Movimento = 0)
    txtCampo(25).Locked = Not (vgAlterar And txtCampo(25).Editable)
    txtCampo(25).Enabled = Ok Or Not vgAlterar
-   Ok = (VgSituacao = ACAO_INCLUINDO)
+   Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(26).Locked = Not (vgAlterar And txtCampo(26).Editable)
    txtCampo(26).Enabled = Ok Or Not vgAlterar
    Ok = (vgSituacao = ACAO_NAVEGANDO)
@@ -7095,30 +6655,30 @@ End Sub
 Private Sub ExecutaVisivel()
    On Error Resume Next                           'prepara para possiveis erros
    Label(5).Visible = (False)
-   txtCampo(14).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(26).Visible = ((Documento = "Consumo") OR Documento = "Produção")
-   txtCampo(15).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(27).Visible = ((Documento = "Consumo") OR Documento = "Produção")
-   Botao(2).Visible = ((Tipo_do_Movimento = 0) AND Devolucao)
-   txtCampo(16).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(28).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Botao(3).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(29).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   txtCampo(17).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   txtCampo(18).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(30).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Botao(4).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Label(31).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   txtCampo(19).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   Botao(5).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
-   txtCampo(20).Visible = ((Tipo_do_Movimento = 1) AND Documento = "Consumo")
-   txtCampo(21).Visible = ((Tipo_do_Movimento = 1) AND Documento = "Consumo")
-   Botao(6).Visible = ((Tipo_do_Movimento = 1) AND Documento = "Consumo")
-   txtCampo(22).Visible = ((Tipo_do_Movimento = 1) AND Documento = "Consumo")
-   Botao(7).Visible = ((Tipo_do_Movimento = 1) AND Documento = "Consumo")
+   txtCampo(14).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(26).Visible = ((Documento = "Consumo") Or Documento = "Produção")
+   txtCampo(15).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(27).Visible = ((Documento = "Consumo") Or Documento = "Produção")
+   Botao(2).Visible = ((Tipo_do_Movimento = 0) And Devolucao)
+   txtCampo(16).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(28).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Botao(3).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(29).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   txtCampo(17).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   txtCampo(18).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(30).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Botao(4).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Label(31).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   txtCampo(19).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   Botao(5).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
+   txtCampo(20).Visible = ((Tipo_do_Movimento = 1) And Documento = "Consumo")
+   txtCampo(21).Visible = ((Tipo_do_Movimento = 1) And Documento = "Consumo")
+   Botao(6).Visible = ((Tipo_do_Movimento = 1) And Documento = "Consumo")
+   txtCampo(22).Visible = ((Tipo_do_Movimento = 1) And Documento = "Consumo")
+   Botao(7).Visible = ((Tipo_do_Movimento = 1) And Documento = "Consumo")
    txtCampo(23).Visible = (Tipo_do_Movimento = 0 And Devolucao)
    txtCampo(24).Visible = (Tipo_do_Movimento = 0 And Devolucao)
-   Botao(8).Visible = ((Tipo_do_Movimento = 0) AND Documento = "Produção")
+   Botao(8).Visible = ((Tipo_do_Movimento = 0) And Documento = "Produção")
    Label(39).Visible = (Sequencia_do_Orcamento > 0)
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
@@ -7199,7 +6759,7 @@ Private Sub txtCp_LostFocus(Index As Integer)
    End If
    Select Case Index
       Case 27
-         BuscaGeral  
+         BuscaGeral
    End Select
 End Sub
 
@@ -7304,10 +6864,10 @@ Private Sub Form_Activate()
    
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
    If FormEstaAberto("frmEnviaEmail") Then
-      If Not frmEnviaEmail.Visible Then
-         UnLoad vgFrmImpCons
+      If Not frmEnviaEMail.Visible Then
+         Unload vgFrmImpCons
          Set vgFrmImpCons = Nothing
-         UnLoad frmEnviaEmail
+         Unload frmEnviaEMail
       End If
    End If
    Screen.MousePointer = vbDefault
@@ -7352,16 +6912,16 @@ Private Sub Form_Load()
    Set Botao(9).PictureDisabled = LoadPicture(LoadGasPicture(15786))
    Set Txtbuscageral = txtCampo(2)
    Set lblAjuste = Label(5)
-   Set grdProdutos = Grid(0)
+   Set GrdProdutos = Grid(0)
    Set grdConjuntos = Grid(1)
-   Set grdDespesas = Grid(2)
-   Set Txtforma_de_pagamento = txtCampo(7)
+   Set GrdDespesas = Grid(2)
+   Set txtForma_de_Pagamento = txtCampo(7)
    Set lblParcelamento = Label(21)
    Set Grdparcelamento = Grid(3)
-   Set Txtproduto = txtCampo(14)
+   Set txtProduto = txtCampo(14)
    Set txtQtde_Caixinha = txtCampo(15)
    Set Txtid = txtCampo(16)
-   Set Txtconjunto = txtCampo(17)
+   Set txtConjunto = txtCampo(17)
    Set Txtqtde_caixinhaconjunto = txtCampo(18)
    Set Txtidconj = txtCampo(19)
    Set Txtconsumo = txtCampo(20)
@@ -7464,7 +7024,7 @@ Private Sub Form_Load()
       .CacheSize = 100
       .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS
       .AllowInsert = Permitido("Produtos Mvto Contábil Novo", ACAO_INCLUINDO)
-      .AllowEdit= Permitido("Produtos Mvto Contábil Novo", ACAO_EDITANDO)
+      .AllowEdit = Permitido("Produtos Mvto Contábil Novo", ACAO_EDITANDO)
       .AllowDelete = Permitido("Produtos Mvto Contábil Novo", ACAO_EXCLUINDO)
       .AddColumn Nothing, , "Produto", "Seqüência do Produto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Produtos", "Seqüência do Produto", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "", , "1", "Produtos.[Seqüência do Produto]", "", "IRRIGACAO", "18", 2, "0", 5955
       .AddColumn Nothing, , "ID", "Seqüência do Produto Mvto Novo", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1215
@@ -7494,7 +7054,7 @@ Private Sub Form_Load()
       .CacheSize = 100
       .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS
       .AllowInsert = Permitido("Conjuntos Mvto Contábil Novo", ACAO_INCLUINDO)
-      .AllowEdit= Permitido("Conjuntos Mvto Contábil Novo", ACAO_EDITANDO)
+      .AllowEdit = Permitido("Conjuntos Mvto Contábil Novo", ACAO_EDITANDO)
       .AllowDelete = Permitido("Conjuntos Mvto Contábil Novo", ACAO_EXCLUINDO)
       .AddColumn Nothing, , "Conjunto", "Seqüência do Conjunto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Conjuntos", "Seqüência do Conjunto", "Seqüência do Conjunto; Descrição", "Seqüência do Conjunto; Descrição", "Seqüência do Conjunto; Descrição", "", , "1", "Conjuntos.[Seqüência do Conjunto]", "", "IRRIGACAO", "18", 2, "0", 6510
       .AddColumn Nothing, , "ID", "Seqüência Conjunto Mvto Novo", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1170
@@ -7519,7 +7079,7 @@ Private Sub Form_Load()
       .CacheSize = 100
       .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS
       .AllowInsert = Permitido("Despesas Mvto Contábil Novo", ACAO_INCLUINDO)
-      .AllowEdit= Permitido("Despesas Mvto Contábil Novo", ACAO_EDITANDO)
+      .AllowEdit = Permitido("Despesas Mvto Contábil Novo", ACAO_EDITANDO)
       .AllowDelete = Permitido("Despesas Mvto Contábil Novo", ACAO_EXCLUINDO)
       .AddColumn Nothing, , "Despesa", "Seqüência da Despesa", TP_NUMERICO, "", , False, , "IRRIGACAO", "Despesas", "Seqüência da Despesa", "Seqüência da Despesa; Descrição", "Seqüência da Despesa; Descrição", "Seqüência da Despesa; Descrição", "", , "1", "Despesas.[Seqüência da Despesa]", "", "IRRIGACAO", "18", 2, "0", 6315
       .AddColumn Nothing, , "Un", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 990
@@ -7544,7 +7104,7 @@ Private Sub Form_Load()
       .CacheSize = 100
       .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS Or POP_GRID_STRIPES
       .AllowInsert = Permitido("Parcelas mvto contabil", ACAO_INCLUINDO)
-      .AllowEdit= Permitido("Parcelas mvto contabil", ACAO_EDITANDO)
+      .AllowEdit = Permitido("Parcelas mvto contabil", ACAO_EDITANDO)
       .AllowDelete = Permitido("Parcelas mvto contabil", ACAO_EXCLUINDO)
       .AddColumn Nothing, , "Pc.", "Número da Parcela", TP_NUMERICO, "9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 780
       .AddColumn Nothing, , "Dias", "Dias", TP_NUMERICO, "9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 840
@@ -7571,8 +7131,8 @@ End Sub
 
 Public Sub DefineControles()
  On Error GoTo DeuErro
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hwnd           'não deixa o grid tentar gravar automaticamente
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hwnd             'se estiver perdendo o foco para esses botões
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
    grdBrowse.AllowDelete = True
    grdBrowse.AllowEdit = vgAlterar
    grdBrowse.SpecialPopupDisabled POP_GRID_BARS Or POP_GRID_STRIPES
@@ -7644,7 +7204,7 @@ Public Sub DefineControles()
    Set bottxtCampo2(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(2).DataType = 1
    txtCampo(2).Mask = "999999"
-   txtCampo(2).PesqModoAbertura =  2 
+   txtCampo(2).PesqModoAbertura = 2
    txtCampo(2).PesqFieldCapture = "Geral.[Seqüência do Geral]"
    txtCampo(2).BoundColumn = "Seqüência do Geral"
    txtCampo(2).ListFields = "Razão Social; Seqüência do Geral"
@@ -7654,7 +7214,7 @@ Public Sub DefineControles()
    txtCampo(2).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(2).DataField), txtCampo(2)
 
-   Set chkCampo(0).CtPri = chkCp(0)
+   Set chkCampo(0).CtPri = ChkCp(0)
    chkCampo(0).DataType = 5
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(0).DataField), chkCampo(0)
 
@@ -7676,7 +7236,7 @@ Public Sub DefineControles()
    Set bottxtCampo4(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(4).DataType = 1
    txtCampo(4).Mask = "9999"
-   txtCampo(4).PesqModoAbertura =  2 
+   txtCampo(4).PesqModoAbertura = 2
    txtCampo(4).PesqFieldCapture = "[Grupo da Despesa].[Seqüência Grupo Despesa]"
    txtCampo(4).BoundColumn = "Seqüência Grupo Despesa"
    txtCampo(4).ListFields = "Descrição; Seqüência Grupo Despesa"
@@ -7694,7 +7254,7 @@ Public Sub DefineControles()
    Set bottxtCampo5(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(5).DataType = 1
    txtCampo(5).Mask = "9999"
-   txtCampo(5).PesqModoAbertura =  2 
+   txtCampo(5).PesqModoAbertura = 2
    txtCampo(5).PesqFieldCapture = "[SubGrupo Despesa].[Seqüência SubGrupo Despesa]"
    txtCampo(5).BoundColumn = "Seqüência SubGrupo Despesa"
    txtCampo(5).ListFields = "Descrição; Seqüência SubGrupo Despesa"
@@ -7712,7 +7272,7 @@ Public Sub DefineControles()
    Set bottxtCampo6(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(6).DataType = 0
    txtCampo(6).Mask = "@x"
-   txtCampo(6).PesqModoAbertura =  2 
+   txtCampo(6).PesqModoAbertura = 2
    txtCampo(6).PesqFieldCapture = "[Tipo de Titulos].[Seq do Titulo]"
    txtCampo(6).BoundColumn = "Titulo"
    txtCampo(6).ListFields = "Titulo"
@@ -7808,7 +7368,7 @@ Public Sub DefineControles()
    Set bottxtCampo14(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(14).DataType = 1
    txtCampo(14).Mask = "999999"
-   txtCampo(14).PesqModoAbertura =  2 
+   txtCampo(14).PesqModoAbertura = 2
    txtCampo(14).PesqFieldCapture = "Produtos.[Seqüência do Produto]"
    txtCampo(14).BoundColumn = "Seqüência do Produto"
    txtCampo(14).ListFields = "Seqüência do Produto; Descrição"
@@ -7847,7 +7407,7 @@ Public Sub DefineControles()
    Set bottxtCampo17(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(17).DataType = 1
    txtCampo(17).Mask = "999999"
-   txtCampo(17).PesqModoAbertura =  2 
+   txtCampo(17).PesqModoAbertura = 2
    txtCampo(17).PesqFieldCapture = "Conjuntos.[Seqüência do Conjunto]"
    txtCampo(17).BoundColumn = "Seqüência do Conjunto"
    txtCampo(17).ListFields = "Seqüência do Conjunto; Descrição"
@@ -7886,7 +7446,7 @@ Public Sub DefineControles()
    Set bottxtCampo20(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(20).DataType = 1
    txtCampo(20).Mask = "999999"
-   txtCampo(20).PesqModoAbertura =  2 
+   txtCampo(20).PesqModoAbertura = 2
    txtCampo(20).PesqFieldCapture = "Produtos.[Seqüência do Produto]"
    txtCampo(20).BoundColumn = "Seqüência do Produto"
    txtCampo(20).ListFields = "Seqüência do Produto; Descrição"
@@ -7925,7 +7485,7 @@ Public Sub DefineControles()
    Set bottxtCampo23(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(23).DataType = 1
    txtCampo(23).Mask = "999999"
-   txtCampo(23).PesqModoAbertura =  2 
+   txtCampo(23).PesqModoAbertura = 2
    txtCampo(23).PesqFieldCapture = "Produtos.[Seqüência do Produto]"
    txtCampo(23).BoundColumn = "Seqüência do Produto"
    txtCampo(23).ListFields = "Seqüência do Produto; Descrição"
@@ -7974,7 +7534,7 @@ Public Sub DefineControles()
    Set bottxtCampo25(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(25).DataType = 1
    txtCampo(25).Mask = "9999999"
-   txtCampo(25).PesqModoAbertura =  2 
+   txtCampo(25).PesqModoAbertura = 2
    txtCampo(25).PesqFieldCapture = "[Conta Contabil].[Codigo Contabil]"
    txtCampo(25).BoundColumn = "Codigo Contabil"
    txtCampo(25).ListFields = "Codigo Contabil; Descrição; Conta Contabil"
@@ -7986,10 +7546,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -8071,16 +7631,16 @@ Private Sub Form_Unload(Cancel As Integer)
    FinalizaForm Me
    Set Txtbuscageral = Nothing
    Set lblAjuste = Nothing
-   Set grdProdutos = Nothing
+   Set GrdProdutos = Nothing
    Set grdConjuntos = Nothing
-   Set grdDespesas = Nothing
-   Set Txtforma_de_pagamento = Nothing
+   Set GrdDespesas = Nothing
+   Set txtForma_de_Pagamento = Nothing
    Set lblParcelamento = Nothing
    Set Grdparcelamento = Nothing
-   Set Txtproduto = Nothing
+   Set txtProduto = Nothing
    Set txtQtde_Caixinha = Nothing
    Set Txtid = Nothing
-   Set Txtconjunto = Nothing
+   Set txtConjunto = Nothing
    Set Txtqtde_caixinhaconjunto = Nothing
    Set Txtidconj = Nothing
    Set Txtconsumo = Nothing
@@ -8103,24 +7663,24 @@ Private Sub Form_Unload(Cancel As Integer)
       Set Movimento_Contabil_Novo = Nothing
    End If
    If Not Conjuntos_Mvto_Contabil_N Is Nothing Then
-      Conjuntos_Mvto_Contabil_N.CloseRecordSet
+      Conjuntos_Mvto_Contabil_N.CloseRecordset
       Set Conjuntos_Mvto_Contabil_N = Nothing
    End If
    If Not Despesas_Mvto_Contabil_No Is Nothing Then
-      Despesas_Mvto_Contabil_No.CloseRecordSet
+      Despesas_Mvto_Contabil_No.CloseRecordset
       Set Despesas_Mvto_Contabil_No = Nothing
    End If
    If Not Produtos_Mvto_Contabil_No Is Nothing Then
-      Produtos_Mvto_Contabil_No.CloseRecordSet
+      Produtos_Mvto_Contabil_No.CloseRecordset
       Set Produtos_Mvto_Contabil_No = Nothing
    End If
    If Not Parcelas_mvto_contabil Is Nothing Then
-      Parcelas_mvto_contabil.CloseRecordSet
+      Parcelas_mvto_contabil.CloseRecordset
       Set Parcelas_mvto_contabil = Nothing
    End If
 
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
-   UnLoad vgFrmImpCons
+   Unload vgFrmImpCons
    Set vgFrmImpCons = Nothing
 
    'vamos descarregar todos os grids
@@ -8297,7 +7857,7 @@ Private Sub Grid_AfterDeleteRecord(Index As Integer, ByVal vgItem As Long, vgCol
          ExecutaGrid Index, vgColumns(), APOS_EDICAO, vgItem, vgColumn, vgIsValid, vgColumn, vgErrorMessage
    End Select
    mdiIRRIG.RemontaForm                                   'vamos atualizar os forms de dados
-   Grid(Index).Repaint -1                                 'atualiza dados do grid (registro posicionado) 
+   Grid(Index).Repaint -1                                 'atualiza dados do grid (registro posicionado)
 End Sub
 
 Private Sub Grid_ControlButtonClick(Index As Integer)
@@ -8315,7 +7875,7 @@ End Sub
 
 Private Sub Grid_StatusChanged(Index As Integer, ByVal vgNewStatus As Integer)
    Dim vgTemAltGrdOld As Boolean
-   If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = - vgNewStatus
+   If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = -vgNewStatus
    PrepBotoes Me, vgNewStatus                                     'acerta icones dos botoes
    vgTemAltGrdOld = vgTemAlteracaoGrids
    mdiIRRIG.RemontaForm                                           'remonta dos os form da tela
@@ -8337,20 +7897,20 @@ End Sub
 'inicializações, validações e processos para o grid
 Private Function ExecutaGrid(Index As Integer, ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Select Case Index
-      Case  0 
+      Case 0
          ExecutaGrid = ExecutaGrid0(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
-      Case  1 
+      Case 1
          ExecutaGrid = ExecutaGrid1(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
-      Case  2 
+      Case 2
          ExecutaGrid = ExecutaGrid2(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
-      Case  3 
+      Case 3
          ExecutaGrid = ExecutaGrid3(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
    End Select
 End Function
 
 'inicializações, validações e processos do grid filho
 Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
-   Dim vgRetVal As Variant, vgRsError As GRecordSet, x as String, vgNVez As Integer
+   Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, Quantidade As Double
    Dim Valor_Unitario As Double, Valor_de_Custo As Double, Valor_Total As Double
    Dim Valor_do_PIS As Double, Valor_do_Cofins As Double, Valor_do_IPI As Double
@@ -8395,9 +7955,9 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 12
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 16
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8405,14 +7965,14 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       ComandosProdutos KeyCodeAscii, Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra 
+   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
       On Error Resume Next
          Grid(0).AllowEdit = (False)
       On Error Resume Next
-         Grid(0).AllowDelete = (vgPWUsuario = "YGOR")
+         Grid(0).AllowDelete = (vgPWUsuario = "YGOR") Or (vgPWUsuario = "JUCELI")
       End If
       vgRetVal = ""
    ElseIf vgOq = ABRE_TABELA_GRID Then
@@ -8445,7 +8005,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 16
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(0).Col = 16 Then
@@ -8474,13 +8034,13 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgIsValid = (ValidaProduto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
-            If Not vgIsValid Then vgColumn =  1 
+            If Not vgIsValid Then vgColumn = 1
             vgErrorMessage$ = "Impossivel Produto Inativo!!"
          End If
          If vgIsValid And vgCol = -1 Then
             If Sequencia_do_Produto = 0 Then
                vgIsValid = (Sequencia_do_Produto > 0)
-               If Not vgIsValid Then vgColumn =  1 
+               If Not vgIsValid Then vgColumn = 1
                vgErrorMessage$ = "Sequencia do Produto deve que ser Maior que Zero(0)"
             End If
          End If
@@ -8489,7 +8049,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgIsValid = (ValidaSeqItem(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
-               If Not vgIsValid Then vgColumn =  1 
+               If Not vgIsValid Then vgColumn = 1
                vgErrorMessage$ = "Sequencia do Item diferente do pedido de compra Impossivel prosseguir"
             End If
          End If
@@ -8498,19 +8058,19 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgIsValid = (ValidarProducao(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
-               If Not vgIsValid Then vgColumn =  1 
+               If Not vgIsValid Then vgColumn = 1
                vgErrorMessage$ = "ATENÇÃO! ITEM SEM RECEITA"
             End If
          End If
          If vgIsValid And vgCol = -1 Then
             vgIsValid = (Sequencia_Unidade_Speed > 0)
-            If Not vgIsValid Then vgColumn =  4 
+            If Not vgIsValid Then vgColumn = 4
             vgErrorMessage$ = "Sequencia da Unidade do Fornecedor inválido!"
          End If
          If vgIsValid And vgCol = -1 Then
             If Quantidade = 0 Then
                vgIsValid = (Quantidade > 0)
-               If Not vgIsValid Then vgColumn =  5 
+               If Not vgIsValid Then vgColumn = 5
                vgErrorMessage$ = "Informe a Quantidade!"
             End If
          End If
@@ -8518,8 +8078,8 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             If Quantidade > 0 Then
                vgIsValid = (BlasterTemEstoque(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra) )
-               If Not vgIsValid Then vgColumn =  5 
+   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
+               If Not vgIsValid Then vgColumn = 5
                vgErrorMessage$ = "Matéria Prima Insuficiente ou Quantidade inválida!"
             End If
          End If
@@ -8528,26 +8088,26 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgIsValid = (ValidaQtde(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
-               If Not vgIsValid Then vgColumn =  5 
+               If Not vgIsValid Then vgColumn = 5
                vgErrorMessage$ = "A quantidade total das entradas esta maior que a quentidade comprada no pedido (Impossivel Prosseguir)"
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                If Valor_Unitario = 0 Then
                   vgIsValid = (Valor_Unitario > 0)
-                  If Not vgIsValid Then vgColumn =  12 
+                  If Not vgIsValid Then vgColumn = 12
                   vgErrorMessage$ = "Informe o Valor Unitário!"
                End If
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                If Valor_Unitario > 0 Then
                   vgIsValid = (ValidaUnitario(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra))
-                  If Not vgIsValid Then vgColumn =  12 
+                  If Not vgIsValid Then vgColumn = 12
                   vgErrorMessage$ = "Valor Unitario divirgente do pedido de compra (Impossivel Prosseguir)"
                End If
             End If
@@ -8557,13 +8117,13 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          On Error GoTo DeuErro
          GoSub IniApDaCol
          If Abs(vgSituacao) = ACAO_INCLUINDO Then
-            AjustaValores  
+            AjustaValores
          ElseIf Abs(vgSituacao) = ACAO_EDITANDO Then
-            AjustaValores  
+            AjustaValores
          ElseIf Abs(vgSituacao) = ACAO_EXCLUINDO Then
             AtuLan Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra 
+   Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra
          End If
       ElseIf vgOq = PROCESSOS_DIRETOS Then
          GoSub IniApDaCol
@@ -8577,7 +8137,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8605,7 +8165,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaProduto(Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8645,9 +8205,9 @@ IniApDaCol:
    Valor_Unitario = ColumnValue(12)
    Valor_de_Custo = ColumnValue(16)
    If Grid(0).Status <> ACAO_INCLUINDO Then
-      If Produtos_Mvto_Contabil_No.Eof = False And Produtos_Mvto_Contabil_No.BOF = False And Produtos_Mvto_Contabil_No.RecordCount > 0 Then
+      If Produtos_Mvto_Contabil_No.EOF = False And Produtos_Mvto_Contabil_No.BOF = False And Produtos_Mvto_Contabil_No.RecordCount > 0 Then
          Valor_Total = Produtos_Mvto_Contabil_No![Valor Total]
-         Valor_do_ipi_compra = Produtos_Mvto_Contabil_No![Valor do ipi compra]
+         Valor_do_ipi_compra = Produtos_Mvto_Contabil_No![Valor Do ipi compra]
          Valor_total_compra = Produtos_Mvto_Contabil_No![Valor total compra]
       End If
    End If
@@ -8657,21 +8217,21 @@ IniApDaCol:
 
 IniApDaTb:
    On Error Resume Next
-   If Produtos_Mvto_Contabil_No.Eof = False And Produtos_Mvto_Contabil_No.BOF = False And Produtos_Mvto_Contabil_No.RecordCount > 0 Then
-      Sequencia_do_Produto_Mvto_Novo = Produtos_Mvto_Contabil_No![Seqüência do Produto Mvto Novo]
+   If Produtos_Mvto_Contabil_No.EOF = False And Produtos_Mvto_Contabil_No.BOF = False And Produtos_Mvto_Contabil_No.RecordCount > 0 Then
+      Sequencia_do_Produto_Mvto_Novo = Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
       Sequencia_do_Produto = Produtos_Mvto_Contabil_No![Seqüência do Produto]
       Quantidade = Produtos_Mvto_Contabil_No!Quantidade
       Valor_Unitario = Produtos_Mvto_Contabil_No![Valor Unitário]
       Valor_de_Custo = Produtos_Mvto_Contabil_No![Valor de Custo]
       Valor_Total = Produtos_Mvto_Contabil_No![Valor Total]
-      Valor_do_PIS = Produtos_Mvto_Contabil_No![Valor do PIS]
-      Valor_do_Cofins = Produtos_Mvto_Contabil_No![Valor do Cofins]
+      Valor_do_PIS = Produtos_Mvto_Contabil_No![Valor Do PIS]
+      Valor_do_Cofins = Produtos_Mvto_Contabil_No![Valor Do Cofins]
       Valor_do_IPI = Produtos_Mvto_Contabil_No![Valor do IPI]
-      Valor_do_ICMS = Produtos_Mvto_Contabil_No![Valor do ICMS]
-      Valor_do_Frete = Produtos_Mvto_Contabil_No![Valor do Frete]
+      Valor_do_ICMS = Produtos_Mvto_Contabil_No![Valor Do Icms]
+      Valor_do_Frete = Produtos_Mvto_Contabil_No![Valor Do Frete]
       Valor_da_Substituicao = Produtos_Mvto_Contabil_No![Valor da Substituição]
       Sequencia_Unidade_Speed = Produtos_Mvto_Contabil_No![Sequencia Unidade Speed]
-      Valor_do_ipi_compra = Produtos_Mvto_Contabil_No![Valor do ipi compra]
+      Valor_do_ipi_compra = Produtos_Mvto_Contabil_No![Valor Do ipi compra]
       Valor_total_compra = Produtos_Mvto_Contabil_No![Valor total compra]
    End If
    If Err Then Err.Clear
@@ -8706,7 +8266,7 @@ End Function
 
 'inicializações, validações e processos do grid filho
 Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
-   Dim vgRetVal As Variant, vgRsError As GRecordSet, x as String, vgNVez As Integer
+   Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_Conjunto_Mvto_Novo As Long, Sequencia_do_Conjunto As Long, Quantidade As Double
    Dim Valor_Unitario As Double, Valor_de_Custo As Double, Valor_Total As Double
    Dim Valor_do_PIS As Double, Valor_do_Cofins As Double, Valor_do_IPI As Double
@@ -8736,9 +8296,9 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8746,7 +8306,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       ComandosConjuntos KeyCodeAscii, Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao 
+   Valor_da_Substituicao
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
@@ -8777,7 +8337,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_do_Cofins
             End If
          Case 10
-            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), CalculaConjunto2(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
@@ -8786,7 +8346,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), 0)
             If Grid(1).Col = 11 Then
@@ -8812,26 +8372,26 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (Sequencia_do_Conjunto > 0)
-         If Not vgIsValid Then vgColumn =  1 
+         If Not vgIsValid Then vgColumn = 1
          vgErrorMessage$ = "Seqüência do Conjunto inválido!"
          If vgIsValid And vgCol = -1 Then
             vgIsValid = (BlasterTemEstoqueConj(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao) AND Quantidade > 0)
-            If Not vgIsValid Then vgColumn =  3 
+   Valor_da_Substituicao) And Quantidade > 0)
+            If Not vgIsValid Then vgColumn = 3
             vgErrorMessage$ = "Matéria Prima Insuficiente ou Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
-               If Not vgIsValid Then vgColumn =  10 
+               If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_de_Custo > 0)
-               If Not vgIsValid Then vgColumn =  11 
+               If Not vgIsValid Then vgColumn = 11
                vgErrorMessage$ = "Valor de Custo inválido!"
             End If
          End If
@@ -8848,7 +8408,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa2 Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8867,7 +8427,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaConjunto(Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8897,7 +8457,7 @@ IniApDaCol:
    Valor_Unitario = ColumnValue(10)
    Valor_de_Custo = ColumnValue(11)
    If Grid(1).Status <> ACAO_INCLUINDO Then
-      If Conjuntos_Mvto_Contabil_N.Eof = False And Conjuntos_Mvto_Contabil_N.BOF = False And Conjuntos_Mvto_Contabil_N.RecordCount > 0 Then
+      If Conjuntos_Mvto_Contabil_N.EOF = False And Conjuntos_Mvto_Contabil_N.BOF = False And Conjuntos_Mvto_Contabil_N.RecordCount > 0 Then
          Valor_Total = Conjuntos_Mvto_Contabil_N![Valor Total]
       End If
    End If
@@ -8907,18 +8467,18 @@ IniApDaCol:
 
 IniApDaTb:
    On Error Resume Next
-   If Conjuntos_Mvto_Contabil_N.Eof = False And Conjuntos_Mvto_Contabil_N.BOF = False And Conjuntos_Mvto_Contabil_N.RecordCount > 0 Then
+   If Conjuntos_Mvto_Contabil_N.EOF = False And Conjuntos_Mvto_Contabil_N.BOF = False And Conjuntos_Mvto_Contabil_N.RecordCount > 0 Then
       Sequencia_Conjunto_Mvto_Novo = Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
       Sequencia_do_Conjunto = Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
       Quantidade = Conjuntos_Mvto_Contabil_N!Quantidade
       Valor_Unitario = Conjuntos_Mvto_Contabil_N![Valor Unitário]
       Valor_de_Custo = Conjuntos_Mvto_Contabil_N![Valor de Custo]
       Valor_Total = Conjuntos_Mvto_Contabil_N![Valor Total]
-      Valor_do_PIS = Conjuntos_Mvto_Contabil_N![Valor do PIS]
-      Valor_do_Cofins = Conjuntos_Mvto_Contabil_N![Valor do Cofins]
+      Valor_do_PIS = Conjuntos_Mvto_Contabil_N![Valor Do PIS]
+      Valor_do_Cofins = Conjuntos_Mvto_Contabil_N![Valor Do Cofins]
       Valor_do_IPI = Conjuntos_Mvto_Contabil_N![Valor do IPI]
-      Valor_do_ICMS = Conjuntos_Mvto_Contabil_N![Valor do ICMS]
-      Valor_do_Frete = Conjuntos_Mvto_Contabil_N![Valor do Frete]
+      Valor_do_ICMS = Conjuntos_Mvto_Contabil_N![Valor Do Icms]
+      Valor_do_Frete = Conjuntos_Mvto_Contabil_N![Valor Do Frete]
       Valor_da_Substituicao = Conjuntos_Mvto_Contabil_N![Valor da Substituição]
    End If
    If Err Then Err.Clear
@@ -8953,7 +8513,7 @@ End Function
 
 'inicializações, validações e processos do grid filho
 Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
-   Dim vgRetVal As Variant, vgRsError As GRecordSet, x as String, vgNVez As Integer
+   Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_Despesa_Mvto_Novo As Long, Sequencia_da_Despesa As Long, Quantidade As Double
    Dim Valor_Unitario As Double, Valor_de_Custo As Double, Valor_Total As Double
    Dim Valor_do_PIS As Double, Valor_do_Cofins As Double, Valor_do_IPI As Double
@@ -8989,9 +8549,9 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8999,7 +8559,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       ComandosDespesas KeyCodeAscii, Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
-   Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra 
+   Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
@@ -9041,7 +8601,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(2).Col = 11 Then
@@ -9067,19 +8627,19 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (Sequencia_da_Despesa > 0)
-         If Not vgIsValid Then vgColumn =  1 
+         If Not vgIsValid Then vgColumn = 1
          vgErrorMessage$ = "Seqüência da Despesa inválido!"
          If vgIsValid And vgCol = -1 Then
             vgIsValid = (BlasterTemEstoqueDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra) And Quantidade > 0)
-            If Not vgIsValid Then vgColumn =  3 
+            If Not vgIsValid Then vgColumn = 3
             vgErrorMessage$ = "Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
-               If Not vgIsValid Then vgColumn =  10 
+               If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
             End If
          End If
@@ -9088,11 +8648,11 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
          On Error GoTo DeuErro
          GoSub IniApDaCol
          If Abs(vgSituacao) = ACAO_INCLUINDO Then
-            AjustaValores  
+            AjustaValores
          ElseIf Abs(vgSituacao) = ACAO_EDITANDO Then
-            AjustaValores  
+            AjustaValores
          ElseIf Abs(vgSituacao) = ACAO_EXCLUINDO Then
-            AjustaValores  
+            AjustaValores
          End If
       ElseIf vgOq = PROCESSOS_DIRETOS Then
          GoSub IniApDaCol
@@ -9103,7 +8663,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
@@ -9122,7 +8682,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
          GoSub IniApDaTb
          Movimento_Contabil_Novo.Edit
          Set vgRsError = Movimento_Contabil_Novo
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Despesa_Mvto_Novo) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Despesa_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
@@ -9154,10 +8714,10 @@ IniApDaCol:
    Valor_Unitario = ColumnValue(10)
    Valor_de_Custo = ColumnValue(11)
    If Grid(2).Status <> ACAO_INCLUINDO Then
-      If Despesas_Mvto_Contabil_No.Eof = False And Despesas_Mvto_Contabil_No.BOF = False And Despesas_Mvto_Contabil_No.RecordCount > 0 Then
+      If Despesas_Mvto_Contabil_No.EOF = False And Despesas_Mvto_Contabil_No.BOF = False And Despesas_Mvto_Contabil_No.RecordCount > 0 Then
          Sequencia_Despesa_Mvto_Novo = Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
          Valor_Total = Despesas_Mvto_Contabil_No![Valor Total]
-         Valor_do_ipi_compra = Despesas_Mvto_Contabil_No![Valor do ipi compra]
+         Valor_do_ipi_compra = Despesas_Mvto_Contabil_No![Valor Do ipi compra]
          Valor_total_compra = Despesas_Mvto_Contabil_No![Valor total compra]
       End If
    End If
@@ -9167,20 +8727,20 @@ IniApDaCol:
 
 IniApDaTb:
    On Error Resume Next
-   If Despesas_Mvto_Contabil_No.Eof = False And Despesas_Mvto_Contabil_No.BOF = False And Despesas_Mvto_Contabil_No.RecordCount > 0 Then
+   If Despesas_Mvto_Contabil_No.EOF = False And Despesas_Mvto_Contabil_No.BOF = False And Despesas_Mvto_Contabil_No.RecordCount > 0 Then
       Sequencia_Despesa_Mvto_Novo = Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
-      Sequencia_da_Despesa = Despesas_Mvto_Contabil_No![Seqüência da Despesa]
+      Sequencia_da_Despesa = Despesas_Mvto_Contabil_No![Seqüência Da Despesa]
       Quantidade = Despesas_Mvto_Contabil_No!Quantidade
       Valor_Unitario = Despesas_Mvto_Contabil_No![Valor Unitário]
       Valor_de_Custo = Despesas_Mvto_Contabil_No![Valor de Custo]
       Valor_Total = Despesas_Mvto_Contabil_No![Valor Total]
-      Valor_do_PIS = Despesas_Mvto_Contabil_No![Valor do PIS]
-      Valor_do_Cofins = Despesas_Mvto_Contabil_No![Valor do Cofins]
+      Valor_do_PIS = Despesas_Mvto_Contabil_No![Valor Do PIS]
+      Valor_do_Cofins = Despesas_Mvto_Contabil_No![Valor Do Cofins]
       Valor_do_IPI = Despesas_Mvto_Contabil_No![Valor do IPI]
-      Valor_do_ICMS = Despesas_Mvto_Contabil_No![Valor do ICMS]
-      Valor_do_Frete = Despesas_Mvto_Contabil_No![Valor do Frete]
+      Valor_do_ICMS = Despesas_Mvto_Contabil_No![Valor Do Icms]
+      Valor_do_Frete = Despesas_Mvto_Contabil_No![Valor Do Frete]
       Valor_da_Substituicao = Despesas_Mvto_Contabil_No![Valor da Substituição]
-      Valor_do_ipi_compra = Despesas_Mvto_Contabil_No![Valor do ipi compra]
+      Valor_do_ipi_compra = Despesas_Mvto_Contabil_No![Valor Do ipi compra]
       Valor_total_compra = Despesas_Mvto_Contabil_No![Valor total compra]
    End If
    If Err Then Err.Clear
@@ -9215,7 +8775,7 @@ End Function
 
 'inicializações, validações e processos do grid filho
 Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
-   Dim vgRetVal As Variant, vgRsError As GRecordSet, x as String, vgNVez As Integer
+   Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Numero_da_Parcela As Integer, Dias As Integer, Data_de_Vencimento As Variant
    Dim Valor_da_Parcela As Double, Sequencia_da_Cobranca As Integer
    vgPriVez = True
@@ -9238,11 +8798,11 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
       On Error Resume Next
-         Grid(3).AllowInsert = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) AND TotalParcelas < Movimento_Contabil_Novo![Valor Total Do Movimento] AND Not TemBaixa)
+         Grid(3).AllowInsert = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) And TotalParcelas < Movimento_Contabil_Novo![Valor Total Do Movimento] And Not TemBaixa)
       On Error Resume Next
-         Grid(3).AllowEdit = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) AND Not TemBaixa)
+         Grid(3).AllowEdit = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) And Not TemBaixa)
       On Error Resume Next
-         Grid(3).AllowDelete = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) AND Not TemBaixa)
+         Grid(3).AllowDelete = (Not Vazio(Movimento_Contabil_Novo![Forma de Pagamento]) And Not TemBaixa)
       End If
       vgRetVal = ""
    ElseIf vgOq = ABRE_TABELA_GRID Then
@@ -9261,13 +8821,13 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
             Numero_da_Parcela = UltimaParcela
             vgRetVal = Numero_da_Parcela
          Case 2
-            Dias = DateDiff("D",Movimento_Contabil_Novo![Data do Movimento] , Data_de_Vencimento)
+            Dias = DateDiff("D", Movimento_Contabil_Novo![Data do Movimento], Data_de_Vencimento)
             vgRetVal = Dias
          Case 3
             Data_de_Vencimento = DateAdd("d", Dias, Movimento_Contabil_Novo![Data do Movimento])
             vgRetVal = Data_de_Vencimento
          Case 4
-            Valor_da_Parcela = Movimento_Contabil_Novo![Valor Total do Movimento] - TotalParcelas()
+            Valor_da_Parcela = Movimento_Contabil_Novo![Valor Total Do Movimento] - TotalParcelas()
             vgRetVal = Valor_da_Parcela
       End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
@@ -9281,21 +8841,21 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (1 = 1)
-         If Not vgIsValid Then vgColumn =  2 
+         If Not vgIsValid Then vgColumn = 2
          vgErrorMessage$ = "Dias inválido!"
          If vgIsValid And vgCol = -1 Then
             vgIsValid = ((UltimoVencimento) And (IsDate(Data_de_Vencimento) Or Vazio(Data_de_Vencimento)))
-            If Not vgIsValid Then vgColumn =  3 
+            If Not vgIsValid Then vgColumn = 3
             vgErrorMessage$ = "Data de vencimento não pode ser vazio!"
          End If
          If vgIsValid And vgCol = -1 Then
             vgIsValid = (IIf(vgSituacao = -ACAO_INCLUINDO, IIf(Movimento_Contabil_Novo![Forma de Pagamento] = "Prazo", TotalParcelas() + Valor_da_Parcela <= Movimento_Contabil_Novo![Valor Total Do Movimento], Valor_da_Parcela = Movimento_Contabil_Novo![Valor Total Do Movimento]), IIf(Movimento_Contabil_Novo![Forma de Pagamento] = "Vista", Valor_da_Parcela = Movimento_Contabil_Novo![Valor Total Do Movimento], Valor_da_Parcela > 0 And (TotalParcelas() - TotalParcelas(Numero_da_Parcela)) + Valor_da_Parcela <= Movimento_Contabil_Novo![Valor Total Do Movimento])))
-            If Not vgIsValid Then vgColumn =  4 
+            If Not vgIsValid Then vgColumn = 4
             vgErrorMessage$ = "Total das Parcelas não confere com o Valor Total!"
          End If
          If vgIsValid And vgCol = -1 Then
             vgIsValid = (Sequencia_da_Cobranca > 0)
-            If Not vgIsValid Then vgColumn =  5 
+            If Not vgIsValid Then vgColumn = 5
             vgErrorMessage$ = "Seqüência da cobrança inválido!"
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
@@ -9306,11 +8866,11 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
          On Error GoTo DeuErro
          GoSub IniApDaCol
          If Abs(vgSituacao) = ACAO_INCLUINDO Then
-            LancaParcelas  
+            LancaParcelas
          ElseIf Abs(vgSituacao) = ACAO_EDITANDO Then
-            AlteraParcela Sequencia_do_Movimento, Numero_da_Parcela, Dias, Data_de_Vencimento, Valor_da_Parcela, Sequencia_da_Cobranca 
+            AlteraParcela Sequencia_do_Movimento, Numero_da_Parcela, Dias, Data_de_Vencimento, Valor_da_Parcela, Sequencia_da_Cobranca
          ElseIf Abs(vgSituacao) = ACAO_EXCLUINDO Then
-            DeletaParcela Sequencia_do_Movimento, Numero_da_Parcela, Dias, Data_de_Vencimento, Valor_da_Parcela, Sequencia_da_Cobranca 
+            DeletaParcela Sequencia_do_Movimento, Numero_da_Parcela, Dias, Data_de_Vencimento, Valor_da_Parcela, Sequencia_da_Cobranca
          End If
       End If
    End If
@@ -9330,7 +8890,7 @@ IniApDaCol:
 
 IniApDaTb:
    On Error Resume Next
-   If Parcelas_mvto_contabil.Eof = False And Parcelas_mvto_contabil.BOF = False And Parcelas_mvto_contabil.RecordCount > 0 Then
+   If Parcelas_mvto_contabil.EOF = False And Parcelas_mvto_contabil.BOF = False And Parcelas_mvto_contabil.RecordCount > 0 Then
       Numero_da_Parcela = Parcelas_mvto_contabil![Número da Parcela]
       Dias = Parcelas_mvto_contabil!Dias
       Data_de_Vencimento = Parcelas_mvto_contabil![Data de Vencimento]
@@ -9383,7 +8943,7 @@ Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vg
 End Sub
 
 
-'evento - quando o tempo esgotar  
+'evento - quando o tempo esgotar
 Private Sub timUnLoad_Timer()
    timUnLoad.Enabled = False
    vgPodeFazerUnLoad = True
@@ -9396,25 +8956,25 @@ Private Sub Botao_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    Select Case Index
       Case 0
-         seqRegistro = Sequencia_do_Geral 
+         seqRegistro = Sequencia_do_Geral
          mdiIRRIG.MGeral
       Case 1
-         seqRegistro = Sequencia_Grupo_Despesa 
+         seqRegistro = Sequencia_Grupo_Despesa
          mdiIRRIG.MGDespesa
       Case 2
-         GerarDevolucao  
+         GerarDevolucao
       Case 3
-         Extornar  
+         Extornar
       Case 4
-         IncluiConjunto  
+         IncluiConjunto
       Case 5
-         ExtornarConj  
+         ExtornarConj
       Case 6
-         GerarConsumo  
+         GerarConsumo
       Case 7
-         ExtornarConsumo  
+         ExtornarConsumo
       Case 8
-         IncluiProd  
+         IncluiProd
       Case 9
          mdiIRRIG.MR_MvtoCo
          AtivaForm Me
@@ -9426,130 +8986,130 @@ End Sub
 Private Sub bottxtCampo26_Click(Index As Integer)
    txtCampo(26).SetFocus
    DoEvents
-   txtCampo(26).botClick Index
+   txtCampo(26).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo27_Click(Index As Integer)
    txtCampo(27).SetFocus
    DoEvents
-   txtCampo(27).botClick Index
+   txtCampo(27).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo2_Click(Index As Integer)
    txtCampo(2).SetFocus
    DoEvents
-   txtCampo(2).botClick Index
+   txtCampo(2).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo4_Click(Index As Integer)
    txtCampo(4).SetFocus
    DoEvents
-   txtCampo(4).botClick Index
+   txtCampo(4).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo5_Click(Index As Integer)
    txtCampo(5).SetFocus
    DoEvents
-   txtCampo(5).botClick Index
+   txtCampo(5).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo6_Click(Index As Integer)
    txtCampo(6).SetFocus
    DoEvents
-   txtCampo(6).botClick Index
+   txtCampo(6).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo7_Click(Index As Integer)
    txtCampo(7).SetFocus
    DoEvents
-   txtCampo(7).botClick Index
+   txtCampo(7).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo8_Click(Index As Integer)
    txtCampo(8).SetFocus
    DoEvents
-   txtCampo(8).botClick Index
+   txtCampo(8).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo9_Click(Index As Integer)
    txtCampo(9).SetFocus
    DoEvents
-   txtCampo(9).botClick Index
+   txtCampo(9).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo14_Click(Index As Integer)
    txtCampo(14).SetFocus
    DoEvents
-   txtCampo(14).botClick Index
+   txtCampo(14).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo16_Click(Index As Integer)
    txtCampo(16).SetFocus
    DoEvents
-   txtCampo(16).botClick Index
+   txtCampo(16).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo17_Click(Index As Integer)
    txtCampo(17).SetFocus
    DoEvents
-   txtCampo(17).botClick Index
+   txtCampo(17).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo19_Click(Index As Integer)
    txtCampo(19).SetFocus
    DoEvents
-   txtCampo(19).botClick Index
+   txtCampo(19).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo20_Click(Index As Integer)
    txtCampo(20).SetFocus
    DoEvents
-   txtCampo(20).botClick Index
+   txtCampo(20).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo22_Click(Index As Integer)
    txtCampo(22).SetFocus
    DoEvents
-   txtCampo(22).botClick Index
+   txtCampo(22).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo23_Click(Index As Integer)
    txtCampo(23).SetFocus
    DoEvents
-   txtCampo(23).botClick Index
+   txtCampo(23).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo28_Click(Index As Integer)
    txtCampo(28).SetFocus
    DoEvents
-   txtCampo(28).botClick Index
+   txtCampo(28).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo25_Click(Index As Integer)
    txtCampo(25).SetFocus
    DoEvents
-   txtCampo(25).botClick Index
+   txtCampo(25).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 
