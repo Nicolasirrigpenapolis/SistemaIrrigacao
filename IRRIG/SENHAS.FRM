@@ -362,7 +362,7 @@ Attribute VB_Exposed = False
 '* Função....: Manutenção de senhas
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 24/06/2025 14:51:22
+'* Data......: 24/06/2025 17:03:52
 '* * * * * * *
 
 Option Explicit                                   'requer declaração de variáveis

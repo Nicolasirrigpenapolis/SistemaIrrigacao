@@ -577,7 +577,7 @@ Attribute VB_Exposed = False
 '* Função....: Controle - Pedidos Faturados
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 24/06/2025 14:49:53
+'* Data......: 24/06/2025 17:02:07
 '* * * * * * *
 
 Option Explicit
