@@ -1,10 +1,11 @@
 [History]
-1=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmOrcament/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250624101224	#P7#=0	#P8#=110	.
-2=#P0#=mb	#P1#=AtualizaValoresPecas	#P2#=IRRIG/frmOrcament/AtualizaValoresPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624100634	#P7#=0	#P8#=120	.
-3=#P0#=mb	#P1#=PegaCoresGrid3	#P2#=IRRIG/frmOrcament/PegaCoresGrid3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624100441	#P7#=0	#P8#=4	.
-4=#P0#=mb	#P1#=ExecutaGrid4	#P2#=IRRIG/frmOrcament/ExecutaGrid4	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624100221	#P7#=0	#P8#=173	.
-5=#P0#=mb	#P1#=AtualizaValoresPecas	#P2#=IRRIG/frmNotaFisc/AtualizaValoresPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624095937	#P7#=0	#P8#=82	.
-6=#P0#=mb	#P1#=AtualizaValoresConjuntos	#P2#=IRRIG/frmNotaFisc/AtualizaValoresConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624100707	#P7#=0	#P8#=105	.
-7=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmNotaFisc/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624095759	#P7#=0	#P8#=-2	.
-8=#P0#=mb	#P1#=ExecutaGrid2	#P2#=IRRIG/frmOrcament/ExecutaGrid2	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624095258	#P7#=0	#P8#=28	.
-9=#P0#=mb	#P1#=ExecutaGrid0	#P2#=IRRIG/frmOrcament/ExecutaGrid0	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624095226	#P7#=0	#P8#=0	.
+1=#P0#=mb	#P1#=ExecutaGrid4	#P2#=IRRIG/frmOrcament/ExecutaGrid4	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624152017	#P7#=0	#P8#=30	.
+2=#P0#=mb	#P1#=ExecutaGrid1	#P2#=IRRIG/frmOrcament/ExecutaGrid1	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624151918	#P7#=0	#P8#=99	.
+3=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250624150554	#P7#=0	#P8#=36	.
+4=#P0#=mb	#P1#=chkCp_GotFocus	#P2#=IRRIG/frmOrcament/chkCp_GotFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250624150535	#P7#=0	#P8#=-4	.
+5=#P0#=mb	#P1#=DesmarcaFw	#P2#=IRRIG/frmOrcament/DesmarcaFw	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624150305	#P7#=0	#P8#=-2	.
+6=#P0#=mb	#P1#=VerificaFormulario	#P2#=IRRIG/frmOrcament/VerificaFormulario	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624150204	#P7#=0	#P8#=-2	.
+7=#P0#=mb	#P1#=SuperAtualizaConjuntos	#P2#=IRRIG/frmOrcament/SuperAtualizaConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624150133	#P7#=0	#P8#=50	.
+8=#P0#=mb	#P1#=MostraFormulas	#P2#=IRRIG/frmOrcament/MostraFormulas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624145800	#P7#=0	#P8#=-3	.
+9=#P0#=mb	#P1#=Diam1	#P2#=IRRIG/frmOrcament/Diam1	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624145433	#P7#=0	#P8#=1	.
+10=#P0#=mb	#P1#=Diam2	#P2#=IRRIG/frmOrcament/Diam2	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624144125	#P7#=0	#P8#=-2	.

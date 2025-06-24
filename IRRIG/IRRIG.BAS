@@ -5,7 +5,7 @@ Attribute VB_Name = "modIRRIG"
 '* Função....: Módulo de funções globais
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 20/06/2025 15:07:03
+'* Data......: 24/06/2025 14:51:20
 '* * * * * * *
 
 Option Explicit                                   'requer variáveis explicitamente declaradas

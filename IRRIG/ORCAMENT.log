@@ -1,1 +1,4 @@
-Line 8885: Property Caption in Label must be a quoted string
+Line 304: Property TabPicture(0) in Tabs had an invalid file reference.
+Line 592: Property TabPicture(1) in Tabs had an invalid file reference.
+Line 598: Property TabPicture(2) in Tabs had an invalid file reference.
+Line 604: Property TabPicture(3) in Tabs had an invalid file reference.

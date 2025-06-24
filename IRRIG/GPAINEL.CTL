@@ -96,7 +96,7 @@ Attribute VB_Exposed = False
 '* Função....: Painel 3-D
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 20/06/2025 15:07:07
+'* Data......: 24/06/2025 14:51:23
 '* * * * * * *
 Option Explicit
 DefInt A-Z
