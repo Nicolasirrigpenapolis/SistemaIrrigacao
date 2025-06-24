@@ -15020,6 +15020,22 @@ Private Sub PreValidaNFE()
    Dim Servicos As New GRecordSet
    
    On Error GoTo DeuErro
+   'Verifica obrigatoriedade dos campos de Peso Bruto, Peso Lquido e Volumes
+   If Trim(txtCampo(143).Text) = "" Or Trim(txtCampo(144).Text) = "" Or _
+      Trim(txtCampo(145).Text) = "" Or _
+      Val(txtCampo(143).Text) = 0 Or Val(txtCampo(144).Text) = 0 Or Val(txtCampo(145).Text) = 0 Then
+
+      MsgBox "Preencha Peso Bruto, Peso Lquido e Volumes antes de gerar a nota." & vbCrLf & _
+             "Os valores no podem ficar em branco nem ser zero.", _
+             vbExclamation + vbOKOnly, vaTitulo
+      Exit Sub
+   End If
+'Verifica obrigatoriedade dos campos de Placa, UF da Placa e ANTT
+If Trim(txtPlaca.Text) = "" Or Trim(cmbUFPlaca.Text) = "" Or Trim(txtANTT.Text) = "" Then
+   MsgBox "Preencha Placa, UF da Placa e ANTT antes de gerar a nota.", _
+          vbExclamation + vbOKOnly, vaTitulo
+   Exit Sub
+End If
   
    Set Itens = vgDb.OpenRecordSet("SELECT * FROM(" & _
                                   "SELECT PO.[Seqüência do Orçamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seqüência do Produto], P.Descrição, U.[Sigla da Unidade], PO.[Valor Unitário] " & _
@@ -16729,8 +16745,16 @@ Private Sub chkCp_Click(Index As Integer)
       chkCampo(Index).Change
    End If
    Select Case Index
+      Case 5
+         SuperAtualizaProdutos
+         SuperAtualizaConjuntos
+         SuperAtualizaPecas
       Case 6
          DesmarcaFw
+      Case 9
+         SuperAtualizaProdutos
+         SuperAtualizaConjuntos
+         SuperAtualizaPecas
    End Select
 End Sub
 
@@ -19348,7 +19372,7 @@ Public Sub DefineControles3()
    Set txtCampo(151).CtBot(BOT_COMBO) = bottxtCampo151(BOT_COMBO)
    Set bottxtCampo151(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(151).DataType = 0
-   txtCampo(151).ListFields = "Emitente|Destinatário"
+   txtCampo(151).ListFields = "Emitente|Destinatário|Transportadora|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(151).DataField), txtCampo(151)
 
    Set txtCampo(152).CtPri = txtCp(152)
