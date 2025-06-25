@@ -26,11 +26,11 @@ Begin VB.Form frmOrcament
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   0
+         Index           =   16
          Left            =   13125
-         TabIndex        =   55
+         TabIndex        =   195
          TabStop         =   0   'False
-         Top             =   180
+         Top             =   165
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -44,17 +44,130 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Gerar Nota"
+         Caption         =   "Imprimir"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   8
-         Left            =   14565
-         TabIndex        =   56
+         Index           =   15
+         Left            =   12810
+         TabIndex        =   190
          TabStop         =   0   'False
-         Top             =   750
+         Top             =   735
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   14
+         Left            =   7410
+         TabIndex        =   187
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   2580
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mapa da Propriedade"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   13
+         Left            =   10050
+         TabIndex        =   182
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Ficha Técnica"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14580
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   15180
+         TabIndex        =   59
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   10
+         Left            =   9810
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   1650
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -96,54 +209,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   10
-         Left            =   9810
-         TabIndex        =   4
+         Index           =   8
+         Left            =   14565
+         TabIndex        =   56
          TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   15180
-         TabIndex        =   59
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14580
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1650
+         Top             =   750
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -161,81 +231,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   13
-         Left            =   10050
-         TabIndex        =   182
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Ficha Técnica"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   14
-         Left            =   7410
-         TabIndex        =   187
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   2580
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mapa da Propriedade"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   15
-         Left            =   12810
-         TabIndex        =   190
-         TabStop         =   0   'False
-         Top             =   735
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   16
+         Index           =   0
          Left            =   13125
-         TabIndex        =   195
+         TabIndex        =   55
          TabStop         =   0   'False
-         Top             =   165
+         Top             =   180
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -249,7 +249,7 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Imprimir"
+         Caption         =   "Gerar Nota"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
@@ -289,7 +289,6 @@ Begin VB.Form frmOrcament
          _Version        =   393216
          Style           =   1
          Tabs            =   9
-         Tab             =   5
          TabsPerRow      =   9
          TabHeight       =   519
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -302,73 +301,139 @@ Begin VB.Form frmOrcament
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "&1 - Dados Principais"
-         Tab(0).ControlEnabled=   0   'False
+         Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Label(179)"
+         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).Control(1)=   "Label(178)"
+         Tab(0).Control(1).Enabled=   0   'False
          Tab(0).Control(2)=   "Label(177)"
+         Tab(0).Control(2).Enabled=   0   'False
          Tab(0).Control(3)=   "labFdo151"
+         Tab(0).Control(3).Enabled=   0   'False
          Tab(0).Control(4)=   "Label(176)"
+         Tab(0).Control(4).Enabled=   0   'False
          Tab(0).Control(5)=   "labFdo150"
+         Tab(0).Control(5).Enabled=   0   'False
          Tab(0).Control(6)=   "Label(175)"
+         Tab(0).Control(6).Enabled=   0   'False
          Tab(0).Control(7)=   "labFdo149"
+         Tab(0).Control(7).Enabled=   0   'False
          Tab(0).Control(8)=   "Label(174)"
+         Tab(0).Control(8).Enabled=   0   'False
          Tab(0).Control(9)=   "labFdo147"
+         Tab(0).Control(9).Enabled=   0   'False
          Tab(0).Control(10)=   "Label(172)"
+         Tab(0).Control(10).Enabled=   0   'False
          Tab(0).Control(11)=   "Label(170)"
+         Tab(0).Control(11).Enabled=   0   'False
          Tab(0).Control(12)=   "Label(169)"
+         Tab(0).Control(12).Enabled=   0   'False
          Tab(0).Control(13)=   "Label(168)"
+         Tab(0).Control(13).Enabled=   0   'False
          Tab(0).Control(14)=   "Label(167)"
+         Tab(0).Control(14).Enabled=   0   'False
          Tab(0).Control(15)=   "labFdo137"
+         Tab(0).Control(15).Enabled=   0   'False
          Tab(0).Control(16)=   "Label(146)"
+         Tab(0).Control(16).Enabled=   0   'False
          Tab(0).Control(17)=   "labFdo64"
+         Tab(0).Control(17).Enabled=   0   'False
          Tab(0).Control(18)=   "Label(68)"
+         Tab(0).Control(18).Enabled=   0   'False
          Tab(0).Control(19)=   "Label(67)"
+         Tab(0).Control(19).Enabled=   0   'False
          Tab(0).Control(20)=   "Label(66)"
+         Tab(0).Control(20).Enabled=   0   'False
          Tab(0).Control(21)=   "labFdo62"
+         Tab(0).Control(21).Enabled=   0   'False
          Tab(0).Control(22)=   "Label(65)"
+         Tab(0).Control(22).Enabled=   0   'False
          Tab(0).Control(23)=   "labFdo60"
+         Tab(0).Control(23).Enabled=   0   'False
          Tab(0).Control(24)=   "Label(64)"
+         Tab(0).Control(24).Enabled=   0   'False
          Tab(0).Control(25)=   "Label(63)"
+         Tab(0).Control(25).Enabled=   0   'False
          Tab(0).Control(26)=   "Label(62)"
+         Tab(0).Control(26).Enabled=   0   'False
          Tab(0).Control(27)=   "labFdo59"
+         Tab(0).Control(27).Enabled=   0   'False
          Tab(0).Control(28)=   "Label(61)"
+         Tab(0).Control(28).Enabled=   0   'False
          Tab(0).Control(29)=   "Label(60)"
+         Tab(0).Control(29).Enabled=   0   'False
          Tab(0).Control(30)=   "labFdo55"
+         Tab(0).Control(30).Enabled=   0   'False
          Tab(0).Control(31)=   "Label(57)"
+         Tab(0).Control(31).Enabled=   0   'False
          Tab(0).Control(32)=   "Label(56)"
+         Tab(0).Control(32).Enabled=   0   'False
          Tab(0).Control(33)=   "Label(53)"
+         Tab(0).Control(33).Enabled=   0   'False
          Tab(0).Control(34)=   "Label(52)"
+         Tab(0).Control(34).Enabled=   0   'False
          Tab(0).Control(35)=   "Label(51)"
+         Tab(0).Control(35).Enabled=   0   'False
          Tab(0).Control(36)=   "Label(46)"
+         Tab(0).Control(36).Enabled=   0   'False
          Tab(0).Control(37)=   "Label(45)"
+         Tab(0).Control(37).Enabled=   0   'False
          Tab(0).Control(38)=   "Linha(1)"
+         Tab(0).Control(38).Enabled=   0   'False
          Tab(0).Control(39)=   "Label(44)"
+         Tab(0).Control(39).Enabled=   0   'False
          Tab(0).Control(40)=   "Label(43)"
+         Tab(0).Control(40).Enabled=   0   'False
          Tab(0).Control(41)=   "Label(42)"
+         Tab(0).Control(41).Enabled=   0   'False
          Tab(0).Control(42)=   "Label(41)"
+         Tab(0).Control(42).Enabled=   0   'False
          Tab(0).Control(43)=   "Label(40)"
+         Tab(0).Control(43).Enabled=   0   'False
          Tab(0).Control(44)=   "Label(37)"
+         Tab(0).Control(44).Enabled=   0   'False
          Tab(0).Control(45)=   "Label(36)"
+         Tab(0).Control(45).Enabled=   0   'False
          Tab(0).Control(46)=   "Label(35)"
+         Tab(0).Control(46).Enabled=   0   'False
          Tab(0).Control(47)=   "Label(34)"
+         Tab(0).Control(47).Enabled=   0   'False
          Tab(0).Control(48)=   "Label(33)"
+         Tab(0).Control(48).Enabled=   0   'False
          Tab(0).Control(49)=   "Label(32)"
+         Tab(0).Control(49).Enabled=   0   'False
          Tab(0).Control(50)=   "Label(31)"
+         Tab(0).Control(50).Enabled=   0   'False
          Tab(0).Control(51)=   "Label(16)"
+         Tab(0).Control(51).Enabled=   0   'False
          Tab(0).Control(52)=   "Label(15)"
+         Tab(0).Control(52).Enabled=   0   'False
          Tab(0).Control(53)=   "Label(14)"
+         Tab(0).Control(53).Enabled=   0   'False
          Tab(0).Control(54)=   "labFdo33"
+         Tab(0).Control(54).Enabled=   0   'False
          Tab(0).Control(55)=   "Label(6)"
+         Tab(0).Control(55).Enabled=   0   'False
          Tab(0).Control(56)=   "labFdo17"
+         Tab(0).Control(56).Enabled=   0   'False
          Tab(0).Control(57)=   "Label(4)"
+         Tab(0).Control(57).Enabled=   0   'False
          Tab(0).Control(58)=   "labFdo16"
+         Tab(0).Control(58).Enabled=   0   'False
          Tab(0).Control(59)=   "Label(3)"
+         Tab(0).Control(59).Enabled=   0   'False
          Tab(0).Control(60)=   "Label(2)"
+         Tab(0).Control(60).Enabled=   0   'False
          Tab(0).Control(61)=   "Label(1)"
+         Tab(0).Control(61).Enabled=   0   'False
          Tab(0).Control(62)=   "Label(0)"
+         Tab(0).Control(62).Enabled=   0   'False
          Tab(0).Control(63)=   "txtCp(154)"
+         Tab(0).Control(63).Enabled=   0   'False
          Tab(0).Control(64)=   "txtCp(153)"
+         Tab(0).Control(64).Enabled=   0   'False
          Tab(0).Control(65)=   "txtCp(152)"
+         Tab(0).Control(65).Enabled=   0   'False
          Tab(0).Control(66)=   "txtCp(151)"
          Tab(0).Control(66).Enabled=   0   'False
          Tab(0).Control(67)=   "bottxtCampo151(2)"
@@ -386,14 +451,21 @@ Begin VB.Form frmOrcament
          Tab(0).Control(73)=   "bottxtCampo147(2)"
          Tab(0).Control(73).Enabled=   0   'False
          Tab(0).Control(74)=   "txtCp(146)"
+         Tab(0).Control(74).Enabled=   0   'False
          Tab(0).Control(75)=   "txtCp(145)"
+         Tab(0).Control(75).Enabled=   0   'False
          Tab(0).Control(76)=   "txtCp(144)"
+         Tab(0).Control(76).Enabled=   0   'False
          Tab(0).Control(77)=   "txtCp(143)"
+         Tab(0).Control(77).Enabled=   0   'False
          Tab(0).Control(78)=   "txtCp(137)"
+         Tab(0).Control(78).Enabled=   0   'False
          Tab(0).Control(79)=   "bottxtCampo137(2)"
          Tab(0).Control(79).Enabled=   0   'False
          Tab(0).Control(80)=   "txtCp(65)"
+         Tab(0).Control(80).Enabled=   0   'False
          Tab(0).Control(81)=   "txtCp(64)"
+         Tab(0).Control(81).Enabled=   0   'False
          Tab(0).Control(82)=   "bottxtCampo64(2)"
          Tab(0).Control(82).Enabled=   0   'False
          Tab(0).Control(83)=   "txtCp(63)"
@@ -403,15 +475,19 @@ Begin VB.Form frmOrcament
          Tab(0).Control(85)=   "bottxtCampo62(2)"
          Tab(0).Control(85).Enabled=   0   'False
          Tab(0).Control(86)=   "txtCp(60)"
+         Tab(0).Control(86).Enabled=   0   'False
          Tab(0).Control(87)=   "bottxtCampo60(2)"
          Tab(0).Control(87).Enabled=   0   'False
          Tab(0).Control(88)=   "bottxtCampo60(1)"
          Tab(0).Control(88).Enabled=   0   'False
          Tab(0).Control(89)=   "txtCp(59)"
+         Tab(0).Control(89).Enabled=   0   'False
          Tab(0).Control(90)=   "bottxtCampo59(2)"
          Tab(0).Control(90).Enabled=   0   'False
          Tab(0).Control(91)=   "txtCp(58)"
+         Tab(0).Control(91).Enabled=   0   'False
          Tab(0).Control(92)=   "txtCp(55)"
+         Tab(0).Control(92).Enabled=   0   'False
          Tab(0).Control(93)=   "bottxtCampo55(2)"
          Tab(0).Control(93).Enabled=   0   'False
          Tab(0).Control(94)=   "bottxtCampo55(1)"
@@ -419,14 +495,19 @@ Begin VB.Form frmOrcament
          Tab(0).Control(95)=   "ChkCp(2)"
          Tab(0).Control(95).Enabled=   0   'False
          Tab(0).Control(96)=   "txtCp(54)"
+         Tab(0).Control(96).Enabled=   0   'False
          Tab(0).Control(97)=   "txtCp(51)"
+         Tab(0).Control(97).Enabled=   0   'False
          Tab(0).Control(98)=   "Painel(1)"
+         Tab(0).Control(98).Enabled=   0   'False
          Tab(0).Control(99)=   "txtCp(50)"
          Tab(0).Control(99).Enabled=   0   'False
          Tab(0).Control(100)=   "txtCp(48)"
+         Tab(0).Control(100).Enabled=   0   'False
          Tab(0).Control(101)=   "ChkCp(1)"
          Tab(0).Control(101).Enabled=   0   'False
          Tab(0).Control(102)=   "txtCp(33)"
+         Tab(0).Control(102).Enabled=   0   'False
          Tab(0).Control(103)=   "bottxtCampo33(2)"
          Tab(0).Control(103).Enabled=   0   'False
          Tab(0).Control(104)=   "bottxtCampo33(1)"
@@ -442,20 +523,29 @@ Begin VB.Form frmOrcament
          Tab(0).Control(109)=   "txtCp(26)"
          Tab(0).Control(109).Enabled=   0   'False
          Tab(0).Control(110)=   "txtCp(25)"
+         Tab(0).Control(110).Enabled=   0   'False
          Tab(0).Control(111)=   "txtCp(24)"
+         Tab(0).Control(111).Enabled=   0   'False
          Tab(0).Control(112)=   "txtCp(23)"
+         Tab(0).Control(112).Enabled=   0   'False
          Tab(0).Control(113)=   "txtCp(22)"
+         Tab(0).Control(113).Enabled=   0   'False
          Tab(0).Control(114)=   "txtCp(21)"
+         Tab(0).Control(114).Enabled=   0   'False
          Tab(0).Control(115)=   "txtCp(20)"
+         Tab(0).Control(115).Enabled=   0   'False
          Tab(0).Control(116)=   "txtCp(19)"
          Tab(0).Control(116).Enabled=   0   'False
          Tab(0).Control(117)=   "txtCp(18)"
+         Tab(0).Control(117).Enabled=   0   'False
          Tab(0).Control(118)=   "txtCp(17)"
+         Tab(0).Control(118).Enabled=   0   'False
          Tab(0).Control(119)=   "bottxtCampo17(2)"
          Tab(0).Control(119).Enabled=   0   'False
          Tab(0).Control(120)=   "bottxtCampo17(1)"
          Tab(0).Control(120).Enabled=   0   'False
          Tab(0).Control(121)=   "txtCp(16)"
+         Tab(0).Control(121).Enabled=   0   'False
          Tab(0).Control(122)=   "bottxtCampo16(0)"
          Tab(0).Control(122).Enabled=   0   'False
          Tab(0).Control(123)=   "txtCp(15)"
@@ -463,19 +553,25 @@ Begin VB.Form frmOrcament
          Tab(0).Control(124)=   "ChkCp(0)"
          Tab(0).Control(124).Enabled=   0   'False
          Tab(0).Control(125)=   "txtCp(14)"
+         Tab(0).Control(125).Enabled=   0   'False
          Tab(0).Control(126)=   "txtCp(13)"
+         Tab(0).Control(126).Enabled=   0   'False
          Tab(0).Control(127)=   "txtCp(12)"
+         Tab(0).Control(127).Enabled=   0   'False
          Tab(0).Control(128)=   "txtCp(11)"
          Tab(0).Control(128).Enabled=   0   'False
          Tab(0).Control(129)=   "txtCp(10)"
          Tab(0).Control(129).Enabled=   0   'False
          Tab(0).Control(130)=   "txtCp(8)"
+         Tab(0).Control(130).Enabled=   0   'False
          Tab(0).Control(131)=   "txtCp(7)"
          Tab(0).Control(131).Enabled=   0   'False
          Tab(0).Control(132)=   "txtCp(6)"
          Tab(0).Control(132).Enabled=   0   'False
          Tab(0).Control(133)=   "txtCp(5)"
+         Tab(0).Control(133).Enabled=   0   'False
          Tab(0).Control(134)=   "txtCp(4)"
+         Tab(0).Control(134).Enabled=   0   'False
          Tab(0).Control(135)=   "txtCp(3)"
          Tab(0).Control(135).Enabled=   0   'False
          Tab(0).Control(136)=   "txtCp(2)"
@@ -483,434 +579,481 @@ Begin VB.Form frmOrcament
          Tab(0).Control(137)=   "txtCp(1)"
          Tab(0).Control(137).Enabled=   0   'False
          Tab(0).Control(138)=   "Botao(1)"
+         Tab(0).Control(138).Enabled=   0   'False
          Tab(0).Control(139)=   "Botao(3)"
+         Tab(0).Control(139).Enabled=   0   'False
          Tab(0).Control(140)=   "Botao(4)"
+         Tab(0).Control(140).Enabled=   0   'False
          Tab(0).Control(141)=   "Botao(5)"
+         Tab(0).Control(141).Enabled=   0   'False
          Tab(0).ControlCount=   142
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Grid(3)"
-         Tab(1).Control(1)=   "Label(50)"
+         Tab(1).Control(0)=   "Label(50)"
+         Tab(1).Control(1)=   "Grid(3)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Grid(4)"
-         Tab(2).Control(1)=   "Label(49)"
+         Tab(2).Control(0)=   "Label(49)"
+         Tab(2).Control(1)=   "Grid(4)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Grid(0)"
-         Tab(3).Control(1)=   "labFdo34"
-         Tab(3).Control(2)=   "bottxtCampo34(1)"
-         Tab(3).Control(2).Enabled=   0   'False
-         Tab(3).Control(3)=   "bottxtCampo34(2)"
-         Tab(3).Control(3).Enabled=   0   'False
-         Tab(3).Control(4)=   "txtCp(34)"
-         Tab(3).Control(5)=   "Botao(2)"
-         Tab(3).Control(6)=   "Label(39)"
-         Tab(3).Control(7)=   "Label(47)"
-         Tab(3).Control(8)=   "ChkCp(3)"
-         Tab(3).Control(9)=   "txtCp(61)"
+         Tab(3).Control(0)=   "txtCp(61)"
+         Tab(3).Control(1)=   "ChkCp(3)"
+         Tab(3).Control(2)=   "Label(47)"
+         Tab(3).Control(3)=   "Label(39)"
+         Tab(3).Control(4)=   "Botao(2)"
+         Tab(3).Control(5)=   "txtCp(34)"
+         Tab(3).Control(6)=   "bottxtCampo34(2)"
+         Tab(3).Control(6).Enabled=   0   'False
+         Tab(3).Control(7)=   "bottxtCampo34(1)"
+         Tab(3).Control(7).Enabled=   0   'False
+         Tab(3).Control(8)=   "labFdo34"
+         Tab(3).Control(9)=   "Grid(0)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Grid(1)"
-         Tab(4).Control(1)=   "Label(48)"
+         Tab(4).Control(0)=   "Label(48)"
+         Tab(4).Control(1)=   "Grid(1)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "ORCAMENT.frx":0000
-         Tab(5).ControlEnabled=   -1  'True
-         Tab(5).Control(0)=   "Label(173)"
-         Tab(5).Control(0).Enabled=   0   'False
-         Tab(5).Control(1)=   "labFdo57"
-         Tab(5).Control(1).Enabled=   0   'False
-         Tab(5).Control(2)=   "Label(59)"
+         Tab(5).ControlEnabled=   0   'False
+         Tab(5).Control(0)=   "Botao(6)"
+         Tab(5).Control(1)=   "Botao(7)"
+         Tab(5).Control(2)=   "txtCp(9)"
          Tab(5).Control(2).Enabled=   0   'False
-         Tab(5).Control(3)=   "Label(58)"
+         Tab(5).Control(3)=   "txtCp(31)"
          Tab(5).Control(3).Enabled=   0   'False
-         Tab(5).Control(4)=   "Label(55)"
+         Tab(5).Control(4)=   "bottxtCampo32(0)"
          Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "Label(54)"
-         Tab(5).Control(5).Enabled=   0   'False
-         Tab(5).Control(6)=   "Label(38)"
-         Tab(5).Control(6).Enabled=   0   'False
-         Tab(5).Control(7)=   "Label(30)"
+         Tab(5).Control(5)=   "txtCp(32)"
+         Tab(5).Control(6)=   "Grid(2)"
+         Tab(5).Control(7)=   "bottxtCampo35(2)"
          Tab(5).Control(7).Enabled=   0   'False
-         Tab(5).Control(8)=   "labFdo47"
-         Tab(5).Control(8).Enabled=   0   'False
-         Tab(5).Control(9)=   "Label(29)"
+         Tab(5).Control(8)=   "txtCp(35)"
+         Tab(5).Control(9)=   "txtCp(36)"
          Tab(5).Control(9).Enabled=   0   'False
-         Tab(5).Control(10)=   "Label(28)"
+         Tab(5).Control(10)=   "txtCp(37)"
          Tab(5).Control(10).Enabled=   0   'False
-         Tab(5).Control(11)=   "labFdo45"
+         Tab(5).Control(11)=   "txtCp(38)"
          Tab(5).Control(11).Enabled=   0   'False
-         Tab(5).Control(12)=   "Label(27)"
+         Tab(5).Control(12)=   "txtCp(39)"
          Tab(5).Control(12).Enabled=   0   'False
-         Tab(5).Control(13)=   "Label(26)"
+         Tab(5).Control(13)=   "txtCp(40)"
          Tab(5).Control(13).Enabled=   0   'False
-         Tab(5).Control(14)=   "Label(25)"
+         Tab(5).Control(14)=   "txtCp(41)"
          Tab(5).Control(14).Enabled=   0   'False
-         Tab(5).Control(15)=   "Label(24)"
+         Tab(5).Control(15)=   "txtCp(42)"
          Tab(5).Control(15).Enabled=   0   'False
-         Tab(5).Control(16)=   "Label(23)"
+         Tab(5).Control(16)=   "txtCp(43)"
          Tab(5).Control(16).Enabled=   0   'False
-         Tab(5).Control(17)=   "Label(22)"
+         Tab(5).Control(17)=   "txtCp(44)"
          Tab(5).Control(17).Enabled=   0   'False
-         Tab(5).Control(18)=   "Label(21)"
+         Tab(5).Control(18)=   "bottxtCampo45(0)"
          Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "Label(20)"
-         Tab(5).Control(19).Enabled=   0   'False
-         Tab(5).Control(20)=   "Label(19)"
+         Tab(5).Control(19)=   "txtCp(45)"
+         Tab(5).Control(20)=   "txtCp(46)"
          Tab(5).Control(20).Enabled=   0   'False
-         Tab(5).Control(21)=   "Label(18)"
+         Tab(5).Control(21)=   "bottxtCampo47(0)"
          Tab(5).Control(21).Enabled=   0   'False
-         Tab(5).Control(22)=   "Label(17)"
-         Tab(5).Control(22).Enabled=   0   'False
-         Tab(5).Control(23)=   "Linha(0)"
+         Tab(5).Control(22)=   "txtCp(47)"
+         Tab(5).Control(23)=   "txtCp(49)"
          Tab(5).Control(23).Enabled=   0   'False
-         Tab(5).Control(24)=   "Label(13)"
-         Tab(5).Control(24).Enabled=   0   'False
-         Tab(5).Control(25)=   "Label(12)"
+         Tab(5).Control(24)=   "Painel(2)"
+         Tab(5).Control(25)=   "txtCp(52)"
          Tab(5).Control(25).Enabled=   0   'False
-         Tab(5).Control(26)=   "Label(11)"
+         Tab(5).Control(26)=   "txtCp(53)"
          Tab(5).Control(26).Enabled=   0   'False
-         Tab(5).Control(27)=   "Formato(2)"
+         Tab(5).Control(27)=   "txtCp(56)"
          Tab(5).Control(27).Enabled=   0   'False
-         Tab(5).Control(28)=   "Label(10)"
+         Tab(5).Control(28)=   "bottxtCampo57(0)"
          Tab(5).Control(28).Enabled=   0   'False
-         Tab(5).Control(29)=   "Formato(1)"
-         Tab(5).Control(29).Enabled=   0   'False
-         Tab(5).Control(30)=   "Label(9)"
-         Tab(5).Control(30).Enabled=   0   'False
-         Tab(5).Control(31)=   "Formato(0)"
-         Tab(5).Control(31).Enabled=   0   'False
-         Tab(5).Control(32)=   "Label(8)"
-         Tab(5).Control(32).Enabled=   0   'False
-         Tab(5).Control(33)=   "Label(7)"
-         Tab(5).Control(33).Enabled=   0   'False
-         Tab(5).Control(34)=   "labFdo35"
-         Tab(5).Control(34).Enabled=   0   'False
-         Tab(5).Control(35)=   "labFdo32"
-         Tab(5).Control(35).Enabled=   0   'False
-         Tab(5).Control(36)=   "Label(5)"
-         Tab(5).Control(36).Enabled=   0   'False
-         Tab(5).Control(37)=   "txtCp(148)"
-         Tab(5).Control(37).Enabled=   0   'False
-         Tab(5).Control(38)=   "txtCp(57)"
-         Tab(5).Control(38).Enabled=   0   'False
-         Tab(5).Control(39)=   "bottxtCampo57(0)"
-         Tab(5).Control(39).Enabled=   0   'False
-         Tab(5).Control(40)=   "txtCp(56)"
-         Tab(5).Control(40).Enabled=   0   'False
-         Tab(5).Control(41)=   "txtCp(53)"
-         Tab(5).Control(41).Enabled=   0   'False
-         Tab(5).Control(42)=   "txtCp(52)"
-         Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "Painel(2)"
-         Tab(5).Control(43).Enabled=   0   'False
-         Tab(5).Control(44)=   "txtCp(49)"
-         Tab(5).Control(44).Enabled=   0   'False
-         Tab(5).Control(45)=   "txtCp(47)"
-         Tab(5).Control(45).Enabled=   0   'False
-         Tab(5).Control(46)=   "bottxtCampo47(0)"
-         Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "txtCp(46)"
-         Tab(5).Control(47).Enabled=   0   'False
-         Tab(5).Control(48)=   "txtCp(45)"
-         Tab(5).Control(48).Enabled=   0   'False
-         Tab(5).Control(49)=   "bottxtCampo45(0)"
-         Tab(5).Control(49).Enabled=   0   'False
-         Tab(5).Control(50)=   "txtCp(44)"
-         Tab(5).Control(50).Enabled=   0   'False
-         Tab(5).Control(51)=   "txtCp(43)"
-         Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "txtCp(42)"
-         Tab(5).Control(52).Enabled=   0   'False
-         Tab(5).Control(53)=   "txtCp(41)"
-         Tab(5).Control(53).Enabled=   0   'False
-         Tab(5).Control(54)=   "txtCp(40)"
-         Tab(5).Control(54).Enabled=   0   'False
-         Tab(5).Control(55)=   "txtCp(39)"
-         Tab(5).Control(55).Enabled=   0   'False
-         Tab(5).Control(56)=   "txtCp(38)"
-         Tab(5).Control(56).Enabled=   0   'False
-         Tab(5).Control(57)=   "txtCp(37)"
-         Tab(5).Control(57).Enabled=   0   'False
-         Tab(5).Control(58)=   "txtCp(36)"
-         Tab(5).Control(58).Enabled=   0   'False
-         Tab(5).Control(59)=   "txtCp(35)"
-         Tab(5).Control(59).Enabled=   0   'False
-         Tab(5).Control(60)=   "bottxtCampo35(2)"
-         Tab(5).Control(60).Enabled=   0   'False
-         Tab(5).Control(61)=   "Grid(2)"
-         Tab(5).Control(61).Enabled=   0   'False
-         Tab(5).Control(62)=   "txtCp(32)"
-         Tab(5).Control(62).Enabled=   0   'False
-         Tab(5).Control(63)=   "bottxtCampo32(0)"
-         Tab(5).Control(63).Enabled=   0   'False
-         Tab(5).Control(64)=   "txtCp(31)"
-         Tab(5).Control(64).Enabled=   0   'False
-         Tab(5).Control(65)=   "txtCp(9)"
-         Tab(5).Control(65).Enabled=   0   'False
-         Tab(5).Control(66)=   "Botao(7)"
-         Tab(5).Control(66).Enabled=   0   'False
-         Tab(5).Control(67)=   "Botao(6)"
-         Tab(5).Control(67).Enabled=   0   'False
+         Tab(5).Control(29)=   "txtCp(57)"
+         Tab(5).Control(30)=   "txtCp(148)"
+         Tab(5).Control(31)=   "Label(5)"
+         Tab(5).Control(32)=   "labFdo32"
+         Tab(5).Control(33)=   "labFdo35"
+         Tab(5).Control(34)=   "Label(7)"
+         Tab(5).Control(35)=   "Label(8)"
+         Tab(5).Control(36)=   "Formato(0)"
+         Tab(5).Control(37)=   "Label(9)"
+         Tab(5).Control(38)=   "Formato(1)"
+         Tab(5).Control(39)=   "Label(10)"
+         Tab(5).Control(40)=   "Formato(2)"
+         Tab(5).Control(41)=   "Label(11)"
+         Tab(5).Control(42)=   "Label(12)"
+         Tab(5).Control(43)=   "Label(13)"
+         Tab(5).Control(44)=   "Linha(0)"
+         Tab(5).Control(45)=   "Label(17)"
+         Tab(5).Control(46)=   "Label(18)"
+         Tab(5).Control(47)=   "Label(19)"
+         Tab(5).Control(48)=   "Label(20)"
+         Tab(5).Control(49)=   "Label(21)"
+         Tab(5).Control(50)=   "Label(22)"
+         Tab(5).Control(51)=   "Label(23)"
+         Tab(5).Control(52)=   "Label(24)"
+         Tab(5).Control(53)=   "Label(25)"
+         Tab(5).Control(54)=   "Label(26)"
+         Tab(5).Control(55)=   "Label(27)"
+         Tab(5).Control(56)=   "labFdo45"
+         Tab(5).Control(57)=   "Label(28)"
+         Tab(5).Control(58)=   "Label(29)"
+         Tab(5).Control(59)=   "labFdo47"
+         Tab(5).Control(60)=   "Label(30)"
+         Tab(5).Control(61)=   "Label(38)"
+         Tab(5).Control(62)=   "Label(54)"
+         Tab(5).Control(63)=   "Label(55)"
+         Tab(5).Control(64)=   "Label(58)"
+         Tab(5).Control(65)=   "Label(59)"
+         Tab(5).Control(66)=   "labFdo57"
+         Tab(5).Control(67)=   "Label(173)"
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "Label(69)"
-         Tab(6).Control(1)=   "txtCp(66)"
-         Tab(6).Control(2)=   "Label(70)"
-         Tab(6).Control(3)=   "Linha(2)"
-         Tab(6).Control(4)=   "Label(71)"
-         Tab(6).Control(5)=   "txtCp(67)"
-         Tab(6).Control(6)=   "Label(72)"
-         Tab(6).Control(7)=   "txtCp(68)"
-         Tab(6).Control(8)=   "Label(73)"
-         Tab(6).Control(9)=   "Label(74)"
-         Tab(6).Control(10)=   "txtCp(69)"
-         Tab(6).Control(11)=   "Label(75)"
-         Tab(6).Control(12)=   "txtCp(70)"
-         Tab(6).Control(12).Enabled=   0   'False
-         Tab(6).Control(13)=   "Label(76)"
-         Tab(6).Control(14)=   "txtCp(71)"
-         Tab(6).Control(14).Enabled=   0   'False
-         Tab(6).Control(15)=   "Label(77)"
-         Tab(6).Control(16)=   "txtCp(72)"
-         Tab(6).Control(17)=   "Linha(3)"
-         Tab(6).Control(18)=   "Linha(4)"
-         Tab(6).Control(19)=   "Label(78)"
-         Tab(6).Control(20)=   "Label(79)"
-         Tab(6).Control(21)=   "Label(80)"
-         Tab(6).Control(22)=   "txtCp(73)"
-         Tab(6).Control(23)=   "Label(81)"
-         Tab(6).Control(24)=   "txtCp(74)"
-         Tab(6).Control(25)=   "Label(82)"
-         Tab(6).Control(26)=   "txtCp(75)"
-         Tab(6).Control(27)=   "txtCp(76)"
+         Tab(6).Control(0)=   "Linha(15)"
+         Tab(6).Control(1)=   "Label(166)"
+         Tab(6).Control(2)=   "Label(165)"
+         Tab(6).Control(3)=   "Label(164)"
+         Tab(6).Control(4)=   "Label(163)"
+         Tab(6).Control(5)=   "Label(162)"
+         Tab(6).Control(6)=   "Label(161)"
+         Tab(6).Control(7)=   "Label(160)"
+         Tab(6).Control(8)=   "Linha(14)"
+         Tab(6).Control(9)=   "Label(159)"
+         Tab(6).Control(10)=   "Label(158)"
+         Tab(6).Control(11)=   "Label(157)"
+         Tab(6).Control(12)=   "Label(156)"
+         Tab(6).Control(13)=   "Label(155)"
+         Tab(6).Control(14)=   "Label(154)"
+         Tab(6).Control(15)=   "Label(153)"
+         Tab(6).Control(16)=   "txtCp(114)"
+         Tab(6).Control(16).Enabled=   0   'False
+         Tab(6).Control(17)=   "txtCp(113)"
+         Tab(6).Control(17).Enabled=   0   'False
+         Tab(6).Control(18)=   "txtCp(112)"
+         Tab(6).Control(18).Enabled=   0   'False
+         Tab(6).Control(19)=   "txtCp(111)"
+         Tab(6).Control(19).Enabled=   0   'False
+         Tab(6).Control(20)=   "Label(113)"
+         Tab(6).Control(21)=   "txtCp(110)"
+         Tab(6).Control(21).Enabled=   0   'False
+         Tab(6).Control(22)=   "txtCp(109)"
+         Tab(6).Control(22).Enabled=   0   'False
+         Tab(6).Control(23)=   "txtCp(108)"
+         Tab(6).Control(23).Enabled=   0   'False
+         Tab(6).Control(24)=   "Label(112)"
+         Tab(6).Control(25)=   "Label(111)"
+         Tab(6).Control(26)=   "txtCp(107)"
+         Tab(6).Control(26).Enabled=   0   'False
+         Tab(6).Control(27)=   "txtCp(106)"
          Tab(6).Control(27).Enabled=   0   'False
-         Tab(6).Control(28)=   "Label(83)"
-         Tab(6).Control(29)=   "Label(84)"
-         Tab(6).Control(30)=   "txtCp(77)"
-         Tab(6).Control(31)=   "txtCp(78)"
-         Tab(6).Control(32)=   "Label(85)"
-         Tab(6).Control(33)=   "txtCp(79)"
+         Tab(6).Control(28)=   "txtCp(105)"
+         Tab(6).Control(28).Enabled=   0   'False
+         Tab(6).Control(29)=   "Label(110)"
+         Tab(6).Control(30)=   "Label(109)"
+         Tab(6).Control(31)=   "txtCp(104)"
+         Tab(6).Control(31).Enabled=   0   'False
+         Tab(6).Control(32)=   "txtCp(103)"
+         Tab(6).Control(32).Enabled=   0   'False
+         Tab(6).Control(33)=   "txtCp(102)"
          Tab(6).Control(33).Enabled=   0   'False
-         Tab(6).Control(34)=   "txtCp(80)"
-         Tab(6).Control(34).Enabled=   0   'False
-         Tab(6).Control(35)=   "txtCp(81)"
-         Tab(6).Control(36)=   "Label(86)"
-         Tab(6).Control(37)=   "Label(87)"
-         Tab(6).Control(38)=   "txtCp(82)"
-         Tab(6).Control(39)=   "Label(88)"
-         Tab(6).Control(40)=   "txtCp(83)"
+         Tab(6).Control(34)=   "txtCp(101)"
+         Tab(6).Control(35)=   "bottxtCampo101(2)"
+         Tab(6).Control(35).Enabled=   0   'False
+         Tab(6).Control(36)=   "bottxtCampo101(1)"
+         Tab(6).Control(36).Enabled=   0   'False
+         Tab(6).Control(37)=   "labFdo101"
+         Tab(6).Control(38)=   "txtCp(100)"
+         Tab(6).Control(39)=   "bottxtCampo100(2)"
+         Tab(6).Control(39).Enabled=   0   'False
+         Tab(6).Control(40)=   "bottxtCampo100(1)"
          Tab(6).Control(40).Enabled=   0   'False
-         Tab(6).Control(41)=   "Label(89)"
-         Tab(6).Control(42)=   "txtCp(84)"
-         Tab(6).Control(42).Enabled=   0   'False
-         Tab(6).Control(43)=   "Label(90)"
-         Tab(6).Control(44)=   "txtCp(85)"
+         Tab(6).Control(41)=   "labFdo100"
+         Tab(6).Control(42)=   "Linha(9)"
+         Tab(6).Control(43)=   "txtCp(99)"
+         Tab(6).Control(44)=   "bottxtCampo99(2)"
          Tab(6).Control(44).Enabled=   0   'False
-         Tab(6).Control(45)=   "txtCp(86)"
+         Tab(6).Control(45)=   "bottxtCampo99(1)"
          Tab(6).Control(45).Enabled=   0   'False
-         Tab(6).Control(46)=   "txtCp(87)"
-         Tab(6).Control(46).Enabled=   0   'False
-         Tab(6).Control(47)=   "Label(91)"
-         Tab(6).Control(48)=   "Label(92)"
-         Tab(6).Control(49)=   "txtCp(88)"
-         Tab(6).Control(50)=   "Label(93)"
-         Tab(6).Control(51)=   "txtCp(89)"
-         Tab(6).Control(52)=   "Linha(5)"
-         Tab(6).Control(53)=   "Label(94)"
-         Tab(6).Control(54)=   "Label(95)"
-         Tab(6).Control(55)=   "txtCp(90)"
-         Tab(6).Control(56)=   "txtCp(91)"
-         Tab(6).Control(56).Enabled=   0   'False
-         Tab(6).Control(57)=   "txtCp(92)"
-         Tab(6).Control(57).Enabled=   0   'False
-         Tab(6).Control(58)=   "txtCp(93)"
-         Tab(6).Control(58).Enabled=   0   'False
-         Tab(6).Control(59)=   "txtCp(94)"
-         Tab(6).Control(59).Enabled=   0   'False
-         Tab(6).Control(60)=   "Label(96)"
-         Tab(6).Control(61)=   "Linha(6)"
-         Tab(6).Control(62)=   "Linha(7)"
+         Tab(6).Control(46)=   "labFdo99"
+         Tab(6).Control(47)=   "Label(108)"
+         Tab(6).Control(48)=   "txtCp(98)"
+         Tab(6).Control(49)=   "txtCp(97)"
+         Tab(6).Control(50)=   "Label(107)"
+         Tab(6).Control(51)=   "txtCp(96)"
+         Tab(6).Control(52)=   "Label(106)"
+         Tab(6).Control(53)=   "Label(105)"
+         Tab(6).Control(54)=   "Linha(8)"
+         Tab(6).Control(55)=   "Label(104)"
+         Tab(6).Control(56)=   "Label(103)"
+         Tab(6).Control(57)=   "Label(102)"
+         Tab(6).Control(58)=   "Label(101)"
+         Tab(6).Control(59)=   "Label(100)"
+         Tab(6).Control(60)=   "Label(99)"
+         Tab(6).Control(61)=   "txtCp(95)"
+         Tab(6).Control(62)=   "Label(98)"
          Tab(6).Control(63)=   "Label(97)"
-         Tab(6).Control(64)=   "Label(98)"
-         Tab(6).Control(65)=   "txtCp(95)"
-         Tab(6).Control(66)=   "Label(99)"
-         Tab(6).Control(67)=   "Label(100)"
-         Tab(6).Control(68)=   "Label(101)"
-         Tab(6).Control(69)=   "Label(102)"
-         Tab(6).Control(70)=   "Label(103)"
-         Tab(6).Control(71)=   "Label(104)"
-         Tab(6).Control(72)=   "Linha(8)"
-         Tab(6).Control(73)=   "Label(105)"
-         Tab(6).Control(74)=   "Label(106)"
-         Tab(6).Control(75)=   "txtCp(96)"
-         Tab(6).Control(76)=   "Label(107)"
-         Tab(6).Control(77)=   "txtCp(97)"
-         Tab(6).Control(78)=   "txtCp(98)"
-         Tab(6).Control(79)=   "Label(108)"
-         Tab(6).Control(80)=   "labFdo99"
-         Tab(6).Control(81)=   "bottxtCampo99(1)"
+         Tab(6).Control(64)=   "Linha(7)"
+         Tab(6).Control(65)=   "Linha(6)"
+         Tab(6).Control(66)=   "Label(96)"
+         Tab(6).Control(67)=   "txtCp(94)"
+         Tab(6).Control(67).Enabled=   0   'False
+         Tab(6).Control(68)=   "txtCp(93)"
+         Tab(6).Control(68).Enabled=   0   'False
+         Tab(6).Control(69)=   "txtCp(92)"
+         Tab(6).Control(69).Enabled=   0   'False
+         Tab(6).Control(70)=   "txtCp(91)"
+         Tab(6).Control(70).Enabled=   0   'False
+         Tab(6).Control(71)=   "txtCp(90)"
+         Tab(6).Control(72)=   "Label(95)"
+         Tab(6).Control(73)=   "Label(94)"
+         Tab(6).Control(74)=   "Linha(5)"
+         Tab(6).Control(75)=   "txtCp(89)"
+         Tab(6).Control(76)=   "Label(93)"
+         Tab(6).Control(77)=   "txtCp(88)"
+         Tab(6).Control(78)=   "Label(92)"
+         Tab(6).Control(79)=   "Label(91)"
+         Tab(6).Control(80)=   "txtCp(87)"
+         Tab(6).Control(80).Enabled=   0   'False
+         Tab(6).Control(81)=   "txtCp(86)"
          Tab(6).Control(81).Enabled=   0   'False
-         Tab(6).Control(82)=   "bottxtCampo99(2)"
+         Tab(6).Control(82)=   "txtCp(85)"
          Tab(6).Control(82).Enabled=   0   'False
-         Tab(6).Control(83)=   "txtCp(99)"
-         Tab(6).Control(84)=   "Linha(9)"
-         Tab(6).Control(85)=   "labFdo100"
-         Tab(6).Control(86)=   "bottxtCampo100(1)"
+         Tab(6).Control(83)=   "Label(90)"
+         Tab(6).Control(84)=   "txtCp(84)"
+         Tab(6).Control(84).Enabled=   0   'False
+         Tab(6).Control(85)=   "Label(89)"
+         Tab(6).Control(86)=   "txtCp(83)"
          Tab(6).Control(86).Enabled=   0   'False
-         Tab(6).Control(87)=   "bottxtCampo100(2)"
-         Tab(6).Control(87).Enabled=   0   'False
-         Tab(6).Control(88)=   "txtCp(100)"
-         Tab(6).Control(89)=   "labFdo101"
-         Tab(6).Control(90)=   "bottxtCampo101(1)"
-         Tab(6).Control(90).Enabled=   0   'False
-         Tab(6).Control(91)=   "bottxtCampo101(2)"
-         Tab(6).Control(91).Enabled=   0   'False
-         Tab(6).Control(92)=   "txtCp(101)"
-         Tab(6).Control(93)=   "txtCp(102)"
+         Tab(6).Control(87)=   "Label(88)"
+         Tab(6).Control(88)=   "txtCp(82)"
+         Tab(6).Control(89)=   "Label(87)"
+         Tab(6).Control(90)=   "Label(86)"
+         Tab(6).Control(91)=   "txtCp(81)"
+         Tab(6).Control(92)=   "txtCp(80)"
+         Tab(6).Control(92).Enabled=   0   'False
+         Tab(6).Control(93)=   "txtCp(79)"
          Tab(6).Control(93).Enabled=   0   'False
-         Tab(6).Control(94)=   "txtCp(103)"
-         Tab(6).Control(94).Enabled=   0   'False
-         Tab(6).Control(95)=   "txtCp(104)"
-         Tab(6).Control(95).Enabled=   0   'False
-         Tab(6).Control(96)=   "Label(109)"
-         Tab(6).Control(97)=   "Label(110)"
-         Tab(6).Control(98)=   "txtCp(105)"
-         Tab(6).Control(98).Enabled=   0   'False
-         Tab(6).Control(99)=   "txtCp(106)"
+         Tab(6).Control(94)=   "Label(85)"
+         Tab(6).Control(95)=   "txtCp(78)"
+         Tab(6).Control(96)=   "txtCp(77)"
+         Tab(6).Control(97)=   "Label(84)"
+         Tab(6).Control(98)=   "Label(83)"
+         Tab(6).Control(99)=   "txtCp(76)"
          Tab(6).Control(99).Enabled=   0   'False
-         Tab(6).Control(100)=   "txtCp(107)"
-         Tab(6).Control(100).Enabled=   0   'False
-         Tab(6).Control(101)=   "Label(111)"
-         Tab(6).Control(102)=   "Label(112)"
-         Tab(6).Control(103)=   "txtCp(108)"
-         Tab(6).Control(103).Enabled=   0   'False
-         Tab(6).Control(104)=   "txtCp(109)"
-         Tab(6).Control(104).Enabled=   0   'False
-         Tab(6).Control(105)=   "txtCp(110)"
-         Tab(6).Control(105).Enabled=   0   'False
-         Tab(6).Control(106)=   "Label(113)"
-         Tab(6).Control(107)=   "txtCp(111)"
-         Tab(6).Control(107).Enabled=   0   'False
-         Tab(6).Control(108)=   "txtCp(112)"
-         Tab(6).Control(108).Enabled=   0   'False
-         Tab(6).Control(109)=   "txtCp(113)"
-         Tab(6).Control(109).Enabled=   0   'False
-         Tab(6).Control(110)=   "txtCp(114)"
-         Tab(6).Control(110).Enabled=   0   'False
-         Tab(6).Control(111)=   "Label(153)"
-         Tab(6).Control(112)=   "Label(154)"
-         Tab(6).Control(113)=   "Label(155)"
-         Tab(6).Control(114)=   "Label(156)"
-         Tab(6).Control(115)=   "Label(157)"
-         Tab(6).Control(116)=   "Label(158)"
-         Tab(6).Control(117)=   "Label(159)"
-         Tab(6).Control(118)=   "Linha(14)"
-         Tab(6).Control(119)=   "Label(160)"
-         Tab(6).Control(120)=   "Label(161)"
-         Tab(6).Control(121)=   "Label(162)"
-         Tab(6).Control(122)=   "Label(163)"
-         Tab(6).Control(123)=   "Label(164)"
-         Tab(6).Control(124)=   "Label(165)"
-         Tab(6).Control(125)=   "Label(166)"
-         Tab(6).Control(126)=   "Linha(15)"
+         Tab(6).Control(100)=   "txtCp(75)"
+         Tab(6).Control(101)=   "Label(82)"
+         Tab(6).Control(102)=   "txtCp(74)"
+         Tab(6).Control(103)=   "Label(81)"
+         Tab(6).Control(104)=   "txtCp(73)"
+         Tab(6).Control(105)=   "Label(80)"
+         Tab(6).Control(106)=   "Label(79)"
+         Tab(6).Control(107)=   "Label(78)"
+         Tab(6).Control(108)=   "Linha(4)"
+         Tab(6).Control(109)=   "Linha(3)"
+         Tab(6).Control(110)=   "txtCp(72)"
+         Tab(6).Control(111)=   "Label(77)"
+         Tab(6).Control(112)=   "txtCp(71)"
+         Tab(6).Control(112).Enabled=   0   'False
+         Tab(6).Control(113)=   "Label(76)"
+         Tab(6).Control(114)=   "txtCp(70)"
+         Tab(6).Control(114).Enabled=   0   'False
+         Tab(6).Control(115)=   "Label(75)"
+         Tab(6).Control(116)=   "txtCp(69)"
+         Tab(6).Control(117)=   "Label(74)"
+         Tab(6).Control(118)=   "Label(73)"
+         Tab(6).Control(119)=   "txtCp(68)"
+         Tab(6).Control(120)=   "Label(72)"
+         Tab(6).Control(121)=   "txtCp(67)"
+         Tab(6).Control(122)=   "Label(71)"
+         Tab(6).Control(123)=   "Linha(2)"
+         Tab(6).Control(124)=   "Label(70)"
+         Tab(6).Control(125)=   "txtCp(66)"
+         Tab(6).Control(126)=   "Label(69)"
          Tab(6).ControlCount=   127
          TabCaption(7)   =   "Bomba / Motor"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "Label(114)"
-         Tab(7).Control(1)=   "Linha(10)"
-         Tab(7).Control(2)=   "Label(115)"
-         Tab(7).Control(3)=   "txtCp(115)"
-         Tab(7).Control(4)=   "Label(116)"
-         Tab(7).Control(5)=   "txtCp(116)"
-         Tab(7).Control(6)=   "Label(117)"
-         Tab(7).Control(7)=   "Label(118)"
-         Tab(7).Control(8)=   "txtCp(117)"
-         Tab(7).Control(9)=   "txtCp(118)"
-         Tab(7).Control(10)=   "Label(119)"
-         Tab(7).Control(11)=   "Label(120)"
-         Tab(7).Control(12)=   "txtCp(119)"
-         Tab(7).Control(13)=   "Label(121)"
-         Tab(7).Control(14)=   "txtCp(120)"
-         Tab(7).Control(15)=   "txtCp(121)"
-         Tab(7).Control(15).Enabled=   0   'False
-         Tab(7).Control(16)=   "Label(122)"
-         Tab(7).Control(17)=   "txtCp(122)"
-         Tab(7).Control(17).Enabled=   0   'False
-         Tab(7).Control(18)=   "Label(123)"
-         Tab(7).Control(19)=   "Label(124)"
-         Tab(7).Control(20)=   "txtCp(123)"
-         Tab(7).Control(21)=   "Label(125)"
-         Tab(7).Control(22)=   "txtCp(124)"
-         Tab(7).Control(23)=   "Label(126)"
-         Tab(7).Control(24)=   "Label(127)"
-         Tab(7).Control(25)=   "Label(128)"
-         Tab(7).Control(26)=   "Label(129)"
-         Tab(7).Control(27)=   "Label(130)"
-         Tab(7).Control(28)=   "txtCp(125)"
-         Tab(7).Control(28).Enabled=   0   'False
-         Tab(7).Control(29)=   "Label(131)"
-         Tab(7).Control(30)=   "Linha(11)"
-         Tab(7).Control(31)=   "Linha(12)"
-         Tab(7).Control(32)=   "Label(132)"
-         Tab(7).Control(33)=   "Label(133)"
+         Tab(7).Control(0)=   "txtCp(142)"
+         Tab(7).Control(1)=   "txtCp(141)"
+         Tab(7).Control(2)=   "txtCp(140)"
+         Tab(7).Control(3)=   "txtCp(139)"
+         Tab(7).Control(4)=   "txtCp(138)"
+         Tab(7).Control(5)=   "Label(152)"
+         Tab(7).Control(6)=   "Label(151)"
+         Tab(7).Control(7)=   "Label(150)"
+         Tab(7).Control(8)=   "Label(149)"
+         Tab(7).Control(9)=   "Label(148)"
+         Tab(7).Control(10)=   "Label(147)"
+         Tab(7).Control(11)=   "txtCp(136)"
+         Tab(7).Control(11).Enabled=   0   'False
+         Tab(7).Control(12)=   "Label(145)"
+         Tab(7).Control(13)=   "txtCp(135)"
+         Tab(7).Control(13).Enabled=   0   'False
+         Tab(7).Control(14)=   "Label(144)"
+         Tab(7).Control(15)=   "txtCp(134)"
+         Tab(7).Control(16)=   "Linha(13)"
+         Tab(7).Control(17)=   "Label(143)"
+         Tab(7).Control(18)=   "txtCp(133)"
+         Tab(7).Control(18).Enabled=   0   'False
+         Tab(7).Control(19)=   "Label(142)"
+         Tab(7).Control(20)=   "Label(141)"
+         Tab(7).Control(21)=   "Label(140)"
+         Tab(7).Control(22)=   "txtCp(132)"
+         Tab(7).Control(22).Enabled=   0   'False
+         Tab(7).Control(23)=   "txtCp(131)"
+         Tab(7).Control(24)=   "Label(139)"
+         Tab(7).Control(25)=   "Label(138)"
+         Tab(7).Control(26)=   "txtCp(130)"
+         Tab(7).Control(27)=   "txtCp(129)"
+         Tab(7).Control(28)=   "Label(137)"
+         Tab(7).Control(29)=   "Label(136)"
+         Tab(7).Control(30)=   "txtCp(128)"
+         Tab(7).Control(31)=   "txtCp(127)"
+         Tab(7).Control(32)=   "Label(135)"
+         Tab(7).Control(33)=   "Label(134)"
          Tab(7).Control(34)=   "txtCp(126)"
-         Tab(7).Control(35)=   "Label(134)"
-         Tab(7).Control(36)=   "Label(135)"
-         Tab(7).Control(37)=   "txtCp(127)"
-         Tab(7).Control(38)=   "txtCp(128)"
-         Tab(7).Control(39)=   "Label(136)"
-         Tab(7).Control(40)=   "Label(137)"
-         Tab(7).Control(41)=   "txtCp(129)"
-         Tab(7).Control(42)=   "txtCp(130)"
-         Tab(7).Control(43)=   "Label(138)"
-         Tab(7).Control(44)=   "Label(139)"
-         Tab(7).Control(45)=   "txtCp(131)"
-         Tab(7).Control(46)=   "txtCp(132)"
-         Tab(7).Control(46).Enabled=   0   'False
-         Tab(7).Control(47)=   "Label(140)"
-         Tab(7).Control(48)=   "Label(141)"
-         Tab(7).Control(49)=   "Label(142)"
-         Tab(7).Control(50)=   "txtCp(133)"
-         Tab(7).Control(50).Enabled=   0   'False
-         Tab(7).Control(51)=   "Label(143)"
-         Tab(7).Control(52)=   "Linha(13)"
-         Tab(7).Control(53)=   "txtCp(134)"
-         Tab(7).Control(54)=   "Label(144)"
-         Tab(7).Control(55)=   "txtCp(135)"
-         Tab(7).Control(55).Enabled=   0   'False
-         Tab(7).Control(56)=   "Label(145)"
-         Tab(7).Control(57)=   "txtCp(136)"
-         Tab(7).Control(57).Enabled=   0   'False
-         Tab(7).Control(58)=   "Label(147)"
-         Tab(7).Control(59)=   "Label(148)"
-         Tab(7).Control(60)=   "Label(149)"
-         Tab(7).Control(61)=   "Label(150)"
-         Tab(7).Control(62)=   "Label(151)"
-         Tab(7).Control(63)=   "Label(152)"
-         Tab(7).Control(64)=   "txtCp(138)"
-         Tab(7).Control(65)=   "txtCp(139)"
-         Tab(7).Control(66)=   "txtCp(140)"
-         Tab(7).Control(67)=   "txtCp(141)"
-         Tab(7).Control(68)=   "txtCp(142)"
+         Tab(7).Control(35)=   "Label(133)"
+         Tab(7).Control(36)=   "Label(132)"
+         Tab(7).Control(37)=   "Linha(12)"
+         Tab(7).Control(38)=   "Linha(11)"
+         Tab(7).Control(39)=   "Label(131)"
+         Tab(7).Control(40)=   "txtCp(125)"
+         Tab(7).Control(40).Enabled=   0   'False
+         Tab(7).Control(41)=   "Label(130)"
+         Tab(7).Control(42)=   "Label(129)"
+         Tab(7).Control(43)=   "Label(128)"
+         Tab(7).Control(44)=   "Label(127)"
+         Tab(7).Control(45)=   "Label(126)"
+         Tab(7).Control(46)=   "txtCp(124)"
+         Tab(7).Control(47)=   "Label(125)"
+         Tab(7).Control(48)=   "txtCp(123)"
+         Tab(7).Control(49)=   "Label(124)"
+         Tab(7).Control(50)=   "Label(123)"
+         Tab(7).Control(51)=   "txtCp(122)"
+         Tab(7).Control(51).Enabled=   0   'False
+         Tab(7).Control(52)=   "Label(122)"
+         Tab(7).Control(53)=   "txtCp(121)"
+         Tab(7).Control(53).Enabled=   0   'False
+         Tab(7).Control(54)=   "txtCp(120)"
+         Tab(7).Control(55)=   "Label(121)"
+         Tab(7).Control(56)=   "txtCp(119)"
+         Tab(7).Control(57)=   "Label(120)"
+         Tab(7).Control(58)=   "Label(119)"
+         Tab(7).Control(59)=   "txtCp(118)"
+         Tab(7).Control(60)=   "txtCp(117)"
+         Tab(7).Control(61)=   "Label(118)"
+         Tab(7).Control(62)=   "Label(117)"
+         Tab(7).Control(63)=   "txtCp(116)"
+         Tab(7).Control(64)=   "Label(116)"
+         Tab(7).Control(65)=   "txtCp(115)"
+         Tab(7).Control(66)=   "Label(115)"
+         Tab(7).Control(67)=   "Linha(10)"
+         Tab(7).Control(68)=   "Label(114)"
          Tab(7).ControlCount=   69
          TabCaption(8)   =   "Mapa da Propriedade"
          Tab(8).ControlEnabled=   0   'False
-         Tab(8).Control(0)=   "Label(171)"
-         Tab(8).Control(1)=   "mmCampo(0)"
+         Tab(8).Control(0)=   "mmCampo(0)"
+         Tab(8).Control(1)=   "Label(171)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
+            Height          =   315
+            Index           =   7
+            Left            =   -64005
+            TabIndex        =   105
+            TabStop         =   0   'False
+            Top             =   495
+            Width           =   2055
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Parcelamento"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   375
+            Index           =   6
+            Left            =   -65505
+            TabIndex        =   104
+            TabStop         =   0   'False
+            Top             =   4695
+            Width           =   5070
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   32768
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Atualizar Valor dos Produtos"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   1
-            Left            =   -71700
-            TabIndex        =   28
+            Index           =   5
+            Left            =   9120
+            TabIndex        =   93
+            TabStop         =   0   'False
+            Top             =   4620
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   4
+            Left            =   9600
+            TabIndex        =   30
             TabStop         =   0   'False
             Top             =   2700
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   3
+            Left            =   10125
+            TabIndex        =   19
+            TabStop         =   0   'False
+            Top             =   1380
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -950,31 +1093,9 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   3
-            Left            =   -64875
-            TabIndex        =   19
-            TabStop         =   0   'False
-            Top             =   1380
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   4
-            Left            =   -65400
-            TabIndex        =   30
+            Index           =   1
+            Left            =   3300
+            TabIndex        =   28
             TabStop         =   0   'False
             Top             =   2700
             Width           =   240
@@ -992,74 +1113,6 @@ Begin VB.Form frmOrcament
             EndProperty
             CaptionOffset   =   50
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   5
-            Left            =   -65880
-            TabIndex        =   93
-            TabStop         =   0   'False
-            Top             =   4620
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   375
-            Index           =   6
-            Left            =   9495
-            TabIndex        =   104
-            TabStop         =   0   'False
-            Top             =   4695
-            Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   32768
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Atualizar Valor dos Produtos"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   315
-            Index           =   7
-            Left            =   10995
-            TabIndex        =   105
-            TabStop         =   0   'False
-            Top             =   495
-            Width           =   2055
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Parcelamento"
-            CaptionOffset   =   50
-         End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
             BackColor       =   &H00E0E0E0&
@@ -1074,7 +1127,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   1
-            Left            =   -63390
+            Left            =   11610
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   83
@@ -1096,7 +1149,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   2
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   75
@@ -1118,7 +1171,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   3
-            Left            =   -61770
+            Left            =   13230
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   74
@@ -1139,7 +1192,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   990
             Index           =   4
-            Left            =   -74340
+            Left            =   660
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   37
@@ -1159,7 +1212,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   5
-            Left            =   -74280
+            Left            =   720
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   94
@@ -1180,7 +1233,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   6
-            Left            =   -74130
+            Left            =   870
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   77
@@ -1202,7 +1255,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   7
-            Left            =   -74130
+            Left            =   870
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   78
@@ -1224,7 +1277,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   8
-            Left            =   -63390
+            Left            =   11610
             TabIndex        =   14
             Top             =   915
             Width           =   960
@@ -1245,7 +1298,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   9
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   64
@@ -1267,7 +1320,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   10
-            Left            =   -71400
+            Left            =   3600
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   79
@@ -1289,7 +1342,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   11
-            Left            =   -67875
+            Left            =   7125
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   85
@@ -1311,7 +1364,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   12
-            Left            =   -74130
+            Left            =   870
             MaxLength       =   14
             TabIndex        =   16
             Top             =   1380
@@ -1331,7 +1384,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   13
-            Left            =   -74130
+            Left            =   870
             MaxLength       =   20
             TabIndex        =   23
             Top             =   1845
@@ -1351,7 +1404,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   14
-            Left            =   -71400
+            Left            =   3600
             MaxLength       =   20
             TabIndex        =   24
             Top             =   1845
@@ -1372,7 +1425,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00000080&
             Height          =   240
             Index           =   0
-            Left            =   -65775
+            Left            =   9225
             TabIndex        =   86
             TabStop         =   0   'False
             Top             =   1950
@@ -1392,7 +1445,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   15
-            Left            =   -63420
+            Left            =   11580
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   81
@@ -1403,7 +1456,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo16 
             Height          =   270
             Index           =   0
-            Left            =   -60285
+            Left            =   14715
             Style           =   1  'Graphical
             TabIndex        =   207
             TabStop         =   0   'False
@@ -1425,7 +1478,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   16
-            Left            =   -63405
+            Left            =   11595
             MaxLength       =   255
             TabIndex        =   26
             Top             =   1875
@@ -1434,7 +1487,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo17 
             Height          =   270
             Index           =   1
-            Left            =   -65145
+            Left            =   9855
             Style           =   1  'Graphical
             TabIndex        =   210
             TabStop         =   0   'False
@@ -1444,7 +1497,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo17 
             Height          =   270
             Index           =   2
-            Left            =   -65400
+            Left            =   9600
             Style           =   1  'Graphical
             TabIndex        =   211
             TabStop         =   0   'False
@@ -1466,7 +1519,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   17
-            Left            =   -67860
+            Left            =   7140
             TabIndex        =   18
             Top             =   1395
             Width           =   2445
@@ -1485,7 +1538,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   18
-            Left            =   -74085
+            Left            =   915
             MaxLength       =   60
             TabIndex        =   7
             Top             =   480
@@ -1505,7 +1558,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   19
-            Left            =   -67875
+            Left            =   7125
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   76
@@ -1527,7 +1580,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   20
-            Left            =   -70050
+            Left            =   4950
             MaxLength       =   10
             TabIndex        =   12
             Top             =   915
@@ -1547,7 +1600,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   21
-            Left            =   -71610
+            Left            =   3390
             MaxLength       =   30
             TabIndex        =   17
             Top             =   1380
@@ -1567,7 +1620,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   22
-            Left            =   -61770
+            Left            =   13230
             MaxLength       =   14
             TabIndex        =   15
             Top             =   915
@@ -1587,7 +1640,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   23
-            Left            =   -67860
+            Left            =   7140
             MaxLength       =   50
             TabIndex        =   13
             Top             =   900
@@ -1607,7 +1660,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   24
-            Left            =   -63390
+            Left            =   11610
             MaxLength       =   100
             TabIndex        =   10
             Top             =   450
@@ -1627,7 +1680,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   25
-            Left            =   -74130
+            Left            =   870
             MaxLength       =   100
             TabIndex        =   11
             Top             =   915
@@ -1647,7 +1700,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   26
-            Left            =   -63390
+            Left            =   11610
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   82
@@ -1669,7 +1722,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   27
-            Left            =   -63390
+            Left            =   11610
             Locked          =   -1  'True
             MaxLength       =   3
             TabIndex        =   20
@@ -1691,7 +1744,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   28
-            Left            =   -67875
+            Left            =   7125
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   73
@@ -1713,7 +1766,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   29
-            Left            =   -70050
+            Left            =   4950
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   80
@@ -1735,7 +1788,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   30
-            Left            =   -74130
+            Left            =   870
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   84
@@ -1759,7 +1812,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   31
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   60
@@ -1770,7 +1823,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo32 
             Height          =   270
             Index           =   0
-            Left            =   4725
+            Left            =   -70275
             Style           =   1  'Graphical
             TabIndex        =   214
             TabStop         =   0   'False
@@ -1793,7 +1846,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   32
-            Left            =   3405
+            Left            =   -71595
             MultiLine       =   -1  'True
             TabIndex        =   48
             Top             =   885
@@ -1802,7 +1855,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo33 
             Height          =   270
             Index           =   1
-            Left            =   -71955
+            Left            =   3045
             Style           =   1  'Graphical
             TabIndex        =   217
             TabStop         =   0   'False
@@ -1812,7 +1865,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo33 
             Height          =   270
             Index           =   2
-            Left            =   -72210
+            Left            =   2790
             Style           =   1  'Graphical
             TabIndex        =   218
             TabStop         =   0   'False
@@ -1834,7 +1887,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   33
-            Left            =   -74250
+            Left            =   750
             TabIndex        =   27
             Top             =   2715
             Width           =   2025
@@ -1940,7 +1993,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GListV Grid 
             Height          =   3750
             Index           =   2
-            Left            =   9525
+            Left            =   -65475
             TabIndex        =   53
             Tag             =   "1"
             Top             =   900
@@ -1970,7 +2023,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo35 
             Height          =   270
             Index           =   2
-            Left            =   4725
+            Left            =   -70275
             Style           =   1  'Graphical
             TabIndex        =   223
             TabStop         =   0   'False
@@ -1992,7 +2045,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   35
-            Left            =   3405
+            Left            =   -71595
             TabIndex        =   45
             Top             =   480
             Width           =   1320
@@ -2071,7 +2124,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   36
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   61
@@ -2095,7 +2148,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   37
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   62
@@ -2119,7 +2172,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   38
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   63
@@ -2143,7 +2196,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   39
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   65
@@ -2167,7 +2220,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   40
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   66
@@ -2191,7 +2244,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   41
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   67
@@ -2215,7 +2268,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   42
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   68
@@ -2239,7 +2292,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   43
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   69
@@ -2263,7 +2316,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   44
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   70
@@ -2274,7 +2327,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo45 
             Height          =   270
             Index           =   0
-            Left            =   8880
+            Left            =   -66120
             Style           =   1  'Graphical
             TabIndex        =   246
             TabStop         =   0   'False
@@ -2297,7 +2350,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   45
-            Left            =   7560
+            Left            =   -67440
             MultiLine       =   -1  'True
             TabIndex        =   49
             Top             =   885
@@ -2319,7 +2372,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   46
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   71
@@ -2330,7 +2383,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo47 
             Height          =   270
             Index           =   0
-            Left            =   4725
+            Left            =   -70275
             Style           =   1  'Graphical
             TabIndex        =   250
             TabStop         =   0   'False
@@ -2353,7 +2406,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   47
-            Left            =   3405
+            Left            =   -71595
             MultiLine       =   -1  'True
             TabIndex        =   50
             Top             =   1290
@@ -2373,7 +2426,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   1
-            Left            =   -64830
+            Left            =   10170
             TabIndex        =   9
             TabStop         =   0   'False
             Top             =   570
@@ -2393,7 +2446,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   48
-            Left            =   -67860
+            Left            =   7140
             MaxLength       =   62
             TabIndex        =   8
             Top             =   480
@@ -2415,7 +2468,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   49
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   72
@@ -2438,7 +2491,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   50
-            Left            =   -70740
+            Left            =   4260
             Locked          =   -1  'True
             TabIndex        =   35
             TabStop         =   0   'False
@@ -2448,7 +2501,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   1
-            Left            =   -62370
+            Left            =   12630
             TabIndex        =   274
             TabStop         =   0   'False
             Top             =   1395
@@ -2511,7 +2564,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   2
-            Left            =   7545
+            Left            =   -67455
             TabIndex        =   276
             TabStop         =   0   'False
             Top             =   495
@@ -2585,7 +2638,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   51
-            Left            =   -67875
+            Left            =   7125
             MaxLength       =   9
             TabIndex        =   25
             Top             =   1845
@@ -2607,7 +2660,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   52
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   87
@@ -2631,7 +2684,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   53
-            Left            =   7545
+            Left            =   -67455
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   88
@@ -2654,7 +2707,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   54
-            Left            =   -74280
+            Left            =   720
             MultiLine       =   -1  'True
             TabIndex        =   33
             Top             =   3120
@@ -2674,7 +2727,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   2
-            Left            =   -73200
+            Left            =   1800
             TabIndex        =   34
             TabStop         =   0   'False
             Top             =   3120
@@ -2683,7 +2736,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo55 
             Height          =   270
             Index           =   1
-            Left            =   -65685
+            Left            =   9315
             Style           =   1  'Graphical
             TabIndex        =   284
             TabStop         =   0   'False
@@ -2693,7 +2746,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo55 
             Height          =   270
             Index           =   2
-            Left            =   -65940
+            Left            =   9060
             Style           =   1  'Graphical
             TabIndex        =   285
             TabStop         =   0   'False
@@ -2715,7 +2768,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   55
-            Left            =   -67605
+            Left            =   7395
             TabIndex        =   29
             Top             =   2715
             Width           =   1650
@@ -2735,7 +2788,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   56
-            Left            =   7560
+            Left            =   -67440
             Locked          =   -1  'True
             MaxLength       =   254
             MultiLine       =   -1  'True
@@ -2747,7 +2800,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo57 
             Height          =   270
             Index           =   0
-            Left            =   8880
+            Left            =   -66120
             Style           =   1  'Graphical
             TabIndex        =   289
             TabStop         =   0   'False
@@ -2770,7 +2823,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   57
-            Left            =   7560
+            Left            =   -67440
             MultiLine       =   -1  'True
             TabIndex        =   52
             Top             =   1320
@@ -2790,7 +2843,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   58
-            Left            =   -74280
+            Left            =   720
             MaxLength       =   30
             TabIndex        =   31
             Top             =   4080
@@ -2799,7 +2852,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo59 
             Height          =   270
             Index           =   2
-            Left            =   -69645
+            Left            =   5355
             Style           =   1  'Graphical
             TabIndex        =   293
             TabStop         =   0   'False
@@ -2821,7 +2874,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   59
-            Left            =   -70725
+            Left            =   4275
             TabIndex        =   32
             Top             =   4095
             Width           =   1065
@@ -2829,7 +2882,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo60 
             Height          =   270
             Index           =   1
-            Left            =   -66165
+            Left            =   8835
             Style           =   1  'Graphical
             TabIndex        =   298
             TabStop         =   0   'False
@@ -2839,7 +2892,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo60 
             Height          =   270
             Index           =   2
-            Left            =   -66420
+            Left            =   8580
             Style           =   1  'Graphical
             TabIndex        =   299
             TabStop         =   0   'False
@@ -2861,7 +2914,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   60
-            Left            =   -68805
+            Left            =   6195
             TabIndex        =   36
             Top             =   4635
             Width           =   2370
@@ -2908,7 +2961,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo62 
             Height          =   270
             Index           =   2
-            Left            =   -66645
+            Left            =   8355
             Style           =   1  'Graphical
             TabIndex        =   302
             TabStop         =   0   'False
@@ -2930,7 +2983,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   62
-            Left            =   -67650
+            Left            =   7350
             TabIndex        =   97
             TabStop         =   0   'False
             Top             =   4155
@@ -2951,7 +3004,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   63
-            Left            =   -65820
+            Left            =   9180
             MultiLine       =   -1  'True
             TabIndex        =   98
             TabStop         =   0   'False
@@ -2961,7 +3014,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo64 
             Height          =   270
             Index           =   2
-            Left            =   -61605
+            Left            =   13395
             Style           =   1  'Graphical
             TabIndex        =   307
             TabStop         =   0   'False
@@ -2983,7 +3036,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   64
-            Left            =   -63510
+            Left            =   11490
             TabIndex        =   100
             Top             =   4155
             Width           =   1890
@@ -3003,7 +3056,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   65
-            Left            =   -60885
+            Left            =   14115
             MultiLine       =   -1  'True
             TabIndex        =   101
             Top             =   4140
@@ -4671,7 +4724,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo137 
             Height          =   270
             Index           =   2
-            Left            =   -60285
+            Left            =   14715
             Style           =   1  'Graphical
             TabIndex        =   396
             TabStop         =   0   'False
@@ -4693,7 +4746,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   137
-            Left            =   -62325
+            Left            =   12675
             TabIndex        =   99
             Top             =   3195
             Width           =   2025
@@ -4818,7 +4871,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   143
-            Left            =   -74265
+            Left            =   735
             MultiLine       =   -1  'True
             TabIndex        =   183
             Top             =   3600
@@ -4839,7 +4892,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   144
-            Left            =   -70740
+            Left            =   4260
             MultiLine       =   -1  'True
             TabIndex        =   184
             Top             =   3600
@@ -4860,7 +4913,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   145
-            Left            =   -67620
+            Left            =   7380
             MultiLine       =   -1  'True
             TabIndex        =   185
             Top             =   3600
@@ -4880,7 +4933,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   146
-            Left            =   -64860
+            Left            =   10140
             MaxLength       =   100
             TabIndex        =   186
             Top             =   3660
@@ -4911,7 +4964,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo147 
             Height          =   270
             Index           =   2
-            Left            =   -70005
+            Left            =   4995
             Style           =   1  'Graphical
             TabIndex        =   425
             TabStop         =   0   'False
@@ -4933,7 +4986,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   147
-            Left            =   -73005
+            Left            =   1995
             TabIndex        =   188
             TabStop         =   0   'False
             Top             =   4635
@@ -4954,7 +5007,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   148
-            Left            =   3390
+            Left            =   -71610
             MultiLine       =   -1  'True
             TabIndex        =   51
             Top             =   1680
@@ -4963,7 +5016,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo149 
             Height          =   270
             Index           =   0
-            Left            =   -66585
+            Left            =   8415
             Style           =   1  'Graphical
             TabIndex        =   429
             TabStop         =   0   'False
@@ -4986,7 +5039,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   149
-            Left            =   -67605
+            Left            =   7395
             TabIndex        =   192
             TabStop         =   0   'False
             Top             =   3195
@@ -4995,7 +5048,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo150 
             Height          =   270
             Index           =   1
-            Left            =   -63735
+            Left            =   11265
             Style           =   1  'Graphical
             TabIndex        =   432
             TabStop         =   0   'False
@@ -5018,7 +5071,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   150
-            Left            =   -64845
+            Left            =   10155
             TabIndex        =   193
             TabStop         =   0   'False
             Top             =   3195
@@ -5027,7 +5080,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo151 
             Height          =   270
             Index           =   2
-            Left            =   -68985
+            Left            =   6015
             Style           =   1  'Graphical
             TabIndex        =   435
             TabStop         =   0   'False
@@ -5049,7 +5102,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   151
-            Left            =   -70725
+            Left            =   4275
             TabIndex        =   197
             TabStop         =   0   'False
             Top             =   2715
@@ -5068,7 +5121,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   152
-            Left            =   -64440
+            Left            =   10560
             MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
@@ -5087,7 +5140,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   153
-            Left            =   -62760
+            Left            =   12240
             MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
@@ -5106,7 +5159,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   360
             Index           =   154
-            Left            =   -61305
+            Left            =   13695
             MaxLength       =   254
             TabIndex        =   199
             Top             =   2700
@@ -5127,7 +5180,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   0
-            Left            =   -71820
+            Left            =   3180
             TabIndex        =   202
             Top             =   1875
             Width           =   345
@@ -5147,7 +5200,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   1
-            Left            =   -74775
+            Left            =   225
             TabIndex        =   203
             Top             =   1875
             Width           =   570
@@ -5167,7 +5220,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   2
-            Left            =   -68850
+            Left            =   6150
             TabIndex        =   204
             Top             =   1395
             Width           =   900
@@ -5187,7 +5240,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   3
-            Left            =   -63915
+            Left            =   11085
             TabIndex        =   205
             Top             =   945
             Width           =   450
@@ -5197,7 +5250,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -63420
+            Left            =   11580
             TabIndex        =   206
             Top             =   1860
             Width           =   3405
@@ -5217,7 +5270,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   4
-            Left            =   -64020
+            Left            =   10980
             TabIndex        =   208
             Top             =   1875
             Width           =   555
@@ -5227,7 +5280,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67875
+            Left            =   7125
             TabIndex        =   209
             Top             =   1380
             Width           =   3000
@@ -5247,7 +5300,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   5
-            Left            =   6300
+            Left            =   -68700
             TabIndex        =   212
             Top             =   495
             Width           =   1170
@@ -5257,7 +5310,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   3390
+            Left            =   -71610
             TabIndex        =   213
             Top             =   870
             Width           =   1605
@@ -5277,7 +5330,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   6
-            Left            =   -74940
+            Left            =   60
             TabIndex        =   215
             Top             =   2700
             Width           =   645
@@ -5287,7 +5340,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -74265
+            Left            =   735
             TabIndex        =   216
             Top             =   2700
             Width           =   2580
@@ -5307,7 +5360,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   3390
+            Left            =   -71610
             TabIndex        =   222
             Top             =   465
             Width           =   1605
@@ -5330,7 +5383,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00FFFFFF&
             Height          =   345
             Index           =   7
-            Left            =   9525
+            Left            =   -65475
             TabIndex        =   224
             Top             =   465
             Width           =   5070
@@ -5350,7 +5403,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   8
-            Left            =   9945
+            Left            =   -65055
             TabIndex        =   225
             Top             =   5730
             Width           =   600
@@ -5361,7 +5414,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   0
-            Left            =   10620
+            Left            =   -64380
             Shape           =   1  'Square
             Top             =   5775
             Width           =   165
@@ -5381,7 +5434,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   9
-            Left            =   10845
+            Left            =   -64155
             TabIndex        =   226
             Top             =   5730
             Width           =   990
@@ -5392,7 +5445,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   1
-            Left            =   12000
+            Left            =   -63000
             Shape           =   1  'Square
             Top             =   5775
             Width           =   165
@@ -5412,7 +5465,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   10
-            Left            =   12240
+            Left            =   -62760
             TabIndex        =   227
             Top             =   5730
             Width           =   1050
@@ -5423,7 +5476,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   150
             Index           =   2
-            Left            =   13455
+            Left            =   -61545
             Shape           =   1  'Square
             Top             =   5775
             Width           =   150
@@ -5443,7 +5496,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   11
-            Left            =   13680
+            Left            =   -61320
             TabIndex        =   228
             Top             =   5730
             Width           =   300
@@ -5463,7 +5516,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   12
-            Left            =   1305
+            Left            =   -73695
             TabIndex        =   229
             Top             =   495
             Width           =   2010
@@ -5483,7 +5536,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   13
-            Left            =   2355
+            Left            =   -72645
             TabIndex        =   230
             Top             =   900
             Width           =   960
@@ -5503,7 +5556,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   14
-            Left            =   -68925
+            Left            =   6075
             TabIndex        =   231
             Top             =   1395
             Width           =   975
@@ -5523,7 +5576,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   15
-            Left            =   -62910
+            Left            =   12090
             TabIndex        =   232
             Top             =   1395
             Width           =   465
@@ -5543,7 +5596,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   16
-            Left            =   -74775
+            Left            =   225
             TabIndex        =   233
             Top             =   1875
             Width           =   570
@@ -5551,8 +5604,8 @@ Begin VB.Form frmOrcament
          Begin VB.Line Linha 
             BorderColor     =   &H00C0C0C0&
             Index           =   0
-            X1              =   705
-            X2              =   9150
+            X1              =   -74295
+            X2              =   -65850
             Y1              =   2100
             Y2              =   2100
          End
@@ -5572,7 +5625,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   17
-            Left            =   1380
+            Left            =   -73620
             TabIndex        =   234
             Top             =   2250
             Width           =   1935
@@ -5593,7 +5646,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   18
-            Left            =   1305
+            Left            =   -73695
             TabIndex        =   235
             Top             =   2715
             Width           =   2010
@@ -5614,7 +5667,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   19
-            Left            =   1605
+            Left            =   -73395
             TabIndex        =   236
             Top             =   3180
             Width           =   1710
@@ -5635,7 +5688,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   20
-            Left            =   1980
+            Left            =   -73020
             TabIndex        =   237
             Top             =   3645
             Width           =   1335
@@ -5656,7 +5709,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   21
-            Left            =   780
+            Left            =   -74220
             TabIndex        =   238
             Top             =   4575
             Width           =   2535
@@ -5677,7 +5730,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   22
-            Left            =   705
+            Left            =   -74295
             TabIndex        =   239
             Top             =   5040
             Width           =   2610
@@ -5697,7 +5750,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   23
-            Left            =   5700
+            Left            =   -69300
             TabIndex        =   240
             Top             =   2250
             Width           =   1770
@@ -5717,7 +5770,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   24
-            Left            =   5625
+            Left            =   -69375
             TabIndex        =   241
             Top             =   2715
             Width           =   1845
@@ -5737,7 +5790,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   25
-            Left            =   5715
+            Left            =   -69285
             TabIndex        =   242
             Top             =   3645
             Width           =   1755
@@ -5757,7 +5810,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   26
-            Left            =   5625
+            Left            =   -69375
             TabIndex        =   243
             Top             =   5040
             Width           =   1845
@@ -5778,7 +5831,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   27
-            Left            =   6150
+            Left            =   -68850
             TabIndex        =   244
             Top             =   900
             Width           =   1320
@@ -5788,7 +5841,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7545
+            Left            =   -67455
             TabIndex        =   245
             Top             =   870
             Width           =   1605
@@ -5809,7 +5862,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   28
-            Left            =   1005
+            Left            =   -73995
             TabIndex        =   247
             Top             =   5505
             Width           =   2310
@@ -5829,7 +5882,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   29
-            Left            =   5925
+            Left            =   -69075
             TabIndex        =   248
             Top             =   3180
             Width           =   1545
@@ -5839,7 +5892,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   3390
+            Left            =   -71610
             TabIndex        =   249
             Top             =   1275
             Width           =   1605
@@ -5860,7 +5913,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   30
-            Left            =   1800
+            Left            =   -73200
             TabIndex        =   251
             Top             =   1305
             Width           =   1515
@@ -5881,7 +5934,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   31
-            Left            =   -69135
+            Left            =   5865
             TabIndex        =   252
             Top             =   480
             Width           =   1185
@@ -5902,7 +5955,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   32
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   253
             Top             =   945
             Width           =   675
@@ -5923,7 +5976,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   33
-            Left            =   -70440
+            Left            =   4560
             TabIndex        =   254
             Top             =   945
             Width           =   315
@@ -5943,7 +5996,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   34
-            Left            =   -63780
+            Left            =   11220
             TabIndex        =   255
             Top             =   1395
             Width           =   315
@@ -5964,7 +6017,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   35
-            Left            =   -72615
+            Left            =   2385
             TabIndex        =   256
             Top             =   1410
             Width           =   930
@@ -5985,7 +6038,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   36
-            Left            =   -68535
+            Left            =   6465
             TabIndex        =   257
             Top             =   945
             Width           =   585
@@ -6005,7 +6058,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   37
-            Left            =   -63915
+            Left            =   11085
             TabIndex        =   258
             Top             =   945
             Width           =   450
@@ -6026,7 +6079,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   38
-            Left            =   1260
+            Left            =   -73740
             TabIndex        =   259
             Top             =   4110
             Width           =   2055
@@ -6066,7 +6119,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00000000&
             Height          =   240
             Index           =   40
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   261
             Top             =   480
             Width           =   600
@@ -6086,7 +6139,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   41
-            Left            =   -74580
+            Left            =   420
             TabIndex        =   262
             Top             =   1395
             Width           =   375
@@ -6106,7 +6159,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   42
-            Left            =   -62355
+            Left            =   12645
             TabIndex        =   263
             Top             =   945
             Width           =   510
@@ -6126,7 +6179,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   43
-            Left            =   -64395
+            Left            =   10605
             TabIndex        =   264
             Top             =   480
             Width           =   930
@@ -6146,7 +6199,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   44
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   265
             Top             =   2250
             Width           =   2430
@@ -6154,8 +6207,8 @@ Begin VB.Form frmOrcament
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   1
-            X1              =   -74880
-            X2              =   -60450
+            X1              =   120
+            X2              =   14550
             Y1              =   2520
             Y2              =   2520
          End
@@ -6175,7 +6228,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   45
-            Left            =   -72900
+            Left            =   2100
             TabIndex        =   266
             Top             =   3120
             Width           =   1935
@@ -6195,7 +6248,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   46
-            Left            =   -74940
+            Left            =   60
             TabIndex        =   267
             Top             =   5160
             Width           =   435
@@ -6295,7 +6348,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   51
-            Left            =   -64395
+            Left            =   10605
             TabIndex        =   272
             Top             =   480
             Width           =   930
@@ -6316,7 +6369,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   52
-            Left            =   -68580
+            Left            =   6420
             TabIndex        =   273
             Top             =   960
             Width           =   585
@@ -6337,7 +6390,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   53
-            Left            =   -68745
+            Left            =   6255
             TabIndex        =   278
             Top             =   1875
             Width           =   795
@@ -6358,7 +6411,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   54
-            Left            =   5625
+            Left            =   -69375
             TabIndex        =   279
             Top             =   4575
             Width           =   1845
@@ -6379,7 +6432,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   55
-            Left            =   5820
+            Left            =   -69180
             TabIndex        =   280
             Top             =   4110
             Width           =   1650
@@ -6400,7 +6453,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   56
-            Left            =   -74940
+            Left            =   60
             TabIndex        =   281
             Top             =   3120
             Width           =   585
@@ -6421,7 +6474,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   57
-            Left            =   -68580
+            Left            =   6420
             TabIndex        =   282
             Top             =   2700
             Width           =   915
@@ -6431,7 +6484,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67620
+            Left            =   7380
             TabIndex        =   283
             Top             =   2700
             Width           =   2205
@@ -6451,7 +6504,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   58
-            Left            =   6300
+            Left            =   -68700
             TabIndex        =   286
             Top             =   5505
             Width           =   1170
@@ -6472,7 +6525,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   59
-            Left            =   6330
+            Left            =   -68670
             TabIndex        =   287
             Top             =   1305
             Width           =   1140
@@ -6482,7 +6535,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7545
+            Left            =   -67455
             TabIndex        =   288
             Top             =   1305
             Width           =   1605
@@ -6503,7 +6556,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   60
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   290
             Top             =   4080
             Width           =   510
@@ -6524,7 +6577,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   61
-            Left            =   -71340
+            Left            =   3660
             TabIndex        =   291
             Top             =   4140
             Width           =   360
@@ -6534,7 +6587,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -70740
+            Left            =   4260
             TabIndex        =   292
             Top             =   4080
             Width           =   1365
@@ -6554,7 +6607,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   62
-            Left            =   -62355
+            Left            =   12645
             TabIndex        =   294
             Top             =   945
             Width           =   510
@@ -6574,7 +6627,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   63
-            Left            =   -74580
+            Left            =   420
             TabIndex        =   295
             Top             =   1395
             Width           =   375
@@ -6595,7 +6648,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   64
-            Left            =   -69420
+            Left            =   5580
             TabIndex        =   296
             Top             =   4680
             Width           =   525
@@ -6605,7 +6658,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -68820
+            Left            =   6180
             TabIndex        =   297
             Top             =   4620
             Width           =   2925
@@ -6624,7 +6677,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   65
-            Left            =   -68700
+            Left            =   6300
             TabIndex        =   300
             Top             =   4140
             Width           =   960
@@ -6634,7 +6687,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67665
+            Left            =   7335
             TabIndex        =   301
             Top             =   4140
             Width           =   1290
@@ -6653,7 +6706,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   66
-            Left            =   -66165
+            Left            =   8835
             TabIndex        =   303
             Top             =   4140
             Width           =   270
@@ -6673,7 +6726,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   67
-            Left            =   -64845
+            Left            =   10155
             TabIndex        =   304
             Top             =   4140
             Width           =   1155
@@ -6692,7 +6745,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   68
-            Left            =   -61200
+            Left            =   13800
             TabIndex        =   305
             Top             =   4140
             Width           =   285
@@ -6702,7 +6755,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -63525
+            Left            =   11475
             TabIndex        =   306
             Top             =   4140
             Width           =   2190
@@ -8383,7 +8436,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   146
-            Left            =   -63360
+            Left            =   11640
             TabIndex        =   394
             Top             =   3180
             Width           =   885
@@ -8393,7 +8446,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -62340
+            Left            =   12660
             TabIndex        =   395
             Top             =   3180
             Width           =   2325
@@ -8829,7 +8882,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   167
-            Left            =   -75000
+            Left            =   0
             TabIndex        =   417
             Top             =   3600
             Width           =   690
@@ -8850,7 +8903,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   168
-            Left            =   -71880
+            Left            =   3120
             TabIndex        =   418
             Top             =   3600
             Width           =   885
@@ -8871,7 +8924,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   169
-            Left            =   -68520
+            Left            =   6480
             TabIndex        =   419
             Top             =   3600
             Width           =   735
@@ -8892,7 +8945,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   170
-            Left            =   -66000
+            Left            =   9000
             TabIndex        =   420
             Top             =   3660
             Width           =   990
@@ -8932,7 +8985,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   172
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   423
             Top             =   4620
             Width           =   1770
@@ -8942,7 +8995,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -73020
+            Left            =   1980
             TabIndex        =   424
             Top             =   4620
             Width           =   3285
@@ -8963,7 +9016,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   173
-            Left            =   1020
+            Left            =   -73980
             TabIndex        =   426
             Top             =   1695
             Width           =   2265
@@ -8984,7 +9037,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   174
-            Left            =   -69180
+            Left            =   5820
             TabIndex        =   427
             Top             =   3180
             Width           =   1470
@@ -8994,7 +9047,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H00C0FFC0&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67620
+            Left            =   7380
             TabIndex        =   428
             Top             =   3180
             Width           =   1305
@@ -9015,7 +9068,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   175
-            Left            =   -66180
+            Left            =   8820
             TabIndex        =   430
             Top             =   3180
             Width           =   1260
@@ -9025,7 +9078,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H00C0FFC0&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -64860
+            Left            =   10140
             TabIndex        =   431
             Top             =   3180
             Width           =   1395
@@ -9046,7 +9099,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   176
-            Left            =   -71340
+            Left            =   3660
             TabIndex        =   433
             Top             =   2760
             Width           =   510
@@ -9056,7 +9109,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -70740
+            Left            =   4260
             TabIndex        =   434
             Top             =   2700
             Width           =   2025
@@ -9077,7 +9130,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   177
-            Left            =   -65100
+            Left            =   9900
             TabIndex        =   436
             Top             =   2700
             Width           =   570
@@ -9097,7 +9150,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   178
-            Left            =   -63120
+            Left            =   11880
             TabIndex        =   437
             Top             =   2700
             Width           =   315
@@ -9118,7 +9171,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   179
-            Left            =   -61980
+            Left            =   13020
             TabIndex        =   438
             Top             =   2700
             Width           =   600
@@ -11207,7 +11260,7 @@ Private Sub GeraPedido()
       Pedido![Seqüência da Classificação] = ![Seqüência da Classificação]
       Pedido![Forma de Pagamento] = ![Forma de Pagamento]
       Pedido!Fechamento = !Fechamento
-      Pedido![Valor do Fechamento] = ![Valor do Fechamento]
+      Pedido![Valor Do Fechamento] = ![Valor Do Fechamento]
       Pedido![Valor Do Frete] = ![Valor Do Frete]
       Pedido![Valor Do Seguro] = ![Valor Do Seguro]
       Pedido![Valor Total IPI dos Produtos] = ![Valor Total IPI dos Produtos]
@@ -12710,7 +12763,7 @@ Private Sub DistribuiDescontoTotal()
     Dim tbl         As Variant
 
     ' 1) pega o desconto e usa só o módulo
-    totalDesc = Abs(Orcamento![Valor do Fechamento])
+    totalDesc = Abs(Orcamento![Valor Do Fechamento])
     If totalDesc = 0 Then Exit Sub
 
     ' 2) conta quantos itens estão preenchidos
@@ -12747,7 +12800,7 @@ Private Sub DistribuiDescontoTotal()
                 End If
 
                 Rs.Edit
-                  Rs![Valor do Desconto] = descValue
+                  Rs![Valor Do Desconto] = descValue
                 Rs.Update
 
                 assignedSum = assignedSum + descValue
@@ -13356,8 +13409,8 @@ Private Sub AtualizaValoresConjuntos()
          With Conjuntos_do_Orcamento
          .Edit
          
-         If Orcamento![Valor do Fechamento] = 0 Then
-            ![Valor do Desconto] = 0
+         If Orcamento![Valor Do Fechamento] = 0 Then
+            ![Valor Do Desconto] = 0
          End If
          If Orcamento![Valor Do Frete] = 0 Then
             ![Valor Do Frete] = 0
@@ -13401,11 +13454,11 @@ Private Sub AtualizaValoresConjuntos()
             ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
             ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then 'Orçamento Base: 125449 - Budke
                   'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
-                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete - PisRed), 2)
+                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
                    '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
                    ![Aliq Do Pis] = 2
                    '![Valor Do //PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
@@ -13430,12 +13483,12 @@ Private Sub AtualizaValoresConjuntos()
                End If
              End If
             Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                    'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                  ' ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete - PisRed), 2)
+                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
                    ![Aliq Do Cofins] = 9.6
                    '![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                    ![Valor Do Cofins] = ![Bc Cofins] * (![Aliq Do Cofins] / 100)
@@ -13509,7 +13562,7 @@ Private Sub AtualizaValoresPecas()
       
       'Rotina para corrigir o erro no rateio do desconto
       'Passo 1: Analisa se há também a presença conjuntos ou apenas peças
-     If Orcamento![Valor do Fechamento] <> 0 Then 'Se não tiver desconto não tem o que ser corrigido, nem perde tempo
+     If Orcamento![Valor Do Fechamento] <> 0 Then 'Se não tiver desconto não tem o que ser corrigido, nem perde tempo
         If Conjuntos_do_Orcamento.RecordCount > 0 Then
      '       descontoCj = verificaDesconto("Conjuntos do Orçamento", Sequencia_do_Orcamento)
      '       descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
@@ -13528,9 +13581,9 @@ Private Sub AtualizaValoresPecas()
         'Para a primeira condição verdadeira o programa vai comparar o Valor do desconto
         'informado pelo vendas (aba Financeiro) com o somatório do desconto rateado distribuido nos conjuntos e peças
         'a diferença será armazenada em divergDesc, que será utilizada para a correção do erro causado por arredondamentos
-        If Orcamento![Valor do Fechamento] <> (descontoCj + descontoPecas) Then
-          If (Orcamento![Valor do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
-          divergDesc = Abs(Orcamento![Valor do Fechamento]) - (descontoCj + descontoPecas)
+        If Orcamento![Valor Do Fechamento] <> (descontoCj + descontoPecas) Then
+          If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
+          divergDesc = Abs(Orcamento![Valor Do Fechamento]) - (descontoCj + descontoPecas)
           If vgPWUsuario = "YGOR" Then MsgBox (divergDesc)
             If divergDesc = 0 Then Exit Sub
         End If
@@ -13543,9 +13596,9 @@ Private Sub AtualizaValoresPecas()
         'descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
         
         
-        If Orcamento![Valor do Fechamento] <> descPecas!descontoPecas Then
-         If (Orcamento![Valor do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
-          divergDesc = Abs(Orcamento![Valor do Fechamento]) - descPecas!descontoPecas
+        If Orcamento![Valor Do Fechamento] <> descPecas!descontoPecas Then
+         If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
+          divergDesc = Abs(Orcamento![Valor Do Fechamento]) - descPecas!descontoPecas
           
           If vgPWUsuario = "YGOR" Then
             If divergDesc <> 0 Then
@@ -13569,33 +13622,33 @@ Private Sub AtualizaValoresPecas()
          .Edit
          'Valor do Desconto Rateado entre os produtos
          
-         If Orcamento![Valor do Fechamento] = 0 Then
-            ![Valor do Desconto] = 0
+         If Orcamento![Valor Do Fechamento] = 0 Then
+            ![Valor Do Desconto] = 0
          End If
          If Orcamento![Valor Do Frete] = 0 Then
             ![Valor Do Frete] = 0
          End If
          
-         If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
             totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor do Fechamento] / totalItens * 100)
+            PercentualRateio = (Orcamento![Valor Do Fechamento] / totalItens * 100)
             VrItem = Round((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]), 2)
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
             PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
-            ![Valor do Desconto] = Abs(ValorAcresDesc)
+            ![Valor Do Desconto] = Abs(ValorAcresDesc)
             ![Valor Do Frete] = ValorFrete
             
                'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
                If Pecas_do_Orcamento.AbsolutePosition = Pecas_do_Orcamento.RecordCount And divergDesc <> 0 Then
                  '   divergDesc = vDesc + Orcamento![Valor do Fechamento]
                  '  If divergDesc <> 0 Then
-                 ![Valor do Desconto] = Abs(ValorAcresDesc) + divergDesc
+                 ![Valor Do Desconto] = Abs(ValorAcresDesc) + divergDesc
                Else
-                 ![Valor do Desconto] = Abs(ValorAcresDesc)
+                 ![Valor Do Desconto] = Abs(ValorAcresDesc)
                     'End If
                End If
             
@@ -13621,7 +13674,7 @@ Private Sub AtualizaValoresPecas()
             Else
                '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
-               BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                ![Valor da Base de Cálculo] = Round(BC, 2) '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
                '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
@@ -13640,13 +13693,13 @@ Private Sub AtualizaValoresPecas()
             Tributos = Tributos + ![Valor do IPI]
             ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             'Pis Antes do Oziris solicitar mudança 03/2018
-             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                   'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                   '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
                   '07/10/24 parei aqui - acertar BC PIS para reduzir o erro de arredondamento
-                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] - PisRed), 2)
+                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
                   ![Aliq Do Pis] = 2
                   ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
@@ -13670,12 +13723,12 @@ Private Sub AtualizaValoresPecas()
                 'Pis Novo Conforme contabilidade (Andreza) Subtari icms da base do pis
              End If
             Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                    'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                    '![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] - PisRed), 2)
+                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
                    ![Aliq Do Cofins] = 9.6
                    ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
@@ -13761,20 +13814,20 @@ Private Sub AtualizaValoresProdutos()
          With Produtos_do_Orcamento
          .Edit
          
-         If Orcamento![Valor do Fechamento] = 0 Then
-            ![Valor do Desconto] = 0
+         If Orcamento![Valor Do Fechamento] = 0 Then
+            ![Valor Do Desconto] = 0
          End If
          If Orcamento![Valor Do Frete] = 0 Then
             ![Valor Do Frete] = 0
          End If
           
          'Valor do Desconto Rateado entre os produtos
-         If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
             Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
             GRevenda = Geral!Revenda
             totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor do Fechamento] / totalItens * 100)
+            PercentualRateio = (Orcamento![Valor Do Fechamento] / totalItens * 100)
             VrItem = (Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário])
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             'vDesc = Round((vDesc + ValorAcresDesc), 2)
@@ -13790,17 +13843,17 @@ Private Sub AtualizaValoresProdutos()
            '![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
             
-            ![Valor do Desconto] = Abs(ValorAcresDesc)
+            ![Valor Do Desconto] = Abs(ValorAcresDesc)
             ![Valor Do Frete] = ValorFrete
-            vDesc = vDesc + ![Valor do Desconto]
+            vDesc = vDesc + ![Valor Do Desconto]
             
          'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
          If Produtos_do_Orcamento.AbsolutePosition = Produtos_do_Orcamento.RecordCount Then
-              divergDesc = vDesc + Orcamento![Valor do Fechamento]
+              divergDesc = vDesc + Orcamento![Valor Do Fechamento]
              If divergDesc <> 0 Then
-               ![Valor do Desconto] = Abs(ValorAcresDesc + divergDesc)
+               ![Valor Do Desconto] = Abs(ValorAcresDesc + divergDesc)
              Else
-               ![Valor do Desconto] = Abs(ValorAcresDesc)
+               ![Valor Do Desconto] = Abs(ValorAcresDesc)
              End If
          End If
           ' Verifica se Tem Redução da BC
@@ -13810,7 +13863,7 @@ Private Sub AtualizaValoresProdutos()
             VrItem = VrItem - VrReducao '+ ValorFrete (alterado em 15/08/24) - Orçamento base.: 121089
          Else
           If Not GRevenda Then
-             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] - ![Valor do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
+             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] - ![Valor Do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
              VrItem = VrItem + ValorFrete
           Else
             VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc), 2)
@@ -13871,7 +13924,7 @@ Private Sub AtualizaValoresProdutos()
                       Else
                        ' 19/09/2024 Ajuste na base do cálculo com base no orçmento 124582 - não estava considerando o frete na BC do PIS e COFINS
                        '![Bc Pis] = VrItem2 - ![Valor Do Icms]
-                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete), 2)
+                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
                         ![Aliq Do Pis] = 1.65
                         ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4)
                       End If
@@ -13961,7 +14014,7 @@ Private Sub AtualizaValoresProdutos()
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      Else
                          'Ajuste BC considerando o frete. Orçamento base 124582 em 19/09/2024
-                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete), 2)
+                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
                         '![Bc Cofins] = Round(VrItem2, 2) - ![Valor Do Icms]
                          ![Aliq Do Cofins] = 7.6
                          ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
@@ -14047,7 +14100,7 @@ Private Sub AtualizaValoresProdutos()
             End If
             End If
             'Qdo Não Tem Desconto
-            If Orcamento![Valor do Fechamento] = 0 Then
+            If Orcamento![Valor Do Fechamento] = 0 Then
             If Orcamento![Valor Do Frete] = 0 Then
               
             If Entrega_Futura Then
@@ -14352,8 +14405,8 @@ Private Sub PreValidaNFE()
       Exit Sub
    End If
 'Verifica obrigatoriedade dos campos de Placa, UF da Placa e ANTT
-If Trim(txtPlaca.Text) = "" Or Trim(cmbUFPlaca.Text) = "" Or Trim(txtANTT.Text) = "" Then
-   MsgBox "Preencha Placa, UF da Placa e ANTT antes de gerar a nota.", _
+If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
+   MsgBox "Preencha Placa e UF da Placa antes de gerar a nota.", _
           vbExclamation + vbOKOnly, vaTitulo
    Exit Sub
 End If
@@ -14691,7 +14744,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
          Fechamento = IIf(IsNull(vgTb!Fechamento), 0, vgTb!Fechamento)
-         Valor_do_Fechamento = IIf(IsNull(vgTb![Valor do Fechamento]), 0, vgTb![Valor do Fechamento])
+         Valor_do_Fechamento = IIf(IsNull(vgTb![Valor Do Fechamento]), 0, vgTb![Valor Do Fechamento])
          Valor_Total_IPI_dos_Produtos = IIf(IsNull(vgTb![Valor Total IPI dos Produtos]), 0, vgTb![Valor Total IPI dos Produtos])
          Valor_Total_IPI_dos_Conjuntos = IIf(IsNull(vgTb![Valor Total IPI dos Conjuntos]), 0, vgTb![Valor Total IPI dos Conjuntos])
          Valor_Total_do_ICMS = IIf(IsNull(vgTb![Valor Total Do ICMS]), 0, vgTb![Valor Total Do ICMS])
@@ -15682,6 +15735,31 @@ Private Sub ExecutaPreValidacao()
    Ok = (Ordem_Interna = False)
    txtCampo(151).Locked = Not (vgAlterar And txtCampo(151).Editable)
    txtCampo(151).Enabled = Ok Or Not vgAlterar
+
+'—> pré-validação do campo 55 (bloqueio + cinza se frete = 3 ou 4)
+Dim freteVal    As Integer
+Dim liberaCampo As Boolean
+
+freteVal = Nz(txtCampo(151).Value, 0)           ' trata possível Null
+liberaCampo = Not (freteVal = 3 Or freteVal = 4)
+
+If Not liberaCampo Then
+    ' frete = 3 ou 4 ? campo bloqueado e cinza
+    txtCampo(55).Locked = True
+    txtCampo(55).Enabled = False
+    txtCampo(55).BackColor = vbButtonFace
+Else
+    ' frete ? 3,4 ? comportamento “normal” para o 55
+    txtCampo(55).Locked = Not (vgAlterar And txtCampo(55).Editable)
+    ' Exemplo de regra: só habilita se for inclusão e sem proforma
+    Dim ok55 As Boolean
+    ok55 = (Sequencia_do_Geral = 0 And Fatura_Proforma = False)
+    txtCampo(55).Enabled = ok55 Or Not vgAlterar
+    txtCampo(55).BackColor = vbWindowBackground
+End If
+
+
+
    Ok = (vgSituacao = ACAO_NAVEGANDO)
    Botao(9).Enabled = Ok
    Ok = (Vazio(Nome_Cliente) And vgSituacao = ACAO_INCLUINDO)
@@ -18697,7 +18775,7 @@ Public Sub DefineControles3()
    Set txtCampo(151).CtBot(BOT_COMBO) = bottxtCampo151(BOT_COMBO)
    Set bottxtCampo151(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(151).DataType = 0
-   txtCampo(151).ListFields = "Emitente|Destinatário|Transportadora|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
+   txtCampo(151).ListFields = "Emitente|Destinatário|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(151).DataField), txtCampo(151)
 
    Set txtCampo(152).CtPri = txtCp(152)
@@ -18988,10 +19066,29 @@ Private Sub Grid_AfterUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCol
    GeraLog Me, Grid(Index).Status, Index, False
    End Select
 End Sub
-
 'evento - antes de efetuar o edit do recordset do grid
 Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColumns() As Variant, vgIsValid As Boolean, vgColumn As Integer, vgErrorMessage As String)
    GeraLog Me, Grid(Index).Status, Index, True
+   'bloqueia edicao de impostos e financeiro para usuarios nao autorizados
+   If vgPWUsuario <> "YGOR" And vgPWUsuario <> "JUCELI" Then
+      Select Case Index
+         Case 0, 1, 3
+            If vgColumn >= 11 And vgColumn <= 31 Then
+               vgIsValid = False
+               Exit Sub
+            End If
+         Case 2
+            If vgColumn >= 2 And vgColumn <= 5 Then
+               vgIsValid = False
+               Exit Sub
+            End If
+         Case 4
+            If vgColumn = 5 Then
+               vgIsValid = False
+               Exit Sub
+            End If
+      End Select
+   End If
    Select Case Index
       Case 0
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
@@ -19419,7 +19516,7 @@ IniApDaTb:
       CST = Conjuntos_do_Orcamento!CST
       Valor_ICMS_ST = Conjuntos_do_Orcamento![Valor ICMS ST]
       Aliquota_do_ICMS_ST = Conjuntos_do_Orcamento![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Conjuntos_do_Orcamento![Valor do Desconto]
+      Valor_do_Desconto = Conjuntos_do_Orcamento![Valor Do Desconto]
       Valor_do_Frete = Conjuntos_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Conjuntos_do_Orcamento![Valor Anterior]
       Bc_pis = Conjuntos_do_Orcamento![Bc Pis]
@@ -19751,7 +19848,7 @@ IniApDaTb:
       CFOP = Pecas_do_Orcamento!CFOP
       CST = Pecas_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Pecas_do_Orcamento![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Pecas_do_Orcamento![Valor do Desconto]
+      Valor_do_Desconto = Pecas_do_Orcamento![Valor Do Desconto]
       Valor_do_Frete = Pecas_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Pecas_do_Orcamento![Valor Anterior]
       Bc_pis = Pecas_do_Orcamento![Bc Pis]
@@ -20225,7 +20322,7 @@ IniApDaTb:
       CST = Produtos_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Produtos_do_Orcamento![Alíquota Do ICMS ST]
       Valor_do_Frete = Produtos_do_Orcamento![Valor Do Frete]
-      Valor_do_Desconto = Produtos_do_Orcamento![Valor do Desconto]
+      Valor_do_Desconto = Produtos_do_Orcamento![Valor Do Desconto]
       Valor_Anterior = Produtos_do_Orcamento![Valor Anterior]
       Bc_cofins = Produtos_do_Orcamento![Bc Cofins]
       Aliq_do_pis = Produtos_do_Orcamento![Aliq Do Pis]
