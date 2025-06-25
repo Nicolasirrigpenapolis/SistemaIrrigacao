@@ -1,15 +1,15 @@
 [History]
-1=#P0#=mb	#P1#=txtCp_KeyDown	#P2#=IRRIG/frmOrcament/txtCp_KeyDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625161439	#P7#=0	#P8#=66	.
-2=#P0#=mb	#P1#=txtCp_KeyPress	#P2#=IRRIG/frmOrcament/txtCp_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625171237	#P7#=0	#P8#=34	.
+1=#P0#=mb	#P1#=txtCp_KeyDown	#P2#=IRRIG/frmOrcament/txtCp_KeyDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625161439	#P7#=0	#P8#=-1	.
+2=#P0#=mb	#P1#=txtCp_KeyPress	#P2#=IRRIG/frmOrcament/txtCp_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625171237	#P7#=0	#P8#=36	.
 3=#P0#=mb	#P1#=txtCp_LostFocus	#P2#=IRRIG/frmOrcament/txtCp_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625170836	#P7#=0	#P8#=-4	.
 4=#P0#=mb	#P1#=PoeRelEFiltroCbo	#P2#=IRRIG/frmOrcament/PoeRelEFiltroCbo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625151112	#P7#=0	#P8#=-3	.
-5=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmF_GeraNF/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625171350	#P7#=0	#P8#=11	.
+5=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmF_GeraNF/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625175622	#P7#=0	#P8#=2	.
 6=#P0#=mb	#P1#=PoeRelEFiltroCbo	#P2#=IRRIG/frmF_GeraNF/PoeRelEFiltroCbo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625140615	#P7#=0	#P8#=15	.
-7=#P0#=mb	#P1#=InicializaApelidos	#P2#=IRRIG/frmF_GeraNF/InicializaApelidos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625140441	#P7#=0	#P8#=3	.
+7=#P0#=mb	#P1#=InicializaApelidos	#P2#=IRRIG/frmF_GeraNF/InicializaApelidos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625174558	#P7#=0	#P8#=6	.
 8=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmF_GeraNF/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625140026	#P7#=0	#P8#=41	.
-9=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625163526	#P7#=0	#P8#=390	.
+9=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625175140	#P7#=0	#P8#=409	.
 10=#P0#=mb	#P1#=Gerar	#P2#=IRRIG/frmF_GeraNF/Gerar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625161458	#P7#=0	#P8#=95	.
-11=#P0#=mb	#P1#=txtCp_GotFocus	#P2#=IRRIG/frmOrcament/txtCp_GotFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625154748	#P7#=0	#P8#=105	.
+11=#P0#=mb	#P1#=txtCp_GotFocus	#P2#=IRRIG/frmOrcament/txtCp_GotFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625174456	#P7#=0	#P8#=110	.
 12=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmOrcament/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625135546	#P7#=0	#P8#=9	.
 13=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmOrcament/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625135400	#P7#=0	#P8#=-4	.
 14=#P0#=mb	#P1#=CodigoFrete	#P2#=IRRIG/frmOrcament/CodigoFrete	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625134638	#P7#=0	#P8#=-5	.

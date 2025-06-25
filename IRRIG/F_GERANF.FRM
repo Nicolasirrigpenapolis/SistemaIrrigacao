@@ -1738,7 +1738,12 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
    OrcamentoTela = txtCampo(0).Value
    Transporte = txtCampo(1).Value
-   frete = Val(txtCampo(2).Value) ' garante código numérico (0,1,3,4,9)
+   If Not txtCampo(2) Is Nothing Then
+   frete = Val(txtCampo(2).Value) ' garante cdigo numrico (0,1,3,4,9)
+Else
+   frete = ""
+End If
+
    Cobranca = txtCampo(8).Value
    Contra_Apresentacao = chkCampo(0).Value
    DAdicionais = txtCampo(9).Value
@@ -1778,7 +1783,7 @@ Public Function Executar(vgOq As String) As String
    If vgOq = VALIDACOES Then
       InicializaApelidos COM_TEXTBOX
       
-    vgOk = (Transporte > 0) Or (Val("" & frete) = 3) Or (Val("" & frete) = 4) Or (Val("" & frete) = 9)
+     vgOk = (Transporte > 0) Or (Val("" & frete) = 3) Or (Val("" & frete) = 4) Or (Val("" & frete) = 9)
      vgMsg$ = "Transportadora no pode ser Vazio!"
      If Not vgOk Then txtCampo(1).SetFocus
       If vgOk Then
