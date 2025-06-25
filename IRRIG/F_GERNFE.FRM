@@ -505,7 +505,8 @@ Public Sub DefineControles()
    txtCampo(0).ListFields = "Número da NFe"
    txtCampo(0).OrderFields = "Número da NFe"
    txtCampo(0).Relation = ""
-   txtCampo(0).Source = "Nota Fiscal"
+   txtCampo(0).Source = "Nota Fiscal"~
+   txtCampo(0).CarregaGMCale
    txtCampo(0).vgfrmGMCale.grdListaG.AutoRebind = True
 
  Exit Sub

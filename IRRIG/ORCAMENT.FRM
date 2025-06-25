@@ -5123,6 +5123,7 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   152
             Left            =   10560
+	    DataField       =   "PlacaVeiculo"
             MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
@@ -5142,6 +5143,7 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   153
             Left            =   12240
+            DataField       =   "UfPlaca"
             MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
@@ -5163,6 +5165,7 @@ Begin VB.Form frmOrcament
             Left            =   13695
             MaxLength       =   254
             TabIndex        =   199
+            DataField       =   "NumAntt"
             Top             =   2700
             Width           =   1290
          End
