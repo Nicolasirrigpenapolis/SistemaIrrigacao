@@ -15737,8 +15737,12 @@ Private Sub ExecutaPreValidacao()
    Ok = (Ordem_Interna = False)
    txtCampo(151).Locked = Not (vgAlterar And txtCampo(151).Editable)
    txtCampo(151).Enabled = Ok Or Not vgAlterar
-   labFdo55.Enabled = (False) 'aqui
-   txtCp(55).Enabled = (False) 'aqui
+   Dim modFrete As Integer
+   modFrete = CodigoFrete()
+   Dim bloquear As Boolean
+   bloquear = (modFrete = 3 Or modFrete = 4 Or modFrete = 9)
+   labFdo55.Enabled = Not bloquear
+   txtCp(55).Enabled = (Ok And Not bloquear) Or Not vgAlterar
 
 
 
@@ -16022,37 +16026,51 @@ Private Sub txtCp_GotFocus(Index As Integer)
    txtCampo(Index).GotFocus
 End Sub
 
-'evento - quando qq tecla for digitada no campo
 Private Sub txtCp_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
-   If KeyCode = vbKeyReturn And vgSituacao <> ACAO_NAVEGANDO Then  'se tela esta em edição e digitou ENTER
-      ExecutaVisivel                                               'torna camos visiveis
-      ExecutaPreValidacao                                          'habilita/desabilita campos
+   ' 1) Se apertou ENTER em modo edição, dispara visibilidade e pré-validação
+   If KeyCode = vbKeyReturn And vgSituacao <> ACAO_NAVEGANDO Then
+      ExecutaVisivel
+      ExecutaPreValidacao
    End If
+
+   ' 2) Se for Delete nos campos 152,153 ou 154, propaga para o GAS control
+   If (Index = 152 Or Index = 153 Or Index = 154) And KeyCode = vbKeyDelete Then
+      txtCampo(Index).KeyDown KeyCode, Shift
+      Exit Sub   ' já propagou, sai para evitar chamada duplicada
+   End If
+
+   ' 3) Para todas as outras teclas (inclusive Delete em outros campos), propaga normalmente
    txtCampo(Index).KeyDown KeyCode, Shift
 End Sub
 
+
+
+'—> dispara em cada tecla pressionada
 Private Sub txtCp_KeyPress(Index As Integer, KeyAscii As Integer)
+
    Select Case Index
+
       Case 4
          ' seu tratamento atual
          LimitaCampo KeyAscii, 445
 
       Case 152
-         ' PlacaVeiculo: apenas A–Z e 0–9, sempre uppercase
-         If (KeyAscii >= 48 And KeyAscii <= 57) Or _
-            (KeyAscii >= 65 And KeyAscii <= 90) Or _
-            (KeyAscii >= 97 And KeyAscii <= 122) Then
-
+         ' PlacaVeiculo: apenas A–Z e 0–9, força uppercase
+         If KeyAscii = vbKeyBack Then
+            ' permite apagar
+         ElseIf (KeyAscii >= 48 And KeyAscii <= 57) Or _
+                (KeyAscii >= 65 And KeyAscii <= 90) Or _
+                (KeyAscii >= 97 And KeyAscii <= 122) Then
             KeyAscii = Asc(UCase$(Chr$(KeyAscii)))
          Else
             KeyAscii = 0
          End If
 
       Case 153
-         ' UfPlaca: apenas letras, sempre uppercase
-         If (KeyAscii >= 65 And KeyAscii <= 90) Or _
-            (KeyAscii >= 97 And KeyAscii <= 122) Then
-
+         ' UfPlaca: apenas letras A–Z, força uppercase
+         If KeyAscii = vbKeyBack Then
+         ElseIf (KeyAscii >= 65 And KeyAscii <= 90) Or _
+                (KeyAscii >= 97 And KeyAscii <= 122) Then
             KeyAscii = Asc(UCase$(Chr$(KeyAscii)))
          Else
             KeyAscii = 0
@@ -16060,14 +16078,21 @@ Private Sub txtCp_KeyPress(Index As Integer, KeyAscii As Integer)
 
       Case 154
          ' NumAntt: apenas dígitos
-         If Not (KeyAscii >= 48 And KeyAscii <= 57) Then
+         If KeyAscii = vbKeyBack Then
+         ElseIf Not (KeyAscii >= 48 And KeyAscii <= 57) Then
             KeyAscii = 0
          End If
+
+      Case Else
+         ' nada para outros índices
+
    End Select
 
-   ' Propaga o KeyPress para o controle Gas
+   ' Propaga o KeyPress para o GAS control (dispara txtCp_Change)
    txtCampo(Index).KeyPress KeyAscii
 End Sub
+
+
 
 
 'evento - quando o campo perder o foco

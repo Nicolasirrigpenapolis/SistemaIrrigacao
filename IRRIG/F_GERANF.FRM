@@ -1778,9 +1778,9 @@ Public Function Executar(vgOq As String) As String
    If vgOq = VALIDACOES Then
       InicializaApelidos COM_TEXTBOX
       
-    ' vgOk = (Transporte > 0) Or (Val("" & frete) = 3) Or (Val("" & frete) = 4) Or (Val("" & frete) = 9)
-   '  vgMsg$ = "Transportadora não pode ser Vazio!"
-     If Not vgOk Then txtCp(1).SetFocus
+    vgOk = (Transporte > 0) Or (Val("" & frete) = 3) Or (Val("" & frete) = 4) Or (Val("" & frete) = 9)
+     vgMsg$ = "Transportadora no pode ser Vazio!"
+     If Not vgOk Then txtCampo(1).SetFocus
       If vgOk Then
          vgOk = (Cobranca > 0)
          vgMsg$ = "Cobrança não pode ser Vazio!"
