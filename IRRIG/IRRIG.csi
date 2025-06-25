@@ -1,5 +1,17 @@
 [History]
-1=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmOrcament/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624173414	#P7#=0	#P8#=12	.
-2=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624173220	#P7#=0	#P8#=409	.
-3=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250624173044	#P7#=0	#P8#=52	.
-4=#P0#=mb	#P1#=LimpaProp	#P2#=IRRIG/frmOrcament/LimpaProp	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624171918	#P7#=0	#P8#=0	.
+1=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082411	#P7#=0	#P8#=33	.
+2=#P0#=mb	#P1#=LimitaCampo	#P2#=IRRIG/frmOrcament/LimitaCampo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082217	#P7#=0	#P8#=-5	.
+3=#P0#=mb	#P1#=AtualizaValoresConjuntos	#P2#=IRRIG/frmOrcament/AtualizaValoresConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082333	#P7#=0	#P8#=147	.
+4=#P0#=mb	#P1#=AtualizaValoresPecas	#P2#=IRRIG/frmOrcament/AtualizaValoresPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082335	#P7#=0	#P8#=234	.
+5=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082236	#P7#=0	#P8#=421	.
+6=#P0#=mb	#P1#=Parcelar	#P2#=IRRIG/frmOrcament/Parcelar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625081356	#P7#=0	#P8#=73	.
+7=#P0#=mb	#P1#=SuperAtualizaConjuntos	#P2#=IRRIG/frmOrcament/SuperAtualizaConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625080457	#P7#=0	#P8#=10	.
+8=#P0#=mb	#P1#=SuperAtualizaPecas	#P2#=IRRIG/frmOrcament/SuperAtualizaPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625081715	#P7#=0	#P8#=2	.
+9=#P0#=mb	#P1#=SuperAtualizaProdutos	#P2#=IRRIG/frmOrcament/SuperAtualizaProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625081719	#P7#=0	#P8#=60	.
+10=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmOrcament/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625080137	#P7#=0	#P8#=19	.
+11=#P0#=mb	#P1#=DistribuiDescontoTotal	#P2#=IRRIG/frmOrcament/DistribuiDescontoTotal	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082913	#P7#=0	#P8#=55	.
+12=#P0#=mb	#P1#=ContaRegs	#P2#=IRRIG/frmOrcament/ContaRegs	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625081650	#P7#=0	#P8#=0	.
+13=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmOrcament/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624173414	#P7#=0	#P8#=64	.
+14=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250624173220	#P7#=0	#P8#=409	.
+15=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250624173044	#P7#=0	#P8#=52	.
+16=#P0#=mb	#P1#=LimpaProp	#P2#=IRRIG/frmOrcament/LimpaProp	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625082716	#P7#=0	#P8#=-4	.

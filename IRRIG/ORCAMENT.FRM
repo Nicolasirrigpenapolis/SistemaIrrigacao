@@ -24,30 +24,6 @@ Begin VB.Form frmOrcament
       _ExtentY        =   16907
       BevelOuter      =   0
       Stretch         =   -1  'True
-      Begin VB.TextBox txtCp 
-         Alignment       =   1  'Right Justify
-         Appearance      =   0  'Flat
-         BackColor       =   &H00E0E0E0&
-         DataField       =   "Seqüência do Orçamento"
-         BeginProperty Font 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   300
-         Index           =   0
-         Left            =   615
-         Locked          =   -1  'True
-         MultiLine       =   -1  'True
-         TabIndex        =   0
-         TabStop         =   0   'False
-         Top             =   1650
-         Width           =   840
-      End
       Begin IRRIG.GBotao Botao 
          Height          =   435
          Index           =   0
@@ -72,6 +48,235 @@ Begin VB.Form frmOrcament
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   8
+         Left            =   14565
+         TabIndex        =   56
+         TabStop         =   0   'False
+         Top             =   750
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   9
+         Left            =   10050
+         TabIndex        =   54
+         TabStop         =   0   'False
+         Top             =   165
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   10
+         Left            =   9810
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   15180
+         TabIndex        =   59
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14580
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   13
+         Left            =   10050
+         TabIndex        =   182
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Ficha Técnica"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   14
+         Left            =   7410
+         TabIndex        =   187
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   2580
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mapa da Propriedade"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   15
+         Left            =   12810
+         TabIndex        =   190
+         TabStop         =   0   'False
+         Top             =   735
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   16
+         Left            =   13125
+         TabIndex        =   195
+         TabStop         =   0   'False
+         Top             =   165
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         DataField       =   "Seqüência do Orçamento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   0
+         Left            =   615
+         Locked          =   -1  'True
+         MultiLine       =   -1  'True
+         TabIndex        =   0
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   840
+      End
       Begin TabDlg.SSTab Tabs 
          Height          =   6570
          Index           =   0
@@ -84,6 +289,7 @@ Begin VB.Form frmOrcament
          _Version        =   393216
          Style           =   1
          Tabs            =   9
+         Tab             =   5
          TabsPerRow      =   9
          TabHeight       =   519
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -96,139 +302,73 @@ Begin VB.Form frmOrcament
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "&1 - Dados Principais"
-         Tab(0).ControlEnabled=   -1  'True
+         Tab(0).ControlEnabled=   0   'False
          Tab(0).Control(0)=   "Label(179)"
-         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).Control(1)=   "Label(178)"
-         Tab(0).Control(1).Enabled=   0   'False
          Tab(0).Control(2)=   "Label(177)"
-         Tab(0).Control(2).Enabled=   0   'False
          Tab(0).Control(3)=   "labFdo151"
-         Tab(0).Control(3).Enabled=   0   'False
          Tab(0).Control(4)=   "Label(176)"
-         Tab(0).Control(4).Enabled=   0   'False
          Tab(0).Control(5)=   "labFdo150"
-         Tab(0).Control(5).Enabled=   0   'False
          Tab(0).Control(6)=   "Label(175)"
-         Tab(0).Control(6).Enabled=   0   'False
          Tab(0).Control(7)=   "labFdo149"
-         Tab(0).Control(7).Enabled=   0   'False
          Tab(0).Control(8)=   "Label(174)"
-         Tab(0).Control(8).Enabled=   0   'False
          Tab(0).Control(9)=   "labFdo147"
-         Tab(0).Control(9).Enabled=   0   'False
          Tab(0).Control(10)=   "Label(172)"
-         Tab(0).Control(10).Enabled=   0   'False
          Tab(0).Control(11)=   "Label(170)"
-         Tab(0).Control(11).Enabled=   0   'False
          Tab(0).Control(12)=   "Label(169)"
-         Tab(0).Control(12).Enabled=   0   'False
          Tab(0).Control(13)=   "Label(168)"
-         Tab(0).Control(13).Enabled=   0   'False
          Tab(0).Control(14)=   "Label(167)"
-         Tab(0).Control(14).Enabled=   0   'False
          Tab(0).Control(15)=   "labFdo137"
-         Tab(0).Control(15).Enabled=   0   'False
          Tab(0).Control(16)=   "Label(146)"
-         Tab(0).Control(16).Enabled=   0   'False
          Tab(0).Control(17)=   "labFdo64"
-         Tab(0).Control(17).Enabled=   0   'False
          Tab(0).Control(18)=   "Label(68)"
-         Tab(0).Control(18).Enabled=   0   'False
          Tab(0).Control(19)=   "Label(67)"
-         Tab(0).Control(19).Enabled=   0   'False
          Tab(0).Control(20)=   "Label(66)"
-         Tab(0).Control(20).Enabled=   0   'False
          Tab(0).Control(21)=   "labFdo62"
-         Tab(0).Control(21).Enabled=   0   'False
          Tab(0).Control(22)=   "Label(65)"
-         Tab(0).Control(22).Enabled=   0   'False
          Tab(0).Control(23)=   "labFdo60"
-         Tab(0).Control(23).Enabled=   0   'False
          Tab(0).Control(24)=   "Label(64)"
-         Tab(0).Control(24).Enabled=   0   'False
          Tab(0).Control(25)=   "Label(63)"
-         Tab(0).Control(25).Enabled=   0   'False
          Tab(0).Control(26)=   "Label(62)"
-         Tab(0).Control(26).Enabled=   0   'False
          Tab(0).Control(27)=   "labFdo59"
-         Tab(0).Control(27).Enabled=   0   'False
          Tab(0).Control(28)=   "Label(61)"
-         Tab(0).Control(28).Enabled=   0   'False
          Tab(0).Control(29)=   "Label(60)"
-         Tab(0).Control(29).Enabled=   0   'False
          Tab(0).Control(30)=   "labFdo55"
-         Tab(0).Control(30).Enabled=   0   'False
          Tab(0).Control(31)=   "Label(57)"
-         Tab(0).Control(31).Enabled=   0   'False
          Tab(0).Control(32)=   "Label(56)"
-         Tab(0).Control(32).Enabled=   0   'False
          Tab(0).Control(33)=   "Label(53)"
-         Tab(0).Control(33).Enabled=   0   'False
          Tab(0).Control(34)=   "Label(52)"
-         Tab(0).Control(34).Enabled=   0   'False
          Tab(0).Control(35)=   "Label(51)"
-         Tab(0).Control(35).Enabled=   0   'False
          Tab(0).Control(36)=   "Label(46)"
-         Tab(0).Control(36).Enabled=   0   'False
          Tab(0).Control(37)=   "Label(45)"
-         Tab(0).Control(37).Enabled=   0   'False
          Tab(0).Control(38)=   "Linha(1)"
-         Tab(0).Control(38).Enabled=   0   'False
          Tab(0).Control(39)=   "Label(44)"
-         Tab(0).Control(39).Enabled=   0   'False
          Tab(0).Control(40)=   "Label(43)"
-         Tab(0).Control(40).Enabled=   0   'False
          Tab(0).Control(41)=   "Label(42)"
-         Tab(0).Control(41).Enabled=   0   'False
          Tab(0).Control(42)=   "Label(41)"
-         Tab(0).Control(42).Enabled=   0   'False
          Tab(0).Control(43)=   "Label(40)"
-         Tab(0).Control(43).Enabled=   0   'False
          Tab(0).Control(44)=   "Label(37)"
-         Tab(0).Control(44).Enabled=   0   'False
          Tab(0).Control(45)=   "Label(36)"
-         Tab(0).Control(45).Enabled=   0   'False
          Tab(0).Control(46)=   "Label(35)"
-         Tab(0).Control(46).Enabled=   0   'False
          Tab(0).Control(47)=   "Label(34)"
-         Tab(0).Control(47).Enabled=   0   'False
          Tab(0).Control(48)=   "Label(33)"
-         Tab(0).Control(48).Enabled=   0   'False
          Tab(0).Control(49)=   "Label(32)"
-         Tab(0).Control(49).Enabled=   0   'False
          Tab(0).Control(50)=   "Label(31)"
-         Tab(0).Control(50).Enabled=   0   'False
          Tab(0).Control(51)=   "Label(16)"
-         Tab(0).Control(51).Enabled=   0   'False
          Tab(0).Control(52)=   "Label(15)"
-         Tab(0).Control(52).Enabled=   0   'False
          Tab(0).Control(53)=   "Label(14)"
-         Tab(0).Control(53).Enabled=   0   'False
          Tab(0).Control(54)=   "labFdo33"
-         Tab(0).Control(54).Enabled=   0   'False
          Tab(0).Control(55)=   "Label(6)"
-         Tab(0).Control(55).Enabled=   0   'False
          Tab(0).Control(56)=   "labFdo17"
-         Tab(0).Control(56).Enabled=   0   'False
          Tab(0).Control(57)=   "Label(4)"
-         Tab(0).Control(57).Enabled=   0   'False
          Tab(0).Control(58)=   "labFdo16"
-         Tab(0).Control(58).Enabled=   0   'False
          Tab(0).Control(59)=   "Label(3)"
-         Tab(0).Control(59).Enabled=   0   'False
          Tab(0).Control(60)=   "Label(2)"
-         Tab(0).Control(60).Enabled=   0   'False
          Tab(0).Control(61)=   "Label(1)"
-         Tab(0).Control(61).Enabled=   0   'False
          Tab(0).Control(62)=   "Label(0)"
-         Tab(0).Control(62).Enabled=   0   'False
          Tab(0).Control(63)=   "txtCp(154)"
-         Tab(0).Control(63).Enabled=   0   'False
          Tab(0).Control(64)=   "txtCp(153)"
-         Tab(0).Control(64).Enabled=   0   'False
          Tab(0).Control(65)=   "txtCp(152)"
-         Tab(0).Control(65).Enabled=   0   'False
          Tab(0).Control(66)=   "txtCp(151)"
          Tab(0).Control(66).Enabled=   0   'False
          Tab(0).Control(67)=   "bottxtCampo151(2)"
@@ -246,21 +386,14 @@ Begin VB.Form frmOrcament
          Tab(0).Control(73)=   "bottxtCampo147(2)"
          Tab(0).Control(73).Enabled=   0   'False
          Tab(0).Control(74)=   "txtCp(146)"
-         Tab(0).Control(74).Enabled=   0   'False
          Tab(0).Control(75)=   "txtCp(145)"
-         Tab(0).Control(75).Enabled=   0   'False
          Tab(0).Control(76)=   "txtCp(144)"
-         Tab(0).Control(76).Enabled=   0   'False
          Tab(0).Control(77)=   "txtCp(143)"
-         Tab(0).Control(77).Enabled=   0   'False
          Tab(0).Control(78)=   "txtCp(137)"
-         Tab(0).Control(78).Enabled=   0   'False
          Tab(0).Control(79)=   "bottxtCampo137(2)"
          Tab(0).Control(79).Enabled=   0   'False
          Tab(0).Control(80)=   "txtCp(65)"
-         Tab(0).Control(80).Enabled=   0   'False
          Tab(0).Control(81)=   "txtCp(64)"
-         Tab(0).Control(81).Enabled=   0   'False
          Tab(0).Control(82)=   "bottxtCampo64(2)"
          Tab(0).Control(82).Enabled=   0   'False
          Tab(0).Control(83)=   "txtCp(63)"
@@ -269,118 +402,90 @@ Begin VB.Form frmOrcament
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "bottxtCampo62(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(5)"
-         Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "txtCp(60)"
+         Tab(0).Control(86)=   "txtCp(60)"
+         Tab(0).Control(87)=   "bottxtCampo60(2)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "bottxtCampo60(2)"
+         Tab(0).Control(88)=   "bottxtCampo60(1)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "bottxtCampo60(1)"
-         Tab(0).Control(89).Enabled=   0   'False
-         Tab(0).Control(90)=   "txtCp(59)"
+         Tab(0).Control(89)=   "txtCp(59)"
+         Tab(0).Control(90)=   "bottxtCampo59(2)"
          Tab(0).Control(90).Enabled=   0   'False
-         Tab(0).Control(91)=   "bottxtCampo59(2)"
-         Tab(0).Control(91).Enabled=   0   'False
-         Tab(0).Control(92)=   "txtCp(58)"
-         Tab(0).Control(92).Enabled=   0   'False
-         Tab(0).Control(93)=   "Botao(4)"
+         Tab(0).Control(91)=   "txtCp(58)"
+         Tab(0).Control(92)=   "txtCp(55)"
+         Tab(0).Control(93)=   "bottxtCampo55(2)"
          Tab(0).Control(93).Enabled=   0   'False
-         Tab(0).Control(94)=   "txtCp(55)"
+         Tab(0).Control(94)=   "bottxtCampo55(1)"
          Tab(0).Control(94).Enabled=   0   'False
-         Tab(0).Control(95)=   "bottxtCampo55(2)"
+         Tab(0).Control(95)=   "ChkCp(2)"
          Tab(0).Control(95).Enabled=   0   'False
-         Tab(0).Control(96)=   "bottxtCampo55(1)"
-         Tab(0).Control(96).Enabled=   0   'False
-         Tab(0).Control(97)=   "ChkCp(2)"
-         Tab(0).Control(97).Enabled=   0   'False
-         Tab(0).Control(98)=   "txtCp(54)"
-         Tab(0).Control(98).Enabled=   0   'False
-         Tab(0).Control(99)=   "txtCp(51)"
+         Tab(0).Control(96)=   "txtCp(54)"
+         Tab(0).Control(97)=   "txtCp(51)"
+         Tab(0).Control(98)=   "Painel(1)"
+         Tab(0).Control(99)=   "txtCp(50)"
          Tab(0).Control(99).Enabled=   0   'False
-         Tab(0).Control(100)=   "Painel(1)"
-         Tab(0).Control(100).Enabled=   0   'False
-         Tab(0).Control(101)=   "txtCp(50)"
+         Tab(0).Control(100)=   "txtCp(48)"
+         Tab(0).Control(101)=   "ChkCp(1)"
          Tab(0).Control(101).Enabled=   0   'False
-         Tab(0).Control(102)=   "txtCp(48)"
-         Tab(0).Control(102).Enabled=   0   'False
-         Tab(0).Control(103)=   "ChkCp(1)"
+         Tab(0).Control(102)=   "txtCp(33)"
+         Tab(0).Control(103)=   "bottxtCampo33(2)"
          Tab(0).Control(103).Enabled=   0   'False
-         Tab(0).Control(104)=   "Botao(3)"
+         Tab(0).Control(104)=   "bottxtCampo33(1)"
          Tab(0).Control(104).Enabled=   0   'False
-         Tab(0).Control(105)=   "txtCp(33)"
+         Tab(0).Control(105)=   "txtCp(30)"
          Tab(0).Control(105).Enabled=   0   'False
-         Tab(0).Control(106)=   "bottxtCampo33(2)"
+         Tab(0).Control(106)=   "txtCp(29)"
          Tab(0).Control(106).Enabled=   0   'False
-         Tab(0).Control(107)=   "bottxtCampo33(1)"
+         Tab(0).Control(107)=   "txtCp(28)"
          Tab(0).Control(107).Enabled=   0   'False
-         Tab(0).Control(108)=   "Botao(1)"
+         Tab(0).Control(108)=   "txtCp(27)"
          Tab(0).Control(108).Enabled=   0   'False
-         Tab(0).Control(109)=   "txtCp(30)"
+         Tab(0).Control(109)=   "txtCp(26)"
          Tab(0).Control(109).Enabled=   0   'False
-         Tab(0).Control(110)=   "txtCp(29)"
-         Tab(0).Control(110).Enabled=   0   'False
-         Tab(0).Control(111)=   "txtCp(28)"
-         Tab(0).Control(111).Enabled=   0   'False
-         Tab(0).Control(112)=   "txtCp(27)"
-         Tab(0).Control(112).Enabled=   0   'False
-         Tab(0).Control(113)=   "txtCp(26)"
-         Tab(0).Control(113).Enabled=   0   'False
-         Tab(0).Control(114)=   "txtCp(25)"
-         Tab(0).Control(114).Enabled=   0   'False
-         Tab(0).Control(115)=   "txtCp(24)"
-         Tab(0).Control(115).Enabled=   0   'False
-         Tab(0).Control(116)=   "txtCp(23)"
+         Tab(0).Control(110)=   "txtCp(25)"
+         Tab(0).Control(111)=   "txtCp(24)"
+         Tab(0).Control(112)=   "txtCp(23)"
+         Tab(0).Control(113)=   "txtCp(22)"
+         Tab(0).Control(114)=   "txtCp(21)"
+         Tab(0).Control(115)=   "txtCp(20)"
+         Tab(0).Control(116)=   "txtCp(19)"
          Tab(0).Control(116).Enabled=   0   'False
-         Tab(0).Control(117)=   "txtCp(22)"
-         Tab(0).Control(117).Enabled=   0   'False
-         Tab(0).Control(118)=   "txtCp(21)"
-         Tab(0).Control(118).Enabled=   0   'False
-         Tab(0).Control(119)=   "txtCp(20)"
+         Tab(0).Control(117)=   "txtCp(18)"
+         Tab(0).Control(118)=   "txtCp(17)"
+         Tab(0).Control(119)=   "bottxtCampo17(2)"
          Tab(0).Control(119).Enabled=   0   'False
-         Tab(0).Control(120)=   "txtCp(19)"
+         Tab(0).Control(120)=   "bottxtCampo17(1)"
          Tab(0).Control(120).Enabled=   0   'False
-         Tab(0).Control(121)=   "txtCp(18)"
-         Tab(0).Control(121).Enabled=   0   'False
-         Tab(0).Control(122)=   "txtCp(17)"
+         Tab(0).Control(121)=   "txtCp(16)"
+         Tab(0).Control(122)=   "bottxtCampo16(0)"
          Tab(0).Control(122).Enabled=   0   'False
-         Tab(0).Control(123)=   "bottxtCampo17(2)"
+         Tab(0).Control(123)=   "txtCp(15)"
          Tab(0).Control(123).Enabled=   0   'False
-         Tab(0).Control(124)=   "bottxtCampo17(1)"
+         Tab(0).Control(124)=   "ChkCp(0)"
          Tab(0).Control(124).Enabled=   0   'False
-         Tab(0).Control(125)=   "txtCp(16)"
-         Tab(0).Control(125).Enabled=   0   'False
-         Tab(0).Control(126)=   "bottxtCampo16(0)"
-         Tab(0).Control(126).Enabled=   0   'False
-         Tab(0).Control(127)=   "txtCp(15)"
-         Tab(0).Control(127).Enabled=   0   'False
-         Tab(0).Control(128)=   "ChkCp(0)"
+         Tab(0).Control(125)=   "txtCp(14)"
+         Tab(0).Control(126)=   "txtCp(13)"
+         Tab(0).Control(127)=   "txtCp(12)"
+         Tab(0).Control(128)=   "txtCp(11)"
          Tab(0).Control(128).Enabled=   0   'False
-         Tab(0).Control(129)=   "txtCp(14)"
+         Tab(0).Control(129)=   "txtCp(10)"
          Tab(0).Control(129).Enabled=   0   'False
-         Tab(0).Control(130)=   "txtCp(13)"
-         Tab(0).Control(130).Enabled=   0   'False
-         Tab(0).Control(131)=   "txtCp(12)"
+         Tab(0).Control(130)=   "txtCp(8)"
+         Tab(0).Control(131)=   "txtCp(7)"
          Tab(0).Control(131).Enabled=   0   'False
-         Tab(0).Control(132)=   "txtCp(11)"
+         Tab(0).Control(132)=   "txtCp(6)"
          Tab(0).Control(132).Enabled=   0   'False
-         Tab(0).Control(133)=   "txtCp(10)"
-         Tab(0).Control(133).Enabled=   0   'False
-         Tab(0).Control(134)=   "txtCp(8)"
-         Tab(0).Control(134).Enabled=   0   'False
-         Tab(0).Control(135)=   "txtCp(7)"
+         Tab(0).Control(133)=   "txtCp(5)"
+         Tab(0).Control(134)=   "txtCp(4)"
+         Tab(0).Control(135)=   "txtCp(3)"
          Tab(0).Control(135).Enabled=   0   'False
-         Tab(0).Control(136)=   "txtCp(6)"
+         Tab(0).Control(136)=   "txtCp(2)"
          Tab(0).Control(136).Enabled=   0   'False
-         Tab(0).Control(137)=   "txtCp(5)"
+         Tab(0).Control(137)=   "txtCp(1)"
          Tab(0).Control(137).Enabled=   0   'False
-         Tab(0).Control(138)=   "txtCp(4)"
-         Tab(0).Control(138).Enabled=   0   'False
-         Tab(0).Control(139)=   "txtCp(3)"
-         Tab(0).Control(139).Enabled=   0   'False
-         Tab(0).Control(140)=   "txtCp(2)"
-         Tab(0).Control(140).Enabled=   0   'False
-         Tab(0).Control(141)=   "txtCp(1)"
-         Tab(0).Control(141).Enabled=   0   'False
+         Tab(0).Control(138)=   "Botao(1)"
+         Tab(0).Control(139)=   "Botao(3)"
+         Tab(0).Control(140)=   "Botao(4)"
+         Tab(0).Control(141)=   "Botao(5)"
          Tab(0).ControlCount=   142
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
@@ -413,96 +518,144 @@ Begin VB.Form frmOrcament
          Tab(4).Control(1)=   "Label(48)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
-         Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "txtCp(9)"
+         TabPicture(5)   =   "ORCAMENT.frx":0000
+         Tab(5).ControlEnabled=   -1  'True
+         Tab(5).Control(0)=   "Label(173)"
          Tab(5).Control(0).Enabled=   0   'False
-         Tab(5).Control(1)=   "txtCp(31)"
+         Tab(5).Control(1)=   "labFdo57"
          Tab(5).Control(1).Enabled=   0   'False
-         Tab(5).Control(2)=   "Label(5)"
-         Tab(5).Control(3)=   "labFdo32"
-         Tab(5).Control(4)=   "bottxtCampo32(0)"
+         Tab(5).Control(2)=   "Label(59)"
+         Tab(5).Control(2).Enabled=   0   'False
+         Tab(5).Control(3)=   "Label(58)"
+         Tab(5).Control(3).Enabled=   0   'False
+         Tab(5).Control(4)=   "Label(55)"
          Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "txtCp(32)"
-         Tab(5).Control(6)=   "Grid(2)"
-         Tab(5).Control(7)=   "labFdo35"
-         Tab(5).Control(8)=   "bottxtCampo35(2)"
+         Tab(5).Control(5)=   "Label(54)"
+         Tab(5).Control(5).Enabled=   0   'False
+         Tab(5).Control(6)=   "Label(38)"
+         Tab(5).Control(6).Enabled=   0   'False
+         Tab(5).Control(7)=   "Label(30)"
+         Tab(5).Control(7).Enabled=   0   'False
+         Tab(5).Control(8)=   "labFdo47"
          Tab(5).Control(8).Enabled=   0   'False
-         Tab(5).Control(9)=   "txtCp(35)"
-         Tab(5).Control(10)=   "Label(7)"
-         Tab(5).Control(11)=   "Label(8)"
-         Tab(5).Control(12)=   "Formato(0)"
-         Tab(5).Control(13)=   "Label(9)"
-         Tab(5).Control(14)=   "Formato(1)"
-         Tab(5).Control(15)=   "Label(10)"
-         Tab(5).Control(16)=   "Formato(2)"
-         Tab(5).Control(17)=   "Label(11)"
-         Tab(5).Control(18)=   "txtCp(36)"
+         Tab(5).Control(9)=   "Label(29)"
+         Tab(5).Control(9).Enabled=   0   'False
+         Tab(5).Control(10)=   "Label(28)"
+         Tab(5).Control(10).Enabled=   0   'False
+         Tab(5).Control(11)=   "labFdo45"
+         Tab(5).Control(11).Enabled=   0   'False
+         Tab(5).Control(12)=   "Label(27)"
+         Tab(5).Control(12).Enabled=   0   'False
+         Tab(5).Control(13)=   "Label(26)"
+         Tab(5).Control(13).Enabled=   0   'False
+         Tab(5).Control(14)=   "Label(25)"
+         Tab(5).Control(14).Enabled=   0   'False
+         Tab(5).Control(15)=   "Label(24)"
+         Tab(5).Control(15).Enabled=   0   'False
+         Tab(5).Control(16)=   "Label(23)"
+         Tab(5).Control(16).Enabled=   0   'False
+         Tab(5).Control(17)=   "Label(22)"
+         Tab(5).Control(17).Enabled=   0   'False
+         Tab(5).Control(18)=   "Label(21)"
          Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "Label(12)"
-         Tab(5).Control(20)=   "Label(13)"
-         Tab(5).Control(21)=   "Linha(0)"
-         Tab(5).Control(22)=   "txtCp(37)"
+         Tab(5).Control(19)=   "Label(20)"
+         Tab(5).Control(19).Enabled=   0   'False
+         Tab(5).Control(20)=   "Label(19)"
+         Tab(5).Control(20).Enabled=   0   'False
+         Tab(5).Control(21)=   "Label(18)"
+         Tab(5).Control(21).Enabled=   0   'False
+         Tab(5).Control(22)=   "Label(17)"
          Tab(5).Control(22).Enabled=   0   'False
-         Tab(5).Control(23)=   "Label(17)"
-         Tab(5).Control(24)=   "Label(18)"
-         Tab(5).Control(25)=   "Label(19)"
-         Tab(5).Control(26)=   "Label(20)"
-         Tab(5).Control(27)=   "Label(21)"
-         Tab(5).Control(28)=   "Label(22)"
-         Tab(5).Control(29)=   "txtCp(38)"
+         Tab(5).Control(23)=   "Linha(0)"
+         Tab(5).Control(23).Enabled=   0   'False
+         Tab(5).Control(24)=   "Label(13)"
+         Tab(5).Control(24).Enabled=   0   'False
+         Tab(5).Control(25)=   "Label(12)"
+         Tab(5).Control(25).Enabled=   0   'False
+         Tab(5).Control(26)=   "Label(11)"
+         Tab(5).Control(26).Enabled=   0   'False
+         Tab(5).Control(27)=   "Formato(2)"
+         Tab(5).Control(27).Enabled=   0   'False
+         Tab(5).Control(28)=   "Label(10)"
+         Tab(5).Control(28).Enabled=   0   'False
+         Tab(5).Control(29)=   "Formato(1)"
          Tab(5).Control(29).Enabled=   0   'False
-         Tab(5).Control(30)=   "txtCp(39)"
+         Tab(5).Control(30)=   "Label(9)"
          Tab(5).Control(30).Enabled=   0   'False
-         Tab(5).Control(31)=   "txtCp(40)"
+         Tab(5).Control(31)=   "Formato(0)"
          Tab(5).Control(31).Enabled=   0   'False
-         Tab(5).Control(32)=   "Label(23)"
-         Tab(5).Control(33)=   "txtCp(41)"
+         Tab(5).Control(32)=   "Label(8)"
+         Tab(5).Control(32).Enabled=   0   'False
+         Tab(5).Control(33)=   "Label(7)"
          Tab(5).Control(33).Enabled=   0   'False
-         Tab(5).Control(34)=   "txtCp(42)"
+         Tab(5).Control(34)=   "labFdo35"
          Tab(5).Control(34).Enabled=   0   'False
-         Tab(5).Control(35)=   "Label(24)"
-         Tab(5).Control(36)=   "txtCp(43)"
+         Tab(5).Control(35)=   "labFdo32"
+         Tab(5).Control(35).Enabled=   0   'False
+         Tab(5).Control(36)=   "Label(5)"
          Tab(5).Control(36).Enabled=   0   'False
-         Tab(5).Control(37)=   "Label(25)"
-         Tab(5).Control(38)=   "txtCp(44)"
+         Tab(5).Control(37)=   "txtCp(148)"
+         Tab(5).Control(37).Enabled=   0   'False
+         Tab(5).Control(38)=   "txtCp(57)"
          Tab(5).Control(38).Enabled=   0   'False
-         Tab(5).Control(39)=   "Label(26)"
-         Tab(5).Control(40)=   "Label(27)"
-         Tab(5).Control(41)=   "labFdo45"
-         Tab(5).Control(42)=   "bottxtCampo45(0)"
+         Tab(5).Control(39)=   "bottxtCampo57(0)"
+         Tab(5).Control(39).Enabled=   0   'False
+         Tab(5).Control(40)=   "txtCp(56)"
+         Tab(5).Control(40).Enabled=   0   'False
+         Tab(5).Control(41)=   "txtCp(53)"
+         Tab(5).Control(41).Enabled=   0   'False
+         Tab(5).Control(42)=   "txtCp(52)"
          Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "txtCp(45)"
-         Tab(5).Control(44)=   "Label(28)"
-         Tab(5).Control(45)=   "Label(29)"
-         Tab(5).Control(46)=   "txtCp(46)"
+         Tab(5).Control(43)=   "Painel(2)"
+         Tab(5).Control(43).Enabled=   0   'False
+         Tab(5).Control(44)=   "txtCp(49)"
+         Tab(5).Control(44).Enabled=   0   'False
+         Tab(5).Control(45)=   "txtCp(47)"
+         Tab(5).Control(45).Enabled=   0   'False
+         Tab(5).Control(46)=   "bottxtCampo47(0)"
          Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "labFdo47"
-         Tab(5).Control(48)=   "bottxtCampo47(0)"
+         Tab(5).Control(47)=   "txtCp(46)"
+         Tab(5).Control(47).Enabled=   0   'False
+         Tab(5).Control(48)=   "txtCp(45)"
          Tab(5).Control(48).Enabled=   0   'False
-         Tab(5).Control(49)=   "txtCp(47)"
-         Tab(5).Control(50)=   "Label(30)"
-         Tab(5).Control(51)=   "txtCp(49)"
+         Tab(5).Control(49)=   "bottxtCampo45(0)"
+         Tab(5).Control(49).Enabled=   0   'False
+         Tab(5).Control(50)=   "txtCp(44)"
+         Tab(5).Control(50).Enabled=   0   'False
+         Tab(5).Control(51)=   "txtCp(43)"
          Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "Label(38)"
-         Tab(5).Control(53)=   "Painel(2)"
-         Tab(5).Control(54)=   "Label(54)"
-         Tab(5).Control(55)=   "txtCp(52)"
+         Tab(5).Control(52)=   "txtCp(42)"
+         Tab(5).Control(52).Enabled=   0   'False
+         Tab(5).Control(53)=   "txtCp(41)"
+         Tab(5).Control(53).Enabled=   0   'False
+         Tab(5).Control(54)=   "txtCp(40)"
+         Tab(5).Control(54).Enabled=   0   'False
+         Tab(5).Control(55)=   "txtCp(39)"
          Tab(5).Control(55).Enabled=   0   'False
-         Tab(5).Control(56)=   "Label(55)"
-         Tab(5).Control(57)=   "txtCp(53)"
+         Tab(5).Control(56)=   "txtCp(38)"
+         Tab(5).Control(56).Enabled=   0   'False
+         Tab(5).Control(57)=   "txtCp(37)"
          Tab(5).Control(57).Enabled=   0   'False
-         Tab(5).Control(58)=   "Label(58)"
-         Tab(5).Control(59)=   "txtCp(56)"
+         Tab(5).Control(58)=   "txtCp(36)"
+         Tab(5).Control(58).Enabled=   0   'False
+         Tab(5).Control(59)=   "txtCp(35)"
          Tab(5).Control(59).Enabled=   0   'False
-         Tab(5).Control(60)=   "Label(59)"
-         Tab(5).Control(61)=   "labFdo57"
-         Tab(5).Control(62)=   "bottxtCampo57(0)"
+         Tab(5).Control(60)=   "bottxtCampo35(2)"
+         Tab(5).Control(60).Enabled=   0   'False
+         Tab(5).Control(61)=   "Grid(2)"
+         Tab(5).Control(61).Enabled=   0   'False
+         Tab(5).Control(62)=   "txtCp(32)"
          Tab(5).Control(62).Enabled=   0   'False
-         Tab(5).Control(63)=   "txtCp(57)"
-         Tab(5).Control(64)=   "Botao(6)"
-         Tab(5).Control(65)=   "Botao(7)"
-         Tab(5).Control(66)=   "Label(173)"
-         Tab(5).Control(67)=   "txtCp(148)"
+         Tab(5).Control(63)=   "bottxtCampo32(0)"
+         Tab(5).Control(63).Enabled=   0   'False
+         Tab(5).Control(64)=   "txtCp(31)"
+         Tab(5).Control(64).Enabled=   0   'False
+         Tab(5).Control(65)=   "txtCp(9)"
+         Tab(5).Control(65).Enabled=   0   'False
+         Tab(5).Control(66)=   "Botao(7)"
+         Tab(5).Control(66).Enabled=   0   'False
+         Tab(5).Control(67)=   "Botao(6)"
+         Tab(5).Control(67).Enabled=   0   'False
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
@@ -751,6 +904,162 @@ Begin VB.Form frmOrcament
          Tab(8).Control(0)=   "Label(171)"
          Tab(8).Control(1)=   "mmCampo(0)"
          Tab(8).ControlCount=   2
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   1
+            Left            =   -71700
+            TabIndex        =   28
+            TabStop         =   0   'False
+            Top             =   2700
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   2
+            Left            =   -71670
+            TabIndex        =   42
+            TabStop         =   0   'False
+            Top             =   450
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   3
+            Left            =   -64875
+            TabIndex        =   19
+            TabStop         =   0   'False
+            Top             =   1380
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   4
+            Left            =   -65400
+            TabIndex        =   30
+            TabStop         =   0   'False
+            Top             =   2700
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   5
+            Left            =   -65880
+            TabIndex        =   93
+            TabStop         =   0   'False
+            Top             =   4620
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   375
+            Index           =   6
+            Left            =   9495
+            TabIndex        =   104
+            TabStop         =   0   'False
+            Top             =   4695
+            Width           =   5070
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   32768
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Atualizar Valor dos Produtos"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   315
+            Index           =   7
+            Left            =   10995
+            TabIndex        =   105
+            TabStop         =   0   'False
+            Top             =   495
+            Width           =   2055
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Parcelamento"
+            CaptionOffset   =   50
+         End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
             BackColor       =   &H00E0E0E0&
@@ -763,9 +1072,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   1
-            Left            =   11610
+            Left            =   -63390
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   83
@@ -785,9 +1094,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   2
-            Left            =   3390
+            Left            =   -71610
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   75
@@ -807,9 +1116,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   3
-            Left            =   13230
+            Left            =   -61770
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   74
@@ -830,7 +1139,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   990
             Index           =   4
-            Left            =   660
+            Left            =   -74340
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   37
@@ -848,9 +1157,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   360
             Index           =   5
-            Left            =   720
+            Left            =   -74280
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   94
@@ -869,9 +1178,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   6
-            Left            =   870
+            Left            =   -74130
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   77
@@ -891,9 +1200,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   7
-            Left            =   870
+            Left            =   -74130
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   78
@@ -913,9 +1222,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   8
-            Left            =   11610
+            Left            =   -63390
             TabIndex        =   14
             Top             =   915
             Width           =   960
@@ -934,9 +1243,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   9
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   64
@@ -956,9 +1265,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   10
-            Left            =   3600
+            Left            =   -71400
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   79
@@ -978,9 +1287,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   11
-            Left            =   7125
+            Left            =   -67875
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   85
@@ -1000,9 +1309,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   12
-            Left            =   870
+            Left            =   -74130
             MaxLength       =   14
             TabIndex        =   16
             Top             =   1380
@@ -1020,9 +1329,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   13
-            Left            =   870
+            Left            =   -74130
             MaxLength       =   20
             TabIndex        =   23
             Top             =   1845
@@ -1040,9 +1349,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   14
-            Left            =   3600
+            Left            =   -71400
             MaxLength       =   20
             TabIndex        =   24
             Top             =   1845
@@ -1063,7 +1372,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00000080&
             Height          =   240
             Index           =   0
-            Left            =   9225
+            Left            =   -65775
             TabIndex        =   86
             TabStop         =   0   'False
             Top             =   1950
@@ -1081,9 +1390,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   15
-            Left            =   11580
+            Left            =   -63420
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   81
@@ -1094,7 +1403,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo16 
             Height          =   270
             Index           =   0
-            Left            =   14715
+            Left            =   -60285
             Style           =   1  'Graphical
             TabIndex        =   207
             TabStop         =   0   'False
@@ -1116,7 +1425,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   16
-            Left            =   11595
+            Left            =   -63405
             MaxLength       =   255
             TabIndex        =   26
             Top             =   1875
@@ -1125,7 +1434,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo17 
             Height          =   270
             Index           =   1
-            Left            =   9855
+            Left            =   -65145
             Style           =   1  'Graphical
             TabIndex        =   210
             TabStop         =   0   'False
@@ -1135,7 +1444,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo17 
             Height          =   270
             Index           =   2
-            Left            =   9600
+            Left            =   -65400
             Style           =   1  'Graphical
             TabIndex        =   211
             TabStop         =   0   'False
@@ -1157,7 +1466,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   17
-            Left            =   7140
+            Left            =   -67860
             TabIndex        =   18
             Top             =   1395
             Width           =   2445
@@ -1174,9 +1483,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   18
-            Left            =   915
+            Left            =   -74085
             MaxLength       =   60
             TabIndex        =   7
             Top             =   480
@@ -1194,9 +1503,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   19
-            Left            =   7125
+            Left            =   -67875
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   76
@@ -1216,9 +1525,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   20
-            Left            =   4950
+            Left            =   -70050
             MaxLength       =   10
             TabIndex        =   12
             Top             =   915
@@ -1236,9 +1545,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   21
-            Left            =   3390
+            Left            =   -71610
             MaxLength       =   30
             TabIndex        =   17
             Top             =   1380
@@ -1256,9 +1565,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   22
-            Left            =   13230
+            Left            =   -61770
             MaxLength       =   14
             TabIndex        =   15
             Top             =   915
@@ -1276,9 +1585,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   23
-            Left            =   7140
+            Left            =   -67860
             MaxLength       =   50
             TabIndex        =   13
             Top             =   900
@@ -1296,9 +1605,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   24
-            Left            =   11610
+            Left            =   -63390
             MaxLength       =   100
             TabIndex        =   10
             Top             =   450
@@ -1316,9 +1625,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   25
-            Left            =   870
+            Left            =   -74130
             MaxLength       =   100
             TabIndex        =   11
             Top             =   915
@@ -1336,9 +1645,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   26
-            Left            =   11610
+            Left            =   -63390
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   82
@@ -1358,9 +1667,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   27
-            Left            =   11610
+            Left            =   -63390
             Locked          =   -1  'True
             MaxLength       =   3
             TabIndex        =   20
@@ -1380,9 +1689,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   28
-            Left            =   7125
+            Left            =   -67875
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   73
@@ -1402,9 +1711,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   29
-            Left            =   4950
+            Left            =   -70050
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   80
@@ -1424,9 +1733,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   30
-            Left            =   870
+            Left            =   -74130
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   84
@@ -1448,9 +1757,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   31
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   60
@@ -1461,7 +1770,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo32 
             Height          =   270
             Index           =   0
-            Left            =   -70275
+            Left            =   4725
             Style           =   1  'Graphical
             TabIndex        =   214
             TabStop         =   0   'False
@@ -1484,38 +1793,16 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   32
-            Left            =   -71595
+            Left            =   3405
             MultiLine       =   -1  'True
             TabIndex        =   48
             Top             =   885
             Width           =   1320
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   1
-            Left            =   3300
-            TabIndex        =   28
-            TabStop         =   0   'False
-            Top             =   2700
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
          Begin VB.CommandButton bottxtCampo33 
             Height          =   270
             Index           =   1
-            Left            =   3045
+            Left            =   -71955
             Style           =   1  'Graphical
             TabIndex        =   217
             TabStop         =   0   'False
@@ -1525,7 +1812,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo33 
             Height          =   270
             Index           =   2
-            Left            =   2790
+            Left            =   -72210
             Style           =   1  'Graphical
             TabIndex        =   218
             TabStop         =   0   'False
@@ -1547,7 +1834,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   33
-            Left            =   750
+            Left            =   -74250
             TabIndex        =   27
             Top             =   2715
             Width           =   2025
@@ -1653,7 +1940,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GListV Grid 
             Height          =   3750
             Index           =   2
-            Left            =   -65475
+            Left            =   9525
             TabIndex        =   53
             Tag             =   "1"
             Top             =   900
@@ -1683,7 +1970,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo35 
             Height          =   270
             Index           =   2
-            Left            =   -70275
+            Left            =   4725
             Style           =   1  'Graphical
             TabIndex        =   223
             TabStop         =   0   'False
@@ -1705,7 +1992,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   35
-            Left            =   -71595
+            Left            =   3405
             TabIndex        =   45
             Top             =   480
             Width           =   1320
@@ -1768,28 +2055,6 @@ Begin VB.Form frmOrcament
                Strikethrough   =   0   'False
             EndProperty
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   2
-            Left            =   -71670
-            TabIndex        =   42
-            TabStop         =   0   'False
-            Top             =   450
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
             Appearance      =   0  'Flat
@@ -1804,37 +2069,15 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   36
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   61
             TabStop         =   0   'False
             Top             =   5010
             Width           =   1605
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   3
-            Left            =   10125
-            TabIndex        =   19
-            TabStop         =   0   'False
-            Top             =   1380
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -1850,9 +2093,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   37
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   62
@@ -1874,9 +2117,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   38
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   63
@@ -1898,9 +2141,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   39
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   65
@@ -1922,9 +2165,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   40
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   66
@@ -1946,9 +2189,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   41
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   67
@@ -1970,9 +2213,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   42
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   68
@@ -1994,9 +2237,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   43
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   69
@@ -2018,9 +2261,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   44
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   70
@@ -2031,7 +2274,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo45 
             Height          =   270
             Index           =   0
-            Left            =   -66120
+            Left            =   8880
             Style           =   1  'Graphical
             TabIndex        =   246
             TabStop         =   0   'False
@@ -2054,7 +2297,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   45
-            Left            =   -67440
+            Left            =   7560
             MultiLine       =   -1  'True
             TabIndex        =   49
             Top             =   885
@@ -2074,9 +2317,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   46
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   71
@@ -2087,7 +2330,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo47 
             Height          =   270
             Index           =   0
-            Left            =   -70275
+            Left            =   4725
             Style           =   1  'Graphical
             TabIndex        =   250
             TabStop         =   0   'False
@@ -2110,7 +2353,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   47
-            Left            =   -71595
+            Left            =   3405
             MultiLine       =   -1  'True
             TabIndex        =   50
             Top             =   1290
@@ -2130,7 +2373,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   1
-            Left            =   10170
+            Left            =   -64830
             TabIndex        =   9
             TabStop         =   0   'False
             Top             =   570
@@ -2148,9 +2391,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   48
-            Left            =   7140
+            Left            =   -67860
             MaxLength       =   62
             TabIndex        =   8
             Top             =   480
@@ -2170,9 +2413,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   49
-            Left            =   -71610
+            Left            =   3390
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   72
@@ -2193,9 +2436,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   50
-            Left            =   4260
+            Left            =   -70740
             Locked          =   -1  'True
             TabIndex        =   35
             TabStop         =   0   'False
@@ -2205,7 +2448,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   1
-            Left            =   12630
+            Left            =   -62370
             TabIndex        =   274
             TabStop         =   0   'False
             Top             =   1395
@@ -2268,7 +2511,7 @@ Begin VB.Form frmOrcament
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   2
-            Left            =   -67455
+            Left            =   7545
             TabIndex        =   276
             TabStop         =   0   'False
             Top             =   495
@@ -2340,9 +2583,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   51
-            Left            =   7125
+            Left            =   -67875
             MaxLength       =   9
             TabIndex        =   25
             Top             =   1845
@@ -2362,9 +2605,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   52
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   87
@@ -2386,9 +2629,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   53
-            Left            =   -67455
+            Left            =   7545
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   88
@@ -2409,9 +2652,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   54
-            Left            =   720
+            Left            =   -74280
             MultiLine       =   -1  'True
             TabIndex        =   33
             Top             =   3120
@@ -2431,7 +2674,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   2
-            Left            =   1800
+            Left            =   -73200
             TabIndex        =   34
             TabStop         =   0   'False
             Top             =   3120
@@ -2440,7 +2683,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo55 
             Height          =   270
             Index           =   1
-            Left            =   9315
+            Left            =   -65685
             Style           =   1  'Graphical
             TabIndex        =   284
             TabStop         =   0   'False
@@ -2450,7 +2693,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo55 
             Height          =   270
             Index           =   2
-            Left            =   9060
+            Left            =   -65940
             Style           =   1  'Graphical
             TabIndex        =   285
             TabStop         =   0   'False
@@ -2472,32 +2715,10 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   55
-            Left            =   7395
+            Left            =   -67605
             TabIndex        =   29
             Top             =   2715
             Width           =   1650
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   4
-            Left            =   9600
-            TabIndex        =   30
-            TabStop         =   0   'False
-            Top             =   2700
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -2512,9 +2733,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   56
-            Left            =   -67440
+            Left            =   7560
             Locked          =   -1  'True
             MaxLength       =   254
             MultiLine       =   -1  'True
@@ -2526,7 +2747,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo57 
             Height          =   270
             Index           =   0
-            Left            =   -66120
+            Left            =   8880
             Style           =   1  'Graphical
             TabIndex        =   289
             TabStop         =   0   'False
@@ -2549,7 +2770,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   57
-            Left            =   -67440
+            Left            =   7560
             MultiLine       =   -1  'True
             TabIndex        =   52
             Top             =   1320
@@ -2567,9 +2788,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   58
-            Left            =   720
+            Left            =   -74280
             MaxLength       =   30
             TabIndex        =   31
             Top             =   4080
@@ -2578,7 +2799,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo59 
             Height          =   270
             Index           =   2
-            Left            =   5355
+            Left            =   -69645
             Style           =   1  'Graphical
             TabIndex        =   293
             TabStop         =   0   'False
@@ -2600,7 +2821,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   59
-            Left            =   4275
+            Left            =   -70725
             TabIndex        =   32
             Top             =   4095
             Width           =   1065
@@ -2608,7 +2829,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo60 
             Height          =   270
             Index           =   1
-            Left            =   8835
+            Left            =   -66165
             Style           =   1  'Graphical
             TabIndex        =   298
             TabStop         =   0   'False
@@ -2618,7 +2839,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo60 
             Height          =   270
             Index           =   2
-            Left            =   8580
+            Left            =   -66420
             Style           =   1  'Graphical
             TabIndex        =   299
             TabStop         =   0   'False
@@ -2640,32 +2861,10 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   60
-            Left            =   6195
+            Left            =   -68805
             TabIndex        =   36
             Top             =   4635
             Width           =   2370
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   5
-            Left            =   9120
-            TabIndex        =   93
-            TabStop         =   0   'False
-            Top             =   4620
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
          End
          Begin VB.CheckBox ChkCp 
             Caption         =   "Conjunto Avulso"
@@ -2709,7 +2908,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo62 
             Height          =   270
             Index           =   2
-            Left            =   8355
+            Left            =   -66645
             Style           =   1  'Graphical
             TabIndex        =   302
             TabStop         =   0   'False
@@ -2731,7 +2930,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   62
-            Left            =   7350
+            Left            =   -67650
             TabIndex        =   97
             TabStop         =   0   'False
             Top             =   4155
@@ -2750,9 +2949,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   63
-            Left            =   9180
+            Left            =   -65820
             MultiLine       =   -1  'True
             TabIndex        =   98
             TabStop         =   0   'False
@@ -2762,7 +2961,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo64 
             Height          =   270
             Index           =   2
-            Left            =   13395
+            Left            =   -61605
             Style           =   1  'Graphical
             TabIndex        =   307
             TabStop         =   0   'False
@@ -2784,7 +2983,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   64
-            Left            =   11490
+            Left            =   -63510
             TabIndex        =   100
             Top             =   4155
             Width           =   1890
@@ -2802,59 +3001,13 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   65
-            Left            =   14115
+            Left            =   -60885
             MultiLine       =   -1  'True
             TabIndex        =   101
             Top             =   4140
             Width           =   870
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   375
-            Index           =   6
-            Left            =   -65505
-            TabIndex        =   104
-            TabStop         =   0   'False
-            Top             =   4695
-            Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   32768
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Atualizar Valor dos Produtos"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   315
-            Index           =   7
-            Left            =   -64005
-            TabIndex        =   105
-            TabStop         =   0   'False
-            Top             =   495
-            Width           =   2055
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Parcelamento"
-            CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
@@ -4518,7 +4671,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo137 
             Height          =   270
             Index           =   2
-            Left            =   14715
+            Left            =   -60285
             Style           =   1  'Graphical
             TabIndex        =   396
             TabStop         =   0   'False
@@ -4540,7 +4693,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   137
-            Left            =   12675
+            Left            =   -62325
             TabIndex        =   99
             Top             =   3195
             Width           =   2025
@@ -4663,9 +4816,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   143
-            Left            =   735
+            Left            =   -74265
             MultiLine       =   -1  'True
             TabIndex        =   183
             Top             =   3600
@@ -4684,9 +4837,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   144
-            Left            =   4260
+            Left            =   -70740
             MultiLine       =   -1  'True
             TabIndex        =   184
             Top             =   3600
@@ -4705,9 +4858,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   145
-            Left            =   7380
+            Left            =   -67620
             MultiLine       =   -1  'True
             TabIndex        =   185
             Top             =   3600
@@ -4725,9 +4878,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   146
-            Left            =   10140
+            Left            =   -64860
             MaxLength       =   100
             TabIndex        =   186
             Top             =   3660
@@ -4758,7 +4911,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo147 
             Height          =   270
             Index           =   2
-            Left            =   4995
+            Left            =   -70005
             Style           =   1  'Graphical
             TabIndex        =   425
             TabStop         =   0   'False
@@ -4780,7 +4933,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   147
-            Left            =   1995
+            Left            =   -73005
             TabIndex        =   188
             TabStop         =   0   'False
             Top             =   4635
@@ -4799,9 +4952,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   360
             Index           =   148
-            Left            =   -71610
+            Left            =   3390
             MultiLine       =   -1  'True
             TabIndex        =   51
             Top             =   1680
@@ -4810,7 +4963,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo149 
             Height          =   270
             Index           =   0
-            Left            =   8415
+            Left            =   -66585
             Style           =   1  'Graphical
             TabIndex        =   429
             TabStop         =   0   'False
@@ -4833,7 +4986,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   149
-            Left            =   7395
+            Left            =   -67605
             TabIndex        =   192
             TabStop         =   0   'False
             Top             =   3195
@@ -4842,7 +4995,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo150 
             Height          =   270
             Index           =   1
-            Left            =   11265
+            Left            =   -63735
             Style           =   1  'Graphical
             TabIndex        =   432
             TabStop         =   0   'False
@@ -4865,7 +5018,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   150
-            Left            =   10155
+            Left            =   -64845
             TabIndex        =   193
             TabStop         =   0   'False
             Top             =   3195
@@ -4874,7 +5027,7 @@ Begin VB.Form frmOrcament
          Begin VB.CommandButton bottxtCampo151 
             Height          =   270
             Index           =   2
-            Left            =   6015
+            Left            =   -68985
             Style           =   1  'Graphical
             TabIndex        =   435
             TabStop         =   0   'False
@@ -4896,7 +5049,7 @@ Begin VB.Form frmOrcament
             EndProperty
             Height          =   270
             Index           =   151
-            Left            =   4275
+            Left            =   -70725
             TabIndex        =   197
             TabStop         =   0   'False
             Top             =   2715
@@ -4913,9 +5066,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   270
+            Height          =   360
             Index           =   152
-            Left            =   10560
+            Left            =   -64440
             MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
@@ -4932,9 +5085,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   270
+            Height          =   360
             Index           =   153
-            Left            =   12240
+            Left            =   -62760
             MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
@@ -4951,9 +5104,9 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   270
+            Height          =   360
             Index           =   154
-            Left            =   13695
+            Left            =   -61305
             MaxLength       =   254
             TabIndex        =   199
             Top             =   2700
@@ -4974,7 +5127,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   0
-            Left            =   3180
+            Left            =   -71820
             TabIndex        =   202
             Top             =   1875
             Width           =   345
@@ -4994,7 +5147,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   1
-            Left            =   225
+            Left            =   -74775
             TabIndex        =   203
             Top             =   1875
             Width           =   570
@@ -5014,7 +5167,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   2
-            Left            =   6150
+            Left            =   -68850
             TabIndex        =   204
             Top             =   1395
             Width           =   900
@@ -5034,7 +5187,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   3
-            Left            =   11085
+            Left            =   -63915
             TabIndex        =   205
             Top             =   945
             Width           =   450
@@ -5044,7 +5197,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   11580
+            Left            =   -63420
             TabIndex        =   206
             Top             =   1860
             Width           =   3405
@@ -5064,7 +5217,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   4
-            Left            =   10980
+            Left            =   -64020
             TabIndex        =   208
             Top             =   1875
             Width           =   555
@@ -5074,7 +5227,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7125
+            Left            =   -67875
             TabIndex        =   209
             Top             =   1380
             Width           =   3000
@@ -5094,7 +5247,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   5
-            Left            =   -68700
+            Left            =   6300
             TabIndex        =   212
             Top             =   495
             Width           =   1170
@@ -5104,7 +5257,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -71610
+            Left            =   3390
             TabIndex        =   213
             Top             =   870
             Width           =   1605
@@ -5124,7 +5277,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   6
-            Left            =   60
+            Left            =   -74940
             TabIndex        =   215
             Top             =   2700
             Width           =   645
@@ -5134,7 +5287,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   735
+            Left            =   -74265
             TabIndex        =   216
             Top             =   2700
             Width           =   2580
@@ -5154,7 +5307,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -71610
+            Left            =   3390
             TabIndex        =   222
             Top             =   465
             Width           =   1605
@@ -5177,7 +5330,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00FFFFFF&
             Height          =   345
             Index           =   7
-            Left            =   -65475
+            Left            =   9525
             TabIndex        =   224
             Top             =   465
             Width           =   5070
@@ -5197,7 +5350,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   8
-            Left            =   -65055
+            Left            =   9945
             TabIndex        =   225
             Top             =   5730
             Width           =   600
@@ -5208,7 +5361,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   0
-            Left            =   -64380
+            Left            =   10620
             Shape           =   1  'Square
             Top             =   5775
             Width           =   165
@@ -5228,7 +5381,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   9
-            Left            =   -64155
+            Left            =   10845
             TabIndex        =   226
             Top             =   5730
             Width           =   990
@@ -5239,7 +5392,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   1
-            Left            =   -63000
+            Left            =   12000
             Shape           =   1  'Square
             Top             =   5775
             Width           =   165
@@ -5259,7 +5412,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   10
-            Left            =   -62760
+            Left            =   12240
             TabIndex        =   227
             Top             =   5730
             Width           =   1050
@@ -5270,7 +5423,7 @@ Begin VB.Form frmOrcament
             FillColor       =   &H000000FF&
             Height          =   150
             Index           =   2
-            Left            =   -61545
+            Left            =   13455
             Shape           =   1  'Square
             Top             =   5775
             Width           =   150
@@ -5290,7 +5443,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   11
-            Left            =   -61320
+            Left            =   13680
             TabIndex        =   228
             Top             =   5730
             Width           =   300
@@ -5310,7 +5463,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   12
-            Left            =   -73695
+            Left            =   1305
             TabIndex        =   229
             Top             =   495
             Width           =   2010
@@ -5330,7 +5483,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   13
-            Left            =   -72645
+            Left            =   2355
             TabIndex        =   230
             Top             =   900
             Width           =   960
@@ -5350,7 +5503,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   14
-            Left            =   6075
+            Left            =   -68925
             TabIndex        =   231
             Top             =   1395
             Width           =   975
@@ -5370,7 +5523,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   15
-            Left            =   12090
+            Left            =   -62910
             TabIndex        =   232
             Top             =   1395
             Width           =   465
@@ -5390,7 +5543,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   16
-            Left            =   225
+            Left            =   -74775
             TabIndex        =   233
             Top             =   1875
             Width           =   570
@@ -5398,8 +5551,8 @@ Begin VB.Form frmOrcament
          Begin VB.Line Linha 
             BorderColor     =   &H00C0C0C0&
             Index           =   0
-            X1              =   -74295
-            X2              =   -65850
+            X1              =   705
+            X2              =   9150
             Y1              =   2100
             Y2              =   2100
          End
@@ -5419,7 +5572,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   17
-            Left            =   -73620
+            Left            =   1380
             TabIndex        =   234
             Top             =   2250
             Width           =   1935
@@ -5440,7 +5593,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   18
-            Left            =   -73695
+            Left            =   1305
             TabIndex        =   235
             Top             =   2715
             Width           =   2010
@@ -5461,7 +5614,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   19
-            Left            =   -73395
+            Left            =   1605
             TabIndex        =   236
             Top             =   3180
             Width           =   1710
@@ -5482,7 +5635,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   20
-            Left            =   -73020
+            Left            =   1980
             TabIndex        =   237
             Top             =   3645
             Width           =   1335
@@ -5503,7 +5656,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   21
-            Left            =   -74220
+            Left            =   780
             TabIndex        =   238
             Top             =   4575
             Width           =   2535
@@ -5524,7 +5677,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   22
-            Left            =   -74295
+            Left            =   705
             TabIndex        =   239
             Top             =   5040
             Width           =   2610
@@ -5544,7 +5697,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   23
-            Left            =   -69300
+            Left            =   5700
             TabIndex        =   240
             Top             =   2250
             Width           =   1770
@@ -5564,7 +5717,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   24
-            Left            =   -69375
+            Left            =   5625
             TabIndex        =   241
             Top             =   2715
             Width           =   1845
@@ -5584,7 +5737,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   25
-            Left            =   -69285
+            Left            =   5715
             TabIndex        =   242
             Top             =   3645
             Width           =   1755
@@ -5604,7 +5757,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   26
-            Left            =   -69375
+            Left            =   5625
             TabIndex        =   243
             Top             =   5040
             Width           =   1845
@@ -5625,7 +5778,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   27
-            Left            =   -68850
+            Left            =   6150
             TabIndex        =   244
             Top             =   900
             Width           =   1320
@@ -5635,7 +5788,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67455
+            Left            =   7545
             TabIndex        =   245
             Top             =   870
             Width           =   1605
@@ -5656,7 +5809,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   28
-            Left            =   -73995
+            Left            =   1005
             TabIndex        =   247
             Top             =   5505
             Width           =   2310
@@ -5676,7 +5829,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   29
-            Left            =   -69075
+            Left            =   5925
             TabIndex        =   248
             Top             =   3180
             Width           =   1545
@@ -5686,7 +5839,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -71610
+            Left            =   3390
             TabIndex        =   249
             Top             =   1275
             Width           =   1605
@@ -5707,7 +5860,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   30
-            Left            =   -73200
+            Left            =   1800
             TabIndex        =   251
             Top             =   1305
             Width           =   1515
@@ -5728,7 +5881,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   31
-            Left            =   5865
+            Left            =   -69135
             TabIndex        =   252
             Top             =   480
             Width           =   1185
@@ -5749,7 +5902,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   32
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   253
             Top             =   945
             Width           =   675
@@ -5770,7 +5923,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   33
-            Left            =   4560
+            Left            =   -70440
             TabIndex        =   254
             Top             =   945
             Width           =   315
@@ -5790,7 +5943,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   34
-            Left            =   11220
+            Left            =   -63780
             TabIndex        =   255
             Top             =   1395
             Width           =   315
@@ -5811,7 +5964,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   35
-            Left            =   2385
+            Left            =   -72615
             TabIndex        =   256
             Top             =   1410
             Width           =   930
@@ -5832,7 +5985,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   36
-            Left            =   6465
+            Left            =   -68535
             TabIndex        =   257
             Top             =   945
             Width           =   585
@@ -5852,7 +6005,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   37
-            Left            =   11085
+            Left            =   -63915
             TabIndex        =   258
             Top             =   945
             Width           =   450
@@ -5873,7 +6026,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   38
-            Left            =   -73740
+            Left            =   1260
             TabIndex        =   259
             Top             =   4110
             Width           =   2055
@@ -5913,7 +6066,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H00000000&
             Height          =   240
             Index           =   40
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   261
             Top             =   480
             Width           =   600
@@ -5933,7 +6086,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   41
-            Left            =   420
+            Left            =   -74580
             TabIndex        =   262
             Top             =   1395
             Width           =   375
@@ -5953,7 +6106,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   42
-            Left            =   12645
+            Left            =   -62355
             TabIndex        =   263
             Top             =   945
             Width           =   510
@@ -5973,7 +6126,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   43
-            Left            =   10605
+            Left            =   -64395
             TabIndex        =   264
             Top             =   480
             Width           =   930
@@ -5993,7 +6146,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   44
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   265
             Top             =   2250
             Width           =   2430
@@ -6001,8 +6154,8 @@ Begin VB.Form frmOrcament
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   1
-            X1              =   120
-            X2              =   14550
+            X1              =   -74880
+            X2              =   -60450
             Y1              =   2520
             Y2              =   2520
          End
@@ -6022,7 +6175,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   45
-            Left            =   2100
+            Left            =   -72900
             TabIndex        =   266
             Top             =   3120
             Width           =   1935
@@ -6042,7 +6195,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   46
-            Left            =   60
+            Left            =   -74940
             TabIndex        =   267
             Top             =   5160
             Width           =   435
@@ -6142,7 +6295,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   51
-            Left            =   10605
+            Left            =   -64395
             TabIndex        =   272
             Top             =   480
             Width           =   930
@@ -6163,7 +6316,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   52
-            Left            =   6420
+            Left            =   -68580
             TabIndex        =   273
             Top             =   960
             Width           =   585
@@ -6184,7 +6337,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   53
-            Left            =   6255
+            Left            =   -68745
             TabIndex        =   278
             Top             =   1875
             Width           =   795
@@ -6205,7 +6358,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   54
-            Left            =   -69375
+            Left            =   5625
             TabIndex        =   279
             Top             =   4575
             Width           =   1845
@@ -6226,7 +6379,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   55
-            Left            =   -69180
+            Left            =   5820
             TabIndex        =   280
             Top             =   4110
             Width           =   1650
@@ -6247,7 +6400,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   56
-            Left            =   60
+            Left            =   -74940
             TabIndex        =   281
             Top             =   3120
             Width           =   585
@@ -6268,7 +6421,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   57
-            Left            =   6420
+            Left            =   -68580
             TabIndex        =   282
             Top             =   2700
             Width           =   915
@@ -6278,7 +6431,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7380
+            Left            =   -67620
             TabIndex        =   283
             Top             =   2700
             Width           =   2205
@@ -6298,7 +6451,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   58
-            Left            =   -68700
+            Left            =   6300
             TabIndex        =   286
             Top             =   5505
             Width           =   1170
@@ -6319,7 +6472,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   59
-            Left            =   -68670
+            Left            =   6330
             TabIndex        =   287
             Top             =   1305
             Width           =   1140
@@ -6329,7 +6482,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -67455
+            Left            =   7545
             TabIndex        =   288
             Top             =   1305
             Width           =   1605
@@ -6350,7 +6503,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   60
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   290
             Top             =   4080
             Width           =   510
@@ -6371,7 +6524,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   61
-            Left            =   3660
+            Left            =   -71340
             TabIndex        =   291
             Top             =   4140
             Width           =   360
@@ -6381,7 +6534,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   4260
+            Left            =   -70740
             TabIndex        =   292
             Top             =   4080
             Width           =   1365
@@ -6401,7 +6554,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   62
-            Left            =   12645
+            Left            =   -62355
             TabIndex        =   294
             Top             =   945
             Width           =   510
@@ -6421,7 +6574,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   63
-            Left            =   420
+            Left            =   -74580
             TabIndex        =   295
             Top             =   1395
             Width           =   375
@@ -6442,7 +6595,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   64
-            Left            =   5580
+            Left            =   -69420
             TabIndex        =   296
             Top             =   4680
             Width           =   525
@@ -6452,7 +6605,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   6180
+            Left            =   -68820
             TabIndex        =   297
             Top             =   4620
             Width           =   2925
@@ -6471,7 +6624,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   65
-            Left            =   6300
+            Left            =   -68700
             TabIndex        =   300
             Top             =   4140
             Width           =   960
@@ -6481,7 +6634,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7335
+            Left            =   -67665
             TabIndex        =   301
             Top             =   4140
             Width           =   1290
@@ -6500,7 +6653,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   66
-            Left            =   8835
+            Left            =   -66165
             TabIndex        =   303
             Top             =   4140
             Width           =   270
@@ -6520,7 +6673,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   67
-            Left            =   10155
+            Left            =   -64845
             TabIndex        =   304
             Top             =   4140
             Width           =   1155
@@ -6539,7 +6692,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   68
-            Left            =   13800
+            Left            =   -61200
             TabIndex        =   305
             Top             =   4140
             Width           =   285
@@ -6549,7 +6702,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   11475
+            Left            =   -63525
             TabIndex        =   306
             Top             =   4140
             Width           =   2190
@@ -8230,7 +8383,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   146
-            Left            =   11640
+            Left            =   -63360
             TabIndex        =   394
             Top             =   3180
             Width           =   885
@@ -8240,7 +8393,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   12660
+            Left            =   -62340
             TabIndex        =   395
             Top             =   3180
             Width           =   2325
@@ -8676,7 +8829,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   167
-            Left            =   0
+            Left            =   -75000
             TabIndex        =   417
             Top             =   3600
             Width           =   690
@@ -8697,7 +8850,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   168
-            Left            =   3120
+            Left            =   -71880
             TabIndex        =   418
             Top             =   3600
             Width           =   885
@@ -8718,7 +8871,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   169
-            Left            =   6480
+            Left            =   -68520
             TabIndex        =   419
             Top             =   3600
             Width           =   735
@@ -8739,14 +8892,14 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   170
-            Left            =   9000
+            Left            =   -66000
             TabIndex        =   420
             Top             =   3660
             Width           =   990
          End
          Begin VB.Label Label 
             AutoSize        =   -1  'True
-            Caption         =   $"ORCAMENT.frx":0000
+            Caption         =   $"ORCAMENT.frx":001C
             BeginProperty Font 
                Name            =   "Verdana"
                Size            =   9
@@ -8779,7 +8932,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   172
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   423
             Top             =   4620
             Width           =   1770
@@ -8789,7 +8942,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   1980
+            Left            =   -73020
             TabIndex        =   424
             Top             =   4620
             Width           =   3285
@@ -8810,7 +8963,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   173
-            Left            =   -73980
+            Left            =   1020
             TabIndex        =   426
             Top             =   1695
             Width           =   2265
@@ -8831,7 +8984,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   174
-            Left            =   5820
+            Left            =   -69180
             TabIndex        =   427
             Top             =   3180
             Width           =   1470
@@ -8841,7 +8994,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H00C0FFC0&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7380
+            Left            =   -67620
             TabIndex        =   428
             Top             =   3180
             Width           =   1305
@@ -8862,7 +9015,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   175
-            Left            =   8820
+            Left            =   -66180
             TabIndex        =   430
             Top             =   3180
             Width           =   1260
@@ -8872,7 +9025,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H00C0FFC0&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   10140
+            Left            =   -64860
             TabIndex        =   431
             Top             =   3180
             Width           =   1395
@@ -8893,7 +9046,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   176
-            Left            =   3660
+            Left            =   -71340
             TabIndex        =   433
             Top             =   2760
             Width           =   510
@@ -8903,7 +9056,7 @@ Begin VB.Form frmOrcament
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   4260
+            Left            =   -70740
             TabIndex        =   434
             Top             =   2700
             Width           =   2025
@@ -8924,7 +9077,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   177
-            Left            =   9900
+            Left            =   -65100
             TabIndex        =   436
             Top             =   2700
             Width           =   570
@@ -8944,7 +9097,7 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   178
-            Left            =   11880
+            Left            =   -63120
             TabIndex        =   437
             Top             =   2700
             Width           =   315
@@ -8965,33 +9118,11 @@ Begin VB.Form frmOrcament
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   179
-            Left            =   13020
+            Left            =   -61980
             TabIndex        =   438
             Top             =   2700
             Width           =   600
          End
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   8
-         Left            =   14565
-         TabIndex        =   56
-         TabStop         =   0   'False
-         Top             =   750
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin VB.TextBox txtCp 
          Appearance      =   0  'Flat
@@ -9014,30 +9145,6 @@ Begin VB.Form frmOrcament
          TabStop         =   0   'False
          Top             =   750
          Width           =   1440
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   9
-         Left            =   10050
-         TabIndex        =   54
-         TabStop         =   0   'False
-         Top             =   165
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
       End
       Begin VB.PictureBox picBox 
          BorderStyle     =   0  'None
@@ -9090,28 +9197,6 @@ Begin VB.Form frmOrcament
          TabIndex        =   3
          Top             =   1665
          Width           =   4200
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   10
-         Left            =   9810
-         TabIndex        =   4
-         TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin VB.CheckBox ChkCp 
          Caption         =   "Ocultar Vr. Unitário"
@@ -9203,49 +9288,6 @@ Begin VB.Form frmOrcament
          TabIndex        =   2
          Top             =   1665
          Width           =   1185
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   15180
-         TabIndex        =   59
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14580
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin VB.CheckBox ChkCp 
          Caption         =   "Entrega Futura"
@@ -9376,54 +9418,6 @@ Begin VB.Form frmOrcament
          Top             =   120
          Width           =   3255
       End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   13
-         Left            =   10050
-         TabIndex        =   182
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Ficha Técnica"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   14
-         Left            =   7410
-         TabIndex        =   187
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   2580
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mapa da Propriedade"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
       Begin VB.TextBox txtCp 
          Appearance      =   0  'Flat
          BackColor       =   &H00E0E0E0&
@@ -9445,28 +9439,6 @@ Begin VB.Form frmOrcament
          TabStop         =   0   'False
          Top             =   735
          Width           =   975
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   15
-         Left            =   12810
-         TabIndex        =   190
-         TabStop         =   0   'False
-         Top             =   735
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin VB.CheckBox ChkCp 
          Caption         =   "Refaturamento"
@@ -9522,30 +9494,6 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   16
-         Left            =   13125
-         TabIndex        =   195
-         TabStop         =   0   'False
-         Top             =   165
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
       End
       Begin VB.CommandButton bottxtCampo161 
          Height          =   270
@@ -11259,7 +11207,7 @@ Private Sub GeraPedido()
       Pedido![Seqüência da Classificação] = ![Seqüência da Classificação]
       Pedido![Forma de Pagamento] = ![Forma de Pagamento]
       Pedido!Fechamento = !Fechamento
-      Pedido![Valor Do Fechamento] = ![Valor Do Fechamento]
+      Pedido![Valor do Fechamento] = ![Valor do Fechamento]
       Pedido![Valor Do Frete] = ![Valor Do Frete]
       Pedido![Valor Do Seguro] = ![Valor Do Seguro]
       Pedido![Valor Total IPI dos Produtos] = ![Valor Total IPI dos Produtos]
@@ -12168,786 +12116,6 @@ Private Sub AbreGerar()
 End Sub
 
 
-'Private Sub AtualizaValoresProdutos()
-'   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-'   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
-'   Dim PercentualFrete As Double, Geral As New GRecordSet, GRevenda As Boolean, ICMSAuxiliar As Double
-'   Dim GeralS As New GRecordSet, Suframa As Boolean
-         
-'   Screen.MousePointer = vbHourglass
-   
-'   Set GeralS = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'   Suframa =(CBool(Not Vazio(GeralS![Código Do Suframa])))
-'   If Suframa Then
-'      vgDb.Execute "Update [Produtos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-'      grdProdutos.ReBind 'Atualiza do Grid
-'      Reposition True    'Atualiza o Formulário
-'      Screen.MousePointer = vbDefault
-'      Exit Sub
-'   End If
-         
-'   If Produtos_do_Orcamento.RecordCount > 0 Then
-'      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-'         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
-'      End If
-   
-'      Produtos_do_Orcamento.MoveFirst
-'      Do While Not Produtos_do_Orcamento.EOF
-'         Tributos = 0
-'         With Produtos_do_Orcamento
-'         .Edit
-'         'Valor do Desconto Rateado entre os produtos
-'         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0  Then
-'         If Orcamento!Fechamento = 1 Then 'Valor
-'            Set Geral = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'            GRevenda = Geral!Revenda
-'            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]),2)
-'            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
-'            VrItem = Round((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]),2)
-'            ValorAcresDesc = (VrItem * PercentualRateio / 100)' Valor do Desconto
-            
-'            'Valor do Frete Rateado entre os Produtos
-'            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
-'            ValorFrete = (VrItem * PercentualFrete / 100)'Valor do Frete
-              
-          ' Verifica se Tem Redução da BC
-'         If Produtos_do_Orcamento![Percentual da Redução] > 0 Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrReducao = Round((VrItem * Produtos_do_Orcamento![Percentual da Redução] / 100), 2)
-'            VrItem = VrItem - VrReducao + ValorFrete
-'            Else
-'          If Not GRevenda Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          Else
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          End If
-'         End If
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ICMSAuxiliar = Round((VrItem * CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF) / 100),2)
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else ' Nw é Entrega Futura
-'              !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              If !CFOP = "5403" or !CFOP = "6403" or !Diferido = True  Then
-'              ![Valor da Base de Cálculo] =  0
-'              ![Valor Do ICMS] = 0
-'              Else
-'              ![Valor da Base de Cálculo] = VrItem
-'              ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Valor Do ICMS] = Round((VrItem * Produtos_do_Orcamento![Alíquota Do ICMS] / 100),2)
-'              End If
-'               Tributos = Tributos + Produtos_do_Orcamento![Valor Do ICMS]
-'              '![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Pis Antes ate 03/2018
-             '![Valor Do PIS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do pis
-'            If Not Entrega_Futura Then
-'               ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            Else
-'               ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            End If
-'            Tributos = Tributos + ![Valor Do PIS]
-            'Cofins Antes ate 03/2018
-            '![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do Cofins
-'            If Not Entrega_Futura Then
-'               ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            Else
-'               ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            End If
-'            Tributos = Tributos + ![Valor Do Cofins]
-'            ' Substituição Tributaria Com Frete e Desconto AFF
-'            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            Tributos = Tributos + ![Valor ICMS ST]
-'            ![Valor Do Tributo] = Tributos 'Tributos
-'            .Update
-'            .BookMark = .LastModified
-'            .MoveNext
-'            End If
-'            End If
-'            'Qdo Não Tem Desconto
-'            If Orcamento![Valor Do Fechamento] = 0 Then
-'            If Orcamento![Valor Do Frete] = 0 Then
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'                ICMSAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else
-'               !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'                Tributos = Tributos + ![Valor Do ICMS]
-'               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            
-'            If Entrega_Futura Then
-'               ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do PIS]
-'               ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do Cofins]
-'            Else
- '              ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '              Tributos = Tributos + ![Valor Do PIS]
- '              ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '              Tributos = Tributos + ![Valor Do Cofins]
- '           End If
-            
- '           !CST = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade])
-            'Substituição
- '           !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           Tributos = Tributos + ![Valor ICMS ST]
- '           ![Valor Do Tributo] = Tributos 'Tributos
- '           .Update
- '           .BookMark = .LastModified
- '           .MoveNext
- '           End If
- '           End If
- '        End With
- '     Loop
- '     grdProdutos.ReBind 'Atualiza do Grid
- '     Reposition True    'Atualiza o Formulário
- '  End If
-'SaiDaSub:
-'   Screen.MousePointer = vbDefault
-
-'End Sub
-
-
-'Private Sub AtualizaValoresProdutos()
-'   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-'   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
-'   Dim PercentualFrete As Double, Geral As New GRecordSet, GRevenda As Boolean, ICMSAuxiliar As Double
-'   Dim GeralS As New GRecordSet, Suframa As Boolean
-'   Dim ReducaoAuxiliar As Double
-         
-'   Screen.MousePointer = vbHourglass
-   
-'   Set GeralS = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'   Suframa =(CBool(Not Vazio(GeralS![Código Do Suframa])))
-'   If Suframa Then
-'      vgDb.Execute "Update [Produtos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-'      grdProdutos.ReBind 'Atualiza do Grid
-'      Reposition True    'Atualiza o Formulário
-'      Screen.MousePointer = vbDefault
-'      Exit Sub
-'   End If
-         
-'   If Produtos_do_Orcamento.RecordCount > 0 Then
-'      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-'         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
-'      End If
-   
-'      Produtos_do_Orcamento.MoveFirst
-'      Do While Not Produtos_do_Orcamento.EOF
-'         Tributos = 0
-'         With Produtos_do_Orcamento
-'         .Edit
-         'Valor do Desconto Rateado entre os produtos
-'         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0  Then
-'         If Orcamento!Fechamento = 1 Then 'Valor
-'            Set Geral = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'            GRevenda = Geral!Revenda
-'            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]),2)
-'            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
-'            VrItem = Round((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]),2)
-'            ValorAcresDesc = (VrItem * PercentualRateio / 100)' Valor do Desconto
-            
-            'Valor do Frete Rateado entre os Produtos
-'            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
-'            ValorFrete = (VrItem * PercentualFrete / 100)'Valor do Frete
-'            ReducaoAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário] + ValorAcresDesc, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-              
-          ' Verifica se Tem Redução da BC
-'         If ReducaoAuxiliar > 0 Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrReducao = Round((VrItem * ReducaoAuxiliar / 100), 2)
-'            VrItem = VrItem - VrReducao + ValorFrete
-'            Else
-'          If Not GRevenda Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          Else
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          End If
-'         End If
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ICMSAuxiliar = Round((VrItem * CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF) / 100),2)
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else ' Nw é Entrega Futura
-'              !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              If !CFOP = "5403" or !CFOP = "6403" or !Diferido = True  Then
-'                 ![Valor da Base de Cálculo] =  0
-'                 ![Valor Do ICMS] = 0
-'              Else
-'              ![Valor da Base de Cálculo] = VrItem
-'              ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Valor Do ICMS] = Round((VrItem * Produtos_do_Orcamento![Alíquota Do ICMS] / 100),2)
-'              End If
-'               Tributos = Tributos + Produtos_do_Orcamento![Valor Do ICMS]
-              '![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            '![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário] + ValorAcresDesc, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            'Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            'Pis Antes ate 03/2018
-             '![Valor Do PIS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do pis
-            'If Not Entrega_Futura Then
-            '   ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-            'Else
-            '   ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-            'End If
-'             If Not Entrega_Futura Then
-'                If ReducaoAuxiliar = 0 Then
-'                   ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do Icms]) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'                Else' com Redução
-'                   ![Valor Do PIS] = (((!Quantidade * ![Valor Unitário]) - Produtos_do_Orcamento![Valor Do IPI]) + ValorFrete + ValorAcresDesc) - ![Valor Do Icms]) * 1.65 / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'                End If
-'              Else 'Entrega Futura
-'                If ReducaoAuxiliar = 0 Then
-'                   ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'                Else
-'                   ![Valor Do PIS] = (((!Quantidade * ![Valor Unitário] - Produtos_do_Orcamento![Valor Do IPI]) + ValorFrete + ValorAcresDesc) - ICMSAuxiliar) * 1.65 / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'                End If
-'             End If
-'            Tributos = Tributos + ![Valor Do PIS]
-            'Cofins Antes ate 03/2018
-            '![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do Cofins
-'            If Not Entrega_Futura Then
-'               If ReducaoAuxiliar = 0 Then
-'                  ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'               Else 'Reducao
-'                  ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário] - Produtos_do_Orcamento![Valor Do IPI])) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'               End If
-'            Else'Entrega Futura
-'               If ReducaoAuxiliar = 0 Then
-'                  ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'               Else
-'                  ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário]) - Produtos_do_Orcamento![Valor Do IPI])) + ValorFrete + ValorAcresDesc) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'               End If
-'            End If
-'            Tributos = Tributos + ![Valor Do Cofins]
-'            ' Substituição Tributaria Com Frete e Desconto AFF
-'            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            Tributos = Tributos + ![Valor ICMS ST]
-'            ![Valor Do Tributo] = Tributos 'Tributos
-'            .Update
-'            .BookMark = .LastModified
-'            .MoveNext
-'            End If
-'            End If
-'            'Qdo Não Tem Desconto
-'            If Orcamento![Valor Do Fechamento] = 0 Then
-'            If Orcamento![Valor Do Frete] = 0 Then
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'                ICMSAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else
-'               !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'                Tributos = Tributos + ![Valor Do ICMS]
-'               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'
-'            If Entrega_Futura Then
-'               ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do PIS]
-'               ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do Cofins]
-'            Else
-'               ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do PIS]
-'               ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do Cofins]
-'            End If
-            
-
-'            !CST = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade])
-            'Substituição
-'            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor ICMS ST]
-'            ![Valor Do Tributo] = Tributos 'Tributos
-'            .Update
-'            .BookMark = .LastModified
-'            .MoveNext
-'            End If
-'            End If
-'         End With
-'      Loop
-'      grdProdutos.ReBind 'Atualiza do Grid
-'      Reposition True    'Atualiza o Formulário
-'   End If
-'SaiDaSub:
-'   Screen.MousePointer = vbDefault
-
-'End Sub
-
-Private Sub AtualizaValoresPecas()
-   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
-   Dim VrItem As Double, BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
-   Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
-   Dim PisRed As Double, CofinsRed As Double
-   Dim descCj As New GRecordSet, descPecas As New GRecordSet
-   Dim descontoCj As Double, descontoPecas As Double, divergDesc As Double
-          
-   Screen.MousePointer = vbHourglass
-   
-   Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-   Suframa = (CBool(Not Vazio(Geral![Código Do Suframa])))
-   If Suframa Then
-      vgDb.Execute "Update [Peças do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-      grdPecas.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
-      Screen.MousePointer = vbDefault
-      Exit Sub
-   End If
-         
-   If Pecas_do_Orcamento.RecordCount > 0 Then
-   
-      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
-      End If
-      
-      'Rotina para corrigir o erro no rateio do desconto
-      'Passo 1: Analisa se há também a presença conjuntos ou apenas peças
-     If Orcamento![Valor Do Fechamento] <> 0 Then 'Se não tiver desconto não tem o que ser corrigido, nem perde tempo
-        If Conjuntos_do_Orcamento.RecordCount > 0 Then
-     '       descontoCj = verificaDesconto("Conjuntos do Orçamento", Sequencia_do_Orcamento)
-     '       descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
-        Set descCj = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoCj " & _
-                                 "FROM [Conjuntos do Orçamento] " & _
-                                 "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-
-        descontoCj = descCj!descontoCj
-
-        Set descPecas = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoPecas " & _
-                                      "FROM [Peças do Orçamento] " & _
-                                      "WHERE [Seqüência do Orçamento]  = " & Sequencia_do_Orcamento)
-
-        descontoPecas = descPecas!descontoPecas
-        
-        'Para a primeira condição verdadeira o programa vai comparar o Valor do desconto
-        'informado pelo vendas (aba Financeiro) com o somatório do desconto rateado distribuido nos conjuntos e peças
-        'a diferença será armazenada em divergDesc, que será utilizada para a correção do erro causado por arredondamentos
-        If Orcamento![Valor Do Fechamento] <> (descontoCj + descontoPecas) Then
-          If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
-          divergDesc = Abs(Orcamento![Valor Do Fechamento]) - (descontoCj + descontoPecas)
-          If vgPWUsuario = "YGOR" Then MsgBox (divergDesc)
-            If divergDesc = 0 Then Exit Sub
-        End If
-      Else 'Para orçamentos apenas com peças faz o mesmo procedimento, mas apenas com o somatório
-           'do desconto rateado entre as peças
-        Set descPecas = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoPecas " & _
-                                      "FROM [Peças do Orçamento] " & _
-                                      "WHERE [Seqüência do Orçamento]  = " & Sequencia_do_Orcamento)
-
-        'descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
-        
-        
-        If Orcamento![Valor Do Fechamento] <> descPecas!descontoPecas Then
-         If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
-          divergDesc = Abs(Orcamento![Valor Do Fechamento]) - descPecas!descontoPecas
-          
-          If vgPWUsuario = "YGOR" Then
-            If divergDesc <> 0 Then
-              MsgBox ("Erro de: " & divergDesc)
-            Else
-              MsgBox ("Corrigido.")
-              Exit Sub
-            End If
-          End If
-        End If
-     End If 'sem desconto é pra cair aqui!
-    End If
-      Pecas_do_Orcamento.MoveFirst
-      Do While Not Pecas_do_Orcamento.EOF
-      
-         
-         Tributos = 0
-         PisRed = 0
-         CofinsRed = 0
-         With Pecas_do_Orcamento
-         .Edit
-         'Valor do Desconto Rateado entre os produtos
-         
-         If Orcamento![Valor Do Fechamento] = 0 Then
-            ![Valor Do Desconto] = 0
-         End If
-         If Orcamento![Valor Do Frete] = 0 Then
-            ![Valor Do Frete] = 0
-         End If
-         
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-         If Orcamento!Fechamento = 1 Then 'Valor
-            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
-            VrItem = Round((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]), 2)
-            ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
-            
-            ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
-            ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
-            ![Valor Do Desconto] = Abs(ValorAcresDesc)
-            ![Valor Do Frete] = ValorFrete
-            
-               'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
-               If Pecas_do_Orcamento.AbsolutePosition = Pecas_do_Orcamento.RecordCount And divergDesc <> 0 Then
-                 '   divergDesc = vDesc + Orcamento![Valor do Fechamento]
-                 '  If divergDesc <> 0 Then
-                 ![Valor Do Desconto] = Abs(ValorAcresDesc) + divergDesc
-               Else
-                 ![Valor Do Desconto] = Abs(ValorAcresDesc)
-                    'End If
-               End If
-            
-        End If
-        End If
-            
-            If Entrega_Futura Then
-               If MunicipioAux!UF = "SP" Then
-                  !CFOP = "5922"
-                  !CST = 90
-               Else
-                  !CFOP = "6922"
-                  !CST = 90
-               End If
-               ![Valor da Base de Cálculo] = 0
-               ![Valor Do Icms] = 0
-               ![Alíquota Do ICMS] = 0
-               ![Percentual da Redução] = 0
-               !IVA = 0
-               ![Base de Cálculo ST] = 0
-               ![Valor ICMS ST] = 0
-               ![Alíquota Do ICMS ST] = 0
-            Else
-               '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
-               BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor da Base de Cálculo] = Round(BC, 2) '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-               '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-               Tributos = Tributos + ![Valor Do Icms]
-               ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            End If
-            'Auxiliar ICMS
-             If Entrega_Futura Then
-                BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                BCAuxiliar = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-                AliqAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
-             End If
-            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            'Pis Antes do Oziris solicitar mudança 03/2018
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-               If Not Entrega_Futura Then
-                  'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
-                  '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
-                  '07/10/24 parei aqui - acertar BC PIS para reduzir o erro de arredondamento
-                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
-                  ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-               Else
-                  PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                  ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
-                  ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, 0)
-               End If
-             Else ' sem rateio
-               If Not Entrega_Futura Then
-                  PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
-                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
-                  ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Else
-                  PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
-                  ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               End If
-                'Pis Novo Conforme contabilidade (Andreza) Subtari icms da base do pis
-             End If
-            Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-               If Not Entrega_Futura Then
-                   'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
-                   '![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
-                   ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-               Else
-                   CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
-                   ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-               End If
-             Else ' sem rateio
-               If Not Entrega_Futura Then
-                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
-                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
-                   ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Else
-                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
-                   ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               End If
-             End If
-            Tributos = Tributos + ![Valor Do Cofins]
-            Tributos = Tributos + ![Valor ICMS ST]
-            ![Valor Do Tributo] = Round(Tributos, 2) 'Tributos
-            .Update
-            .BookMark = .LastModified
-            .MoveNext
-         End With
-      Loop
-      
-      grdPecas.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
-      
-   End If
-   
-SaiDaSub:
-   Screen.MousePointer = vbDefault
-
-End Sub
-
-Private Sub AtualizaValoresConjuntos()
-   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double
-   Dim BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
-   Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
-   Dim PisRed As Double, CofinsRed As Double
-          
-   Screen.MousePointer = vbHourglass
-     
-   Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-   Suframa = (CBool(Not Vazio(Geral![Código Do Suframa])))
-   If Suframa Then
-      vgDb.Execute "Update [Conjuntos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-      grdConjuntos.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
-      Screen.MousePointer = vbDefault
-      Exit Sub
-   End If
-           
-   If Conjuntos_do_Orcamento.RecordCount > 0 Then
-   
-      
-      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
-      End If
-   
-      Conjuntos_do_Orcamento.MoveFirst
-      Do While Not Conjuntos_do_Orcamento.EOF
-         Tributos = 0
-         PisRed = 0
-         CofinsRed = 0
-         With Conjuntos_do_Orcamento
-         .Edit
-         
-         If Orcamento![Valor Do Fechamento] = 0 Then
-            ![Valor Do Desconto] = 0
-         End If
-         If Orcamento![Valor Do Frete] = 0 Then
-            ![Valor Do Frete] = 0
-         End If
-         'Valor do Desconto Rateado entre os produtos
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-         If Orcamento!Fechamento = 1 Then 'Valor
-            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
-            VrItem = Round((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]), 2)
-            ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
-            ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
-            ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
-            ![Valor Do Desconto] = Abs(ValorAcresDesc)
-            ![Valor Do Frete] = ValorFrete
-         End If
-         End If
-         
-            If Entrega_Futura Then
-               If MunicipioAux!UF = "SP" Then
-                  !CFOP = "5922"
-                  !CST = 90
-               Else
-                  !CFOP = "6922"
-                  !CST = 90
-               End If
-               ![Valor da Base de Cálculo] = 0
-               ![Valor Do Icms] = 0
-               ![Alíquota Do ICMS] = 0
-               ![Percentual da Redução] = 0
-               !IVA = 0
-               ![Base de Cálculo ST] = 0
-               ![Valor ICMS ST] = 0
-               ![Alíquota Do ICMS ST] = 0
-            Else
-               '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
-               ![Valor da Base de Cálculo] = BC '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-               '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-               Tributos = Tributos + ![Valor Do Icms]
-               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            End If
-               If Entrega_Futura Then
-                  BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                  BCAuxiliar = BC + ValorFrete
-                  ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-                  AliqAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                  ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
-               End If
-            ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-               If Not Entrega_Futura Then 'Orçamento Base: 125449 - Budke
-                  'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
-                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
-                   '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
-                   ![Aliq Do Pis] = 2
-                   '![Valor Do //PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-                   ![Valor Do PIS] = ![Bc Pis] * (![Aliq Do Pis] / 100)
-               Else
-                   PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-               End If
-             Else
-               If Not Entrega_Futura Then
-                   PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
-                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Else
-                   PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - PisRed) * 2 / 100
-               End If
-             End If
-            Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-               If Not Entrega_Futura Then
-                   'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
-                 ' ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
-                   ![Aliq Do Cofins] = 9.6
-                   '![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-                   ![Valor Do Cofins] = ![Bc Cofins] * (![Aliq Do Cofins] / 100)
-               Else
-                   CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
-                   ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-               End If
-             Else ' Nao tem disconto e frete
-               If Not Entrega_Futura Then
-                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
-                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
-                  ![Aliq Do Cofins] = 9.6
-                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Else
-                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
-                  ![Aliq Do Cofins] = 9.6
-                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               End If
-             End If
-            Tributos = Tributos + ![Valor Do Cofins]
-            Tributos = Tributos + ![Valor ICMS ST]
-            ![Valor Do Tributo] = Tributos 'Tributos
-            .Update
-            .BookMark = .LastModified
-            .MoveNext
-         End With
-      Loop
-      
-      grdConjuntos.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
-      
-   End If
-   
-SaiDaSub:
-   Screen.MousePointer = vbDefault
-
-End Sub
 
 
 
@@ -13531,113 +12699,78 @@ Caixinha:
     
 End Sub
 
-
-'– Rotina para distribuir o desconto total igualmente entre as 3 categorias
 Private Sub DistribuiDescontoTotal()
     Dim totalDesc   As Double
-    Dim cntProd     As Long, cntConj As Long, cntPecas As Long
-    Dim numCats     As Long
-    Dim shareGroup  As Double
-    Dim i           As Long
+    Dim totalItens  As Long
+    Dim descUnit    As Double
     Dim descValue   As Double
     Dim assignedSum As Double
     Dim Rs          As GRecordSet
+    Dim idx         As Long
+    Dim tbl         As Variant
 
-    ' 1) Total do desconto (sempre positivo)
-    totalDesc = Abs(Orcamento![Valor Do Fechamento])
+    ' 1) pega o desconto e usa só o módulo
+    totalDesc = Abs(Orcamento![Valor do Fechamento])
     If totalDesc = 0 Then Exit Sub
 
-    ' 2) Conta quantos registros há em cada categoria (com acentos)
-    cntProd = ContaRegs("[Produtos do Orçamento]")
-    cntConj = ContaRegs("[Conjuntos do Orçamento]")
-    cntPecas = ContaRegs("[Peças do Orçamento]")
+    ' 2) conta quantos itens estão preenchidos
+    totalItens = ContaRegs("[Produtos do Orçamento]") _
+               + ContaRegs("[Conjuntos do Orçamento]") _
+               + ContaRegs("[Peças do Orçamento]")
+    If totalItens = 0 Then Exit Sub
 
-    ' 3) Em quantas categorias distribuir?
-    numCats = 0
-    If cntProd > 0 Then numCats = numCats + 1
-    If cntConj > 0 Then numCats = numCats + 1
-    If cntPecas > 0 Then numCats = numCats + 1
-    If numCats = 0 Then Exit Sub
+    ' 3) calcula valor unitário de desconto e zera acumulador
+    descUnit = Round(totalDesc / totalItens, 2)
+    assignedSum = 0
+    idx = 0
 
-    ' 4) Quanto cada categoria “leva” de desconto
-    shareGroup = Round(totalDesc / numCats, 2)
-
-    ' 5) Distribui em Produtos
-    If cntProd > 0 Then
-        assignedSum = 0
+    ' 4) para cada tabela, grava o valor positivo do desconto
+    For Each tbl In Array( _
+        "[Produtos do Orçamento]", _
+        "[Conjuntos do Orçamento]", _
+        "[Peças do Orçamento]" _
+    )
+        ' USAR Sequencia_do_Orcamento (sem acento) aqui:
         Set Rs = vgDb.OpenRecordSet( _
-            "SELECT * FROM [Produtos do Orçamento] " & _
-            "WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
-        Rs.MoveFirst
-        For i = 1 To cntProd
-            If i < cntProd Then
-                descValue = Round(shareGroup / cntProd, 2)
-            Else
-                descValue = Round(shareGroup - assignedSum, 2)
-            End If
-            Rs.Edit
-            Rs![Valor Do Desconto] = descValue
-            Rs.Update
-            assignedSum = assignedSum + descValue
-            Rs.MoveNext
-        Next i
-        Rs.CloseRecordset
-    End If
+            "SELECT * FROM " & tbl & _
+            " WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
 
-    ' 6) Distribui em Conjuntos
-    If cntConj > 0 Then
-        assignedSum = 0
-        Set Rs = vgDb.OpenRecordSet( _
-            "SELECT * FROM [Conjuntos do Orçamento] " & _
-            "WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
-        Rs.MoveFirst
-        For i = 1 To cntConj
-            If i < cntConj Then
-                descValue = Round(shareGroup / cntConj, 2)
-            Else
-                descValue = Round(shareGroup - assignedSum, 2)
-            End If
-            Rs.Edit
-            Rs![Valor Do Desconto] = descValue
-            Rs.Update
-            assignedSum = assignedSum + descValue
-            Rs.MoveNext
-        Next i
-        Rs.CloseRecordset
-    End If
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
+                idx = idx + 1
 
-    ' 7) Distribui em Peças
-    If cntPecas > 0 Then
-        assignedSum = 0
-        Set Rs = vgDb.OpenRecordSet( _
-            "SELECT * FROM [Peças do Orçamento] " & _
-            "WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
-        Rs.MoveFirst
-        For i = 1 To cntPecas
-            If i < cntPecas Then
-                descValue = Round(shareGroup / cntPecas, 2)
-            Else
-                descValue = Round(shareGroup - assignedSum, 2)
-            End If
-            Rs.Edit
-            Rs![Valor Do Desconto] = descValue
-            Rs.Update
-            assignedSum = assignedSum + descValue
-            Rs.MoveNext
-        Next i
+                If idx < totalItens Then
+                    descValue = descUnit
+                Else
+                    descValue = Round(totalDesc - assignedSum, 2)
+                End If
+
+                Rs.Edit
+                  Rs![Valor do Desconto] = descValue
+                Rs.Update
+
+                assignedSum = assignedSum + descValue
+                Rs.MoveNext
+            Loop
+        End If
         Rs.CloseRecordset
-    End If
+    Next tbl
+
+    ' 5) rebind para atualizar a tela
+    Grid(0).ReBind   ' Conjuntos
+    Grid(1).ReBind   ' Peças
+    Grid(3).ReBind   ' Produtos
 End Sub
 
 
-'================================================================
-' Função auxiliar: conta quantos registros há na tabela indicada
-'================================================================
 Private Function ContaRegs(tbl As String) As Long
     Dim rsCnt As New GRecordSet
+    ' AQUI TAMBÉM usar Sequencia_do_Orcamento (sem acento):
     Set rsCnt = vgDb.OpenRecordSet( _
         "SELECT COUNT(*) AS Cnt FROM " & tbl & _
         " WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
+
     If Not rsCnt.EOF Then
         ContaRegs = rsCnt!Cnt
     Else
@@ -13645,6 +12778,9 @@ Private Function ContaRegs(tbl As String) As Long
     End If
     rsCnt.CloseRecordset
 End Function
+
+
+
 
 Private Sub LimpaProp()
   If Sequencia_da_Propriedade > 0 Then
@@ -14182,185 +13318,408 @@ Private Sub CarregaFotos()
 End Sub
 
 
-
-'Private Sub AtualizaValoresProdutos()
-'   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-'   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
-'   Dim PercentualFrete As Double, Geral As New GRecordSet, GRevenda As Boolean, ICMSAuxiliar As Double
-'   Dim GeralS As New GRecordSet, Suframa As Boolean
-         
-'   Screen.MousePointer = vbHourglass
+Private Sub AtualizaValoresConjuntos()
+   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
+   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double
+   Dim BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
+   Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
+   Dim PisRed As Double, CofinsRed As Double
+          
+   Screen.MousePointer = vbHourglass
+     
+   Call DistribuiDescontoTotal
    
-'   Set GeralS = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'   Suframa =(CBool(Not Vazio(GeralS![Código Do Suframa])))
-'   If Suframa Then
-'      vgDb.Execute "Update [Produtos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-'      grdProdutos.ReBind 'Atualiza do Grid
-'      Reposition True    'Atualiza o Formulário
-'      Screen.MousePointer = vbDefault
-'      Exit Sub
-'   End If
-         
-'   If Produtos_do_Orcamento.RecordCount > 0 Then
-'      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-'         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
-'      End If
+   grdConjuntos.ReBind
    
-'      Produtos_do_Orcamento.MoveFirst
-'      Do While Not Produtos_do_Orcamento.EOF
-'         Tributos = 0
-'         With Produtos_do_Orcamento
-'         .Edit
-'         'Valor do Desconto Rateado entre os produtos
-'         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0  Then
-'         If Orcamento!Fechamento = 1 Then 'Valor
-'            Set Geral = VgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
-'            GRevenda = Geral!Revenda
-'            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]),2)
-'            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
-'            VrItem = Round((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]),2)
-'            ValorAcresDesc = (VrItem * PercentualRateio / 100)' Valor do Desconto
-            
-'            'Valor do Frete Rateado entre os Produtos
-'            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
-'            ValorFrete = (VrItem * PercentualFrete / 100)'Valor do Frete
-              
-          ' Verifica se Tem Redução da BC
-'         If Produtos_do_Orcamento![Percentual da Redução] > 0 Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrReducao = Round((VrItem * Produtos_do_Orcamento![Percentual da Redução] / 100), 2)
-'            VrItem = VrItem - VrReducao + ValorFrete
-'            Else
-'          If Not GRevenda Then
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          Else
-'            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc),2)
-'            VrItem = VrItem + ValorFrete
-'          End If
-'         End If
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ICMSAuxiliar = Round((VrItem * CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF) / 100),2)
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else ' Nw é Entrega Futura
-'              !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              If !CFOP = "5403" or !CFOP = "6403" or !Diferido = True  Then
-'              ![Valor da Base de Cálculo] =  0
-'              ![Valor Do ICMS] = 0
-'              Else
-'              ![Valor da Base de Cálculo] = VrItem
-'              ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Valor Do ICMS] = Round((VrItem * Produtos_do_Orcamento![Alíquota Do ICMS] / 100),2)
-'              End If
-'               Tributos = Tributos + Produtos_do_Orcamento![Valor Do ICMS]
-'              '![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'              ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Pis Antes ate 03/2018
-             '![Valor Do PIS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do pis
-'            If Not Entrega_Futura Then
-'               ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            Else
-'               ![Valor Do PIS] = ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            End If
-'            Tributos = Tributos + ![Valor Do PIS]
-            'Cofins Antes ate 03/2018
-            '![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do Cofins
-'            If Not Entrega_Futura Then
-'               ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            Else
-'               ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
-'            End If
-'            Tributos = Tributos + ![Valor Do Cofins]
-'            ' Substituição Tributaria Com Frete e Desconto AFF
-'            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-'            Tributos = Tributos + ![Valor ICMS ST]
-'            ![Valor Do Tributo] = Tributos 'Tributos
-'            .Update
-'            .BookMark = .LastModified
-'            .MoveNext
-'            End If
-'            End If
-'            'Qdo Não Tem Desconto
-'            If Orcamento![Valor Do Fechamento] = 0 Then
-'            If Orcamento![Valor Do Frete] = 0 Then
-'            If Entrega_Futura Then
-'               If MunicipioAux!UF = "SP" Then
-'                  !CFOP = "5922"
-'               Else
-'                  !CFOP = "6922"
-'               End If
-'               ![Valor da Base de Cálculo] = 0
-'               ![Valor Do ICMS] = 0
-'                ICMSAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Alíquota Do ICMS] = 0
-'               ![Percentual da Redução] = 0
-'            Else
-'               !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'                Tributos = Tributos + ![Valor Do ICMS]
-'               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            End If
-'            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'            Tributos = Tributos + ![Valor Do IPI]
-'            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            
-'            If Entrega_Futura Then
-'               ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do PIS]
-'               ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-'               Tributos = Tributos + ![Valor Do Cofins]
-'            Else
- '              ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '              Tributos = Tributos + ![Valor Do PIS]
- '              ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '              Tributos = Tributos + ![Valor Do Cofins]
- '           End If
-            
- '           !CST = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade])
-            'Substituição
- '           !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), 0 , Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
- '           Tributos = Tributos + ![Valor ICMS ST]
- '           ![Valor Do Tributo] = Tributos 'Tributos
- '           .Update
- '           .BookMark = .LastModified
- '           .MoveNext
- '           End If
- '           End If
- '        End With
- '     Loop
- '     grdProdutos.ReBind 'Atualiza do Grid
- '     Reposition True    'Atualiza o Formulário
- '  End If
-'SaiDaSub:
-'   Screen.MousePointer = vbDefault
+   Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
+   Suframa = (CBool(Not Vazio(Geral![Código Do Suframa])))
+   If Suframa Then
+      vgDb.Execute "Update [Conjuntos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
+      grdConjuntos.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulário
+      Screen.MousePointer = vbDefault
+      Exit Sub
+   End If
+           
+   If Conjuntos_do_Orcamento.RecordCount > 0 Then
+   
+      
+      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
+         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
+      End If
+   
+      Conjuntos_do_Orcamento.MoveFirst
+      Do While Not Conjuntos_do_Orcamento.EOF
+         Tributos = 0
+         PisRed = 0
+         CofinsRed = 0
+         With Conjuntos_do_Orcamento
+         .Edit
+         
+         If Orcamento![Valor do Fechamento] = 0 Then
+            ![Valor do Desconto] = 0
+         End If
+         If Orcamento![Valor Do Frete] = 0 Then
+            ![Valor Do Frete] = 0
+         End If
+         
+         
+            If Entrega_Futura Then
+               If MunicipioAux!UF = "SP" Then
+                  !CFOP = "5922"
+                  !CST = 90
+               Else
+                  !CFOP = "6922"
+                  !CST = 90
+               End If
+               ![Valor da Base de Cálculo] = 0
+               ![Valor Do Icms] = 0
+               ![Alíquota Do ICMS] = 0
+               ![Percentual da Redução] = 0
+               !IVA = 0
+               ![Base de Cálculo ST] = 0
+               ![Valor ICMS ST] = 0
+               ![Alíquota Do ICMS ST] = 0
+            Else
+               '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
+               ![Valor da Base de Cálculo] = BC '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+               '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+               Tributos = Tributos + ![Valor Do Icms]
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            End If
+               If Entrega_Futura Then
+                  BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  BCAuxiliar = BC + ValorFrete
+                  ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+                  AliqAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
+               End If
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               If Not Entrega_Futura Then 'Orçamento Base: 125449 - Budke
+                  'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
+                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete - PisRed), 2)
+                   '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
+                   ![Aliq Do Pis] = 2
+                   '![Valor Do //PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                   ![Valor Do PIS] = ![Bc Pis] * (![Aliq Do Pis] / 100)
+               Else
+                   PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
+                   ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
+                   ![Aliq Do Pis] = 2
+                   ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+               End If
+             Else
+               If Not Entrega_Futura Then
+                   PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
+                   ![Aliq Do Pis] = 2
+                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Else
+                   PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
+                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
+                   ![Aliq Do Pis] = 2
+                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - PisRed) * 2 / 100
+               End If
+             End If
+            Tributos = Tributos + ![Valor Do PIS]
+             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               If Not Entrega_Futura Then
+                   'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
+                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                 ' ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
+                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete - PisRed), 2)
+                   ![Aliq Do Cofins] = 9.6
+                   '![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                   ![Valor Do Cofins] = ![Bc Cofins] * (![Aliq Do Cofins] / 100)
+               Else
+                   CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
+                   ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
+                   ![Aliq Do Cofins] = 9.6
+                   ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+               End If
+             Else ' Nao tem disconto e frete
+               If Not Entrega_Futura Then
+                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
+                  ![Aliq Do Cofins] = 9.6
+                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Else
+                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
+                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
+                  ![Aliq Do Cofins] = 9.6
+                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               End If
+             End If
+            Tributos = Tributos + ![Valor Do Cofins]
+            Tributos = Tributos + ![Valor ICMS ST]
+            ![Valor Do Tributo] = Tributos 'Tributos
+            .Update
+            .BookMark = .LastModified
+            .MoveNext
+         End With
+      Loop
+      
+      grdConjuntos.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulário
+      
+   End If
+   
+SaiDaSub:
+   Screen.MousePointer = vbDefault
 
-'End Sub
+End Sub
+
+
+
+Private Sub AtualizaValoresPecas()
+   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
+   Dim PercentualFrete As Double, totalItens As Double, PercentualRateio As Double
+   Dim VrItem As Double, BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
+   Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
+   Dim PisRed As Double, CofinsRed As Double
+   Dim descCj As New GRecordSet, descPecas As New GRecordSet
+   Dim descontoCj As Double, descontoPecas As Double, divergDesc As Double
+          
+   Screen.MousePointer = vbHourglass
+   
+   Call DistribuiDescontoTotal
+   Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
+   Suframa = (CBool(Not Vazio(Geral![Código Do Suframa])))
+   If Suframa Then
+      vgDb.Execute "Update [Peças do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
+      grdPecas.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulário
+      Screen.MousePointer = vbDefault
+      Exit Sub
+   End If
+         
+   If Pecas_do_Orcamento.RecordCount > 0 Then
+   
+      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
+         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
+      End If
+      
+      'Rotina para corrigir o erro no rateio do desconto
+      'Passo 1: Analisa se há também a presença conjuntos ou apenas peças
+     If Orcamento![Valor do Fechamento] <> 0 Then 'Se não tiver desconto não tem o que ser corrigido, nem perde tempo
+        If Conjuntos_do_Orcamento.RecordCount > 0 Then
+     '       descontoCj = verificaDesconto("Conjuntos do Orçamento", Sequencia_do_Orcamento)
+     '       descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
+        Set descCj = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoCj " & _
+                                 "FROM [Conjuntos do Orçamento] " & _
+                                 "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+
+        descontoCj = descCj!descontoCj
+
+        Set descPecas = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoPecas " & _
+                                      "FROM [Peças do Orçamento] " & _
+                                      "WHERE [Seqüência do Orçamento]  = " & Sequencia_do_Orcamento)
+
+        descontoPecas = descPecas!descontoPecas
+        
+        'Para a primeira condição verdadeira o programa vai comparar o Valor do desconto
+        'informado pelo vendas (aba Financeiro) com o somatório do desconto rateado distribuido nos conjuntos e peças
+        'a diferença será armazenada em divergDesc, que será utilizada para a correção do erro causado por arredondamentos
+        If Orcamento![Valor do Fechamento] <> (descontoCj + descontoPecas) Then
+          If (Orcamento![Valor do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
+          divergDesc = Abs(Orcamento![Valor do Fechamento]) - (descontoCj + descontoPecas)
+          If vgPWUsuario = "YGOR" Then MsgBox (divergDesc)
+            If divergDesc = 0 Then Exit Sub
+        End If
+      Else 'Para orçamentos apenas com peças faz o mesmo procedimento, mas apenas com o somatório
+           'do desconto rateado entre as peças
+        Set descPecas = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoPecas " & _
+                                      "FROM [Peças do Orçamento] " & _
+                                      "WHERE [Seqüência do Orçamento]  = " & Sequencia_do_Orcamento)
+
+        'descontoPecas = verificaDesconto("Peças do Orçamento", Sequencia_do_Orcamento)
+        
+        
+        If Orcamento![Valor do Fechamento] <> descPecas!descontoPecas Then
+         If (Orcamento![Valor do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
+          divergDesc = Abs(Orcamento![Valor do Fechamento]) - descPecas!descontoPecas
+          
+          If vgPWUsuario = "YGOR" Then
+            If divergDesc <> 0 Then
+              MsgBox ("Erro de: " & divergDesc)
+            Else
+              MsgBox ("Corrigido.")
+              Exit Sub
+            End If
+          End If
+        End If
+     End If 'sem desconto é pra cair aqui!
+    End If
+      Pecas_do_Orcamento.MoveFirst
+      Do While Not Pecas_do_Orcamento.EOF
+      
+         
+         Tributos = 0
+         PisRed = 0
+         CofinsRed = 0
+         With Pecas_do_Orcamento
+         .Edit
+         'Valor do Desconto Rateado entre os produtos
+         
+         If Orcamento![Valor do Fechamento] = 0 Then
+            ![Valor do Desconto] = 0
+         End If
+         If Orcamento![Valor Do Frete] = 0 Then
+            ![Valor Do Frete] = 0
+         End If
+         
+         If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+         If Orcamento!Fechamento = 1 Then 'Valor
+            totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Orcamento![Valor do Fechamento] / totalItens * 100)
+            VrItem = Round((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]), 2)
+            ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
+            
+            ' Valor do Frete Rateado entre os Produtos
+            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
+            ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
+            ![Valor do Desconto] = Abs(ValorAcresDesc)
+            ![Valor Do Frete] = ValorFrete
+            
+               'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
+               If Pecas_do_Orcamento.AbsolutePosition = Pecas_do_Orcamento.RecordCount And divergDesc <> 0 Then
+                 '   divergDesc = vDesc + Orcamento![Valor do Fechamento]
+                 '  If divergDesc <> 0 Then
+                 ![Valor do Desconto] = Abs(ValorAcresDesc) + divergDesc
+               Else
+                 ![Valor do Desconto] = Abs(ValorAcresDesc)
+                    'End If
+               End If
+            
+        End If
+        End If
+            
+            If Entrega_Futura Then
+               If MunicipioAux!UF = "SP" Then
+                  !CFOP = "5922"
+                  !CST = 90
+               Else
+                  !CFOP = "6922"
+                  !CST = 90
+               End If
+               ![Valor da Base de Cálculo] = 0
+               ![Valor Do Icms] = 0
+               ![Alíquota Do ICMS] = 0
+               ![Percentual da Redução] = 0
+               !IVA = 0
+               ![Base de Cálculo ST] = 0
+               ![Valor ICMS ST] = 0
+               ![Alíquota Do ICMS ST] = 0
+            Else
+               '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
+               BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor da Base de Cálculo] = Round(BC, 2) '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+               '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+               Tributos = Tributos + ![Valor Do Icms]
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            End If
+            'Auxiliar ICMS
+             If Entrega_Futura Then
+                BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                BCAuxiliar = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+                AliqAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
+             End If
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            'Pis Antes do Oziris solicitar mudança 03/2018
+             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               If Not Entrega_Futura Then
+                  'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
+                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                  '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
+                  '07/10/24 parei aqui - acertar BC PIS para reduzir o erro de arredondamento
+                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] - PisRed), 2)
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+               Else
+                  PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
+                  ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, 0)
+               End If
+             Else ' sem rateio
+               If Not Entrega_Futura Then
+                  PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Else
+                  PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
+                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               End If
+                'Pis Novo Conforme contabilidade (Andreza) Subtari icms da base do pis
+             End If
+            Tributos = Tributos + ![Valor Do PIS]
+             If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               If Not Entrega_Futura Then
+                   'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
+                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   '![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
+                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] - PisRed), 2)
+                   ![Aliq Do Cofins] = 9.6
+                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+               Else
+                   CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
+                   ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
+                   ![Aliq Do Cofins] = 9.6
+                   ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+               End If
+             Else ' sem rateio
+               If Not Entrega_Futura Then
+                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
+                   ![Aliq Do Cofins] = 9.6
+                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Else
+                    DistribuiDescontoTotal
+                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
+                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
+                   ![Aliq Do Cofins] = 9.6
+                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               End If
+             End If
+            Tributos = Tributos + ![Valor Do Cofins]
+            Tributos = Tributos + ![Valor ICMS ST]
+            ![Valor Do Tributo] = Round(Tributos, 2) 'Tributos
+            .Update
+            .BookMark = .LastModified
+            .MoveNext
+         End With
+      Loop
+      
+      grdPecas.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulário
+      
+   End If
+   
+SaiDaSub:
+   Screen.MousePointer = vbDefault
+
+End Sub
 
 Private Sub AtualizaValoresProdutos()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
+   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
    Dim PercentualFrete As Double, Geral As New GRecordSet, GRevenda As Boolean, ICMSAuxiliar As Double
    Dim GeralS As New GRecordSet, Suframa As Boolean
    Dim ReducaoAuxiliar As Double, RedPis As Double, RedCofins As Double
@@ -14375,6 +13734,7 @@ Private Sub AtualizaValoresProdutos()
    VrItem = 0
    RedPis = 0
    RedCofins = 0
+   Call DistribuiDescontoTotal
    Set GeralS = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
    Suframa = (CBool(Not Vazio(GeralS![Código Do Suframa])))
    If Suframa Then
@@ -14401,26 +13761,26 @@ Private Sub AtualizaValoresProdutos()
          With Produtos_do_Orcamento
          .Edit
          
-         If Orcamento![Valor Do Fechamento] = 0 Then
-            ![Valor Do Desconto] = 0
+         If Orcamento![Valor do Fechamento] = 0 Then
+            ![Valor do Desconto] = 0
          End If
          If Orcamento![Valor Do Frete] = 0 Then
             ![Valor Do Frete] = 0
          End If
           
          'Valor do Desconto Rateado entre os produtos
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+         If Orcamento![Valor do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
             Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
             GRevenda = Geral!Revenda
-            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
+            totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Orcamento![Valor do Fechamento] / totalItens * 100)
             VrItem = (Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário])
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             'vDesc = Round((vDesc + ValorAcresDesc), 2)
             
             'Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
+            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             
             VrItem2 = VrItem + ValorFrete + ValorAcresDesc
@@ -14430,17 +13790,17 @@ Private Sub AtualizaValoresProdutos()
            '![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
             
-            ![Valor Do Desconto] = Abs(ValorAcresDesc)
+            ![Valor do Desconto] = Abs(ValorAcresDesc)
             ![Valor Do Frete] = ValorFrete
-            vDesc = vDesc + ![Valor Do Desconto]
+            vDesc = vDesc + ![Valor do Desconto]
             
          'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
          If Produtos_do_Orcamento.AbsolutePosition = Produtos_do_Orcamento.RecordCount Then
-              divergDesc = vDesc + Orcamento![Valor Do Fechamento]
+              divergDesc = vDesc + Orcamento![Valor do Fechamento]
              If divergDesc <> 0 Then
-               ![Valor Do Desconto] = Abs(ValorAcresDesc + divergDesc)
+               ![Valor do Desconto] = Abs(ValorAcresDesc + divergDesc)
              Else
-               ![Valor Do Desconto] = Abs(ValorAcresDesc)
+               ![Valor do Desconto] = Abs(ValorAcresDesc)
              End If
          End If
           ' Verifica se Tem Redução da BC
@@ -14450,7 +13810,7 @@ Private Sub AtualizaValoresProdutos()
             VrItem = VrItem - VrReducao '+ ValorFrete (alterado em 15/08/24) - Orçamento base.: 121089
          Else
           If Not GRevenda Then
-             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] - ![Valor Do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
+             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] - ![Valor do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
              VrItem = VrItem + ValorFrete
           Else
             VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc), 2)
@@ -14511,7 +13871,7 @@ Private Sub AtualizaValoresProdutos()
                       Else
                        ' 19/09/2024 Ajuste na base do cálculo com base no orçmento 124582 - não estava considerando o frete na BC do PIS e COFINS
                        '![Bc Pis] = VrItem2 - ![Valor Do Icms]
-                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
+                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete), 2)
                         ![Aliq Do Pis] = 1.65
                         ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4)
                       End If
@@ -14601,7 +13961,7 @@ Private Sub AtualizaValoresProdutos()
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      Else
                          'Ajuste BC considerando o frete. Orçamento base 124582 em 19/09/2024
-                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
+                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor do Desconto] + ValorFrete), 2)
                         '![Bc Cofins] = Round(VrItem2, 2) - ![Valor Do Icms]
                          ![Aliq Do Cofins] = 7.6
                          ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
@@ -14687,7 +14047,7 @@ Private Sub AtualizaValoresProdutos()
             End If
             End If
             'Qdo Não Tem Desconto
-            If Orcamento![Valor Do Fechamento] = 0 Then
+            If Orcamento![Valor do Fechamento] = 0 Then
             If Orcamento![Valor Do Frete] = 0 Then
               
             If Entrega_Futura Then
@@ -14788,53 +14148,14 @@ Private Sub AtualizaValoresProdutos()
             .MoveNext
             End If
             End If
-            'End If
-'If Produtos_do_Orcamento.EOF Then
-'    divergDesc = vDesc + Orcamento![Valor do Fechamento]
-'
-'    If divergDesc = 0 Then
-'        MsgBox "Ok!" ' Tem que sair da sub aqui
-'    Else
-'        If divergDesc < 0 Then
-'            MsgBox "Ficou faltando " & Abs(divergDesc)
-'        End If
-'        If divergDesc > 0 Then
-'            MsgBox "Ficou sobrando " & Abs(divergDesc)
-'        End If
-'    End If
-    
-    ' Atualiza o campo Valor Do Desconto
-    'vgDb.Execute "Update Produtos Set Peso = " & Substitui(CDbl(PesoAux), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
-'   vgDb.Execute "UPDATE [Produtos do Orçamento] SET [Valor Do Desconto] = [Valor Do Desconto] + " & vDesc & " WHERE [Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
-'   vgDb.CommitTrans
-    
-    ' Chama a função de reprocessamento dos cálculos tributários
-  '  Call ReprocessarCalculosTributarios(Orcamento![Seqüência do Orçamento])
-'End If
-            
-         End With
-' Atualiza o campo Valor Do Desconto
-    'vgDb.Execute "Update Produtos Set Peso = " & Substitui(CDbl(PesoAux), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
-   
-  ' vgDb.Execute "UPDATE [Produtos do Orçamento] SET [Valor Do Desconto] = [Valor Do Desconto] + " & vDesc & " WHERE [Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
-  ' vgDb.CommitTrans
-      
-      
+    End With
       Loop
       GrdProdutos.ReBind 'Atualiza do Grid
       Reposition True    'Atualiza o Formulário
    End If
 SaiDaSub:
    Screen.MousePointer = vbDefault
-   
-       ' Verificar se é o último registro
-
-'MsgBox vDesc & vbCrLf & "DescOrc = " & Orcamento![Valor do Fechamento] & _
-'       vbCrLf & "Erro de: " & divergDesc
 End Sub
-
-
-
 
 
 
@@ -14853,7 +14174,7 @@ Private Function ValidaDesconto() As Boolean
     Exit Function
  End If
  
- If (Valor_Total_do_Orcamento = 0) Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ALEXANDRA" Or vgPWUsuario = "YGOR" Or vgPWUsuario = "GIOVANE" Or vgPWUsuario = "JUCELI" Then
+ If (Valor_Total_do_Orcamento = 0) Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "DIEGO DELMONACO" Or vgPWUsuario = "YGOR" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "JUCELI" Then
     ValidaDesconto = True
     Exit Function
  End If
@@ -15370,7 +14691,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
          Fechamento = IIf(IsNull(vgTb!Fechamento), 0, vgTb!Fechamento)
-         Valor_do_Fechamento = IIf(IsNull(vgTb![Valor Do Fechamento]), 0, vgTb![Valor Do Fechamento])
+         Valor_do_Fechamento = IIf(IsNull(vgTb![Valor do Fechamento]), 0, vgTb![Valor do Fechamento])
          Valor_Total_IPI_dos_Produtos = IIf(IsNull(vgTb![Valor Total IPI dos Produtos]), 0, vgTb![Valor Total IPI dos Produtos])
          Valor_Total_IPI_dos_Conjuntos = IIf(IsNull(vgTb![Valor Total IPI dos Conjuntos]), 0, vgTb![Valor Total IPI dos Conjuntos])
          Valor_Total_do_ICMS = IIf(IsNull(vgTb![Valor Total Do ICMS]), 0, vgTb![Valor Total Do ICMS])
@@ -16535,6 +15856,10 @@ Private Sub txtCp_Change(Index As Integer)
       ExecutaPreValidacao
       MostraFormulas
    End If
+    If Index = 32 Then
+        Call DistribuiDescontoTotal
+    End If
+   
    Select Case Index
       Case 17
          RepositionOrcamento
@@ -20094,7 +19419,7 @@ IniApDaTb:
       CST = Conjuntos_do_Orcamento!CST
       Valor_ICMS_ST = Conjuntos_do_Orcamento![Valor ICMS ST]
       Aliquota_do_ICMS_ST = Conjuntos_do_Orcamento![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Conjuntos_do_Orcamento![Valor Do Desconto]
+      Valor_do_Desconto = Conjuntos_do_Orcamento![Valor do Desconto]
       Valor_do_Frete = Conjuntos_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Conjuntos_do_Orcamento![Valor Anterior]
       Bc_pis = Conjuntos_do_Orcamento![Bc Pis]
@@ -20426,7 +19751,7 @@ IniApDaTb:
       CFOP = Pecas_do_Orcamento!CFOP
       CST = Pecas_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Pecas_do_Orcamento![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Pecas_do_Orcamento![Valor Do Desconto]
+      Valor_do_Desconto = Pecas_do_Orcamento![Valor do Desconto]
       Valor_do_Frete = Pecas_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Pecas_do_Orcamento![Valor Anterior]
       Bc_pis = Pecas_do_Orcamento![Bc Pis]
@@ -20900,7 +20225,7 @@ IniApDaTb:
       CST = Produtos_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Produtos_do_Orcamento![Alíquota Do ICMS ST]
       Valor_do_Frete = Produtos_do_Orcamento![Valor Do Frete]
-      Valor_do_Desconto = Produtos_do_Orcamento![Valor Do Desconto]
+      Valor_do_Desconto = Produtos_do_Orcamento![Valor do Desconto]
       Valor_Anterior = Produtos_do_Orcamento![Valor Anterior]
       Bc_cofins = Produtos_do_Orcamento![Bc Cofins]
       Aliq_do_pis = Produtos_do_Orcamento![Aliq Do Pis]
