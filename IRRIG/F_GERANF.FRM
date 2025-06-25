@@ -25,11 +25,11 @@ Begin VB.Form frmF_GeraNF
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   0
+         Index           =   2
          Left            =   8535
-         TabIndex        =   6
+         TabIndex        =   9
          TabStop         =   0   'False
-         Top             =   1710
+         Top             =   2640
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -43,50 +43,6 @@ Begin VB.Form frmF_GeraNF
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao botOk 
-         Height          =   360
-         Left            =   5805
-         TabIndex        =   5
-         Top             =   4050
-         Width           =   1485
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Prossegue"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao botCancela 
-         Height          =   360
-         Left            =   7290
-         TabIndex        =   10
-         Top             =   4050
-         Width           =   1485
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -111,13 +67,57 @@ Begin VB.Form frmF_GeraNF
          EndProperty
          CaptionOffset   =   50
       End
+      Begin IRRIG.GBotao botCancela 
+         Height          =   360
+         Left            =   7290
+         TabIndex        =   10
+         Top             =   4050
+         Width           =   1485
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao botOk 
+         Height          =   360
+         Left            =   5805
+         TabIndex        =   5
+         Top             =   4050
+         Width           =   1485
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Prossegue"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   2
+         Index           =   0
          Left            =   8535
-         TabIndex        =   9
+         TabIndex        =   6
          TabStop         =   0   'False
-         Top             =   2640
+         Top             =   1710
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -1738,7 +1738,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
    OrcamentoTela = txtCampo(0).Value
    Transporte = txtCampo(1).Value
-   frete = txtCampo(2).Value
+   frete = Val(txtCampo(2).Value) ' garante código numérico (0,1,3,4,9)
    Cobranca = txtCampo(8).Value
    Contra_Apresentacao = chkCampo(0).Value
    DAdicionais = txtCampo(9).Value
@@ -1777,9 +1777,10 @@ Public Function Executar(vgOq As String) As String
    vgNVez = 0                                     'porque não fez o processo/validacoes
    If vgOq = VALIDACOES Then
       InicializaApelidos COM_TEXTBOX
-      vgOk = (Transporte > 0)
-      vgMsg$ = "Transportadora não pode ser Vazio!"
-      If Not vgOk Then txtCampo(1).SetFocus
+      
+    ' vgOk = (Transporte > 0) Or (Val("" & frete) = 3) Or (Val("" & frete) = 4) Or (Val("" & frete) = 9)
+   '  vgMsg$ = "Transportadora não pode ser Vazio!"
+     If Not vgOk Then txtCp(1).SetFocus
       If vgOk Then
          vgOk = (Cobranca > 0)
          vgMsg$ = "Cobrança não pode ser Vazio!"
@@ -2071,7 +2072,7 @@ Public Sub DefineControles()
    Set txtCampo(2).CtBot(BOT_COMBO) = bottxtCampo2(BOT_COMBO)
    Set bottxtCampo2(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(2).DataType = 0
-   txtCampo(2).ListFields = "Emitente|Destinatário"
+   txtCampo(2).ListFields = "Emitente|Destinatário|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
 
    Set txtCampo(8).CtPri = txtCp(8)
    Set txtCampo(8).CtFdo = labFdo8
