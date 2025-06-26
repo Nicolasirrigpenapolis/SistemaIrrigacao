@@ -1,0 +1,4 @@
+[History]
+1=#P0#=mb	#P1#=Botao_Click	#P2#=IRRIG/frmConpedi/Botao_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250626102933	#P7#=0	#P8#=1	.
+2=#P0#=mb	#P1#=TransmitirNFe	#P2#=IRRIG/frmNotaFisc/TransmitirNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626093635	#P7#=0	#P8#=4	.
+3=#P0#=mb	#P1#=TransmitirNFe310	#P2#=IRRIG/frmNotaFisc/TransmitirNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626093602	#P7#=0	#P8#=10	.
