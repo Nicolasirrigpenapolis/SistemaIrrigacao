@@ -11,7 +11,7 @@ Begin VB.Form frmConpedi
    MDIChild        =   -1  'True
    ScaleHeight     =   8190
    ScaleWidth      =   11700
-   Begin IRRIG.GBotao btnPedido 
+   Begin IRRIG.GBotao Botao 
       Height          =   375
       Index           =   4
       Left            =   8970
@@ -45,14 +45,13 @@ Begin VB.Form frmConpedi
       _ExtentY        =   14393
       BevelOuter      =   0
       Stretch         =   -1  'True
-      Begin IRRIG.GBotao btnPedido 
-         Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+      Begin IRRIG.GBotao Botao 
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   2130
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -65,10 +64,32 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
+         Caption         =   "Atualiza Receita"
          CaptionOffset   =   50
       End
-      Begin IRRIG.GBotao btnPedido 
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Entregue ao Cliente"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
          Height          =   480
          Index           =   1
          Left            =   9015
@@ -91,35 +112,14 @@ Begin VB.Form frmConpedi
          Caption         =   "Consultar"
          CaptionOffset   =   50
       End
-      Begin IRRIG.GBotao btnPedido 
+      Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Entregue ao Cliente"
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao btnPedido 
-         Height          =   375
-         Index           =   3
-         Left            =   8970
-         TabIndex        =   9
-         Top             =   1740
-         Width           =   2130
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -132,7 +132,7 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Atualiza Receita"
+         Caption         =   "Receita"
          CaptionOffset   =   50
       End
       Begin IRRIG.GCpMM mmCampo 
@@ -517,6 +517,61 @@ Private Sub CarregaTotalizador()
 End Sub
 
 
+Private Sub AtualizaPedidoGeral()
+    Dim TbSit As New GRecordSet, Sql As String
+
+    Screen.MousePointer = vbHourglass
+
+    ' Seleciona dos Itens Pendentes os campos com acentuação exata do frm
+    Set TbSit = vgDb.OpenRecordSet( _
+        "SELECT [Sequencia do Item], [Sequencia do Produto], [Sequencia do Conjunto], [Situação] " & _
+        "FROM [Itens Pendentes] " & _
+        "WHERE [Seqüência do Orçamento] = " & Orcamento)
+
+    ' Limpa antes de refazer
+    vgDb.Execute "DELETE FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento
+    vgDb.Execute "DELETE FROM [Receita Primaria]    WHERE [Seqüência do Orçamento] = " & Orcamento
+
+    ' Rotinas auxiliares
+    MySQL
+    AtuPedido
+    ReceitaP
+
+    ' Atualiza um a um os status de Situação
+    Do While Not TbSit.EOF
+        Sql = "UPDATE [Itens Pendentes] " & _
+              "SET [Situação] = '" & TbSit![Situação] & "' " & _
+              "WHERE [Seqüência do Orçamento] = " & Orcamento & _
+              "  AND [Sequencia do Item]     = " & TbSit![Sequencia do Item]
+        If Not IsNull(TbSit![Sequencia do Produto]) Then
+            Sql = Sql & " AND [Sequencia do Produto] = " & TbSit![Sequencia do Produto]
+        End If
+        If Not IsNull(TbSit![Sequencia do Conjunto]) Then
+            Sql = Sql & " AND [Sequencia do Conjunto] = " & TbSit![Sequencia do Conjunto]
+        End If
+        vgDb.Execute Sql
+
+        vgDb.Execute "UPDATE [Receita Primaria] " & _
+                     "SET [Situação] = '" & TbSit![Situação] & "' " & _
+                     "WHERE [Seqüência do Orçamento] = " & Orcamento & _
+                     "  AND [Sequencia do Item]     = " & TbSit![Sequencia do Item]
+
+        TbSit.MoveNext
+    Loop
+
+    Screen.MousePointer = vbDefault
+
+    ' Se estiver aberta, atualiza também a tela de Receita Primária
+    If FormEstaAberto("frmRecprima") Then
+       frmRecprima.vgFiltroInicial = "[Seqüência do Orçamento] = " & Orcamento
+       InicializaFiltro frmRecprima
+       frmRecprima.CarregaTotalizador
+       frmRecprima.TxtDtaAtual.Value = Date
+    End If
+End Sub
+
+
+
 Private Sub CarregaContas()
    Dim x As String, Tb As New GRecordSet, MsgValida As String
    
@@ -632,7 +687,7 @@ End Function
 
 
 Private Sub MySQL()
- Dim SQL As String
+ Dim Sql As String
  Dim Tb1 As New GRecordSet
  Dim SeqItem As Integer
  Dim cnGas As ADODB.Connection, rsGas As ADODB.RecordSet
@@ -659,24 +714,24 @@ Private Sub MySQL()
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
  SeqItem = 1
- SQL = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
+ Sql = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
        "FROM( "
        
- SQL = SQL & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
+ Sql = Sql & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
              "Sum([Peças do Orçamento].[Valor Total]) As Total, [Peças do Orçamento].[Valor Unitário] " & _
              "FROM [Peças do Orçamento] left join Orçamento On [Peças do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Produtos On [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro1()
- SQL = SQL & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
- SQL = SQL & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
+ Sql = Sql & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
+ Sql = Sql & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
              "FROM [Conjuntos do Orçamento] Left Join Orçamento On [Conjuntos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Conjuntos On [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] WHERE " & Filtro2()
- SQL = SQL & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
- SQL = SQL & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
+ Sql = Sql & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
+ Sql = Sql & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
              "FROM [Produtos do Orçamento] left Join Orçamento On [Produtos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Produtos On [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro3()
- SQL = SQL & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
+ Sql = Sql & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
  
- rsGas.Open SQL, cnGas, adOpenStatic, adLockPessimistic
+ rsGas.Open Sql, cnGas, adOpenStatic, adLockPessimistic
  
  
  Do While Not rsGas.EOF
@@ -1936,46 +1991,71 @@ Private Sub PoeRelEFiltroCbo(Index As Integer)
    End Select
 End Sub
 
-'executa processos/validacoes nos campos do formuário
+
+' Executa processos/validações nos campos do formulário
 Public Function Executar(vgOq As String) As String
-   Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
-   On Error GoTo DeuErro                          'fica na espera de um erro...
-   vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
-   vgOk = True                                    'se a validação esta OK
-   vgNVez = 0                                     'porque não fez o processo/validacoes
-   If vgOq = VALIDACOES Then
-      InicializaApelidos COM_TEXTBOX
-      If True Then
-         vgOk = (Orcamento > 0)
-         vgMsg$ = "Informe o Orçamento!"
-         If Not vgOk Then txtCampo(0).SetFocus
-      End If
-      If vgOk Then vgMsg$ = ""
-      DoEvents
-   ElseIf vgOq = INICIALIZACOES Then
-      InicializaApelidos COM_TEXTBOX
-      On Error Resume Next
-         ElseIf vgOq = INI_APELIDOS Then
-      InicializaApelidos COM_REGISTRO
-      ExecutaVisivel
-      ExecutaPreValidacao
-   End If
-   Executar = vgMsg$                              'prepara saida da função
-   Exit Function                                  'e cai fora...
+    Dim vgMsg  As String
+    Dim vgOk   As Boolean
+    Dim vgNVez As Integer
+
+    On Error GoTo DeuErro
+
+    vgMsg = ""      ' mensagem de retorno
+    vgOk = True     ' indicador de validação
+    vgNVez = 0      ' contador de tentativas
+
+    If vgOq = VALIDACOES Then
+        InicializaApelidos COM_TEXTBOX
+        vgOk = (Orcamento > 0)
+        If Not vgOk Then
+            vgMsg = "Informe o Orçamento!"
+            txtCampo(0).SetFocus
+        Else
+            vgMsg = ""
+        End If
+        DoEvents
+
+    ElseIf vgOq = INICIALIZACOES Then
+        InicializaApelidos COM_TEXTBOX
+        On Error Resume Next   ' ignora erros neste bloco
+
+    ElseIf vgOq = INI_APELIDOS Then
+        InicializaApelidos COM_REGISTRO
+        ExecutaVisivel
+        ExecutaPreValidacao
+    End If
+
+    Executar = vgMsg
+    Exit Function
 
 DeuErro:
-   Select Case Err                                'vamos verificar se deu algum erro
-      Case 3197                                   'registro acabou de ser alterado por outro usuário
-         Resume
-      Case 3046, 3158, 3186, 3187, 3188, 3189, 3218, 3260
-         vgNVez = vgNVez + 1                      'outro usuário acessando
-         If vgNVez <= 10 Then                     'vamos tentar 10 vezes
-            Delay 0.5                             'mais antes espera 1/2 segundo
-            Resume                                'antes de tentar
-         End If
-   End Select
-   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+    Select Case Err.Number
+        Case 3
+            ' registro alterado por outro usuário
+            ' chama RecPrima só com o Item (Long)
+            RecPrima CLng(Prodstatus)
+            Resume Next
+
+        Case 4
+            ' tenta atualizar até 10 vezes
+            AtualizaPedidoGeral
+            vgNVez = vgNVez + 1
+            If vgNVez <= 10 Then
+                Delay 0.5
+                Resume
+            Else
+                Resume Next
+            End If
+
+        Case Else
+            Resume Next
+    End Select
+
+    ' monta a string de retorno com origem, número e descrição do erro
+    Executar = Err.Source & "|" & CStr(Err.Number) & "|" & Err.Description
 End Function
+
+
 
 'mostra fórmulas no formulário
 Private Sub MostraFormulas()
@@ -1999,6 +2079,8 @@ Private Sub ExecutaPreValidacao()
    Botao(1).Enabled = Ok
    Ok = (Prodstatus > 0)
    Botao(3).Enabled = Ok
+   Ok = (Orcamento > 0)
+    Botao(4).Enabled = Ok
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
@@ -2098,6 +2180,7 @@ Private Sub Form_Load()
    Botao(1).Caption = LoadGasString(50430)
    Botao(2).Caption = LoadGasString(50431)
    Botao(3).Caption = LoadGasString(50432)
+   Botao(4).Caption = "Atualiza Pedido"
    AjustaTamanho Me
    Executar INICIALIZACOES
    InicializaApelidos COM_TEXTBOX
@@ -2229,6 +2312,8 @@ Private Sub Botao_Click(Index As Integer)
          Entregou
       Case 3
          RecPrima ((Prodstatus))
+      Case 4
+         AtualizaPedidoGeral
    End Select
 End Sub
 
