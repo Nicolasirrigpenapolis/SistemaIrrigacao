@@ -6487,20 +6487,37 @@ Private Sub GerenciarCamposTransporte()
 
     Dim idxs   As Variant
     Dim i      As Integer
+    Dim idxTransp As Variant
+
     Dim Codigo As Integer
 
     Codigo = Val(txtCp(17).Text)
     idxs = Array(26, 15, 16, 8, 5, 7, 2, 19, 20, 22, 25, 23, 24, 51, 50, 56)
-
+    idxTransp = Array(13, 3, 4, 6, 7, 12)
+    
     If Codigo = 9 Then
         txtCampo(4).Enabled = False
         For i = LBound(idxs) To UBound(idxs)
             txtCp(idxs(i)).Enabled = False
         Next i
+         For i = LBound(idxTransp) To UBound(idxTransp)
+            txtCp(idxTransp(i)).Enabled = False
+        Next i
+    ElseIf Codigo = 3 Or Codigo = 4 Then
+        txtCampo(4).Enabled = False
+        For i = LBound(idxTransp) To UBound(idxTransp)
+            txtCp(idxTransp(i)).Enabled = False
+        Next i
+        For i = LBound(idxs) To UBound(idxs)
+            txtCp(idxs(i)).Enabled = True
+        Next i
     Else
         txtCampo(4).Enabled = True
         For i = LBound(idxs) To UBound(idxs)
             txtCp(idxs(i)).Enabled = True
+        Next i
+        For i = LBound(idxTransp) To UBound(idxTransp)
+            txtCp(idxTransp(i)).Enabled = True
         Next i
     End If
     On Error GoTo 0
@@ -13834,26 +13851,32 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       End If
       If vgOk Then
-         If Transportadora_Avulsa = True Then
-            vgOk = (Municipio_da_Transportadora > 0)
-            vgMsg$ = "Município da Transportadora inválido!"
-            If Not vgOk Then vgColumn = 7
-         End If
-      End If
-      If vgOk Then
-         If Transportadora_Avulsa = True Then
-            If Transportadora_Avulsa = 1 Then
-               vgOk = (ValidaIE(MunicipioAux!UF, IE_da_Transportadora, False))
-               vgMsg$ = "" & MsgValIE & ""
-               If Not vgOk Then vgColumn = 8
+         If frete <> "Transporte Prprio Remetente" And frete <> "Transporte Prprio Destinatrio" Then
+            If Transportadora_Avulsa = True Then
+               vgOk = (Municipio_da_Transportadora > 0)
+               vgMsg$ = "Municpio da Transportadora invlido!"
+               If Not vgOk Then vgColumn = 7
             End If
          End If
       End If
       If vgOk Then
-         If Transportadora_Avulsa = True Then
-            vgOk = (Not Vazio(Documento_da_Transportadora))
-            vgMsg$ = "CPF/CNPJ não pode ser Vazio"
-            If Not vgOk Then vgColumn = 4
+         If frete <> "Transporte Prprio Remetente" And frete <> "Transporte Prprio Destinatrio" Then
+            If Transportadora_Avulsa = True Then
+               If Transportadora_Avulsa = 1 Then
+                  vgOk = (ValidaIE(MunicipioAux!UF, IE_da_Transportadora, False))
+                  vgMsg$ = "" & MsgValIE & ""
+                  If Not vgOk Then vgColumn = 8
+               End If
+            End If
+         End If
+      End If
+      If vgOk Then
+         If frete <> "Transporte Prprio Remetente" And frete <> "Transporte Prprio Destinatrio" Then
+            If Transportadora_Avulsa = True Then
+               vgOk = (Not Vazio(Documento_da_Transportadora))
+               vgMsg$ = "CPF/CNPJ no pode ser Vazio"
+               If Not vgOk Then vgColumn = 4
+            End If
          End If
       End If
       If vgOk Then
