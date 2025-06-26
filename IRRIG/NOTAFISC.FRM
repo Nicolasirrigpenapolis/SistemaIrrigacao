@@ -8035,6 +8035,183 @@ Private Function VerificaDebitos() As Boolean
 
 End Function
 
+
+Public Sub TransmitirNFe500(NFe As String, chaveNFe As String)
+    Dim msgDados As String, msgRetWS As String, msgResultado As String, siglaWS As String, certificado As String
+    Dim licenca As String, NFeAssinada As String, nroRecibo As String, cStat As Long, versao As String, dhRecibo As String
+    Dim tMed As String, i As Integer, objNFeUtil As Object, Arq As Long, proxy As String, usuario As String, senha As String
+    Dim tpAmbiente As Long, lote As String
+
+    On Error GoTo DeuErro
+
+    Screen.MousePointer = vbHourglass ' ampulheta
+    lblProgresso.Caption = "Transmitindo NFe..."
+    Set objNFeUtil = CreateObject("NFe_util_2G.util")
+
+    certificado = Parametros_da_NFe![Certificado Digital]
+    siglaWS = "SP"
+    versao = "5.00"
+    licenca = "23433296a6c7b3e6e602aa8c71ded18804ec302656cfa8590ff7b35454b14834f4f5aed7ed5b4e4986a6a2d2a4b1abad6758927b36d70c5a1d4588597eaf0de2"
+
+    indSinc = 1
+    ' Número da NFe conforme DataField do seu frm
+    lote = Format(Nota_Fiscal![Número da NFe], "000000")
+    If Parametros_da_NFe!ambiente = 0 Then
+        tpAmbiente = 1
+    Else
+        tpAmbiente = 2
+    End If
+
+    For i = 1 To 5
+        NFeAssinada = objNFeUtil.NfeAutorizacao4( _
+            siglaWS, tpAmbiente, certificado, versao, NFe, lote, indSinc, _
+            msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, _
+            proxy, usuario, senha, licenca)
+
+        With vgTb
+            .Edit
+            ' Corrige Observação conforme DataField
+            If Vazio(![Observação]) Then
+                ![Observação] = "Transmitindo NFe... Tentativa " & i
+            Else
+                ![Observação] = ![Observação] & vbCrLf & "Transmitindo NFe... Tentativa " & i
+            End If
+            .Update
+            .BookMark = .LastModified
+        End With
+        If cStat <> 105 Then GoTo Continua
+    Next
+
+    MsgBox "NFe não enviada! Tente mais tarde.", vbExclamation + vbOKOnly, vaTitulo
+
+    With vgTb
+        .Edit
+        If Vazio(![Observação]) Then
+            ![Observação] = "Erro ao transmitir NFe"
+        Else
+            ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe"
+        End If
+        .Update
+        .BookMark = .LastModified
+    End With
+    GoTo SaiDaSub
+
+Continua:
+    Select Case cStat
+        Case 5000 To 7003
+            MsgBox "Descrição do erro: " & vbCrLf & msgResultado, vbCritical + vbOKOnly, "Atenção: envio falhou"
+            With vgTb
+                .Edit
+                If Vazio(![Observação]) Then
+                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
+                Else
+                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+            GoTo SaiDaSub
+
+        Case 103
+            With Nota_Fiscal
+                .Edit
+                !Transmitido = True
+                ![Número do Recibo da NFe] = nroRecibo
+                ![Chave de Acesso da NFe] = chaveNFe
+                .Update
+                .BookMark = .LastModified
+            End With
+
+            MsgBox "Transmitido com sucesso!", vbInformation + vbOKOnly, "Atenção: NFe enviada!"
+
+            Arq = FreeFile
+            If Parametros_da_NFe!ambiente = 0 Then
+                ' Produção
+                If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then _
+                       Kill Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
+                If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then _
+                       Kill Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
+                Open Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Append As #Arq
+                    Print #Arq, NFeAssinada
+                Close #Arq
+            Else
+                ' Homologação
+                If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then _
+                       Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
+                If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then _
+                       Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
+                Open Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Append As #Arq
+                    Print #Arq, NFeAssinada
+                Close #Arq
+            End If
+
+            With vgTb
+                .Edit
+                If Vazio(![Observação]) Then
+                    ![Observação] = "Transmitido com sucesso"
+                Else
+                    ![Observação] = ![Observação] & vbCrLf & "Transmitido com sucesso"
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+
+        Case 108, 109
+            MsgBox msgResultado & vbCrLf & "O Web Service com problemas de recepção", vbCritical + vbOKOnly, "Atenção: WS com problemas!"
+            With vgTb
+                .Edit
+                If Vazio(![Observação]) Then
+                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
+                Else
+                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+            GoTo SaiDaSub
+
+        Case Else
+            MsgBox "Descrição do erro: " & vbCrLf & cStat & " - " & msgResultado, vbCritical + vbOKOnly, "Atenção: WS rejeitou a NFe..."
+            With vgTb
+                .Edit
+                If Vazio(![Observação]) Then
+                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
+                Else
+                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+            GoTo SaiDaSub
+    End Select
+
+    ' Gera protocolo no layout 4.00
+    RetornoNFe310 NFeAssinada, nroRecibo
+
+DeuErro:
+    If Err <> 0 Then MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+
+SaiDaSub:
+    Screen.MousePointer = vbDefault ' normal
+    Set objNFeUtil = Nothing
+    If Parametros_da_NFe!ambiente = 0 Then
+        lblProgresso.Caption = ""
+    Else
+        lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
+    End If
+End Sub
+
+
 'Tp 0 = (Orçamento ou F. Proforma)/Ordem de Serviço; 1 = Pedido/Mvto
 Private Sub AbreOrigem(Tp As Byte)
    Dim Sequencia As Long, Origem As String
