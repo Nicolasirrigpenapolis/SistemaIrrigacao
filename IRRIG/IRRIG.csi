@@ -1,5 +1,5 @@
 [History]
-1=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmNotaFisc/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625230819	#P7#=0	#P8#=124	.
+1=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmNotaFisc/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625235128	#P7#=0	#P8#=120	.
 2=#P0#=mb	#P1#=txtCp_LostFocus	#P2#=IRRIG/frmOrcament/txtCp_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625224806	#P7#=0	#P8#=9	.
 3=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625224601	#P7#=0	#P8#=412	.
 4=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmF_GeraNF/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625230326	#P7#=0	#P8#=12	.
@@ -28,7 +28,7 @@
 27=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmOrcament/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625100224	#P7#=0	#P8#=18	.
 28=#P0#=mb	#P1#=GerenciarCamposTransporte	#P2#=IRRIG/frmNotaFisc/GerenciarCamposTransporte	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625095018	#P7#=0	#P8#=7	.
 29=#P0#=mb	#P1#=InicializaApelidos	#P2#=IRRIG/frmNotaFisc/InicializaApelidos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625093632	#P7#=0	#P8#=1	.
-30=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625093039	#P7#=0	#P8#=1512	.
+30=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626000342	#P7#=0	#P8#=1486	.
 31=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmNotaFisc/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250625092919	#P7#=0	#P8#=164	.
 32=#P0#=mb	#P1#=Grid_BeforeUpdateRecord	#P2#=IRRIG/frmNotaFisc/Grid_BeforeUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625090923	#P7#=0	#P8#=10	.
 33=#P0#=mb	#P1#=Grid_AfterUpdateRecord	#P2#=IRRIG/frmNotaFisc/Grid_AfterUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250625090535	#P7#=0	#P8#=8	.
