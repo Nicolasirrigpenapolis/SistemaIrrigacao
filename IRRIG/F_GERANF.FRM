@@ -897,12 +897,12 @@ Public vgQReg As Long                             'quantidade de já feira para o
 Dim txtCampo(12) As New FormataCampos             'classe dos compos tipo texto do módulo
 Dim chkCampo(0) As New FormataCampos              'classe dos compos tipo lógico do módulo
 Dim vgPodeFazerUnLoad As Boolean                  'flag se o módulo pode ou nao ser removido da memória
-Dim OrcamentoTela As Double, Transporte As Double, Frete As String
+Dim OrcamentoTela As Double, Transporte As Double, frete As String
 Dim Ajuste As String, Cobranca As Double, Contra_Apresentacao As Boolean
 Dim DAdicionais As Double, Historico As String, Dolar As Double
 Dim TipoRecebimento As String
 Public txtOrcamentoTela As Object, lblTitulo As Object, txtTransporte As Object
-Public txtFrete As Object, btnOk As Object, lblAjuste As Object
+Public txtFrete As Object, BtnOk As Object, lblAjuste As Object
 Public txtCobranca As Object, txtDAdicionais As Object, txtHistorico As Object
 
 Dim OrcamentoAux As New GRecordSet
@@ -980,7 +980,7 @@ Private Sub Gerar()
       ![Data Do Fechamento] = Date
       'Pedido
       Pedido.AddNew
-      Pedido![Seqüência Do Orçamento] = ![Seqüência Do Orçamento]
+      Pedido![Seqüência do Orçamento] = ![Seqüência do Orçamento]
       Pedido![Ocultar Valor Unitário] = ![Ocultar Valor Unitário]
       Pedido![Data de Emissão] = Date
       Pedido![Seqüência Do Geral] = ![Seqüência Do Geral]
@@ -1000,7 +1000,7 @@ Private Sub Gerar()
       Else
          Pedido![Valor Do Fechamento] = ![Valor Do Fechamento]
       End If
-      Pedido![Valor do Frete] = ![Valor do Frete]
+      Pedido![Valor Do Frete] = ![Valor Do Frete]
       Pedido![Valor Do Seguro] = ![Valor Do Seguro]
       Pedido![Valor Total IPI dos Produtos] = ![Valor Total IPI dos Produtos]
       Pedido![Valor Total IPI dos Conjuntos] = ![Valor Total IPI dos Conjuntos]
@@ -1053,21 +1053,21 @@ Private Sub Gerar()
            GeralAux = Nota![Seqüência Do Geral]
       Nota![Seqüência da Propriedade] = Pedido![Seqüência da Propriedade]
       Nota![Seqüência Do Vendedor] = Pedido![Seqüência Do Vendedor]
-      If PegaValor("Orçamento", "Fatura Proforma", "[Seqüência do Orçamento] = " & Pedido![Seqüência Do Orçamento]) Then
-         If Pedido![Seqüência Do Orçamento] > 0 Then Nota!Histórico = "Fatura Proforma N.: " & PegaValor("Orçamento", "Número da Proforma", "[Seqüência do Orçamento] = " & Pedido![Seqüência Do Orçamento]) & vbCrLf & Pedido!Histórico & vbCrLf
+      If PegaValor("Orçamento", "Fatura Proforma", "[Seqüência do Orçamento] = " & Pedido![Seqüência do Orçamento]) Then
+         If Pedido![Seqüência do Orçamento] > 0 Then Nota!Histórico = "Fatura Proforma N.: " & PegaValor("Orçamento", "Número da Proforma", "[Seqüência do Orçamento] = " & Pedido![Seqüência do Orçamento]) & vbCrLf & Pedido!Histórico & vbCrLf
       Else
-         If Pedido![Seqüência Do Orçamento] > 0 Then Nota!Histórico = "Orcamento N.: " & Pedido![Seqüência Do Orçamento] & vbCrLf & Pedido!Histórico & vbCrLf
+         If Pedido![Seqüência do Orçamento] > 0 Then Nota!Histórico = "Orcamento N.: " & Pedido![Seqüência do Orçamento] & vbCrLf & Pedido!Histórico & vbCrLf
       End If
       Nota!Histórico = Nota!Histórico & Historico
      ' Nota![Data de Saída] = Date
      ' Nota![Hora da Saída] = Time
       Nota![Seqüência da Transportadora] = Transporte
-      Nota!Frete = Frete
+      Nota!frete = frete
       Nota![Forma de Pagamento] = Pedido![Forma de Pagamento]
       Nota!Fechamento = Pedido!Fechamento
       Nota![Contra Apresentação] = Contra_Apresentacao 'Tela
       Nota![Valor Do Fechamento] = Pedido![Valor Do Fechamento]
-      Nota![Valor do Frete] = Pedido![Valor do Frete]
+      Nota![Valor Do Frete] = Pedido![Valor Do Frete]
       Nota![Valor Do Seguro] = Pedido![Valor Do Seguro]
       Nota![Valor Total IPI dos Produtos] = Pedido![Valor Total IPI dos Produtos]
       Nota![Valor Total IPI dos Conjuntos] = Pedido![Valor Total IPI dos Conjuntos]
@@ -1113,23 +1113,23 @@ Private Sub Gerar()
       Filtro = "[Seqüência da Nota Fiscal] = " & Pedido![Seqüência da Nota Fiscal]
       
       'Produtos
-      TbAuxiliar "Produtos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OProdutos
+      TbAuxiliar "Produtos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OProdutos
       If OProdutos.RecordCount > 0 Then
          Nota![Número da NFe] = UltimaEletronica!NFe + 1
         
          Do While Not OProdutos.EOF
             PProdutos.AddNew
             PProdutos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PProdutos![Seqüência Do Produto] = OProdutos![Seqüência Do Produto]
+            PProdutos![Seqüência do Produto] = OProdutos![Seqüência do Produto]
             PProdutos!Quantidade = OProdutos!Quantidade
             PProdutos![Valor Unitário] = OProdutos![Valor Unitário]
             PProdutos![Valor Total] = OProdutos![Valor Total]
-            PProdutos![Valor Do IPI] = OProdutos![Valor Do IPI]
+            PProdutos![Valor do IPI] = OProdutos![Valor do IPI]
             PProdutos![Alíquota Do IPI] = OProdutos![Alíquota Do IPI]
             PProdutos!Diferido = OProdutos!Diferido
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PProdutos![Valor Do ICMS] = OProdutos![Valor Do ICMS]
+               PProdutos![Valor Do Icms] = OProdutos![Valor Do Icms]
                PProdutos![Valor da Base de Cálculo] = OProdutos![Valor da Base de Cálculo]
                PProdutos![Alíquota Do ICMS] = OProdutos![Alíquota Do ICMS]
                PProdutos![Percentual da Redução] = OProdutos![Percentual da Redução]
@@ -1145,7 +1145,7 @@ Private Sub Gerar()
             PProdutos![Valor Do Tributo] = OProdutos![Valor Do Tributo]
             PProdutos.Update
             PProdutos.BookMark = .LastModified
-            UltimaMvto 1, OProdutos![Seqüência Do Produto] 'Último Movimento
+            UltimaMvto 1, OProdutos![Seqüência do Produto] 'Último Movimento
             OProdutos.MoveNext
          Loop
          OProdutos.MoveFirst
@@ -1162,10 +1162,10 @@ Private Sub Gerar()
             With OProdutos
                NProdutos.AddNew
                NProdutos![Seqüência da Nota Fiscal] = Nota![Seqüência da Nota Fiscal]
-               NProdutos![Seqüência Do Produto] = ![Seqüência Do Produto]
+               NProdutos![Seqüência do Produto] = ![Seqüência do Produto]
                NProdutos!Quantidade = !Quantidade
                NProdutos![Valor Do Desconto] = OProdutos![Valor Do Desconto]
-               NProdutos![Valor do Frete] = OProdutos![Valor do Frete]
+               NProdutos![Valor Do Frete] = OProdutos![Valor Do Frete]
                If Dolar > 0 Then ' Alterado para Fatura Proforma Converter Dolar em Real Ygor
                   NProdutos![Valor Unitário] = ![Valor Unitário] * Dolar
                   NProdutos![Valor Total] = ![Valor Total] * Dolar
@@ -1173,8 +1173,8 @@ Private Sub Gerar()
                   NProdutos![Valor Unitário] = ![Valor Unitário]
                   NProdutos![Valor Total] = ![Valor Total]
                End If
-               NProdutos![Valor Do IPI] = ![Valor Do IPI]
-               NProdutos![Valor Do ICMS] = ![Valor Do ICMS]
+               NProdutos![Valor do IPI] = ![Valor do IPI]
+               NProdutos![Valor Do Icms] = ![Valor Do Icms]
                NProdutos![Percentual da Redução] = ![Percentual da Redução]
                NProdutos![Alíquota Do ICMS] = ![Alíquota Do ICMS]
                NProdutos![Valor da Base de Cálculo] = ![Valor da Base de Cálculo]
@@ -1202,7 +1202,7 @@ Private Sub Gerar()
       End If
       
       'Serviços
-      TbAuxiliar "Serviços do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OServicos
+      TbAuxiliar "Serviços do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OServicos
       If OServicos.RecordCount > 0 Then
          Nota![Número da NFSe] = 0
          Nota![Número da NFe] = UltimaEletronica!NFe + 1
@@ -1210,7 +1210,7 @@ Private Sub Gerar()
          Do While Not OServicos.EOF
             PServicos.AddNew
             PServicos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PServicos![Seqüência Do Serviço] = OServicos![Seqüência Do Serviço]
+            PServicos![Seqüência do Serviço] = OServicos![Seqüência do Serviço]
             PServicos!Quantidade = OServicos!Quantidade
             PServicos![Valor Unitário] = OServicos![Valor Unitário]
             PServicos![Valor Total] = OServicos![Valor Total]
@@ -1225,7 +1225,7 @@ Private Sub Gerar()
             With OServicos
                NServicos.AddNew
                NServicos![Seqüência da Nota Fiscal] = Nota![Seqüência da Nota Fiscal]
-               NServicos![Seqüência Do Serviço] = ![Seqüência Do Serviço]
+               NServicos![Seqüência do Serviço] = ![Seqüência do Serviço]
                NServicos!Quantidade = !Quantidade
                NServicos![Valor Unitário] = ![Valor Unitário]
                NServicos![Valor Total] = ![Valor Total]
@@ -1237,22 +1237,22 @@ Private Sub Gerar()
       End If
       
       'Conjuntos
-      TbAuxiliar "Conjuntos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OConjuntos
+      TbAuxiliar "Conjuntos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OConjuntos
       If OConjuntos.RecordCount > 0 Then
          Nota![Número da NFe] = UltimaEletronica!NFe + 1
          Nota![Ocultar Valor Unitário] = 1
          Do While Not OConjuntos.EOF
             PConjuntos.AddNew
             PConjuntos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PConjuntos![Seqüência Do Conjunto] = OConjuntos![Seqüência Do Conjunto]
+            PConjuntos![Seqüência do Conjunto] = OConjuntos![Seqüência do Conjunto]
             PConjuntos!Quantidade = OConjuntos!Quantidade
             PConjuntos![Valor Unitário] = OConjuntos![Valor Unitário]
             PConjuntos![Valor Total] = OConjuntos![Valor Total]
-            PConjuntos![Valor Do IPI] = OConjuntos![Valor Do IPI]
+            PConjuntos![Valor do IPI] = OConjuntos![Valor do IPI]
             PConjuntos![Alíquota Do IPI] = OConjuntos![Alíquota Do IPI]
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PConjuntos![Valor Do ICMS] = OConjuntos![Valor Do ICMS]
+               PConjuntos![Valor Do Icms] = OConjuntos![Valor Do Icms]
                PConjuntos![Alíquota Do ICMS] = OConjuntos![Alíquota Do ICMS]
                PConjuntos![Percentual da Redução] = OConjuntos![Percentual da Redução]
                PConjuntos![Valor da Base de Cálculo] = OConjuntos![Valor da Base de Cálculo]
@@ -1269,7 +1269,7 @@ Private Sub Gerar()
             PConjuntos![Valor Do Tributo] = OConjuntos![Valor Do Tributo]
             PConjuntos.Update
             PConjuntos.BookMark = .LastModified
-            UltimaMvto 2, OConjuntos![Seqüência Do Conjunto] 'Último Movimento
+            UltimaMvto 2, OConjuntos![Seqüência do Conjunto] 'Último Movimento
             OConjuntos.MoveNext
          Loop
          OConjuntos.MoveFirst
@@ -1286,10 +1286,10 @@ Private Sub Gerar()
             With OConjuntos
                NConjuntos.AddNew
                NConjuntos![Seqüência da Nota Fiscal] = Nota![Seqüência da Nota Fiscal]
-               NConjuntos![Seqüência Do Conjunto] = ![Seqüência Do Conjunto]
+               NConjuntos![Seqüência do Conjunto] = ![Seqüência do Conjunto]
                NConjuntos!Quantidade = !Quantidade
                NConjuntos![Valor Do Desconto] = OConjuntos![Valor Do Desconto]
-               NConjuntos![Valor do Frete] = OConjuntos![Valor do Frete]
+               NConjuntos![Valor Do Frete] = OConjuntos![Valor Do Frete]
                If Dolar > 0 Then 'Alterado para Fatura Proforma Converter Dolar para Real Ygor
                   NConjuntos![Valor Unitário] = ![Valor Unitário] * Dolar
                   NConjuntos![Valor Total] = ![Valor Total] * Dolar
@@ -1297,8 +1297,8 @@ Private Sub Gerar()
                   NConjuntos![Valor Unitário] = ![Valor Unitário]
                   NConjuntos![Valor Total] = ![Valor Total]
                End If
-               NConjuntos![Valor Do IPI] = ![Valor Do IPI]
-               NConjuntos![Valor Do ICMS] = ![Valor Do ICMS]
+               NConjuntos![Valor do IPI] = ![Valor do IPI]
+               NConjuntos![Valor Do Icms] = ![Valor Do Icms]
                NConjuntos![Alíquota Do ICMS] = ![Alíquota Do ICMS]
                NConjuntos![Percentual da Redução] = ![Percentual da Redução]
                NConjuntos![Valor da Base de Cálculo] = ![Valor da Base de Cálculo]
@@ -1328,21 +1328,21 @@ Private Sub Gerar()
       End If
       
       'Peças
-      TbAuxiliar "Peças do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OPecas
+      TbAuxiliar "Peças do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OPecas
       If OPecas.RecordCount > 0 Then
          Nota![Número da NFe] = UltimaEletronica!NFe + 1
          Nota![Ocultar Valor Unitário] = 1
          Do While Not OPecas.EOF
             PPecas.AddNew
             PPecas![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PPecas![Seqüência Do Produto] = OPecas![Seqüência Do Produto]
+            PPecas![Seqüência do Produto] = OPecas![Seqüência do Produto]
             PPecas!Quantidade = OPecas!Quantidade
             PPecas![Valor Unitário] = OPecas![Valor Unitário]
             PPecas![Valor Total] = OPecas![Valor Total]
-            PPecas![Valor Do IPI] = OPecas![Valor Do IPI]
+            PPecas![Valor do IPI] = OPecas![Valor do IPI]
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PPecas![Valor Do ICMS] = OPecas![Valor Do ICMS]
+               PPecas![Valor Do Icms] = OPecas![Valor Do Icms]
                PPecas![Alíquota Do ICMS] = OPecas![Alíquota Do ICMS]
                PPecas![Percentual da Redução] = OPecas![Percentual da Redução]
                PPecas![Valor da Base de Cálculo] = OPecas![Valor da Base de Cálculo]
@@ -1360,7 +1360,7 @@ Private Sub Gerar()
             PPecas![Valor Do Tributo] = OPecas![Valor Do Tributo]
             PPecas.Update
             PPecas.BookMark = .LastModified
-            UltimaMvto 1, OPecas![Seqüência Do Produto] 'Último Movimento
+            UltimaMvto 1, OPecas![Seqüência do Produto] 'Último Movimento
             OPecas.MoveNext
          Loop
          OPecas.MoveFirst
@@ -1377,10 +1377,10 @@ Private Sub Gerar()
             With OPecas
                NPecas.AddNew
                NPecas![Seqüência da Nota Fiscal] = Nota![Seqüência da Nota Fiscal]
-               NPecas![Seqüência Do Produto] = ![Seqüência Do Produto]
+               NPecas![Seqüência do Produto] = ![Seqüência do Produto]
                NPecas!Quantidade = !Quantidade
                NPecas![Valor Do Desconto] = OPecas![Valor Do Desconto]
-               NPecas![Valor do Frete] = OPecas![Valor do Frete]
+               NPecas![Valor Do Frete] = OPecas![Valor Do Frete]
                If Dolar > 0 Then ' Alterado para Fatura Proforma converter dolar em real Ygor
                   NPecas![Valor Unitário] = ![Valor Unitário] * Dolar
                   NPecas![Valor Total] = ![Valor Total] * Dolar
@@ -1388,8 +1388,8 @@ Private Sub Gerar()
                   NPecas![Valor Unitário] = ![Valor Unitário]
                   NPecas![Valor Total] = ![Valor Total]
                End If
-               NPecas![Valor Do IPI] = ![Valor Do IPI]
-               NPecas![Valor Do ICMS] = ![Valor Do ICMS]
+               NPecas![Valor do IPI] = ![Valor do IPI]
+               NPecas![Valor Do Icms] = ![Valor Do Icms]
                NPecas![Alíquota Do ICMS] = ![Alíquota Do ICMS]
                NPecas![Percentual da Redução] = ![Percentual da Redução]
                NPecas![Valor da Base de Cálculo] = ![Valor da Base de Cálculo]
@@ -1419,7 +1419,7 @@ Private Sub Gerar()
       End If
       
       'Parcelas
-      TbAuxiliar "Parcelas Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OParcelas
+      TbAuxiliar "Parcelas Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OParcelas
       If OParcelas.RecordCount > 0 Then
          Do While Not OParcelas.EOF
             PParcelas.AddNew
@@ -1584,9 +1584,9 @@ Private Function PegaNumeroOrcProforma() As Long
    Orcamento = GeraNotaFiscal
    
    If Orcamento Then
-      PegaNumeroOrcProforma = frmOrcament.vgTb![Seqüência Do Orçamento]
+      PegaNumeroOrcProforma = frmOrcament.vgTb![Seqüência do Orçamento]
    Else
-      PegaNumeroOrcProforma = FProforma.vgTb![Seqüência Do Orçamento]
+      PegaNumeroOrcProforma = FProforma.vgTb![Seqüência do Orçamento]
    End If
 
 End Function
@@ -1638,25 +1638,25 @@ Private Sub Gerar1(NFe As Long, Geral As Long)
  With Mvto
    .AddNew
      !Documento = NFe
-     ![Seqüência Do Orçamento] = OrcamentoTela
+     ![Seqüência do Orçamento] = OrcamentoTela
      ![Seqüência Do Geral] = Geral
-     ![Data Do Movimento] = Date
+     ![Data do Movimento] = Date
      ![Tipo Do Movimento] = 1
      ![Data da Alteração] = Date
      ![Hora da Alteração] = Time
      ![Usuário da Alteração] = vgPWUsuario
    .Update
    .BookMark = .LastModified
-   seqRegistro = ![Seqüência Do Movimento]
+   seqRegistro = ![Seqüência do Movimento]
  End With
  
  'Produtos
   Do While Not ProdutosNFe.EOF
-     Set ProdutoAux = vgDb.OpenRecordSet("SELECT Descrição Nome, [Tipo do Produto] From Produtos WHERE [Seqüência Do Produto] = " & ProdutosNFe![Seqüência Do Produto])
+     Set ProdutoAux = vgDb.OpenRecordSet("SELECT Descrição Nome, [Tipo do Produto] From Produtos WHERE [Seqüência Do Produto] = " & ProdutosNFe![Seqüência do Produto])
      With ProdutosMvto
        .AddNew
-         ![Seqüência Do Movimento] = seqRegistro
-         ![Seqüência Do Produto] = ProdutosNFe![Seqüência Do Produto]
+         ![Seqüência do Movimento] = seqRegistro
+         ![Seqüência do Produto] = ProdutosNFe![Seqüência do Produto]
          ![Quantidade] = ProdutosNFe!Quantidade
        .Update
        .BookMark = .LastModified
@@ -1665,11 +1665,11 @@ Private Sub Gerar1(NFe As Long, Geral As Long)
      
      With BxEstoque
       .AddNew
-        ![Seqüência Do Movimento] = seqRegistro
+        ![Seqüência do Movimento] = seqRegistro
         ![Tipo Do Movimento] = 1
-        ![Data Do Movimento] = Date
+        ![Data do Movimento] = Date
         !Documento = Left(NFe, 8)
-        ![Seqüência Do Produto] = ProdutosNFe![Seqüência Do Produto]
+        ![Seqüência do Produto] = ProdutosNFe![Seqüência do Produto]
         !Quantidade = ProdutosNFe!Quantidade
         ![Tipo Do Produto] = ProdutoAux![Tipo Do Produto]
         !Estoque = "P"
@@ -1685,9 +1685,9 @@ Private Sub Gerar1(NFe As Long, Geral As Long)
      Do While Not ConjuntosNota.EOF
         With ConjuntosMvto
           .AddNew
-            ![Seqüência Do Movimento] = seqRegistro
+            ![Seqüência do Movimento] = seqRegistro
           
-            ![Seqüência Do Conjunto] = ConjuntosNota![Seqüência Do Conjunto]
+            ![Seqüência do Conjunto] = ConjuntosNota![Seqüência do Conjunto]
             ![Quantidade] = ConjuntosNota!Quantidade
           .Update
           .BookMark = .LastModified
@@ -1696,11 +1696,11 @@ Private Sub Gerar1(NFe As Long, Geral As Long)
         
         With BxEstoque
           .AddNew
-            ![Seqüência Do Movimento] = seqRegistro
+            ![Seqüência do Movimento] = seqRegistro
             ![Tipo Do Movimento] = 1
-            ![Data Do Movimento] = Date
+            ![Data do Movimento] = Date
             !Documento = Left(NFe, 8)
-            ![Seqüência Do Conjunto] = ConjuntosNota![Seqüência Do Conjunto]
+            ![Seqüência do Conjunto] = ConjuntosNota![Seqüência do Conjunto]
             !Quantidade = ConjuntosNota!Quantidade
             ![Tipo Do Produto] = 0
             !Estoque = "C"
@@ -1738,7 +1738,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
    OrcamentoTela = txtCampo(0).Value
    Transporte = txtCampo(1).Value
-   Frete = txtCampo(2).Value
+   frete = txtCampo(2).Value
    Cobranca = txtCampo(8).Value
    Contra_Apresentacao = chkCampo(0).Value
    DAdicionais = txtCampo(9).Value
@@ -1777,10 +1777,12 @@ Public Function Executar(vgOq As String) As String
    vgOk = True                                    'se a validação esta OK
    vgNVez = 0                                     'porque não fez o processo/validacoes
    If vgOq = VALIDACOES Then
-      InicializaApelidos COM_TEXTBOX
-      vgOk = (Transporte > 0)
-      vgMsg$ = "Transportadora não pode ser Vazio!"
-      If Not vgOk Then txtCampo(1).SetFocus
+ InicializaApelidos COM_TEXTBOX
+        Dim freteCod As Integer
+        freteCod = Val(txtCampo(2).Value)              'garante codigo numerico (0,1,3,4,9)'
+        vgOk = (Transporte > 0) Or (freteCod = 3) Or (freteCod = 4) Or (freteCod = 9)
+        'vgMsg$ = "Transportadora não pode ser Vazio!"
+        If Not vgOk Then txtCampo(1).SetFocus
       If vgOk Then
          vgOk = (Cobranca > 0)
          vgMsg$ = "Cobrança não pode ser Vazio!"
@@ -1973,7 +1975,7 @@ Private Sub Form_Load()
    Set lblTitulo = Label(0)
    Set txtTransporte = txtCampo(1)
    Set txtFrete = txtCampo(2)
-   Set btnOk = botOk
+   Set BtnOk = botOk
    Set lblAjuste = Label(3)
    Set txtCobranca = txtCampo(8)
    Set txtDAdicionais = txtCampo(9)
@@ -2239,7 +2241,7 @@ Private Sub Form_Unload(Cancel As Integer)
    Set lblTitulo = Nothing
    Set txtTransporte = Nothing
    Set txtFrete = Nothing
-   Set btnOk = Nothing
+   Set BtnOk = Nothing
    Set lblAjuste = Nothing
    Set txtCobranca = Nothing
    Set txtDAdicionais = Nothing
