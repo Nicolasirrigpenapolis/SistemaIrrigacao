@@ -7935,11 +7935,15 @@ Private Sub TransmitirNFe(NFe As String, chaveNFe As String)
    certificado = Parametros_da_NFe![Certificado Digital]
    siglaWS = "SP"
    versao = "2.00"
-      licenca = "22997ab769e9dade323e6ff97dfb99c474210c66b2ae3930ffcc6d85e8b50399533b9762aa7a61fdccb6cba94e4d650ad00012c782e74b9c7e2f380e18f1517e"
+   licenca = "22997ab769e9dade323e6ff97dfb99c474210c66b2ae3930ffcc6d85e8b50399533b9762aa7a61fdccb6cba94e4d650ad00012c782e74b9c7e2f380e18f1517e"
       
+     
    For i = 1 To 5 'Vamos Tentar 5 vezes
-      NFeAssinada = objNFeUtil.EnviaNFe2G(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
-      
+      If indSinc = 1 Then
+         NFeAssinada = objNFeUtil.EnviaNFSincrono(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
+      Else
+         NFeAssinada = objNFeUtil.EnviaNFe2G(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
+      End If
   
       'Histórico
       With vgTb
@@ -11690,8 +11694,13 @@ Private Sub TransmitirNFe310(NFe As String, chaveNFe As String)
    Else
       indSinc = 0
    End If
-   For i = 1 To 5 'Vamos Tentar 5 vezes
-      NFeAssinada = objNFeUtil.EnviaNFe2G(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
+    For i = 1 To 5 'Vamos Tentar 5 vezes
+         If indSinc = 1 Then
+            NFeAssinada = objNFeUtil.EnviaNFSincrono(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
+         Else
+            NFeAssinada = objNFeUtil.EnviaNFe2G(siglaWS, NFe, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, proxy, usuario, senha, licenca)
+         End If
+      
    
    
       'Histórico
@@ -11964,6 +11973,8 @@ End Sub
        'Partilha 4.00
        Dim vBCFCPUFDest_Opc As Double
        Dim xmlDetPag As String
+       Dim indIntermed As Integer
+       indIntermed = 0
           
        'Bora lah Blaster
        On Error GoTo DeuErro
@@ -12182,7 +12193,10 @@ End If
        'Gera Grupo ide
         'ide = objNFeUtil.identificador300(ide_cUF, ide_cNF, ide_natOp, ide_indPag, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF,ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust)
          'ide = objNFeUtil.identificador400(ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust)
-          ide = objNFeUtil.identificador202006(ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust, indSinc)
+          
+          ide = objNFeUtil.identificador202006(ide_cUF, ide_cNF, ide_natOp, ide_indPag, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, indIntermed, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust, indSinc)
+
+
        '=====Grupo de Identificação do Emitente (Grupo B do Manual de Integração 4.01-NT2009/006 - página 113)=======
        '        <>&" são caracteres reservados do XML e devem ser evitados ou substituídos
        If Parametros_da_NFe!ambiente = 0 Then

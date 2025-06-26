@@ -46,12 +46,13 @@ Begin VB.Form frmConpedi
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   375
-         Index           =   3
-         Left            =   8970
-         TabIndex        =   9
-         Top             =   1740
-         Width           =   2130
+         Height          =   480
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -64,29 +65,7 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Atualiza Receita"
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Entregue ao Cliente"
+         Caption         =   "Receita"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -114,12 +93,33 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Entregue ao Cliente"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   2130
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -132,7 +132,7 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
+         Caption         =   "Atualiza Receita"
          CaptionOffset   =   50
       End
       Begin IRRIG.GCpMM mmCampo 
@@ -143,21 +143,13 @@ Begin VB.Form frmConpedi
          TabStop         =   0   'False
          Top             =   195
          Width           =   1545
-         _ExtentX        =   0
-         _ExtentY        =   0
-         Locked          =   -1  'True
-         ScrollBars      =   0   'False
-         Appearance      =   0
-         BorderStyle     =   0
-         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         captionfont     =   "CONPEDI.frx":0000
+         appearance      =   0
+         borderstyle     =   0
+         locked          =   -1  'True
+         scrollbars      =   0   'False
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -187,26 +179,17 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   3960
          Width           =   11325
-         _ExtentX        =   0
-         _ExtentY        =   0
-         EditBackColor   =   16777152
-         EditTextColor   =   -2147483640
-         CellTextColor   =   -2147483640
-         Stripes         =   -1  'True
-         StripesBackColor=   14737632
-         RowHeight       =   315
-         SaveGridBars    =   -1  'True
-         SaveGridStripes =   0   'False
-         Caption         =   "Produtos"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         caption         =   "Produtos"
+         font            =   "CONPEDI.frx":002E
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -288,26 +271,17 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   2160
          Width           =   11325
-         _ExtentX        =   0
-         _ExtentY        =   0
-         EditBackColor   =   16777152
-         EditTextColor   =   -2147483640
-         CellTextColor   =   -2147483640
-         Stripes         =   -1  'True
-         StripesBackColor=   14737632
-         RowHeight       =   315
-         SaveGridBars    =   -1  'True
-         SaveGridStripes =   0   'False
-         Caption         =   "Conjuntos"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         caption         =   "Conjuntos"
+         font            =   "CONPEDI.frx":0052
       End
       Begin VB.Label Label 
          AutoSize        =   -1  'True
@@ -524,7 +498,7 @@ Private Sub AtualizaPedidoGeral()
 
     ' Seleciona dos Itens Pendentes os campos com acentuação exata do frm
     Set TbSit = vgDb.OpenRecordSet( _
-        "SELECT [Sequencia do Item], [Sequencia do Produto], [Sequencia do Conjunto], [Situação] " & _
+        "SELECT [Sequencia do Item], [Seqüência do Produto], [Seqüência do Conjunto], [Situação] " & _
         "FROM [Itens Pendentes] " & _
         "WHERE [Seqüência do Orçamento] = " & Orcamento)
 
@@ -543,11 +517,11 @@ Private Sub AtualizaPedidoGeral()
               "SET [Situação] = '" & TbSit![Situação] & "' " & _
               "WHERE [Seqüência do Orçamento] = " & Orcamento & _
               "  AND [Sequencia do Item]     = " & TbSit![Sequencia do Item]
-        If Not IsNull(TbSit![Sequencia do Produto]) Then
-            Sql = Sql & " AND [Sequencia do Produto] = " & TbSit![Sequencia do Produto]
+        If Not IsNull(TbSit![Seqüência do Produto]) Then
+            Sql = Sql & " AND [Seqüência do Produto] = " & TbSit![Seqüência do Produto]
         End If
-        If Not IsNull(TbSit![Sequencia do Conjunto]) Then
-            Sql = Sql & " AND [Sequencia do Conjunto] = " & TbSit![Sequencia do Conjunto]
+        If Not IsNull(TbSit![Seqüência do Conjunto]) Then
+            Sql = Sql & " AND [Seqüência do Conjunto] = " & TbSit![Seqüência do Conjunto]
         End If
         vgDb.Execute Sql
 
