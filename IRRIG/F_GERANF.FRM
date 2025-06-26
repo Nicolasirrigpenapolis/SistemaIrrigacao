@@ -1040,6 +1040,11 @@ Private Sub Gerar()
       Nota![Data de Emissão] = Date
          Nota!Volume = Orcamento!Volumes
          Nota![Peso Bruto] = Orcamento![Peso Bruto]
+         Nota![Peso Líquido] = Orcamento![Peso Líquido]
+         Nota![Placa Do Veículo] = Orcamento![PlacaVeiculo]
+         Nota![UF Do Veículo] = Orcamento![UfPlaca]
+         Nota![Código da ANTT] = Orcamento![NumAntt]
+         
       Nota!FinNFe = 1
       Nota!Financiamento = Orcamento![Nao Movimentar Estoque]
       Nota!Refaturamento = Orcamento!Refaturamento
@@ -1766,6 +1771,7 @@ End Sub
 'executa processos/validacoes nos campos do formuário
 Public Function Executar(vgOq As String) As String
    Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
+   Dim modFrete As Integer
    On Error GoTo DeuErro                          'fica na espera de um erro...
    vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
    vgOk = True                                    'se a validação esta OK
