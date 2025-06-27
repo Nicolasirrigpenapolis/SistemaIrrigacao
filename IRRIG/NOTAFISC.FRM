@@ -5404,7 +5404,7 @@ Dim Valor_Total_do_Tributo As Double, Valor_Total_do_PIS As Double, Valor_Total_
 Dim Valor_Total_da_Base_ST As Double, Valor_Total_do_ICMS_ST As Double, Aliquota_do_ISS As Single
 Dim Reter_ISS As Boolean, Recibo_NFSe As String, Numero_do_Contrato As Long
 Dim Valor_do_Imposto_de_Renda As Double, Valor_Total_da_Importacao As Double, Conjunto_Avulso As Boolean
-Dim Descricao_Conjunto_Avulso As String, FinNFe As Integer, Novo_Layout As Boolean
+Dim Descricao_Conjunto_Avulso As String, finNFe As Integer, Novo_Layout As Boolean
 Dim Nota_de_Devolucao As Boolean, Chave_da_Devolucao As String, Outras_Despesas As Double
 Dim Chave_da_Devolucao_2 As String, Chave_da_Devolucao_3 As String, Cancelada_no_livro As Boolean
 Dim Refaturamento As Boolean, Nota_de_venda As Long, Financiamento As Boolean
@@ -5434,6 +5434,10 @@ Private MunTransAux As New GRecordSet, TemPropriedade As Boolean, PropriedadesGe
 Private PedidoAux As New GRecordSet, PaisAux As New GRecordSet, OrcamentoAux As New GRecordSet
 Public Tipo As Byte, Fechamento2 As Byte
 Dim indSinc As Long '0=síncrono, 1=assíncrono (padrão)
+
+
+
+
 
 'evento - quando uma opção for selecionada
 Private Sub opcPainel1Cp_Click(Index As Integer)
@@ -7330,7 +7334,7 @@ Private Sub PreValidaNFE()
 
    On Error GoTo DeuErro
    
-    If FinNFe <> 3 Then
+    If finNFe <> 3 Then
    If Trim(txtCp(24).Text) = "" Or Trim(txtCp(19).Text) = "" Or _
       Trim(txtCp(23).Text) = "" Or _
       Val(txtCp(24).Text) = 0 Or Val(txtCp(19).Text) = 0 Or Val(txtCp(23).Text) = 0 Then
@@ -7429,11 +7433,11 @@ End If
    i = 0 'Tamanho do Vetor
    ReDim Preserve Vector(0) As String
    If Vazio(Tb![Descrição da Natureza Operação]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Descrição da Natureza de Operação"
-   If FinNFe = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Informe a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
+   If finNFe = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Informe a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
    If Vazio(Tb![Razão Social]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Razão Social (Geral)"
-   If Vazio(Tb!frete) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Tipo do Frete (Nota Fiscal)"
+   If Vazio(Tb!frete) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Tipo do Frete (Nota Fiscal)"
    
-     If (Tb!frete = "Emitente" Or Tb!frete = "Destinatário") And Tb![Seqüência da Transportadora] = 0 And Vazio(Tb![Nome da Transportadora Avulsa]) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Transportadora (Nota Fiscal)"
+     If (Tb!frete = "Emitente" Or Tb!frete = "Destinatário") And Tb![Seqüência da Transportadora] = 0 And Vazio(Tb![Nome da Transportadora Avulsa]) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Transportadora (Nota Fiscal)"
    If Tb![Seqüência da Propriedade] > 0 Then
       If Not Mid(Tb![Código da Natureza de Operação], 1, 1) = "7" And Not Mid(Tb![Código da Natureza de Operação], 1, 1) = "3" Then
          If Vazio(Tb!CNPJ) And Tb!MPUF = "SP" Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "CNPJ (Propriedade)"
@@ -7470,7 +7474,7 @@ End If
    Do While Not Itens.EOF
       If Vazio(Itens!Descrição) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Descrição"
       If Vazio(Itens![Sigla da Unidade]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Unidade"
-      If Vazio(Itens!Ncm) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Classificação Fiscal (NCM)"
+      If Vazio(Itens!Ncm) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Classificação Fiscal (NCM)"
       Itens.MoveNext
    Loop
       
@@ -9104,7 +9108,7 @@ End Sub
        'DECLARAÇÃO DAS VARIÁVEIS
        '-------Variáveis Avulsas--------------
        Dim Item As New GRecordSet, Cliente As New GRecordSet, Transportadora As New GRecordSet, Propriedade As New GRecordSet
-       Dim NatOpe As New GRecordSet, Parcelas As New GRecordSet, objNFeUtil As NFe_Util_2G.Util, MunTransAvulsa As New GRecordSet
+       Dim NatOpe As New GRecordSet, Parcelas As New GRecordSet, MunTransAvulsa As New GRecordSet
        Dim Arq As Long, Usado As Boolean, Reducao As Boolean, Diferido As Boolean, NatOpe2 As New GRecordSet
        Dim SemValores As New GRecordSet, Paises As New GRecordSet, Declaração As New GRecordSet
        Dim Servicos As New GRecordSet, TotalTribISS As Double, TotDescISS As Double
@@ -9118,7 +9122,7 @@ End Sub
        Dim ide_dhEmi As String, ide_dhSaiEnt As String
        Dim ide_idDest  As Long, ide_indFinal As Long, ide_indPres As Long
        '======Chave da NFe===========
-       Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpemis, codigoseguranca As String
+       Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpEmis, codigoseguranca As String
        Dim msgResult As String, cNF As String, cDV As String
        '======Identificação do Emitente=======
        Dim emi_CPF As String, emi_xNome As String, emi_xFant As String, emi_xLgr As String
@@ -9229,7 +9233,8 @@ End Sub
        Dim vBCFCPUFDest_Opc As Double
        Dim xmlDetPag As String
        Dim indIntermed As Long
-       indIntermed = 0
+       Dim objNFeUtil As Object
+      ' indIntermed = 0
           
        'Bora lah Blaster
        
@@ -9348,7 +9353,7 @@ End If
        ide_cMunFG = "3537305"                    ' código do município do IBGE de ocorrência do FG do ICMS (Penápolis)
        ide_tpImp = 1                             ' orientação da impressão 1-retrato/2-paisagem
        ide_tpAmb = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)  ' ambiente de envio da NFe 1-produção / 2 - homologação
-       ide_finNFe = FinNFe ' finalidade da emissão da NF-e 1- NF-e normal 2 - NF-e Complementar - 3 NF-e de Ajuste - 4 Devolução / Retorno
+       ide_finNFe = finNFe ' finalidade da emissão da NF-e 1- NF-e normal 2 - NF-e Complementar - 3 NF-e de Ajuste - 4 Devolução / Retorno
        ide_tpEmis = 1                            ' forma de emissão da NF-e 1- normal, 2 - contingência FS, 3 - contingência SCAN, etc.
        ide_procEmi = 0                           ' identificação do processo de emissão da NF-e 0 - aplicação do contribuinte
        ide_verProc = "NFe_Util_2G"               ' identificação da versão do processo de emissão
@@ -9404,12 +9409,14 @@ End If
        modelo = Trim(Str(ide_mode))
        serie = Trim(Str(ide_serie))
        Numero = Trim(Str(ide_nNF))
-       tpemis = Trim(Str(ide_tpEmis))
+       tpEmis = Trim(Str(ide_tpEmis))
        codigoseguranca = "segredo"     ' informar uma expressão para garantir o sigilo da forma de cálculo do cNF
         
-        Set objNFeUtil = New NFe_Util_2G.Util
         
-       resultado = objNFeUtil.CriaChaveNFe2G(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpemis, codigoseguranca, msgResult, cNF, cDV, chaveNFe)
+        Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
+
+        
+       resultado = objNFeUtil.CriaChaveNFe2G(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpEmis, codigoseguranca, msgResult, cNF, cDV, chaveNFe)
         
        If resultado <> 5601 Then
           MsgBox "Ocorreu um Erro ao Gerar a Chave de Acesso " + msgResult, vbCritical, vaTitulo
@@ -9610,7 +9617,7 @@ End If
              'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
              Prod_cEAN = "SEM GTIN"   'Item![Código de Barras]         ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
              Prod_xProd = SuperTiraAcentos(Substitui(Trim(Item![Descrição Produto]), "&", "E", UM_A_UM)) ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
-             Prod_NCM = IIf(FinNFe = 3, "00", Item!Ncm)
+             Prod_NCM = IIf(finNFe = 3, "00", Item!Ncm)
              Prod_Cest = Item!Cest
              Prod_NVE_Opc = ""                           ' Campo Opcional
              Prod_ExTIPI = ""                            ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
@@ -9725,7 +9732,7 @@ End If
              icms_modBC = 3                              ' modalidade de determinação da BC = 3-valor da operação
              icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
              icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
-             icms_pICMS = IIf(Nota_Fiscal!FinNFe = 3, 100, Item![Alíquota Do ICMS])  ' alíquota do ICMS com tratamento para finalidade 3
+             icms_pICMS = IIf(Nota_Fiscal!finNFe = 3, 100, Item![Alíquota Do ICMS])  ' alíquota do ICMS com tratamento para finalidade 3
              icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
              icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
              icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
@@ -10760,7 +10767,7 @@ Continua:
           Pag = objNFeUtil.pagamento400(DetPag, vTroco_Opc)
        
         Else
-           If Nota_Fiscal!FinNFe = 4 Or Nota_Fiscal!FinNFe = 2 Or Nota_Fiscal!FinNFe = 3 Then
+           If Nota_Fiscal!finNFe = 4 Or Nota_Fiscal!finNFe = 2 Or Nota_Fiscal!finNFe = 3 Then
               tPag = "90": vPag = 0
            Else
               tPag = "99": vPag = Nota_Fiscal![Valor Total da Nota Fiscal]
@@ -10952,7 +10959,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_da_Importacao = txtCampo(57).Value
          Conjunto_Avulso = chkCampo(4).Value
          Descricao_Conjunto_Avulso = txtCampo(58).Value
-         FinNFe = txtCampo(59).Value
+         finNFe = txtCampo(59).Value
          Novo_Layout = chkCampo(9).Value
          Nota_de_Devolucao = chkCampo(6).Value
          Chave_da_Devolucao = txtCampo(60).Value
@@ -11043,7 +11050,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_da_Importacao = IIf(IsNull(vgTb![Valor Total da Importação]), 0, vgTb![Valor Total da Importação])
          Conjunto_Avulso = IIf(IsNull(vgTb![Conjunto Avulso]), 0, vgTb![Conjunto Avulso])
          Descricao_Conjunto_Avulso = IIf(IsNull(vgTb![Descrição Conjunto Avulso]), "", vgTb![Descrição Conjunto Avulso])
-         FinNFe = IIf(IsNull(vgTb!FinNFe), 0, vgTb!FinNFe)
+         finNFe = IIf(IsNull(vgTb!finNFe), 0, vgTb!finNFe)
          Novo_Layout = IIf(IsNull(vgTb![Novo Layout]), 0, vgTb![Novo Layout])
          Nota_de_Devolucao = IIf(IsNull(vgTb![Nota de Devolução]), 0, vgTb![Nota de Devolução])
          Chave_da_Devolucao = IIf(IsNull(vgTb![Chave da Devolução]), "", vgTb![Chave da Devolução])
@@ -11171,7 +11178,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       End If
       If vgOk Then
-         vgOk = (FinNFe > 0)
+         vgOk = (finNFe > 0)
          vgMsg$ = "Informar a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
          If Not vgOk Then vgColumn = 60
       End If
@@ -11741,7 +11748,7 @@ Private Sub ExecutaPreValidacao()
    Ok = ((Autorizado = 0) And Nota_Cancelada = 0 And Nota_Fiscal![Nota Fiscal Avulsa] And Sequencia_do_Movimento = 0)
    txtCampo(29).Locked = Not (vgAlterar And txtCampo(29).Editable)
    txtCampo(29).Enabled = Ok Or Not vgAlterar
-   Ok = (FinNFe = 2)
+   Ok = (finNFe = 2)
    chkCampo(1).Locked = Not (vgAlterar And chkCampo(1).Editable)
    chkCampo(1).Enabled = Ok Or Not vgAlterar
    Ok = (Contra_Apresentacao = 0)
@@ -11771,7 +11778,7 @@ Private Sub ExecutaPreValidacao()
    Ok = (Conjunto_Avulso = True)
    txtCampo(58).Locked = Not (vgAlterar And txtCampo(58).Editable)
    txtCampo(58).Enabled = Ok Or Not vgAlterar
-   Ok = (FinNFe = 4)
+   Ok = (finNFe = 4)
    chkCampo(6).Locked = Not (vgAlterar And chkCampo(6).Editable)
    chkCampo(6).Enabled = Ok Or Not vgAlterar
    Ok = (Nota_de_Devolucao = True)
