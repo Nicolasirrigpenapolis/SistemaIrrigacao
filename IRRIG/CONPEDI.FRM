@@ -143,13 +143,21 @@ Begin VB.Form frmConpedi
          TabStop         =   0   'False
          Top             =   195
          Width           =   1545
-         _extentx        =   0
-         _extenty        =   0
-         captionfont     =   "CONPEDI.frx":0000
-         appearance      =   0
-         borderstyle     =   0
-         locked          =   -1  'True
-         scrollbars      =   0   'False
+         _ExtentX        =   0
+         _ExtentY        =   0
+         Locked          =   -1  'True
+         ScrollBars      =   0   'False
+         Appearance      =   0
+         BorderStyle     =   0
+         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -179,17 +187,26 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   3960
          Width           =   11325
-         _extentx        =   0
-         _extenty        =   0
-         editbackcolor   =   16777152
-         edittextcolor   =   -2147483640
-         celltextcolor   =   -2147483640
-         stripes         =   -1  'True
-         stripesbackcolor=   14737632
-         rowheight       =   315
-         savegridbars    =   -1  'True
-         caption         =   "Produtos"
-         font            =   "CONPEDI.frx":002E
+         _ExtentX        =   0
+         _ExtentY        =   0
+         EditBackColor   =   16777152
+         EditTextColor   =   -2147483640
+         CellTextColor   =   -2147483640
+         Stripes         =   -1  'True
+         StripesBackColor=   14737632
+         RowHeight       =   315
+         SaveGridBars    =   -1  'True
+         SaveGridStripes =   0   'False
+         Caption         =   "Produtos"
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -271,17 +288,26 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   2160
          Width           =   11325
-         _extentx        =   0
-         _extenty        =   0
-         editbackcolor   =   16777152
-         edittextcolor   =   -2147483640
-         celltextcolor   =   -2147483640
-         stripes         =   -1  'True
-         stripesbackcolor=   14737632
-         rowheight       =   315
-         savegridbars    =   -1  'True
-         caption         =   "Conjuntos"
-         font            =   "CONPEDI.frx":0052
+         _ExtentX        =   0
+         _ExtentY        =   0
+         EditBackColor   =   16777152
+         EditTextColor   =   -2147483640
+         CellTextColor   =   -2147483640
+         Stripes         =   -1  'True
+         StripesBackColor=   14737632
+         RowHeight       =   315
+         SaveGridBars    =   -1  'True
+         SaveGridStripes =   0   'False
+         Caption         =   "Conjuntos"
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
       Begin VB.Label Label 
          AutoSize        =   -1  'True
@@ -492,7 +518,7 @@ End Sub
 
 
 Private Sub AtualizaPedidoGeral()
-    Dim TbSit As New GRecordSet, Sql As String
+    Dim TbSit As New GRecordSet, SQL As String
 
     Screen.MousePointer = vbHourglass
 
@@ -513,17 +539,17 @@ Private Sub AtualizaPedidoGeral()
 
     ' Atualiza um a um os status de Situação
     Do While Not TbSit.EOF
-        Sql = "UPDATE [Itens Pendentes] " & _
+        SQL = "UPDATE [Itens Pendentes] " & _
               "SET [Situação] = '" & TbSit![Situação] & "' " & _
               "WHERE [Seqüência do Orçamento] = " & Orcamento & _
               "  AND [Sequencia do Item]     = " & TbSit![Sequencia do Item]
         If Not IsNull(TbSit![Seqüência do Produto]) Then
-            Sql = Sql & " AND [Seqüência do Produto] = " & TbSit![Seqüência do Produto]
+            SQL = SQL & " AND [Seqüência do Produto] = " & TbSit![Seqüência do Produto]
         End If
         If Not IsNull(TbSit![Seqüência do Conjunto]) Then
-            Sql = Sql & " AND [Seqüência do Conjunto] = " & TbSit![Seqüência do Conjunto]
+            SQL = SQL & " AND [Seqüência do Conjunto] = " & TbSit![Seqüência do Conjunto]
         End If
-        vgDb.Execute Sql
+        vgDb.Execute SQL
 
         vgDb.Execute "UPDATE [Receita Primaria] " & _
                      "SET [Situação] = '" & TbSit![Situação] & "' " & _
@@ -661,7 +687,7 @@ End Function
 
 
 Private Sub MySQL()
- Dim Sql As String
+ Dim SQL As String
  Dim Tb1 As New GRecordSet
  Dim SeqItem As Integer
  Dim cnGas As ADODB.Connection, rsGas As ADODB.RecordSet
@@ -688,24 +714,24 @@ Private Sub MySQL()
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
  SeqItem = 1
- Sql = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
+ SQL = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
        "FROM( "
        
- Sql = Sql & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
+ SQL = SQL & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
              "Sum([Peças do Orçamento].[Valor Total]) As Total, [Peças do Orçamento].[Valor Unitário] " & _
              "FROM [Peças do Orçamento] left join Orçamento On [Peças do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Produtos On [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro1()
- Sql = Sql & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
- Sql = Sql & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
+ SQL = SQL & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
+ SQL = SQL & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
              "FROM [Conjuntos do Orçamento] Left Join Orçamento On [Conjuntos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Conjuntos On [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] WHERE " & Filtro2()
- Sql = Sql & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
- Sql = Sql & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
+ SQL = SQL & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
+ SQL = SQL & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
              "FROM [Produtos do Orçamento] left Join Orçamento On [Produtos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
              "Left Join Produtos On [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro3()
- Sql = Sql & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
+ SQL = SQL & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
  
- rsGas.Open Sql, cnGas, adOpenStatic, adLockPessimistic
+ rsGas.Open SQL, cnGas, adOpenStatic, adLockPessimistic
  
  
  Do While Not rsGas.EOF
