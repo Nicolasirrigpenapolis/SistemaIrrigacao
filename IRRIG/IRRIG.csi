@@ -1,6 +1,6 @@
 [History]
-1=#P0#=mb	#P1#=TransmitirNFe400	#P2#=IRRIG/frmNotaFisc/TransmitirNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627133734	#P7#=0	#P8#=38	.
-2=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627132453	#P7#=0	#P8#=253	.
+1=#P0#=mb	#P1#=TransmitirNFe400	#P2#=IRRIG/frmNotaFisc/TransmitirNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627133734	#P7#=0	#P8#=43	.
+2=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627140937	#P7#=0	#P8#=1695	.
 3=#P0#=mb	#P1#=TransmitirNFe500	#P2#=IRRIG/frmNotaFisc/TransmitirNFe500	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627131844	#P7#=0	#P8#=-5	.
 4=#P0#=mb	#P1#=RetornoNFe	#P2#=IRRIG/frmNotaFisc/RetornoNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627101252	#P7#=0	#P8#=164	.
 5=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmNotaFisc/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250627100538	#P7#=0	#P8#=1	.
