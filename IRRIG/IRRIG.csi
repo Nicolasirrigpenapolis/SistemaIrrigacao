@@ -1,14 +1,14 @@
 [History]
-1=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627080317	#P7#=0	#P8#=357	.
+1=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627080317	#P7#=0	#P8#=355	.
 2=#P0#=mb	#P1#=opcPainel1Cp_Click	#P2#=IRRIG/frmNotaFisc/opcPainel1Cp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250626225200	#P7#=0	#P8#=8	.
 3=#P0#=mb	#P1#=InicializaApelidos	#P2#=IRRIG/frmNotaFisc/InicializaApelidos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626224924	#P7#=0	#P8#=-2	.
 4=#P0#=mb	#P1#=RetornoNFe310	#P2#=IRRIG/frmNotaFisc/RetornoNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626210254	#P7#=0	#P8#=218	.
 5=#P0#=mb	#P1#=TransmitirNFe500	#P2#=IRRIG/frmNotaFisc/TransmitirNFe500	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626201548	#P7#=0	#P8#=10	.
 6=#P0#=mb	#P1#=GeraNota	#P2#=IRRIG/frmNotaFisc/GeraNota	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626192638	#P7#=0	#P8#=0	.
 7=#P0#=mb	#P1#=AbreOrigem	#P2#=IRRIG/frmNotaFisc/AbreOrigem	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626184655	#P7#=0	#P8#=-3	.
-8=#P0#=mb	#P1#=AcaoPopAmbiente	#P2#=IRRIG/frmNotaFisc/AcaoPopAmbiente	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626161535	#P7#=0	#P8#=38	.
+8=#P0#=mb	#P1#=AcaoPopAmbiente	#P2#=IRRIG/frmNotaFisc/AcaoPopAmbiente	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626161535	#P7#=0	#P8#=36	.
 9=#P0#=mb	#P1#=UltimoVencimento	#P2#=IRRIG/frmNotaFisc/UltimoVencimento	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626161517	#P7#=0	#P8#=24	.
-10=#P0#=mb	#P1#=RetornoNFe	#P2#=IRRIG/frmNotaFisc/RetornoNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626161403	#P7#=0	#P8#=18	.
+10=#P0#=mb	#P1#=RetornoNFe	#P2#=IRRIG/frmNotaFisc/RetornoNFe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250627085221	#P7#=0	#P8#=-3	.
 11=#P0#=mb	#P1#=AtualizaPedidoGeral	#P2#=IRRIG/frmConpedi/AtualizaPedidoGeral	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626140618	#P7#=0	#P8#=40	.
 12=#P0#=mb	#P1#=Filtro3	#P2#=IRRIG/frmConpedi/Filtro3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626140606	#P7#=0	#P8#=5	.
 13=#P0#=mb	#P1#=MostraItem	#P2#=IRRIG/frmConpedi/MostraItem	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250626140601	#P7#=0	#P8#=-395	.
