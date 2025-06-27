@@ -433,168 +433,168 @@ Begin VB.Form frmNotaFisc
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Label(10)"
-         Tab(1).Control(1)=   "Grid(0)"
+         Tab(1).Control(0)=   "Grid(0)"
+         Tab(1).Control(1)=   "Label(10)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(13)"
-         Tab(2).Control(1)=   "Grid(1)"
+         Tab(2).Control(0)=   "Grid(1)"
+         Tab(2).Control(1)=   "Label(13)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "txtCp(58)"
-         Tab(3).Control(1)=   "ChkCp(4)"
-         Tab(3).Control(1).Enabled=   0   'False
-         Tab(3).Control(2)=   "Botao(7)"
-         Tab(3).Control(3)=   "txtCp(49)"
-         Tab(3).Control(4)=   "bottxtCampo49(2)"
+         Tab(3).Control(0)=   "Grid(2)"
+         Tab(3).Control(1)=   "Label(11)"
+         Tab(3).Control(2)=   "Label(53)"
+         Tab(3).Control(3)=   "labFdo49"
+         Tab(3).Control(4)=   "bottxtCampo49(1)"
          Tab(3).Control(4).Enabled=   0   'False
-         Tab(3).Control(5)=   "bottxtCampo49(1)"
+         Tab(3).Control(5)=   "bottxtCampo49(2)"
          Tab(3).Control(5).Enabled=   0   'False
-         Tab(3).Control(6)=   "labFdo49"
-         Tab(3).Control(7)=   "Label(53)"
-         Tab(3).Control(8)=   "Label(11)"
-         Tab(3).Control(9)=   "Grid(2)"
+         Tab(3).Control(6)=   "txtCp(49)"
+         Tab(3).Control(7)=   "Botao(7)"
+         Tab(3).Control(8)=   "ChkCp(4)"
+         Tab(3).Control(8).Enabled=   0   'False
+         Tab(3).Control(9)=   "txtCp(58)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Label(12)"
-         Tab(4).Control(1)=   "Grid(3)"
+         Tab(4).Control(0)=   "Grid(3)"
+         Tab(4).Control(1)=   "Label(12)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Label(66)"
-         Tab(5).Control(1)=   "Label(64)"
-         Tab(5).Control(2)=   "Label(63)"
-         Tab(5).Control(3)=   "Formato(2)"
-         Tab(5).Control(4)=   "Label(62)"
-         Tab(5).Control(5)=   "Formato(1)"
-         Tab(5).Control(6)=   "Label(61)"
-         Tab(5).Control(7)=   "Formato(0)"
-         Tab(5).Control(8)=   "Label(60)"
-         Tab(5).Control(9)=   "Label(57)"
-         Tab(5).Control(10)=   "Label(56)"
-         Tab(5).Control(11)=   "Label(30)"
-         Tab(5).Control(12)=   "Label(29)"
-         Tab(5).Control(13)=   "Label(28)"
-         Tab(5).Control(14)=   "Label(27)"
-         Tab(5).Control(15)=   "Label(26)"
-         Tab(5).Control(16)=   "Label(25)"
-         Tab(5).Control(17)=   "Label(24)"
-         Tab(5).Control(18)=   "Label(23)"
-         Tab(5).Control(19)=   "Label(22)"
-         Tab(5).Control(20)=   "Label(21)"
-         Tab(5).Control(21)=   "Label(20)"
-         Tab(5).Control(22)=   "Label(19)"
-         Tab(5).Control(23)=   "Label(18)"
-         Tab(5).Control(24)=   "Label(17)"
-         Tab(5).Control(25)=   "Label(16)"
-         Tab(5).Control(26)=   "Linha(2)"
-         Tab(5).Control(27)=   "Label(15)"
-         Tab(5).Control(28)=   "Label(14)"
-         Tab(5).Control(29)=   "Label(9)"
-         Tab(5).Control(30)=   "labFdo29"
-         Tab(5).Control(31)=   "labFdo28"
-         Tab(5).Control(32)=   "labFdo27"
-         Tab(5).Control(33)=   "labFdo18"
-         Tab(5).Control(34)=   "Label(4)"
+         Tab(5).Control(0)=   "Botao(6)"
+         Tab(5).Control(1)=   "bottxtCampo0(0)"
+         Tab(5).Control(1).Enabled=   0   'False
+         Tab(5).Control(2)=   "txtCp(0)"
+         Tab(5).Control(3)=   "bottxtCampo1(0)"
+         Tab(5).Control(3).Enabled=   0   'False
+         Tab(5).Control(4)=   "txtCp(1)"
+         Tab(5).Control(5)=   "bottxtCampo18(0)"
+         Tab(5).Control(5).Enabled=   0   'False
+         Tab(5).Control(6)=   "txtCp(18)"
+         Tab(5).Control(7)=   "bottxtCampo27(0)"
+         Tab(5).Control(7).Enabled=   0   'False
+         Tab(5).Control(8)=   "txtCp(27)"
+         Tab(5).Control(9)=   "bottxtCampo28(2)"
+         Tab(5).Control(9).Enabled=   0   'False
+         Tab(5).Control(10)=   "txtCp(28)"
+         Tab(5).Control(11)=   "bottxtCampo29(1)"
+         Tab(5).Control(11).Enabled=   0   'False
+         Tab(5).Control(12)=   "bottxtCampo29(2)"
+         Tab(5).Control(12).Enabled=   0   'False
+         Tab(5).Control(13)=   "txtCp(29)"
+         Tab(5).Control(14)=   "ChkCp(0)"
+         Tab(5).Control(14).Enabled=   0   'False
+         Tab(5).Control(15)=   "Grid(4)"
+         Tab(5).Control(16)=   "txtCp(36)"
+         Tab(5).Control(16).Enabled=   0   'False
+         Tab(5).Control(17)=   "txtCp(37)"
+         Tab(5).Control(17).Enabled=   0   'False
+         Tab(5).Control(18)=   "txtCp(38)"
+         Tab(5).Control(18).Enabled=   0   'False
+         Tab(5).Control(19)=   "txtCp(39)"
+         Tab(5).Control(19).Enabled=   0   'False
+         Tab(5).Control(20)=   "txtCp(40)"
+         Tab(5).Control(20).Enabled=   0   'False
+         Tab(5).Control(21)=   "txtCp(41)"
+         Tab(5).Control(21).Enabled=   0   'False
+         Tab(5).Control(22)=   "txtCp(42)"
+         Tab(5).Control(22).Enabled=   0   'False
+         Tab(5).Control(23)=   "txtCp(43)"
+         Tab(5).Control(23).Enabled=   0   'False
+         Tab(5).Control(24)=   "txtCp(44)"
+         Tab(5).Control(24).Enabled=   0   'False
+         Tab(5).Control(25)=   "txtCp(45)"
+         Tab(5).Control(25).Enabled=   0   'False
+         Tab(5).Control(26)=   "txtCp(46)"
+         Tab(5).Control(26).Enabled=   0   'False
+         Tab(5).Control(27)=   "txtCp(47)"
+         Tab(5).Control(27).Enabled=   0   'False
+         Tab(5).Control(28)=   "txtCp(48)"
+         Tab(5).Control(28).Enabled=   0   'False
+         Tab(5).Control(29)=   "Painel(2)"
+         Tab(5).Control(30)=   "txtCp(52)"
+         Tab(5).Control(30).Enabled=   0   'False
+         Tab(5).Control(31)=   "txtCp(53)"
+         Tab(5).Control(31).Enabled=   0   'False
+         Tab(5).Control(32)=   "txtCp(57)"
+         Tab(5).Control(32).Enabled=   0   'False
+         Tab(5).Control(33)=   "labFdo0"
+         Tab(5).Control(34)=   "Label(0)"
          Tab(5).Control(35)=   "labFdo1"
-         Tab(5).Control(36)=   "Label(0)"
-         Tab(5).Control(37)=   "labFdo0"
-         Tab(5).Control(38)=   "txtCp(57)"
-         Tab(5).Control(38).Enabled=   0   'False
-         Tab(5).Control(39)=   "txtCp(53)"
-         Tab(5).Control(39).Enabled=   0   'False
-         Tab(5).Control(40)=   "txtCp(52)"
-         Tab(5).Control(40).Enabled=   0   'False
-         Tab(5).Control(41)=   "Painel(2)"
-         Tab(5).Control(42)=   "txtCp(48)"
-         Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "txtCp(47)"
-         Tab(5).Control(43).Enabled=   0   'False
-         Tab(5).Control(44)=   "txtCp(46)"
-         Tab(5).Control(44).Enabled=   0   'False
-         Tab(5).Control(45)=   "txtCp(45)"
-         Tab(5).Control(45).Enabled=   0   'False
-         Tab(5).Control(46)=   "txtCp(44)"
-         Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "txtCp(43)"
-         Tab(5).Control(47).Enabled=   0   'False
-         Tab(5).Control(48)=   "txtCp(42)"
-         Tab(5).Control(48).Enabled=   0   'False
-         Tab(5).Control(49)=   "txtCp(41)"
-         Tab(5).Control(49).Enabled=   0   'False
-         Tab(5).Control(50)=   "txtCp(40)"
-         Tab(5).Control(50).Enabled=   0   'False
-         Tab(5).Control(51)=   "txtCp(39)"
-         Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "txtCp(38)"
-         Tab(5).Control(52).Enabled=   0   'False
-         Tab(5).Control(53)=   "txtCp(37)"
-         Tab(5).Control(53).Enabled=   0   'False
-         Tab(5).Control(54)=   "txtCp(36)"
-         Tab(5).Control(54).Enabled=   0   'False
-         Tab(5).Control(55)=   "Grid(4)"
-         Tab(5).Control(56)=   "ChkCp(0)"
-         Tab(5).Control(56).Enabled=   0   'False
-         Tab(5).Control(57)=   "txtCp(29)"
-         Tab(5).Control(58)=   "bottxtCampo29(2)"
-         Tab(5).Control(58).Enabled=   0   'False
-         Tab(5).Control(59)=   "bottxtCampo29(1)"
-         Tab(5).Control(59).Enabled=   0   'False
-         Tab(5).Control(60)=   "txtCp(28)"
-         Tab(5).Control(61)=   "bottxtCampo28(2)"
-         Tab(5).Control(61).Enabled=   0   'False
-         Tab(5).Control(62)=   "txtCp(27)"
-         Tab(5).Control(63)=   "bottxtCampo27(0)"
-         Tab(5).Control(63).Enabled=   0   'False
-         Tab(5).Control(64)=   "txtCp(18)"
-         Tab(5).Control(65)=   "bottxtCampo18(0)"
-         Tab(5).Control(65).Enabled=   0   'False
-         Tab(5).Control(66)=   "txtCp(1)"
-         Tab(5).Control(67)=   "bottxtCampo1(0)"
-         Tab(5).Control(67).Enabled=   0   'False
-         Tab(5).Control(68)=   "txtCp(0)"
-         Tab(5).Control(69)=   "bottxtCampo0(0)"
-         Tab(5).Control(69).Enabled=   0   'False
-         Tab(5).Control(70)=   "Botao(6)"
+         Tab(5).Control(36)=   "Label(4)"
+         Tab(5).Control(37)=   "labFdo18"
+         Tab(5).Control(38)=   "labFdo27"
+         Tab(5).Control(39)=   "labFdo28"
+         Tab(5).Control(40)=   "labFdo29"
+         Tab(5).Control(41)=   "Label(9)"
+         Tab(5).Control(42)=   "Label(14)"
+         Tab(5).Control(43)=   "Label(15)"
+         Tab(5).Control(44)=   "Linha(2)"
+         Tab(5).Control(45)=   "Label(16)"
+         Tab(5).Control(46)=   "Label(17)"
+         Tab(5).Control(47)=   "Label(18)"
+         Tab(5).Control(48)=   "Label(19)"
+         Tab(5).Control(49)=   "Label(20)"
+         Tab(5).Control(50)=   "Label(21)"
+         Tab(5).Control(51)=   "Label(22)"
+         Tab(5).Control(52)=   "Label(23)"
+         Tab(5).Control(53)=   "Label(24)"
+         Tab(5).Control(54)=   "Label(25)"
+         Tab(5).Control(55)=   "Label(26)"
+         Tab(5).Control(56)=   "Label(27)"
+         Tab(5).Control(57)=   "Label(28)"
+         Tab(5).Control(58)=   "Label(29)"
+         Tab(5).Control(59)=   "Label(30)"
+         Tab(5).Control(60)=   "Label(56)"
+         Tab(5).Control(61)=   "Label(57)"
+         Tab(5).Control(62)=   "Label(60)"
+         Tab(5).Control(63)=   "Formato(0)"
+         Tab(5).Control(64)=   "Label(61)"
+         Tab(5).Control(65)=   "Formato(1)"
+         Tab(5).Control(66)=   "Label(62)"
+         Tab(5).Control(67)=   "Formato(2)"
+         Tab(5).Control(68)=   "Label(63)"
+         Tab(5).Control(69)=   "Label(64)"
+         Tab(5).Control(70)=   "Label(66)"
          Tab(5).ControlCount=   71
          TabCaption(6)   =   "&7 - Dados NFe/NFSe"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "txtCp(63)"
-         Tab(6).Control(1)=   "Label(71)"
-         Tab(6).Control(2)=   "txtCp(62)"
-         Tab(6).Control(3)=   "Label(70)"
-         Tab(6).Control(4)=   "txtCp(60)"
-         Tab(6).Control(5)=   "Label(68)"
-         Tab(6).Control(6)=   "ChkCp(6)"
-         Tab(6).Control(7)=   "txtCp(55)"
+         Tab(6).Control(0)=   "ChkCp(1)"
+         Tab(6).Control(1)=   "labFdo30"
+         Tab(6).Control(2)=   "bottxtCampo30(1)"
+         Tab(6).Control(2).Enabled=   0   'False
+         Tab(6).Control(3)=   "bottxtCampo30(2)"
+         Tab(6).Control(3).Enabled=   0   'False
+         Tab(6).Control(4)=   "txtCp(30)"
+         Tab(6).Control(5)=   "txtCp(31)"
+         Tab(6).Control(5).Enabled=   0   'False
+         Tab(6).Control(6)=   "txtCp(32)"
+         Tab(6).Control(6).Enabled=   0   'False
+         Tab(6).Control(7)=   "txtCp(33)"
          Tab(6).Control(7).Enabled=   0   'False
-         Tab(6).Control(8)=   "Label(59)"
-         Tab(6).Control(9)=   "Label(51)"
-         Tab(6).Control(10)=   "Label(50)"
-         Tab(6).Control(11)=   "Label(49)"
+         Tab(6).Control(8)=   "txtCp(34)"
+         Tab(6).Control(8).Enabled=   0   'False
+         Tab(6).Control(9)=   "txtCp(35)"
+         Tab(6).Control(9).Enabled=   0   'False
+         Tab(6).Control(10)=   "Label(46)"
+         Tab(6).Control(11)=   "Label(47)"
          Tab(6).Control(12)=   "Label(48)"
-         Tab(6).Control(13)=   "Label(47)"
-         Tab(6).Control(14)=   "Label(46)"
-         Tab(6).Control(15)=   "txtCp(35)"
-         Tab(6).Control(15).Enabled=   0   'False
-         Tab(6).Control(16)=   "txtCp(34)"
-         Tab(6).Control(16).Enabled=   0   'False
-         Tab(6).Control(17)=   "txtCp(33)"
+         Tab(6).Control(13)=   "Label(49)"
+         Tab(6).Control(14)=   "Label(50)"
+         Tab(6).Control(15)=   "Label(51)"
+         Tab(6).Control(16)=   "Label(59)"
+         Tab(6).Control(17)=   "txtCp(55)"
          Tab(6).Control(17).Enabled=   0   'False
-         Tab(6).Control(18)=   "txtCp(32)"
-         Tab(6).Control(18).Enabled=   0   'False
-         Tab(6).Control(19)=   "txtCp(31)"
-         Tab(6).Control(19).Enabled=   0   'False
-         Tab(6).Control(20)=   "txtCp(30)"
-         Tab(6).Control(21)=   "bottxtCampo30(2)"
-         Tab(6).Control(21).Enabled=   0   'False
-         Tab(6).Control(22)=   "bottxtCampo30(1)"
-         Tab(6).Control(22).Enabled=   0   'False
-         Tab(6).Control(23)=   "labFdo30"
-         Tab(6).Control(24)=   "ChkCp(1)"
+         Tab(6).Control(18)=   "ChkCp(6)"
+         Tab(6).Control(19)=   "Label(68)"
+         Tab(6).Control(20)=   "txtCp(60)"
+         Tab(6).Control(21)=   "Label(70)"
+         Tab(6).Control(22)=   "txtCp(62)"
+         Tab(6).Control(23)=   "Label(71)"
+         Tab(6).Control(24)=   "txtCp(63)"
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
@@ -8048,6 +8048,133 @@ Private Function VerificaDebitos() As Boolean
 End Function
 
 
+Public Sub TransmitirNFe400(NFeXml As String, chaveNFe As String)
+    Dim util          As New NFe_Util_2G.util
+    Dim msgDados      As String
+    Dim msgRetWS      As String
+    Dim msgResultado  As String
+    Dim siglaWS       As String
+    Dim certificado   As String
+    Dim licenca       As String
+    Dim NFeAssinada   As String
+    Dim nroRecibo     As String
+    Dim cStat         As Long
+    Dim versao        As String
+    Dim dhRecibo      As String
+    Dim proxy         As String
+    Dim usuario       As String
+    Dim senha         As String
+    Dim tpAmbiente    As Long
+    Dim i             As Integer
+    Dim Arq           As Integer
+
+    On Error GoTo DeuErro
+
+    '--- Preparação da UI ---
+    Screen.MousePointer = vbHourglass
+    lblProgresso.Caption = "Transmitindo NFe..."
+
+    '--- Carrega parâmetros ---
+    siglaWS = "SP"
+    certificado = Parametros_da_NFe![Certificado Digital]
+    licenca = Parametros_da_NFe![Licença]
+    versao = "4.00"
+    tpAmbiente = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)
+
+    '--- Até 5 tentativas ---
+    For i = 1 To 5
+        Err.Clear
+        On Error Resume Next
+        NFeAssinada = util.EnviaNFe2G( _
+            siglaWS, tpAmbiente, certificado, versao, NFeXml, _
+            msgDados, msgRetWS, cStat, msgResultado, _
+            nroRecibo, dhRecibo, proxy, usuario, senha, licenca)
+        If Err.Number <> 0 Then
+            MsgBox "Falha na chamada EnviaNFe2G:" & vbCrLf & _
+                   "Número: " & Err.Number & vbCrLf & _
+                   "Descrição: " & Err.Description & vbCrLf & _
+                   "Fonte: " & Err.Source, vbCritical, "Erro COM"
+            GoTo SaiDaSub
+        End If
+        On Error GoTo DeuErro
+
+        ' Atualiza observação na grade
+        With vgTb
+            .Edit
+            If Vazio(!Observação) Then
+                !Observação = "Tentativa " & i & " de envio"
+            Else
+                !Observação = !Observação & vbCrLf & "Tentativa " & i & " de envio"
+            End If
+            .Update
+            .BookMark = .LastModified
+        End With
+
+        If cStat <> 105 Then GoTo Continua
+    Next i
+
+    '--- 5x sem sucesso ---
+    MsgBox "NFe não enviada! Tente novamente mais tarde.", vbExclamation, "Atenção"
+    GoTo SaiDaSub
+
+Continua:
+    Select Case cStat
+        Case 103
+            '--- Sucesso ---
+            With Nota_Fiscal
+                .Edit
+                !Transmitido = True
+                ![Número do Recibo da NFe] = nroRecibo
+                ![Chave de Acesso da NFe] = chaveNFe
+                .Update
+                .BookMark = .LastModified
+            End With
+            MsgBox "Transmitido com sucesso!", vbInformation, "Atenção"
+
+            ' Grava XML ASSINADO
+            Arq = FreeFile
+            If tpAmbiente = 1 Then
+                Open Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As #Arq
+            Else
+                Open Parametros_da_NFe![Diretório 2 NFe Homologação] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As #Arq
+            End If
+            Print #Arq, NFeAssinada
+            Close #Arq
+
+        Case 5000 To 7003
+            MsgBox "Erro de WS:" & vbCrLf & msgResultado, vbCritical, "Atenção"
+        Case 108, 109
+            MsgBox msgResultado & vbCrLf & "Web Service de recepção problemático", vbCritical, "Atenção"
+        Case Else
+            MsgBox cStat & " - " & msgResultado, vbCritical, "Rejeição da Sefaz"
+    End Select
+
+SaiDaSub:
+    Screen.MousePointer = vbDefault
+    If tpAmbiente = 2 Then
+        lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
+    Else
+        lblProgresso.Caption = ""
+    End If
+    Set util = Nothing
+    Exit Sub
+
+DeuErro:
+    Dim det As String
+    det = "Erro em TransmitirNFe400" & vbCrLf & _
+          "Número: " & Err.Number & vbCrLf & _
+          "Descrição: " & Err.Description & vbCrLf & _
+          "Fonte: " & Err.Source
+    MsgBox det, vbCritical, "Atenção"
+    Resume SaiDaSub
+End Sub
+
+
+
+
+
 Public Sub TransmitirNFe500(NFe As String, chaveNFe As String)
     Dim msgDados As String, msgRetWS As String, msgResultado As String, siglaWS As String, certificado As String
     Dim licenca As String, NFeAssinada As String, nroRecibo As String, cStat As Long, versao As String, dhRecibo As String
@@ -9121,7 +9248,7 @@ End Sub
        'Campos Novos Identificação do Documento Layout 3.10
        Dim ide_dhEmi As String, ide_dhSaiEnt As String
        Dim ide_idDest  As Long, ide_indFinal As Long, ide_indPres As Long
-       Dim cMunFGIBS As String, tpNFDebito As String, tpNFCredito As String, gCompraGov As String, NFePagAntecipado As String
+     '  Dim cMunFGIBS As String, tpNFDebito As String, tpNFCredito As String, gCompraGov As String, NFePagAntecipado As String
        '======Chave da NFe===========
        Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpEmis, codigoseguranca As String
        Dim msgResult As String, cNF As String, cDV As String
@@ -9233,9 +9360,9 @@ End Sub
        'Partilha 4.00
        Dim vBCFCPUFDest_Opc As Double
        Dim xmlDetPag As String
-       Dim indIntermed As Long
+       
        Dim objNFeUtil As Object
-      ' indIntermed = 0
+      
           
        'Bora lah Blaster
        
@@ -9344,13 +9471,18 @@ End Sub
        ide_mode = 55                             ' modelo da nota fiscal eletronica
        ide_serie = 1                             ' série única = 0
         ide_nNF = Nota_Fiscal![Número da NFe]
-If Parametros_da_NFe![Horario de Verao] Then
-   ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-02:00"
-Else
-   ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-03:00"
-End If
-       'A IRRIGAÇÃO NW MANDA COM DATA E HORA DE SAÍDA
-       ide_tpNF = IIf(Nota_Fiscal![Tipo de Nota] = 0, 1, 0) ' Tipo de NF 0 = Entrada 1 = Saida
+        
+    If Parametros_da_NFe![Horario de Verao] Then
+       ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-02:00"
+       ide_dhSaiEnt = Format(Now, "yyyy-MM-ddThh:mm:ss") & "-02:00"
+    Else
+       ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-03:00"
+       ide_dhSaiEnt = Format(Now, "yyyy-MM-ddThh:mm:ss") & "-03:00"
+    End If
+
+    ' Tipo de NF: 0 = entrada, 1 = saída
+    ide_tpNF = IIf(Nota_Fiscal![Tipo de Nota] = 0, 1, 0)
+
        ide_cMunFG = "3537305"                    ' código do município do IBGE de ocorrência do FG do ICMS (Penápolis)
        ide_tpImp = 1                             ' orientação da impressão 1-retrato/2-paisagem
        ide_tpAmb = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)  ' ambiente de envio da NFe 1-produção / 2 - homologação
@@ -9361,15 +9493,6 @@ End If
        ide_dhCont = ""            ' data e hora de entrada em contingência - informar quanto tpEmis diferente de 1, informe #12:00:00 AM# para deixar vazio em VB
        ide_xJust = ""                            ' justificativa para emissão em contingência
        
-      cMunFGIBS = ""
-       tpNFDebito = ""
-       tpNFCredito = ""
-       gCompraGov = ""
-       NFePagAntecipado = ""
-      
-      
-      
-      
       
       'Campo Novo Layout 3.10
        If ide_finNFe = 2 Then
@@ -9464,8 +9587,14 @@ End If
           ide_NFref = ide_NFref + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 3])
        End If
 
-    ide = objNFeUtil.identificadorRTC(ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFref, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust, indIntermed, cMunFGIBS, tpNFDebito, tpNFCredito, gCompraGov, NFePagAntecipado)
+
    
+ide = objNFeUtil.identificador400( _
+    ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, _
+    ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, _
+    ide_NFref, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, _
+    ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, _
+    ide_verProc, ide_dhCont, ide_xJust)
 
 
 
@@ -10849,7 +10978,7 @@ End If
        End With
        
         
-       TransmitirNFe500 NFe, chaveNFe 'Transmitindo... Inicio dos Testes 05/12/2014 Prazo Final para Implantao 01/04/2015
+       TransmitirNFe400 NFe, chaveNFe 'Transmitindo... Inicio dos Testes 05/12/2014 Prazo Final para Implantao 01/04/2015
            
 DeuErro:
        If Err <> 0 Then
