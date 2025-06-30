@@ -5111,6 +5111,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "PlacaVeiculo"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5123,7 +5124,6 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   152
             Left            =   10560
-	    DataField       =   "PlacaVeiculo"
             MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
@@ -5131,6 +5131,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "UfPlaca"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5143,7 +5144,6 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   153
             Left            =   12240
-            DataField       =   "UfPlaca"
             MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
@@ -5151,6 +5151,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "NumAntt"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5165,7 +5166,6 @@ Begin VB.Form frmOrcament
             Left            =   13695
             MaxLength       =   254
             TabIndex        =   199
-            DataField       =   "NumAntt"
             Top             =   2700
             Width           =   1290
          End
@@ -9929,7 +9929,7 @@ Dim Fechamento As Integer, Valor_do_Fechamento As Double, Valor_Total_IPI_dos_Pr
 Dim Valor_Total_IPI_dos_Conjuntos As Double, Valor_Total_do_ICMS As Double, Valor_Total_dos_Produtos As Double
 Dim Valor_Total_dos_Conjuntos As Double, Valor_Total_de_Produtos_Usados As Double, Valor_Total_Conjuntos_Usados As Double
 Dim Valor_Total_dos_Servicos As Double, Valor_Total_do_Orcamento As Double, Nome_Cliente As String
-Dim Endereco As String, CEP As String, Telefone As String
+Dim endereco As String, CEP As String, Telefone As String
 Dim Fax As String, Email As String, Sequencia_do_Vendedor As Long
 Dim Sequencia_do_Pedido As Long, Tipo As Integer, CPF_e_CNPJ As String
 Dim RG_e_IE As String, Forma_de_Pagamento As String, Ocultar_Valor_Unitario As Boolean
@@ -10052,7 +10052,7 @@ Private Sub opcPainel2Cp_Click(Index As Integer)
 End Sub
 
 Public Sub RepositionOrcamento()
-   Dim Col() As Variant
+   Dim col() As Variant
 
    On Error Resume Next
    
@@ -10098,11 +10098,11 @@ Public Sub RepositionOrcamento()
    
    
    'Quando navega pelos registro não respeitava as condições dos grid
-   ExecutaGrid 0, Col(), CONDICOES_ESPECIAIS
-   ExecutaGrid 1, Col(), CONDICOES_ESPECIAIS
-   ExecutaGrid 2, Col(), CONDICOES_ESPECIAIS
-   ExecutaGrid 3, Col(), CONDICOES_ESPECIAIS
-   ExecutaGrid 4, Col(), CONDICOES_ESPECIAIS
+   ExecutaGrid 0, col(), CONDICOES_ESPECIAIS
+   ExecutaGrid 1, col(), CONDICOES_ESPECIAIS
+   ExecutaGrid 2, col(), CONDICOES_ESPECIAIS
+   ExecutaGrid 3, col(), CONDICOES_ESPECIAIS
+   ExecutaGrid 4, col(), CONDICOES_ESPECIAIS
    
    'Alteração
    lblAlteracao.Caption = Orcamento![Usuário da Alteração] & " " & Orcamento![Data da Alteração] & " " & Orcamento![Hora da Alteração]
@@ -10852,7 +10852,7 @@ Private Sub ComandosProdutos(KeyAscii As Integer, Bc_pis As Double, Valor_do_Tri
    On Error GoTo DeuErro
    
    With GrdProdutos
-      Select Case .ColumnField(.Col)
+      Select Case .ColumnField(.col)
       Case "Quantidade"
       Set SemiPronto = vgDb.OpenRecordSet("SELECT [Seqüência Do Grupo Produto] Grupo, [Tipo do Produto] Tipo From Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
        If SemiPronto.RecordCount > 0 And Ordem_Interna Then
@@ -10869,9 +10869,9 @@ Private Sub ComandosProdutos(KeyAscii As Integer, Bc_pis As Double, Valor_do_Tri
     
    If KeyAscii = vbKeyF12 Then
       With GrdProdutos
-         Select Case .ColumnField(.Col)
+         Select Case .ColumnField(.col)
             Case "Seqüência do Produto"
-               seqRegistro = .ColumnValue(.Row + 1, .Col)
+               seqRegistro = .ColumnValue(.Row + 1, .col)
                frmProdutos.Show
          End Select
       End With
@@ -10894,9 +10894,9 @@ Private Sub ComandosServicos(KeyAscii As Integer, Sequencia_do_Orcamento As Long
       
    If KeyAscii = vbKeyF12 Then
       With grdServicos
-         Select Case .ColumnField(.Col)
+         Select Case .ColumnField(.col)
             Case "Seqüência do Serviço"
-               seqRegistro = .ColumnValue(.Row + 1, .Col)
+               seqRegistro = .ColumnValue(.Row + 1, .col)
                frmServicos.Show
          End Select
       End With
@@ -10923,9 +10923,9 @@ Private Sub ComandosConjuntos(KeyAscii As Integer, Sequencia_do_Orcamento As Lon
       
    If KeyAscii = vbKeyF12 Then
       With grdConjuntos
-         Select Case .ColumnField(.Col)
+         Select Case .ColumnField(.col)
             Case "Seqüência do Conjunto"
-               seqRegistro = .ColumnValue(.Row + 1, .Col)
+               seqRegistro = .ColumnValue(.Row + 1, .col)
                frmConjunto.Show
          End Select
       End With
@@ -10957,7 +10957,7 @@ Private Sub ComandosPecas(KeyAscii As Integer, Valor_do_Tributo As Double, Seque
    Set SemiPronto = vgDb.OpenRecordSet("SELECT [Seqüência Do Grupo Produto] Grupo, [Tipo do Produto] Tipo From Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
     
    With grdPecas
-   Select Case .ColumnField(.Col)
+   Select Case .ColumnField(.col)
    Case "Quantidade"
    If SemiPronto.RecordCount > 0 Then
        If SemiPronto!Grupo = 18 Or SemiPronto!Tipo = 6 Then
@@ -10971,9 +10971,9 @@ Private Sub ComandosPecas(KeyAscii As Integer, Valor_do_Tributo As Double, Seque
    
    If KeyAscii = vbKeyF12 Then
       With grdPecas
-         Select Case .ColumnField(.Col)
+         Select Case .ColumnField(.col)
             Case "Seqüência do Produto"
-               seqRegistro = .ColumnValue(.Row + 1, .Col)
+               seqRegistro = .ColumnValue(.Row + 1, .col)
                frmProdutos.Show
          End Select
       End With
@@ -14627,7 +14627,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_dos_Servicos = txtCampo(43).Value
          Valor_Total_do_Orcamento = txtCampo(36).Value
          Nome_Cliente = txtCampo(18).Value
-         Endereco = txtCampo(24).Value
+         endereco = txtCampo(24).Value
          CEP = txtCampo(8).Value
          Telefone = txtCampo(22).Value
          Fax = txtCampo(12).Value
@@ -14760,7 +14760,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_dos_Servicos = IIf(IsNull(vgTb![Valor Total dos Serviços]), 0, vgTb![Valor Total dos Serviços])
          Valor_Total_do_Orcamento = IIf(IsNull(vgTb![Valor Total do Orçamento]), 0, vgTb![Valor Total do Orçamento])
          Nome_Cliente = IIf(IsNull(vgTb![Nome Cliente]), "", vgTb![Nome Cliente])
-         Endereco = IIf(IsNull(vgTb!Endereço), "", vgTb!Endereço)
+         endereco = IIf(IsNull(vgTb!Endereço), "", vgTb!Endereço)
          CEP = IIf(IsNull(vgTb!CEP), "", vgTb!CEP)
          Telefone = IIf(IsNull(vgTb!Telefone), "", vgTb!Telefone)
          Fax = IIf(IsNull(vgTb!Fax), "", vgTb!Fax)
@@ -17122,7 +17122,7 @@ Public Sub DefineControles()
    txtCampo(156).OrderFields = "Razão Social; Seqüência do Geral"
    txtCampo(156).Relation = ""
    txtCampo(156).Source = "Geral"
-   txtCampo(156).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(156).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(156).DataField), txtCampo(156)
 
    Set txtCampo(157).CtPri = txtCp(157)
@@ -17139,7 +17139,7 @@ Public Sub DefineControles()
    txtCampo(157).OrderFields = "Nome da Propriedade; Seqüência da Propriedade"
    txtCampo(157).Relation = ""
    txtCampo(157).Source = "Propriedades"
-   txtCampo(157).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(157).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(157).DataField), txtCampo(157)
 
    Set txtCampo(18).CtPri = txtCp(18)
@@ -17261,7 +17261,7 @@ Public Sub DefineControles()
    txtCampo(17).OrderFields = "Descrição; Seqüência do Município"
    txtCampo(17).Relation = ""
    txtCampo(17).Source = "Municípios"
-   txtCampo(17).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(17).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(17).DataField), txtCampo(17)
 
    Set txtCampo(27).CtPri = txtCp(27)
@@ -17343,7 +17343,7 @@ Public Sub DefineControles()
    txtCampo(33).OrderFields = "Razão Social; Seqüência do Geral"
    txtCampo(33).Relation = ""
    txtCampo(33).Source = "Geral"
-   txtCampo(33).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(33).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(33).DataField), txtCampo(33)
 
    Set txtCampo(55).CtPri = txtCp(55)
@@ -17361,7 +17361,7 @@ Public Sub DefineControles()
    txtCampo(55).OrderFields = "Razão Social; Seqüência do Geral"
    txtCampo(55).Relation = ""
    txtCampo(55).Source = "Geral"
-   txtCampo(55).vgfrmGMCale.grdListaG.AutoRebind = True
+  'txtCampo(55).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(55).DataField), txtCampo(55)
 
    Set txtCampo(58).CtPri = txtCp(58)
@@ -17422,7 +17422,7 @@ Public Sub DefineControles()
    txtCampo(60).OrderFields = "Descrição; Seqüência do País"
    txtCampo(60).Relation = ""
    txtCampo(60).Source = "Países"
-   txtCampo(60).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(60).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(60).DataField), txtCampo(60)
 
    Set txtCampo(4).CtPri = txtCp(4)
@@ -17450,7 +17450,7 @@ Public Sub DefineControles()
    txtCampo(34).OrderFields = "NCM"
    txtCampo(34).Relation = ""
    txtCampo(34).Source = "Classificação Fiscal"
-   txtCampo(34).vgfrmGMCale.grdListaG.AutoRebind = True
+ '  txtCampo(34).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(34).DataField), txtCampo(34)
 
    Set txtCampo(35).CtPri = txtCp(35)
@@ -17911,7 +17911,7 @@ Public Sub DefineControles1()
    txtCampo(62).OrderFields = "Titular da Conta"
    txtCampo(62).Relation = ""
    txtCampo(62).Source = "Conta do Vendedor"
-   txtCampo(62).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(62).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(62).DataField), txtCampo(62)
 
    Set txtCampo(63).CtPri = txtCp(63)
@@ -17935,7 +17935,7 @@ Public Sub DefineControles1()
    txtCampo(137).OrderFields = "Titular da Conta"
    txtCampo(137).Relation = ""
    txtCampo(137).Source = "Conta do Vendedor"
-   txtCampo(137).vgfrmGMCale.grdListaG.AutoRebind = True
+ '  txtCampo(137).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(137).DataField), txtCampo(137)
 
    Set txtCampo(64).CtPri = txtCp(64)
@@ -17949,7 +17949,7 @@ Public Sub DefineControles1()
    txtCampo(64).OrderFields = "Titular da Conta"
    txtCampo(64).Relation = ""
    txtCampo(64).Source = "Conta do Vendedor"
-   txtCampo(64).vgfrmGMCale.grdListaG.AutoRebind = True
+   'txtCampo(64).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(64).DataField), txtCampo(64)
 
    Set txtCampo(65).CtPri = txtCp(65)
@@ -18334,7 +18334,7 @@ Public Sub DefineControles2()
    txtCampo(99).OrderFields = "Modelo da Adutora"
    txtCampo(99).Relation = ""
    txtCampo(99).Source = "Adutoras"
-   txtCampo(99).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(99).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(99).DataField), txtCampo(99)
 
    Set txtCampo(100).CtPri = txtCp(100)
@@ -18352,7 +18352,7 @@ Public Sub DefineControles2()
    txtCampo(100).OrderFields = "Modelo da Adutora"
    txtCampo(100).Relation = ""
    txtCampo(100).Source = "Adutoras"
-   txtCampo(100).vgfrmGMCale.grdListaG.AutoRebind = True
+ '  txtCampo(100).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(100).DataField), txtCampo(100)
 
    Set txtCampo(101).CtPri = txtCp(101)
@@ -18370,7 +18370,7 @@ Public Sub DefineControles2()
    txtCampo(101).OrderFields = "Modelo da Adutora"
    txtCampo(101).Relation = ""
    txtCampo(101).Source = "Adutoras"
-   txtCampo(101).vgfrmGMCale.grdListaG.AutoRebind = True
+  ' txtCampo(101).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(101).DataField), txtCampo(101)
 
    Set txtCampo(102).CtPri = txtCp(102)
@@ -18494,459 +18494,6 @@ DeuErro:
  CErr.Show
 End Sub
 
-Public Sub DefineControles3()
- On Error GoTo DeuErro
-
-   Set txtCampo(113).CtPri = txtCp(113)
-   txtCampo(113).DataType = 1
-   txtCampo(113).Mask = "99.999.999,99"
-   txtCampo(113).Editable = False
-   txtCampo(113).BoundColumn = ""
-   txtCampo(113).ListFields = ""
-   txtCampo(113).OrderFields = ""
-   txtCampo(113).Relation = ""
-   txtCampo(113).Source = ""
-
-   Set txtCampo(114).CtPri = txtCp(114)
-   txtCampo(114).DataType = 1
-   txtCampo(114).Mask = "99.999.99,99"
-   txtCampo(114).Editable = False
-   txtCampo(114).BoundColumn = ""
-   txtCampo(114).ListFields = ""
-   txtCampo(114).OrderFields = ""
-   txtCampo(114).Relation = ""
-   txtCampo(114).Source = ""
-
-   Set txtCampo(115).CtPri = txtCp(115)
-   txtCampo(115).DataType = 1
-   txtCampo(115).Mask = "99"
-   txtCampo(115).BoundColumn = ""
-   txtCampo(115).ListFields = ""
-   txtCampo(115).OrderFields = ""
-   txtCampo(115).Relation = ""
-   txtCampo(115).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(115).DataField), txtCampo(115)
-
-   Set txtCampo(116).CtPri = txtCp(116)
-   txtCampo(116).DataType = 0
-   txtCampo(116).Mask = "@x"
-   txtCampo(116).BoundColumn = ""
-   txtCampo(116).ListFields = ""
-   txtCampo(116).OrderFields = ""
-   txtCampo(116).Relation = ""
-   txtCampo(116).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(116).DataField), txtCampo(116)
-
-   Set txtCampo(117).CtPri = txtCp(117)
-   txtCampo(117).DataType = 0
-   txtCampo(117).Mask = "@x"
-   txtCampo(117).BoundColumn = ""
-   txtCampo(117).ListFields = ""
-   txtCampo(117).OrderFields = ""
-   txtCampo(117).Relation = ""
-   txtCampo(117).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(117).DataField), txtCampo(117)
-
-   Set txtCampo(118).CtPri = txtCp(118)
-   txtCampo(118).DataType = 0
-   txtCampo(118).Mask = "@x"
-   txtCampo(118).BoundColumn = ""
-   txtCampo(118).ListFields = ""
-   txtCampo(118).OrderFields = ""
-   txtCampo(118).Relation = ""
-   txtCampo(118).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(118).DataField), txtCampo(118)
-
-   Set txtCampo(119).CtPri = txtCp(119)
-   txtCampo(119).DataType = 1
-   txtCampo(119).Mask = "99"
-   txtCampo(119).BoundColumn = ""
-   txtCampo(119).ListFields = ""
-   txtCampo(119).OrderFields = ""
-   txtCampo(119).Relation = ""
-   txtCampo(119).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(119).DataField), txtCampo(119)
-
-   Set txtCampo(120).CtPri = txtCp(120)
-   txtCampo(120).DataType = 1
-   txtCampo(120).Mask = "99.999,99"
-   txtCampo(120).BoundColumn = ""
-   txtCampo(120).ListFields = ""
-   txtCampo(120).OrderFields = ""
-   txtCampo(120).Relation = ""
-   txtCampo(120).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(120).DataField), txtCampo(120)
-
-   Set txtCampo(121).CtPri = txtCp(121)
-   txtCampo(121).DataType = 1
-   txtCampo(121).Mask = "99.999.99,99"
-   txtCampo(121).Editable = False
-   txtCampo(121).BoundColumn = ""
-   txtCampo(121).ListFields = ""
-   txtCampo(121).OrderFields = ""
-   txtCampo(121).Relation = ""
-   txtCampo(121).Source = ""
-
-   Set txtCampo(122).CtPri = txtCp(122)
-   txtCampo(122).DataType = 1
-   txtCampo(122).Mask = "99.999,99"
-   txtCampo(122).Editable = False
-   txtCampo(122).BoundColumn = ""
-   txtCampo(122).ListFields = ""
-   txtCampo(122).OrderFields = ""
-   txtCampo(122).Relation = ""
-   txtCampo(122).Source = ""
-
-   Set txtCampo(123).CtPri = txtCp(123)
-   txtCampo(123).DataType = 1
-   txtCampo(123).Mask = "99.999,99"
-   txtCampo(123).BoundColumn = ""
-   txtCampo(123).ListFields = ""
-   txtCampo(123).OrderFields = ""
-   txtCampo(123).Relation = ""
-   txtCampo(123).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(123).DataField), txtCampo(123)
-
-   Set txtCampo(124).CtPri = txtCp(124)
-   txtCampo(124).DataType = 1
-   txtCampo(124).Mask = "99.999,99"
-   txtCampo(124).BoundColumn = ""
-   txtCampo(124).ListFields = ""
-   txtCampo(124).OrderFields = ""
-   txtCampo(124).Relation = ""
-   txtCampo(124).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(124).DataField), txtCampo(124)
-
-   Set txtCampo(125).CtPri = txtCp(125)
-   txtCampo(125).DataType = 1
-   txtCampo(125).Mask = "99.999,99"
-   txtCampo(125).Editable = False
-   txtCampo(125).BoundColumn = ""
-   txtCampo(125).ListFields = ""
-   txtCampo(125).OrderFields = ""
-   txtCampo(125).Relation = ""
-   txtCampo(125).Source = ""
-
-   Set txtCampo(126).CtPri = txtCp(126)
-   txtCampo(126).DataType = 1
-   txtCampo(126).Mask = "9.999.999,99"
-   txtCampo(126).BoundColumn = ""
-   txtCampo(126).ListFields = ""
-   txtCampo(126).OrderFields = ""
-   txtCampo(126).Relation = ""
-   txtCampo(126).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(126).DataField), txtCampo(126)
-
-   Set txtCampo(127).CtPri = txtCp(127)
-   txtCampo(127).DataType = 0
-   txtCampo(127).Mask = "@x"
-   txtCampo(127).BoundColumn = ""
-   txtCampo(127).ListFields = ""
-   txtCampo(127).OrderFields = ""
-   txtCampo(127).Relation = ""
-   txtCampo(127).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(127).DataField), txtCampo(127)
-
-   Set txtCampo(128).CtPri = txtCp(128)
-   txtCampo(128).DataType = 0
-   txtCampo(128).Mask = "@x"
-   txtCampo(128).BoundColumn = ""
-   txtCampo(128).ListFields = ""
-   txtCampo(128).OrderFields = ""
-   txtCampo(128).Relation = ""
-   txtCampo(128).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(128).DataField), txtCampo(128)
-
-   Set txtCampo(129).CtPri = txtCp(129)
-   txtCampo(129).DataType = 0
-   txtCampo(129).Mask = "@x"
-   txtCampo(129).BoundColumn = ""
-   txtCampo(129).ListFields = ""
-   txtCampo(129).OrderFields = ""
-   txtCampo(129).Relation = ""
-   txtCampo(129).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(129).DataField), txtCampo(129)
-
-   Set txtCampo(130).CtPri = txtCp(130)
-   txtCampo(130).DataType = 1
-   txtCampo(130).Mask = "99.999,99"
-   txtCampo(130).BoundColumn = ""
-   txtCampo(130).ListFields = ""
-   txtCampo(130).OrderFields = ""
-   txtCampo(130).Relation = ""
-   txtCampo(130).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(130).DataField), txtCampo(130)
-
-   Set txtCampo(131).CtPri = txtCp(131)
-   txtCampo(131).DataType = 1
-   txtCampo(131).Mask = "999"
-   txtCampo(131).BoundColumn = ""
-   txtCampo(131).ListFields = ""
-   txtCampo(131).OrderFields = ""
-   txtCampo(131).Relation = ""
-   txtCampo(131).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(131).DataField), txtCampo(131)
-
-   Set txtCampo(132).CtPri = txtCp(132)
-   txtCampo(132).DataType = 1
-   txtCampo(132).Mask = "99.999.99,99"
-   txtCampo(132).Editable = False
-   txtCampo(132).BoundColumn = ""
-   txtCampo(132).ListFields = ""
-   txtCampo(132).OrderFields = ""
-   txtCampo(132).Relation = ""
-   txtCampo(132).Source = ""
-
-   Set txtCampo(133).CtPri = txtCp(133)
-   txtCampo(133).DataType = 1
-   txtCampo(133).Mask = "99.999.99,99"
-   txtCampo(133).Editable = False
-   txtCampo(133).BoundColumn = ""
-   txtCampo(133).ListFields = ""
-   txtCampo(133).OrderFields = ""
-   txtCampo(133).Relation = ""
-   txtCampo(133).Source = ""
-
-   Set txtCampo(134).CtPri = txtCp(134)
-   txtCampo(134).DataType = 1
-   txtCampo(134).Mask = "99.999,99"
-   txtCampo(134).BoundColumn = ""
-   txtCampo(134).ListFields = ""
-   txtCampo(134).OrderFields = ""
-   txtCampo(134).Relation = ""
-   txtCampo(134).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(134).DataField), txtCampo(134)
-
-   Set txtCampo(135).CtPri = txtCp(135)
-   txtCampo(135).DataType = 1
-   txtCampo(135).Mask = "99.999.99,99"
-   txtCampo(135).Editable = False
-   txtCampo(135).BoundColumn = ""
-   txtCampo(135).ListFields = ""
-   txtCampo(135).OrderFields = ""
-   txtCampo(135).Relation = ""
-   txtCampo(135).Source = ""
-
-   Set txtCampo(136).CtPri = txtCp(136)
-   txtCampo(136).DataType = 1
-   txtCampo(136).Mask = "99.999.99,99"
-   txtCampo(136).Editable = False
-   txtCampo(136).BoundColumn = ""
-   txtCampo(136).ListFields = ""
-   txtCampo(136).OrderFields = ""
-   txtCampo(136).Relation = ""
-   txtCampo(136).Source = ""
-
-   Set txtCampo(138).CtPri = txtCp(138)
-   txtCampo(138).DataType = 0
-   txtCampo(138).Mask = "@!"
-   txtCampo(138).BoundColumn = ""
-   txtCampo(138).ListFields = ""
-   txtCampo(138).OrderFields = ""
-   txtCampo(138).Relation = ""
-   txtCampo(138).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(138).DataField), txtCampo(138)
-
-   Set txtCampo(139).CtPri = txtCp(139)
-   txtCampo(139).DataType = 1
-   txtCampo(139).Mask = "99"
-   txtCampo(139).BoundColumn = ""
-   txtCampo(139).ListFields = ""
-   txtCampo(139).OrderFields = ""
-   txtCampo(139).Relation = ""
-   txtCampo(139).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(139).DataField), txtCampo(139)
-
-   Set txtCampo(140).CtPri = txtCp(140)
-   txtCampo(140).DataType = 1
-   txtCampo(140).Mask = "99"
-   txtCampo(140).BoundColumn = ""
-   txtCampo(140).ListFields = ""
-   txtCampo(140).OrderFields = ""
-   txtCampo(140).Relation = ""
-   txtCampo(140).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(140).DataField), txtCampo(140)
-
-   Set txtCampo(141).CtPri = txtCp(141)
-   txtCampo(141).DataType = 0
-   txtCampo(141).Mask = "@x"
-   txtCampo(141).BoundColumn = ""
-   txtCampo(141).ListFields = ""
-   txtCampo(141).OrderFields = ""
-   txtCampo(141).Relation = ""
-   txtCampo(141).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(141).DataField), txtCampo(141)
-
-   Set txtCampo(142).CtPri = txtCp(142)
-   txtCampo(142).DataType = 0
-   txtCampo(142).Mask = "@x"
-   txtCampo(142).BoundColumn = ""
-   txtCampo(142).ListFields = ""
-   txtCampo(142).OrderFields = ""
-   txtCampo(142).Relation = ""
-   txtCampo(142).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(142).DataField), txtCampo(142)
-
-   Set txtCampo(143).CtPri = txtCp(143)
-   txtCampo(143).DataType = 1
-   txtCampo(143).Mask = "99.999.999,99"
-   txtCampo(143).BoundColumn = ""
-   txtCampo(143).ListFields = ""
-   txtCampo(143).OrderFields = ""
-   txtCampo(143).Relation = ""
-   txtCampo(143).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(143).DataField), txtCampo(143)
-
-   Set txtCampo(144).CtPri = txtCp(144)
-   txtCampo(144).DataType = 1
-   txtCampo(144).Mask = "99.999.999,99"
-   txtCampo(144).BoundColumn = ""
-   txtCampo(144).ListFields = ""
-   txtCampo(144).OrderFields = ""
-   txtCampo(144).Relation = ""
-   txtCampo(144).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(144).DataField), txtCampo(144)
-
-   Set txtCampo(145).CtPri = txtCp(145)
-   txtCampo(145).DataType = 1
-   txtCampo(145).Mask = "999999"
-   txtCampo(145).BoundColumn = ""
-   txtCampo(145).ListFields = ""
-   txtCampo(145).OrderFields = ""
-   txtCampo(145).Relation = ""
-   txtCampo(145).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(145).DataField), txtCampo(145)
-
-   Set txtCampo(146).CtPri = txtCp(146)
-   txtCampo(146).DataType = 0
-   txtCampo(146).Mask = "@x"
-   txtCampo(146).BoundColumn = ""
-   txtCampo(146).ListFields = ""
-   txtCampo(146).OrderFields = ""
-   txtCampo(146).Relation = ""
-   txtCampo(146).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(146).DataField), txtCampo(146)
-
-   Set txtCampo(147).CtPri = txtCp(147)
-   Set txtCampo(147).CtFdo = labFdo147
-   Set txtCampo(147).CtBot(BOT_COMBO) = bottxtCampo147(BOT_COMBO)
-   Set bottxtCampo147(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
-   txtCampo(147).DataType = 0
-   txtCampo(147).ListFields = "Irrigação Penapolis|Revenda"
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(147).DataField), txtCampo(147)
-
-   Set txtCampo(160).CtPri = txtCp(160)
-   txtCampo(160).DataType = 0
-   txtCampo(160).Mask = ""
-   txtCampo(160).Editable = False
-   txtCampo(160).BoundColumn = ""
-   txtCampo(160).ListFields = ""
-   txtCampo(160).OrderFields = ""
-   txtCampo(160).Relation = ""
-   txtCampo(160).Source = ""
-
-   Set chkCampo(10).CtPri = ChkCp(10)
-   chkCampo(10).DataType = 5
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(10).DataField), chkCampo(10)
-
-   Set txtCampo(149).CtPri = txtCp(149)
-   Set txtCampo(149).CtFdo = labFdo149
-   Set txtCampo(149).CtBot(BOT_ACAO) = bottxtCampo149(BOT_ACAO)
-   Set bottxtCampo149(BOT_ACAO).Picture = LoadPicture(LoadGasPicture(4))
-   txtCampo(149).DataType = 2
-   txtCampo(149).Mask = "99/99/9999"
-   txtCampo(149).BoundColumn = ""
-   txtCampo(149).ListFields = ""
-   txtCampo(149).OrderFields = ""
-   txtCampo(149).Relation = ""
-   txtCampo(149).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(149).DataField), txtCampo(149)
-
-   Set txtCampo(150).CtPri = txtCp(150)
-   Set txtCampo(150).CtFdo = labFdo150
-   Set txtCampo(150).CtBot(BOT_LISTA) = bottxtCampo150(BOT_LISTA)
-   Set bottxtCampo150(BOT_LISTA).Picture = LoadPicture(LoadGasPicture(4))
-   txtCampo(150).DataType = 2
-   txtCampo(150).Mask = "99/99/9999"
-   txtCampo(150).PesqModoAbertura = 2
-   txtCampo(150).BoundColumn = ""
-   txtCampo(150).ListFields = ""
-   txtCampo(150).OrderFields = ""
-   txtCampo(150).Relation = ""
-   txtCampo(150).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(150).DataField), txtCampo(150)
-
-   Set chkCampo(11).CtPri = ChkCp(11)
-   chkCampo(11).DataType = 5
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(11).DataField), chkCampo(11)
-
-   Set txtCampo(161).CtPri = txtCp(161)
-   Set txtCampo(161).CtFdo = labFdo161
-   Set txtCampo(161).CtBot(BOT_COMBO) = bottxtCampo161(BOT_COMBO)
-   Set bottxtCampo161(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
-   txtCampo(161).DataType = 1
-   txtCampo(161).Mask = "999999"
-   txtCampo(161).BoundColumn = "Seqüência do Orçamento"
-   txtCampo(161).ListFields = "Seqüência do Orçamento"
-   txtCampo(161).OrderFields = "Seqüência do Orçamento-"
-   txtCampo(161).Relation = ""
-   txtCampo(161).Source = "Orçamento"
-   txtCampo(161).vgfrmGMCale.grdListaG.AutoRebind = True
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(161).DataField), txtCampo(161)
-
-   Set txtCampo(151).CtPri = txtCp(151)
-   Set txtCampo(151).CtFdo = labFdo151
-   Set txtCampo(151).CtBot(BOT_COMBO) = bottxtCampo151(BOT_COMBO)
-   Set bottxtCampo151(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
-   txtCampo(151).DataType = 0
-   txtCampo(151).ListFields = "Emitente|Destinatário|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(151).DataField), txtCampo(151)
-
- 
- 
- '--- PlacaVeiculo (índice 152) ---
-Set txtCampo(152).CtPri = txtCp(152)
-txtCampo(152).DataType = 0
-txtCampo(152).Mask = "@x"                        ' só A–Z e 0–9 em maiúsculo
-txtCp(152).MaxLength = 8                         ' limite antes do AddColumn
-txtCampo(152).Source = "Orçamento"
-txtCampo(152).BoundColumn = "PlacaVeiculo"       ' ou 1, se seu componente exigir índice
-grdBrowse.AddColumn _
-    vgDb.Tables(vgIdentTab).Columns("PlacaVeiculo"), txtCampo(152)
-
-'--- UfPlaca (índice 153) ---
-Set txtCampo(153).CtPri = txtCp(153)
-txtCampo(153).DataType = 0
-txtCampo(153).Mask = "!!"                        ' duas letras
-txtCp(153).MaxLength = 2
-txtCampo(153).Source = "Orçamento"
-txtCampo(153).BoundColumn = "UfPlaca"
-grdBrowse.AddColumn _
-    vgDb.Tables(vgIdentTab).Columns("UfPlaca"), txtCampo(153)
-
-'--- NumAntt (índice 154) ---
-Set txtCampo(154).CtPri = txtCp(154)
-txtCampo(154).DataType = 0
-txtCampo(154).Mask = "00000000"                  ' oito dígitos
-txtCp(154).MaxLength = 8
-txtCampo(154).Source = "Orçamento"
-txtCampo(154).BoundColumn = "NumAntt"
-grdBrowse.AddColumn _
-    vgDb.Tables(vgIdentTab).Columns("NumAntt"), txtCampo(154)
-
- 
- 
- 
- Exit Sub
-
-DeuErro:
-  CErr.NumErro = Err
-  CErr.FunctionName = "DefineControles3"
-  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
- CErr.Show
-End Sub
-
-
 Private Sub txtCp_BeforeUpdate(Index As Integer, Cancel As Integer)
     If Index = 152 Then
         Dim re As Object
@@ -18959,6 +18506,478 @@ Private Sub txtCp_BeforeUpdate(Index As Integer, Cancel As Integer)
             Cancel = True   ' cancela saída do controle
         End If
     End If
+End Sub
+
+
+' Função auxiliar para checar se uma coluna já existe no grid
+Private Function ColumnExistsInGrid(ByVal fldName As String) As Boolean
+    Dim col As Object
+    For Each col In grdBrowse.Columns
+        If col.DataField = fldName Then
+            ColumnExistsInGrid = True
+            Exit Function
+        End If
+    Next
+    ColumnExistsInGrid = False
+End Function
+
+Public Sub DefineControles3()
+    On Error GoTo DeuErro
+
+    ' 1) Limpa todas as colunas atuais do grid
+    grdBrowse.ClearColumns
+    ' 2) Se quiser rebind automático no próprio grid:
+  '  grdBrowse.AutoRebind = True
+
+    ' 3) Configurações individuais de cada txtCampo (sem AddColumn aqui)
+    Set txtCampo(113).CtPri = txtCp(113)
+    txtCampo(113).DataType = 1
+    txtCampo(113).Mask = "99.999.999,99"
+    txtCampo(113).Editable = False
+    txtCampo(113).BoundColumn = ""
+    txtCampo(113).ListFields = ""
+    txtCampo(113).OrderFields = ""
+    txtCampo(113).Relation = ""
+    txtCampo(113).Source = ""
+
+    Set txtCampo(114).CtPri = txtCp(114)
+    txtCampo(114).DataType = 1
+    txtCampo(114).Mask = "99.999.99,99"
+    txtCampo(114).Editable = False
+    txtCampo(114).BoundColumn = ""
+    txtCampo(114).ListFields = ""
+    txtCampo(114).OrderFields = ""
+    txtCampo(114).Relation = ""
+    txtCampo(114).Source = ""
+
+    Set txtCampo(115).CtPri = txtCp(115)
+    txtCampo(115).DataType = 1
+    txtCampo(115).Mask = "99"
+    txtCampo(115).BoundColumn = ""
+    txtCampo(115).ListFields = ""
+    txtCampo(115).OrderFields = ""
+    txtCampo(115).Relation = ""
+    txtCampo(115).Source = ""
+
+    Set txtCampo(116).CtPri = txtCp(116)
+    txtCampo(116).DataType = 0
+    txtCampo(116).Mask = "@x"
+    txtCampo(116).BoundColumn = ""
+    txtCampo(116).ListFields = ""
+    txtCampo(116).OrderFields = ""
+    txtCampo(116).Relation = ""
+    txtCampo(116).Source = ""
+
+    Set txtCampo(117).CtPri = txtCp(117)
+    txtCampo(117).DataType = 0
+    txtCampo(117).Mask = "@x"
+    txtCampo(117).BoundColumn = ""
+    txtCampo(117).ListFields = ""
+    txtCampo(117).OrderFields = ""
+    txtCampo(117).Relation = ""
+    txtCampo(117).Source = ""
+
+    Set txtCampo(118).CtPri = txtCp(118)
+    txtCampo(118).DataType = 0
+    txtCampo(118).Mask = "@x"
+    txtCampo(118).BoundColumn = ""
+    txtCampo(118).ListFields = ""
+    txtCampo(118).OrderFields = ""
+    txtCampo(118).Relation = ""
+    txtCampo(118).Source = ""
+
+    Set txtCampo(119).CtPri = txtCp(119)
+    txtCampo(119).DataType = 1
+    txtCampo(119).Mask = "99"
+    txtCampo(119).BoundColumn = ""
+    txtCampo(119).ListFields = ""
+    txtCampo(119).OrderFields = ""
+    txtCampo(119).Relation = ""
+    txtCampo(119).Source = ""
+
+    Set txtCampo(120).CtPri = txtCp(120)
+    txtCampo(120).DataType = 1
+    txtCampo(120).Mask = "99.999,99"
+    txtCampo(120).BoundColumn = ""
+    txtCampo(120).ListFields = ""
+    txtCampo(120).OrderFields = ""
+    txtCampo(120).Relation = ""
+    txtCampo(120).Source = ""
+
+    Set txtCampo(121).CtPri = txtCp(121)
+    txtCampo(121).DataType = 1
+    txtCampo(121).Mask = "99.999.99,99"
+    txtCampo(121).Editable = False
+    txtCampo(121).BoundColumn = ""
+    txtCampo(121).ListFields = ""
+    txtCampo(121).OrderFields = ""
+    txtCampo(121).Relation = ""
+    txtCampo(121).Source = ""
+
+    Set txtCampo(122).CtPri = txtCp(122)
+    txtCampo(122).DataType = 1
+    txtCampo(122).Mask = "99.999,99"
+    txtCampo(122).Editable = False
+    txtCampo(122).BoundColumn = ""
+    txtCampo(122).ListFields = ""
+    txtCampo(122).OrderFields = ""
+    txtCampo(122).Relation = ""
+    txtCampo(122).Source = ""
+
+    Set txtCampo(123).CtPri = txtCp(123)
+    txtCampo(123).DataType = 1
+    txtCampo(123).Mask = "99.999,99"
+    txtCampo(123).BoundColumn = ""
+    txtCampo(123).ListFields = ""
+    txtCampo(123).OrderFields = ""
+    txtCampo(123).Relation = ""
+    txtCampo(123).Source = ""
+
+    Set txtCampo(124).CtPri = txtCp(124)
+    txtCampo(124).DataType = 1
+    txtCampo(124).Mask = "99.999,99"
+    txtCampo(124).BoundColumn = ""
+    txtCampo(124).ListFields = ""
+    txtCampo(124).OrderFields = ""
+    txtCampo(124).Relation = ""
+    txtCampo(124).Source = ""
+
+    Set txtCampo(125).CtPri = txtCp(125)
+    txtCampo(125).DataType = 1
+    txtCampo(125).Mask = "99.999,99"
+    txtCampo(125).Editable = False
+    txtCampo(125).BoundColumn = ""
+    txtCampo(125).ListFields = ""
+    txtCampo(125).OrderFields = ""
+    txtCampo(125).Relation = ""
+    txtCampo(125).Source = ""
+
+    Set txtCampo(126).CtPri = txtCp(126)
+    txtCampo(126).DataType = 1
+    txtCampo(126).Mask = "9.999.999,99"
+    txtCampo(126).BoundColumn = ""
+    txtCampo(126).ListFields = ""
+    txtCampo(126).OrderFields = ""
+    txtCampo(126).Relation = ""
+    txtCampo(126).Source = ""
+
+    Set txtCampo(127).CtPri = txtCp(127)
+    txtCampo(127).DataType = 0
+    txtCampo(127).Mask = "@x"
+    txtCampo(127).BoundColumn = ""
+    txtCampo(127).ListFields = ""
+    txtCampo(127).OrderFields = ""
+    txtCampo(127).Relation = ""
+    txtCampo(127).Source = ""
+
+    Set txtCampo(128).CtPri = txtCp(128)
+    txtCampo(128).DataType = 0
+    txtCampo(128).Mask = "@x"
+    txtCampo(128).BoundColumn = ""
+    txtCampo(128).ListFields = ""
+    txtCampo(128).OrderFields = ""
+    txtCampo(128).Relation = ""
+    txtCampo(128).Source = ""
+
+    Set txtCampo(129).CtPri = txtCp(129)
+    txtCampo(129).DataType = 0
+    txtCampo(129).Mask = "@x"
+    txtCampo(129).BoundColumn = ""
+    txtCampo(129).ListFields = ""
+    txtCampo(129).OrderFields = ""
+    txtCampo(129).Relation = ""
+    txtCampo(129).Source = ""
+
+    Set txtCampo(130).CtPri = txtCp(130)
+    txtCampo(130).DataType = 1
+    txtCampo(130).Mask = "99.999,99"
+    txtCampo(130).BoundColumn = ""
+    txtCampo(130).ListFields = ""
+    txtCampo(130).OrderFields = ""
+    txtCampo(130).Relation = ""
+    txtCampo(130).Source = ""
+
+    Set txtCampo(131).CtPri = txtCp(131)
+    txtCampo(131).DataType = 1
+    txtCampo(131).Mask = "999"
+    txtCampo(131).BoundColumn = ""
+    txtCampo(131).ListFields = ""
+    txtCampo(131).OrderFields = ""
+    txtCampo(131).Relation = ""
+    txtCampo(131).Source = ""
+
+    Set txtCampo(132).CtPri = txtCp(132)
+    txtCampo(132).DataType = 1
+    txtCampo(132).Mask = "99.999.99,99"
+    txtCampo(132).Editable = False
+    txtCampo(132).BoundColumn = ""
+    txtCampo(132).ListFields = ""
+    txtCampo(132).OrderFields = ""
+    txtCampo(132).Relation = ""
+    txtCampo(132).Source = ""
+
+    Set txtCampo(133).CtPri = txtCp(133)
+    txtCampo(133).DataType = 1
+    txtCampo(133).Mask = "99.999.99,99"
+    txtCampo(133).Editable = False
+    txtCampo(133).BoundColumn = ""
+    txtCampo(133).ListFields = ""
+    txtCampo(133).OrderFields = ""
+    txtCampo(133).Relation = ""
+    txtCampo(133).Source = ""
+
+    Set txtCampo(134).CtPri = txtCp(134)
+    txtCampo(134).DataType = 1
+    txtCampo(134).Mask = "99.999,99"
+    txtCampo(134).BoundColumn = ""
+    txtCampo(134).ListFields = ""
+    txtCampo(134).OrderFields = ""
+    txtCampo(134).Relation = ""
+    txtCampo(134).Source = ""
+
+    Set txtCampo(135).CtPri = txtCp(135)
+    txtCampo(135).DataType = 1
+    txtCampo(135).Mask = "99.999.99,99"
+    txtCampo(135).Editable = False
+    txtCampo(135).BoundColumn = ""
+    txtCampo(135).ListFields = ""
+    txtCampo(135).OrderFields = ""
+    txtCampo(135).Relation = ""
+    txtCampo(135).Source = ""
+
+    Set txtCampo(136).CtPri = txtCp(136)
+    txtCampo(136).DataType = 1
+    txtCampo(136).Mask = "99.999.99,99"
+    txtCampo(136).Editable = False
+    txtCampo(136).BoundColumn = ""
+    txtCampo(136).ListFields = ""
+    txtCampo(136).OrderFields = ""
+    txtCampo(136).Relation = ""
+    txtCampo(136).Source = ""
+
+    Set txtCampo(138).CtPri = txtCp(138)
+    txtCampo(138).DataType = 0
+    txtCampo(138).Mask = "@!"
+    txtCampo(138).BoundColumn = ""
+    txtCampo(138).ListFields = ""
+    txtCampo(138).OrderFields = ""
+    txtCampo(138).Relation = ""
+    txtCampo(138).Source = ""
+
+    Set txtCampo(139).CtPri = txtCp(139)
+    txtCampo(139).DataType = 1
+    txtCampo(139).Mask = "99"
+    txtCampo(139).BoundColumn = ""
+    txtCampo(139).ListFields = ""
+    txtCampo(139).OrderFields = ""
+    txtCampo(139).Relation = ""
+    txtCampo(139).Source = ""
+
+    Set txtCampo(140).CtPri = txtCp(140)
+    txtCampo(140).DataType = 1
+    txtCampo(140).Mask = "99"
+    txtCampo(140).BoundColumn = ""
+    txtCampo(140).ListFields = ""
+    txtCampo(140).OrderFields = ""
+    txtCampo(140).Relation = ""
+    txtCampo(140).Source = ""
+
+    Set txtCampo(141).CtPri = txtCp(141)
+    txtCampo(141).DataType = 0
+    txtCampo(141).Mask = "@x"
+    txtCampo(141).BoundColumn = ""
+    txtCampo(141).ListFields = ""
+    txtCampo(141).OrderFields = ""
+    txtCampo(141).Relation = ""
+    txtCampo(141).Source = ""
+
+    Set txtCampo(142).CtPri = txtCp(142)
+    txtCampo(142).DataType = 0
+    txtCampo(142).Mask = "@x"
+    txtCampo(142).BoundColumn = ""
+    txtCampo(142).ListFields = ""
+    txtCampo(142).OrderFields = ""
+    txtCampo(142).Relation = ""
+    txtCampo(142).Source = ""
+
+    Set txtCampo(143).CtPri = txtCp(143)
+    txtCampo(143).DataType = 1
+    txtCampo(143).Mask = "99.999.999,99"
+    txtCampo(143).BoundColumn = ""
+    txtCampo(143).ListFields = ""
+    txtCampo(143).OrderFields = ""
+    txtCampo(143).Relation = ""
+    txtCampo(143).Source = ""
+
+    Set txtCampo(144).CtPri = txtCp(144)
+    txtCampo(144).DataType = 1
+    txtCampo(144).Mask = "99.999.999,99"
+    txtCampo(144).BoundColumn = ""
+    txtCampo(144).ListFields = ""
+    txtCampo(144).OrderFields = ""
+    txtCampo(144).Relation = ""
+    txtCampo(144).Source = ""
+
+    Set txtCampo(145).CtPri = txtCp(145)
+    txtCampo(145).DataType = 1
+    txtCampo(145).Mask = "999999"
+    txtCampo(145).BoundColumn = ""
+    txtCampo(145).ListFields = ""
+    txtCampo(145).OrderFields = ""
+    txtCampo(145).Relation = ""
+    txtCampo(145).Source = ""
+
+    Set txtCampo(146).CtPri = txtCp(146)
+    txtCampo(146).DataType = 0
+    txtCampo(146).Mask = "@x"
+    txtCampo(146).BoundColumn = ""
+    txtCampo(146).ListFields = ""
+    txtCampo(146).OrderFields = ""
+    txtCampo(146).Relation = ""
+    txtCampo(146).Source = ""
+
+    Set txtCampo(147).CtPri = txtCp(147)
+    Set txtCampo(147).CtFdo = labFdo147
+    Set txtCampo(147).CtBot(BOT_COMBO) = bottxtCampo147(BOT_COMBO)
+    Set bottxtCampo147(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
+    txtCampo(147).DataType = 0
+    txtCampo(147).ListFields = "Irrigação Penapolis|Revenda"
+
+    Set txtCampo(160).CtPri = txtCp(160)
+    txtCampo(160).DataType = 0
+    txtCampo(160).Mask = ""
+    txtCampo(160).Editable = False
+    txtCampo(160).BoundColumn = ""
+    txtCampo(160).ListFields = ""
+    txtCampo(160).OrderFields = ""
+    txtCampo(160).Relation = ""
+    txtCampo(160).Source = ""
+
+    Set chkCampo(10).CtPri = ChkCp(10)
+    chkCampo(10).DataType = 5
+
+    Set txtCampo(149).CtPri = txtCp(149)
+    Set txtCampo(149).CtFdo = labFdo149
+    Set txtCampo(149).CtBot(BOT_ACAO) = bottxtCampo149(BOT_ACAO)
+    Set bottxtCampo149(BOT_ACAO).Picture = LoadPicture(LoadGasPicture(4))
+    txtCampo(149).DataType = 2
+    txtCampo(149).Mask = "99/99/9999"
+    txtCampo(149).BoundColumn = ""
+    txtCampo(149).ListFields = ""
+    txtCampo(149).OrderFields = ""
+    txtCampo(149).Relation = ""
+    txtCampo(149).Source = ""
+
+    Set txtCampo(150).CtPri = txtCp(150)
+    Set txtCampo(150).CtFdo = labFdo150
+    Set txtCampo(150).CtBot(BOT_LISTA) = bottxtCampo150(BOT_LISTA)
+    Set bottxtCampo150(BOT_LISTA).Picture = LoadPicture(LoadGasPicture(4))
+    txtCampo(150).DataType = 2
+    txtCampo(150).Mask = "99/99/9999"
+    txtCampo(150).PesqModoAbertura = 2
+    txtCampo(150).BoundColumn = ""
+    txtCampo(150).ListFields = ""
+    txtCampo(150).OrderFields = ""
+    txtCampo(150).Relation = ""
+    txtCampo(150).Source = ""
+
+    Set chkCampo(11).CtPri = ChkCp(11)
+    chkCampo(11).DataType = 5
+
+    Set txtCampo(161).CtPri = txtCp(161)
+    Set txtCampo(161).CtFdo = labFdo161
+    Set txtCampo(161).CtBot(BOT_COMBO) = bottxtCampo161(BOT_COMBO)
+    Set bottxtCampo161(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
+    txtCampo(161).DataType = 1
+    txtCampo(161).Mask = "999999"
+    txtCampo(161).BoundColumn = "Seqüência do Orçamento"
+    txtCampo(161).ListFields = "Seqüência do Orçamento"
+    txtCampo(161).OrderFields = "Seqüência do Orçamento-"
+    txtCampo(161).Relation = ""
+    txtCampo(161).Source = "Orçamento"
+
+    Set txtCampo(151).CtPri = txtCp(151)
+    Set txtCampo(151).CtFdo = labFdo151
+    Set txtCampo(151).CtBot(BOT_COMBO) = bottxtCampo151(BOT_COMBO)
+    Set bottxtCampo151(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
+    txtCampo(151).DataType = 0
+    txtCampo(151).ListFields = "Emitente|Destinatário|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
+
+    Set txtCampo(152).CtPri = txtCp(152)
+    txtCampo(152).DataType = 0
+    txtCampo(152).Mask = "@x"
+    txtCp(152).MaxLength = 8
+    txtCampo(152).Source = "Orçamento"
+    txtCampo(152).BoundColumn = "PlacaVeiculo"
+
+    Set txtCampo(153).CtPri = txtCp(153)
+    txtCampo(153).DataType = 0
+    txtCampo(153).Mask = "!!"
+    txtCp(153).MaxLength = 2
+    txtCampo(153).Source = "Orçamento"
+    txtCampo(153).BoundColumn = "UfPlaca"
+
+    Set txtCampo(154).CtPri = txtCp(154)
+    txtCampo(154).DataType = 0
+    txtCampo(154).Mask = "00000000"
+    txtCp(154).MaxLength = 8
+    txtCampo(154).Source = "Orçamento"
+    txtCampo(154).BoundColumn = "NumAntt"
+
+    ' 4) Adiciona todas as colunas txtCampo sem duplicação
+    Dim i As Long
+    For i = LBound(txtCampo) To UBound(txtCampo)
+        With txtCampo(i)
+            If .DataField <> "" Then
+                If Not ColumnExistsInGrid(.DataField) Then
+                    grdBrowse.AddColumn _
+                      vgDb.Tables(vgIdentTab).Columns(.DataField), _
+                      txtCampo(i)
+                End If
+            End If
+        End With
+    Next i
+
+    ' 5) Adiciona todas as colunas chkCampo sem duplicação
+    For i = LBound(chkCampo) To UBound(chkCampo)
+        With chkCampo(i)
+            If .DataField <> "" Then
+                If Not ColumnExistsInGrid(.DataField) Then
+                    grdBrowse.AddColumn _
+                      vgDb.Tables(vgIdentTab).Columns(.DataField), _
+                      chkCampo(i)
+                End If
+            End If
+        End With
+    Next i
+
+    ' 6) Garante adição única das colunas especiais
+    If Not ColumnExistsInGrid("PlacaVeiculo") Then
+        grdBrowse.AddColumn _
+          vgDb.Tables(vgIdentTab).Columns("PlacaVeiculo"), _
+          txtCampo(152)
+    End If
+
+    If Not ColumnExistsInGrid("UfPlaca") Then
+        grdBrowse.AddColumn _
+          vgDb.Tables(vgIdentTab).Columns("UfPlaca"), _
+          txtCampo(153)
+    End If
+
+    If Not ColumnExistsInGrid("NumAntt") Then
+        grdBrowse.AddColumn _
+          vgDb.Tables(vgIdentTab).Columns("NumAntt"), _
+          txtCampo(154)
+    End If
+
+    Exit Sub
+
+DeuErro:
+    CErr.NumErro = Err
+    CErr.FunctionName = "DefineControles3"
+    CErr.Origem = CStr(vgFormID) & " - " & Me.Caption
+    CErr.Show
+    Resume Next
 End Sub
 
 
@@ -19516,7 +19535,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
    CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, "Valor Unitário")
-            If Grid(0).Col = 7 Then
+            If Grid(0).col = 7 Then
                vgRetVal = Valor_Unitario
             End If
       End Select
@@ -20567,7 +20586,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 3
             Valor_Unitario = InfoServicos(Sequencia_do_Orcamento, Sequencia_do_Servico_Orcamento, Sequencia_do_Servico, Quantidade, Valor_Unitario, Valor_Total, _
    Valor_Anterior, "Valor Unitário")
-            If Grid(4).Col = 3 Then
+            If Grid(4).col = 3 Then
                vgRetVal = Valor_Unitario
             End If
       End Select

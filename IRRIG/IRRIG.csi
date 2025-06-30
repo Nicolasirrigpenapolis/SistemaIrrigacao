@@ -1,0 +1,8 @@
+[History]
+1=#P0#=mb	#P1#=DefineControles1	#P2#=IRRIG/frmOrcament/DefineControles1	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082905	#P7#=0	#P8#=428	.
+2=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmOrcament/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082838	#P7#=0	#P8#=386	.
+3=#P0#=mb	#P1#=DefineControles2	#P2#=IRRIG/frmOrcament/DefineControles2	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082809	#P7#=0	#P8#=380	.
+4=#P0#=mb	#P1#=PoeRelEFiltroCbo	#P2#=IRRIG/frmOrcament/PoeRelEFiltroCbo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082047	#P7#=0	#P8#=-3	.
+5=#P0#=mb	#P1#=ColumnExistsInGrid	#P2#=IRRIG/frmOrcament/ColumnExistsInGrid	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082147	#P7#=0	#P8#=9	.
+6=#P0#=mb	#P1#=txtCp_BeforeUpdate	#P2#=IRRIG/frmOrcament/txtCp_BeforeUpdate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250630081553	#P7#=0	#P8#=10	.
+7=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250630082740	#P7#=0	#P8#=12	.
