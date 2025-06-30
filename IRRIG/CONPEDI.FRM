@@ -24,13 +24,12 @@ Begin VB.Form frmConpedi
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   2130
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -43,7 +42,29 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
+         Caption         =   "Atualiza Receita"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Entregue ao Cliente"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -71,33 +92,12 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Entregue ao Cliente"
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   375
-         Index           =   3
-         Left            =   8970
-         TabIndex        =   9
-         Top             =   1740
-         Width           =   2130
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
@@ -110,7 +110,7 @@ Begin VB.Form frmConpedi
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Atualiza Receita"
+         Caption         =   "Receita"
          CaptionOffset   =   50
       End
       Begin VB.PictureBox PcbAtualizaOrc 
@@ -619,7 +619,6 @@ Private Function Filtro3() As String
  Filtro3 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento
 End Function
 
-
 Private Sub MySQL()
  Dim SQL As String
  Dim Tb1 As New GRecordSet
@@ -628,22 +627,27 @@ Private Sub MySQL()
  
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seqüência Do Orçamento] = " & Orcamento)
  
- If Tb1.RecordCount > 0 Then
-    Exit Sub
- Else
-    Set Tb1 = Nothing
- End If
+   'Se já existem itens pendentes para o orçamento atual, remove para recriar os dados
+  If Tb1.RecordCount > 0 Then
+     vgDb.Execute "DELETE FROM [Itens pendentes] WHERE [Seqüência Do Orçamento] = " & Orcamento
+     Set Tb1 = Nothing
+  End If
+ 
  
  Set cnGas = New ADODB.Connection
  Set rsGas = New ADODB.RecordSet
  
- If EstaEmIDE Then 'MERDA
-    'cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER={SQL Server};Server=DESKTOP-NGAVDP6\SQLEXPRESS2014;Integrated Security=SSPI;Trusted_Connection=YES"'"Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-NGAVDP6\SQLEXPRESS2014;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=YES"
-    cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-CHS14C0\SQLIRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES;Database=IRRIGACAO"
- Else
-    cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=SRVSQL\SQLEXPRESS;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=NO"
- End If
- cnGas.Open
+ ' 1) Abre conexï¿½o
+    Set cnGas = New ADODB.Connection
+    If EstaEmIDE And Environ("COMPUTERNAME") = "DESKTOP-CTAJU78" Then
+        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER={SQL Server Native Client 10.0};Server=DESKTOP-CTAJU78\SQLEXPRESS02;Database=IRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES"
+    ElseIf EstaEmIDE Then
+        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-CHS14C0\SQLIRRIGACAO;Database=IRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES"
+    Else
+        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=SRVSQL\SQLEXPRESS;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=NO"
+    End If
+    cnGas.Open
+'no cnGas.Open
                                                                                                                                                                                                           
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
@@ -692,6 +696,8 @@ Private Sub MySQL()
  rsGas.Close
                
 End Sub
+
+
 
 
 'Private Sub ReceitaP()
