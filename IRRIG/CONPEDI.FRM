@@ -23,7 +23,7 @@ Begin VB.Form frmConpedi
       _ExtentY        =   14393
       BevelOuter      =   0
       Stretch         =   -1  'True
-      Begin VB.PictureBox Picture1 
+      Begin VB.PictureBox PcbAtualizaOrc 
          Height          =   540
          Left            =   10500
          Picture         =   "CONPEDI.frx":0000
@@ -1982,6 +1982,10 @@ Public Sub AcaoPopUp0(Index As Integer)
          mdiIRRIG.MRelentcl
          AtivaForm Me
    End Select
+End Sub
+
+Private Sub PcbAtualizaOrc_Click()
+
 End Sub
 
 'evento - quando o conteúdo do campo for alterado
