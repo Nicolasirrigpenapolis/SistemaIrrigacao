@@ -1,514 +1,393 @@
 VERSION 5.00
-Begin VB.Form frmConpedi
-   ForeColor                =   &H80000008
-   BorderStyle              =   2
-   Height                   =   8775
-   Left                     =   4140
-   LinkTopic                =   "Conpedi"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   8340
-   ScaleWidth               =   11850
-   Top                      =   1420
-   Width                    =   11940
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   0
-      BevelInner               =   0
-      BorderWidth              =   1
-      BevelWidth               =   1
-      BorderStyle              =   2
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   8160
-      Left                     =   15
-      Width                    =   11670
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   20574
-      _extenty                 =   14386
-      Index                    =   0 
-      Begin IRRIG.GCpMM mmCampo
-         Appearance               =   0
-         BackColor                =   &H8000000F
-         BorderStyle              =   0
-         Stretch                  =   -1
-         Height                   =   1710
-         Left                     =   135
-         Width                    =   1545
-         Top                      =   195
-         Index                    =   0 
-         TabStop                  =   0
-         ScrollBars               =   0
-         Locked                   =   -1
+Begin VB.Form frmConpedi 
+   ClientHeight    =   8205
+   ClientLeft      =   4260
+   ClientTop       =   1890
+   ClientWidth     =   11775
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Conpedi"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   8205
+   ScaleWidth      =   11775
+   Begin IRRIG.GPainel Painel 
+      Height          =   8160
+      Index           =   0
+      Left            =   15
+      TabIndex        =   10
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   11670
+      _ExtentX        =   20585
+      _ExtentY        =   14393
+      BevelOuter      =   0
+      Stretch         =   -1  'True
+      Begin VB.PictureBox Picture1 
+         Height          =   540
+         Left            =   10500
+         Picture         =   "CONPEDI.frx":0000
+         ScaleHeight     =   480
+         ScaleWidth      =   480
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   1200
+         Width           =   540
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   0
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   435
-         Left                     =   1815
-         Width                    =   6330
-         Top                      =   195
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   18
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   2130
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Controle de Pedidos por Cliente"
-         Index                    =   0 
+         Caption         =   "Atualiza Receita"
+         CaptionOffset   =   50
       End
-      Begin VB.Line Linha
-         BorderColor              =   -2147483640
-         BorderStyle              =   1
-         BorderWidth              =   1
-         X1                       =   1860
-         Y1                       =   630
-         X2                       =   8130
-         Y2                       =   630
-         Index                    =   0 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   1935
-         Width                    =   2880
-         Top                      =   795
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Digite o Numero do Pedido:"
-         Index                    =   1 
+         Caption         =   "Entregue ao Cliente"
+         CaptionOffset   =   50
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   1
+         Left            =   9015
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         TabIndex                 =   2
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   4935
-         Width                    =   1200
-         Top                      =   795
-         Index                    =   0 
+         Caption         =   "Consultar"
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   0
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   435
-         Left                     =   1815
-         Width                    =   3285
-         Top                      =   1095
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   18
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Nome do Cliente"
-         Index                    =   2 
+         Caption         =   "Receita"
+         CaptionOffset   =   50
       End
-      Begin IRRIG.GListV Grid
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Arial"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GCpMM mmCampo 
+         Height          =   1710
+         Index           =   0
+         Left            =   135
+         TabIndex        =   11
+         TabStop         =   0   'False
+         Top             =   195
+         Width           =   1545
+         _extentx        =   0
+         _extenty        =   0
+         captionfont     =   "CONPEDI.frx":10CA
+         appearance      =   0
+         borderstyle     =   0
+         locked          =   -1  'True
+         scrollbars      =   0   'False
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         CellTextColor            =   &H80000008
-         EditTextColor            =   &H80000008
-         FilterBackColor          =   8454143
-         LeftBackColor            =   -2147483633
-         MaxBackColor             =   -2147483633
-         AvgBackColor             =   -2147483633
-         MinBackColor             =   -2147483633
-         SumBackColor             =   -2147483633
-         StatusBackColor          =   -2147483633
-         ColSelectBackColor       =   -2147483633
-         CellBackColor            =   -2147483643
-         EditBackColor            =   16777152
-         SelectBackColor          =   -2147483635
-         StripesBackColor         =   14737632
-         BackColor                =   -2147483643
-         CaptionBackColor         =   -2147483633
-         ColHeaderBackColor       =   -2147483633
-         GridLinesColor           =   14737632
-         FilterTextColor          =   -2147483640
-         AvgTextColor             =   16512
-         MinTextColor             =   255
-         MaxTextColor             =   49152
-         StatusTextColor          =   -2147483630
-         SumTextColor             =   16711680
-         ColTextBackColor         =   12582912
-         CellTextColor            =   -2147483640
-         SelectTextColor          =   -2147483634
-         EditTextColor            =   -2147483640
-         StripesTextColor         =   -2147483630
-         CaptionTextColor         =   -2147483630
-         ColHeaderTextColor       =   -2147483630
-         TabIndex                 =   3
-         TabStop                  =   -1
-         Stripes                  =   -1
-         SaveGridBars             =   1
-         Height                   =   3990
-         Left                     =   135
-         Width                    =   11325
-         Top                      =   3960
-         Caption                  =   "Produtos"
-         ShowGridCaption          =   -1
-         Index                    =   0 
-         Tag                      =   "1"
+         Height          =   300
+         Index           =   0
+         Left            =   4935
+         TabIndex        =   2
+         TabStop         =   0   'False
+         Top             =   795
+         Width           =   1200
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   11580
-         Width                    =   45
-         Top                      =   8280
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GListV Grid 
+         Height          =   3990
+         Index           =   0
+         Left            =   135
+         TabIndex        =   3
+         Tag             =   "1"
+         Top             =   3960
+         Width           =   11325
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         caption         =   "Produtos"
+         font            =   "CONPEDI.frx":10F8
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "."
-         Index                    =   3 
+         Height          =   300
+         Index           =   1
+         Left            =   6195
+         Locked          =   -1  'True
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   795
+         Width           =   705
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo2 
+         Height          =   270
+         Index           =   2
+         Left            =   2505
+         Style           =   1  'Graphical
+         TabIndex        =   17
+         TabStop         =   0   'False
+         Top             =   1815
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   4
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   6195
-         Width                    =   705
-         Top                      =   795
-         TabStop                  =  0
-         Index                    =   1 
+         Height          =   270
+         Index           =   2
+         Left            =   1815
+         TabIndex        =   0
+         TabStop         =   0   'False
+         Top             =   1815
+         Width           =   675
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   5
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   480
-         Left                     =   10245
-         Width                    =   1170
-         Top                      =   180
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Receita"
-         Index                    =   0 
+         Height          =   300
+         Index           =   3
+         Left            =   2820
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   1
+         TabStop         =   0   'False
+         Top             =   1800
+         Width           =   6060
       End
-      Begin VB.Label labFdo2
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   1800
-         Top                      =   1800
-         Width                    =   975
-         Height                   =   300
+      Begin IRRIG.GListV Grid 
+         Height          =   1710
+         Index           =   1
+         Left            =   135
+         TabIndex        =   7
+         Tag             =   "1"
+         Top             =   2160
+         Width           =   11325
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         caption         =   "Conjuntos"
+         font            =   "CONPEDI.frx":111C
       End
-      Begin VB.CommandButton bottxtCampo2
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   2505
-         Top                      =   1815
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Controle de Pedidos por Cliente"
+         BeginProperty Font 
+            Name            =   "Verdana"
+            Size            =   18
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   0
-         TabStop                  =   0
-         Height                   =   270
-         Left                     =   1815
-         Width                    =   675
-         Top                      =   1815
-         Index                    =   2 
+         ForeColor       =   &H80000008&
+         Height          =   435
+         Index           =   0
+         Left            =   1815
+         TabIndex        =   12
+         Top             =   195
+         Width           =   6330
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   1800
-         Width                    =   705
-         Top                      =   1560
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Produto"
-         Index                    =   4 
+      Begin VB.Line Linha 
+         Index           =   0
+         X1              =   1860
+         X2              =   8130
+         Y1              =   630
+         Y2              =   630
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Digite o Numero do Pedido:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   1
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   2820
-         Width                    =   6060
-         Top                      =   1800
-         TabStop                  =  0
-         Index                    =   3 
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   1
+         Left            =   1935
+         TabIndex        =   13
+         Top             =   795
+         Width           =   2880
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   6
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   480
-         Left                     =   9015
-         Width                    =   1170
-         Top                      =   180
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Nome do Cliente"
+         BeginProperty Font 
+            Name            =   "Verdana"
+            Size            =   18
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Consultar"
-         Index                    =   1 
+         ForeColor       =   &H80000008&
+         Height          =   435
+         Index           =   2
+         Left            =   1815
+         TabIndex        =   14
+         Top             =   1095
+         Width           =   3285
       End
-      Begin IRRIG.GListV Grid
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Arial"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         CellTextColor            =   &H80000008
-         EditTextColor            =   &H80000008
-         FilterBackColor          =   8454143
-         LeftBackColor            =   -2147483633
-         MaxBackColor             =   -2147483633
-         AvgBackColor             =   -2147483633
-         MinBackColor             =   -2147483633
-         SumBackColor             =   -2147483633
-         StatusBackColor          =   -2147483633
-         ColSelectBackColor       =   -2147483633
-         CellBackColor            =   -2147483643
-         EditBackColor            =   16777152
-         SelectBackColor          =   -2147483635
-         StripesBackColor         =   14737632
-         BackColor                =   -2147483643
-         CaptionBackColor         =   -2147483633
-         ColHeaderBackColor       =   -2147483633
-         GridLinesColor           =   14737632
-         FilterTextColor          =   -2147483640
-         AvgTextColor             =   16512
-         MinTextColor             =   255
-         MaxTextColor             =   49152
-         StatusTextColor          =   -2147483630
-         SumTextColor             =   16711680
-         ColTextBackColor         =   12582912
-         CellTextColor            =   -2147483640
-         SelectTextColor          =   -2147483634
-         EditTextColor            =   -2147483640
-         StripesTextColor         =   -2147483630
-         CaptionTextColor         =   -2147483630
-         ColHeaderTextColor       =   -2147483630
-         TabIndex                 =   7
-         TabStop                  =   -1
-         Stripes                  =   -1
-         SaveGridBars             =   1
-         Height                   =   1710
-         Left                     =   135
-         Width                    =   11325
-         Top                      =   2160
-         Caption                  =   "Conjuntos"
-         ShowGridCaption          =   -1
-         Index                    =   1 
-         Tag                      =   "1"
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "."
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   3
+         Left            =   11580
+         TabIndex        =   15
+         Top             =   8280
+         Width           =   45
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   8
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   480
-         Left                     =   9015
-         Width                    =   2385
-         Top                      =   675
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Entregue ao Cliente"
-         Index                    =   2 
+      Begin VB.Label labFdo2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   1800
+         TabIndex        =   16
+         Top             =   1800
+         Width           =   975
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   9
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   375
-         Left                     =   8970
-         Width                    =   2130
-         Top                      =   1740
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Produto"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Atualiza Receita"
-         Index                    =   3 
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   4
+         Left            =   1800
+         TabIndex        =   18
+         Top             =   1560
+         Width           =   705
       End
    End
 End
-Attribute VB_name = "frmConpedi"
+Attribute VB_Name = "frmConpedi"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -525,29 +404,29 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgPriVez As Integer                        'flag de carregamento do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo  
-Public vgQueryAtual As String                     'expressão SQL definada para o módulo 
+Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo
+Public vgQueryAtual As String                     'expressão SQL definada para o módulo
 
-Public vgFP As New frmPreview                     'formuário de preview do relatório 
+Public vgFP As New frmPreview                     'formuário de preview do relatório
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
-Public vgFG As frmGauge                           'formulário do gauge 
-Public vgQReg As Long                             'quantidade de já feira para o gauge  
+Public vgFG As frmGauge                           'formulário do gauge
+Public vgQReg As Long                             'quantidade de já feira para o gauge
 
-Dim txtCampo(3) As New FormataCampos              'classe dos compos tipo texto do módulo  
-Dim Orcamento As Double, NroNFe As Double, Prodstatus As Double
-Public Txtorc As Object, grdContas As Object, Lblajuste As Object
+Dim txtCampo(3) As New FormataCampos              'classe dos compos tipo texto do módulo
+Dim Orcamento As Double, NroNfe As Double, Prodstatus As Double
+Public Txtorc As Object, grdContas As Object, lblAjuste As Object
 Public Txtnfe As Object, txtProdstatus As Object, Grdcontas1 As Object
 
 Private Function Cliente() As String
  Dim Pedido As New GRecordSet, Geral As New GRecordSet
  
-   Set Pedido = VgDb.OpenRecordSet("Select [Seqüência do Geral] Seq From Orçamento Where [Seqüência do Orçamento] = " & Orcamento)
-   Set Geral = VgDb.OpenRecordSet("Select [Razão Social] From Geral Where [Seqüência do Geral] = " & Pedido!Seq)
+   Set Pedido = vgDb.OpenRecordSet("Select [Seqüência do Geral] Seq From Orçamento Where [Seqüência do Orçamento] = " & Orcamento)
+   Set Geral = vgDb.OpenRecordSet("Select [Razão Social] From Geral Where [Seqüência do Geral] = " & Pedido!Seq)
    Cliente = Geral![Razão Social]
    
 End Function
@@ -570,14 +449,14 @@ Private Sub CarregaTotalizador()
       .AddColumn Nothing, , "Nº", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
       .AddColumn Nothing, , "Cod", "Seqüência do Produto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
       .AddColumn Nothing, , "Produto", "Descrição", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
-      .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245 
-      .AddColumn Nothing, , "Andamento", "Situação", TP_CARACTER, "@x", , False , , , , , , "Á Produzir|Separado p/ Entregar|Entregue ao Cliente", , , , "1", , , , "0", 1, "0", 2300, , 12648447     
+      .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245
+      .AddColumn Nothing, , "Andamento", "Situação", TP_CARACTER, "@x", , False, , , , , , "Á Produzir|Separado p/ Entregar|Entregue ao Cliente", , , , "1", , , , "0", 1, "0", 2300, , 12648447
       .ShowSumCol(.Columns("Quantidade").Index) = False
       .ShowFilterBar = True
       .HideStatus = True
    End With
    'Conj
-   With grdContas1
+   With Grdcontas1
       .RowHeight = 315
       .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
       .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
@@ -591,8 +470,8 @@ Private Sub CarregaTotalizador()
       .AddColumn Nothing, , "Nº", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
       .AddColumn Nothing, , "Cod", "Seqüência do Conjunto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
       .AddColumn Nothing, , "Conjunto", "Descrição", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
-      .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245 
-      .AddColumn Nothing, , "Andamento", "Situação", TP_CARACTER, "@x", , False , , , , , , "Á Produzir|Á Galnanizar|Na Galvanização|Separado p/ Entregar|Falta MPrima|Entregue ao Cliente|Separado p/ Montar", , , , "1", , , , "0", 1, "0", 2300, , 12648447     
+      .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245
+      .AddColumn Nothing, , "Andamento", "Situação", TP_CARACTER, "@x", , False, , , , , , "Á Produzir|Á Galnanizar|Na Galvanização|Separado p/ Entregar|Falta MPrima|Entregue ao Cliente|Separado p/ Montar", , , , "1", , , , "0", 1, "0", 2300, , 12648447
       .ShowSumCol(.Columns("Quantidade").Index) = True
       .ShowFilterBar = True
       .HideStatus = True
@@ -606,13 +485,13 @@ Private Sub CarregaContas()
    
    If Orcamento = 0 Then
       Exit Sub
-   End If   
+   End If
    
    Screen.MousePointer = vbHourglass
    
    On Error GoTo DeuErro
    BuscaNota
-   MYSQL
+   MySQL
    AtuPedido
    
    x$ = "SELECT [Seqüência do Orçamento], [Itens Pendentes].[Seqüência do Produto], [Sequencia do Item], Descrição, Quantidade, [Situação] " & _
@@ -636,7 +515,7 @@ DeuErro:
       MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
    End If
 
-End Sub 
+End Sub
 
 Private Sub CarregaContas2()
    Dim x As String, Tb As New GRecordSet, MsgValida As String
@@ -656,7 +535,7 @@ Private Sub CarregaContas2()
    If MsgValida$ <> "" Then MsgBox MsgValida$, vbCritical + vbOKOnly, vaTitulo: Exit Sub
    ExecutaPreValidacao
    
-   With grdContas1
+   With Grdcontas1
       .OpenRecordSet x$, CURSOR_TABLE
    End With
    
@@ -668,17 +547,17 @@ DeuErro:
       MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
    End If
 
-End Sub   
+End Sub
   
 
 Private Function Filtro() As String
  Filtro = " [Seqüência do Orçamento] = " & Orcamento
- Filtro = Filtro & " And Tp <> 2 And Produtos.[Seqüência do Produto] > 0" 
+ Filtro = Filtro & " And Tp <> 2 And Produtos.[Seqüência do Produto] > 0"
 End Function
 
 Private Function Filtro5() As String
  Filtro5 = " [Seqüência do Orçamento] = " & Orcamento
- Filtro5 = Filtro5 & " And Tp = 2" 
+ Filtro5 = Filtro5 & " And Tp = 2"
 End Function
 
    
@@ -691,42 +570,42 @@ Private Sub BuscaNota()
  Dim Tb As New GRecordSet
  Dim NFe As New GRecordSet
  
-  Set Tb = VgDb.OpenRecordSet("SELECT [Seqüência Do Pedido] From Orçamento Where [Seqüência Do Orçamento] = " & Orcamento)
+  Set Tb = vgDb.OpenRecordSet("SELECT [Seqüência Do Pedido] From Orçamento Where [Seqüência Do Orçamento] = " & Orcamento)
   If Tb![Seqüência Do Pedido] > 0 Then
-     Set NFe = VgDb.OpenRecordSet("SELECT [Seqüência Da Nota Fiscal] Seq From [Nota Fiscal] Where [Seqüência Do Pedido] = " & Tb![Seqüência Do Pedido])
-     txtNFe.Value = NFe!Seq
+     Set NFe = vgDb.OpenRecordSet("SELECT [Seqüência Da Nota Fiscal] Seq From [Nota Fiscal] Where [Seqüência Do Pedido] = " & Tb![Seqüência Do Pedido])
+     Txtnfe.Value = NFe!Seq
  ' Else
      'MsgBox("Pedido Invalido!")
-  End If   
+  End If
  
 End Sub
 
 
-Private Function Filtro1() As String  
- Filtro1 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento          
+Private Function Filtro1() As String
+ Filtro1 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento
 End Function
 
 Private Function Filtro2() As String
- Filtro2 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento         
+ Filtro2 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento
 End Function
 
 Private Function Filtro3() As String
- Filtro3 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento  
+ Filtro3 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento
 End Function
 
 
-Private Sub MYSQL()
+Private Sub MySQL()
  Dim SQL As String
  Dim Tb1 As New GRecordSet
- Dim SeqItem As Integer 
+ Dim SeqItem As Integer
  Dim cnGas As ADODB.Connection, rsGas As ADODB.RecordSet
  
- Set Tb1 = VgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seqüência Do Orçamento] = " & Orcamento)
+ Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seqüência Do Orçamento] = " & Orcamento)
  
  If Tb1.RecordCount > 0 Then
-    Exit Sub  
+    Exit Sub
  Else
-    Set Tb1 = Nothing   
+    Set Tb1 = Nothing
  End If
  
  Set cnGas = New ADODB.Connection
@@ -734,13 +613,13 @@ Private Sub MYSQL()
  
  If EstaEmIDE Then 'MERDA
     'cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER={SQL Server};Server=DESKTOP-NGAVDP6\SQLEXPRESS2014;Integrated Security=SSPI;Trusted_Connection=YES"'"Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-NGAVDP6\SQLEXPRESS2014;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=YES"
-    cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-CHS14C0\SQLIRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES;Database=IRRIGACAO" 
- Else   
+    cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-CHS14C0\SQLIRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES;Database=IRRIGACAO"
+ Else
     cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=SRVSQL\SQLEXPRESS;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=NO"
  End If
  cnGas.Open
                                                                                                                                                                                                           
- Set Tb1 = VgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
+ Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
  SeqItem = 1
  SQL = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
@@ -749,15 +628,15 @@ Private Sub MYSQL()
  SQL = SQL & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
              "Sum([Peças do Orçamento].[Valor Total]) As Total, [Peças do Orçamento].[Valor Unitário] " & _
              "FROM [Peças do Orçamento] left join Orçamento On [Peças do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Produtos On [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro1()            
+             "Left Join Produtos On [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro1()
  SQL = SQL & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
  SQL = SQL & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
              "FROM [Conjuntos do Orçamento] Left Join Orçamento On [Conjuntos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Conjuntos On [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] WHERE " & Filtro2()          
- SQL = SQL & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union " 
+             "Left Join Conjuntos On [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] WHERE " & Filtro2()
+ SQL = SQL & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
  SQL = SQL & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
              "FROM [Produtos do Orçamento] left Join Orçamento On [Produtos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Produtos On [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro3()         
+             "Left Join Produtos On [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro3()
  SQL = SQL & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
  
  rsGas.Open SQL, cnGas, adOpenStatic, adLockPessimistic
@@ -766,14 +645,14 @@ Private Sub MYSQL()
  Do While Not rsGas.EOF
     With Tb1
      .AddNew
-       ![Seqüência Do Orçamento] = Orcamento
-       ![Sequencia Do Item] = SeqItem
+       ![Seqüência do Orçamento] = Orcamento
+       ![Sequencia do Item] = SeqItem
         If rsGas!Tipo = 1 Or rsGas!Tipo = 3 Then
-           ![Seqüência Do Produto] = rsGas![Seqüência Do Produto]
-        End If   
+           ![Seqüência do Produto] = rsGas![Seqüência do Produto]
+        End If
         If rsGas!Tipo = 2 Then
-           ![Seqüência Do Conjunto] = rsGas![Seqüência Do Produto]
-        End If   
+           ![Seqüência do Conjunto] = rsGas![Seqüência do Produto]
+        End If
        !Quantidade = rsGas!Quantidade
        ![Valor Total] = rsGas!Total
        ![Valor Unitário] = rsGas![Valor Unitário]
@@ -784,7 +663,7 @@ Private Sub MYSQL()
  rsGas.MoveNext
  SeqItem = SeqItem + 1
  Loop
- rsGas.Close 
+ rsGas.Close
                
 End Sub
 
@@ -797,12 +676,12 @@ End Sub
 ' Dim ProdAux2 As New GRecordSet, TemReceita As New GRecordSet
 ' Dim Lances As New GRecordSet, i As Long, NaoIncluir As New GRecordSet
 ' Dim ReceitaAuxSec As New GRecordSet, Tb1 As New GRecordSet, TB2 As New GRecordSet
-' Dim ConjAux As New GRecordSet, MPrimaSec As New GRecordSet, PodeIncluir As New GRecordSet 
-' Dim TerceirosAux As New GRecordSet, TbAux As New GRecordSet, TbAux2 As New GRecordSet  
-' Dim SemiPronto As New GRecordSet, TbGravar As New GRecordSet 
-' Dim HSemi As New GRecordSet   
+' Dim ConjAux As New GRecordSet, MPrimaSec As New GRecordSet, PodeIncluir As New GRecordSet
+' Dim TerceirosAux As New GRecordSet, TbAux As New GRecordSet, TbAux2 As New GRecordSet
+' Dim SemiPronto As New GRecordSet, TbGravar As New GRecordSet
+' Dim HSemi As New GRecordSet
        
- 'Screen.MousePointer = vbHourglass     
+ 'Screen.MousePointer = vbHourglass
               
   'Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Orçamento] = " & Orcamento)
   ' If Tb.RecordCount > 0 Then
@@ -844,11 +723,11 @@ End Sub
   '            Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência Do Produto])
   '           !Localização = LocalAux!Localização
   '          .Update
-  '          .BookMark = .LastModified 
+  '          .BookMark = .LastModified
   '          End With
   '         End If
   '      TerceirosAux.MoveNext
-  '      Loop       
+  '      Loop
         
   '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento)
         
@@ -856,10 +735,10 @@ End Sub
   '           If Not Vazio (TbGravar!Situação) Then
   '              If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
   '                 VgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]
-  '              End If    
+  '              End If
   '           End If
   '        TbGravar.MoveNext
-  '        Loop    
+  '        Loop
         
   '        AtualizaPai
         
@@ -895,7 +774,7 @@ End Sub
   '                     .Update
   '                     .BookMark = .LastModified
   '                  End With
-  '                End If  
+  '                End If
   '                 'Secundaria
   '                Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seqüência do Produto] = " & MP![Seqüência da Matéria Prima])
   '                    If ReceitaAuxSec!x Then
@@ -924,7 +803,7 @@ End Sub
   '                         Tb1.MoveNext
   '                        Loop
   '                    End If
-  '                  
+  '
   '                  'fim Secundaria
   '               MP.MoveNext
   '               Loop
@@ -991,7 +870,7 @@ End Sub
  '                   Loop
  '                   Next
  '              Lances.MoveNext
- '              Loop       
+ '              Loop
  '      'AdqTerceiros TB Pai
  '       Set Tb = Nothing
  '       Set Tb = VgDb.OpenRecordSet("Receita Primaria")
@@ -1012,24 +891,24 @@ End Sub
  '             Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência Do Produto])
  '            !Localização = LocalAux!Localização
  '          .Update
- '          .BookMark = .LastModified 
+ '          .BookMark = .LastModified
  '          End With
  '       TerceirosAux.MoveNext
-  '      Loop       
+  '      Loop
                       
       'Conjuntos
  '      Set Tb = Nothing
  '      Set MP = Nothing
        
- '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seqüência do Orçamento] = " & Orcamento)' 2 = conjunto        
+ '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seqüência do Orçamento] = " & Orcamento)' 2 = conjunto
  '      Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
  '       Do While Not Tb.EOF
- '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])  'so ad terc   
+ '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])  'so ad terc
  '          If MP.RecordCount > 0 Then
  '                Do While Not MP.EOF
  '                Set NaoIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência Do Produto])
- '                 If Not NaoIncluir!Y Then 
+ '                 If Not NaoIncluir!Y Then
  '                   With ConjAux 'Validar Nao sair no ckeck list
  '                      .AddNew
  '                         '![Seqüência Do Produto] = 13242
@@ -1037,7 +916,7 @@ End Sub
  '                         Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência Do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
  '                         ![Seqüência Do Produto] = HSemi![Seqüência Do Produto]
                           
- '                         ![Seqüência da Matéria Prima] = MP![Seqüência Do Produto]  
+ '                         ![Seqüência da Matéria Prima] = MP![Seqüência Do Produto]
  '                         ![Seqüência Do Orçamento] = Orcamento
  '                         !Quantidade = MP![Quantidade Do Produto] * Tb!Quantidade
  '                          Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
@@ -1051,10 +930,10 @@ End Sub
  '                      .Update
  '                      .BookMark = .LastModified
  '                   End With
- '                 End If  
+ '                 End If
  '                MP.MoveNext
  '                Loop
- '             End If 
+ '             End If
  '       Tb.MoveNext
  '       Loop
        'Secundaria Conjuntos
@@ -1066,16 +945,16 @@ End Sub
  '      Set TB2 = Nothing
  '      Set ReceitaAuxSec = Nothing
        
- '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seqüência do Orçamento] = " & Orcamento)        
+ '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seqüência do Orçamento] = " & Orcamento)
  '      Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
  '       Do While Not Tb.EOF
- '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])   
+ '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])
  '          If MP.RecordCount > 0 Then
  '           Do While Not MP.EOF
  '            Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & MP![Seqüência Do Produto])
  '             Do While Not Tb1.EOF
- '             Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seqüência do Produto] = " & Tb1![Seqüência da Matéria Prima]) 
+ '             Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seqüência do Produto] = " & Tb1![Seqüência da Matéria Prima])
  '             If Not TB2!Y Then
  '              With ConjAux
  '              .AddNew
@@ -1107,7 +986,7 @@ End Sub
   '            End If
   '            'Dentro da Outra Receita
   '            Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y, [Mostrar Receita Secundaria] X FROM Produtos WHERE [Seqüência do Produto] = " & Tb1![Seqüência da Matéria Prima])
-  '             If PodeIncluir!X Then 
+  '             If PodeIncluir!X Then
   '                If Not PodeIncluir!Y Then
   '                Set MPrimaSec = VgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & Tb1![Seqüência da Matéria Prima])
   '                  If MPrimaSec.RecordCount > 0 Then
@@ -1138,30 +1017,30 @@ End Sub
   '                     MPrimaSec.MoveNext
   '                     Loop
   '                  End If
-  '                 End If 
+  '                 End If
   '             End If
   '            Tb1.MoveNext
   '            Loop
   '          MP.MoveNext
   '          Loop
-  '          End If 
+  '          End If
   '      Tb.MoveNext
   '      Loop
              
   '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento)
-  '      
+  '
   '        Do While Not TbGravar.EOF
   '           If Not Vazio (TbGravar!Situação) Then
   '              If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
-  '                 VgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]   
-  '              End If   
+  '                 VgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]
+  '              End If
   '           End If
   '        TbGravar.MoveNext
-  '        Loop       
-  '           
+  '        Loop
+  '
   '     AtualizaPai
-  '                            
-  '     Screen.MousePointer = vbDefault         
+  '
+  '     Screen.MousePointer = vbDefault
   '     frmRecprima.Show
   '     frmRecprima.vgFiltroInicial = "[Seqüência do Orçamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
   '     InicializaFiltro frmRecprima
@@ -1174,7 +1053,7 @@ End Sub
 ' If Prodstatus = 0 Then Exit Sub
 ' VgDb.Execute "UPDATE [Itens Pendentes] Set Situação = '" & Statustela & "'" & " Where [Seqüência do Produto] > 0 And [Seqüência do Produto] = " & Prodstatus & " And [Seqüência do Orçamento] = " & Orcamento
 '  If Statustela = "Entregue ao Cliente" Or Statustela = "Separado p/ Entregar" Then
-'     VgDb.Execute "UPDATE [Receita Primaria] Set Situação = '" & Statustela & "'" & " Where [Seqüência do Produto] > 0 And [Seqüência do Produto] = " & Prodstatus & " And [Seqüência do Orçamento] = " & Orcamento 
+'     VgDb.Execute "UPDATE [Receita Primaria] Set Situação = '" & Statustela & "'" & " Where [Seqüência do Produto] > 0 And [Seqüência do Produto] = " & Prodstatus & " And [Seqüência do Orçamento] = " & Orcamento
 '  End If
 ' grdContas.Rebind
 ' Txtsituacao.Text = ""
@@ -1185,7 +1064,7 @@ Private Function MostraItem() As String
   Dim Tb1 As New GRecordSet
   
   'Set Tb = VgDb.OpenRecordSet("SELECT [Seqüência do Produto] Cod FROM [Itens Pendentes] WHERE [Sequencia do Item] = " & Prodstatus & " And [Seqüência do Orçamento] = " & Orcamento)
-  Set Tb1 = VgDb.OpenRecordSet("SELECT Descrição Nome FROM Produtos WHERE [Seqüência do Produto] = " & Prodstatus)
+  Set Tb1 = vgDb.OpenRecordSet("SELECT Descrição Nome FROM Produtos WHERE [Seqüência do Produto] = " & Prodstatus)
   MostraItem = Tb1!Nome
   
 End Function
@@ -1198,37 +1077,37 @@ Private Sub AtualizaPai()
  Dim TbVal As New GRecordSet
  
  Screen.MousePointer = vbHourglass 'Ampulheta
- Set TbVal = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento) 
- Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
+ Set TbVal = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
  
- If TbVal.RecordCount = 0 Then : Exit Sub
+ If TbVal.RecordCount = 0 Then: Exit Sub
  
 ' Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
  
  'Entregues ao Cliente
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Entregue ao Cliente'") 
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Entregue ao Cliente'")
   '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Entregue ao Cliente' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '            End If
   '       Tb1.MoveNext
-  '       Loop  
+  '       Loop
   'Tb.MoveNext
   'Loop
 
   
   'Na Galvanização
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Na Galvanização'") 
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Na Galvanização'")
   '            If PodeAtualizar.RecordCount > 0 Then
   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Na Galvanização' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '            End If
   '       Tb1.MoveNext
-  '       Loop  
+  '       Loop
   'Tb.MoveNext
   'Loop
   
@@ -1236,14 +1115,14 @@ Private Sub AtualizaPai()
   
   'Á Produzir
   Do While Not Tb.EOF
-     Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+     Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência do Produto])
          Do While Not Tb1.EOF
-            Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Á Produzir'") 
+            Set PodeAtualizar = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência do Produto] & " And Situação = 'Á Produzir'")
               If PodeAtualizar.RecordCount > 0 Then
-                 VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Á Produzir' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
+                 vgDb.Execute ("UPDATE [Itens Pendentes] Set Situação = 'Á Produzir' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência do Produto])
               End If
          Tb1.MoveNext
-         Loop  
+         Loop
   Tb.MoveNext
   Loop
   
@@ -1252,14 +1131,14 @@ Private Sub AtualizaPai()
   
   'Falta MPrima
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Falta MPrima'") 
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Falta MPrima'")
   '            If PodeAtualizar.RecordCount > 0 Then
   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Falta MPrima' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '            End If
   '       Tb1.MoveNext
-  '       Loop  
+  '       Loop
   'Tb.MoveNext
   'Loop
     
@@ -1268,14 +1147,14 @@ Private Sub AtualizaPai()
   'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
   
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Á Galnanizar'") 
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Á Galnanizar'")
   '            If PodeAtualizar.RecordCount > 0 Then
   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Á Galnanizar' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '            End If
   '       Tb1.MoveNext
-  '       Loop  
+  '       Loop
   'Tb.MoveNext
   'Loop
   
@@ -1283,14 +1162,14 @@ Private Sub AtualizaPai()
   'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
  
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Separado p/ Montar'") 
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Separado p/ Montar'")
   '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Separado p/ Montar' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
   '            End If
   '       Tb1.MoveNext
-  '       Loop  
+  '       Loop
   'Tb.MoveNext
   'Loop
   
@@ -1299,18 +1178,18 @@ Private Sub AtualizaPai()
    'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And Situação <> '' Order By [Seqüência do Produto]")
  
    'Do While Not Tb.EOF
-   '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])  
+   '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
    '       Do While Not Tb1.EOF
-   '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Separado p/ Entregar'") 
+   '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto] & " And Situação = 'Separado p/ Entregar'")
    '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
    '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situação = 'Separado p/ Entregar' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Tb![Seqüência Do Produto])
    '            End If
    '       Tb1.MoveNext
-   '      Loop  
+   '      Loop
   'Tb.MoveNext
   'Loop
   
-  grdContas.Rebind
+  grdContas.ReBind
   Screen.MousePointer = vbDefault 'Ampulheta
   
 End Sub
@@ -1319,19 +1198,19 @@ End Sub
 Private Function MostraCompra(Item As Long) As Long
  Dim Tb As New GRecordSet
  
- Set Tb = VgDb.OpenRecordSet("SELECT [Pedido de Compra Novo].[Id do Pedido], [Id do Produto] From [Pedido de Compra Novo] " & _
+ Set Tb = vgDb.OpenRecordSet("SELECT [Pedido de Compra Novo].[Id do Pedido], [Id do Produto] From [Pedido de Compra Novo] " & _
                              "Left Join [Produtos Do Pedido Compra] On [Pedido de Compra Novo].[Id Do Pedido] = [Produtos Do Pedido Compra].[Id Do Pedido] " & _
                              "Left Join [Orçamentos da compra] On [Pedido de Compra Novo].[Id Do Pedido] = [Orçamentos da compra].[Id Do Pedido] " & _
-                             "Where Cancelado = 0 And Prepedido = 0 And [Orçamentos da compra].[Seqüência do Orçamento] = " & Orcamento & " And [Id do Produto] = " & Item) 
+                             "Where Cancelado = 0 And Prepedido = 0 And [Orçamentos da compra].[Seqüência do Orçamento] = " & Orcamento & " And [Id do Produto] = " & Item)
  If Tb.RecordCount > 0 Then
-    If Tb![Id Do Pedido] > 0 Then                             
-       MostraCompra = Tb![Id Do Pedido]
+    If Tb![Id do Pedido] > 0 Then
+       MostraCompra = Tb![Id do Pedido]
     Else
-       MostraCompra = 0        
-    End If 
+       MostraCompra = 0
+    End If
  Else
- MostraCompra = 0 
- End If 
+ MostraCompra = 0
+ End If
 
 End Function
 
@@ -1339,22 +1218,22 @@ End Function
 Private Function QtdeRecebida(Pedido As Long, Produto As Long) As Double
  Dim Tb As New GRecordSet
 
- Set Tb = VgDb.OpenRecordSet("SELECT [Qtde Recebida] From [Bx Produtos Pedido Compra] Where [Id do Pedido] = " &  Pedido & " And [Id do Produto] = " & Produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT [Qtde Recebida] From [Bx Produtos Pedido Compra] Where [Id do Pedido] = " & Pedido & " And [Id do Produto] = " & Produto)
   
    If Tb.RecordCount > 0 Then
       If Tb![Qtde Recebida] > 0 Then
          QtdeRecebida = Tb![Qtde Recebida]
       Else
          QtdeRecebida = 0
-      End If 
-   End If    
+      End If
+   End If
  
 End Function
 
 Private Function QtdeRestante(Pedido As Long, Produto As Long) As Double
  Dim Tb As New GRecordSet
 
- Set Tb = VgDb.OpenRecordSet("SELECT [Qtde Restante] From [Bx Produtos Pedido Compra] Where [Id do Pedido] = " &  Pedido & " And [Id do Produto] = " & Produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT [Qtde Restante] From [Bx Produtos Pedido Compra] Where [Id do Pedido] = " & Pedido & " And [Id do Produto] = " & Produto)
   
    If Tb.RecordCount > 0 Then
       If Tb![Qtde Restante] > 0 Then
@@ -1362,7 +1241,7 @@ Private Function QtdeRestante(Pedido As Long, Produto As Long) As Double
       Else
          QtdeRestante = 0
       End If
-   End If     
+   End If
  
 End Function
 
@@ -1370,7 +1249,7 @@ End Function
 Private Function QtdeTotal(Pedido As Long, Produto As Long) As Double
  Dim Tb As New GRecordSet
 
- Set Tb = VgDb.OpenRecordSet("SELECT Qtde From [Produtos do Pedido Compra] Where [Id do Pedido] = " &  Pedido & " And [Id do Produto] = " & Produto)
+ Set Tb = vgDb.OpenRecordSet("SELECT Qtde From [Produtos do Pedido Compra] Where [Id do Pedido] = " & Pedido & " And [Id do Produto] = " & Produto)
   
    If Tb.RecordCount > 0 Then
       If Tb!Qtde > 0 Then
@@ -1378,7 +1257,7 @@ Private Function QtdeTotal(Pedido As Long, Produto As Long) As Double
       Else
          QtdeTotal = 0
       End If
-   End If     
+   End If
  
 End Function
 
@@ -1392,11 +1271,11 @@ Private Function MostraFinanceiro(Pedido As Long) As String
   
   If Tb1!Pago > 0 And Tb1!Restante > 0 Then
      MostraFinanceiro = "Pago Parcial"
-  ElseIf Tb1!Pago > 0 And Tb1!Restante = 0 Then  
+  ElseIf Tb1!Pago > 0 And Tb1!Restante = 0 Then
      MostraFinanceiro = "Liquidado"
-  ElseIf Tb1!Pago = 0 And Tb1!Restante > 0 Then      
+  ElseIf Tb1!Pago = 0 And Tb1!Restante > 0 Then
     MostraFinanceiro = "A Pagar"
-  Else MostraFinanceiro = ""   
+  Else: MostraFinanceiro = ""
   End If
     
 End Function
@@ -1406,9 +1285,9 @@ Private Sub AbreMP()
 
  frmRelfalmp.Show
  frmRelfalmp.SetFocus
- frmRelfalmp.txtOrcamento.Value = Orcamento 
+ frmRelfalmp.txtOrcamento.Value = Orcamento
  frmRelfalmp.BtnOk.SetFocus
- Sendk(13)
+ SendK (13)
  
 End Sub
 
@@ -1423,11 +1302,11 @@ Dim LocalAux As New GRecordSet
       Do While Not Tb.EOF
          With Tb
           .Edit
-            ![Id Do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
-            !Pagto = MostraFinanceiro(![Id Do Pedido])
-            ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-            ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-            ![Qtde Total] = QtdeTotal(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
+            ![Id do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
+            !Pagto = MostraFinanceiro(![Id do Pedido])
+            ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+            ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+            ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seqüência da Matéria Prima])
              Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima])
             !Localização = LocalAux!Localização
           .Update
@@ -1440,31 +1319,31 @@ End Sub
 Private Sub RecPrima(Item As Long)
  Dim TemReceita As New GRecordSet
  Dim PodeIncluir As New GRecordSet, LocalAux As New GRecordSet
- Dim Tb As New GRecordSet, SeqItem As New GRecordSet 
+ Dim Tb As New GRecordSet, SeqItem As New GRecordSet
  Dim i As Integer, Lances As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
  'Set Lances = VgDb.OpenRecordSet("SELECT QUANTIDADE FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & Item)
 
- VgDb.Execute "DELETE FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência Do Produto] = " & Item 
+ vgDb.Execute "DELETE FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência Do Produto] = " & Item
 
    'For i = 1 To Lances!Quantidade
    Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] Where [Seqüência Do Produto] = " & Item)
      Do While Not TemReceita.EOF
-        Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seqüência do Produto] = " & TemReceita![Seqüência da Matéria Prima])
-          If Not PodeIncluir!Y Then
+        Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seqüência do Produto] = " & TemReceita![Seqüência da Matéria Prima])
+          If Not PodeIncluir!y Then
              With Tb
                .AddNew
-                  ![Seqüência Do Produto] = Item
+                  ![Seqüência do Produto] = Item
                   ![Seqüência da Matéria Prima] = TemReceita![Seqüência da Matéria Prima]
-                  ![Seqüência Do Orçamento] = Orcamento
+                  ![Seqüência do Orçamento] = Orcamento
                   !Quantidade = TemReceita![Quantidade de Matéria Prima] '* ReceitaAux!Quantidade
                    Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                  ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                  ![Id Do Pedido] = MostraCompra(TemReceita![Seqüência da Matéria Prima])
-                  !Pagto = MostraFinanceiro(![Id Do Pedido])
-                  ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TemReceita![Seqüência da Matéria Prima])
-                  ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TemReceita![Seqüência da Matéria Prima])
+                  ![Sequencia do Item] = SeqItem!Sequencia + 1
+                  ![Id do Pedido] = MostraCompra(TemReceita![Seqüência da Matéria Prima])
+                  !Pagto = MostraFinanceiro(![Id do Pedido])
+                  ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seqüência da Matéria Prima])
+                  ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seqüência da Matéria Prima])
                    Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TemReceita![Seqüência da Matéria Prima])
                   !Localização = LocalAux!Localização
                 .Update
@@ -1472,20 +1351,20 @@ Private Sub RecPrima(Item As Long)
              End With
           End If
       TemReceita.MoveNext
-      Loop 
-      'Next  
+      Loop
+      'Next
       txtProdstatus.Text = ""
-End Sub        
+End Sub
 
 Private Sub Extornar()
  Dim Tb As New GRecordSet
  
- Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita primaria] WHERE [Seqüência do Orçamento] = " & Orcamento)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita primaria] WHERE [Seqüência do Orçamento] = " & Orcamento)
   
   If Tb.RecordCount > 0 Then
-     VgDb.OpenRecordSet "DELETE FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento
+     vgDb.OpenRecordSet "DELETE FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento
   End If
-  MsgBox("Concluido com Sucesso!")
+  MsgBox ("Concluido com Sucesso!")
  
 End Sub
 
@@ -1521,11 +1400,11 @@ Private Sub ReceitaP()
         Do While Not Tb.EOF
            With Tb
             .Edit
-              ![Id Do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
-              !Pagto = MostraFinanceiro(![Id Do Pedido])
-              ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-              ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-              ![Qtde Total] = QtdeTotal(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
+              ![Id do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
+              !Pagto = MostraFinanceiro(![Id do Pedido])
+              ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+              ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+              ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seqüência da Matéria Prima])
                Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima])
               !Localização = LocalAux!Localização
             .Update
@@ -1538,21 +1417,21 @@ Private Sub ReceitaP()
     Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seqüência do Orçamento] = " & Orcamento)
     
         Do While Not TerceirosAux.EOF
-           Set TbAux2 = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência Do Produto] & " And [Seqüência do Orçamento] = " & Orcamento)
+           Set TbAux2 = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência do Produto] & " And [Seqüência do Orçamento] = " & Orcamento)
            If TbAux2.RecordCount = 0 Then
             With TbAux
             .AddNew
-             ![Seqüência Do Produto] = TerceirosAux![Seqüência Do Produto]
-             ![Seqüência da Matéria Prima] = TerceirosAux![Seqüência Do Produto]
-             ![Seqüência Do Orçamento] = Orcamento
+             ![Seqüência do Produto] = TerceirosAux![Seqüência do Produto]
+             ![Seqüência da Matéria Prima] = TerceirosAux![Seqüência do Produto]
+             ![Seqüência do Orçamento] = Orcamento
              !Quantidade = TerceirosAux!Quantidade
               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-             ![Sequencia Do Item] = SeqItem!Sequencia + 1
-             ![Id Do Pedido] = MostraCompra(TerceirosAux![Seqüência Do Produto])
-             !Pagto = MostraFinanceiro(![Id Do Pedido])
-             ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seqüência Do Produto])
-             ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seqüência Do Produto])
-              Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência Do Produto])
+             ![Sequencia do Item] = SeqItem!Sequencia + 1
+             ![Id do Pedido] = MostraCompra(TerceirosAux![Seqüência do Produto])
+             !Pagto = MostraFinanceiro(![Id do Pedido])
+             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seqüência do Produto])
+             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seqüência do Produto])
+              Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência do Produto])
              !Localização = LocalAux!Localização
             .Update
             .BookMark = .LastModified
@@ -1566,7 +1445,7 @@ Private Sub ReceitaP()
           Do While Not TbGravar.EOF
              If Not Vazio(TbGravar!Situação) Then
                 If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]
+                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1579,15 +1458,15 @@ Private Sub ReceitaP()
           'Do While Not TbGravar.EOF
           '   If Not Vazio(TbGravar!Situação) Then
           '      If TbGravar!Situação = "Á Produzir" Then
-          '         Set TbMat3 = VgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]) 
+          '         Set TbMat3 = VgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto])
                     'produto em processo
           '           Do While Not TbMat3.EOF
           '              Set SemiPronto = VgDb.OpenRecordSet("SELECT [Tipo do Produto] Tipo From Produtos WHERE [Seqüência do Produto] = " & TbMat3![Seqüência da Matéria Prima])
           '                If SemiPronto!Tipo = 6 then'produto em processo
-          '                   vgDb.Execute "Update [Receita Primaria] Set Situação = 'Á Produzir' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência da Matéria Prima] = " & TbMat3![Seqüência da Matéria Prima]  
+          '                   vgDb.Execute "Update [Receita Primaria] Set Situação = 'Á Produzir' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência da Matéria Prima] = " & TbMat3![Seqüência da Matéria Prima]
           '                End If
           '              TbMat3.MoveNext
-          '           Loop   
+          '           Loop
           '      End If
           '   End If
           'TbGravar.MoveNext
@@ -1607,23 +1486,23 @@ Private Sub ReceitaP()
       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
       Set ProdAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where Lance = 0 And [Seqüência do Orçamento] = " & Orcamento)
          Do While Not ProdAux.EOF
-            Set MP = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & ProdAux![Seqüência Do Produto])
+            Set MP = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & ProdAux![Seqüência do Produto])
               If MP.RecordCount > 0 Then
                  Do While Not MP.EOF
                  Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência da Matéria Prima])
                   If Not PodeIncluir!y Then
                     With Tb
                        .AddNew
-                          ![Seqüência Do Produto] = MP![Seqüência Do Produto]
+                          ![Seqüência do Produto] = MP![Seqüência do Produto]
                           ![Seqüência da Matéria Prima] = MP![Seqüência da Matéria Prima]
-                          ![Seqüência Do Orçamento] = Orcamento
+                          ![Seqüência do Orçamento] = Orcamento
                           !Quantidade = MP![Quantidade de Matéria Prima] * ProdAux!Quantidade
                            Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                          ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                          ![Id Do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
-                          !Pagto = MostraFinanceiro(![Id Do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
+                          ![Sequencia do Item] = SeqItem!Sequencia + 1
+                          ![Id do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
+                          !Pagto = MostraFinanceiro(![Id do Pedido])
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seqüência da Matéria Prima])
                            Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima])
                           !Localização = LocalAux!Localização
                        .Update
@@ -1639,16 +1518,16 @@ Private Sub ReceitaP()
                            If Not TB2!y Then
                            With Tb
                              .AddNew
-                               ![Seqüência Do Produto] = ProdAux![Seqüência Do Produto]
+                               ![Seqüência do Produto] = ProdAux![Seqüência do Produto]
                                ![Seqüência da Matéria Prima] = Tb1![Seqüência da Matéria Prima]
-                               ![Seqüência Do Orçamento] = Orcamento
+                               ![Seqüência do Orçamento] = Orcamento
                                !Quantidade = Tb1![Quantidade de Matéria Prima] * ProdAux!Quantidade
                                 Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                               ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                               ![Id Do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
-                               !Pagto = MostraFinanceiro(![Id Do Pedido])
-                               ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-                               ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
+                               ![Sequencia do Item] = SeqItem!Sequencia + 1
+                               ![Id do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
+                               !Pagto = MostraFinanceiro(![Id do Pedido])
+                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seqüência da Matéria Prima])
                                 Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima])
                                !Localização = LocalAux!Localização
                             .Update
@@ -1670,22 +1549,22 @@ Private Sub ReceitaP()
       Set Lances = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] LEFT JOIN Produtos ON PRODUTOS.[Seqüência do Produto] = [Itens Pendentes].[Seqüência do Produto] WHERE Lance = 1 And [Seqüência do Orçamento] = " & Orcamento)
                Do While Not Lances.EOF
                    For i = 1 To Lances!Quantidade
-                     Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] Where [Seqüência Do Produto] = " & Lances![Seqüência Do Produto])
+                     Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] Where [Seqüência Do Produto] = " & Lances![Seqüência do Produto])
                      Do While Not TemReceita.EOF
                      Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seqüência do Produto] = " & TemReceita![Seqüência da Matéria Prima])
                        If Not PodeIncluir!y Then
                         With Tb
                          .AddNew
-                          ![Seqüência Do Produto] = Lances![Seqüência Do Produto]
+                          ![Seqüência do Produto] = Lances![Seqüência do Produto]
                           ![Seqüência da Matéria Prima] = TemReceita![Seqüência da Matéria Prima]
-                          ![Seqüência Do Orçamento] = Orcamento
+                          ![Seqüência do Orçamento] = Orcamento
                           !Quantidade = TemReceita![Quantidade de Matéria Prima] '* ReceitaAux!Quantidade
                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                          ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                          ![Id Do Pedido] = MostraCompra(TemReceita![Seqüência da Matéria Prima])
-                          !Pagto = MostraFinanceiro(![Id Do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TemReceita![Seqüência da Matéria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TemReceita![Seqüência da Matéria Prima])
+                          ![Sequencia do Item] = SeqItem!Sequencia + 1
+                          ![Id do Pedido] = MostraCompra(TemReceita![Seqüência da Matéria Prima])
+                          !Pagto = MostraFinanceiro(![Id do Pedido])
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seqüência da Matéria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seqüência da Matéria Prima])
                            Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TemReceita![Seqüência da Matéria Prima])
                           !Localização = LocalAux!Localização
                         .Update
@@ -1701,16 +1580,16 @@ Private Sub ReceitaP()
                            If Not TB2!y Then
                             With Tb
                              .AddNew
-                               ![Seqüência Do Produto] = Lances![Seqüência Do Produto]
+                               ![Seqüência do Produto] = Lances![Seqüência do Produto]
                                ![Seqüência da Matéria Prima] = Tb1![Seqüência da Matéria Prima]
-                               ![Seqüência Do Orçamento] = Orcamento
+                               ![Seqüência do Orçamento] = Orcamento
                                !Quantidade = Tb1![Quantidade de Matéria Prima] '* Lances!Quantidade
                                 Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                               ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                               ![Id Do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
-                               !Pagto = MostraFinanceiro(![Id Do Pedido])
-                               ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
-                               ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seqüência da Matéria Prima])
+                               ![Sequencia do Item] = SeqItem!Sequencia + 1
+                               ![Id do Pedido] = MostraCompra(Tb![Seqüência da Matéria Prima])
+                               !Pagto = MostraFinanceiro(![Id do Pedido])
+                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seqüência da Matéria Prima])
+                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seqüência da Matéria Prima])
                                 Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima])
                                !Localização = LocalAux!Localização
                             .Update
@@ -1733,17 +1612,17 @@ Private Sub ReceitaP()
         Do While Not TerceirosAux.EOF
            With Tb
            .AddNew
-             ![Seqüência Do Produto] = TerceirosAux![Seqüência Do Produto]
-             ![Seqüência da Matéria Prima] = TerceirosAux![Seqüência Do Produto]
-             ![Seqüência Do Orçamento] = Orcamento
+             ![Seqüência do Produto] = TerceirosAux![Seqüência do Produto]
+             ![Seqüência da Matéria Prima] = TerceirosAux![Seqüência do Produto]
+             ![Seqüência do Orçamento] = Orcamento
              !Quantidade = TerceirosAux!Quantidade
               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-             ![Sequencia Do Item] = SeqItem!Sequencia + 1
-             ![Id Do Pedido] = MostraCompra(TerceirosAux![Seqüência Do Produto])
-             !Pagto = MostraFinanceiro(![Id Do Pedido])
-             ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seqüência Do Produto])
-             ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seqüência Do Produto])
-              Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência Do Produto])
+             ![Sequencia do Item] = SeqItem!Sequencia + 1
+             ![Id do Pedido] = MostraCompra(TerceirosAux![Seqüência do Produto])
+             !Pagto = MostraFinanceiro(![Id do Pedido])
+             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seqüência do Produto])
+             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seqüência do Produto])
+              Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & TerceirosAux![Seqüência do Produto])
              !Localização = LocalAux!Localização
            .Update
            .BookMark = .LastModified
@@ -1759,28 +1638,28 @@ Private Sub ReceitaP()
        Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
         Do While Not Tb.EOF
-           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])  'so ad terc
+           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência do Conjunto])  'so ad terc
            If MP.RecordCount > 0 Then
                  Do While Not MP.EOF
-                 Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência Do Produto])
+                 Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência do Produto])
                   If Not NaoIncluir!y Then
                     With ConjAux 'Validar Nao sair no ckeck list
                        .AddNew
                           '![Seqüência Do Produto] = 13242
-                          ![Seqüência Do Conjunto] = MP![Seqüência Do Conjunto]
-                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência Do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
-                          ![Seqüência Do Produto] = 0 'HSemi![Seqüência do Produto]
+                          ![Seqüência do Conjunto] = MP![Seqüência do Conjunto]
+                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
+                          ![Seqüência do Produto] = 0 'HSemi![Seqüência do Produto]
                           
-                          ![Seqüência da Matéria Prima] = MP![Seqüência Do Produto]
-                          ![Seqüência Do Orçamento] = Orcamento
+                          ![Seqüência da Matéria Prima] = MP![Seqüência do Produto]
+                          ![Seqüência do Orçamento] = Orcamento
                           !Quantidade = MP![Quantidade Do Produto] * Tb!Quantidade
                            Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                          ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                          ![Id Do Pedido] = MostraCompra(MP![Seqüência Do Produto])
-                          !Pagto = MostraFinanceiro(![Id Do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MP![Seqüência Do Produto])
-                          ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MP![Seqüência Do Produto])
-                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência Do Produto])
+                          ![Sequencia do Item] = SeqItem!Sequencia + 1
+                          ![Id do Pedido] = MostraCompra(MP![Seqüência do Produto])
+                          !Pagto = MostraFinanceiro(![Id do Pedido])
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MP![Seqüência do Produto])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MP![Seqüência do Produto])
+                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & MP![Seqüência do Produto])
                           !Localização = LocalAux!Localização
                        .Update
                        .BookMark = .LastModified
@@ -1804,10 +1683,10 @@ Private Sub ReceitaP()
        Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
         Do While Not Tb.EOF
-           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência Do Conjunto])
+           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seqüência do Conjunto] = " & Tb![Seqüência do Conjunto])
            If MP.RecordCount > 0 Then
             Do While Not MP.EOF
-             Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & MP![Seqüência Do Produto])
+             Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & MP![Seqüência do Produto])
               Do While Not Tb1.EOF
               Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seqüência do Produto] = " & Tb1![Seqüência da Matéria Prima])
               If Not TB2!y Then
@@ -1815,11 +1694,11 @@ Private Sub ReceitaP()
                .AddNew
                  '![Seqüência do Produto] = 13242
                  ![Seqüência da Matéria Prima] = Tb1![Seqüência da Matéria Prima]
-                 ![Sequencia Produto Principal] = Tb1![Seqüência Do Produto]
-                 ![Seqüência Do Conjunto] = MP![Seqüência Do Conjunto]
-                   Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência Do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
-                  ![Seqüência Do Produto] = HSemi![Seqüência Do Produto]
-                 ![Seqüência Do Orçamento] = Orcamento
+                 ![Sequencia Produto Principal] = Tb1![Seqüência do Produto]
+                 ![Seqüência do Conjunto] = MP![Seqüência do Conjunto]
+                   Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
+                  ![Seqüência do Produto] = HSemi![Seqüência do Produto]
+                 ![Seqüência do Orçamento] = Orcamento
                  !Quantidade = Tb1![Quantidade de Matéria Prima] * Tb!Quantidade
                  
                    'Set SemiPronto = vgDb.OpenRecordSet("SELECT  Descrição From Produtos Where [Seqüência do Produto] = " & Tb1![Seqüência Do Produto])
@@ -1830,12 +1709,12 @@ Private Sub ReceitaP()
                    'End If
                  
                  Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                 ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                 ![Id Do Pedido] = MostraCompra(Tb1![Seqüência da Matéria Prima])
-                 !Pagto = MostraFinanceiro(![Id Do Pedido])
-                 ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb1![Seqüência da Matéria Prima])
-                 ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb1![Seqüência da Matéria Prima])
-                  Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb1![Seqüência Do Produto])
+                 ![Sequencia do Item] = SeqItem!Sequencia + 1
+                 ![Id do Pedido] = MostraCompra(Tb1![Seqüência da Matéria Prima])
+                 !Pagto = MostraFinanceiro(![Id do Pedido])
+                 ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb1![Seqüência da Matéria Prima])
+                 ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb1![Seqüência da Matéria Prima])
+                  Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & Tb1![Seqüência do Produto])
                  !Localização = LocalAux!Localização
                .Update
                .BookMark = .LastModified
@@ -1856,18 +1735,18 @@ Private Sub ReceitaP()
                           ![Seqüência da Matéria Prima] = MPrimaSec![Seqüência da Matéria Prima]
                          ' ![Sequencia produto principal] = MPrimaSec![Seqüência Do Produto]
                           ![Sequencia Produto Principal] = Tb1![Seqüência da Matéria Prima] 'MPrimaSec![Seqüência Do Produto]
-                          ![Seqüência Do Conjunto] = MP![Seqüência Do Conjunto]
+                          ![Seqüência do Conjunto] = MP![Seqüência do Conjunto]
                           
-                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência Do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
-                          ![Seqüência Do Produto] = HSemi![Seqüência Do Produto]
-                          ![Seqüência Do Orçamento] = Orcamento
+                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seqüência do Produto], Descrição From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seqüência do Produto] = Produtos.[Seqüência do Produto] Where [Seqüência do Conjunto] = " & MP![Seqüência do Conjunto] & " and Descrição Like '%Hidroturbo Semi Pronto%'")
+                          ![Seqüência do Produto] = HSemi![Seqüência do Produto]
+                          ![Seqüência do Orçamento] = Orcamento
                           !Quantidade = MPrimaSec![Quantidade de Matéria Prima] * Tb1![Quantidade de Matéria Prima] 'Tb!Quantidade
                            Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seqüência do Orçamento] = " & Orcamento)
-                          ![Sequencia Do Item] = SeqItem!Sequencia + 1
-                          ![Id Do Pedido] = MostraCompra(MPrimaSec![Seqüência da Matéria Prima])
-                          !Pagto = MostraFinanceiro(![Id Do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MPrimaSec![Seqüência da Matéria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MPrimaSec![Seqüência da Matéria Prima])
+                          ![Sequencia do Item] = SeqItem!Sequencia + 1
+                          ![Id do Pedido] = MostraCompra(MPrimaSec![Seqüência da Matéria Prima])
+                          !Pagto = MostraFinanceiro(![Id do Pedido])
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MPrimaSec![Seqüência da Matéria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MPrimaSec![Seqüência da Matéria Prima])
                            Set LocalAux = vgDb.OpenRecordSet("SELECT Localização From Produtos WHERE [Seqüência do Produto] = " & MPrimaSec![Seqüência da Matéria Prima])
                           !Localização = LocalAux!Localização
                         .Update
@@ -1892,7 +1771,7 @@ Private Sub ReceitaP()
           Do While Not TbGravar.EOF
              If Not Vazio(TbGravar!Situação) Then
                 If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência Do Produto]
+                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1964,7 +1843,7 @@ Private Sub PreValidaPedido()
                                   ") A " & _
                                   "WHERE [Seqüência do Orçamento] = " & Orcamento)
                                   
-   'Set Servicos = vgDb.OpenRecordSet("SELECT * FROM [Serviços do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)                                
+   'Set Servicos = vgDb.OpenRecordSet("SELECT * FROM [Serviços do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
                                                                
    If Itens.RecordCount = 0 Then Exit Sub
    
@@ -1974,11 +1853,11 @@ Private Sub PreValidaPedido()
  
    Do While Not Itens.EOF
 
-      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
+      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
       Itens.MoveNext
    Loop
       
-   If UBound(Vector) > 0 and vgPWUsuario <> "YGOR" Then
+   If UBound(Vector) > 0 And vgPWUsuario <> "YGOR" Then
       Mensagem = "Alguns Itens (sem conferencia da Receita):" & vbCrLf
       For Each Campo In Vector
          Mensagem = Mensagem & vbCrLf & Campo
@@ -2002,7 +1881,7 @@ End Sub
 Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
    Orcamento = txtCampo(0).Value
-   NroNFe = txtCampo(1).Value
+   NroNfe = txtCampo(1).Value
    Prodstatus = txtCampo(2).Value
    If Err Then Err.Clear                          'se deu algum erro, vamos resetá-lo
 End Sub
@@ -2023,7 +1902,7 @@ End Sub
 'executa processos/validacoes nos campos do formuário
 Public Function Executar(vgOq As String) As String
    Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
-   On Error Goto DeuErro                          'fica na espera de um erro...
+   On Error GoTo DeuErro                          'fica na espera de um erro...
    vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
    vgOk = True                                    'se a validação esta OK
    vgNVez = 0                                     'porque não fez o processo/validacoes
@@ -2058,7 +1937,7 @@ DeuErro:
             Resume                                'antes de tentar
          End If
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
 End Function
 
 'mostra fórmulas no formulário
@@ -2168,7 +2047,7 @@ Private Sub Form_Load()
    Set mmCampo(0).Picture = LoadPicture(LoadGasPicture(41925))
    Set Txtorc = txtCampo(0)
    Set grdContas = Grid(0)
-   Set Lblajuste = Label(3)
+   Set lblAjuste = Label(3)
    Set Txtnfe = txtCampo(1)
    Set txtProdstatus = txtCampo(2)
    Set Grdcontas1 = Grid(1)
@@ -2188,7 +2067,7 @@ Private Sub Form_Load()
    ExecutaVisivel
    ExecutaPreValidacao
    MostraFormulas
-   CarregaTotalizador  
+   CarregaTotalizador
    Screen.MousePointer = vbDefault
    vgPriVez = False
    Exit Sub
@@ -2262,10 +2141,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -2276,7 +2155,7 @@ Private Sub Form_Unload(Cancel As Integer)
    FinalizaForm Me
    Set Txtorc = Nothing
    Set grdContas = Nothing
-   Set Lblajuste = Nothing
+   Set lblAjuste = Nothing
    Set Txtnfe = Nothing
    Set txtProdstatus = Nothing
    Set Grdcontas1 = Nothing
@@ -2302,17 +2181,17 @@ Private Sub Botao_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    Select Case Index
       Case 0
-         ReceitaP  
+         ReceitaP
       Case 1
          hMenu = CreatePopupMenu()
          AppendMenu hMenu, MF_STRING, 1, "Situação do Pedido"
          GetCursorPos pt
-         AcaoPopup0 TrackPopupMenuEx(hMenu, TPM_LEFTALIGN Or TPM_RETURNCMD Or TPM_RIGHTBUTTON, Pt.x, Pt.y, Me.HWnd, ByVal 0&)
+         AcaoPopUp0 TrackPopupMenuEx(hMenu, TPM_LEFTALIGN Or TPM_RETURNCMD Or TPM_RIGHTBUTTON, pt.x, pt.y, Me.hWnd, ByVal 0&)
          DestroyMenu hMenu
       Case 2
-         Entregou  
+         Entregou
       Case 3
-         RecPrima((Prodstatus))
+         RecPrima ((Prodstatus))
    End Select
 End Sub
 
@@ -2321,11 +2200,11 @@ End Sub
 Private Sub bottxtCampo2_Click(Index As Integer)
    txtCampo(2).SetFocus
    DoEvents
-   txtCampo(2).botClick Index
+   txtCampo(2).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 
