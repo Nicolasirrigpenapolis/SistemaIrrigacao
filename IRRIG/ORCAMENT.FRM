@@ -5111,6 +5111,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "PlacaVeiculo"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5123,7 +5124,6 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   152
             Left            =   10560
-	    DataField       =   "PlacaVeiculo"
             MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
@@ -5131,6 +5131,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "UfPlaca"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5143,7 +5144,6 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   153
             Left            =   12240
-            DataField       =   "UfPlaca"
             MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
@@ -5151,6 +5151,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
+            DataField       =   "NumAntt"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5165,7 +5166,6 @@ Begin VB.Form frmOrcament
             Left            =   13695
             MaxLength       =   254
             TabIndex        =   199
-            DataField       =   "NumAntt"
             Top             =   2700
             Width           =   1290
          End
@@ -12759,8 +12759,8 @@ End Sub
 
 Private Sub DistribuiDescontoTotal()
     Dim totalDesc   As Double
-    Dim totalItens  As Long
-    Dim descUnit    As Double
+    Dim TotalItens  As Long
+    Dim DescUnit    As Double
     Dim descValue   As Double
     Dim assignedSum As Double
     Dim Rs          As GRecordSet
@@ -12772,13 +12772,13 @@ Private Sub DistribuiDescontoTotal()
     If totalDesc = 0 Then Exit Sub
 
     ' 2) conta quantos itens estão preenchidos
-    totalItens = ContaRegs("[Produtos do Orçamento]") _
+    TotalItens = ContaRegs("[Produtos do Orçamento]") _
                + ContaRegs("[Conjuntos do Orçamento]") _
                + ContaRegs("[Peças do Orçamento]")
-    If totalItens = 0 Then Exit Sub
+    If TotalItens = 0 Then Exit Sub
 
     ' 3) calcula valor unitário de desconto e zera acumulador
-    descUnit = Round(totalDesc / totalItens, 2)
+    DescUnit = Round(totalDesc / TotalItens, 2)
     assignedSum = 0
     idx = 0
 
@@ -12798,8 +12798,8 @@ Private Sub DistribuiDescontoTotal()
             Do While Not Rs.EOF
                 idx = idx + 1
 
-                If idx < totalItens Then
-                    descValue = descUnit
+                If idx < TotalItens Then
+                    descValue = DescUnit
                 Else
                     descValue = Round(totalDesc - assignedSum, 2)
                 End If
@@ -13378,7 +13378,7 @@ End Sub
 
 Private Sub AtualizaValoresConjuntos()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double
+   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double
    Dim BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
    Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
    Dim PisRed As Double, CofinsRed As Double
@@ -13539,7 +13539,7 @@ End Sub
 
 Private Sub AtualizaValoresPecas()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim PercentualFrete As Double, totalItens As Double, PercentualRateio As Double
+   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
    Dim VrItem As Double, BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
    Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
    Dim PisRed As Double, CofinsRed As Double
@@ -13636,13 +13636,13 @@ Private Sub AtualizaValoresPecas()
          
          If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
-            totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor Do Fechamento] / totalItens * 100)
+            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
             VrItem = Round((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]), 2)
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
+            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             ![Valor Do Desconto] = Abs(ValorAcresDesc)
             ![Valor Do Frete] = ValorFrete
@@ -13777,7 +13777,7 @@ End Sub
 
 Private Sub AtualizaValoresProdutos()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
+   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, VrReducao As Double
    Dim PercentualFrete As Double, Geral As New GRecordSet, GRevenda As Boolean, ICMSAuxiliar As Double
    Dim GeralS As New GRecordSet, Suframa As Boolean
    Dim ReducaoAuxiliar As Double, RedPis As Double, RedCofins As Double
@@ -13831,14 +13831,14 @@ Private Sub AtualizaValoresProdutos()
          If Orcamento!Fechamento = 1 Then 'Valor
             Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
             GRevenda = Geral!Revenda
-            totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Orcamento![Valor Do Fechamento] / totalItens * 100)
+            TotalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Orcamento![Valor Do Fechamento] / TotalItens * 100)
             VrItem = (Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário])
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             'vDesc = Round((vDesc + ValorAcresDesc), 2)
             
             'Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
+            PercentualFrete = (Orcamento![Valor Do Frete] / TotalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             
             VrItem2 = VrItem + ValorFrete + ValorAcresDesc
@@ -14505,7 +14505,7 @@ Private Sub MYSQLInclui()
  Else
     cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=SRVSQL\SQLEXPRESS;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=NO"
  End If
- cnGas.Open
+no cnGas.Open
                                                                                                                                                                                                           
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
