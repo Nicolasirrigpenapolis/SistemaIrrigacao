@@ -61,7 +61,7 @@ Attribute VB_Exposed = False
 '* Função....: Apresenta barra de progressão
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 24/06/2025 17:03:51
+'* Data......: 27/06/2025 17:09:16
 '* * * * * * *
 
 Option Explicit                                   'variáveis devem ser explicitamente declaradas

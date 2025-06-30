@@ -45,7 +45,7 @@ Attribute VB_Exposed = False
 '* Função....: Mostrar/editar imagens
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 24/06/2025 17:03:52
+'* Data......: 27/06/2025 17:09:17
 '* * * * * * *
 
 Option Explicit

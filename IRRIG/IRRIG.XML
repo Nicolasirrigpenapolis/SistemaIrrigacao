@@ -2004,9 +2004,6 @@
          <CAMPO NOME="Observação" TIPO="Memo" TAMANHO="0" DEFAULT="''"/>
          <CAMPO NOME="Fechamento" TIPO="Numerico" TAMANHO="2" MASCARA="9" DEFAULT="0"/>
          <CAMPO NOME="Valor do Fechamento" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
-	 <CAMPO NOME="PlacaVeiculo" TIPO="Texto" TAMANHO="8" MASCARA="@x" DEFAULT="''"/>
-         <CAMPO NOME="UfPlaca" TIPO="Texto" TAMANHO="2" MASCARA="!!" DEFAULT="''"/>
-         <CAMPO NOME="NumAntt" TIPO="Texto" TAMANHO="8" MASCARA="@x" DEFAULT="''"/>
          <CAMPO NOME="Valor Total IPI dos Produtos" TITULO="Valor total ipi dos produtos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
          <CAMPO NOME="Valor Total IPI dos Conjuntos" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>
          <CAMPO NOME="Valor Total do ICMS" TIPO="Numerico" TAMANHO="11" DECIMAL="2" MASCARA="99.999.999,99" DEFAULT="0"/>

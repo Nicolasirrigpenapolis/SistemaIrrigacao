@@ -430,11 +430,11 @@ Begin VB.Form frmOrcament
          Tab(0).Control(62)=   "Label(0)"
          Tab(0).Control(62).Enabled=   0   'False
          Tab(0).Control(63)=   "txtCp(154)"
-         Tab(0).Control(63).Enabled=   -1   'True
+         Tab(0).Control(63).Enabled=   0   'False
          Tab(0).Control(64)=   "txtCp(153)"
-         Tab(0).Control(64).Enabled=   -1   'True
+         Tab(0).Control(64).Enabled=   0   'False
          Tab(0).Control(65)=   "txtCp(152)"
-         Tab(0).Control(65).Enabled=   -1   'True
+         Tab(0).Control(65).Enabled=   0   'False
          Tab(0).Control(66)=   "txtCp(151)"
          Tab(0).Control(66).Enabled=   0   'False
          Tab(0).Control(67)=   "bottxtCampo151(2)"
@@ -590,373 +590,373 @@ Begin VB.Form frmOrcament
          Tab(0).ControlCount=   142
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Label(50)"
-         Tab(1).Control(1)=   "Grid(3)"
+         Tab(1).Control(0)=   "Grid(3)"
+         Tab(1).Control(1)=   "Label(50)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(49)"
-         Tab(2).Control(1)=   "Grid(4)"
+         Tab(2).Control(0)=   "Grid(4)"
+         Tab(2).Control(1)=   "Label(49)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "txtCp(61)"
-         Tab(3).Control(1)=   "ChkCp(3)"
-         Tab(3).Control(2)=   "Label(47)"
-         Tab(3).Control(3)=   "Label(39)"
-         Tab(3).Control(4)=   "Botao(2)"
-         Tab(3).Control(5)=   "txtCp(34)"
-         Tab(3).Control(6)=   "bottxtCampo34(2)"
-         Tab(3).Control(6).Enabled=   0   'False
-         Tab(3).Control(7)=   "bottxtCampo34(1)"
-         Tab(3).Control(7).Enabled=   0   'False
-         Tab(3).Control(8)=   "labFdo34"
-         Tab(3).Control(9)=   "Grid(0)"
+         Tab(3).Control(0)=   "Grid(0)"
+         Tab(3).Control(1)=   "labFdo34"
+         Tab(3).Control(2)=   "bottxtCampo34(1)"
+         Tab(3).Control(2).Enabled=   0   'False
+         Tab(3).Control(3)=   "bottxtCampo34(2)"
+         Tab(3).Control(3).Enabled=   0   'False
+         Tab(3).Control(4)=   "txtCp(34)"
+         Tab(3).Control(5)=   "Botao(2)"
+         Tab(3).Control(6)=   "Label(39)"
+         Tab(3).Control(7)=   "Label(47)"
+         Tab(3).Control(8)=   "ChkCp(3)"
+         Tab(3).Control(9)=   "txtCp(61)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Label(48)"
-         Tab(4).Control(1)=   "Grid(1)"
+         Tab(4).Control(0)=   "Grid(1)"
+         Tab(4).Control(1)=   "Label(48)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "ORCAMENT.frx":001C
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Botao(6)"
-         Tab(5).Control(1)=   "Botao(7)"
-         Tab(5).Control(2)=   "txtCp(9)"
-         Tab(5).Control(2).Enabled=   0   'False
-         Tab(5).Control(3)=   "txtCp(31)"
-         Tab(5).Control(3).Enabled=   0   'False
-         Tab(5).Control(4)=   "bottxtCampo32(0)"
-         Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "txtCp(32)"
-         Tab(5).Control(6)=   "Grid(2)"
-         Tab(5).Control(7)=   "bottxtCampo35(2)"
-         Tab(5).Control(7).Enabled=   0   'False
-         Tab(5).Control(8)=   "txtCp(35)"
-         Tab(5).Control(9)=   "txtCp(36)"
-         Tab(5).Control(9).Enabled=   0   'False
-         Tab(5).Control(10)=   "txtCp(37)"
-         Tab(5).Control(10).Enabled=   0   'False
-         Tab(5).Control(11)=   "txtCp(38)"
-         Tab(5).Control(11).Enabled=   0   'False
-         Tab(5).Control(12)=   "txtCp(39)"
-         Tab(5).Control(12).Enabled=   0   'False
-         Tab(5).Control(13)=   "txtCp(40)"
-         Tab(5).Control(13).Enabled=   0   'False
-         Tab(5).Control(14)=   "txtCp(41)"
-         Tab(5).Control(14).Enabled=   0   'False
-         Tab(5).Control(15)=   "txtCp(42)"
-         Tab(5).Control(15).Enabled=   0   'False
-         Tab(5).Control(16)=   "txtCp(43)"
-         Tab(5).Control(16).Enabled=   0   'False
-         Tab(5).Control(17)=   "txtCp(44)"
-         Tab(5).Control(17).Enabled=   0   'False
-         Tab(5).Control(18)=   "bottxtCampo45(0)"
-         Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "txtCp(45)"
-         Tab(5).Control(20)=   "txtCp(46)"
-         Tab(5).Control(20).Enabled=   0   'False
-         Tab(5).Control(21)=   "bottxtCampo47(0)"
-         Tab(5).Control(21).Enabled=   0   'False
-         Tab(5).Control(22)=   "txtCp(47)"
-         Tab(5).Control(23)=   "txtCp(49)"
-         Tab(5).Control(23).Enabled=   0   'False
-         Tab(5).Control(24)=   "Painel(2)"
-         Tab(5).Control(25)=   "txtCp(52)"
-         Tab(5).Control(25).Enabled=   0   'False
-         Tab(5).Control(26)=   "txtCp(53)"
-         Tab(5).Control(26).Enabled=   0   'False
-         Tab(5).Control(27)=   "txtCp(56)"
-         Tab(5).Control(27).Enabled=   0   'False
-         Tab(5).Control(28)=   "bottxtCampo57(0)"
-         Tab(5).Control(28).Enabled=   0   'False
-         Tab(5).Control(29)=   "txtCp(57)"
-         Tab(5).Control(30)=   "txtCp(148)"
-         Tab(5).Control(31)=   "Label(5)"
-         Tab(5).Control(32)=   "labFdo32"
-         Tab(5).Control(33)=   "labFdo35"
-         Tab(5).Control(34)=   "Label(7)"
-         Tab(5).Control(35)=   "Label(8)"
-         Tab(5).Control(36)=   "Formato(0)"
-         Tab(5).Control(37)=   "Label(9)"
-         Tab(5).Control(38)=   "Formato(1)"
-         Tab(5).Control(39)=   "Label(10)"
-         Tab(5).Control(40)=   "Formato(2)"
-         Tab(5).Control(41)=   "Label(11)"
-         Tab(5).Control(42)=   "Label(12)"
-         Tab(5).Control(43)=   "Label(13)"
-         Tab(5).Control(44)=   "Linha(0)"
-         Tab(5).Control(45)=   "Label(17)"
-         Tab(5).Control(46)=   "Label(18)"
-         Tab(5).Control(47)=   "Label(19)"
-         Tab(5).Control(48)=   "Label(20)"
-         Tab(5).Control(49)=   "Label(21)"
-         Tab(5).Control(50)=   "Label(22)"
-         Tab(5).Control(51)=   "Label(23)"
-         Tab(5).Control(52)=   "Label(24)"
-         Tab(5).Control(53)=   "Label(25)"
-         Tab(5).Control(54)=   "Label(26)"
-         Tab(5).Control(55)=   "Label(27)"
-         Tab(5).Control(56)=   "labFdo45"
-         Tab(5).Control(57)=   "Label(28)"
-         Tab(5).Control(58)=   "Label(29)"
-         Tab(5).Control(59)=   "labFdo47"
-         Tab(5).Control(60)=   "Label(30)"
-         Tab(5).Control(61)=   "Label(38)"
-         Tab(5).Control(62)=   "Label(54)"
-         Tab(5).Control(63)=   "Label(55)"
-         Tab(5).Control(64)=   "Label(58)"
-         Tab(5).Control(65)=   "Label(59)"
-         Tab(5).Control(66)=   "labFdo57"
-         Tab(5).Control(67)=   "Label(173)"
+         Tab(5).Control(0)=   "Label(173)"
+         Tab(5).Control(1)=   "labFdo57"
+         Tab(5).Control(2)=   "Label(59)"
+         Tab(5).Control(3)=   "Label(58)"
+         Tab(5).Control(4)=   "Label(55)"
+         Tab(5).Control(5)=   "Label(54)"
+         Tab(5).Control(6)=   "Label(38)"
+         Tab(5).Control(7)=   "Label(30)"
+         Tab(5).Control(8)=   "labFdo47"
+         Tab(5).Control(9)=   "Label(29)"
+         Tab(5).Control(10)=   "Label(28)"
+         Tab(5).Control(11)=   "labFdo45"
+         Tab(5).Control(12)=   "Label(27)"
+         Tab(5).Control(13)=   "Label(26)"
+         Tab(5).Control(14)=   "Label(25)"
+         Tab(5).Control(15)=   "Label(24)"
+         Tab(5).Control(16)=   "Label(23)"
+         Tab(5).Control(17)=   "Label(22)"
+         Tab(5).Control(18)=   "Label(21)"
+         Tab(5).Control(19)=   "Label(20)"
+         Tab(5).Control(20)=   "Label(19)"
+         Tab(5).Control(21)=   "Label(18)"
+         Tab(5).Control(22)=   "Label(17)"
+         Tab(5).Control(23)=   "Linha(0)"
+         Tab(5).Control(24)=   "Label(13)"
+         Tab(5).Control(25)=   "Label(12)"
+         Tab(5).Control(26)=   "Label(11)"
+         Tab(5).Control(27)=   "Formato(2)"
+         Tab(5).Control(28)=   "Label(10)"
+         Tab(5).Control(29)=   "Formato(1)"
+         Tab(5).Control(30)=   "Label(9)"
+         Tab(5).Control(31)=   "Formato(0)"
+         Tab(5).Control(32)=   "Label(8)"
+         Tab(5).Control(33)=   "Label(7)"
+         Tab(5).Control(34)=   "labFdo35"
+         Tab(5).Control(35)=   "labFdo32"
+         Tab(5).Control(36)=   "Label(5)"
+         Tab(5).Control(37)=   "txtCp(148)"
+         Tab(5).Control(38)=   "txtCp(57)"
+         Tab(5).Control(39)=   "bottxtCampo57(0)"
+         Tab(5).Control(39).Enabled=   0   'False
+         Tab(5).Control(40)=   "txtCp(56)"
+         Tab(5).Control(40).Enabled=   0   'False
+         Tab(5).Control(41)=   "txtCp(53)"
+         Tab(5).Control(41).Enabled=   0   'False
+         Tab(5).Control(42)=   "txtCp(52)"
+         Tab(5).Control(42).Enabled=   0   'False
+         Tab(5).Control(43)=   "Painel(2)"
+         Tab(5).Control(44)=   "txtCp(49)"
+         Tab(5).Control(44).Enabled=   0   'False
+         Tab(5).Control(45)=   "txtCp(47)"
+         Tab(5).Control(46)=   "bottxtCampo47(0)"
+         Tab(5).Control(46).Enabled=   0   'False
+         Tab(5).Control(47)=   "txtCp(46)"
+         Tab(5).Control(47).Enabled=   0   'False
+         Tab(5).Control(48)=   "txtCp(45)"
+         Tab(5).Control(49)=   "bottxtCampo45(0)"
+         Tab(5).Control(49).Enabled=   0   'False
+         Tab(5).Control(50)=   "txtCp(44)"
+         Tab(5).Control(50).Enabled=   0   'False
+         Tab(5).Control(51)=   "txtCp(43)"
+         Tab(5).Control(51).Enabled=   0   'False
+         Tab(5).Control(52)=   "txtCp(42)"
+         Tab(5).Control(52).Enabled=   0   'False
+         Tab(5).Control(53)=   "txtCp(41)"
+         Tab(5).Control(53).Enabled=   0   'False
+         Tab(5).Control(54)=   "txtCp(40)"
+         Tab(5).Control(54).Enabled=   0   'False
+         Tab(5).Control(55)=   "txtCp(39)"
+         Tab(5).Control(55).Enabled=   0   'False
+         Tab(5).Control(56)=   "txtCp(38)"
+         Tab(5).Control(56).Enabled=   0   'False
+         Tab(5).Control(57)=   "txtCp(37)"
+         Tab(5).Control(57).Enabled=   0   'False
+         Tab(5).Control(58)=   "txtCp(36)"
+         Tab(5).Control(58).Enabled=   0   'False
+         Tab(5).Control(59)=   "txtCp(35)"
+         Tab(5).Control(60)=   "bottxtCampo35(2)"
+         Tab(5).Control(60).Enabled=   0   'False
+         Tab(5).Control(61)=   "Grid(2)"
+         Tab(5).Control(62)=   "txtCp(32)"
+         Tab(5).Control(63)=   "bottxtCampo32(0)"
+         Tab(5).Control(63).Enabled=   0   'False
+         Tab(5).Control(64)=   "txtCp(31)"
+         Tab(5).Control(64).Enabled=   0   'False
+         Tab(5).Control(65)=   "txtCp(9)"
+         Tab(5).Control(65).Enabled=   0   'False
+         Tab(5).Control(66)=   "Botao(7)"
+         Tab(5).Control(67)=   "Botao(6)"
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "Linha(15)"
-         Tab(6).Control(1)=   "Label(166)"
-         Tab(6).Control(2)=   "Label(165)"
-         Tab(6).Control(3)=   "Label(164)"
-         Tab(6).Control(4)=   "Label(163)"
-         Tab(6).Control(5)=   "Label(162)"
-         Tab(6).Control(6)=   "Label(161)"
-         Tab(6).Control(7)=   "Label(160)"
-         Tab(6).Control(8)=   "Linha(14)"
-         Tab(6).Control(9)=   "Label(159)"
-         Tab(6).Control(10)=   "Label(158)"
-         Tab(6).Control(11)=   "Label(157)"
-         Tab(6).Control(12)=   "Label(156)"
-         Tab(6).Control(13)=   "Label(155)"
-         Tab(6).Control(14)=   "Label(154)"
-         Tab(6).Control(15)=   "Label(153)"
-         Tab(6).Control(16)=   "txtCp(114)"
-         Tab(6).Control(16).Enabled=   0   'False
-         Tab(6).Control(17)=   "txtCp(113)"
-         Tab(6).Control(17).Enabled=   0   'False
-         Tab(6).Control(18)=   "txtCp(112)"
-         Tab(6).Control(18).Enabled=   0   'False
-         Tab(6).Control(19)=   "txtCp(111)"
-         Tab(6).Control(19).Enabled=   0   'False
-         Tab(6).Control(20)=   "Label(113)"
-         Tab(6).Control(21)=   "txtCp(110)"
-         Tab(6).Control(21).Enabled=   0   'False
-         Tab(6).Control(22)=   "txtCp(109)"
-         Tab(6).Control(22).Enabled=   0   'False
-         Tab(6).Control(23)=   "txtCp(108)"
-         Tab(6).Control(23).Enabled=   0   'False
-         Tab(6).Control(24)=   "Label(112)"
-         Tab(6).Control(25)=   "Label(111)"
-         Tab(6).Control(26)=   "txtCp(107)"
-         Tab(6).Control(26).Enabled=   0   'False
-         Tab(6).Control(27)=   "txtCp(106)"
+         Tab(6).Control(0)=   "Label(69)"
+         Tab(6).Control(1)=   "txtCp(66)"
+         Tab(6).Control(2)=   "Label(70)"
+         Tab(6).Control(3)=   "Linha(2)"
+         Tab(6).Control(4)=   "Label(71)"
+         Tab(6).Control(5)=   "txtCp(67)"
+         Tab(6).Control(6)=   "Label(72)"
+         Tab(6).Control(7)=   "txtCp(68)"
+         Tab(6).Control(8)=   "Label(73)"
+         Tab(6).Control(9)=   "Label(74)"
+         Tab(6).Control(10)=   "txtCp(69)"
+         Tab(6).Control(11)=   "Label(75)"
+         Tab(6).Control(12)=   "txtCp(70)"
+         Tab(6).Control(12).Enabled=   0   'False
+         Tab(6).Control(13)=   "Label(76)"
+         Tab(6).Control(14)=   "txtCp(71)"
+         Tab(6).Control(14).Enabled=   0   'False
+         Tab(6).Control(15)=   "Label(77)"
+         Tab(6).Control(16)=   "txtCp(72)"
+         Tab(6).Control(17)=   "Linha(3)"
+         Tab(6).Control(18)=   "Linha(4)"
+         Tab(6).Control(19)=   "Label(78)"
+         Tab(6).Control(20)=   "Label(79)"
+         Tab(6).Control(21)=   "Label(80)"
+         Tab(6).Control(22)=   "txtCp(73)"
+         Tab(6).Control(23)=   "Label(81)"
+         Tab(6).Control(24)=   "txtCp(74)"
+         Tab(6).Control(25)=   "Label(82)"
+         Tab(6).Control(26)=   "txtCp(75)"
+         Tab(6).Control(27)=   "txtCp(76)"
          Tab(6).Control(27).Enabled=   0   'False
-         Tab(6).Control(28)=   "txtCp(105)"
-         Tab(6).Control(28).Enabled=   0   'False
-         Tab(6).Control(29)=   "Label(110)"
-         Tab(6).Control(30)=   "Label(109)"
-         Tab(6).Control(31)=   "txtCp(104)"
-         Tab(6).Control(31).Enabled=   0   'False
-         Tab(6).Control(32)=   "txtCp(103)"
-         Tab(6).Control(32).Enabled=   0   'False
-         Tab(6).Control(33)=   "txtCp(102)"
+         Tab(6).Control(28)=   "Label(83)"
+         Tab(6).Control(29)=   "Label(84)"
+         Tab(6).Control(30)=   "txtCp(77)"
+         Tab(6).Control(31)=   "txtCp(78)"
+         Tab(6).Control(32)=   "Label(85)"
+         Tab(6).Control(33)=   "txtCp(79)"
          Tab(6).Control(33).Enabled=   0   'False
-         Tab(6).Control(34)=   "txtCp(101)"
-         Tab(6).Control(35)=   "bottxtCampo101(2)"
-         Tab(6).Control(35).Enabled=   0   'False
-         Tab(6).Control(36)=   "bottxtCampo101(1)"
-         Tab(6).Control(36).Enabled=   0   'False
-         Tab(6).Control(37)=   "labFdo101"
-         Tab(6).Control(38)=   "txtCp(100)"
-         Tab(6).Control(39)=   "bottxtCampo100(2)"
-         Tab(6).Control(39).Enabled=   0   'False
-         Tab(6).Control(40)=   "bottxtCampo100(1)"
+         Tab(6).Control(34)=   "txtCp(80)"
+         Tab(6).Control(34).Enabled=   0   'False
+         Tab(6).Control(35)=   "txtCp(81)"
+         Tab(6).Control(36)=   "Label(86)"
+         Tab(6).Control(37)=   "Label(87)"
+         Tab(6).Control(38)=   "txtCp(82)"
+         Tab(6).Control(39)=   "Label(88)"
+         Tab(6).Control(40)=   "txtCp(83)"
          Tab(6).Control(40).Enabled=   0   'False
-         Tab(6).Control(41)=   "labFdo100"
-         Tab(6).Control(42)=   "Linha(9)"
-         Tab(6).Control(43)=   "txtCp(99)"
-         Tab(6).Control(44)=   "bottxtCampo99(2)"
+         Tab(6).Control(41)=   "Label(89)"
+         Tab(6).Control(42)=   "txtCp(84)"
+         Tab(6).Control(42).Enabled=   0   'False
+         Tab(6).Control(43)=   "Label(90)"
+         Tab(6).Control(44)=   "txtCp(85)"
          Tab(6).Control(44).Enabled=   0   'False
-         Tab(6).Control(45)=   "bottxtCampo99(1)"
+         Tab(6).Control(45)=   "txtCp(86)"
          Tab(6).Control(45).Enabled=   0   'False
-         Tab(6).Control(46)=   "labFdo99"
-         Tab(6).Control(47)=   "Label(108)"
-         Tab(6).Control(48)=   "txtCp(98)"
-         Tab(6).Control(49)=   "txtCp(97)"
-         Tab(6).Control(50)=   "Label(107)"
-         Tab(6).Control(51)=   "txtCp(96)"
-         Tab(6).Control(52)=   "Label(106)"
-         Tab(6).Control(53)=   "Label(105)"
-         Tab(6).Control(54)=   "Linha(8)"
-         Tab(6).Control(55)=   "Label(104)"
-         Tab(6).Control(56)=   "Label(103)"
-         Tab(6).Control(57)=   "Label(102)"
-         Tab(6).Control(58)=   "Label(101)"
-         Tab(6).Control(59)=   "Label(100)"
-         Tab(6).Control(60)=   "Label(99)"
-         Tab(6).Control(61)=   "txtCp(95)"
-         Tab(6).Control(62)=   "Label(98)"
+         Tab(6).Control(46)=   "txtCp(87)"
+         Tab(6).Control(46).Enabled=   0   'False
+         Tab(6).Control(47)=   "Label(91)"
+         Tab(6).Control(48)=   "Label(92)"
+         Tab(6).Control(49)=   "txtCp(88)"
+         Tab(6).Control(50)=   "Label(93)"
+         Tab(6).Control(51)=   "txtCp(89)"
+         Tab(6).Control(52)=   "Linha(5)"
+         Tab(6).Control(53)=   "Label(94)"
+         Tab(6).Control(54)=   "Label(95)"
+         Tab(6).Control(55)=   "txtCp(90)"
+         Tab(6).Control(56)=   "txtCp(91)"
+         Tab(6).Control(56).Enabled=   0   'False
+         Tab(6).Control(57)=   "txtCp(92)"
+         Tab(6).Control(57).Enabled=   0   'False
+         Tab(6).Control(58)=   "txtCp(93)"
+         Tab(6).Control(58).Enabled=   0   'False
+         Tab(6).Control(59)=   "txtCp(94)"
+         Tab(6).Control(59).Enabled=   0   'False
+         Tab(6).Control(60)=   "Label(96)"
+         Tab(6).Control(61)=   "Linha(6)"
+         Tab(6).Control(62)=   "Linha(7)"
          Tab(6).Control(63)=   "Label(97)"
-         Tab(6).Control(64)=   "Linha(7)"
-         Tab(6).Control(65)=   "Linha(6)"
-         Tab(6).Control(66)=   "Label(96)"
-         Tab(6).Control(67)=   "txtCp(94)"
-         Tab(6).Control(67).Enabled=   0   'False
-         Tab(6).Control(68)=   "txtCp(93)"
-         Tab(6).Control(68).Enabled=   0   'False
-         Tab(6).Control(69)=   "txtCp(92)"
-         Tab(6).Control(69).Enabled=   0   'False
-         Tab(6).Control(70)=   "txtCp(91)"
-         Tab(6).Control(70).Enabled=   0   'False
-         Tab(6).Control(71)=   "txtCp(90)"
-         Tab(6).Control(72)=   "Label(95)"
-         Tab(6).Control(73)=   "Label(94)"
-         Tab(6).Control(74)=   "Linha(5)"
-         Tab(6).Control(75)=   "txtCp(89)"
-         Tab(6).Control(76)=   "Label(93)"
-         Tab(6).Control(77)=   "txtCp(88)"
-         Tab(6).Control(78)=   "Label(92)"
-         Tab(6).Control(79)=   "Label(91)"
-         Tab(6).Control(80)=   "txtCp(87)"
-         Tab(6).Control(80).Enabled=   0   'False
-         Tab(6).Control(81)=   "txtCp(86)"
+         Tab(6).Control(64)=   "Label(98)"
+         Tab(6).Control(65)=   "txtCp(95)"
+         Tab(6).Control(66)=   "Label(99)"
+         Tab(6).Control(67)=   "Label(100)"
+         Tab(6).Control(68)=   "Label(101)"
+         Tab(6).Control(69)=   "Label(102)"
+         Tab(6).Control(70)=   "Label(103)"
+         Tab(6).Control(71)=   "Label(104)"
+         Tab(6).Control(72)=   "Linha(8)"
+         Tab(6).Control(73)=   "Label(105)"
+         Tab(6).Control(74)=   "Label(106)"
+         Tab(6).Control(75)=   "txtCp(96)"
+         Tab(6).Control(76)=   "Label(107)"
+         Tab(6).Control(77)=   "txtCp(97)"
+         Tab(6).Control(78)=   "txtCp(98)"
+         Tab(6).Control(79)=   "Label(108)"
+         Tab(6).Control(80)=   "labFdo99"
+         Tab(6).Control(81)=   "bottxtCampo99(1)"
          Tab(6).Control(81).Enabled=   0   'False
-         Tab(6).Control(82)=   "txtCp(85)"
+         Tab(6).Control(82)=   "bottxtCampo99(2)"
          Tab(6).Control(82).Enabled=   0   'False
-         Tab(6).Control(83)=   "Label(90)"
-         Tab(6).Control(84)=   "txtCp(84)"
-         Tab(6).Control(84).Enabled=   0   'False
-         Tab(6).Control(85)=   "Label(89)"
-         Tab(6).Control(86)=   "txtCp(83)"
+         Tab(6).Control(83)=   "txtCp(99)"
+         Tab(6).Control(84)=   "Linha(9)"
+         Tab(6).Control(85)=   "labFdo100"
+         Tab(6).Control(86)=   "bottxtCampo100(1)"
          Tab(6).Control(86).Enabled=   0   'False
-         Tab(6).Control(87)=   "Label(88)"
-         Tab(6).Control(88)=   "txtCp(82)"
-         Tab(6).Control(89)=   "Label(87)"
-         Tab(6).Control(90)=   "Label(86)"
-         Tab(6).Control(91)=   "txtCp(81)"
-         Tab(6).Control(92)=   "txtCp(80)"
-         Tab(6).Control(92).Enabled=   0   'False
-         Tab(6).Control(93)=   "txtCp(79)"
+         Tab(6).Control(87)=   "bottxtCampo100(2)"
+         Tab(6).Control(87).Enabled=   0   'False
+         Tab(6).Control(88)=   "txtCp(100)"
+         Tab(6).Control(89)=   "labFdo101"
+         Tab(6).Control(90)=   "bottxtCampo101(1)"
+         Tab(6).Control(90).Enabled=   0   'False
+         Tab(6).Control(91)=   "bottxtCampo101(2)"
+         Tab(6).Control(91).Enabled=   0   'False
+         Tab(6).Control(92)=   "txtCp(101)"
+         Tab(6).Control(93)=   "txtCp(102)"
          Tab(6).Control(93).Enabled=   0   'False
-         Tab(6).Control(94)=   "Label(85)"
-         Tab(6).Control(95)=   "txtCp(78)"
-         Tab(6).Control(96)=   "txtCp(77)"
-         Tab(6).Control(97)=   "Label(84)"
-         Tab(6).Control(98)=   "Label(83)"
-         Tab(6).Control(99)=   "txtCp(76)"
+         Tab(6).Control(94)=   "txtCp(103)"
+         Tab(6).Control(94).Enabled=   0   'False
+         Tab(6).Control(95)=   "txtCp(104)"
+         Tab(6).Control(95).Enabled=   0   'False
+         Tab(6).Control(96)=   "Label(109)"
+         Tab(6).Control(97)=   "Label(110)"
+         Tab(6).Control(98)=   "txtCp(105)"
+         Tab(6).Control(98).Enabled=   0   'False
+         Tab(6).Control(99)=   "txtCp(106)"
          Tab(6).Control(99).Enabled=   0   'False
-         Tab(6).Control(100)=   "txtCp(75)"
-         Tab(6).Control(101)=   "Label(82)"
-         Tab(6).Control(102)=   "txtCp(74)"
-         Tab(6).Control(103)=   "Label(81)"
-         Tab(6).Control(104)=   "txtCp(73)"
-         Tab(6).Control(105)=   "Label(80)"
-         Tab(6).Control(106)=   "Label(79)"
-         Tab(6).Control(107)=   "Label(78)"
-         Tab(6).Control(108)=   "Linha(4)"
-         Tab(6).Control(109)=   "Linha(3)"
-         Tab(6).Control(110)=   "txtCp(72)"
-         Tab(6).Control(111)=   "Label(77)"
-         Tab(6).Control(112)=   "txtCp(71)"
-         Tab(6).Control(112).Enabled=   0   'False
-         Tab(6).Control(113)=   "Label(76)"
-         Tab(6).Control(114)=   "txtCp(70)"
-         Tab(6).Control(114).Enabled=   0   'False
-         Tab(6).Control(115)=   "Label(75)"
-         Tab(6).Control(116)=   "txtCp(69)"
-         Tab(6).Control(117)=   "Label(74)"
-         Tab(6).Control(118)=   "Label(73)"
-         Tab(6).Control(119)=   "txtCp(68)"
-         Tab(6).Control(120)=   "Label(72)"
-         Tab(6).Control(121)=   "txtCp(67)"
-         Tab(6).Control(122)=   "Label(71)"
-         Tab(6).Control(123)=   "Linha(2)"
-         Tab(6).Control(124)=   "Label(70)"
-         Tab(6).Control(125)=   "txtCp(66)"
-         Tab(6).Control(126)=   "Label(69)"
+         Tab(6).Control(100)=   "txtCp(107)"
+         Tab(6).Control(100).Enabled=   0   'False
+         Tab(6).Control(101)=   "Label(111)"
+         Tab(6).Control(102)=   "Label(112)"
+         Tab(6).Control(103)=   "txtCp(108)"
+         Tab(6).Control(103).Enabled=   0   'False
+         Tab(6).Control(104)=   "txtCp(109)"
+         Tab(6).Control(104).Enabled=   0   'False
+         Tab(6).Control(105)=   "txtCp(110)"
+         Tab(6).Control(105).Enabled=   0   'False
+         Tab(6).Control(106)=   "Label(113)"
+         Tab(6).Control(107)=   "txtCp(111)"
+         Tab(6).Control(107).Enabled=   0   'False
+         Tab(6).Control(108)=   "txtCp(112)"
+         Tab(6).Control(108).Enabled=   0   'False
+         Tab(6).Control(109)=   "txtCp(113)"
+         Tab(6).Control(109).Enabled=   0   'False
+         Tab(6).Control(110)=   "txtCp(114)"
+         Tab(6).Control(110).Enabled=   0   'False
+         Tab(6).Control(111)=   "Label(153)"
+         Tab(6).Control(112)=   "Label(154)"
+         Tab(6).Control(113)=   "Label(155)"
+         Tab(6).Control(114)=   "Label(156)"
+         Tab(6).Control(115)=   "Label(157)"
+         Tab(6).Control(116)=   "Label(158)"
+         Tab(6).Control(117)=   "Label(159)"
+         Tab(6).Control(118)=   "Linha(14)"
+         Tab(6).Control(119)=   "Label(160)"
+         Tab(6).Control(120)=   "Label(161)"
+         Tab(6).Control(121)=   "Label(162)"
+         Tab(6).Control(122)=   "Label(163)"
+         Tab(6).Control(123)=   "Label(164)"
+         Tab(6).Control(124)=   "Label(165)"
+         Tab(6).Control(125)=   "Label(166)"
+         Tab(6).Control(126)=   "Linha(15)"
          Tab(6).ControlCount=   127
          TabCaption(7)   =   "Bomba / Motor"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(142)"
-         Tab(7).Control(1)=   "txtCp(141)"
-         Tab(7).Control(2)=   "txtCp(140)"
-         Tab(7).Control(3)=   "txtCp(139)"
-         Tab(7).Control(4)=   "txtCp(138)"
-         Tab(7).Control(5)=   "Label(152)"
-         Tab(7).Control(6)=   "Label(151)"
-         Tab(7).Control(7)=   "Label(150)"
-         Tab(7).Control(8)=   "Label(149)"
-         Tab(7).Control(9)=   "Label(148)"
-         Tab(7).Control(10)=   "Label(147)"
-         Tab(7).Control(11)=   "txtCp(136)"
-         Tab(7).Control(11).Enabled=   0   'False
-         Tab(7).Control(12)=   "Label(145)"
-         Tab(7).Control(13)=   "txtCp(135)"
-         Tab(7).Control(13).Enabled=   0   'False
-         Tab(7).Control(14)=   "Label(144)"
-         Tab(7).Control(15)=   "txtCp(134)"
-         Tab(7).Control(16)=   "Linha(13)"
-         Tab(7).Control(17)=   "Label(143)"
-         Tab(7).Control(18)=   "txtCp(133)"
-         Tab(7).Control(18).Enabled=   0   'False
-         Tab(7).Control(19)=   "Label(142)"
-         Tab(7).Control(20)=   "Label(141)"
-         Tab(7).Control(21)=   "Label(140)"
-         Tab(7).Control(22)=   "txtCp(132)"
-         Tab(7).Control(22).Enabled=   0   'False
-         Tab(7).Control(23)=   "txtCp(131)"
-         Tab(7).Control(24)=   "Label(139)"
-         Tab(7).Control(25)=   "Label(138)"
-         Tab(7).Control(26)=   "txtCp(130)"
-         Tab(7).Control(27)=   "txtCp(129)"
-         Tab(7).Control(28)=   "Label(137)"
-         Tab(7).Control(29)=   "Label(136)"
-         Tab(7).Control(30)=   "txtCp(128)"
-         Tab(7).Control(31)=   "txtCp(127)"
-         Tab(7).Control(32)=   "Label(135)"
-         Tab(7).Control(33)=   "Label(134)"
+         Tab(7).Control(0)=   "Label(114)"
+         Tab(7).Control(1)=   "Linha(10)"
+         Tab(7).Control(2)=   "Label(115)"
+         Tab(7).Control(3)=   "txtCp(115)"
+         Tab(7).Control(4)=   "Label(116)"
+         Tab(7).Control(5)=   "txtCp(116)"
+         Tab(7).Control(6)=   "Label(117)"
+         Tab(7).Control(7)=   "Label(118)"
+         Tab(7).Control(8)=   "txtCp(117)"
+         Tab(7).Control(9)=   "txtCp(118)"
+         Tab(7).Control(10)=   "Label(119)"
+         Tab(7).Control(11)=   "Label(120)"
+         Tab(7).Control(12)=   "txtCp(119)"
+         Tab(7).Control(13)=   "Label(121)"
+         Tab(7).Control(14)=   "txtCp(120)"
+         Tab(7).Control(15)=   "txtCp(121)"
+         Tab(7).Control(15).Enabled=   0   'False
+         Tab(7).Control(16)=   "Label(122)"
+         Tab(7).Control(17)=   "txtCp(122)"
+         Tab(7).Control(17).Enabled=   0   'False
+         Tab(7).Control(18)=   "Label(123)"
+         Tab(7).Control(19)=   "Label(124)"
+         Tab(7).Control(20)=   "txtCp(123)"
+         Tab(7).Control(21)=   "Label(125)"
+         Tab(7).Control(22)=   "txtCp(124)"
+         Tab(7).Control(23)=   "Label(126)"
+         Tab(7).Control(24)=   "Label(127)"
+         Tab(7).Control(25)=   "Label(128)"
+         Tab(7).Control(26)=   "Label(129)"
+         Tab(7).Control(27)=   "Label(130)"
+         Tab(7).Control(28)=   "txtCp(125)"
+         Tab(7).Control(28).Enabled=   0   'False
+         Tab(7).Control(29)=   "Label(131)"
+         Tab(7).Control(30)=   "Linha(11)"
+         Tab(7).Control(31)=   "Linha(12)"
+         Tab(7).Control(32)=   "Label(132)"
+         Tab(7).Control(33)=   "Label(133)"
          Tab(7).Control(34)=   "txtCp(126)"
-         Tab(7).Control(35)=   "Label(133)"
-         Tab(7).Control(36)=   "Label(132)"
-         Tab(7).Control(37)=   "Linha(12)"
-         Tab(7).Control(38)=   "Linha(11)"
-         Tab(7).Control(39)=   "Label(131)"
-         Tab(7).Control(40)=   "txtCp(125)"
-         Tab(7).Control(40).Enabled=   0   'False
-         Tab(7).Control(41)=   "Label(130)"
-         Tab(7).Control(42)=   "Label(129)"
-         Tab(7).Control(43)=   "Label(128)"
-         Tab(7).Control(44)=   "Label(127)"
-         Tab(7).Control(45)=   "Label(126)"
-         Tab(7).Control(46)=   "txtCp(124)"
-         Tab(7).Control(47)=   "Label(125)"
-         Tab(7).Control(48)=   "txtCp(123)"
-         Tab(7).Control(49)=   "Label(124)"
-         Tab(7).Control(50)=   "Label(123)"
-         Tab(7).Control(51)=   "txtCp(122)"
-         Tab(7).Control(51).Enabled=   0   'False
-         Tab(7).Control(52)=   "Label(122)"
-         Tab(7).Control(53)=   "txtCp(121)"
-         Tab(7).Control(53).Enabled=   0   'False
-         Tab(7).Control(54)=   "txtCp(120)"
-         Tab(7).Control(55)=   "Label(121)"
-         Tab(7).Control(56)=   "txtCp(119)"
-         Tab(7).Control(57)=   "Label(120)"
-         Tab(7).Control(58)=   "Label(119)"
-         Tab(7).Control(59)=   "txtCp(118)"
-         Tab(7).Control(60)=   "txtCp(117)"
-         Tab(7).Control(61)=   "Label(118)"
-         Tab(7).Control(62)=   "Label(117)"
-         Tab(7).Control(63)=   "txtCp(116)"
-         Tab(7).Control(64)=   "Label(116)"
-         Tab(7).Control(65)=   "txtCp(115)"
-         Tab(7).Control(66)=   "Label(115)"
-         Tab(7).Control(67)=   "Linha(10)"
-         Tab(7).Control(68)=   "Label(114)"
+         Tab(7).Control(35)=   "Label(134)"
+         Tab(7).Control(36)=   "Label(135)"
+         Tab(7).Control(37)=   "txtCp(127)"
+         Tab(7).Control(38)=   "txtCp(128)"
+         Tab(7).Control(39)=   "Label(136)"
+         Tab(7).Control(40)=   "Label(137)"
+         Tab(7).Control(41)=   "txtCp(129)"
+         Tab(7).Control(42)=   "txtCp(130)"
+         Tab(7).Control(43)=   "Label(138)"
+         Tab(7).Control(44)=   "Label(139)"
+         Tab(7).Control(45)=   "txtCp(131)"
+         Tab(7).Control(46)=   "txtCp(132)"
+         Tab(7).Control(46).Enabled=   0   'False
+         Tab(7).Control(47)=   "Label(140)"
+         Tab(7).Control(48)=   "Label(141)"
+         Tab(7).Control(49)=   "Label(142)"
+         Tab(7).Control(50)=   "txtCp(133)"
+         Tab(7).Control(50).Enabled=   0   'False
+         Tab(7).Control(51)=   "Label(143)"
+         Tab(7).Control(52)=   "Linha(13)"
+         Tab(7).Control(53)=   "txtCp(134)"
+         Tab(7).Control(54)=   "Label(144)"
+         Tab(7).Control(55)=   "txtCp(135)"
+         Tab(7).Control(55).Enabled=   0   'False
+         Tab(7).Control(56)=   "Label(145)"
+         Tab(7).Control(57)=   "txtCp(136)"
+         Tab(7).Control(57).Enabled=   0   'False
+         Tab(7).Control(58)=   "Label(147)"
+         Tab(7).Control(59)=   "Label(148)"
+         Tab(7).Control(60)=   "Label(149)"
+         Tab(7).Control(61)=   "Label(150)"
+         Tab(7).Control(62)=   "Label(151)"
+         Tab(7).Control(63)=   "Label(152)"
+         Tab(7).Control(64)=   "txtCp(138)"
+         Tab(7).Control(65)=   "txtCp(139)"
+         Tab(7).Control(66)=   "txtCp(140)"
+         Tab(7).Control(67)=   "txtCp(141)"
+         Tab(7).Control(68)=   "txtCp(142)"
          Tab(7).ControlCount=   69
          TabCaption(8)   =   "Mapa da Propriedade"
          Tab(8).ControlEnabled=   0   'False
-         Tab(8).Control(0)=   "mmCampo(0)"
-         Tab(8).Control(1)=   "Label(171)"
+         Tab(8).Control(0)=   "Label(171)"
+         Tab(8).Control(1)=   "mmCampo(0)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
             Height          =   300
@@ -5111,7 +5111,6 @@ Begin VB.Form frmOrcament
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
-            DataField       =   "PlacaVeiculo"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5124,14 +5123,14 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   152
             Left            =   10560
-            MaxLength       =   7
+	    DataField       =   "PlacaVeiculo"
+            MaxLength       =   254
             TabIndex        =   198
             Top             =   2700
             Width           =   1185
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
-            DataField       =   "UfPlaca"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5144,14 +5143,14 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   153
             Left            =   12240
-            MaxLength       =   2
+            DataField       =   "UfPlaca"
+            MaxLength       =   254
             TabIndex        =   200
             Top             =   2700
             Width           =   645
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
-            DataField       =   "NumAntt"
             BeginProperty Font 
                Name            =   "Microsoft Sans Serif"
                Size            =   9.75
@@ -5164,8 +5163,9 @@ Begin VB.Form frmOrcament
             Height          =   360
             Index           =   154
             Left            =   13695
-            MaxLength       =   8
+            MaxLength       =   254
             TabIndex        =   199
+            DataField       =   "NumAntt"
             Top             =   2700
             Width           =   1290
          End
@@ -9964,7 +9964,7 @@ Dim Modelo_hidroturbo As String, Eixos As Integer, Rodas As Integer
 Dim Pneus As String, Tubos As String, Projetista As Long
 Dim Entrega_Tecnica As String, Sequencia_do_Projeto As Long, Outras_Despesas As Double
 Dim Refaturamento As Boolean, Data_do_Pedido As Variant, Data_de_Entrega As Variant
-Dim Ordem_Interna As Boolean, Orcamento_Vinculado As Long, Frete As String
+Dim Ordem_Interna As Boolean, Orcamento_Vinculado As Long, frete As String
 Dim Ajuste As String
 Public txtSequencia_do_Orcamento As Object, Aba1 As Object, txtCEP As Object
 Public txtCaixaPostal As Object, txtFone As Object, txtObservacao As Object
@@ -11254,7 +11254,7 @@ Private Sub GeraPedido()
       ![Data Do Fechamento] = Date
       'Pedido
       Pedido.AddNew
-      Pedido![Seqüência Do Orçamento] = ![Seqüência Do Orçamento]
+      Pedido![Seqüência do Orçamento] = ![Seqüência do Orçamento]
       Pedido![Ocultar Valor Unitário] = ![Ocultar Valor Unitário]
       Pedido![Data de Emissão] = Date
       Pedido![Seqüência Do Geral] = ![Seqüência Do Geral]
@@ -11266,7 +11266,7 @@ Private Sub GeraPedido()
       Pedido![Forma de Pagamento] = ![Forma de Pagamento]
       Pedido!Fechamento = !Fechamento
       Pedido![Valor Do Fechamento] = ![Valor Do Fechamento]
-      Pedido![Valor do Frete] = ![Valor do Frete]
+      Pedido![Valor Do Frete] = ![Valor Do Frete]
       Pedido![Valor Do Seguro] = ![Valor Do Seguro]
       Pedido![Valor Total IPI dos Produtos] = ![Valor Total IPI dos Produtos]
       Pedido![Valor Total IPI dos Conjuntos] = ![Valor Total IPI dos Conjuntos]
@@ -11296,21 +11296,21 @@ Private Sub GeraPedido()
       Pedido.BookMark = .LastModified
       Pedido.MoveLast
       'Produtos
-      TbAuxiliar "Produtos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OProdutos
+      TbAuxiliar "Produtos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OProdutos
       If OProdutos.RecordCount > 0 Then
          Do While Not OProdutos.EOF
             PProdutos.AddNew
             PProdutos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PProdutos![Seqüência Do Produto] = OProdutos![Seqüência Do Produto]
+            PProdutos![Seqüência do Produto] = OProdutos![Seqüência do Produto]
             PProdutos!Quantidade = OProdutos!Quantidade
             PProdutos![Valor Unitário] = OProdutos![Valor Unitário]
             PProdutos![Valor Total] = OProdutos![Valor Total]
-            PProdutos![Valor Do IPI] = OProdutos![Valor Do IPI]
+            PProdutos![Valor do IPI] = OProdutos![Valor do IPI]
             PProdutos![Alíquota Do IPI] = OProdutos![Alíquota Do IPI]
             PProdutos!Diferido = OProdutos!Diferido
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PProdutos![Valor Do ICMS] = OProdutos![Valor Do ICMS]
+               PProdutos![Valor Do Icms] = OProdutos![Valor Do Icms]
                PProdutos![Valor da Base de Cálculo] = OProdutos![Valor da Base de Cálculo]
                PProdutos![Alíquota Do ICMS] = OProdutos![Alíquota Do ICMS]
                PProdutos![Percentual da Redução] = OProdutos![Percentual da Redução]
@@ -11325,17 +11325,17 @@ Private Sub GeraPedido()
             PProdutos![Alíquota Do ICMS ST] = OProdutos![Alíquota Do ICMS ST]
             PProdutos.Update
             PProdutos.BookMark = .LastModified
-            UltimaMvto 1, OProdutos![Seqüência Do Produto] 'Último Movimento
+            UltimaMvto 1, OProdutos![Seqüência do Produto] 'Último Movimento
             OProdutos.MoveNext
          Loop
       End If
       'Serviços
-      TbAuxiliar "Serviços do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OServicos
+      TbAuxiliar "Serviços do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OServicos
       If OServicos.RecordCount > 0 Then
          Do While Not OServicos.EOF
             PServicos.AddNew
             PServicos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PServicos![Seqüência Do Serviço] = OServicos![Seqüência Do Serviço]
+            PServicos![Seqüência do Serviço] = OServicos![Seqüência do Serviço]
             PServicos!Quantidade = OServicos!Quantidade
             PServicos![Valor Unitário] = OServicos![Valor Unitário]
             PServicos![Valor Total] = OServicos![Valor Total]
@@ -11345,20 +11345,20 @@ Private Sub GeraPedido()
          Loop
       End If
       'Conjuntos
-      TbAuxiliar "Conjuntos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OConjuntos
+      TbAuxiliar "Conjuntos do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OConjuntos
       If OConjuntos.RecordCount > 0 Then
          Do While Not OConjuntos.EOF
             PConjuntos.AddNew
             PConjuntos![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PConjuntos![Seqüência Do Conjunto] = OConjuntos![Seqüência Do Conjunto]
+            PConjuntos![Seqüência do Conjunto] = OConjuntos![Seqüência do Conjunto]
             PConjuntos!Quantidade = OConjuntos!Quantidade
             PConjuntos![Valor Unitário] = OConjuntos![Valor Unitário]
             PConjuntos![Valor Total] = OConjuntos![Valor Total]
-            PConjuntos![Valor Do IPI] = OConjuntos![Valor Do IPI]
+            PConjuntos![Valor do IPI] = OConjuntos![Valor do IPI]
             PConjuntos![Alíquota Do IPI] = OConjuntos![Alíquota Do IPI]
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PConjuntos![Valor Do ICMS] = OConjuntos![Valor Do ICMS]
+               PConjuntos![Valor Do Icms] = OConjuntos![Valor Do Icms]
                PConjuntos![Alíquota Do ICMS] = OConjuntos![Alíquota Do ICMS]
                PConjuntos![Percentual da Redução] = OConjuntos![Percentual da Redução]
                PConjuntos![Valor da Base de Cálculo] = OConjuntos![Valor da Base de Cálculo]
@@ -11374,24 +11374,24 @@ Private Sub GeraPedido()
             PConjuntos![Alíquota Do ICMS ST] = OConjuntos![Alíquota Do ICMS ST]
             PConjuntos.Update
             PConjuntos.BookMark = .LastModified
-            UltimaMvto 2, OConjuntos![Seqüência Do Conjunto] 'Último Movimento
+            UltimaMvto 2, OConjuntos![Seqüência do Conjunto] 'Último Movimento
             OConjuntos.MoveNext
          Loop
       End If
       'Peças
-      TbAuxiliar "Peças do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OPecas
+      TbAuxiliar "Peças do Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OPecas
       If OPecas.RecordCount > 0 Then
          Do While Not OPecas.EOF
             PPecas.AddNew
             PPecas![Seqüência Do Pedido] = Pedido![Seqüência Do Pedido]
-            PPecas![Seqüência Do Produto] = OPecas![Seqüência Do Produto]
+            PPecas![Seqüência do Produto] = OPecas![Seqüência do Produto]
             PPecas!Quantidade = OPecas!Quantidade
             PPecas![Valor Unitário] = OPecas![Valor Unitário]
             PPecas![Valor Total] = OPecas![Valor Total]
-            PPecas![Valor Do IPI] = OPecas![Valor Do IPI]
+            PPecas![Valor do IPI] = OPecas![Valor do IPI]
             'Entrega Futura não tem ICMS
             If Not Pedido![Entrega Futura] Then
-               PPecas![Valor Do ICMS] = OPecas![Valor Do ICMS]
+               PPecas![Valor Do Icms] = OPecas![Valor Do Icms]
                PPecas![Alíquota Do ICMS] = OPecas![Alíquota Do ICMS]
                PPecas![Percentual da Redução] = OPecas![Percentual da Redução]
                PPecas![Valor da Base de Cálculo] = OPecas![Valor da Base de Cálculo]
@@ -11408,12 +11408,12 @@ Private Sub GeraPedido()
             PPecas![Alíquota Do ICMS ST] = OPecas![Alíquota Do ICMS ST]
             PPecas.Update
             PPecas.BookMark = .LastModified
-            UltimaMvto 1, OPecas![Seqüência Do Produto] 'Último Movimento
+            UltimaMvto 1, OPecas![Seqüência do Produto] 'Último Movimento
             OPecas.MoveNext
          Loop
       End If
       'Parcelas
-      TbAuxiliar "Parcelas Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência Do Orçamento], OParcelas
+      TbAuxiliar "Parcelas Orçamento", "[Seqüência do Orçamento] = " & ![Seqüência do Orçamento], OParcelas
       If OParcelas.RecordCount > 0 Then
          Do While Not OParcelas.EOF
             PParcelas.AddNew
@@ -11528,8 +11528,8 @@ Private Sub AjustaSubstituicao()
       ValorAdicional = Round(ValorAdicional, 2)
          
       Do While Not Produtos.EOF
-         vgDb.Execute "Update [Produtos do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Produtos![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, Produtos!Quantidade * Produtos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Produtos![Seqüência do Produto Orçamento] 'Base de Cálculo ST
-         vgDb.Execute "Update [Produtos do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Produtos![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, Produtos!Quantidade * Produtos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Produtos![Seqüência do Produto Orçamento] 'Valor do ICMS ST
+         vgDb.Execute "Update [Produtos do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Produtos![Seqüência do Produto], Orcamento![Seqüência Do Geral], 13, 1, Produtos!Quantidade * Produtos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Produtos![Seqüência do Produto Orçamento] 'Base de Cálculo ST
+         vgDb.Execute "Update [Produtos do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Produtos![Seqüência do Produto], Orcamento![Seqüência Do Geral], 14, 1, Produtos!Quantidade * Produtos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Produtos![Seqüência do Produto Orçamento] 'Valor do ICMS ST
          Produtos.MoveNext
       Loop
    ElseIf Conjuntos.RecordCount > 0 Or Pecas.RecordCount > 0 Then
@@ -11543,15 +11543,15 @@ Private Sub AjustaSubstituicao()
         
       If Conjuntos.RecordCount > 0 Then
          Do While Not Conjuntos.EOF
-            vgDb.Execute "Update [Conjuntos do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Conjuntos![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 13, 1, Conjuntos!Quantidade * Conjuntos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Conjuntos![Seqüência Conjunto Orçamento] 'Base de Cálculo ST
-            vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Conjuntos![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 14, 1, Conjuntos!Quantidade * Conjuntos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Conjuntos![Seqüência Conjunto Orçamento] 'Valor do ICMS ST
+            vgDb.Execute "Update [Conjuntos do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Conjuntos![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 13, 1, Conjuntos!Quantidade * Conjuntos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Conjuntos![Seqüência Conjunto Orçamento] 'Base de Cálculo ST
+            vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Conjuntos![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 14, 1, Conjuntos!Quantidade * Conjuntos![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Conjuntos![Seqüência Conjunto Orçamento] 'Valor do ICMS ST
             Conjuntos.MoveNext
          Loop
       End If
       If Pecas.RecordCount > 0 Then
          Do While Not Pecas.EOF
-            vgDb.Execute "Update [Peças do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Pecas![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, Pecas!Quantidade * Pecas![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Pecas![Seqüência Peças do Orçamento] 'Base de Cálculo ST
-            vgDb.Execute "Update [Peças do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Pecas![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, Pecas!Quantidade * Pecas![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Pecas![Seqüência Peças do Orçamento] 'Valor do ICMS ST
+            vgDb.Execute "Update [Peças do Orçamento] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Pecas![Seqüência do Produto], Orcamento![Seqüência Do Geral], 13, 1, Pecas!Quantidade * Pecas![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Pecas![Seqüência Peças do Orçamento] 'Base de Cálculo ST
+            vgDb.Execute "Update [Peças do Orçamento] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Pecas![Seqüência do Produto], Orcamento![Seqüência Do Geral], 14, 1, Pecas!Quantidade * Pecas![Valor Unitário], ValorAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Pecas![Seqüência Peças do Orçamento] 'Valor do ICMS ST
             Pecas.MoveNext
          Loop
       End If
@@ -11678,19 +11678,19 @@ Private Function VerificaEstoque() As Boolean
    
    'Produtos
    Do While Not OProdutos.EOF
-      If (OProdutos![Quantidade Contábil] - OProdutos!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OProdutos![Seqüência Do Produto]
+      If (OProdutos![Quantidade Contábil] - OProdutos!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OProdutos![Seqüência do Produto]
       OProdutos.MoveNext
    Loop
    
    'Peças
    Do While Not OPecas.EOF
-      If (OPecas![Quantidade Contábil] - OPecas!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OPecas![Seqüência Do Produto]
+      If (OPecas![Quantidade Contábil] - OPecas!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OPecas![Seqüência do Produto]
       OPecas.MoveNext
    Loop
    
    'Conjuntos
    Do While Not OConjuntos.EOF
-      If (OConjuntos![Quantidade Contábil] - OConjuntos!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OConjuntos![Seqüência Do Conjunto]
+      If (OConjuntos![Quantidade Contábil] - OConjuntos!Quantidade) < 0 Then i = i + 1: ReDim Preserve Sequencia(i): Sequencia(i - 1) = OConjuntos![Seqüência do Conjunto]
       OConjuntos.MoveNext
    Loop
       
@@ -11849,7 +11849,7 @@ Public Sub SuperAtualizaPecas()
                   !CST = 90
                End If
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
+               ![Valor Do Icms] = 0
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
                !IVA = 0
@@ -11857,28 +11857,28 @@ Public Sub SuperAtualizaPecas()
                ![Valor ICMS ST] = 0
                ![Alíquota Do ICMS ST] = 0
             Else
-               !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Tributos = Tributos + CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               !CFOP = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 1, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 7, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 7, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               !IVA = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 12, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 13, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 14, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 15, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             End If
             If Not Entrega_Futura Then
-               !CST = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação])
+               !CST = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação])
             End If
-            ![Valor IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            !Diferido = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do PIS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            !Diferido = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor Do PIS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor Do Cofins] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             ![Valor Do Tributo] = Tributos 'Tributos
             .Update
             .BookMark = .LastModified
@@ -11919,37 +11919,37 @@ Public Sub SuperAtualizaConjuntos()
                   !CST = 90
                End If
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
+               ![Valor Do Icms] = 0
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
                !IVA = 0
                ![Base de Cálculo ST] = 0
                ![Valor ICMS ST] = 0
                ![Alíquota Do ICMS ST] = 0
-                ICMSAuxiliar = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                ICMSAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             Else
-               !CFOP = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 1, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               Tributos = Tributos + CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               !IVA = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 12, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 13, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 14, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 15, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               !CFOP = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 1, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               !IVA = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 12, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 13, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor ICMS ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 14, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 15, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             End If
             If Not Entrega_Futura Then
-               !CST = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 5, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação])
+               !CST = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 5, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação])
             End If
-            ![Valor IPI] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            !Diferido = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 9, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do PIS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            !Diferido = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 9, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             ![Valor Do Tributo] = Tributos 'Tributos
             .Update
             .BookMark = .LastModified
@@ -12552,9 +12552,9 @@ Private Sub AtualizaValor()
  Set Pecas = vgDb.OpenRecordSet("SELECT * From [Peças do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
 
   Do While Not Produtos.EOF
-   Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total], [Seqüência do Grupo Produto], [Valor de Custo] From Produtos Where [Seqüência do Produto] = " & Produtos![Seqüência Do Produto])
+   Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total], [Seqüência do Grupo Produto], [Valor de Custo] From Produtos Where [Seqüência do Produto] = " & Produtos![Seqüência do Produto])
     'Set Mp = VgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência da Matéria Prima] = 43602")
-    Set MP = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto] & " And [Seqüência da Matéria Prima] = 43602")
+    Set MP = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto] & " And [Seqüência da Matéria Prima] = 43602")
     If Tb![Valor Total] > 0 Then
        With Produtos
        .Edit
@@ -12573,7 +12573,7 @@ Private Sub AtualizaValor()
   Loop
   'Peças
    Do While Not Pecas.EOF
-   Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total] From Produtos Where [Seqüência do Produto] = " & Pecas![Seqüência Do Produto])
+   Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total] From Produtos Where [Seqüência do Produto] = " & Pecas![Seqüência do Produto])
     If Tb![Valor Total] > 0 Then
        With Pecas
        .Edit
@@ -12587,7 +12587,7 @@ Private Sub AtualizaValor()
   Loop
   'Conjuntos
   Do While Not Conjuntos.EOF
-     Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total] From Conjuntos Where [Seqüência do Conjunto] = " & Conjuntos![Seqüência Do Conjunto])
+     Set Tb = vgDb.OpenRecordSet("SELECT [Valor Total] From Conjuntos Where [Seqüência do Conjunto] = " & Conjuntos![Seqüência do Conjunto])
      If Tb![Valor Total] > 0 Then
         With Conjuntos
          .Edit
@@ -12723,7 +12723,7 @@ Caixinha:
     For i = 1 To QtdParcelaAux + 1
        With Parcelas
         .AddNew
-           ![Seqüência Do Orçamento] = Sequencia_do_Orcamento
+           ![Seqüência do Orçamento] = Sequencia_do_Orcamento
            ![Número da Parcela] = i
            !Dias = DiasAux
             If Not PriVez Then
@@ -12889,7 +12889,7 @@ Private Sub PreValidaImpressao()
    ReDim Preserve Vector(0) As String
  
    Do While Not Itens.EOF
-      If Itens![Valor Unitário] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
+      If Itens![Valor Unitário] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
       Itens.MoveNext
    Loop
       
@@ -13417,8 +13417,8 @@ Private Sub AtualizaValoresConjuntos()
          If Orcamento![Valor Do Fechamento] = 0 Then
             ![Valor Do Desconto] = 0
          End If
-         If Orcamento![Valor do Frete] = 0 Then
-            ![Valor do Frete] = 0
+         If Orcamento![Valor Do Frete] = 0 Then
+            ![Valor Do Frete] = 0
          End If
          
          
@@ -13431,7 +13431,7 @@ Private Sub AtualizaValoresConjuntos()
                   !CST = 90
                End If
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
+               ![Valor Do Icms] = 0
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
                !IVA = 0
@@ -13440,30 +13440,30 @@ Private Sub AtualizaValoresConjuntos()
                ![Alíquota Do ICMS ST] = 0
             Else
                '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               BC = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
                ![Valor da Base de Cálculo] = BC '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
                '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do ICMS] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-               Tributos = Tributos + ![Valor Do ICMS]
-               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+               Tributos = Tributos + ![Valor Do Icms]
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             End If
                If Entrega_Futura Then
-                  BC = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                   BCAuxiliar = BC + ValorFrete
                   ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-                  AliqAuxiliar = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  AliqAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                   ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
                End If
-            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then 'Orçamento Base: 125449 - Budke
                   'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do ICMS]) * 48.1 / 100
-                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
+                   PisRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
                    '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
                    ![Aliq Do Pis] = 2
                    '![Valor Do //PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
@@ -13472,14 +13472,14 @@ Private Sub AtualizaValoresConjuntos()
                    PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
                    ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
                    ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                   ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                End If
              Else
                If Not Entrega_Futura Then
-                   PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) - PisRed
+                   PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
                    ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
                    PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
                    ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
@@ -13488,12 +13488,12 @@ Private Sub AtualizaValoresConjuntos()
                End If
              End If
             Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                    'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do ICMS]) * 48.1 / 100
+                   CofinsRed = (Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                  ' ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
+                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
                    ![Aliq Do Cofins] = 9.6
                    '![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                    ![Valor Do Cofins] = ![Bc Cofins] * (![Aliq Do Cofins] / 100)
@@ -13501,14 +13501,14 @@ Private Sub AtualizaValoresConjuntos()
                    CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
                    ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
                    ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                   ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                End If
              Else ' Nao tem disconto e frete
                If Not Entrega_Futura Then
-                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) - CofinsRed
+                  CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
                   ![Aliq Do Cofins] = 9.6
-                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
@@ -13630,11 +13630,11 @@ Private Sub AtualizaValoresPecas()
          If Orcamento![Valor Do Fechamento] = 0 Then
             ![Valor Do Desconto] = 0
          End If
-         If Orcamento![Valor do Frete] = 0 Then
-            ![Valor do Frete] = 0
+         If Orcamento![Valor Do Frete] = 0 Then
+            ![Valor Do Frete] = 0
          End If
          
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
             totalItens = Round((Orcamento![Valor Total dos Produtos] + Orcamento![Valor Total dos Conjuntos] + Orcamento![Valor Total das Peças] + Orcamento![Valor Total das Peças Usadas] + Orcamento![Valor Total de Produtos Usados] + Orcamento![Valor Total Conjuntos Usados]), 2)
             PercentualRateio = (Orcamento![Valor Do Fechamento] / totalItens * 100)
@@ -13642,10 +13642,10 @@ Private Sub AtualizaValoresPecas()
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor do Frete] / totalItens * 100)
+            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             ![Valor Do Desconto] = Abs(ValorAcresDesc)
-            ![Valor do Frete] = ValorFrete
+            ![Valor Do Frete] = ValorFrete
             
                'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
                If Pecas_do_Orcamento.AbsolutePosition = Pecas_do_Orcamento.RecordCount And divergDesc <> 0 Then
@@ -13669,7 +13669,7 @@ Private Sub AtualizaValoresPecas()
                   !CST = 90
                End If
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
+               ![Valor Do Icms] = 0
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
                !IVA = 0
@@ -13679,32 +13679,32 @@ Private Sub AtualizaValoresPecas()
             Else
                '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
-               BC = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                ![Valor da Base de Cálculo] = Round(BC, 2) '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
                '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do ICMS] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-               Tributos = Tributos + ![Valor Do ICMS]
-               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+               Tributos = Tributos + ![Valor Do Icms]
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             End If
             'Auxiliar ICMS
              If Entrega_Futura Then
-                BC = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                 BCAuxiliar = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-                AliqAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                AliqAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                 ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
              End If
-            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             'Pis Antes do Oziris solicitar mudança 03/2018
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                   'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do ICMS]) * 48.1 / 100
+                  PisRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                   '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
                   '07/10/24 parei aqui - acertar BC PIS para reduzir o erro de arredondamento
-                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] - PisRed), 2)
+                  ![Bc Pis] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
                   ![Aliq Do Pis] = 2
                   ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
@@ -13715,8 +13715,8 @@ Private Sub AtualizaValoresPecas()
                End If
              Else ' sem rateio
                If Not Entrega_Futura Then
-                  PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) - PisRed
+                  PisRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
                   ![Aliq Do Pis] = 2
                   ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
@@ -13728,12 +13728,12 @@ Private Sub AtualizaValoresPecas()
                 'Pis Novo Conforme contabilidade (Andreza) Subtari icms da base do pis
              End If
             Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
                    'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do ICMS]) * 48.1 / 100
+                   CofinsRed = (Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100
                    '![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] - PisRed), 2)
+                   ![Bc Cofins] = Round(((Pecas_do_Orcamento!Quantidade * Pecas_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
                    ![Aliq Do Cofins] = 9.6
                    ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
@@ -13744,8 +13744,8 @@ Private Sub AtualizaValoresPecas()
                End If
              Else ' sem rateio
                If Not Entrega_Futura Then
-                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) - CofinsRed
+                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
                    ![Aliq Do Cofins] = 9.6
                    ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
@@ -13814,7 +13814,7 @@ Private Sub AtualizaValoresProdutos()
          Tributos = 0
          RedPis = 0
          RedCofins = 0
-         TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Produtos_do_Orcamento![Seqüência Do Produto], ProdutoAux
+         TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Produtos_do_Orcamento![Seqüência do Produto], ProdutoAux
          TbAuxiliar "Classificação Fiscal", "[Seqüência da Classificação] = " & ProdutoAux![Seqüência da Classificação] & " AND [Seqüência da Classificação] > 0", ProdutoNCMAux
          With Produtos_do_Orcamento
          .Edit
@@ -13822,12 +13822,12 @@ Private Sub AtualizaValoresProdutos()
          If Orcamento![Valor Do Fechamento] = 0 Then
             ![Valor Do Desconto] = 0
          End If
-         If Orcamento![Valor do Frete] = 0 Then
-            ![Valor do Frete] = 0
+         If Orcamento![Valor Do Frete] = 0 Then
+            ![Valor Do Frete] = 0
          End If
           
          'Valor do Desconto Rateado entre os produtos
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor do Frete] > 0 Then
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
          If Orcamento!Fechamento = 1 Then 'Valor
             Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
             GRevenda = Geral!Revenda
@@ -13838,18 +13838,18 @@ Private Sub AtualizaValoresProdutos()
             'vDesc = Round((vDesc + ValorAcresDesc), 2)
             
             'Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Orcamento![Valor do Frete] / totalItens * 100)
+            PercentualFrete = (Orcamento![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             
             VrItem2 = VrItem + ValorFrete + ValorAcresDesc
             'alterado em 16/08/2024 com base no orçamento 120949 - Correção no cálculo do IPI considerando ValorFrete na base de cálculo
-            ReducaoAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ReducaoAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
            '![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do IPI]
+            Tributos = Tributos + ![Valor do IPI]
             
             ![Valor Do Desconto] = Abs(ValorAcresDesc)
-            ![Valor do Frete] = ValorFrete
+            ![Valor Do Frete] = ValorFrete
             vDesc = vDesc + ![Valor Do Desconto]
             
          'Faz a correção no somatório do desconto. Erro gerado por conta do arredondamento
@@ -13863,12 +13863,12 @@ Private Sub AtualizaValoresProdutos()
          End If
           ' Verifica se Tem Redução da BC
          If ReducaoAuxiliar > 0 Then 'Alterado em 15/08/24 - Orçamento base.: 121089
-            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] + (ValorAcresDesc + divergDesc) + ValorFrete), 2)
+            VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] + (ValorAcresDesc + divergDesc) + ValorFrete), 2)
             VrReducao = Round((VrItem * ReducaoAuxiliar / 100), 2)
             VrItem = VrItem - VrReducao '+ ValorFrete (alterado em 15/08/24) - Orçamento base.: 121089
          Else
           If Not GRevenda Then
-             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor Do IPI] - ![Valor Do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
+             VrItem = ((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + Produtos_do_Orcamento![Valor do IPI] - ![Valor Do Desconto]) '+ Int((ValorAcresDesc * 100) + 1) / 100)
              VrItem = VrItem + ValorFrete
           Else
             VrItem = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) + ValorAcresDesc), 2)
@@ -13883,32 +13883,32 @@ Private Sub AtualizaValoresProdutos()
                   !CFOP = "6922"
                   !CST = 90
                End If
-               ICMSAuxiliar = Round((VrItem * CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF) / 100), 2)
+               ICMSAuxiliar = Round((VrItem * CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF) / 100), 2)
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
+               ![Valor Do Icms] = 0
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
             Else ' Nw é Entrega Futura
-              !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+              !CFOP = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
               If !CFOP = "5403" Or !CFOP = "6403" Or !Diferido = True Then
                  ![Valor da Base de Cálculo] = 0
-                 ![Valor Do ICMS] = 0
+                 ![Valor Do Icms] = 0
               Else
               ![Valor da Base de Cálculo] = VrItem
-              ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-              ![Valor Do ICMS] = Round((VrItem * Produtos_do_Orcamento![Alíquota Do ICMS] / 100), 2)
+              ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+              ![Valor Do Icms] = Round((VrItem * Produtos_do_Orcamento![Alíquota Do ICMS] / 100), 2)
                '![Valor Do Icms] = Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário] - ![Valor Do Desconto] -
                If ![Alíquota Do ICMS] = 0 Then
                   ![Valor da Base de Cálculo] = 0
                End If
               End If
-               Tributos = Tributos + Produtos_do_Orcamento![Valor Do ICMS]
+               Tributos = Tributos + Produtos_do_Orcamento![Valor Do Icms]
               '![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-              ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+              ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             End If
             '![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário] + ValorAcresDesc, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             'Tributos = Tributos + ![Valor Do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             'Pis Antes ate 03/2018
              '![Valor Do PIS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             'Mudança 19/03/2018 a Pedido do Oziris subtrair o icms da base do pis
@@ -13922,25 +13922,25 @@ Private Sub AtualizaValoresProdutos()
                  
                    If Not GRevenda Then
                       If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                         RedPis = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Pis] = VrItem - ![Valor Do ICMS] - RedPis
+                         RedPis = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Pis] = VrItem - ![Valor Do Icms] - RedPis
                          ![Aliq Do Pis] = 2
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
                       Else
                        ' 19/09/2024 Ajuste na base do cálculo com base no orçmento 124582 - não estava considerando o frete na BC do PIS e COFINS
                        '![Bc Pis] = VrItem2 - ![Valor Do Icms]
-                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] + ValorFrete), 2)
+                        ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
                         ![Aliq Do Pis] = 1.65
                         ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4)
                       End If
                    Else
                       If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                          RedPis = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Pis] = (VrItem2 - ![Valor Do ICMS]) - RedPis '((VrItem) - ![Valor Do ICMS] - RedPis)
+                          RedPis = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Pis] = (VrItem2 - ![Valor Do Icms]) - RedPis '((VrItem) - ![Valor Do ICMS] - RedPis)
                          ![Aliq Do Pis] = 2
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
                       Else
-                         ![Bc Pis] = VrItem2 - ![Valor Do ICMS]
+                         ![Bc Pis] = VrItem2 - ![Valor Do Icms]
                          ![Aliq Do Pis] = 1.65
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
                       End If
@@ -13951,12 +13951,12 @@ Private Sub AtualizaValoresProdutos()
                 Else ' com Redução
                    If Not GRevenda Then
                       If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                         RedPis = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Pis] = (VrItem2 - ![Valor Do ICMS]) - RedPis
+                         RedPis = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Pis] = (VrItem2 - ![Valor Do Icms]) - RedPis
                          ![Aliq Do Pis] = 2
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
                       Else
-                        ![Bc Pis] = Round((VrItem2 + divergDesc - ![Valor Do ICMS]), 2)
+                        ![Bc Pis] = Round((VrItem2 + divergDesc - ![Valor Do Icms]), 2)
                         '![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms]), 2) '+ Int((ValorAcresDesc * 100) + 1) / 100) - Essa lógica força o arredondamento sempre pra cima, mas não foi preciso utilizar, pois o erro que era gerado no (vr unit * qtde) para o vr total foi corrigido
                          ![Aliq Do Pis] = 1.65
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '(((!Quantidade * ![Valor Unitário]) - Produtos_do_Orcamento![Valor Do IPI] + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]) * 1.65 / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
@@ -13964,11 +13964,11 @@ Private Sub AtualizaValoresProdutos()
                    Else
                       If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
                          RedPis = VrItem2 * 48.1 / 100
-                         ![Bc Pis] = VrItem2 - ![Valor Do ICMS] - RedPis
+                         ![Bc Pis] = VrItem2 - ![Valor Do Icms] - RedPis
                          ![Aliq Do Pis] = 2
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '(((!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS] - RedPis) * 2 / 100
                       Else
-                         ![Bc Pis] = VrItem2 - ![Valor Do ICMS]
+                         ![Bc Pis] = VrItem2 - ![Valor Do Icms]
                          ![Aliq Do Pis] = 1.65
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '(((!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]) * 1.65 / 100
                       End If
@@ -14013,13 +14013,13 @@ Private Sub AtualizaValoresProdutos()
                If ReducaoAuxiliar = 0 Then
                   If Not GRevenda Then
                      If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                         RedCofins = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                         RedCofins = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                          ![Aliq Do Cofins] = 9.6
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      Else
                          'Ajuste BC considerando o frete. Orçamento base 124582 em 19/09/2024
-                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS] - ![Valor Do Desconto] + ValorFrete), 2)
+                         ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete), 2)
                         '![Bc Cofins] = Round(VrItem2, 2) - ![Valor Do Icms]
                          ![Aliq Do Cofins] = 7.6
                          ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
@@ -14027,12 +14027,12 @@ Private Sub AtualizaValoresProdutos()
                      End If
                   Else
                   If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                      RedCofins = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                      ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                      RedCofins = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                      ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                       ![Aliq Do Cofins] = 9.6
                       ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                   Else
-                      ![Bc Cofins] = VrItem2 - ![Valor Do ICMS]
+                      ![Bc Cofins] = VrItem2 - ![Valor Do Icms]
                       ![Aliq Do Cofins] = 7.6
                       ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                   End If
@@ -14040,24 +14040,24 @@ Private Sub AtualizaValoresProdutos()
                Else 'Reducao
                   If Not GRevenda Then
                      If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                         RedCofins = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                         RedCofins = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                          ![Aliq Do Cofins] = 9.6
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário] - Produtos_do_Orcamento![Valor Do IPI])) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      Else
-                         ![Bc Cofins] = Round((VrItem2 + divergDesc - ![Valor Do ICMS]), 2)
+                         ![Bc Cofins] = Round((VrItem2 + divergDesc - ![Valor Do Icms]), 2)
                          ![Aliq Do Cofins] = 7.6
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário] - Produtos_do_Orcamento![Valor Do IPI])) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      End If
                   Else
                      'Continua aqui.... 13/12/23....
                      If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                         RedCofins = (VrItem2 - ![Valor Do ICMS]) * 48.1 / 100
-                         ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                         RedCofins = (VrItem2 - ![Valor Do Icms]) * 48.1 / 100
+                         ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                          ![Aliq Do Cofins] = 9.6
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100  'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário])) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS] - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      Else
-                         ![Bc Cofins] = VrItem2 - ![Valor Do ICMS]
+                         ![Bc Cofins] = VrItem2 - ![Valor Do Icms]
                          ![Aliq Do Cofins] = 7.6
                          ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário])) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                      End If
@@ -14067,7 +14067,7 @@ Private Sub AtualizaValoresProdutos()
                If ReducaoAuxiliar = 0 Then
                   If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
                       RedCofins = (VrItem2 - ICMSAuxiliar) * 48.1 / 100
-                      ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                      ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                       ![Aliq Do Cofins] = 9.6
                       ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((VrItem - Produtos_do_Orcamento![Valor Do IPI]) - ICMSAuxiliar - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                   Else
@@ -14078,7 +14078,7 @@ Private Sub AtualizaValoresProdutos()
                Else
                   If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
                       RedCofins = (VrItem2 - ICMSAuxiliar) * 48.1 / 100
-                      ![Bc Cofins] = VrItem2 - ![Valor Do ICMS] - RedCofins
+                      ![Bc Cofins] = VrItem2 - ![Valor Do Icms] - RedCofins
                       ![Aliq Do Cofins] = 9.6
                       ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, ((((!Quantidade * ![Valor Unitário]) - Produtos_do_Orcamento![Valor Do IPI]) + ValorFrete + ValorAcresDesc) - ICMSAuxiliar - RedCofins), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, 0)
                   Else
@@ -14093,10 +14093,10 @@ Private Sub AtualizaValoresProdutos()
             End If
             Tributos = Tributos + ![Valor Do Cofins]
             ' Substituição Tributaria Com Frete e Desconto AFF
-            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+            !IVA = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+            ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+            ![Valor ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), ValorAcresDesc, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
             Tributos = Tributos + ![Valor ICMS ST]
             ![Valor Do Tributo] = Round((Tributos), 2) 'Tributos
             .Update
@@ -14106,7 +14106,7 @@ Private Sub AtualizaValoresProdutos()
             End If
             'Qdo Não Tem Desconto
             If Orcamento![Valor Do Fechamento] = 0 Then
-            If Orcamento![Valor do Frete] = 0 Then
+            If Orcamento![Valor Do Frete] = 0 Then
               
             If Entrega_Futura Then
                If MunicipioAux!UF = "SP" Then
@@ -14117,21 +14117,21 @@ Private Sub AtualizaValoresProdutos()
                   !CST = 90
                End If
                ![Valor da Base de Cálculo] = 0
-               ![Valor Do ICMS] = 0
-                ICMSAuxiliar = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               ![Valor Do Icms] = 0
+                ICMSAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
                ![Alíquota Do ICMS] = 0
                ![Percentual da Redução] = 0
             Else
-               !CFOP = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-               ![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-               Tributos = Tributos + ![Valor Do ICMS]
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-               ![Percentual da Redução] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               !CFOP = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               ![Valor Do Icms] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               Tributos = Tributos + ![Valor Do Icms]
+               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             End If
-            ![Valor Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             
             If Entrega_Futura Then
                If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
@@ -14161,13 +14161,13 @@ Private Sub AtualizaValoresProdutos()
                Tributos = Tributos + ![Valor Do Cofins]
             Else 'nao é entrega futura
              If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                 RedPis = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                 ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS] - RedPis)
+                 RedPis = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                 ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - RedPis)
                  ![Aliq Do Pis] = 2
                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS] - RedPis) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
              Else 'orc 125012
 '                ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms])
-                 ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS]), 2) '+ Int((ValorAcresDesc * 100) + 1) / 100) - Essa lógica força o arredondamento sempre pra cima, mas não foi preciso utilizar, pois o erro que era gerado no (vr unit * qtde) para o vr total foi corrigido
+                 ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms]), 2) '+ Int((ValorAcresDesc * 100) + 1) / 100) - Essa lógica força o arredondamento sempre pra cima, mas não foi preciso utilizar, pois o erro que era gerado no (vr unit * qtde) para o vr total foi corrigido
                  ![Aliq Do Pis] = 1.65
                  ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
              End If
@@ -14176,13 +14176,13 @@ Private Sub AtualizaValoresProdutos()
              End If
                Tributos = Tributos + ![Valor Do PIS]
              If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
-                 RedCofins = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 48.1 / 100
-                 ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) - RedCofins
+                 RedCofins = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100
+                 ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - RedCofins
                  ![Aliq Do Cofins] = 9.6
                  ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS] - RedCofins) * 9.6 / 100
              Else
                 '![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms])
-                 ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do ICMS]), 2) ' + Int((ValorAcresDesc * 100) + 1) / 100)
+                 ![Bc Cofins] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms]), 2) ' + Int((ValorAcresDesc * 100) + 1) / 100)
                  ![Aliq Do Cofins] = 7.6
                  ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 7.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
              End If
@@ -14192,13 +14192,13 @@ Private Sub AtualizaValoresProdutos()
              Tributos = Tributos + ![Valor Do Cofins]
             End If
             If Not Entrega_Futura Then
-               !CST = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade])
+               !CST = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade])
             End If
             'Substituição
-            !IVA = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Base de Cálculo ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Valor ICMS ST] = CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            !IVA = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 12, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 13, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 15, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+            ![Valor ICMS ST] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 14, 1, (!Quantidade * ![Valor Unitário]), 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
             Tributos = Tributos + ![Valor ICMS ST]
             ![Valor Do Tributo] = Round(Tributos, 2) 'Tributos
             .Update
@@ -14359,11 +14359,11 @@ Private Sub PreValidaVinculo()
   '     Exit Sub
   '  End If
     If Itens!Tipo = "Conjuntos" Then
-       If Itens![Seqüência Do Produto] <> TbOrigem![Seqüência Do Produto] Then
-          i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM INVALIDO: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
+       If Itens![Seqüência do Produto] <> TbOrigem![Seqüência do Produto] Then
+          i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM INVALIDO: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
        End If
           If Itens!Tipo = "Conjuntos" And TbOrigem!Tipo = "Conjuntos" Then
-             If Itens![Seqüência Do Produto] = TbOrigem![Seqüência Do Produto] Then
+             If Itens![Seqüência do Produto] = TbOrigem![Seqüência do Produto] Then
                 Exit Sub
              End If
           End If
@@ -14443,7 +14443,7 @@ End If
  
    Do While Not Itens.EOF
       'If Itens![Valor Unitário] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
-      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
+      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
       Itens.MoveNext
    Loop
       
@@ -14533,13 +14533,13 @@ Private Sub MYSQLInclui()
  Do While Not rsGas.EOF
     With Tb1
      .AddNew
-       ![Seqüência Do Orçamento] = Sequencia_do_Orcamento
+       ![Seqüência do Orçamento] = Sequencia_do_Orcamento
        ![Sequencia do Item] = SeqItem
         If rsGas!Tipo = 1 Or rsGas!Tipo = 3 Then
-           ![Seqüência Do Produto] = rsGas![Seqüência Do Produto]
+           ![Seqüência do Produto] = rsGas![Seqüência do Produto]
         End If
         If rsGas!Tipo = 2 Then
-           ![Seqüência Do Conjunto] = rsGas![Seqüência Do Produto]
+           ![Seqüência do Conjunto] = rsGas![Seqüência do Produto]
         End If
        !Quantidade = rsGas!Quantidade
        ![Valor Total] = rsGas!Total
@@ -14734,7 +14734,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Data_de_Entrega = txtCampo(150).Value
          Ordem_Interna = chkCampo(11).Value
          Orcamento_Vinculado = txtCampo(161).Value
-         Frete = txtCampo(151).Value
+         frete = txtCampo(151).Value
       Else
          Cancelado = IIf(IsNull(vgTb!Cancelado), 0, vgTb!Cancelado)
          Data_da_Alteracao = vgTb![Data da Alteração]
@@ -14745,7 +14745,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_das_Pecas = IIf(IsNull(vgTb![Valor Total das Peças]), 0, vgTb![Valor Total das Peças])
          Sequencia_do_Municipio = IIf(IsNull(vgTb![Seqüência Do Município]), 0, vgTb![Seqüência Do Município])
          Sequencia_do_Pais = IIf(IsNull(vgTb![Seqüência do País]), 0, vgTb![Seqüência do País])
-         Sequencia_do_Orcamento = IIf(IsNull(vgTb![Seqüência Do Orçamento]), 0, vgTb![Seqüência Do Orçamento])
+         Sequencia_do_Orcamento = IIf(IsNull(vgTb![Seqüência do Orçamento]), 0, vgTb![Seqüência do Orçamento])
          Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
          Fechamento = IIf(IsNull(vgTb!Fechamento), 0, vgTb!Fechamento)
@@ -14780,7 +14780,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Numero_do_Endereco = IIf(IsNull(vgTb![Número Do Endereço]), "", vgTb![Número Do Endereço])
          Valor_Total_da_Base_de_Calculo = IIf(IsNull(vgTb![Valor Total da Base de Cálculo]), 0, vgTb![Valor Total da Base de Cálculo])
          Valor_do_Seguro = IIf(IsNull(vgTb![Valor Do Seguro]), 0, vgTb![Valor Do Seguro])
-         Valor_do_Frete = IIf(IsNull(vgTb![Valor do Frete]), 0, vgTb![Valor do Frete])
+         Valor_do_Frete = IIf(IsNull(vgTb![Valor Do Frete]), 0, vgTb![Valor Do Frete])
          Valor_Total_das_Pecas_Usadas = IIf(IsNull(vgTb![Valor Total das Peças Usadas]), 0, vgTb![Valor Total das Peças Usadas])
          Sequencia_da_Propriedade = IIf(IsNull(vgTb![Seqüência da Propriedade]), 0, vgTb![Seqüência da Propriedade])
          Complemento = IIf(IsNull(vgTb!Complemento), "", vgTb!Complemento)
@@ -14867,7 +14867,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Data_de_Entrega = vgTb![Data de Entrega]
          Ordem_Interna = IIf(IsNull(vgTb![Ordem Interna]), 0, vgTb![Ordem Interna])
          Orcamento_Vinculado = IIf(IsNull(vgTb![Orçamento Vinculado]), 0, vgTb![Orçamento Vinculado])
-         Frete = IIf(IsNull(vgTb!Frete), "", vgTb!Frete)
+         frete = IIf(IsNull(vgTb!frete), "", vgTb!frete)
       End If
    End If
    If Err Then Err.Clear                          'se deu algum erro, vamos resetá-lo
@@ -15143,7 +15143,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       End If
       If vgOk Then
          If Ordem_Interna = False Then
-            vgOk = (Not Vazio(Frete))
+            vgOk = (Not Vazio(frete))
             vgMsg$ = "Frete não pode ser vazio!"
             If Not vgOk Then vgColumn = 152
          End If
@@ -16108,8 +16108,6 @@ Private Sub txtCp_LostFocus(Index As Integer)
       ExecutaPreValidacao                         'habilita/desabilita campos
    End If
    Select Case Index
-        Case 152, 153
-         txtCp(Index).Text = UCase$(Trim$(txtCp(Index).Text))
       Case 156
          BuscaVendedor
       Case 161
@@ -18909,23 +18907,18 @@ Public Sub DefineControles3()
  '--- PlacaVeiculo (índice 152) ---
 Set txtCampo(152).CtPri = txtCp(152)
 txtCampo(152).DataType = 0
-txtCampo(152).Mask = ""                        ' s AZ e 09 em maisculo
-txtCp(152).MaxLength = 7                         ' limite antes do AddColumn
-txtCp(152).Enabled = -1
-txtCp(152).Locked = 0
+txtCampo(152).Mask = "@x"                        ' só A–Z e 0–9 em maiúsculo
+txtCp(152).MaxLength = 8                         ' limite antes do AddColumn
 txtCampo(152).Source = "Orçamento"
-txtCampo(152).BoundColumn = "PlacaVeiculo"       ' ou 1, se seu componente exigir ndice
+txtCampo(152).BoundColumn = "PlacaVeiculo"       ' ou 1, se seu componente exigir índice
 grdBrowse.AddColumn _
     vgDb.Tables(vgIdentTab).Columns("PlacaVeiculo"), txtCampo(152)
-
 
 '--- UfPlaca (índice 153) ---
 Set txtCampo(153).CtPri = txtCp(153)
 txtCampo(153).DataType = 0
-txtCampo(153).Mask = ""                        ' duas letras
+txtCampo(153).Mask = "!!"                        ' duas letras
 txtCp(153).MaxLength = 2
-txtCp(153).Enabled = -1
-txtCp(153).Locked = 0
 txtCampo(153).Source = "Orçamento"
 txtCampo(153).BoundColumn = "UfPlaca"
 grdBrowse.AddColumn _
@@ -18934,10 +18927,8 @@ grdBrowse.AddColumn _
 '--- NumAntt (índice 154) ---
 Set txtCampo(154).CtPri = txtCp(154)
 txtCampo(154).DataType = 0
-txtCampo(154).Mask = ""
+txtCampo(154).Mask = "00000000"                  ' oito dígitos
 txtCp(154).MaxLength = 8
-txtCp(154).Enabled = -1
-txtCp(154).Locked = 0
 txtCampo(154).Source = "Orçamento"
 txtCampo(154).BoundColumn = "NumAntt"
 grdBrowse.AddColumn _
@@ -19263,15 +19254,15 @@ End Sub
 Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgColumns() As Variant, vgIsValid As Boolean, vgColumn As Integer, vgErrorMessage As String)
    Select Case Index
       Case 0
-         Conjuntos_do_Orcamento![Seqüência Do Orçamento] = Orcamento![Seqüência Do Orçamento]
+         Conjuntos_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
       Case 1
-         Pecas_do_Orcamento![Seqüência Do Orçamento] = Orcamento![Seqüência Do Orçamento]
+         Pecas_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
       Case 2
-         Parcelas_Orcamento![Seqüência Do Orçamento] = Orcamento![Seqüência Do Orçamento]
+         Parcelas_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
       Case 3
-         Produtos_do_Orcamento![Seqüência Do Orçamento] = Orcamento![Seqüência Do Orçamento]
+         Produtos_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
       Case 4
-         Servicos_do_Orcamento![Seqüência Do Orçamento] = Orcamento![Seqüência Do Orçamento]
+         Servicos_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
    End Select
 End Sub
 
@@ -19506,7 +19497,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Conjuntos do Orçamento]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência Do Orçamento]
+      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
       vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
@@ -19597,8 +19588,8 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
    CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins) Then
-            Conjuntos_do_Orcamento![Seqüência Do Orçamento] = (0)
-            Sequencia_do_Orcamento = Conjuntos_do_Orcamento![Seqüência Do Orçamento]
+            Conjuntos_do_Orcamento![Seqüência do Orçamento] = (0)
+            Sequencia_do_Orcamento = Conjuntos_do_Orcamento![Seqüência do Orçamento]
          End If
          Conjuntos_do_Orcamento.Update
          Set vgRsError = Nothing
@@ -19652,12 +19643,12 @@ IniApDaTb:
    On Error Resume Next
    If Conjuntos_do_Orcamento.EOF = False And Conjuntos_do_Orcamento.BOF = False And Conjuntos_do_Orcamento.RecordCount > 0 Then
       Sequencia_Conjunto_Orcamento = Conjuntos_do_Orcamento![Seqüência Conjunto Orçamento]
-      Sequencia_do_Conjunto = Conjuntos_do_Orcamento![Seqüência Do Conjunto]
+      Sequencia_do_Conjunto = Conjuntos_do_Orcamento![Seqüência do Conjunto]
       Quantidade = Conjuntos_do_Orcamento!Quantidade
       Valor_Unitario = Conjuntos_do_Orcamento![Valor Unitário]
       Valor_Total = Conjuntos_do_Orcamento![Valor Total]
-      Valor_do_IPI = Conjuntos_do_Orcamento![Valor Do IPI]
-      Valor_do_ICMS = Conjuntos_do_Orcamento![Valor Do ICMS]
+      Valor_do_IPI = Conjuntos_do_Orcamento![Valor do IPI]
+      Valor_do_ICMS = Conjuntos_do_Orcamento![Valor Do Icms]
       Aliquota_do_IPI = Conjuntos_do_Orcamento![Alíquota Do IPI]
       Aliquota_do_ICMS = Conjuntos_do_Orcamento![Alíquota Do ICMS]
       Percentual_da_Reducao = Conjuntos_do_Orcamento![Percentual da Redução]
@@ -19673,7 +19664,7 @@ IniApDaTb:
       Valor_ICMS_ST = Conjuntos_do_Orcamento![Valor ICMS ST]
       Aliquota_do_ICMS_ST = Conjuntos_do_Orcamento![Alíquota Do ICMS ST]
       Valor_do_Desconto = Conjuntos_do_Orcamento![Valor Do Desconto]
-      Valor_do_Frete = Conjuntos_do_Orcamento![Valor do Frete]
+      Valor_do_Frete = Conjuntos_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Conjuntos_do_Orcamento![Valor Anterior]
       Bc_pis = Conjuntos_do_Orcamento![Bc Pis]
       Aliq_do_pis = Conjuntos_do_Orcamento![Aliq Do Pis]
@@ -19823,7 +19814,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Peças do Orçamento]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência Do Orçamento]
+      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
       vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
@@ -19923,8 +19914,8 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
    Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, Peso) Then
-            Pecas_do_Orcamento![Seqüência Do Orçamento] = (0)
-            Sequencia_do_Orcamento = Pecas_do_Orcamento![Seqüência Do Orçamento]
+            Pecas_do_Orcamento![Seqüência do Orçamento] = (0)
+            Sequencia_do_Orcamento = Pecas_do_Orcamento![Seqüência do Orçamento]
          End If
          Pecas_do_Orcamento.Update
          Set vgRsError = Nothing
@@ -19984,12 +19975,12 @@ IniApDaTb:
    On Error Resume Next
    If Pecas_do_Orcamento.EOF = False And Pecas_do_Orcamento.BOF = False And Pecas_do_Orcamento.RecordCount > 0 Then
       Valor_do_Tributo = Pecas_do_Orcamento![Valor Do Tributo]
-      Sequencia_do_Produto = Pecas_do_Orcamento![Seqüência Do Produto]
+      Sequencia_do_Produto = Pecas_do_Orcamento![Seqüência do Produto]
       Quantidade = Pecas_do_Orcamento!Quantidade
       Valor_Unitario = Pecas_do_Orcamento![Valor Unitário]
       Valor_Total = Pecas_do_Orcamento![Valor Total]
-      Valor_do_IPI = Pecas_do_Orcamento![Valor Do IPI]
-      Valor_do_ICMS = Pecas_do_Orcamento![Valor Do ICMS]
+      Valor_do_IPI = Pecas_do_Orcamento![Valor do IPI]
+      Valor_do_ICMS = Pecas_do_Orcamento![Valor Do Icms]
       Sequencia_Pecas_do_Orcamento = Pecas_do_Orcamento![Seqüência Peças do Orçamento]
       Aliquota_do_IPI = Pecas_do_Orcamento![Alíquota Do IPI]
       Aliquota_do_ICMS = Pecas_do_Orcamento![Alíquota Do ICMS]
@@ -20005,7 +19996,7 @@ IniApDaTb:
       CST = Pecas_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Pecas_do_Orcamento![Alíquota Do ICMS ST]
       Valor_do_Desconto = Pecas_do_Orcamento![Valor Do Desconto]
-      Valor_do_Frete = Pecas_do_Orcamento![Valor do Frete]
+      Valor_do_Frete = Pecas_do_Orcamento![Valor Do Frete]
       Valor_Anterior = Pecas_do_Orcamento![Valor Anterior]
       Bc_pis = Pecas_do_Orcamento![Bc Pis]
       Aliq_do_pis = Pecas_do_Orcamento![Aliq Do Pis]
@@ -20081,7 +20072,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Parcelas Orçamento]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência Do Orçamento]
+      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
       vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
       'vamos definir a ordenação
@@ -20278,7 +20269,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Produtos do Orçamento]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência Do Orçamento]
+      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
       vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
@@ -20393,8 +20384,8 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, _
    Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
    Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal) Then
-            Produtos_do_Orcamento![Seqüência Do Orçamento] = (0)
-            Sequencia_do_Orcamento = Produtos_do_Orcamento![Seqüência Do Orçamento]
+            Produtos_do_Orcamento![Seqüência do Orçamento] = (0)
+            Sequencia_do_Orcamento = Produtos_do_Orcamento![Seqüência do Orçamento]
          End If
          Produtos_do_Orcamento.Update
          Set vgRsError = Nothing
@@ -20458,12 +20449,12 @@ IniApDaTb:
       Bc_pis = Produtos_do_Orcamento![Bc Pis]
       Valor_do_Tributo = Produtos_do_Orcamento![Valor Do Tributo]
       Sequencia_do_Produto_Orcamento = Produtos_do_Orcamento![Seqüência do Produto Orçamento]
-      Sequencia_do_Produto = Produtos_do_Orcamento![Seqüência Do Produto]
+      Sequencia_do_Produto = Produtos_do_Orcamento![Seqüência do Produto]
       Quantidade = Produtos_do_Orcamento!Quantidade
       Valor_Unitario = Produtos_do_Orcamento![Valor Unitário]
       Valor_Total = Produtos_do_Orcamento![Valor Total]
-      Valor_do_IPI = Produtos_do_Orcamento![Valor Do IPI]
-      Valor_do_ICMS = Produtos_do_Orcamento![Valor Do ICMS]
+      Valor_do_IPI = Produtos_do_Orcamento![Valor do IPI]
+      Valor_do_ICMS = Produtos_do_Orcamento![Valor Do Icms]
       Aliquota_do_IPI = Produtos_do_Orcamento![Alíquota Do IPI]
       Aliquota_do_ICMS = Produtos_do_Orcamento![Alíquota Do ICMS]
       Percentual_da_Reducao = Produtos_do_Orcamento![Percentual da Redução]
@@ -20477,7 +20468,7 @@ IniApDaTb:
       CFOP = Produtos_do_Orcamento!CFOP
       CST = Produtos_do_Orcamento!CST
       Aliquota_do_ICMS_ST = Produtos_do_Orcamento![Alíquota Do ICMS ST]
-      Valor_do_Frete = Produtos_do_Orcamento![Valor do Frete]
+      Valor_do_Frete = Produtos_do_Orcamento![Valor Do Frete]
       Valor_do_Desconto = Produtos_do_Orcamento![Valor Do Desconto]
       Valor_Anterior = Produtos_do_Orcamento![Valor Anterior]
       Bc_cofins = Produtos_do_Orcamento![Bc Cofins]
@@ -20566,7 +20557,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Serviços do Orçamento]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência Do Orçamento]
+      x$ = "[Seqüência do Orçamento] = " & Orcamento![Seqüência do Orçamento]
       vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
@@ -20628,8 +20619,8 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Set vgRsError = Servicos_do_Orcamento
          If ProcessaServicos(Sequencia_do_Orcamento, Sequencia_do_Servico_Orcamento, Sequencia_do_Servico, Quantidade, Valor_Unitario, Valor_Total, _
    Valor_Anterior) Then
-            Servicos_do_Orcamento![Seqüência Do Orçamento] = (0)
-            Sequencia_do_Orcamento = Servicos_do_Orcamento![Seqüência Do Orçamento]
+            Servicos_do_Orcamento![Seqüência do Orçamento] = (0)
+            Sequencia_do_Orcamento = Servicos_do_Orcamento![Seqüência do Orçamento]
          End If
          Servicos_do_Orcamento.Update
          Set vgRsError = Nothing
@@ -20661,7 +20652,7 @@ IniApDaTb:
    On Error Resume Next
    If Servicos_do_Orcamento.EOF = False And Servicos_do_Orcamento.BOF = False And Servicos_do_Orcamento.RecordCount > 0 Then
       Sequencia_do_Servico_Orcamento = Servicos_do_Orcamento![Seqüência do Serviço Orçamento]
-      Sequencia_do_Servico = Servicos_do_Orcamento![Seqüência Do Serviço]
+      Sequencia_do_Servico = Servicos_do_Orcamento![Seqüência do Serviço]
       Quantidade = Servicos_do_Orcamento!Quantidade
       Valor_Unitario = Servicos_do_Orcamento![Valor Unitário]
       Valor_Total = Servicos_do_Orcamento![Valor Total]

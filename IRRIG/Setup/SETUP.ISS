@@ -1,7 +1,7 @@
 [Setup]
 AppName=SISTEMA IRRIGAÇÃO PENÁPOLIS
-AppVerName=SISTEMA IRRIGAÇÃO PENÁPOLIS 1.1.11
-AppVersion=1.1.11
+AppVerName=SISTEMA IRRIGAÇÃO PENÁPOLIS 1.1.12
+AppVersion=1.1.12
 AppCopyright=(C)2025 IRRIGAÇÃO PENÁPOLIS
 DefaultDirName=SISTEMAS_IRRIGACAO
 DefaultGroupName=SISTEMAS_IRRIGACAO
@@ -10,9 +10,9 @@ OutputBaseFilename=IRRIG_INSTALAR
 WindowVisible=no
 WindowShowCaption=no
 WindowStartMaximized=no
-VersionInfoVersion=1.1.11
+VersionInfoVersion=1.1.12
 VersionInfoCompany=IRRIGAÇÃO PENÁPOLIS
-VersionInfoTextVersion=1.1.11
+VersionInfoTextVersion=1.1.12
 VersionInfoCopyright=(C)2025 IRRIGAÇÃO PENÁPOLIS
 VersionInfoDescription=SISTEMA IRRIGAÇÃO PENÁPOLIS
 PrivilegesRequired=admin

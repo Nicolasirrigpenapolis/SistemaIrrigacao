@@ -873,8 +873,8 @@ Private Sub Form_Load()
    AjustaTamanho Me
    Executar INICIALIZACOES
    InicializaApelidos COM_TEXTBOX
-   defaultBack55 = txtCampo(55).BackColor
-    Call ExecutaPreValidacao
+
+   ' Call ExecutaPreValidacao
    ExecutaVisivel
    MostraFormulas
    CentraNaTela Me

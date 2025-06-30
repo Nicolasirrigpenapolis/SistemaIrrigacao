@@ -25,12 +25,147 @@ Begin VB.Form frmNotaFisc
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   14
-         Left            =   9705
-         TabIndex        =   94
+         Height          =   435
+         Index           =   0
+         Left            =   11430
+         TabIndex        =   85
          TabStop         =   0   'False
-         Top             =   375
+         Top             =   525
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "DANFE"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   1
+         Left            =   10020
+         TabIndex        =   90
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   2
+         Left            =   11430
+         TabIndex        =   75
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   9
+         Left            =   9825
+         TabIndex        =   76
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   10
+         Left            =   15180
+         TabIndex        =   82
+         Top             =   60
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   75
+         TabIndex        =   83
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14475
+         TabIndex        =   84
+         TabStop         =   0   'False
+         Top             =   1560
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -70,11 +205,11 @@ Begin VB.Form frmNotaFisc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   12
-         Left            =   14475
-         TabIndex        =   84
+         Index           =   14
+         Left            =   9705
+         TabIndex        =   94
          TabStop         =   0   'False
-         Top             =   1560
+         Top             =   375
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -88,141 +223,6 @@ Begin VB.Form frmNotaFisc
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   75
-         TabIndex        =   83
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   10
-         Left            =   15180
-         TabIndex        =   82
-         Top             =   60
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   9
-         Left            =   9825
-         TabIndex        =   76
-         TabStop         =   0   'False
-         Top             =   1560
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   2
-         Left            =   11430
-         TabIndex        =   75
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   1
-         Left            =   10020
-         TabIndex        =   90
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   0
-         Left            =   11430
-         TabIndex        =   85
-         TabStop         =   0   'False
-         Top             =   525
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "DANFE"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin TabDlg.SSTab Tabs 
@@ -422,13 +422,13 @@ Begin VB.Form frmNotaFisc
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "txtCp(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(3)"
+         Tab(0).Control(86)=   "Botao(8)"
          Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "Botao(4)"
+         Tab(0).Control(87)=   "Botao(5)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "Botao(5)"
+         Tab(0).Control(88)=   "Botao(4)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "Botao(8)"
+         Tab(0).Control(89)=   "Botao(3)"
          Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
@@ -598,11 +598,11 @@ Begin VB.Form frmNotaFisc
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   8
-            Left            =   5505
-            TabIndex        =   86
+            Index           =   3
+            Left            =   11175
+            TabIndex        =   22
             TabStop         =   0   'False
-            Top             =   2835
+            Top             =   1905
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -620,9 +620,31 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   7
-            Left            =   -71670
-            TabIndex        =   39
+            Index           =   4
+            Left            =   5205
+            TabIndex        =   14
+            TabStop         =   0   'False
+            Top             =   1440
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   5
+            Left            =   5100
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -664,9 +686,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   5100
-            TabIndex        =   5
+            Index           =   7
+            Left            =   -71670
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -686,33 +708,11 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   5205
-            TabIndex        =   14
+            Index           =   8
+            Left            =   5505
+            TabIndex        =   86
             TabStop         =   0   'False
-            Top             =   1440
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   3
-            Left            =   11175
-            TabIndex        =   22
-            TabStop         =   0   'False
-            Top             =   1905
+            Top             =   2835
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -5404,7 +5404,7 @@ Dim Valor_Total_do_Tributo As Double, Valor_Total_do_PIS As Double, Valor_Total_
 Dim Valor_Total_da_Base_ST As Double, Valor_Total_do_ICMS_ST As Double, Aliquota_do_ISS As Single
 Dim Reter_ISS As Boolean, Recibo_NFSe As String, Numero_do_Contrato As Long
 Dim Valor_do_Imposto_de_Renda As Double, Valor_Total_da_Importacao As Double, Conjunto_Avulso As Boolean
-Dim Descricao_Conjunto_Avulso As String, finNFe As Integer, Novo_Layout As Boolean
+Dim Descricao_Conjunto_Avulso As String, FinNFe As Integer, Novo_Layout As Boolean
 Dim Nota_de_Devolucao As Boolean, Chave_da_Devolucao As String, Outras_Despesas As Double
 Dim Chave_da_Devolucao_2 As String, Chave_da_Devolucao_3 As String, Cancelada_no_livro As Boolean
 Dim Refaturamento As Boolean, Nota_de_venda As Long, Financiamento As Boolean
@@ -5433,11 +5433,6 @@ Private ProdutoUnidadeAux As New GRecordSet, ConjuntoUnidadeAux As New GRecordSe
 Private MunTransAux As New GRecordSet, TemPropriedade As Boolean, PropriedadesGeralAux As New GRecordSet
 Private PedidoAux As New GRecordSet, PaisAux As New GRecordSet, OrcamentoAux As New GRecordSet
 Public Tipo As Byte, Fechamento2 As Byte
-Dim indSinc As Long '0=síncrono, 1=assíncrono (padrão)
-
-
-
-
 
 'evento - quando uma opção for selecionada
 Private Sub opcPainel1Cp_Click(Index As Integer)
@@ -5777,25 +5772,25 @@ Private Function ProcessaProdutos(Valor_do_Tributo As Double, Sequencia_da_Nota_
    vgDb.BeginTrans
    If Not Nota_Fiscal![Nota Fiscal Avulsa] Then
       vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor Total
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 5, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'CST
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 1, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'CFOP
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 6, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Base de Cálculo
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 7, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do ICMS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 7, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 8, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do IPI
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 8, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 3, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do ICMS
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 4, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do IPI
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 9, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Diferido
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 2, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Percentual da Redução
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 12, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'IVA
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 13, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Base de Cálculo ST
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 14, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do ICMS ST
-      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 15, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do ICMS ST
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 5, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'CST
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 1, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'CFOP
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 6, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Base de Cálculo
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 7, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do ICMS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 7, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 8, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do IPI
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 8, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 3, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do ICMS
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 4, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do IPI
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 9, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Diferido
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 2, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Percentual da Redução
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade])
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 12, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'IVA
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 13, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Base de Cálculo ST
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 14, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do ICMS ST
+      vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 15, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Alíquota do ICMS ST
       vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'Valor do Tributo
    Else
       'Valor do PIS e Cofins
@@ -5805,12 +5800,12 @@ Private Function ProcessaProdutos(Valor_do_Tributo As Double, Sequencia_da_Nota_
               "5101", "5102", "5410", "5411", "5922", _
               "6101", "6102", "6410", "6411", "6922", _
               "7101", "7102", "7201", "7202"
-            vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
-            vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
+            vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
+            vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
          Case "1102", "2102" 'Quando não produtor
             If Sequencia_da_Propriedade = 0 Then
-               vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
-               vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
+               vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
+               vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 1, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'COFINS
             End If
          Case "2949", "1949", "5201", "5202", "6201", "6202", "5949", "6949"
             vgDb.Execute "Update [Produtos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CStr(Valor_do_PIS), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Sequencia_Produto_Nota_Fiscal 'PIS
@@ -5852,25 +5847,25 @@ Private Function ProcessaConjuntos(Sequencia_da_Nota_Fiscal As Long, Sequencia_C
    vgDb.BeginTrans
    If Not Nota_Fiscal![Nota Fiscal Avulsa] Then
       vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 5, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'CST
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 1, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'CFOP
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 6, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Base de Cálculo
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 7, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do ICMS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 7, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 8, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do IPI
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 8, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 3, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do ICMS
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 4, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do IPI
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 9, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Diferido
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 2, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Percentual da Redução
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 12, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'IVA
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 13, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Base de Cálculo ST
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 14, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do ICMS ST
-      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 15, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do ICMS ST
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 5, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'CST
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 1, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'CFOP
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 6, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Base de Cálculo
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 7, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do ICMS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 7, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 8, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do IPI
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 8, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 3, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do ICMS
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 4, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do IPI
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 9, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Diferido
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 2, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Percentual da Redução
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 12, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'IVA
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 13, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Base de Cálculo ST
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 14, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do ICMS ST
+      vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 15, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Alíquota do ICMS ST
       vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'Valor do Tributo
    Else
       'Valor do PIS e Cofins
@@ -5880,12 +5875,12 @@ Private Function ProcessaConjuntos(Sequencia_da_Nota_Fiscal As Long, Sequencia_C
               "5101", "5102", "5410", "5411", "5922", _
               "6101", "6102", "6410", "6411", "6922", _
               "7101", "7102", "7201", "7202"
-            vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
-            vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
+            vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
+            vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
          Case "1102", "2102", "3102" 'Quando não produtor
             If Sequencia_da_Propriedade = 0 Then
-               vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
-               vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência Do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
+               vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 10, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
+               vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Nota_Fiscal![Seqüência do Geral], 11, 2, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'COFINS
             End If
          Case "3201", "3202", "2949", "1949", "5201", "5202", "6201", "6202", "5949", "6949"
             vgDb.Execute "Update [Conjuntos da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CStr(Valor_do_PIS), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Conjunto Nota Fiscal] = " & Sequencia_Conjunto_Nota_Fiscal 'PIS
@@ -5945,25 +5940,25 @@ Private Function ProcessaPecas(Sequencia_da_Nota_Fiscal As Long, Sequencia_da_Pe
    vgDb.BeginTrans
    If Not Nota_Fiscal![Nota Fiscal Avulsa] Then
       vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 5, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'CST
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 1, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'CFOP
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 6, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Base de Cálculo
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 7, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do ICMS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 7, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 8, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do IPI
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 8, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 3, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do ICMS
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 4, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do IPI
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 9, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Diferido
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 2, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Percentual da Redução
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 12, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'IVA
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 13, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Base de Cálculo ST
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 14, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do ICMS ST
-      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 15, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do ICMS ST
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 5, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'CST
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set CFOP = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 1, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'CFOP
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor da Base de Cálculo] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 6, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Base de Cálculo
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 7, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do ICMS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 7, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 8, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do IPI
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 8, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do ICMS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 3, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do ICMS
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do IPI] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 4, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do IPI
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 9, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Diferido
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Percentual da Redução] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 2, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Percentual da Redução
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
+      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação])
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set IVA = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 12, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'IVA
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Base de Cálculo ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 13, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Base de Cálculo ST
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 14, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do ICMS ST
+      vgDb.Execute "Update [Peças da Nota Fiscal] Set [Alíquota do ICMS ST] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 15, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Alíquota do ICMS ST
       vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'Valor do Tributo
    Else
       'Valor do PIS e Cofins
@@ -5973,12 +5968,12 @@ Private Function ProcessaPecas(Sequencia_da_Nota_Fiscal As Long, Sequencia_da_Pe
               "5101", "5102", "5410", "5411", "5922", _
               "6101", "6102", "6410", "6411", "6922", _
               "7101", "7102", "7201", "7202"
-            vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
-            vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
+            vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
+            vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
          Case "1102", "2102", "3102" 'Quando não produtor
             If Sequencia_da_Propriedade = 0 Then
-               vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
-               vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência Do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
+               vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
+               vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Nota_Fiscal![Seqüência do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação]), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'COFINS
             End If
          Case "3201", "3202", "2949", "1949", "5201", "5202", "6201", "6202", "5949", "6949"
             vgDb.Execute "Update [Peças da Nota Fiscal] Set [Valor do PIS] = " & Substitui(CStr(Valor_do_PIS), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência da Peça Nota Fiscal] = " & Sequencia_da_Peca_Nota_Fiscal 'PIS
@@ -6492,37 +6487,20 @@ Private Sub GerenciarCamposTransporte()
 
     Dim idxs   As Variant
     Dim i      As Integer
-    Dim idxTransp As Variant
-
     Dim Codigo As Integer
 
     Codigo = Val(txtCp(17).Text)
     idxs = Array(26, 15, 16, 8, 5, 7, 2, 19, 20, 22, 25, 23, 24, 51, 50, 56)
-    idxTransp = Array(13, 3, 4, 6, 7, 12)
-    
+
     If Codigo = 9 Then
         txtCampo(4).Enabled = False
         For i = LBound(idxs) To UBound(idxs)
             txtCp(idxs(i)).Enabled = False
         Next i
-         For i = LBound(idxTransp) To UBound(idxTransp)
-            txtCp(idxTransp(i)).Enabled = False
-        Next i
-    ElseIf Codigo = 3 Or Codigo = 4 Then
-        txtCampo(4).Enabled = False
-        For i = LBound(idxTransp) To UBound(idxTransp)
-            txtCp(idxTransp(i)).Enabled = False
-        Next i
-        For i = LBound(idxs) To UBound(idxs)
-            txtCp(idxs(i)).Enabled = True
-        Next i
     Else
         txtCampo(4).Enabled = True
         For i = LBound(idxs) To UBound(idxs)
             txtCp(idxs(i)).Enabled = True
-        Next i
-        For i = LBound(idxTransp) To UBound(idxTransp)
-            txtCp(idxTransp(i)).Enabled = True
         Next i
     End If
     On Error GoTo 0
@@ -6558,6 +6536,134 @@ Private Function UltimoVencimento() As Variant
 End Function
 
 
+'Rotina para Buscar a NFSe
+Private Sub RetornaNFSe()
+   Dim objNFSe As Object, resultado As String, Arq As Long, Situacao As String, cStat As Byte, Recibo As String
+   Dim XML As New GRecordSet, i As Long
+
+   On Error GoTo DeuErro
+   
+   Screen.MousePointer = vbHourglass ' normal
+   Set objNFSe = CreateObject("NFSe.ISSOnline")
+   Set XML = vgDb.OpenRecordSet("SELECT * FROM [Notas Autorizadas]")
+   
+   For i = 0 To 10 'Bosta de WS minha aplicação está mais rápida, agora tenho que deixar ela mais lenta
+      Delay 2
+      If Parametros_da_NFe!ambiente = 0 Then 'Produção
+         resultado = objNFSe.ConsultaNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, Nota_Fiscal![Número da NFSe], Situacao, cStat, Recibo)
+      Else 'Homologação
+         resultado = objNFSe.ConsultaNFSe(0, "02781892000130", "irrigplis", 32873, 1, Nota_Fiscal![Número da NFSe], Situacao, cStat, Recibo)
+      End If
+      If cStat <> 1 Then Exit For 'Opa se Autorizou entao vamos cair fora e imprimir o danfe
+   Next
+      
+   If cStat = 1 Then 'Inconsistencia
+      If Situacao <> "" Then
+         MsgBox "Erro ao Buscar NFSe: " & vbCrLf & Situacao, vbCritical + vbOKOnly, vaTitulo
+      Else
+         MsgBox "Erro ao Buscar NFSe: " & vbCrLf & "Tente Mais Tarde.", vbCritical + vbOKOnly, vaTitulo
+      End If
+      
+      'Histórico
+      With vgTb
+         .Edit
+         If Vazio(!Observação) Then
+            !Observação = "Erro ao Buscar Retorno da NFSe: " & IIf(Situacao <> "", Situacao, "Tente Mais Tarde")
+         Else
+            !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFSe: " & IIf(Situacao <> "", Situacao, "Tente Mais Tarde")
+         End If
+         .Update
+         .BookMark = .LastModified
+      End With
+      
+      'Salvando o xml...
+      Arq = FreeFile
+      If Parametros_da_NFe!ambiente = 0 Then 'Produção
+         If Dir(Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml"
+         Open Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml" For Append As #Arq
+            Print #Arq, resultado
+         Close #Arq
+      Else 'Homologação
+         If Dir(Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml"
+         Open Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml" For Append As #Arq
+            Print #Arq, resultado
+         Close #Arq
+      End If
+      
+      GoTo SaiDaSub
+   ElseIf cStat = 2 Then 'Sucesso
+      MsgBox "NFSe Autorizada!!!", vbInformation + vbOKOnly, vaTitulo
+      
+      'Histórico
+      With vgTb
+         .Edit
+         If Vazio(!Observação) Then
+            !Observação = "NFSe Autorizada com Sucesso!!!"
+         Else
+            !Observação = !Observação & vbCrLf & "NFSe Autorizada com Sucesso!!!"
+         End If
+         !Autorizado = True
+         ![Recibo NFSe] = Recibo
+         .Update
+         .BookMark = .LastModified
+      End With
+      
+      'Salvando o xml...
+      Arq = FreeFile
+      If Parametros_da_NFe!ambiente = 0 Then 'Produção
+         If Dir(Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml"
+         Open Parametros_da_NFe![Diretório 1 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
+            Print #Arq, resultado
+         Close #Arq
+         With XML
+            .AddNew
+            ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
+            !XML = resultado
+            .Update
+         End With
+      Else 'Homologação
+         If Dir(Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml"
+         Open Parametros_da_NFe![Diretório 1 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
+            Print #Arq, resultado
+         Close #Arq
+      End If
+      
+   Else 'Erro nw Catalogado
+      MsgBox "Erro não Catalogado", vbCritical + vbOKOnly, vaTitulo
+      
+      'Histórico
+      With vgTb
+         .Edit
+         If Vazio(!Observação) Then
+            !Observação = "Erro ao Buscar Retorno da NFSe: Erro não Catalogado"
+         Else
+            !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFSe: Erro não Catalogado"
+         End If
+         .Update
+         .BookMark = .LastModified
+      End With
+      
+      GoTo SaiDaSub
+   End If
+   
+   'Chama navegador
+   DANFE
+         
+DeuErro:
+   If Err <> 0 Then
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+   End If
+  
+SaiDaSub:
+   Set objNFSe = Nothing
+   Screen.MousePointer = vbDefault ' normal
+   If Parametros_da_NFe!ambiente = 0 Then
+      lblProgresso.Caption = ""
+   Else
+      lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
+   End If
+
+End Sub
 
 'Dados Adicionais da NFe
 Private Function ReservadoFisco(Usado As Boolean, Reducao As Boolean, Diferido As Boolean, SeqProp As Long, Optional Revenda As Boolean, Optional Isento As Boolean, Optional IcmsDest As Double, Optional IcmsRemet As Double) As String
@@ -6764,90 +6870,82 @@ Private Function ReservadoFisco(Usado As Boolean, Reducao As Boolean, Diferido A
   
 End Function
 
+
 Private Sub GeraNota()
-   Dim Arq As Integer
-   Dim UltimaEletronica As New GRecordSet
-   Dim tpAmb As Integer
-   Dim DataEmissaoAtual As Date
+    '–––– variáveis ––––
+    Dim hFile              As Long      ' handle de arquivo (era Arq As String)
+    Dim NFXmlAssinada      As String    ' conteúdo do XML
+    Dim caminhoXML         As String
+    Dim UltimaEletronica   As New GRecordSet
+    Dim tpAmb              As Integer
+    Dim DataEmissaoAtual   As Date
 
-   On Error Resume Next
-   
-   ' Se já tiver Número da Nota Fiscal > 0, sai
-   If Nota_Fiscal![Número da Nota Fiscal] > 0 Then Exit Sub
-   ' Se Número da NFe < 9000 e usuário não for YGOR, sai
-   If Nota_Fiscal![Número da NFe] < 9000 And vgPWUsuario <> "YGOR" Then Exit Sub
-   
-   ' Pede confirmação se ainda não foi transmitida
-   If Not Transmitido Then
-      If MsgBox("Deseja Enviar essa Nota Fiscal?", vbQuestion + vbYesNo, vaTitulo) = vbNo Then
-         Exit Sub
-      End If
-   End If
-   
-   ' Abre recordset para descobrir o próximo número de NFe e NFSe
-   Set UltimaEletronica = vgDb.OpenRecordSet( _
-      "SELECT MAX([Número da NFe]) AS NFe, " & _
-      "MAX([Número da NFSe]) AS NFSe, " & _
-      "MAX([Número do Contrato]) AS Contrato " & _
-      "FROM [Nota Fiscal]" _
-   )
-           
-   ' Se ainda não tiver número de NFe, atribui um novo
-   If Numero_da_NFe = 0 Then
-      vgDb.Execute "UPDATE [Nota Fiscal] " & _
-                   "SET [Número da NFe] = " & UltimaEletronica!NFe + 1 & " " & _
-                   "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal
-      Reposition
-   End If
+    On Error Resume Next
 
-   ' Se ainda não foi transmitida, faz a pré-validação
-   If Not Transmitido Then
-      ' ? Pegamos qual o ambiente atual (0 = produção, 1 = homologação, ou conforme sua configuração)
-      tpAmb = Parametros_da_NFe!ambiente
-      
-      ' ? Guardamos a data de emissão que está no campo de tela (txtCampo(68))
-      '    Se, no seu formulário, a “Data de Emissão” for outro índice, ajuste o número abaixo (68).
-      DataEmissaoAtual = txtCampo(68).Value
+    ' Se já tiver Número da NF > 0, sai
+    If Nota_Fiscal![Número da Nota Fiscal] > 0 Then Exit Sub
+    ' Se Nº da NFe < 9000 e usuário ? YGOR, sai
+    If Nota_Fiscal![Número da NFe] < 9000 And vgPWUsuario <> "YGOR" Then Exit Sub
 
-      ' ? Se estiver em HOMOLOGAÇÃO, exibe a msgBox com a data que vai no XML
-      If tpAmb <> 0 Then   ' supondo que 0 = Produção, 1 = Homologação (ajuste conforme seu sistema)
-         MsgBox "Você está EMITINDO EM HOMOLOGAÇÃO." & vbCrLf & _
-                "Data de Emissão que será usada no XML: " & _
-                Format(DataEmissaoAtual, "dd\/mm\/yyyy"), _
-                vbInformation + vbOKOnly, "Aviso de Homologação"
-      End If
+    ' Confirma envio quando ainda não está transmitida
+    If Not Transmitido Then
+        If MsgBox("Deseja Enviar essa Nota Fiscal?", vbQuestion + vbYesNo, vaTitulo) = vbNo Then Exit Sub
+    End If
 
-      ' ? Após o aviso, continua com a pré-validação da NFe
-      PreValidaNFE  ' Validação e montagem do XML
-   Else
-    ' Se já foi transmitida, lemos o XML assinado salvo em disco
-Dim caminhoXML   As String
-Dim NFeAssinada  As String
+    ' Descobre próximo número de NFe, NFSe e Contrato
+    Set UltimaEletronica = vgDb.OpenRecordSet( _
+        "SELECT MAX([Número da NFe]) AS NFe, " & _
+        "MAX([Número da NFSe]) AS NFSe, " & _
+        "MAX([Número do Contrato]) AS Contrato " & _
+        "FROM [Nota Fiscal]")
 
-If Parametros_da_NFe!ambiente = 0 Then
-    ' PRODUÇÃO
-    caminhoXML = Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                 Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-Else
-    ' HOMOLOGAÇÃO
-    caminhoXML = Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                 Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-End If
+    ' Atribui novo número de NFe, se ainda for zero
+    If Numero_da_NFe = 0 Then
+        vgDb.Execute "UPDATE [Nota Fiscal] SET [Número da NFe] = " & UltimaEletronica!NFe + 1 & _
+                     " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal
+        Reposition
+    End If
 
-Arq = FreeFile
-Open caminhoXML For Input As #Arq
-    NFeAssinada = Input$(LOF(Arq), Arq)
-Close #Arq
+    '–––– fluxo A: ainda não transmitida ? pré-validação ––––
+    If Not Transmitido Then
+        tpAmb = Parametros_da_NFe!ambiente          ' 0 = prod / 1 = homol (ajuste se for diferente)
+        DataEmissaoAtual = txtCampo(68).Value       ' índice do seu campo de data
 
-' Decide qual rotina de retorno usar (layout 3.10 ou novo)
-If Not Novo_Layout Then
-    RetornoNFe310 NFeAssinada, Nota_Fiscal![Número do Recibo da NFe]
-Else
-    RetornoNFe NFeAssinada, Nota_Fiscal![Número do Recibo da NFe]
-End If
+        If tpAmb <> 0 Then
+            MsgBox "Você está EMITINDO EM HOMOLOGAÇÃO." & vbCrLf & _
+                   "Data de Emissão que será usada no XML: " & _
+                   Format(DataEmissaoAtual, "dd\/mm\/yyyy"), _
+                   vbInformation, "Aviso de Homologação"
+        End If
 
-      End If
+        PreValidaNFE                                ' monta e assina o XML
+        Exit Sub
+    End If
+
+    '–––– fluxo B: já transmitida ? apenas buscar retorno ––––
+    ' monta caminho do XML ASSINADO/AUTORIZADO existente em disco
+    If Parametros_da_NFe!ambiente = 0 Then     ' Produção
+        caminhoXML = Parametros_da_NFe![Diretório 1 NFe Produção] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
+    Else                                       ' Homologação
+        caminhoXML = Parametros_da_NFe![Diretório 1 NFe Homologação] & _
+                     Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
+    End If
+
+    ' lê todo o XML para NFXmlAssinada
+    hFile = FreeFile
+    Open caminhoXML For Input As #hFile
+        NFXmlAssinada = Input$(LOF(hFile), hFile)
+    Close #hFile
+
+    ' chama a rotina de retorno já no novo formato (5 parâmetros)
+    If Not Novo_Layout Then
+        RetornoNFe310 NFXmlAssinada, 0, "", "", ""   ' cStat/nroProt/dhProt/msgRes sem valor aqui
+    Else
+        RetornoNFe NFXmlAssinada, 0, "", "", ""      ' idem para o fluxo antigo adaptado
+    End If
 End Sub
+
 
 
 Private Sub Tabs_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
@@ -6905,356 +7003,130 @@ End Sub
 
 
 
-'Busca Retorno NFe
-Private Sub RetornoNFe(NFeAssinada As String, Recibo As String)
-   Dim msgDados As String, msgRetWS As String, msgResultado As String, siglaWS As String, certificado As String
-   Dim tpAmbiente As Long, licenca As String, procNFe As String, versao As String, nroProtocolo As String
-   Dim dhProtocolo As String, cMsg As String, xMsg As String, objNFeUtil As Object, i As Integer, Arq As Long
-   Dim cStat As Long, proxy As String, usuario As String, senha As String, XML As New GRecordSet
 
-   On Error GoTo DeuErro
-   
-   Screen.MousePointer = vbHourglass ' Ampulheta
-    Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
-   Set XML = vgDb.OpenRecordSet("SELECT * FROM [Notas Autorizadas]")
-   lblProgresso.Caption = "Buscando NFe..."
+'------------------------------------------------------------
+'  RetornoNFe  –  adaptado ao ENVIOS SÍNCRONOS (EnviaNFSincrono)
+'------------------------------------------------------------
+' Parâmetros:
+'   • NFXmlAssinada  = <procNFe> ou <procNFeR> devolvido pela DLL
+'   • cStat          = status retornado (100, 150, 101, 2xx…)
+'   • nroProtocolo   = nº do protocolo
+'   • dhProtocolo    = data e hora do protocolo
+'   • msgResultado   = texto da SEFAZ
+'
+'   Recibo deixa de existir no modo síncrono, por isso foi removido.
+'------------------------------------------------------------
+Private Sub RetornoNFe( _
+        NFXmlAssinada As String, _
+        cStat As Long, _
+        nroProtocolo As String, _
+        dhProtocolo As String, _
+        msgResultado As String)
 
-   licenca = "22997ab769e9dade323e6ff97dfb99c474210c66b2ae3930ffcc6d85e8b50399533b9762aa7a61fdccb6cba94e4d650ad00012c782e74b9c7e2f380e18f1517e"
-   certificado = Parametros_da_NFe![Certificado Digital]
-   siglaWS = "SP"
-   versao = "2.00"
+    Dim Arq        As Long
+    Dim tpAmbiente As Long
+    Dim XML        As New GRecordSet
 
-   If Parametros_da_NFe!ambiente = 0 Then 'Produção
-      tpAmbiente = 1
-   Else 'Homologação
-      tpAmbiente = 2
-   End If
-   
-   For i = 1 To 5 'Go To Search
-      procNFe = objNFeUtil.BuscaNFe2G(siglaWS, tpAmbiente, NFeAssinada, Recibo, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroProtocolo, dhProtocolo, cMsg, xMsg, proxy, usuario, senha, licenca)
-      'Histórico
-      With vgTb
-         .Edit
-         If Vazio(!Observação) Then
-            !Observação = "Buscando Retorno da NFe... Tentativa " & i
-         Else
-            !Observação = !Observação & vbCrLf & "Buscando Retorno da NFe... Tentativa " & i
-         End If
-         .Update
-      End With
-      If cStat <> 105 Then
-         GoTo Continua
-      End If
-   Next
-   MsgBox "NFe NÃO Retornada! Tente Mais Tarde.", vbExclamation + vbOKOnly, vaTitulo
-   
-   'Histórico
-   With vgTb
-      .Edit
-      If Vazio(!Observação) Then
-         !Observação = "Erro ao Buscar Retorno da NFe"
-      Else
-         !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe"
-      End If
-      .Update
-      .BookMark = .LastModified
-   End With
-   GoTo SaiDaSub
+    On Error GoTo DeuErro
+    Screen.MousePointer = vbHourglass
+    lblProgresso.Caption = "Processando retorno da NFe..."
 
-   '           WS chamada com sucesso
-   '
-   '           105 – lote em processamento -> tentar novamente
-   '           106 – lote não localizado   -> tentar enviar o lote novamente ou verificar se o nroRecibo está correto
-   '           100 – NF-e autorizada       -> OK
-   '           2xx – motivo de rejeição do WS -> erro na elaboração da NF-e, verificar o código de erro e corrigir a NF-e
-Continua:
-   Select Case cStat
-      Case 5001 To 6423                ' erro da DLL
-         MsgBox "Descrição do erro: " & Chr(13) & Chr(13) + msgResultado, vbCritical + vbOKOnly, "Atenção: O Retorno da NFe falhou..."
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case 100    ' NF-e autorizada Sucessssooooo
-         With Nota_Fiscal
-            .Edit
-            !Autorizado = True
-            ![Protocolo de Autorização NFe] = nroProtocolo
-            ![Data e Hora da NFe] = dhProtocolo
-            If Vazio(!Observação) Then
-               !Observação = "NFe Autorizada com Sucesso!!!"
-            Else
-               !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!!!"
-            End If
-            .Update
-            .BookMark = .LastModified
-         End With
-         
-         'Salvando o xml...
-         Arq = FreeFile
-         If Parametros_da_NFe!ambiente = 0 Then 'Produção
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-            With XML
-               .AddNew
-               ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
-               !XML = procNFe
-               .Update
+    If Parametros_da_NFe!ambiente = 0 Then
+        tpAmbiente = 1               ' Produção
+    Else
+        tpAmbiente = 2               ' Homologação
+    End If
+
+    '––––– STATUS JÁ É DEFINITIVO –––––
+    Select Case cStat
+        Case 100, 150           ' Autorizada
+            GravaAutorizada NFXmlAssinada, nroProtocolo, dhProtocolo, tpAmbiente, True
+            MsgBox "NFe Autorizada!", vbInformation, vaTitulo
+
+        Case 101                ' Denegada
+            GravaAutorizada NFXmlAssinada, nroProtocolo, dhProtocolo, tpAmbiente, False
+            MsgBox "NFe Denegada!", vbExclamation, vaTitulo
+
+        Case Else               ' Rejeitada
+            MsgBox cStat & " – " & msgResultado, vbCritical, "NFe Rejeitada"
+            With vgTb
+                .Edit
+                !Transmitido = False
+                !Observação = AppendMsg(!Observação, "Rejeição SEFAZ: " & msgResultado)
+                .Update
             End With
-         Else 'Homologação
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-         End If
-         
-         MsgBox "NFe Autorizada!!!", vbInformation + vbOKOnly, vaTitulo
-                          
-      Case 101    ' NF-e denegada
-         With Nota_Fiscal
-            .Edit
-            !Autorizado = True
-            ![Protocolo de Autorização NFe] = nroProtocolo
-            ![Data e Hora da NFe] = dhProtocolo
-            If Vazio(!Observação) Then
-               !Observação = "NFe Autorizada com Sucesso!!!"
-            Else
-               !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!!!"
-            End If
-            .Update
-            .BookMark = .LastModified
-         End With
-       
-         'Salvando o xml...
-         Arq = FreeFile
-         If Parametros_da_NFe!ambiente = 0 Then 'Produção
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-            With XML
-               .AddNew
-               ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
-               !XML = procNFe
-               .Update
-            End With
-         Else 'Homologação
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-         End If
-         
-         MsgBox "NFe Denegada!", vbInformation + vbOKOnly, vaTitulo
-                               
-      Case 106    ' Lote não localizado, verifique se o número do recibo está correto
-         MsgBox msgResultado, vbCritical + vbOKOnly, "Atenção: Lote não localizado"
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case 108, 109 'Que feio Servidor
-         MsgBox msgResultado & Chr(13) & Chr(13) + "O Web Service está com problemas de recepção.", vbCritical + vbOKOnly, "Atenção: WS com problemas na recepção!"
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case Else
-         MsgBox "Descrição do erro: " & Chr(13) & Chr(13) & cStat & " - " & msgResultado, vbCritical + vbOKOnly, "Atenção: O WS rejeitou a NFe..."
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-   End Select
-   
-   'Unidanfe
-   DANFE
-   
-DeuErro:
-   If Err <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
-   End If
-  
+    End Select
+
 SaiDaSub:
-   Set objNFeUtil = Nothing
-   Screen.MousePointer = vbDefault ' normal
-   If Parametros_da_NFe!ambiente = 0 Then
-      lblProgresso.Caption = ""
-   Else
-      lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
-   End If
+    Screen.MousePointer = vbDefault
+    lblProgresso.Caption = IIf(tpAmbiente = 1, "", "AMBIENTE NFe EM MODO TESTE")
+    Exit Sub
+
+DeuErro:
+    MsgBox Err.Description, vbCritical, vaTitulo
+    Resume SaiDaSub
 End Sub
 
-'Rotina para Buscar a NFSe
-Private Sub RetornaNFSe()
-   Dim objNFSe As Object, resultado As String, Arq As Long, Situacao As String, cStat As Byte, Recibo As String
-   Dim XML As New GRecordSet, i As Long
+'------------------------------------------------------------
+'  GravaAutorizada  –  salva XML + atualiza tabelas
+'------------------------------------------------------------
+Private Sub GravaAutorizada( _
+        procNFe As String, _
+        nroProt As String, _
+        dhProt As String, _
+        tpAmb As Long, _
+        autorizada As Boolean)
 
-   On Error GoTo DeuErro
-   
-   Screen.MousePointer = vbHourglass ' normal
-   Set objNFSe = CreateObject("NFSe.ISSOnline")
-   Set XML = vgDb.OpenRecordSet("SELECT * FROM [Notas Autorizadas]")
-   
-   For i = 0 To 10 'Bosta de WS minha aplicação está mais rápida, agora tenho que deixar ela mais lenta
-      Delay 2
-      If Parametros_da_NFe!ambiente = 0 Then 'Produção
-         resultado = objNFSe.ConsultaNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, Nota_Fiscal![Número da NFSe], Situacao, cStat, Recibo)
-      Else 'Homologação
-         resultado = objNFSe.ConsultaNFSe(0, "02781892000130", "irrigplis", 32873, 1, Nota_Fiscal![Número da NFSe], Situacao, cStat, Recibo)
-      End If
-      If cStat <> 1 Then Exit For 'Opa se Autorizou entao vamos cair fora e imprimir o danfe
-   Next
-      
-   If cStat = 1 Then 'Inconsistencia
-      If Situacao <> "" Then
-         MsgBox "Erro ao Buscar NFSe: " & vbCrLf & Situacao, vbCritical + vbOKOnly, vaTitulo
-      Else
-         MsgBox "Erro ao Buscar NFSe: " & vbCrLf & "Tente Mais Tarde.", vbCritical + vbOKOnly, vaTitulo
-      End If
-      
-      'Histórico
-      With vgTb
-         .Edit
-         If Vazio(!Observação) Then
-            !Observação = "Erro ao Buscar Retorno da NFSe: " & IIf(Situacao <> "", Situacao, "Tente Mais Tarde")
-         Else
-            !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFSe: " & IIf(Situacao <> "", Situacao, "Tente Mais Tarde")
-         End If
-         .Update
-         .BookMark = .LastModified
-      End With
-      
-      'Salvando o xml...
-      Arq = FreeFile
-      If Parametros_da_NFe!ambiente = 0 Then 'Produção
-         If Dir(Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml"
-         Open Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml" For Append As #Arq
-            Print #Arq, resultado
-         Close #Arq
-      Else 'Homologação
-         If Dir(Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml"
-         Open Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_ERRO.xml" For Append As #Arq
-            Print #Arq, resultado
-         Close #Arq
-      End If
-      
-      GoTo SaiDaSub
-   ElseIf cStat = 2 Then 'Sucesso
-      MsgBox "NFSe Autorizada!!!", vbInformation + vbOKOnly, vaTitulo
-      
-      'Histórico
-      With vgTb
-         .Edit
-         If Vazio(!Observação) Then
-            !Observação = "NFSe Autorizada com Sucesso!!!"
-         Else
-            !Observação = !Observação & vbCrLf & "NFSe Autorizada com Sucesso!!!"
-         End If
-         !Autorizado = True
-         ![Recibo NFSe] = Recibo
-         .Update
-         .BookMark = .LastModified
-      End With
-      
-      'Salvando o xml...
-      Arq = FreeFile
-      If Parametros_da_NFe!ambiente = 0 Then 'Produção
-         If Dir(Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml"
-         Open Parametros_da_NFe![Diretório 1 NFSe Produção] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-            Print #Arq, resultado
-         Close #Arq
-         With XML
-            .AddNew
-            ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
-            !XML = resultado
-            .Update
-         End With
-      Else 'Homologação
-         If Dir(Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_GERADO.xml"
-         Open Parametros_da_NFe![Diretório 1 NFSe Homologação] & Format(Nota_Fiscal![Número da NFSe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-            Print #Arq, resultado
-         Close #Arq
-      End If
-      
-   Else 'Erro nw Catalogado
-      MsgBox "Erro não Catalogado", vbCritical + vbOKOnly, vaTitulo
-      
-      'Histórico
-      With vgTb
-         .Edit
-         If Vazio(!Observação) Then
-            !Observação = "Erro ao Buscar Retorno da NFSe: Erro não Catalogado"
-         Else
-            !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFSe: Erro não Catalogado"
-         End If
-         .Update
-         .BookMark = .LastModified
-      End With
-      
-      GoTo SaiDaSub
-   End If
-   
-   'Chama navegador
-   DANFE
-         
-DeuErro:
-   If Err <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
-   End If
-  
-SaiDaSub:
-   Set objNFSe = Nothing
-   Screen.MousePointer = vbDefault ' normal
-   If Parametros_da_NFe!ambiente = 0 Then
-      lblProgresso.Caption = ""
-   Else
-      lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
-   End If
+    Dim Arq As Long, pastaOut As String, NomeArq As String, XML As New GRecordSet
 
+    '––– atualiza tabela Nota_Fiscal –––
+    With Nota_Fiscal
+        .Edit
+        !Autorizado = True
+        ![Protocolo de Autorização NFe] = nroProt
+        ![Data e Hora da NFe] = dhProt
+        !Observação = AppendMsg(!Observação, _
+            IIf(autorizada, "NFe Autorizada", "NFe Denegada"))
+        .Update
+        .BookMark = .LastModified
+    End With
+
+    '––– define caminho de saída –––
+    If tpAmb = 1 Then  ' Produção
+        pastaOut = Parametros_da_NFe![Diretório 1 NFe Produção]
+    Else               ' Homologação
+        pastaOut = Parametros_da_NFe![Diretório 1 NFe Homologação]
+    End If
+    NomeArq = Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
+
+    If Dir(pastaOut & NomeArq, vbArchive) <> "" Then Kill pastaOut & NomeArq
+    Arq = FreeFile
+    Open pastaOut & NomeArq For Output As #Arq
+        Print #Arq, procNFe
+    Close #Arq
+
+    '––– opcional: guarda numa tabela –––
+    Set XML = vgDb.OpenRecordSet("SELECT * FROM [Notas Autorizadas]")
+    With XML
+        .AddNew
+        ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
+        !XML = procNFe
+        .Update
+    End With
 End Sub
+
+'------------------------------------------------------------
+'  AppendMsg  – concatena texto com quebra de linha
+'------------------------------------------------------------
+Private Function AppendMsg(oldTxt As Variant, newTxt As String) As String
+    If Vazio(oldTxt) Then
+        AppendMsg = newTxt
+    Else
+        AppendMsg = oldTxt & vbCrLf & newTxt
+    End If
+End Function
+
+
 
 'Unidanfe e Prefeitura de Penapolis
 Public Sub DANFE()
@@ -7330,11 +7202,11 @@ Private Sub PreValidaNFE()
    Dim Vector() As String
    Dim Email As New clsEnviaEMail
    Dim i As Long, vaPrivez As Boolean, Campo As Variant, Mensagem As String
-   Dim Endereco As String, Servicos As New GRecordSet
+   Dim endereco As String, Servicos As New GRecordSet
 
    On Error GoTo DeuErro
    
-    If finNFe <> 3 Then
+    If FinNFe <> 3 Then
    If Trim(txtCp(24).Text) = "" Or Trim(txtCp(19).Text) = "" Or _
       Trim(txtCp(23).Text) = "" Or _
       Val(txtCp(24).Text) = 0 Or Val(txtCp(19).Text) = 0 Or Val(txtCp(23).Text) = 0 Then
@@ -7420,24 +7292,14 @@ End If
    If Tb.RecordCount = 0 Then Exit Sub
    If Itens.RecordCount = 0 And Servicos.RecordCount = 0 Then Exit Sub
    
-   'Verifica obrigatoriedade dos campos de Placa, UF da Placa quando Frete é Próprio
-If Tb!frete = "Transporte Próprio Remetente" Or Tb!frete = "Transporte Próprio Destinatário" Then
-   If Trim(txtCp(15).Text) = "" Or Trim(txtCp(16).Text) = "" Then
-      MsgBox "Preencha Placa e UF da Placa antes de gerar a nota.", _
-             vbExclamation + vbOKOnly, vaTitulo
-      Exit Sub
-   End If
-End If
-   
    'Vamos Validar
    i = 0 'Tamanho do Vetor
    ReDim Preserve Vector(0) As String
    If Vazio(Tb![Descrição da Natureza Operação]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Descrição da Natureza de Operação"
-   If finNFe = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Informe a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
+   If FinNFe = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Informe a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
    If Vazio(Tb![Razão Social]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Razão Social (Geral)"
-   If Vazio(Tb!frete) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Tipo do Frete (Nota Fiscal)"
-   
-     If (Tb!frete = "Emitente" Or Tb!frete = "Destinatário") And Tb![Seqüência da Transportadora] = 0 And Vazio(Tb![Nome da Transportadora Avulsa]) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Transportadora (Nota Fiscal)"
+   If Vazio(Tb!frete) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Tipo do Frete (Nota Fiscal)"
+   If Tb![Seqüência da Transportadora] = 0 And Vazio(Tb![Nome da Transportadora Avulsa]) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "Transportadora (Nota Fiscal)"
    If Tb![Seqüência da Propriedade] > 0 Then
       If Not Mid(Tb![Código da Natureza de Operação], 1, 1) = "7" And Not Mid(Tb![Código da Natureza de Operação], 1, 1) = "3" Then
          If Vazio(Tb!CNPJ) And Tb!MPUF = "SP" Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "CNPJ (Propriedade)"
@@ -7474,7 +7336,7 @@ End If
    Do While Not Itens.EOF
       If Vazio(Itens!Descrição) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Descrição"
       If Vazio(Itens![Sigla da Unidade]) Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Unidade"
-      If Vazio(Itens!Ncm) And finNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Classificação Fiscal (NCM)"
+      If Vazio(Itens!Ncm) And FinNFe <> 3 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - Classificação Fiscal (NCM)"
       Itens.MoveNext
    Loop
       
@@ -7491,13 +7353,13 @@ End If
    
    'Vamos Validar o Endereço
    If Tb![Seqüência da Propriedade] > 0 Then
-      Endereco = Tb!PEndereço & ", " & Tb!PNumero & " - " & Tb!PComplemento
+      endereco = Tb!PEndereço & ", " & Tb!PNumero & " - " & Tb!PComplemento
    Else
-      Endereco = Tb!GEndereço & ", " & Tb!GNumero & " - " & Tb!GComplemento
+      endereco = Tb!GEndereço & ", " & Tb!GNumero & " - " & Tb!GComplemento
    End If
-   If Len(Endereco) > 64 Then
-      If Len(Abreviacao(Endereco)) > 64 Then '64 é o tamanho no Relatorio DANFE
-         If MsgBox("O Sistema Abreviou o que Deveria, mas NÃO foi o suficiente." & vbCrLf & Abreviacao(Endereco) & vbCrLf & "Deseja Enviar mesmo assim?", vbYesNo + vbQuestion, vaTitulo) = vbNo Then Exit Sub
+   If Len(endereco) > 64 Then
+      If Len(Abreviacao(endereco)) > 64 Then '64 é o tamanho no Relatorio DANFE
+         If MsgBox("O Sistema Abreviou o que Deveria, mas NÃO foi o suficiente." & vbCrLf & Abreviacao(endereco) & vbCrLf & "Deseja Enviar mesmo assim?", vbYesNo + vbQuestion, vaTitulo) = vbNo Then Exit Sub
       End If
    End If
    
@@ -7719,7 +7581,7 @@ Private Sub MasterNFSe()
    
    Set Cliente = vgDb.OpenRecordSet("SELECT [CPF e CNPJ], Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], " & _
                                     "[RG e IE], [Razão Social], Tipo, [Nome Fantasia], G.CEP, M.UF, Isento " & _
-                                    "FROM Geral G LEFT JOIN Municípios M ON G.[Seqüência do Município] = M.[Seqüência do Município] WHERE G.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência Do Geral])
+                                    "FROM Geral G LEFT JOIN Municípios M ON G.[Seqüência do Município] = M.[Seqüência do Município] WHERE G.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência do Geral])
    Set Propriedade = vgDb.OpenRecordSet("SELECT CNPJ, Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], M.UF, " & _
                                         "P.CEP, [Inscrição Estadual] " & _
                                         "FROM Propriedades P LEFT JOIN Municípios M ON P.[Seqüência do Município] = M.[Seqüência do Município] WHERE P.[Seqüência da Propriedade] = " & Nota_Fiscal![Seqüência da Propriedade] & " AND [Seqüência da Propriedade] > 0")
@@ -8047,310 +7909,6 @@ Private Function VerificaDebitos() As Boolean
 
 End Function
 
-
-Public Sub TransmitirNFe400(NFeXml As String, chaveNFe As String)
-    Dim util          As New NFe_Util_2G.util
-    Dim msgDados      As String
-    Dim msgRetWS      As String
-    Dim msgResultado  As String
-    Dim siglaWS       As String
-    Dim certificado   As String
-    Dim licenca       As String
-    Dim NFeAssinada   As String
-    Dim nroRecibo     As String
-    Dim cStat         As Long
-    Dim versao        As String
-    Dim dhRecibo      As String
-    Dim proxy         As String
-    Dim usuario       As String
-    Dim senha         As String
-    Dim tpAmbiente    As Long
-    Dim i             As Integer
-    Dim Arq           As Integer
-
-    On Error GoTo DeuErro
-
-    '--- Preparação da UI ---
-    Screen.MousePointer = vbHourglass
-    lblProgresso.Caption = "Transmitindo NFe..."
-
-    '--- Carrega parâmetros ---
-    siglaWS = "SP"
-    certificado = Parametros_da_NFe![Certificado Digital]
-    licenca = Parametros_da_NFe![Licença]
-    versao = "4.00"
-    tpAmbiente = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)
-
-    '--- Até 5 tentativas ---
-    For i = 1 To 5
-        Err.Clear
-        On Error Resume Next
-        NFeAssinada = util.EnviaNFe2G( _
-            siglaWS, tpAmbiente, certificado, versao, NFeXml, _
-            msgDados, msgRetWS, cStat, msgResultado, _
-            nroRecibo, dhRecibo, proxy, usuario, senha, licenca)
-        If Err.Number <> 0 Then
-            MsgBox "Falha na chamada EnviaNFe2G:" & vbCrLf & _
-                   "Número: " & Err.Number & vbCrLf & _
-                   "Descrição: " & Err.Description & vbCrLf & _
-                   "Fonte: " & Err.Source, vbCritical, "Erro COM"
-            GoTo SaiDaSub
-        End If
-        On Error GoTo DeuErro
-
-        ' Atualiza observação na grade
-        With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-                !Observação = "Tentativa " & i & " de envio"
-            Else
-                !Observação = !Observação & vbCrLf & "Tentativa " & i & " de envio"
-            End If
-            .Update
-            .BookMark = .LastModified
-        End With
-
-        If cStat <> 105 Then GoTo Continua
-    Next i
-
-    '--- 5x sem sucesso ---
-    MsgBox "NFe não enviada! Tente novamente mais tarde.", vbExclamation, "Atenção"
-    GoTo SaiDaSub
-
-Continua:
-    Select Case cStat
-        Case 103
-            '--- Sucesso ---
-            With Nota_Fiscal
-                .Edit
-                !Transmitido = True
-                ![Número do Recibo da NFe] = nroRecibo
-                ![Chave de Acesso da NFe] = chaveNFe
-                .Update
-                .BookMark = .LastModified
-            End With
-            MsgBox "Transmitido com sucesso!", vbInformation, "Atenção"
-
-            ' Grava XML ASSINADO
-            Arq = FreeFile
-            If tpAmbiente = 1 Then
-                Open Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As #Arq
-            Else
-                Open Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Output As #Arq
-            End If
-            Print #Arq, NFeAssinada
-            Close #Arq
-
-        Case 5000 To 7003
-            MsgBox "Erro de WS:" & vbCrLf & msgResultado, vbCritical, "Atenção"
-        Case 108, 109
-            MsgBox msgResultado & vbCrLf & "Web Service de recepção problemático", vbCritical, "Atenção"
-        Case Else
-            MsgBox cStat & " - " & msgResultado, vbCritical, "Rejeição da Sefaz"
-    End Select
-
-SaiDaSub:
-    Screen.MousePointer = vbDefault
-    If tpAmbiente = 2 Then
-        lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
-    Else
-        lblProgresso.Caption = ""
-    End If
-    Set util = Nothing
-    Exit Sub
-
-DeuErro:
-    Dim det As String
-    det = "Erro em TransmitirNFe400" & vbCrLf & _
-          "Número: " & Err.Number & vbCrLf & _
-          "Descrição: " & Err.Description & vbCrLf & _
-          "Fonte: " & Err.Source
-    MsgBox det, vbCritical, "Atenção"
-    Resume SaiDaSub
-End Sub
-
-
-
-
-
-Public Sub TransmitirNFe500(NFe As String, chaveNFe As String)
-    Dim msgDados As String, msgRetWS As String, msgResultado As String, siglaWS As String, certificado As String
-    Dim licenca As String, NFeAssinada As String, nroRecibo As String, cStat As Long, versao As String, dhRecibo As String
-    Dim tMed As String, i As Integer, objNFeUtil As Object, Arq As Long, proxy As String, usuario As String, senha As String
-    Dim tpAmbiente As Long, lote As String
-
-    On Error GoTo DeuErro
-
-    Screen.MousePointer = vbHourglass ' ampulheta
-    lblProgresso.Caption = "Transmitindo NFe..."
-     Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
-
-    certificado = Parametros_da_NFe![Certificado Digital]
-    siglaWS = "SP"
-    versao = "5.00"
-    licenca = "23433296a6c7b3e6e602aa8c71ded18804ec302656cfa8590ff7b35454b14834f4f5aed7ed5b4e4986a6a2d2a4b1abad6758927b36d70c5a1d4588597eaf0de2"
-
-   
-    ' Número da NFe conforme DataField do seu frm
-    lote = Format(Nota_Fiscal![Número da NFe], "000000")
-    If Parametros_da_NFe!ambiente = 0 Then
-        tpAmbiente = 1
-    Else
-        tpAmbiente = 2
-    End If
-
-    For i = 1 To 5
-        NFeAssinada = objNFeUtil.NfeAutorizacao4( _
-    siglaWS, tpAmbiente, certificado, versao, NFe, lote, 0, _
-    msgDados, msgRetWS, cStat, msgResultado, nroRecibo, dhRecibo, tMed, _
-    proxy, usuario, senha, licenca)
-    
-        With vgTb
-            .Edit
-            ' Corrige Observação conforme DataField
-            If Vazio(![Observação]) Then
-                ![Observação] = "Transmitindo NFe... Tentativa " & i
-            Else
-                ![Observação] = ![Observação] & vbCrLf & "Transmitindo NFe... Tentativa " & i
-            End If
-            .Update
-            .BookMark = .LastModified
-        End With
-        If cStat <> 105 Then GoTo Continua
-    Next
-
-    MsgBox "NFe não enviada! Tente mais tarde.", vbExclamation + vbOKOnly, vaTitulo
-
-    With vgTb
-        .Edit
-        If Vazio(![Observação]) Then
-            ![Observação] = "Erro ao transmitir NFe"
-        Else
-            ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe"
-        End If
-        .Update
-        .BookMark = .LastModified
-    End With
-    GoTo SaiDaSub
-
-Continua:
-    Select Case cStat
-        Case 5000 To 7003
-            MsgBox "Descrição do erro: " & vbCrLf & msgResultado, vbCritical + vbOKOnly, "Atenção: envio falhou"
-            With vgTb
-                .Edit
-                If Vazio(![Observação]) Then
-                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
-                Else
-                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
-                End If
-                .Update
-                .BookMark = .LastModified
-            End With
-            GoTo SaiDaSub
-
-        Case 103
-            With Nota_Fiscal
-                .Edit
-                !Transmitido = True
-                ![Número do Recibo da NFe] = nroRecibo
-                ![Chave de Acesso da NFe] = chaveNFe
-                .Update
-                .BookMark = .LastModified
-            End With
-
-            MsgBox "Transmitido com sucesso!", vbInformation + vbOKOnly, "Atenção: NFe enviada!"
-
-            Arq = FreeFile
-            If Parametros_da_NFe!ambiente = 0 Then
-                ' Produção
-                If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then _
-                       Kill Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
-                If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then _
-                       Kill Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-                Open Parametros_da_NFe![Diretório 2 NFe Produção] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Append As #Arq
-                    Print #Arq, NFeAssinada
-                Close #Arq
-            Else
-                ' Homologação
-                If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then _
-                       Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
-                If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then _
-                       Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                       Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-                Open Parametros_da_NFe![Diretório 2 NFe Homologação] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml" For Append As #Arq
-                    Print #Arq, NFeAssinada
-                Close #Arq
-            End If
-
-            With vgTb
-                .Edit
-                If Vazio(![Observação]) Then
-                    ![Observação] = "Transmitido com sucesso"
-                Else
-                    ![Observação] = ![Observação] & vbCrLf & "Transmitido com sucesso"
-                End If
-                .Update
-                .BookMark = .LastModified
-            End With
-
-        Case 108, 109
-            MsgBox msgResultado & vbCrLf & "O Web Service com problemas de recepção", vbCritical + vbOKOnly, "Atenção: WS com problemas!"
-            With vgTb
-                .Edit
-                If Vazio(![Observação]) Then
-                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
-                Else
-                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
-                End If
-                .Update
-                .BookMark = .LastModified
-            End With
-            GoTo SaiDaSub
-
-        Case Else
-            MsgBox "Descrição do erro: " & vbCrLf & cStat & " - " & msgResultado, vbCritical + vbOKOnly, "Atenção: WS rejeitou a NFe..."
-            With vgTb
-                .Edit
-                If Vazio(![Observação]) Then
-                    ![Observação] = "Erro ao transmitir NFe: " & msgResultado
-                Else
-                    ![Observação] = ![Observação] & vbCrLf & "Erro ao transmitir NFe: " & msgResultado
-                End If
-                .Update
-                .BookMark = .LastModified
-            End With
-            GoTo SaiDaSub
-    End Select
-
-    ' Gera protocolo no layout 4.00
-    RetornoNFe310 NFeAssinada, nroRecibo
-
-DeuErro:
-    If Err <> 0 Then MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
-
-SaiDaSub:
-    Screen.MousePointer = vbDefault ' normal
-    Set objNFeUtil = Nothing
-    If Parametros_da_NFe!ambiente = 0 Then
-        lblProgresso.Caption = ""
-    Else
-        lblProgresso.Caption = "AMBIENTE NFe EM MODO TESTE"
-    End If
-End Sub
-
-
 'Tp 0 = (Orçamento ou F. Proforma)/Ordem de Serviço; 1 = Pedido/Mvto
 Private Sub AbreOrigem(Tp As Byte)
    Dim Sequencia As Long, Origem As String
@@ -8458,7 +8016,7 @@ Public Sub AbreDeclarações(SeqNF As Long, SeqProdNF As Long)
    frmDecImpor.Reposition
    frmDecImpor.SeqNF = SeqNF
    frmDecImpor.SeqProdNF = SeqProdNF
-   frmDecImpor.SeqGeral = Nota_Fiscal![Seqüência Do Geral]
+   frmDecImpor.SeqGeral = Nota_Fiscal![Seqüência do Geral]
    frmDecImpor.Show
    frmDecImpor.SetFocus
          
@@ -8587,7 +8145,7 @@ End Sub
 
 Private Sub SuperAtualizaProdutos(Opcao As Byte)
    Dim Tributos As Double, OutrasDespesas As Double, PercentualOutros As Double
-   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double, VrReducao As Double
+   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double, VrReducao As Double
    Dim ValorFrete As Double, ValorAcresDesc As Double, IPI As Double, Diferido As Boolean, Reducao As Double, CFOP As String
    Dim AliquotaIcms As Integer, Geral As New GRecordSet, GRevenda As Boolean, AuxCFOP As String
    
@@ -8628,24 +8186,24 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                Tributos = 0
                With Produtos_da_Nota_Fiscal
                .Edit
-                Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Nota_Fiscal![Seqüência Do Geral])
+                Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Nota_Fiscal![Seqüência do Geral])
                 GRevenda = Geral!Revenda ' Revendedor
                 
-                totalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
-                PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / totalItens * 100)
+                TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+                PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
                 VrItem = Round((Produtos_da_Nota_Fiscal!Quantidade * Produtos_da_Nota_Fiscal![Valor Unitário]), 2)
                 ValorAcresDesc = (VrItem * PercentualRateio / 100) 'Valor do Desconto
                 
                 'Valor do Frete Rateado entre os Produtos
-                PercentualFrete = (Nota_Fiscal![Valor Do Frete] / totalItens * 100)
+                PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
                 ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
                 AuxCFOP = PegaValor("Natureza de Operação", "Código da Natureza de Operação", "[Seqüência da Natureza] = " & Sequencia_da_Natureza)
                 
                 'Outras despesas
-                PercentualOutros = (Nota_Fiscal![Outras Despesas] / totalItens * 100)
+                PercentualOutros = (Nota_Fiscal![Outras Despesas] / TotalItens * 100)
                 OutrasDespesas = (VrItem * PercentualOutros / 100)
                 ![Valor Do Frete] = ValorFrete
-                ![Valor Do Desconto] = Abs(ValorAcresDesc)
+                ![Valor do Desconto] = Abs(ValorAcresDesc)
                'Entrega Futura Nota Filha
                 If AuxCFOP = "5116" Or AuxCFOP = "6116" Then
                  If MunicipioAux!UF = "SP" Then
@@ -8657,25 +8215,25 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                 'Calculando
                 If AuxCFOP <> "5116" And AuxCFOP <> "6116" Then
                   If AuxCFOP <> "5116" And AuxCFOP <> "6116" And AuxCFOP <> "1201" And AuxCFOP <> "2201" Then
-                     !CFOP = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                     !CFOP = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 1, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                   End If
-                   !IVA = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 12, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                   ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 13, 1, !Quantidade * ![Valor Unitário], ValorAcresDesc, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
-                   ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 15, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade])
-                   ![Valor ICMS ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 14, 1, !Quantidade * ![Valor Unitário], ValorAcresDesc, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+                   !IVA = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 12, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 13, 1, !Quantidade * ![Valor Unitário], ValorAcresDesc, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
+                   ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 15, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade])
+                   ![Valor ICMS ST] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 14, 1, !Quantidade * ![Valor Unitário], ValorAcresDesc, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF, ValorFrete)
                     Tributos = Tributos + ![Valor ICMS ST]
                 End If
-                   ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) + ValorFrete + OutrasDespesas
+                   ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 6, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) + ValorFrete + OutrasDespesas
                    '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc, 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)  'Round((VrItem * AliquotaIcms / 100),2)
-                   ![Valor Do Icms] = ![Valor da Base de Cálculo] * CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) / 100
+                   ![Valor Do Icms] = ![Valor da Base de Cálculo] * CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF) / 100
                     Tributos = Tributos + ![Valor Do Icms]
-                   ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                   ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                   !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade])
-                   ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 2, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 5, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade])
+                   ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                     Tributos = Tributos + ![Valor do IPI] 'CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                   ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-                   !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 9, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 4, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                   !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 9, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
                  Select Case !CFOP
                 Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "3101", "3102", "5949", "6949"
                   ![Valor Do PIS] = 0
@@ -8794,9 +8352,93 @@ SaiDaSub:
 
 End Sub
 
+
+Private Sub AtualizaValoresConjuntos()
+   Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
+   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
+   Dim VrItem As Double, BC As Double
+      
+   Screen.MousePointer = vbHourglass
+         
+   If Conjuntos_da_Nota_Fiscal.RecordCount > 0 Then
+   
+      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
+         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
+      End If
+   
+      Conjuntos_da_Nota_Fiscal.MoveFirst
+      Do While Not Conjuntos_da_Nota_Fiscal.EOF
+         Tributos = 0
+         With Conjuntos_da_Nota_Fiscal
+            .Edit
+            'Valor do Desconto Rateado entre os produtos
+            If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
+            If Nota_Fiscal!Fechamento = 1 Then 'Valor
+            TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
+            VrItem = Round((Conjuntos_da_Nota_Fiscal!Quantidade * Conjuntos_da_Nota_Fiscal![Valor Unitário]), 2)
+            ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
+            
+            ' Valor do Frete Rateado entre os Produtos
+            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
+            ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
+            End If
+            End If
+            
+            '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Nota_Fiscal![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            BC = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor da Base de Cálculo] = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+            '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Nota_Fiscal![Seqüência Do Geral], 7, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+            Tributos = Tributos + ![Valor Do Icms]
+            ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            Tributos = Tributos + ![Valor do IPI]
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            !Diferido = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 9, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            !CST = CalculaImposto(![Seqüência do Conjunto], Nota_Fiscal![Seqüência do Geral], 5, 2, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            Select Case !CFOP
+                Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "6912", "3101", "3102", "5949", "6949"
+                  ![Valor Do PIS] = 0
+                  Tributos = Tributos + ![Valor Do PIS]
+                  ![Valor Do Cofins] = 0
+                  Tributos = Tributos + ![Valor Do Cofins]
+               Case Else
+                 If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
+                    ![Valor Do PIS] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 1.65 / 100 'CalculaImposto(![Seqüência Do Conjunto], Nota_Fiscal![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                 Else
+                    ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 1.65 / 100
+                 End If
+                  Tributos = Tributos + ![Valor Do PIS]
+                 If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
+                    ![Valor Do Cofins] = (((VrItem - Abs(ValorAcresDesc) + ValorFrete) - ![Valor Do Icms])) * 7.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Nota_Fiscal![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+                 Else
+                    ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 7.6 / 100
+                 End If
+                  Tributos = Tributos + ![Valor Do Cofins]
+            End Select
+            Tributos = Tributos + ![Valor ICMS ST]
+            ![Valor Do Tributo] = Tributos 'Tributos
+            .Update
+            .BookMark = .LastModified
+            .MoveNext
+         End With
+      Loop
+      
+      grdConjuntos.ReBind 'Atualiza do Grid
+      Reposition True    'Atualiza o Formulário
+      
+   End If
+   
+SaiDaSub:
+   Screen.MousePointer = vbDefault
+
+End Sub
+
 Private Sub AtualizaValoresPecas()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim PercentualFrete As Double, totalItens As Double, PercentualRateio As Double
+   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
    Dim VrItem As Double, BC As Double
           
    Screen.MousePointer = vbHourglass
@@ -8815,31 +8457,31 @@ Private Sub AtualizaValoresPecas()
             'Valor do Desconto Rateado entre os produtos
             If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
             If Nota_Fiscal!Fechamento = 1 Then 'Valor
-            totalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / totalItens * 100)
+            TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
             VrItem = Round((Pecas_da_Nota_Fiscal!Quantidade * Pecas_da_Nota_Fiscal![Valor Unitário]), 2)
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / totalItens * 100)
+            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             ![Valor Do Frete] = ValorFrete
-            ![Valor Do Desconto] = Abs(ValorAcresDesc)
+            ![Valor do Desconto] = Abs(ValorAcresDesc)
             End If
             End If
             '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            BC = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            BC = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             ![Valor da Base de Cálculo] = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
             '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Produto], Nota_Fiscal![Seqüência Do Geral], 7, 3, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
             Tributos = Tributos + ![Valor Do Icms]
-            ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Percentual da Redução] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 2, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
-            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
-            !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            !Diferido = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
+            !CST = CalculaImposto(![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], 5, 3, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], Nota_Fiscal![Seqüência da Classificação], , MunicipioAux!UF)
             Select Case !CFOP
                Case "5116", "6116", "6910", "5910", "6912", "2913", "1913", "5912", "6912", "3101", "3102", "5949", "6949"
                   ![Valor Do PIS] = 0
@@ -8879,97 +8521,106 @@ SaiDaSub:
 End Sub
 
 Private Sub AtualizaValoresProdutos()
-   Dim Tributos As Double
-   Dim ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim Outros As Double
-   Dim NCMProd As String
-   
-   Screen.MousePointer = vbHourglass
-         
-   If Produtos_da_Nota_Fiscal.RecordCount > 0 Then
-   
-      ValorFrete = 0
-      ValorSeguro = 0
-      ValorAcresDesc = 0
-      Outros = 0
-   
-      If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 And Outros = 0 Then GoTo SaiDaSub
-      End If
-   
-      Produtos_da_Nota_Fiscal.MoveFirst
-      Do While Not Produtos_da_Nota_Fiscal.EOF
-         Tributos = 0
-         With Produtos_da_Nota_Fiscal
-            .Edit
-            
-            '---- cálculos padrão de ICMS, IPI etc. ----
-            ![Valor da Base de Cálculo] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
-               0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Valor Do Icms] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
-               0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor Do Icms]
-            
-            ![Alíquota Do ICMS] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               3, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            ![Percentual da Redução] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               2, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            
-            ![Valor do IPI] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               8, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
-            ![Alíquota Do IPI] = CalculaImposto( _
-               ![Seqüência do Produto], Nota_Fiscal![Seqüência Do Geral], _
-               4, 1, !Quantidade * ![Valor Unitário], 0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
-            
-            '---- nova regra: revenda .102 + NCM 84248 ? zera PIS/Cofins ----
-            NCMProd = Nz(![Ncm], "")
-            If Right(Trim(![CFOP]), 3) = "102" And Left(NCMProd, 5) = "84248" Then
-               ![Alíquota Do PIS] = 0
-               ![Valor Do PIS] = 0
-               ![Alíquota Do Cofins] = 0
-               ![Valor Do Cofins] = 0
-            Else
-               '---- lógica original de PIS/Cofins ----
-               Select Case !CFOP
-                 Case "5116","6116","6910","5910","6912","2913",_
-                      "1913","5912","3101","3102","5949","6949"
-                   ![Valor Do PIS] = 0
-                   Tributos = Tributos + ![Valor Do PIS]
-                   ![Valor Do Cofins] = 0
-                   Tributos = Tributos + ![Valor Do Cofins]
-                 Case Else
-                   ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) _
-                                       - Abs(ValorAcresDesc) + ValorFrete + Outros) _
-                                       - ![Valor Do Icms])) * 1.65 / 100
-                   Tributos = Tributos + ![Valor Do PIS]
-                   ![Valor Do Cofins] = ![Valor Do PIS]
-                   Tributos = Tributos + ![Valor Do Cofins]
-               End Select
-            End If
-            
-            Tributos = Tributos + ![Valor ICMS ST]
-            ![Valor Do Tributo] = Tributos
-            
-            .Update
-            .BookMark = .LastModified
-            .MoveNext
-         End With
-      Loop
-      
-      GrdProdutos.ReBind
-      Reposition True
-   End If
-   
+    Dim Tributos As Double
+    Dim ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
+    Dim Outros As Double
+    Dim NCMProd As String
+
+    Screen.MousePointer = vbHourglass
+
+    If Produtos_da_Nota_Fiscal.RecordCount > 0 Then
+
+        ValorFrete = 0
+        ValorSeguro = 0
+        ValorAcresDesc = 0
+        Outros = 0
+
+        If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
+            If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 And Outros = 0 Then GoTo SaiDaSub
+        End If
+
+        Produtos_da_Nota_Fiscal.MoveFirst
+        Do While Not Produtos_da_Nota_Fiscal.EOF
+            Tributos = 0
+            With Produtos_da_Nota_Fiscal
+                .Edit
+
+                '---- cálculos padrão de ICMS, IPI etc. ----
+                ![Valor da Base de Cálculo] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   6, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
+                   0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                ![Valor Do Icms] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   7, 1, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, _
+                   0, Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                Tributos = Tributos + ![Valor Do Icms]
+
+                ![Alíquota Do ICMS] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   3, 1, !Quantidade * ![Valor Unitário], 0, _
+                   Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                ![Percentual da Redução] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   2, 1, !Quantidade * ![Valor Unitário], 0, _
+                   Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+
+                ![Valor do IPI] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   8, 1, !Quantidade * ![Valor Unitário], 0, _
+                   Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+                Tributos = Tributos + ![Valor do IPI]
+                ![Alíquota Do IPI] = CalculaImposto( _
+                   ![Seqüência do Produto], Nota_Fiscal![Seqüência do Geral], _
+                   4, 1, !Quantidade * ![Valor Unitário], 0, _
+                   Nota_Fiscal![Seqüência da Propriedade], , , MunicipioAux!UF)
+
+                '---- nova regra: revenda .102 + NCM 84248 ? zera PIS/Cofins ----
+                If IsNull(![Ncm]) Then
+                    NCMProd = ""
+                Else
+                    NCMProd = ![Ncm]
+                End If
+
+                If Right(Trim(![CFOP]), 3) = "102" And Left(NCMProd, 5) = "84248" Then
+                    ![Alíquota Do PIS] = 0
+                    ![Valor Do PIS] = 0
+                    ![Alíquota Do Cofins] = 0
+                    ![Valor Do Cofins] = 0
+                Else
+                    '---- lógica original de PIS/Cofins ----
+                    Select Case !CFOP
+                        Case "5116", "6116", "6910", "5910", "6912", "2913", _
+                             "1913", "5912", "3101", "3102", "5949", "6949"
+                            ![Valor Do PIS] = 0
+                            Tributos = Tributos + ![Valor Do PIS]
+                            ![Valor Do Cofins] = 0
+                            Tributos = Tributos + ![Valor Do Cofins]
+                        Case Else
+                            ![Valor Do PIS] = ((((!Quantidade * ![Valor Unitário]) _
+                                                - Abs(ValorAcresDesc) + ValorFrete + Outros) _
+                                                - ![Valor Do Icms])) * 1.65 / 100
+                            Tributos = Tributos + ![Valor Do PIS]
+                            ![Valor Do Cofins] = ![Valor Do PIS]
+                            Tributos = Tributos + ![Valor Do Cofins]
+                    End Select
+                End If
+
+                Tributos = Tributos + ![Valor ICMS ST]
+                ![Valor Do Tributo] = Tributos
+
+                .Update
+                .BookMark = .LastModified
+                .MoveNext
+            End With
+        Loop
+
+        GrdProdutos.ReBind
+        Reposition True
+    End If
+
 SaiDaSub:
-   Screen.MousePointer = vbDefault
+    Screen.MousePointer = vbDefault
 End Sub
 
 
@@ -9002,223 +8653,1735 @@ End If
 End Function
 
 
-'Usada para Teste no Layout 3.10 Enquanto o 2.00 Esta em Produção
-'Busca Retorno NFe 3.10
-Private Sub RetornoNFe310(NFeAssinada As String, Recibo As String)
-   Dim msgDados As String, msgRetWS As String, msgResultado As String, siglaWS As String, certificado As String
-   Dim tpAmbiente As Long, licenca As String, procNFe As String, versao As String, nroProtocolo As String
-   Dim dhProtocolo As String, cMsg As String, xMsg As String, objNFeUtil As Object, i As Integer, Arq As Long
-   Dim cStat As Long, proxy As String, usuario As String, senha As String, XML As New GRecordSet
+'------------------------------------------------------------
+'  RetornoNFe310  –  agora para envio SÍNCRONO (EnviaNFSincrono)
+'
+'  • NFXmlAssinada  ?  <procNFe> completo devolvido pela DLL
+'  • cStat          ?  código de status (100, 150, 101, 2xx…)
+'  • nroProtocolo   ?  nº do protocolo de autorização/denegação
+'  • dhProtocolo    ?  data-hora do protocolo
+'  • msgResultado   ?  descrição textual do status
+'------------------------------------------------------------
 
+'============================================================
+'   SalvaXML – grava o XML AUTORIZADO ou DENEGADO em disco
+'============================================================
+Private Sub RetornoNFe310( _
+        NFXmlAssinada As String, _
+        cStat As Long, _
+        nroProtocolo As String, _
+        dhProtocolo As String, _
+        msgResultado As String)
+
+    Dim Arq        As Long
+    Dim tpAmbiente As Long
+    Dim XML        As New GRecordSet
+
+    On Error GoTo DeuErro
+    Screen.MousePointer = vbHourglass
+    lblProgresso.Caption = "Processando retorno da NFe..."
+
+    '––– ambiente
+    If Parametros_da_NFe!ambiente = 0 Then
+        tpAmbiente = 1    ' Produção
+    Else
+        tpAmbiente = 2    ' Homologação
+    End If
+
+    '––––– trata o status já devolvido pela SEFAZ –––––
+    Select Case cStat
+
+        '------------------------------------------------
+        ' 100 / 150  –  Autorizada
+        '------------------------------------------------
+        Case 100, 150
+            ' Atualiza a nota
+            With Nota_Fiscal
+                .Edit
+                !Autorizado = True
+                !Transmitido = True
+                ![Protocolo de Autorização NFe] = nroProtocolo
+                ![Data e Hora da NFe] = dhProtocolo
+                If Vazio(!Observação) Then
+                    !Observação = "NFe Autorizada com Sucesso!"
+                Else
+                    !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!"
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+
+            ' Histórico em vgTb
+            With vgTb
+                .Edit
+                If Vazio(!Observação) Then
+                    !Observação = "NFe Autorizada com Sucesso!"
+                Else
+                    !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!"
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+
+            ' Grava o XML autorizado
+            SalvaXML NFXmlAssinada, tpAmbiente, True
+            MsgBox "NFe Autorizada!", vbInformation, vaTitulo
+
+        '------------------------------------------------
+        ' 101  –  Denegada
+        '------------------------------------------------
+        Case 101
+            ' Atualiza a nota
+            With Nota_Fiscal
+                .Edit
+                !Autorizado = True
+                !Transmitido = True
+                ![Protocolo de Autorização NFe] = nroProtocolo
+                ![Data e Hora da NFe] = dhProtocolo
+                If Vazio(!Observação) Then
+                    !Observação = "NFe Denegada!"
+                Else
+                    !Observação = !Observação & vbCrLf & "NFe Denegada!"
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+
+            ' Histórico em vgTb
+            With vgTb
+                .Edit
+                If Vazio(!Observação) Then
+                    !Observação = "NFe Denegada!"
+                Else
+                    !Observação = !Observação & vbCrLf & "NFe Denegada!"
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+
+            ' Grava o XML (mesmo denegado)
+            SalvaXML NFXmlAssinada, tpAmbiente, False
+            MsgBox "NFe Denegada!", vbExclamation, vaTitulo
+
+        '------------------------------------------------
+        ' Demais códigos – rejeição
+        '------------------------------------------------
+        Case Else
+            MsgBox cStat & " – " & msgResultado, vbCritical, "NFe Rejeitada"
+
+            With vgTb
+                .Edit
+                !Transmitido = False
+                If Vazio(!Observação) Then
+                    !Observação = "Rejeição SEFAZ: " & msgResultado
+                Else
+                    !Observação = !Observação & vbCrLf & "Rejeição SEFAZ: " & msgResultado
+                End If
+                .Update
+                .BookMark = .LastModified
+            End With
+    End Select
+
+SaiDaSub:
+    Screen.MousePointer = vbDefault
+    lblProgresso.Caption = IIf(Parametros_da_NFe!ambiente = 0, "", "AMBIENTE NFe EM MODO TESTE")
+    Exit Sub
+
+DeuErro:
+    MsgBox Err.Description, vbCritical, vaTitulo
+    Resume SaiDaSub
+End Sub
+
+
+
+Private Sub SalvaXML(procNFe As String, tpAmb As Long, autorizada As Boolean)
+    Dim Arq As Long, arquivoSaida As String
+
+    If tpAmb = 1 Then   ' Produção
+        arquivoSaida = IIf(autorizada, _
+            Parametros_da_NFe![Diretório 1 NFe Produção], _
+            Parametros_da_NFe![Diretório 1 NFe Produção]) _
+            & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
+    Else                ' Homologação
+        arquivoSaida = IIf(autorizada, _
+            Parametros_da_NFe![Diretório 1 NFe Homologação], _
+            Parametros_da_NFe![Diretório 1 NFe Homologação]) _
+            & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
+    End If
+
+    If Dir(arquivoSaida, vbArchive) <> "" Then Kill arquivoSaida
+    Arq = FreeFile
+    Open arquivoSaida For Output As #Arq
+       Print #Arq, procNFe
+    Close #Arq
+End Sub
+
+
+
+
+
+'ROTINA QUE MONTA O XML DA NOTA FISCAL ELETRONICA
+Private Sub BlasterNFe310()
+   'DECLARAÇÃO DAS VARIÁVEIS
+   '-------Variáveis Avulsas--------------
+   Dim Item As New GRecordSet, Cliente As New GRecordSet, Transportadora As New GRecordSet, Propriedade As New GRecordSet
+   Dim NatOpe As New GRecordSet, Parcelas As New GRecordSet, objNFeUtil As Object, MunTransAvulsa As New GRecordSet
+   Dim Arq As Long, Usado As Boolean, Reducao As Boolean, Diferido As Boolean, NatOpe2 As New GRecordSet
+   Dim SemValores As New GRecordSet, Paises As New GRecordSet, Declaração As New GRecordSet
+   Dim Servicos As New GRecordSet, TotalTribISS As Double, TotDescISS As Double
+   '======Identificação do Documento=======
+   Dim ide_cUF As Long, ide_cNF As String, ide_natOp As String, ide_indPag As Long, ide_mode As Long
+   Dim ide_serie As Long, ide_nNF As Long, ide_tpNF As Long, ide_cMunFG As String
+   Dim ide_tpImp As Long, ide_cDV As Long, ide_tpAmb As Long, ide_finNFe As Long, ide_tpEmis As Long, ide_procEmi As Long
+   Dim ide_verProc As String, ide_NFref As String, ide_dhCont As String, ide_xJust As String
+   'Campos Novos Identificação do Documento Layout 3.10
+   Dim ide_dhEmi As String, ide_dhSaiEnt As String, ide_idDest As Integer, ide_indFinal As Integer, ide_indPres As Integer
+   '======Chave da NFe===========
+   Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpemis, codigoseguranca As String
+   Dim msgResult As String, cNF As String, cDV As String
+   '======NFe Referenciada=======
+   Dim ide_NFRefs As String
+   '======Identificação do Emitente=======
+   Dim emi_CPF As String, emi_xNome As String, emi_xFant As String, emi_xLgr As String
+   Dim emi_nro As String, emi_xCpl As String, emi_xBairro As String, emi_cMun As String, emi_xMun As String
+   Dim emi_UF As String, emi_CEP As String, emi_cPais As String, emi_xPais As String, emi_fone As String
+   Dim emi_IE As String, emi_IEST As String, emi_IM As String, emi_CNAE As String, emi_CRT As String
+   '======Identificação do Destinatario=======
+   Dim dest_CNPJ As String, dest_CPF As String, dest_xNome As String, dest_xLgr As String
+   Dim dest_nro As String, dest_xCpl As String, dest_xBairro As String, dest_cMun As String, dest_xMun As String
+   Dim dest_UF As String, dest_CEP As String, dest_cPais As String, dest_xPais As String, dest_fone As String
+   Dim dest_IE As String, dest_IESUF As String, dest_eMail As String
+   'Campos Novos Identificação do Destinatario Layout 3.10
+   Dim dest_idEstrangeiro As String, dest_indIEDest As String, dest_IM As String
+   '======Identificação do Produtos/Serviços=====
+   Dim det_nItem As Long, det_produto As String, det_imposto As String
+   Dim Prod_cProd As String, Prod_cEAN As String, Prod_xProd As String, Prod_NCM As String, Prod_ExTIPI As String
+   Dim Prod_CFOP As String, Prod_uCOM As String, Prod_qCom As String, Prod_vUnCom As String, Prod_vProd As String
+   Dim Prod_cEANTrib As String, Prod_uTrib As String, Prod_qTrib As String, Prod_vUnTrib As String, Prod_DI As String
+   Dim Prod_DetEspecifico As String, Prod_xPed As String, Prod_vFrete As Double, Prod_Ad As String
+   Dim Prod_vSeguro As Double, Prod_vDesc As Double, Prod_vOutro As Double, Prod_indTot As Byte, Prod_nItemPed As Integer
+   Dim TotalDosItens As Double, PercentualRateio As Double, Prod_Cest As String
+   '=========Serviços==================
+   Dim det_Servicos As String, cServico As String, xServico As String, Serv_NCM As String, Serv_CFOP As String
+   Dim Serv_uCOM As String, Serv_qCOM As String, Serv_vUnCOM As String, vServ As Double, Serv_uTrib As String
+   Dim Serv_qTrib As String, Serv_vUnTrib As String, Serv_indTot As Integer, Serv_Desc As Double
+   '======Impostos dos Serviços==========================
+   Dim ISSQN310 As String, Serv_BC As Double, Serv_Aliq As Double, Serv_vISSQN As Double, Serv_cMunFG As String
+   Dim cListServ As String, indISS As Integer, indIncentivo As Integer
+   'Totais do Imposto dos Serviços
+   Dim totalISS310 As String, totServ As Double, totBCISS As Double, totISS As Double, totPisISS As Double
+   Dim totCofinsISS As Double, dCompet As String
+   'Campos Novos Layout 3.10 usado em Importação
+   Dim Prod_NVE_Opc As String, Prod_detExport_Opc As String, Prod_nFCI_Opc As String, Dta_Di As String, DtaDesembaraco As String
+   Dim Prod_tpIntermediario As Integer, Prod_CNPJ_Opc As String, Prod_UFTerceiro As String, Prod_nDraw_Opc As String
+   '=====Identificação do ICMS=======
+   Dim det_icms As String, icms_orig As String, icms_CST As String, icms_modBC As Long, icms_pRedBC As Double, icms_vBC As Currency
+   Dim icms_pICMS As Double, icms_vICMS As Currency, icms_modBCST As Long, icms_pmVAST As Double, icms_pRedBCST As Double
+   Dim icms_vBCST As Currency, icms_pICMSST As Double, icms_vICMSST As Currency, icms_vBCSTRet As Currency
+   Dim icms_vICMSSTRet As Currency, icms_motDesICMS As Long, icms_pBCOp As Double, icms_UFST As String, icms_pCredSN As Double
+   Dim icms_vCredICMSSN As Currency, icms_vICMSSTDest As Currency, icms_vBCICMSSTDest As Currency, det_PISST As String
+   Dim det_COFINSST As String, det_ISSQN As String, TotalICMS As String
+   'Campos Novos Layout 3.10
+   Dim icms_vICMSDeson As Currency, icms_vICMSOp As Currency, icms_pDif As Double, icms_vICMSDif As Currency
+   '=====Identificação do IPI=======
+   Dim det_IPI As String, ipi_clEnq As String, ipi_CNPJProd As String, ipi_cSelo As String, ipi_qSelo As Integer
+   Dim ipi_cEnq As String, ipi_CST As String, ipi_vBC As Double, ipi_pIPI As Double, ipi_qUnid As Double
+   Dim ipi_vUnid As Double, ipi_vIPI As Double
+   '=====Identificação do PIS=======
+   Dim det_PIS As String, pis_CST As String, pis_vBC As Double, pis_pPIS As Double, pis_qBCProd As Double
+   Dim pis_vAliqProd As Double, pis_vPIS As Double
+   '=====Identificação do COFINS======
+   Dim det_COFINS As String, cofins_CST As String, cofins_vBC As Double, cofins_pCOFINS As Double
+   Dim cofins_qBCProd As Double, cofins_vAliqProd As Double, cofins_vCOFINS As Double
+   '=====Identificação do II======
+   Dim det_II As String
+   '=====Identificação do Dados Ad======
+   Dim det_infAdProd As String
+   '=====Identificação do Serviços======
+   '=====Totais da NF=======
+   Dim vBC As Double, vICMS As Double, vBCST As Double, vST As Double, vProd As Double, vFrete As Double
+   Dim vSeg As Double, vDesc As Double, vII As Double, vIPI As Double, vPIS As Double, vCOFINS As Double
+   Dim vOutro As Double, vNF As Double, ISSQNTot As String, retTrib As String
+   Dim vICMSDeson As Double ' Campo Novo Layout 3.10
+   '=====Detalhe310 Campos Novos======
+   Dim Det_pDevol As Double, Det_vIPIDevol As Double
+   '=====Identificação do Transporte===============
+   Dim modFrete As String, transporta As String, retTransp As String, veicTransp As String, reboque As String
+   Dim vagao As String, balsa As String, vol As String, TransCNPJ As String, TransCPF As String, TransxNome As String, TransIE As String, TransxEnder As String
+   Dim TransxMun As String, placa As String, TransUF As String, RNTC As String, qVol As String, esp As String, marca As String
+   Dim nVol As String, pesoL As Double, pesoB As Double, lacres As String, veicUF As String
+   '=====Identificação das Informações Adicionais======
+   Dim infAdFisco As String, infCpl As String, obsCont As String, obsFisco As String, procRef As String
+   '=====Identificação da Cobrança=====
+   Dim nFat As String, vOrig As Double, vFatDesc As Double, vLiq As Double, dup As String, nDup As String
+   Dim dVenc As Date, vDup As Double
+   '=====Identificação da Exportação=====
+   Dim UFEmbarq As String, xLocEmbarq As String
+   Dim xLocDespacho As String ' Campo Novo Layout 3.10
+   '=====Identificação da Compra=====
+   '=====Identificação da Cana=====
+   '=====Consolidação da NFe=======
+   Dim NFe As String, versao As String, Id As String, ide As String, emit As String, avulsa As String, dest As String
+   Dim retirada As String, Entrega As String, Detalhes As String, Total As String, transp As String, Cobr As String
+   Dim infAdic As String, exporta As String, compra As String, cana As String, chaveNFe As String
+   Dim Pag As String, autXML As String ' Campos Novos Layout 3.10
+   '=====Valor Total do Tributo=======
+   'Alteração Realizada Conforme a Lei da Transparência 12.741/12
+   Dim vTotTrib As Double, det_vTotTrib As Double
+   'Campos Novos Partilha do ICMS na Operação Interstadual, consumidor final não contribuinte
+   Dim FormaCalculo As Integer, ValorBase As Double, AliqDestino As Double, AliqInterstadual As Double
+   Dim AliqFCP As Double, AnoOperacao As Long, vBCUFDest As Double, pFCPUFDest As Double, pICMSUFDest As Double
+   Dim pICMSInter As Double, pICMSInterPart As Double, vFCPUFDest As Double, vICMSUFDest As Double
+   Dim vICMSUFRemet As Double, vBCopeInter As Double, vICMSOpeInter As Double, cResultado As Long, msgResultado As String
+   Dim TbIcms As New GRecordSet, TotICMSUFDest As Double, TotICMSUFRemet As Double, TotvFCPUFDest As Double
+   Dim CalcICMSUFDest As String, ICMSUFDest As String
+      
+   'Bora lah Blaster
    On Error GoTo DeuErro
    
    Screen.MousePointer = vbHourglass ' Ampulheta
-    Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
-   Set XML = vgDb.OpenRecordSet("SELECT * FROM [Notas Autorizadas]")
-   lblProgresso.Caption = "Buscando NFe..."
-
-  'licenca = "22997ab769e9dade323e6ff97dfb99c474210c66b2ae3930ffcc6d85e8b50399533b9762aa7a61fdccb6cba94e4d650ad00012c782e74b9c7e2f380e18f1517e"
-   licenca = "23433296a6c7b3e6e602aa8c71ded18804ec302656cfa8590ff7b35454b14834f4f5aed7ed5b4e4986a6a2d2a4b1abad6758927b36d70c5a1d4588597eaf0de2"
-   certificado = Parametros_da_NFe![Certificado Digital]
-   siglaWS = "SP"
-   versao = "4.00"
-
-   If Parametros_da_NFe!ambiente = 0 Then 'Produção
-      tpAmbiente = 1
-   Else 'Homologação
-      tpAmbiente = 2
+   
+   lblProgresso.Caption = "Gerando XML..."
+   
+   Set Cliente = vgDb.OpenRecordSet("SELECT [CPF e CNPJ], Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], Descrição Municipio, UF, " & _
+                                    "[RG e IE], [Razão Social], [Fone 1], Tipo, G.CEP, Email, Isento, [Seqüência do País], Revenda " & _
+                                    "FROM Geral G LEFT JOIN Municípios M ON G.[Seqüência do Município] = M.[Seqüência do Município] WHERE G.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência do Geral])
+   Set Propriedade = vgDb.OpenRecordSet("SELECT CNPJ, Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], Descrição Municipio, UF, " & _
+                                        "P.CEP, [Inscrição Estadual] " & _
+                                        "FROM Propriedades P LEFT JOIN Municípios M ON P.[Seqüência do Município] = M.[Seqüência do Município] WHERE P.[Seqüência da Propriedade] = " & Nota_Fiscal![Seqüência da Propriedade])
+   Set Transportadora = vgDb.OpenRecordSet("SELECT Tipo, [CPF e CNPJ], [RG e IE], [Razão Social], Endereço, Descrição Municipio, UF, [Código da ANTT] " & _
+                                           "FROM Geral T LEFT JOIN Municípios M ON T.[Seqüência do Município] = M.[Seqüência do Município] WHERE T.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência da Transportadora])
+   Set NatOpe = vgDb.OpenRecordSet("SELECT * FROM [Natureza de Operação] WHERE [Seqüência da Natureza] = " & Sequencia_da_Natureza)
+   Set Paises = vgDb.OpenRecordSet("SELECT * FROM Países WHERE [Seqüência do País] = " & Cliente![Seqüência do País])
+   Set Parcelas = Parcelas_Nota_Fiscal
+   
+   Set Servicos = vgDb.OpenRecordSet("SELECT SNF.[Seqüência da Nota Fiscal], S.[Seqüência do Serviço], S.Descrição, SNF.Quantidade, " & _
+                                     "SNF.[Valor Unitário], SNF.[Valor Total], NF.[Valor Total dos Serviços]" & _
+                                     "FROM [Serviços da Nota Fiscal] SNF INNER JOIN Serviços S on SNF.[Seqüência Do Serviço] = S.[Seqüência Do Serviço] " & _
+                                     "LEFT JOIN [Nota Fiscal] NF ON SNF.[Seqüência da Nota Fiscal] = NF.[Seqüência da Nota Fiscal] Where NF.[Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
+   
+   If Sequencia_da_Propriedade = 0 Then
+      Set TbIcms = vgDb.OpenRecordSet("SELECT * From Icms Where UF = '" & Cliente!UF & "'")
+   Else
+      Set TbIcms = vgDb.OpenRecordSet("SELECT * From Icms Where UF = '" & Propriedade!UF & "'")
    End If
    
-   For i = 1 To 5 'Go To Search
-      procNFe = objNFeUtil.BuscaNFe2G(siglaWS, tpAmbiente, NFeAssinada, Recibo, certificado, versao, msgDados, msgRetWS, cStat, msgResultado, nroProtocolo, dhProtocolo, cMsg, xMsg, proxy, usuario, senha, licenca)
-      'Histórico
+   If Sequencia_da_Natureza = 126 Then
+   
+   Set Item = vgDb.OpenRecordSet("SELECT * FROM( " & _
+                                 "SELECT 'Produto' As Tipo, [Seqüência da Nota Fiscal], P.[Seqüência do Produto], P.[Código de Barras], P.Descrição [Descrição Produto], C.NCM, C.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, PNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "[Base de Cálculo da Importação], [Valor do Imposto de Importação], [Valor das Despesas Aduaneiras], [Valor do IOF], [Seqüência Produto Nota Fiscal] SeqItem, [Valor do Tributo], Importado " & _
+                                 "FROM [Produtos da Nota Fiscal] PNF INNER JOIN Produtos P ON PNF.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
+                                 "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Classificação Fiscal] C ON P.[Seqüência da Classificação] = C.[Seqüência da Classificação] " & _
+                                 "UNION ALL " & _
+                                 "SELECT 'Conjunto' As Tipo, CNF.[Seqüência da Nota Fiscal], C.[Seqüência do Conjunto], '', C.Descrição [Descrição Conjunto], CF.NCM, CF.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], CNF.Quantidade, CNF.[Valor Unitário], CNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, CNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "0 As [Base de Cálculo da Importação], 0 As [Valor do Imposto de Importação], 0 As [Valor das Despesas Aduaneiras], 0 As [Valor do IOF], 0 SeqItem, [Valor do Tributo], 0 As Importado " & _
+                                 "FROM [Conjuntos da Nota Fiscal] CNF INNER JOIN Conjuntos C on CNF.[Seqüência Do Conjunto] = C.[Seqüência Do Conjunto] " & _
+                                 "LEFT JOIN Unidades U ON C.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Nota Fiscal] NF ON CNF.[Seqüência da Nota Fiscal] = NF.[Seqüência da Nota Fiscal] " & _
+                                 "LEFT JOIN [Classificação Fiscal] CF ON NF.[Seqüência da Classificação] = CF.[Seqüência da Classificação] " & _
+                                 "UNION ALL " & _
+                                 "SELECT 'Peças' As Tipo, PNF.[Seqüência da Nota Fiscal], P.[Seqüência do Produto], P.[Código de Barras], P.Descrição [Descrição Produto], C.NCM, C.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, PNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "0 As [Base de Cálculo da Importação], 0 As [Valor do Imposto de Importação], 0 As [Valor das Despesas Aduaneiras], 0 As [Valor do IOF], 0 SeqItem, [Valor do Tributo], Importado " & _
+                                 "FROM [Peças da Nota Fiscal] PNF INNER JOIN Produtos P on PNF.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
+                                 "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Nota Fiscal] NF ON PNF.[Seqüência da Nota Fiscal] = NF.[Seqüência da Nota Fiscal] " & _
+                                 "LEFT JOIN [Classificação Fiscal] C ON P.[Seqüência da Classificação] = C.[Seqüência da Classificação]" & _
+                                 ") Item " & _
+                                 "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
+   Else
+   Set Item = vgDb.OpenRecordSet("SELECT * FROM( " & _
+                                 "SELECT 'Produto' As Tipo, [Seqüência da Nota Fiscal], P.[Seqüência do Produto], P.[Código de Barras], P.Descrição [Descrição Produto], C.NCM, C.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, PNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "[Base de Cálculo da Importação], [Valor do Imposto de Importação], [Valor das Despesas Aduaneiras], [Valor do IOF], [Seqüência Produto Nota Fiscal] SeqItem, [Valor do Tributo], Importado " & _
+                                 "FROM [Produtos da Nota Fiscal] PNF INNER JOIN Produtos P ON PNF.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
+                                 "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Classificação Fiscal] C ON P.[Seqüência da Classificação] = C.[Seqüência da Classificação] " & _
+                                 "UNION ALL " & _
+                                 "SELECT 'Conjunto' As Tipo, CNF.[Seqüência da Nota Fiscal], C.[Seqüência do Conjunto], '', C.Descrição [Descrição Conjunto], CF.NCM, CF.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], CNF.Quantidade, CNF.[Valor Unitário], CNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, CNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "0 As [Base de Cálculo da Importação], 0 As [Valor do Imposto de Importação], 0 As [Valor das Despesas Aduaneiras], 0 As [Valor do IOF], 0 SeqItem, [Valor do Tributo], 0 As Importado " & _
+                                 "FROM [Conjuntos da Nota Fiscal] CNF INNER JOIN Conjuntos C on CNF.[Seqüência Do Conjunto] = C.[Seqüência Do Conjunto] " & _
+                                 "LEFT JOIN Unidades U ON C.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Nota Fiscal] NF ON CNF.[Seqüência da Nota Fiscal] = NF.[Seqüência da Nota Fiscal] " & _
+                                 "LEFT JOIN [Classificação Fiscal] CF ON NF.[Seqüência da Classificação] = CF.[Seqüência da Classificação] " & _
+                                 "UNION ALL " & _
+                                 "SELECT 'Peças' As Tipo, PNF.[Seqüência da Nota Fiscal], P.[Seqüência do Produto], P.[Código de Barras], P.Descrição [Descrição Produto], C.NCM, C.CEST, CFOP, U.[Sigla da Unidade] [Descrição Unidade], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], " & _
+                                 "[Percentual da Redução], [Valor da Base de Cálculo], [Alíquota do ICMS], [Valor do ICMS], [Alíquota do IPI], [Valor do IPI], [Valor do PIS], [Valor do Cofins], Diferido, Usado, CST, PNF.IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], " & _
+                                 "0 As [Base de Cálculo da Importação], 0 As [Valor do Imposto de Importação], 0 As [Valor das Despesas Aduaneiras], 0 As [Valor do IOF], 0 SeqItem, [Valor do Tributo], Importado " & _
+                                 "FROM [Peças da Nota Fiscal] PNF INNER JOIN Produtos P on PNF.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
+                                 "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                                 "LEFT JOIN [Nota Fiscal] NF ON PNF.[Seqüência da Nota Fiscal] = NF.[Seqüência da Nota Fiscal] " & _
+                                 "LEFT JOIN [Classificação Fiscal] C ON NF.[Seqüência da Classificação] = C.[Seqüência da Classificação]" & _
+                                 ") Item " & _
+                                 "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
+   End If
+   Set SemValores = vgDb.OpenRecordSet("SELECT SUM([Valor Total]) [Valor Unitario], SUM([Valor Total]) [Valor Total], SUM([Valor da Base de Cálculo]) [Base de Calculo], SUM([Valor do ICMS]) [Valor ICMS], SUM([Valor do PIS]) [Valor Pis], SUM([Valor do Cofins]) [Valor Cofins], SUM([Valor do IPI]) [Valor IPI], SUM([Base de Cálculo ST]) [Base de Cálculo ST], SUM([Valor ICMS ST]) [Valor ICMS ST], MAX([Alíquota do ICMS]) [Alíquota ICMS], MIN(CST) CST, SUM([Valor do Tributo]) [Valor do Tributo] " & _
+                                       "FROM( " & _
+                                       "SELECT [Seqüência da Nota Fiscal], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], [Percentual da Redução], [Valor da Base de Cálculo], [Alíquota Do ICMS], [Valor Do ICMS], [Alíquota Do IPI], [Valor Do IPI], [Valor Do PIS], [Valor Do Cofins], Diferido, IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], CST, [Valor do Tributo] " & _
+                                       "FROM [Produtos da Nota Fiscal] PNF " & _
+                                       "UNION ALL " & _
+                                       "SELECT [Seqüência da Nota Fiscal], CNF.Quantidade, CNF.[Valor Unitário], CNF.[Valor Total], [Percentual da Redução], [Valor da Base de Cálculo], [Alíquota Do ICMS], [Valor Do ICMS], [Alíquota Do IPI], [Valor Do IPI], [Valor Do PIS], [Valor Do Cofins], Diferido, IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], CST, [Valor do Tributo] " & _
+                                       "FROM [Conjuntos da Nota Fiscal] CNF " & _
+                                       "UNION ALL " & _
+                                       "SELECT [Seqüência da Nota Fiscal], PNF.Quantidade, PNF.[Valor Unitário], PNF.[Valor Total], [Percentual da Redução], [Valor da Base de Cálculo], [Alíquota Do ICMS], [Valor Do ICMS], [Alíquota Do IPI], [Valor Do IPI], [Valor Do PIS], [Valor Do Cofins], Diferido, IVA, [Base de Cálculo ST], [Valor ICMS ST], [Alíquota do ICMS ST], CST, [Valor do Tributo] " & _
+                                       "FROM [Peças da Nota Fiscal] PNF) Item " & _
+                                       "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
+    
+   '========Grupo de Identificação da NFe - Grupo B do Manual de Integração
+   ide_cUF = 35                              ' código da UF - tabela do IBGE: 35 - SP, 43 - RS, etc
+   ide_natOp = Trim(NatOpe![Descrição da Natureza Operação]) ' natureza da operação
+   ide_indPag = IIf(Nota_Fiscal![Forma de Pagamento] = "Vista", 0, 1) ' 0=vista 1=Prazo 2=Outros
+   ide_mode = 55                             ' modelo da nota fiscal eletronica
+   ide_serie = 1                             ' série única = 0
+   ide_nNF = Nota_Fiscal![Número da NFe]     ' número da NF-e
+   If Parametros_da_NFe![Horario de Verao] Then
+      ide_dhEmi = Format(Now, "yyyy-MM-ddThh:mm:ss-02:00") 'data de emissão em Formato UTC
+   Else
+      ide_dhEmi = Format(Now, "yyyy-MM-ddThh:mm:ss-03:00") 'data de emissão em Formato UTC
+   End If
+   ide_dhSaiEnt = ""
+   'A IRRIGAÇÃO NW MANDA COM DATA E HORA DE SAÍDA
+   ide_tpNF = IIf(Nota_Fiscal![Tipo de Nota] = 0, 1, 0) ' Tipo de NF 0 = Entrada 1 = Saida
+   ide_cMunFG = "3537305"                    ' código do município do IBGE de ocorrência do FG do ICMS (Penápolis)
+   ide_tpImp = 1                             ' orientação da impressão 1-retrato/2-paisagem
+   ide_tpAmb = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)  ' ambiente de envio da NFe 1-produção / 2 - homologação
+   ide_finNFe = FinNFe ' finalidade da emissão da NF-e 1- NF-e normal 2 - NF-e Complementar - 3 NF-e de Ajuste - 4 Devolução / Retorno
+   ide_tpEmis = 1                            ' forma de emissão da NF-e 1- normal, 2 - contingência FS, 3 - contingência SCAN, etc.
+   ide_procEmi = 0                           ' identificação do processo de emissão da NF-e 0 - aplicação do contribuinte
+   ide_verProc = "NFe_Util_2G"               ' identificação da versão do processo de emissão
+   ide_dhCont = ""            ' data e hora de entrada em contingência - informar quanto tpEmis diferente de 1, informe #12:00:00 AM# para deixar vazio em VB
+   ide_xJust = ""                            ' justificativa para emissão em contingência
+   
+   'Campo Novo Layout 3.10
+   If ide_finNFe = 2 Then
+      ide_indPres = 0
+   Else
+      ide_indPres = 9
+   End If
+   
+   If Cliente!Revenda = 0 Then  'Campo Novo Layout 3.10
+    ide_indFinal = 1 ' Pessoa Fisica
+   Else
+    ide_indFinal = 0 ' Não
+   End If
+   
+   If Nota_Fiscal![Seqüência da Natureza] = 106 Or Nota_Fiscal![Seqüência da Natureza] = 6 Or Nota_Fiscal![Seqüência da Natureza] = 60 Or Nota_Fiscal![Seqüência da Natureza] = 13 Or Nota_Fiscal![Seqüência da Natureza] = 27 Or Nota_Fiscal![Seqüência da Natureza] = 79 Or Nota_Fiscal![Seqüência da Natureza] = 34 Or Nota_Fiscal![Seqüência da Natureza] = 51 Or Nota_Fiscal![Seqüência da Natureza] = 15 Or Nota_Fiscal![Seqüência da Natureza] = 16 Then
+      ide_indFinal = 0
+   End If
+   
+   If Nota_Fiscal![Seqüência da Natureza] = 35 Or Nota_Fiscal![Seqüência da Natureza] = 36 Or Nota_Fiscal![Seqüência da Natureza] = 17 Or Nota_Fiscal![Seqüência da Natureza] = 18 Or Nota_Fiscal![Seqüência da Natureza] = 80 Or Nota_Fiscal![Seqüência da Natureza] = 83 Then
+       ide_indFinal = 0
+   End If
+   
+   'Campo Novo Layout 3.10
+   If Nota_Fiscal![Seqüência da Propriedade] > 0 Then 'Tem Propriedade?
+      If Propriedade!UF = "SP" Then 'Dentro do Estado
+         ide_idDest = 1 '1 = Operacao Interna, 2 = Operacao Interestadual, 3 = Operacao Exterior
+      ElseIf Propriedade!UF = "EX" Then 'Fora do País
+         ide_idDest = 3
+      Else
+         ide_idDest = 2
+      End If
+   Else
+      If Cliente!UF = "SP" Then 'Dentro do Estado
+         ide_idDest = 1
+      ElseIf Cliente!UF = "EX" Then 'Fora do País
+         ide_idDest = 3
+      Else
+         ide_idDest = 2
+      End If
+   End If
+   
+   'Gera a Chave de Acesso da NFe
+   'Utilizar a Função CriaChaveNFe para Gerar a Chave de Acesso, Código da NFe e DV
+   emi_CNPJ = "02781892000130"
+   cUF = Trim(Str(ide_cUF))
+   Ano = Mid(ide_dhEmi, 3, 2)
+   Mes = Mid(ide_dhEmi, 6, 2)
+   modelo = Trim(Str(ide_mode))
+   serie = Trim(Str(ide_serie))
+   Numero = Trim(Str(ide_nNF))
+   tpemis = Trim(Str(ide_tpEmis))
+   codigoseguranca = "segredo"     ' informar uma expressão para garantir o sigilo da forma de cálculo do cNF
+    
+   Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
+    
+   resultado = objNFeUtil.CriaChaveNFe2G(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpemis, codigoseguranca, msgResult, cNF, cDV, chaveNFe)
+    
+   If resultado <> 5601 Then
+      MsgBox "Ocorreu um Erro ao Gerar a Chave de Acesso " + msgResult, vbCritical, vaTitulo
       With vgTb
          .Edit
          If Vazio(!Observação) Then
-            !Observação = "Buscando Retorno da NFe... Tentativa " & i
+            !Observação = "Erro ao Gerar a Chave de Acesso"
          Else
-            !Observação = !Observação & vbCrLf & "Buscando Retorno da NFe... Tentativa " & i
+            !Observação = !Observação & vbCrLf & "Erro ao Gerar a Chave de Acesso"
          End If
          .Update
+         .BookMark = .LastModified
       End With
-      If cStat <> 105 Then
-         GoTo Continua
+      GoTo SaiDaSub
+   End If
+    
+   ide_cNF = Val(cNF)                     ' código numérico que compõe a chave de acesso
+   ide_cDV = Val(cDV)                     ' DV da chave de acesso da NF-e
+   
+   'Gera Grupo NFeRef
+   If Nota_Fiscal![NFe Complementar] Then
+      ide_NFRefs = objNFeUtil.NFeRef(Nota_Fiscal![Chave Acesso NFe Referenciada])
+   End If
+   
+   If Nota_Fiscal![Nota de Devolução] Then
+      ide_NFRefs = objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução])
+   End If
+   
+   If Nota_Fiscal![Nota de Devolução] And Chave_da_Devolucao_2 <> "" Then
+      ide_NFRefs = ide_NFRefs + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 2])
+   End If
+   
+   If Nota_Fiscal![Nota de Devolução] And Chave_da_Devolucao_3 <> "" Then
+      ide_NFRefs = ide_NFRefs + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 3])
+   End If
+   
+   'Gera Grupo ide
+    ide = objNFeUtil.identificador300(ide_cUF, ide_cNF, ide_natOp, ide_indPag, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust)
+   
+   '=====Grupo de Identificação do Emitente (Grupo B do Manual de Integração 4.01-NT2009/006 - página 113)=======
+   '        <>&" são caracteres reservados do XML e devem ser evitados ou substituídos
+   If Parametros_da_NFe!ambiente = 0 Then
+      emi_CPF = "25307704844"                                 ' CPF do emitente, uso exclusivo do Fisco
+      emi_xNome = "Irrigacao Penapolis Ind. e Com. Ltda"      ' Razão social do emitente, evitar caracteres acentuados e &
+      emi_xFant = "Irrigacao Penapolis"                       ' Nome fantasia
+      emi_IE = "521043219118"                                 ' Inscrição Estadual do emitente sem máscara
+   Else
+      emi_xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"
+      emi_xFant = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"
+      emi_IE = "521043219118"
+   End If
+   emi_CNPJ = "02781892000130"                                   ' CNPJ do emitente sem máscara de formatação
+   emi_xLgr = "Rodovia Sarg. Luciano Arnaldo Covolan - Km 0.315" ' logradouro
+   emi_nro = "Cx P.149"                                          ' número, informar S/N quando inexistente para evitar erro de Schema XML
+   emi_xBairro = "Zona Rural"                                    ' bairro
+   emi_cMun = "3537305"                        ' código do município - codificação IBGE, deve ser compatível com a UF
+   emi_xMun = "Penapolis"                      ' nome do município
+   emi_UF = "SP"                               ' sigla da UF
+   emi_CEP = "16300000"                        ' CEP - sem máscara
+   emi_cPais = "1058"                          ' código do país - deve fixo em 1058 - Brasil
+   emi_xPais = "Brasil"                        ' nome do país (Brasil ou BRASIL)
+   emi_fone = "1836542248"                     ' número do telefone sem máscara
+   emi_IEST = ""                               ' Inscrição Estadual do ST
+   emi_IM = "2399386"                          ' Inscrição Municipal
+   emi_CNAE = "2832100"                        ' Código do CNAE
+   emi_CRT = "3"                               ' Código do CRT: 3 - Regime Normal.
+   
+   'Gera Grupo emi
+   emit = objNFeUtil.emitente2G(emi_CNPJ, emi_CPF, emi_xNome, emi_xFant, emi_xLgr, emi_nro, emi_xCpl, emi_xBairro, emi_cMun, emi_xMun, emi_UF, emi_CEP, emi_cPais, emi_xPais, emi_fone, emi_IE, emi_IEST, emi_IM, emi_CNAE, emi_CRT)
+     
+   '========Grupo de Identificação do Destinatario (Grupo E do Manual de Integração - versão 3.00 - páginas 99)=======
+   If Nota_Fiscal![Seqüência da Propriedade] > 0 Then
+      If Not Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "7" And Not Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "3" Then ' Se nw For Fora do País...
+         If Propriedade!UF = "SP" Then  'Propriedade Rural dentro de SP tem CNPJ
+            dest_CNPJ = RemoveCaracteres(Propriedade!CNPJ)    ' CNPJ do destinatario sem máscara de formatação
+         Else
+            If Cliente!Tipo = 0 Then 'CPF
+               dest_CPF = RemoveCaracteres(Cliente![CPF e CNPJ]) 'CPF do Cliente é vinculado a Propriedade
+            Else 'CNPJ
+               dest_CNPJ = RemoveCaracteres(Cliente![CPF e CNPJ]) ' CNPJ do destinatario sem máscara de formatação
+            End If
+         End If
+         dest_IE = RemoveCaracteres(Propriedade![Inscrição Estadual]) ' Inscrição Estadual do destinatario sem máscara
+         dest_cPais = "1058"          ' código do pais - deve fixo em 1058 - Brasil
+      Else
+         dest_xPais = RemoveCaracteres(SuperTiraAcentos(Trim(Paises!Descrição)), True) ' nome do pais (Brasil ou BRASIL)
+         dest_cPais = Paises![Código do País]         ' código do pais
       End If
-   Next
-   MsgBox "NFe NÃO Retornada! Tente Mais Tarde.", vbExclamation + vbOKOnly, vaTitulo
+      dest_cMun = Propriedade![Código Do IBGE]          ' código do município (vide página 141 do manual), deve ser compatível com a UF
+      dest_xMun = RemoveCaracteres(SuperTiraAcentos(Trim(Propriedade!Municipio)), True) ' nome do município
+      dest_UF = Propriedade!UF                          ' sigla da UF
+      'Vamos Tentar Abreviar se puder
+      If Len(Propriedade!Endereço & ", " & Propriedade![Número Do Endereço] & " - " & Propriedade!Complemento) > 64 Then
+         dest_xLgr = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Abreviacao(Propriedade!Endereço))), "&", "E", 1), True) ' logradouro
+         dest_nro = IIf(Vazio(Propriedade![Número Do Endereço]), "S/N", Propriedade![Número Do Endereço])   ' número, informar S/N quando inexistente para evitar erro de Schema XML
+         dest_xCpl = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Abreviacao(Propriedade!Complemento))), "&", "E", 1), True) ' complemento do endereço, o conteúdo pode ser omitido
+      Else
+         dest_xLgr = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Propriedade!Endereço)), "&", "E", 1), True) ' logradouro
+         dest_nro = IIf(Vazio(Propriedade![Número Do Endereço]), "S/N", Propriedade![Número Do Endereço])   ' número, informar S/N quando inexistente para evitar erro de Schema XML
+         dest_xCpl = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Propriedade!Complemento)), "&", "E", 1), True) ' complemento do endereço, o conteúdo pode ser omitido
+      End If
+      dest_xBairro = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Propriedade!Bairro)), "&", "E", 1), True)   ' bairro
+      dest_CEP = RemoveCaracteres(Propriedade!CEP)      ' CEP - sem máscara
+   Else
+      If Not Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "7" And Not Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "3" Then
+         If Cliente!Tipo = 0 Then
+            dest_CPF = RemoveCaracteres(Cliente![CPF e CNPJ])  ' CPF do destinatario sem máscara de formatação
+         Else
+            dest_CNPJ = RemoveCaracteres(Cliente![CPF e CNPJ]) ' CNPJ do destinatario sem máscara de formatação
+            If Not Cliente!Isento Then
+               dest_IE = RemoveCaracteres(Cliente![RG e IE])      ' Inscrição Estadual do destinatario sem máscara
+            Else
+               dest_IE = ""      ' Inscrição Estadual do destinatario sem máscara
+            End If
+         End If
+         dest_cPais = "1058"          ' código do pais - deve fixo em 1058 - Brasil
+      Else 'Exterior
+         dest_cPais = Paises![Código do País]        ' código do pais
+         dest_xPais = Paises!Descrição   'Nome do País
+      End If
+      dest_cMun = Cliente![Código Do IBGE]         ' código do município (vide página 141 do manual), deve ser compatível com a UF
+      dest_xMun = RemoveCaracteres(SuperTiraAcentos(Trim(Cliente!Municipio)), True) ' nome do município
+      dest_UF = Cliente!UF                         ' sigla da UF
+      'Vamos Tentar Abreviar se puder
+      If Len(Cliente!Endereço & ", " & Cliente![Número Do Endereço] & " - " & Cliente!Complemento) > 64 Then
+         dest_xLgr = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Abreviacao(Cliente!Endereço))), "&", "E", 1), True) ' logradouro
+         dest_nro = IIf(Vazio(Cliente![Número Do Endereço]), "S/N", RemoveCaracteres(SuperTiraAcentos(Trim(Cliente![Número Do Endereço])), True)) ' número, informar S/N quando inexistente para evitar erro de Schema XML
+         dest_xCpl = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Abreviacao(Cliente!Complemento))), "&", "E", 1), True) ' complemento do endereço, o conteúdo pode ser omitido
+      Else
+         dest_xLgr = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Cliente!Endereço)), "&", "E", 1), True) ' logradouro
+         dest_nro = IIf(Vazio(Cliente![Número Do Endereço]), "S/N", RemoveCaracteres(SuperTiraAcentos(Trim(Cliente![Número Do Endereço])), True)) ' número, informar S/N quando inexistente para evitar erro de Schema XML
+         dest_xCpl = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Cliente!Complemento)), "&", "E", 1), True) ' complemento do endereço, o conteúdo pode ser omitido
+      End If
+      dest_xBairro = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Cliente!Bairro)), "&", "E", 1), True) ' bairro
+      dest_CEP = RemoveCaracteres(Cliente!CEP)     ' CEP - sem máscara
+   End If
+   If Parametros_da_NFe!ambiente = 0 Then 'Produção
+      dest_xNome = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Cliente![Razão Social])), "&", "E", 1), True) ' Razão social do destinatario, evitar caracteres acentuados e &
+      dest_eMail = Cliente!Email                      ' e-mail do destinatário
+   Else 'Homologação
+      dest_xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL" ' Razão social do destinatario, evitar caracteres acentuados e &
+      dest_eMail = ""                                 ' e-mail do destinatário
+   End If
+   dest_fone = RemoveCaracteres(Substitui(Cliente![Fone 1], " ", "", SO_UM))  ' número do telefone sem máscara
+   dest_IESUF = ""                                 ' Inscrição SUFRAMA
+   dest_IM = "" ' Campo Novo Layout 3.10
+   dest_idEstrangeiro = "" ' Campo Novo Layout 3.10
+   
+   If Cliente!Tipo = 1 And Not Vazio(Cliente![RG e IE]) Then      'Pessoa Juridica Com IE é Contribuinte
+   dest_indIEDest = 1
+   End If
+   
+   If Cliente!Tipo = 0 And Nota_Fiscal![Seqüência da Propriedade] > 0 Then 'Pessoa Fisica Porem tem Propriedade Então é Contribuinte
+   dest_indIEDest = 1
+   End If
+   
+   If Cliente!Tipo = 0 And Nota_Fiscal![Seqüência da Propriedade] = 0 And Cliente!UF <> "EX" Then ' Pessoa Fisica e sem Propriedade Não é Contribuinte
+   dest_indIEDest = 9
+   End If
+   
+   If Cliente!Tipo = 1 And Cliente!Isento Then ' Pessoa Jurida e Isenta de IE Não é Contribuinte
+    If dest_UF <> "AM" And dest_UF <> "BA" And dest_UF <> "CE" And dest_UF <> "GO" And dest_UF <> "MG" And dest_UF <> "MT" And dest_UF <> "MS" And dest_UF <> "PE" And dest_UF <> "RN" And dest_UF <> "SE" And dest_UF <> "SP" Then
+       dest_indIEDest = 2
+    Else
+      If Item!CST = "40" Or Item!CST = "040" Then
+         dest_indIEDest = 2
+      Else
+         dest_indIEDest = 9
+      End If
+    End If
+   End If
+   
+   If Cliente!UF = "EX" Then 'Exterior n é Contribuinte
+   dest_indIEDest = 9
+   End If
+   
+   'Gera Grupo do Destinatário
+   dest = objNFeUtil.destinatario310(dest_CNPJ, dest_CPF, dest_idEstrangeiro, dest_xNome, dest_xLgr, dest_nro, dest_xCpl, dest_xBairro, dest_cMun, dest_xMun, dest_UF, dest_CEP, dest_cPais, dest_xPais, dest_fone, dest_indIEDest, dest_IE, dest_IESUF, dest_IM, dest_eMail)
+   
+   If (Conjuntos_da_Nota_Fiscal.RecordCount > 0 Or Pecas_da_Nota_Fiscal.RecordCount > 0) And Nota_Fiscal![Ocultar Valor Unitário] Then
+      GoTo OcultaValor
+   Else
+      '========Grupo de Informações Detalhamento do Produto e Serviços(Grupo I do Manual de Integração)=========
+      Do While Not Item.EOF
+         det_nItem = det_nItem + 1  ' informar o número do item, que deve ser sequencial crescente iniciado em 1 a quantidade máxima de itens é 990
+         
+         '================Grupo de Detalhe do Produto (Grupo I01 do Manual de Integração - páginas 95)=======================
+         Prod_cProd = Item![Seqüência do Produto]    ' código do produto
+         'Não Usam esse Campo usam Apenas no Sistema para Consulta
+         'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+         Prod_cEAN = ""   'Item![Código de Barras]         ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
+         Prod_xProd = SuperTiraAcentos(Substitui(Trim(Item![Descrição Produto]), "&", "E", UM_A_UM)) ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+         Prod_NCM = Item!Ncm                         ' código NCM, pode informar somente a posição do capítulo se a operação não for sujeito ao IPI.
+         Prod_Cest = Item!Cest
+         Prod_NVE_Opc = ""                           ' Campo Opcional
+         Prod_ExTIPI = ""                            ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
+         Prod_CFOP = Item!CFOP                       ' CFOP do operação, causa erro de XML se informado um código inexistente
+         Prod_uCOM = Item![Descrição Unidade]        ' unidade de comercialização
+         Prod_qCom = Item!Quantidade                 ' quantidade de comercialização
+         Prod_vUnCom = Item![Valor Unitário]         ' valor unitário de comercialização, campo de mera demonstração deve ser o resultado da divisão do vProd / qCom
+         Prod_vProd = Item![Valor Total]             ' valor do total do item
+         'Não Usam esse Campo usam Apenas no Sistema para Consulta
+         'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+         Prod_cEANTrib = ""  'Item![Código de Barras]     ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN, em geral é o mesmo código do EAN de comercialização
+         Prod_uTrib = Item![Descrição Unidade]       ' unidade de tributação, na maioria dos casos é idêntico  ao vUnCom
+         Prod_qTrib = Item!Quantidade                ' quantidade de comercialização
+         Prod_vUnTrib = Item![Valor Unitário]        ' valor unitário de tributação, campo de mera demonstração deve ser o resultado da divisão do vProd / qTrib
+         
+         If Nota_Fiscal![Valor Do Frete] > 0 Then
+            TotalDosItens = Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]
+            PercentualRateio = Nota_Fiscal![Valor Do Frete] / TotalDosItens * 100
+            Prod_vFrete = Round((Prod_vProd * PercentualRateio / 100), 2)
+         End If
+         
+         If Nota_Fiscal![Valor Do Seguro] > 0 Then
+            Prod_vSeguro = Nota_Fiscal![Valor Do Seguro] / Item.RecordCount ' valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
+         End If
+         
+         If Nota_Fiscal![Valor Do Fechamento] < 0 Then
+            If Nota_Fiscal!Fechamento = 1 Then
+               TotalDosItens = Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]
+               PercentualRateio = Abs(Nota_Fiscal![Valor Do Fechamento] / TotalDosItens * 100)
+               Prod_vDesc = Round((Prod_vProd * PercentualRateio / 100), 2) ' valor do desconto concedido
+            End If
+         End If
+         
+         If Nota_Fiscal![Outras Despesas] > 0 Then ' Valor de Outras Despesas Na Irrigação so Usa em Importação
+            TotalDosItens = Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]
+            PercentualRateio = Nota_Fiscal![Outras Despesas] / TotalDosItens * 100
+            Prod_vOutro = Round((Prod_vProd * PercentualRateio / 100), 2)
+         End If
+         
+         If Not Nota_Fiscal![NFe Complementar] Or Prod_vUnCom > 0 Then
+            Prod_indTot = 1                          ' indicador se o valor do item será totalizado no valor total dos produtos
+         End If
+         
+         'É obrigatorio, mas fazer o que neh, o pessoal é teimoso
+         '=================Grupo de Informações da Importação===================
+         Set Declaração = vgDb.OpenRecordSet("SELECT [Número da Declaração],[Valor da Marinha Mercante], [Via Transporte], [Data de Registro], [Local de Desembaraço], [UF de Desembaraço], [Data de Desembaraço], DI.[Seqüência do Geral], [Número da Adição], [Seqüêncial do Item da Adição], AD.[Seqüência do Geral] As SeqGeralAd, [Valor do Desconto] " & _
+                                             "FROM [Declarações de Importação] DI INNER JOIN [Adições da Declaração] AD ON DI.[Seqüência da Declaração] = AD.[Seqüência da Declaração] " & _
+                                             "WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & " AND [Seqüência Produto Nota Fiscal] = " & Item!SeqItem)
+                                             ' O Valor Da Marinha Mercante é Obrigatorio sempre que o tipo de via for Marítima
+         If Declaração.RecordCount > 0 Then
+         Dta_Di = Format(Declaração![Data de Registro], "yyyy-mm-dd") ' Tipo do Campo Alterado P/ String Formato AAAA-MM-DD
+         DtaDesembaraco = Format(Declaração![Data de Desembaraço], "yyyy-mm-dd") ' Tipo do Campo Alterado P/ String Formato AAAA-MM-DD
+         Prod_tpIntermediario = 3                ' Novo Campo Layout 3.10 Forma de Importação a Irrigação usa 3 Importação por encomenda
+         Prod_CNPJ_Opc = "02781892000130"        ' Novo Campo Layout 3.10 CNPJ da Irrigação Fala No guia que o campo é opcional mas se não coloca da erro
+         Prod_UFTerceiro = "SP"                  ' Novo Campo Layout 3.10 UF
+         Prod_nDraw_Opc = ""                     ' Novo Campo Layout 3.10 Sei la Pra que serve o Importante é que pode informar "" Vazio
+         End If
+                                        
+         If Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "3" Then
+            If Not Declaração.EOF Then
+               Do While Not Declaração.EOF
+                  'Gera Grupo das Adições
+                  Prod_Ad = Prod_Ad & objNFeUtil.adi310(Declaração![Número da Adição], Declaração![Seqüêncial do Item da Adição], Declaração!SeqGeralAd, Declaração![Valor do Desconto], Prod_nDraw_Opc)
+                  Declaração.MoveNext
+               Loop
+               Declaração.MoveFirst
+               'Gera Grupo da Declaração
+               Prod_DI = objNFeUtil.DI310(Declaração![Número da Declaração], Dta_Di, Declaração![Local de Desembaraço], Declaração![UF de Desembaraço], DtaDesembaraco, Declaração![Via Transporte], Declaração![Valor da Marinha Mercante], Prod_tpIntermediario, Prod_CNPJ_Opc, Prod_UFTerceiro, Declaração![Seqüência do Geral], Prod_Ad) ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
+            Else
+               MsgBox "Informar a Declaração da Importação!" & vbCrLf & "Item: " & Item![Seqüência do Produto], vbExclamation + vbOKOnly, vaTitulo
+               GoTo SaiDaSub
+            End If
+         End If
+                  
+         Prod_DetEspecifico = ""                     ' dados específicos, informar para medicamento, veículos novos, armamentos e combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+         Prod_xPed = ""                              ' número do pedido, uso exclusivo do usuário
+         Prod_nItemPed = 0                           ' número do item do pedido, uso exclusivo do usuário
+         Prod_nFCI_Opc = ""                          ' Campo Novo Layout 3.10 Opcional
+         Prod_detExport_Opc = ""                     ' Campo novo sei la pra que serve o importante é que pode informar Vazio ""
+         If Item!Usado Then Usado = True
+      
+         'Gera Grupo do Produto
+         det_produto = objNFeUtil.produtoNT2015003(Prod_cProd, Prod_cEAN, Prod_xProd, Prod_NCM, Prod_NVE_Opc, Prod_Cest, Prod_ExTIPI, Prod_CFOP, Prod_uCOM, Prod_qCom, Prod_vUnCom, Prod_vProd, Prod_cEANTrib, Prod_uTrib, Prod_qTrib, Prod_vUnTrib, Prod_vFrete, Prod_vSeguro, Prod_vDesc, Prod_vOutro, Prod_indTot, Prod_DI, Prod_detExport_Opc, Prod_DetEspecifico, Prod_xPed, Prod_nItemPed, Prod_nFCI_Opc)
+         
+         '========Grupo de Informações do Imposto do Item=========
+         
+         '=========Dados do ICMS (Grupo N01 do Manual de Integração - Páginas 128-)=====================
+         'Bom se nw for importação entao vai ser 0 a origem, senao vai ser 1
+         If Not Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "3" And Item!Importado = 0 Then
+            icms_orig = "0"                             ' Tabela A - origem da mercadoria 0=nacional
+         Else
+            icms_orig = "1"                             ' Tabela A - origem da mercadoria 1=Estrangeiro
+         End If
+         If Len(Item!CST) <= 2 Then
+            icms_CST = Format(Item!CST, "00")           ' Tabela B
+         Else
+            icms_CST = Format(Mid(Item!CST, 2, 2), "00") ' Tabela B
+         End If
+         icms_modBC = 3                              ' modalidade de determinação da BC = 3-valor da operação
+         icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
+         icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
+         icms_pICMS = Item![Alíquota Do ICMS]        ' alíquota do ICMS
+         icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
+         icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
+         icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
+         icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
+         icms_vBCST = Item![Base de Cálculo ST]      ' BC do ICMS ST
+         icms_pICMSST = Item![Alíquota Do ICMS ST]   ' percentual do ICMSST
+         icms_vICMSST = Item![Valor ICMS ST]         ' valor do ICMS ST devido
+         If Item!CST = "60" Then
+           ' icms_vBCSTRet = Prod_vProd + Prod_vSeguro + Prod_vFrete + Prod_vOutro - Prod_vDesc ' informação do ICMS retindo anteriormente por ST
+            icms_vBCSTRet = 0 ' A Marina mandou (zerar)
+            icms_vICMSSTRet = 0                         ' estes campos devem ser informado somente no caso do CST = 60 ou CSOSN = 500'
+         End If
+         icms_motDesICMS = 0                         ' motivo de desoneração do ICMS, só deve ser informado no caso de CST = 40 (isenção condicional)'
+         icms_pBCOp = 0                              ' campos para uso nos casos de ICMSPart/ICMSST
+         icms_UFST = ""                              '
+         icms_vICMSSTDest = 0                        '
+         icms_vBCICMSSTDest = 0                      '
+         icms_pCredSN = 0                            ' campos exclusivos para emissor optante do Simples Nacional CSOSN= 101, 201 e 900
+         icms_vCredICMSSN = 0                        ' não esquecer de informar o CRT=1
+         If icms_CST = "20" Then
+            Reducao = True
+         ElseIf icms_CST = "51" Then
+            Diferido = True
+         End If
+         'Alteração Conforme Lei da Transparência 12.741/12
+         'Vigor em 01/06/2013
+         det_vTotTrib = Item![Valor Do Tributo]
+         icms_vICMSDeson = 0 ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina(Contadora)
+         icms_vICMSOp = 0    ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+         icms_pDif = 0       ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+         icms_vICMSDif = 0   ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+         
+         ' Partilha do ICMS Fora do Estado Consumidor Final Nw Contribuinte merda de sefaz
+         If ide_indFinal = 1 And ide_idDest = 2 And dest_indIEDest = 9 Then
+            ValorBase = Item![Valor da Base de Cálculo]
+            FormaCalculo = 3
+              If Ano = "16" Then
+                  AnoOperacao = 2016
+                ElseIf Ano = "17" Then
+                  AnoOperacao = 2017
+                ElseIf Ano = "18" Then
+                  AnoOperacao = 2018
+                Else
+                  AnoOperacao = 2019
+              End If
+              AliqFCP = 0
+              If Ano = "16" Then
+                  pICMSInterPart = 40
+               ElseIf Ano = "17" Then
+                  pICMSInterPart = 60
+               ElseIf Ano = "18" Then
+                 pICMSInterPart = 80
+               Else
+                 pICMSInterPart = 100
+              End If
+              AliqDestino = TbIcms![Alíquota InterEstadual] ' Aliquota Interna
+              If icms_orig = 1 Then ' se for item importado
+                 AliqInterstadual = 4
+              Else
+                 AliqInterstadual = TbIcms![Porcentagem de ICMS] ' Aliquota Intestadual
+              End If
+              If ValorBase > 0 Then
+                 CalcICMSUFDest = objNFeUtil.CalcICMSUFDest(FormaCalculo, ValorBase, AliqDestino, AliqInterstadual, AliqFCP, AnoOperacao, vBCUFDest, pFCPUFDest, pICMSUFDest, pICMSInter, pICMSInterPart, vFCPUFDest, vICMSUFDest, vICMSUFRemet, vBCopeInter, vICMSOpeInter, cResultado, msgResultado)
+              Else
+                 vICMSUFDest = 0
+                 vICMSUFRemet = 0
+                 CalcICMSUFDest = objNFeUtil.ICMSUFDest(ValorBase, AliqFCP, AliqDestino, AliqInterstadual, pICMSInterPart, vFCPUFDest, vICMSUFDest, vICMSUFRemet)
+              End If
+           'Totais devem ser amarrados no grupo totalICMSNT2015003
+           TotICMSUFDest = TotICMSUFDest + vICMSUFDest
+           TotICMSUFRemet = TotICMSUFRemet + vICMSUFRemet
+           TotvFCPUFDest = TotvFCPUFDest + vFCPUFDest
+          End If
+         
+         'Gera Grupo do ICMS
+         det_icms = objNFeUtil.icms310(icms_orig, icms_CST, icms_modBC, icms_pRedBC, icms_vBC, icms_pICMS, icms_vICMS, icms_modBCST, icms_pmVAST, icms_pRedBCST, icms_vBCST, icms_pICMSST, icms_vICMSST, icms_vBCSTRet, icms_vICMSSTRet, icms_vBCICMSSTDest, icms_vICMSSTDest, icms_motDesICMS, icms_pBCOp, icms_UFST, icms_pCredSN, icms_vCredICMSSN, icms_vICMSDeson, icms_vICMSOp, icms_pDif, icms_vICMSDif)
+                  
+         '=========Dados do IPI=====================
+         ipi_clEnq = ""
+         ipi_CNPJProd = ""
+         ipi_cSelo = ""
+         ipi_qSelo = 0
+         If Not cEncManual Then
+         ipi_cEnq = "999"
+         Else
+         ipi_cEnq = IpicEnc
+         End If
+         If Item![Valor do IPI] > 0 Then
+            ipi_CST = "50"
+         Else
+            Select Case Item!CFOP
+               Case "6920", "5920" 'Rem.Vasilhame e Sacaria
+                  ipi_CST = "55"
+                  ipi_cEnq = "103"
+               Case "5914", "6914"   'Rem. Merc P/ Exp. e Feira
+                  ipi_CST = "55"
+                  ipi_cEnq = "102"
+               Case "5901" ' Rem Para Industr. D. E.
+                  ipi_CST = "55"
+                  ipi_cEnq = "109"
+               Case Else
+                  ipi_CST = "99"
+            End Select
+         End If
+         If cEncManual Then
+            ipi_CST = CstIpi
+            ipi_cEnq = IpicEnc
+         End If
+         ipi_vBC = Item![Valor Total]
+         ipi_pIPI = Item![Alíquota Do IPI]
+         ipi_qUnid = 0
+         ipi_vUnid = 0
+         ipi_vIPI = Item![Valor do IPI]
+          
+         'Gera Grupo do IPI
+         det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
+               
+         '=========Dados do PIS=====================
+         If Item![Valor Do PIS] > 0 Then
+            pis_CST = "01"
+         Else
+            pis_CST = "49"
+         End If
+         pis_vBC = Item![Valor Total] + Prod_vFrete - Prod_vDesc
+         pis_pPIS = 1.65
+         pis_qBCProd = 0
+         pis_vAliqProd = 0
+         pis_vPIS = Item![Valor Do PIS]
+         
+         'Gera Grupo do PIS
+         det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
+         
+         '=========Dados do COFINS=====================
+         If Item![Valor Do Cofins] > 0 Then
+            cofins_CST = "01"
+         Else
+            cofins_CST = "49"
+         End If
+         cofins_vBC = Item![Valor Total] + Prod_vFrete - Prod_vDesc
+         cofins_pCOFINS = 7.6
+         cofins_qBCProd = 0
+         cofins_vAliqProd = 0
+         cofins_vCOFINS = Item![Valor Do Cofins]
+         
+         'Gera Grupo do COFINS
+         det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
+         
+         '==============Dados do Imposto de importação
+         If Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "3" Then
+            det_II = objNFeUtil.ii(Item![Base de Cálculo da Importação], Item![Valor das Despesas Aduaneiras], Item![Valor do Imposto de Importação], Item![Valor do IOF])
+         End If
+                                     
+         'Gera Grupo do Imposto
+         'Lei da Transparencia
+         'det_imposto = objNFeUtil.imposto310(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN)
+          det_imposto = objNFeUtil.impostoNT2015003(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN, CalcICMSUFDest)
+        
+         ' Campos Novos Layout 3.10
+         Det_pDevol = 0    ' Campo Opcional uhuu
+         Det_vIPIDevol = 0 ' Campo Opcional uhuu
+         
+         'Gera Grupo de Detalhamento do Produto
+         Detalhes = Detalhes & objNFeUtil.detalhe310(det_nItem, det_produto, det_imposto, det_infAdProd, Det_pDevol, Det_vIPIDevol)
+         Item.MoveNext
+      Loop
+   End If
+   'Serviços da Nota Fiscal
+   If Servicos.RecordCount > 0 Then
+   Do While Not Servicos.EOF
+   det_nItem = det_nItem + 1
+    'Rateando o Desconto Qdo Existir so Serviços
+   If Nota_Fiscal![Valor Do Fechamento] < 0 And Item.RecordCount = 0 Then
+      If Nota_Fiscal!Fechamento = 1 Then
+          TotalDosItens = Nota_Fiscal![Valor Total dos Serviços]
+          PercentualRateio = Abs(Nota_Fiscal![Valor Do Fechamento] / TotalDosItens * 100)
+          Serv_Desc = Round((Servicos![Valor Total] * PercentualRateio / 100), 2) ' valor do desconto concedido
+      End If
+      TotDescISS = TotDescISS + Serv_Desc
+   End If
+   '================Grupo de Detalhe dos Serviços===========================
+   cServico = Servicos![Seqüência do Serviço]
+   xServico = SuperTiraAcentos(Substitui(Trim(Servicos![Descrição]), "&", "E", UM_A_UM))
+   Serv_NCM = "00"
+   If Cliente!UF = "SP" Then
+      Serv_CFOP = "5933"
+   Else
+      Serv_CFOP = "6933"
+   End If
+   Serv_uCOM = "SER"
+   Serv_qCOM = Servicos!Quantidade
+   Serv_vUnCOM = Servicos![Valor Unitário]
+   vServ = Servicos![Valor Total]
+   Serv_uTrib = "Ser"
+   Serv_qTrib = Servicos!Quantidade
+   Serv_vUnTrib = Servicos![Valor Unitário]
+   Serv_indTot = 0
+  'Gera Grupo do Serviço
+   det_Servicos = objNFeUtil.produtoNT2015003(cServico, "", xServico, Serv_NCM, "", "", "", Serv_CFOP, Serv_uCOM, Serv_qCOM, Serv_vUnCOM, vServ, "", Serv_uTrib, Serv_qTrib, Serv_vUnTrib, 0, 0, Serv_Desc, 0, Serv_indTot, "", "", "", "", "", "")
+   '========Grupo de Informações do Imposto dos Serviços=========
+   '========Dados ISSQN=======================================
+   Serv_BC = Servicos![Valor Total] - Serv_Desc
+   Serv_Aliq = Nota_Fiscal![Alíquota Do ISS]
+   Serv_vISSQN = Round((Serv_BC * Serv_Aliq / 100), 2)
+   Serv_cMunFG = "3537305"
+   cListServ = "14.01"
+   indISS = 1
+   indIncentivo = 2
+   'Gera Grupo do ISSQN
+   ISSQN310 = objNFeUtil.ISSQN310(Serv_BC, Serv_Aliq, Serv_vISSQN, Serv_cMunFG, cListServ, 0, 0, 0, Serv_Desc, 0, indISS, "", "", "", "", indIncentivo)
+   '=========Dados do PIS ISSQN=====================
+   pis_CST = "01"
+   pis_vBC = Servicos![Valor Total] - Serv_Desc
+   pis_pPIS = 1.65
+   pis_qBCProd = 0
+   pis_vAliqProd = 0
+   pis_vPIS = Round((pis_vBC * pis_pPIS / 100), 2)
+   'Gera Grupo do PIS
+   det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
+   '=========Dados do COFINS=====================
+   cofins_CST = "01"
+   cofins_vBC = Servicos![Valor Total] - Serv_Desc
+   cofins_pCOFINS = 7.6
+   cofins_qBCProd = 0
+   cofins_vAliqProd = 0
+   cofins_vCOFINS = Round((cofins_vBC * cofins_pCOFINS / 100), 2)
+   'Gera Grupo do COFINS
+   det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
+   'Gera Grupo do Imposto
+   'Lei da Transparencia
+   det_imposto = objNFeUtil.impostoNT2015003(Round((Serv_vISSQN + pis_vPIS + cofins_vCOFINS), 2), "", "", "", det_PIS, "", det_COFINS, "", ISSQN310, "")
+   Det_pDevol = 0
+   Det_vIPIDevol = 0
+   'Gera Grupo de Detalhamento dos Serviços
+   Detalhes = Detalhes & objNFeUtil.detalhe310(det_nItem, det_Servicos, det_imposto, "", Det_pDevol, Det_vIPIDevol)
+   Servicos.MoveNext
+   Loop
+   End If
+   'fim Serviços
+   GoTo Continua
+
+OcultaValor:
+   'Vamos Esconder os Valores. Frescura na Bunda, Acho que isso nw pode mas tudo bem o fumo depois nw vai pra mim mesmo rsrs
+   det_nItem = 1
+   
+   '================Grupo de Detalhe do Produto (Grupo I01 do Manual de Integração - páginas 95)=======================
+   Prod_cProd = "99999"                           ' código do produto
+   'Não Usam esse Campo usam Apenas no Sistema para Consulta
+   'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+   Prod_cEAN = ""                                 ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
+   If Not Nota_Fiscal![Conjunto Avulso] Then
+      Prod_xProd = "CONJUNTO DE IRRIGACAO COMPOSTO DE:" ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+   Else
+      Prod_xProd = Nota_Fiscal![Descrição Conjunto Avulso] ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+   End If
+   Prod_NCM = PegaValor("Classificação Fiscal", "NCM", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)                          ' código NCM, pode informar somente a posição do capítulo se a operação não for sujeito ao IPI.
+   Prod_Cest = PegaValor("Classificação Fiscal", "CEST", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)
+   Prod_NVE_Opc = ""                              ' Campo Opcional Novo Layout 3.10 não sei pra que serve e nem quero saber
+   Prod_ExTIPI = ""                               ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
+   Prod_CFOP = NatOpe![Código da Natureza de Operação] ' CFOP do operação, causa erro de XML se informado um código inexistente
+   Prod_uCOM = "UN"                               ' unidade de comercialização
+   Prod_qCom = "1"                                ' quantidade de comercialização
+   Prod_vUnCom = SemValores![Valor Unitario]      ' valor unitário de comercialização, campo de mera demonstração deve ser o resultado da divisão do vProd / qCom
+   Prod_vProd = SemValores![Valor Total]          ' valor do total do item
+   'Não Usam esse Campo usam Apenas no Sistema para Consulta
+   'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+   Prod_cEANTrib = ""                             ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN, em geral é o mesmo código do EAN de comercialização
+   Prod_uTrib = "UN"                              ' unidade de tributação, na maioria dos casos é idêntico  ao vUnCom
+   Prod_qTrib = 1                                 ' quantidade de comercialização
+   Prod_vUnTrib = SemValores![Valor Unitario]     ' valor unitário de tributação, campo de mera demonstração deve ser o resultado da divisão do vProd / qTrib
+   Prod_vFrete = Nota_Fiscal![Valor Do Frete]     ' valor do frete, se cobrado do cliente deve ser rateado entre os itens de produto
+   Prod_vSeguro = Nota_Fiscal![Valor Do Seguro]   ' valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
+   If Nota_Fiscal![Valor Do Fechamento] < 0 Then
+      Prod_vDesc = Abs(Nota_Fiscal![Valor Do Fechamento]) ' valor do desconto concedido
+   End If
+   If Nota_Fiscal![Outras Despesas] > 0 Then
+      Prod_vOutro = Nota_Fiscal![Outras Despesas]     ' valor de outras despesas
+   End If
+   Prod_indTot = 1                             ' indicador se o valor do item será totalizado no valor total dos produtos
+   Prod_DI = ""                                ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
+   Prod_detExport_Opc = ""                     ' Campo novo sei la pra que serve o importante é que pode informa Vazio ""
+   Prod_DetEspecifico = ""                     ' dados específicos, informar para medicamento, veículos novos, armamentos e combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+   Prod_xPed = ""                              ' número do pedido, uso exclusivo do usuário
+   Prod_nItemPed = 0                           ' número do item do pedido, uso exclusivo do usuário
+   Prod_nFCI_Opc = ""                          ' Campo Novo Layout 3.10 Opcional
+   
+   'Gera Grupo do Produto
+    det_produto = objNFeUtil.produtoNT2015003(Prod_cProd, Prod_cEAN, Prod_xProd, Prod_NCM, Prod_NVE_Opc, Prod_Cest, Prod_ExTIPI, Prod_CFOP, Prod_uCOM, Prod_qCom, Prod_vUnCom, Prod_vProd, Prod_cEANTrib, Prod_uTrib, Prod_qTrib, Prod_vUnTrib, Prod_vFrete, Prod_vSeguro, Prod_vDesc, Prod_vOutro, Prod_indTot, Prod_DI, Prod_detExport_Opc, Prod_DetEspecifico, Prod_xPed, Prod_nItemPed, Prod_nFCI_Opc)
+   
+   '========Grupo de Informações do Imposto do Item=========
+      
+   '=========Dados do ICMS (Grupo N01 do Manual de Integração - Páginas 128-)=====================
+   icms_orig = "0"                             ' Tabela A - origem da mercadoria 0=nacional
+   icms_modBC = 3                              ' modalidade de determinação da BC = 3-valor da operação
+   icms_pRedBC = CalculaImposto(0, Sequencia_do_Geral, 2, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao)) ' percentual de redução da BC
+   icms_vBC = SemValores![Base de Calculo]     ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
+   'icms_pICMS = CalculaImposto(0, Sequencia_do_Geral, 3, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao)) ' alíquota do ICMS
+   icms_pICMS = SemValores![Alíquota ICMS]
+   icms_vICMS = SemValores![Valor ICMS]        ' valor do ICMS
+   If Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "7" Then
+      icms_CST = "41" 'Alterado de 041 para 41 o Tipo de Dados é String então Não Pode 041 tem que ser 41
+   Else
+      If Not Nota_Fiscal![Nota Fiscal Avulsa] Then
+         'icms_CST = Format(CalculaImposto(0, Sequencia_do_Geral, 5, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao)), "00") ' Tabela B
+         icms_CST = Format(SemValores!CST, "00")
+      Else
+         icms_CST = Format(Item!CST, "00")
+      End If
+   End If
+   icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
+   icms_pmVAST = CalculaImposto(0, Sequencia_do_Geral, 12, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao))                             ' percentual de valor de margem e valor adicionado
+   icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
+   icms_vBCST = SemValores![Base de Cálculo ST] ' BC do ICMS ST
+   icms_pICMSST = CalculaImposto(0, Sequencia_do_Geral, 15, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao)) 'percentual do ICMSST
+   icms_vICMSST = SemValores![Valor ICMS ST]    ' valor do ICMS ST devido
+   If icms_CST = "60" Then
+      icms_vBCSTRet = Prod_vProd + Prod_vSeguro + Prod_vFrete + Prod_vOutro - Prod_vDesc ' informação do ICMS retindo anteriormente por ST
+      icms_vICMSSTRet = 0                         ' estes campos devem ser informado somente no caso do CST = 60 ou CSOSN = 500'
+   End If
+   icms_motDesICMS = 0                         ' motivo de desoneração do ICMS, só deve ser informado no caso de CST = 40 (isenção condicional)'
+   icms_pBCOp = 0                              ' campos para uso nos casos de ICMSPart/ICMSST
+   icms_UFST = ""                              '
+   icms_vICMSSTDest = 0                        '
+   icms_vBCICMSSTDest = 0                      '
+   icms_pCredSN = 0                            ' campos exclusivos para emissor optante do Simples Nacional CSOSN= 101, 201 e 900
+   icms_vCredICMSSN = 0                        ' não esquecer de informar o CRT=1
+   If icms_CST = "20" Then
+      Reducao = True
+   ElseIf icms_CST = "51" Then
+      Diferido = True
+   End If
+   'Alteração Conforme Lei da Transparência 12.741/12
+   'Vigor em 01/06/2013
+   det_vTotTrib = SemValores![Valor Do Tributo]
+   icms_vICMSDeson = 0      ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina(Contadora)
+   icms_vICMSOp = 0         ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+   icms_pDif = 0            ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+   icms_vICMSDif = 0        ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+   
+   'Partilha do ICMS
+   If ide_indFinal = 1 And ide_idDest = 2 And dest_indIEDest = 9 Then  ' Fora do Estado Consumidor Final nw Contribuinte
+      ValorBase = SemValores![Base de Calculo]
+      FormaCalculo = 3
+         If Ano = "16" Then
+            AnoOperacao = 2016
+         ElseIf Ano = "17" Then
+            AnoOperacao = 2017
+         ElseIf Ano = "18" Then
+            AnoOperacao = 2018
+         Else
+            AnoOperacao = 2019
+         End If
+         AliqFCP = 0
+         If Ano = "16" Then
+            pICMSInterPart = 40
+         ElseIf Ano = "17" Then
+            pICMSInterPart = 60
+         ElseIf Ano = "18" Then
+            pICMSInterPart = 80
+         Else
+            pICMSInterPart = 100
+         End If
+         AliqDestino = TbIcms![Alíquota InterEstadual]  ' Aliquota Interna
+         If icms_orig = 1 Then ' se for item importado
+            AliqInterstadual = 4
+         Else
+            AliqInterstadual = TbIcms![Porcentagem de ICMS] ' Aliquota Interstadual
+         End If
+         If ValorBase > 0 Then
+            CalcICMSUFDest = objNFeUtil.CalcICMSUFDest(FormaCalculo, ValorBase, AliqDestino, AliqInterstadual, AliqFCP, AnoOperacao, vBCUFDest, pFCPUFDest, pICMSUFDest, pICMSInter, pICMSInterPart, vFCPUFDest, vICMSUFDest, vICMSUFRemet, vBCopeInter, vICMSOpeInter, cResultado, msgResultado)
+         Else
+            vICMSUFDest = 0
+            vICMSUFRemet = 0
+            CalcICMSUFDest = objNFeUtil.ICMSUFDest(ValorBase, AliqFCP, AliqDestino, AliqInterstadual, pICMSInterPart, vFCPUFDest, vICMSUFDest, vICMSUFRemet)
+         End If
+         'Totais devem ser amarrados no grupo totalICMSNT2015003
+            TotICMSUFDest = vICMSUFDest
+            TotICMSUFRemet = vICMSUFRemet
+            TotvFCPUFDest = vFCPUFDest
+         End If
+         
+   'Gera Grupo do ICMS
+   det_icms = objNFeUtil.icms310(icms_orig, icms_CST, icms_modBC, icms_pRedBC, icms_vBC, icms_pICMS, icms_vICMS, icms_modBCST, icms_pmVAST, icms_pRedBCST, icms_vBCST, icms_pICMSST, icms_vICMSST, icms_vBCSTRet, icms_vICMSSTRet, icms_vBCICMSSTDest, icms_vICMSSTDest, icms_motDesICMS, icms_pBCOp, icms_UFST, icms_pCredSN, icms_vCredICMSSN, icms_vICMSDeson, icms_vICMSOp, icms_pDif, icms_vICMSDif)
+      
+   '=========Dados do IPI=====================
+   ipi_clEnq = ""
+   ipi_CNPJProd = ""
+   ipi_cSelo = ""
+   ipi_qSelo = 0
+   If Not cEncManual Then
+   ipi_cEnq = "999"
+   Else
+   ipi_cEnq = IpicEnc
+   End If
+   If Item![Valor do IPI] > 0 Then
+      ipi_CST = "50"
+   Else
+   Select Case Item!CFOP
+   Case "6920", "5920" 'Rem.Vasilhame e Sacaria
+      ipi_CST = "55"
+      ipi_cEnq = "103"
+   Case "5914", "6914"   'Rem. Merc P/ Exp. e Feira
+      ipi_CST = "55"
+      ipi_cEnq = "102"
+   Case "5901" ' Rem Para Industr. D. E.
+      ipi_CST = "55"
+      ipi_cEnq = "109"
+   Case Else
+      ipi_CST = "99"
+   End Select
+   End If
+   If cEncManual Then
+      ipi_CST = CstIpi
+      ipi_cEnq = IpicEnc
+   End If
+   ipi_vBC = SemValores![Valor Total]
+   ipi_pIPI = CalculaImposto(0, Sequencia_do_Geral, 4, 2, SemValores![Valor Total], 0, CLng(Sequencia_da_Propriedade), CLng(Sequencia_da_Classificacao))
+   ipi_qUnid = 0
+   ipi_vUnid = 0
+   ipi_vIPI = SemValores![Valor IPI]
+       
+   'Gera Grupo do IPI
+   det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
+            
+   '=========Dados do PIS=====================
+   If SemValores![Valor PIS] > 0 Then
+      pis_CST = "01"
+   Else
+      pis_CST = "49"
+   End If
+   pis_vBC = SemValores![Valor Total] + Prod_vFrete - Prod_vDesc
+   pis_pPIS = 1.65
+   pis_qBCProd = 0
+   pis_vAliqProd = 0
+   pis_vPIS = SemValores![Valor PIS]
+      
+   'Gera Grupo do PIS
+   det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
+      
+   '=========Dados do COFINS=====================
+   If SemValores![Valor Cofins] > 0 Then
+      cofins_CST = "01"
+   Else
+      cofins_CST = "49"
+   End If
+   cofins_vBC = SemValores![Valor Total] + Prod_vFrete - Prod_vDesc
+   cofins_pCOFINS = 7.6
+   cofins_qBCProd = 0
+   cofins_vAliqProd = 0
+   cofins_vCOFINS = SemValores![Valor Cofins]
+      
+   'Gera Grupo do COFINS
+   det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
+                                  
+   'Gera Grupo do Imposto
+   'Lei da Transparencia
+   'det_imposto = objNFeUtil.imposto310(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN)
+    det_imposto = objNFeUtil.impostoNT2015003(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN, CalcICMSUFDest)
+   ' Campos Novos Layout 3.10
+   Det_pDevol = 0    ' Campo Opcional uhuu
+   Det_vIPIDevol = 0 ' Campo Opcional uhuu
+   'Gera Grupo de Detalhamento do Produto
+   Detalhes = Detalhes & objNFeUtil.detalhe310(det_nItem, det_produto, det_imposto, det_infAdProd, Det_pDevol, Det_vIPIDevol)
+
+   Do While Not Item.EOF
+      If LayoutAntigo Then
+         det_nItem = det_nItem + 1  ' informar o número do item, que deve ser sequencial crescente iniciado em 1 a quantidade máxima de itens é 990
+      End If
+      '================Grupo de Detalhe do Produto (Grupo I01 do Manual de Integração - páginas 95)=======================
+      Prod_cProd = Item![Seqüência do Produto]    ' código do produto
+      'Não Usam esse Campo usam Apenas no Sistema para Consulta
+      'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+      Prod_cEAN = "" ' Item![Código de Barras]         ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
+      Prod_xProd = SuperTiraAcentos(Substitui(Trim(Item![Descrição Produto]), "&", "E", UM_A_UM)) ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+      Prod_NCM = PegaValor("Classificação Fiscal", "NCM", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao) ' código NCM, pode informar somente a posição do capítulo se a operação não for sujeito ao IPI.
+      Prod_Cest = PegaValor("Classificação Fiscal", "CEST", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)
+      Prod_NVE_Opc = ""  ' Campo Opcional Novo Layout 3.10 não sei pra que serve e nem quero saber
+      Prod_ExTIPI = ""                            ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
+      'De Acordo com o que foi passado os itens do conjunto deve sair com o mesmo CFOP do Conjunto
+      'A linha de Baixa eu até poderia comentar mas pra deixar claro que estou colocando o mesmo CFOP do Conjunto
+      Prod_CFOP = Prod_CFOP                       ' CFOP do operação, causa erro de XML se informado um código inexistente
+      Prod_uCOM = Item![Descrição Unidade]        ' unidade de comercialização
+      Prod_qCom = Item!Quantidade                 ' quantidade de comercialização
+      Prod_vUnCom = 0                             ' valor unitário de comercialização, campo de mera demonstração deve ser o resultado da divisão do vProd / qCom
+      Prod_vProd = 0                              ' valor do total do item
+      'Bom Depois de muito tempo mandaram fazer a coisa certa então vamos consertar essas NFe de Conjuntos
+      If Not LayoutAntigo Then
+      infCpl = infCpl & " " & Item!Quantidade & "  " & Prod_xProd & ":" & "-"
+      End If
+      'Não Usam esse Campo usam Apenas no Sistema para Consulta
+      'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+      Prod_cEANTrib = "" ' Item![Código de Barras]     ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN, em geral é o mesmo código do EAN de comercialização
+      Prod_uTrib = Item![Descrição Unidade]       ' unidade de tributação, na maioria dos casos é idêntico  ao vUnCom
+      Prod_qTrib = Item!Quantidade                ' quantidade de comercialização
+      Prod_vUnTrib = 0                            ' valor unitário de tributação, campo de mera demonstração deve ser o resultado da divisão do vProd / qTrib
+      Prod_vFrete = 0                             ' valor do frete, se cobrado do cliente deve ser rateado entre os itens de produto
+      Prod_vSeguro = 0                            ' valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
+      Prod_vDesc = 0                              ' valor do desconto concedido
+      Prod_vOutro = 0                             ' valor de outras despesas
+      Prod_indTot = 1                             ' indicador se o valor do item será totalizado no valor total dos produtos
+      Prod_DI = ""                                ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
+      Prod_detExport_Opc = ""                     ' Campo novo sei la pra que serve o importante é que pode informa Vazio ""
+      Prod_DetEspecifico = ""                     ' dados específicos, informar para medicamento, veículos novos, armamentos e combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+      Prod_xPed = ""                              ' número do pedido, uso exclusivo do usuário
+      Prod_nItemPed = 0                           ' número do item do pedido, uso exclusivo do usuário
+      Prod_nFCI_Opc = ""
+      If Item!Usado Then Usado = True
+   
+      'Gera Grupo do Produto
+      If LayoutAntigo Then
+      det_produto = objNFeUtil.produtoNT2015003(Prod_cProd, Prod_cEAN, Prod_xProd, Prod_NCM, Prod_NVE_Opc, Prod_Cest, Prod_ExTIPI, Prod_CFOP, Prod_uCOM, Prod_qCom, Prod_vUnCom, Prod_vProd, Prod_cEANTrib, Prod_uTrib, Prod_qTrib, Prod_vUnTrib, Prod_vFrete, Prod_vSeguro, Prod_vDesc, Prod_vOutro, Prod_indTot, Prod_DI, Prod_detExport_Opc, Prod_DetEspecifico, Prod_xPed, Prod_nItemPed, Prod_nFCI_Opc)
+      End If
+      '========Grupo de Informações do Imposto do Item=========
+      
+      '=========Dados do ICMS (Grupo N01 do Manual de Integração - Páginas 128-)=====================
+      icms_orig = "0"                             ' Tabela A - origem da mercadoria 0=nacional
+      'Data: 29/08/2012
+      'De Acordo com o que foi passado os itens do conjunto deve sair com o mesmo CST do Conjunto
+      'A linha de Baixa eu até poderia comentar mas pra deixar claro que estou colocando o mesmo CST do Conjunto
+      If Not Nota_Fiscal![Nota Fiscal Avulsa] Then
+         'Data: 05/03/2013
+         'Bom depois de quase 7 meses, vem me falando que tem que ser diferente
+         'Pq em alguns casos o WS do governo rejeita a nota e com total aprovação minha
+         'Devemos fazer a coisa certa, com essas notas de conjunto.... Mas nw deixam eu fazer a coisa certa
+         icms_CST = Format(Item!CST, "00")        ' Tabela B
+      Else
+         icms_CST = Format(Item!CST, "00")
+      End If
+      icms_modBC = 3                              ' modalidade de determinação da BC = 3-valor da operação
+      If icms_CST <> "60" Then
+         icms_pRedBC = 0                             ' percentual de redução da BC
+         icms_vBC = 0                                ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
+         icms_pICMS = 0                              ' alíquota do ICMS
+         icms_vICMS = 0                              ' valor do ICMS
+      Else
+         icms_modBCST = 0                            ' modalidade de determinação da BC ICMS ST
+         icms_pmVAST = 0                             ' percentual de valor de margem e valor adicionado
+         icms_pRedBCST = 0                           ' percentual de redução da BC do ICMS ST
+         icms_vBCST = 0                              ' BC do ICMS ST
+         icms_pICMSST = 0                            ' percentual do ICMSST
+         icms_vICMSST = 0                            ' valor do ICMS ST devido
+         icms_vBCSTRet = 0                           ' informação do ICMS retindo anteriormente por ST
+         icms_vICMSSTRet = 0                         ' estes campos devem ser informado somente no caso do CST = 60 ou CSOSN = 500'
+         icms_motDesICMS = 0                         ' motivo de desoneração do ICMS, só deve ser informado no caso de CST = 40 (isenção condicional)'
+         icms_pBCOp = 0                              ' campos para uso nos casos de ICMSPart/ICMSST
+         icms_UFST = ""                              '
+         icms_vICMSSTDest = 0                        '
+         icms_vBCICMSSTDest = 0                      '
+         icms_pCredSN = 0                            ' campos exclusivos para emissor optante do Simples Nacional CSOSN= 101, 201 e 900
+         icms_vCredICMSSN = 0                        ' não esquecer de informar o CRT=1
+      End If
+      If icms_CST = "20" Then
+         Reducao = True
+      ElseIf icms_CST = "51" Then
+         Diferido = True
+      End If
+      'Alteração Conforme Lei da Transparência 12.741/12
+      'Vigor em 01/06/2013
+      det_vTotTrib = 0
+      icms_vICMSDeson = 0      ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina(Contadora)
+      icms_vICMSOp = 0         ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+      icms_pDif = 0            ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+      icms_vICMSDif = 0        ' Campo Novo Layout 3.10 a Irrigação Pode Informar 0 Assim diz a Marina
+      
+     If LayoutAntigo Then
+       If ide_indFinal = 1 And ide_idDest = 2 And dest_indIEDest = 9 Then
+          FormaCalculo = 3
+          ValorBase = 0
+          AliqFCP = 0
+          vFCPUFDest = 0
+          vICMSUFDest = 0
+          vICMSUFRemet = 0
+          AliqDestino = TbIcms![Alíquota InterEstadual]
+       If icms_orig = 1 Then ' se for item importado
+          AliqInterstadual = 4
+       Else
+          AliqInterstadual = TbIcms![Porcentagem de ICMS]
+       End If
+       If Ano = "16" Then
+          AnoOperacao = 2016
+       ElseIf Ano = "17" Then
+          AnoOperacao = 2017
+       ElseIf Ano = "18" Then
+          AnoOperacao = 2018
+       Else
+          AnoOperacao = 2019
+       End If
+       If Ano = "16" Then
+          pICMSInterPart = 40
+       ElseIf Ano = "17" Then
+          pICMSInterPart = 60
+       ElseIf Ano = "18" Then
+          pICMSInterPart = 80
+       Else
+          pICMSInterPart = 100
+       End If
+          CalcICMSUFDest = objNFeUtil.ICMSUFDest(ValorBase, AliqFCP, AliqDestino, AliqInterstadual, pICMSInterPart, vFCPUFDest, vICMSUFDest, vICMSUFRemet)
+       End If
+     End If
+            
+     'Gera Grupo do ICMS
+      If LayoutAntigo Then
+      det_icms = objNFeUtil.icms310(icms_orig, icms_CST, icms_modBC, icms_pRedBC, icms_vBC, icms_pICMS, icms_vICMS, icms_modBCST, icms_pmVAST, icms_pRedBCST, icms_vBCST, icms_pICMSST, icms_vICMSST, icms_vBCSTRet, icms_vICMSSTRet, icms_vBCICMSSTDest, icms_vICMSSTDest, icms_motDesICMS, icms_pBCOp, icms_UFST, icms_pCredSN, icms_vCredICMSSN, icms_vICMSDeson, icms_vICMSOp, icms_pDif, icms_vICMSDif)
+      End If
+      '=========Dados do IPI=====================
+      ipi_clEnq = ""
+      ipi_CNPJProd = ""
+      ipi_cSelo = ""
+      ipi_qSelo = 0
+      If Not cEncManual Then
+      ipi_cEnq = "999"
+      Else
+      ipi_cEnq = IpicEnc
+      End If
+      If Not cEncManual Then
+      ipi_CST = "99"
+      Else
+      ipi_CST = CstIpi
+      End If
+      ipi_vBC = 0
+      ipi_pIPI = 0
+      ipi_qUnid = 0
+      ipi_vUnid = 0
+      ipi_vIPI = 0
+   
+      'Gera Grupo do IPI
+      If LayoutAntigo Then
+      det_IPI = objNFeUtil.IPI(ipi_clEnq, ipi_CNPJProd, ipi_cSelo, ipi_qSelo, ipi_cEnq, ipi_CST, ipi_vBC, ipi_pIPI, ipi_vIPI, ipi_qUnid, ipi_vUnid)
+      End If
+      
+      '=========Dados do PIS=====================
+      pis_CST = "49"
+      pis_vBC = 0
+      pis_pPIS = 0
+      pis_qBCProd = 0
+      pis_vAliqProd = 0
+      pis_vPIS = 0
+      
+      'Gera Grupo do PIS
+      If LayoutAntigo Then
+      det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
+      End If
+      
+      '=========Dados do COFINS=====================
+      cofins_CST = "49"
+      cofins_vBC = 0
+      cofins_pCOFINS = 0
+      cofins_qBCProd = 0
+      cofins_vAliqProd = 0
+      cofins_vCOFINS = 0
+      
+      'Gera Grupo do COFINS
+      If LayoutAntigo Then
+      det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
+      End If
+      
+      'Gera Grupo do Imposto
+      'det_imposto = objNFeUtil.imposto2G(det_icms, det_IPI, det_II, det_PIS, det_COFINS, det_PISST, det_COFINSST, det_ISSQN)
+      'Lei da Transparencia
+      If LayoutAntigo Then
+      'det_imposto = objNFeUtil.imposto310(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN)
+       det_imposto = objNFeUtil.impostoNT2015003(det_vTotTrib, det_icms, det_IPI, det_II, det_PIS, det_PISST, det_COFINS, det_COFINSST, det_ISSQN, CalcICMSUFDest)
+      End If
+      
+      'Campos Novos Layout 3.10
+      Det_pDevol = 0    ' Campo Opcional uhuu
+      Det_vIPIDevol = 0 ' Campo Opcional uhuu
+      'Gera Grupo de Detalhamento do Produto
+      If LayoutAntigo Then
+      Detalhes = Detalhes & objNFeUtil.detalhe310(det_nItem, det_produto, det_imposto, det_infAdProd, Det_pDevol, Det_vIPIDevol)
+      End If
+      Item.MoveNext
+   Loop
+   'Serviços da Nota Fiscal
+   If Servicos.RecordCount > 0 Then
+   Do While Not Servicos.EOF
+   det_nItem = det_nItem + 1
+    'Rateando o Desconto Qdo Existir so Serviços
+   If Nota_Fiscal![Valor Do Fechamento] < 0 And Item.RecordCount = 0 Then
+      If Nota_Fiscal!Fechamento = 1 Then
+          TotalDosItens = Nota_Fiscal![Valor Total dos Serviços]
+          PercentualRateio = Abs(Nota_Fiscal![Valor Do Fechamento] / TotalDosItens * 100)
+          Serv_Desc = Round((Servicos![Valor Total] * PercentualRateio / 100), 2) ' valor do desconto concedido
+      End If
+      TotDescISS = TotDescISS + Serv_Desc
+   End If
+   '================Grupo de Detalhe dos Serviços===========================
+   cServico = Servicos![Seqüência do Serviço]
+   xServico = SuperTiraAcentos(Substitui(Trim(Servicos![Descrição]), "&", "E", UM_A_UM))
+   Serv_NCM = "00"
+   If Cliente!UF = "SP" Then
+      Serv_CFOP = "5933"
+   Else
+      Serv_CFOP = "6933"
+   End If
+   Serv_uCOM = "SER"
+   Serv_qCOM = Servicos!Quantidade
+   Serv_vUnCOM = Servicos![Valor Unitário]
+   vServ = Servicos![Valor Total]
+   Serv_uTrib = "Ser"
+   Serv_qTrib = Servicos!Quantidade
+   Serv_vUnTrib = Servicos![Valor Unitário]
+   Serv_indTot = 0
+  'Gera Grupo do Serviço
+   det_Servicos = objNFeUtil.produtoNT2015003(cServico, "", xServico, Serv_NCM, "", "", "", Serv_CFOP, Serv_uCOM, Serv_qCOM, Serv_vUnCOM, vServ, "", Serv_uTrib, Serv_qTrib, Serv_vUnTrib, 0, 0, Serv_Desc, 0, Serv_indTot, "", "", "", "", "", "")
+   '========Grupo de Informações do Imposto dos Serviços=========
+   '========Dados ISSQN=======================================
+   Serv_BC = Servicos![Valor Total] - Serv_Desc
+   Serv_Aliq = Nota_Fiscal![Alíquota Do ISS]
+   Serv_vISSQN = Round((Serv_BC * Serv_Aliq / 100), 2)
+   Serv_cMunFG = "3537305"
+   cListServ = "14.01"
+   indISS = 1
+   indIncentivo = 2
+   'Gera Grupo do ISSQN
+   ISSQN310 = objNFeUtil.ISSQN310(Serv_BC, Serv_Aliq, Serv_vISSQN, Serv_cMunFG, cListServ, 0, 0, 0, Serv_Desc, 0, indISS, "", "", "", "", indIncentivo)
+   '=========Dados do PIS ISSQN=====================
+   pis_CST = "01"
+   pis_vBC = Servicos![Valor Total] - Serv_Desc
+   pis_pPIS = 1.65
+   pis_qBCProd = 0
+   pis_vAliqProd = 0
+   pis_vPIS = Round((pis_vBC * pis_pPIS / 100), 2)
+   'Gera Grupo do PIS
+   det_PIS = objNFeUtil.pis(pis_CST, pis_vBC, pis_pPIS, pis_vPIS, pis_qBCProd, pis_vAliqProd)
+   '=========Dados do COFINS=====================
+   cofins_CST = "01"
+   cofins_vBC = Servicos![Valor Total] - Serv_Desc
+   cofins_pCOFINS = 7.6
+   cofins_qBCProd = 0
+   cofins_vAliqProd = 0
+   cofins_vCOFINS = Round((cofins_vBC * cofins_pCOFINS / 100), 2)
+   'Gera Grupo do COFINS
+   det_COFINS = objNFeUtil.cofins(cofins_CST, cofins_vBC, cofins_pCOFINS, cofins_vCOFINS, cofins_qBCProd, cofins_vAliqProd)
+   'Gera Grupo do Imposto
+   'Lei da Transparencia
+   det_imposto = objNFeUtil.impostoNT2015003(Round((Serv_vISSQN + pis_vPIS + cofins_vCOFINS), 2), "", "", "", det_PIS, "", det_COFINS, "", ISSQN310, "")
+   Det_pDevol = 0
+   Det_vIPIDevol = 0
+   'Gera Grupo de Detalhamento dos Serviços
+   Detalhes = Detalhes & objNFeUtil.detalhe310(det_nItem, det_Servicos, det_imposto, "", Det_pDevol, Det_vIPIDevol)
+   Servicos.MoveNext
+   Loop
+   End If
+   'fim Serviços
+  
+Continua:
+   '=========Totais da NFe=====================
+   vBC = Nota_Fiscal![Valor Total da Base de Cálculo]
+   vICMS = Nota_Fiscal![Valor Total Do ICMS]
+   vBCST = Nota_Fiscal![Valor Total da Base ST]
+   vST = Nota_Fiscal![Valor Total Do ICMS ST]
+   vProd = Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]
+   vFrete = Nota_Fiscal![Valor Do Frete]
+   vSeg = Nota_Fiscal![Valor Do Seguro]
+   If Nota_Fiscal![Valor Do Fechamento] < 0 Then
+      If Nota_Fiscal!Fechamento = 1 Then 'Valor
+         vDesc = Abs(Nota_Fiscal![Valor Do Fechamento]) ' valor do desconto concedido
+      Else 'Percentual
+         vDesc = (Nota_Fiscal![Valor Total da Nota Fiscal] * Abs(Nota_Fiscal![Valor Do Fechamento]) / 100) ' valor do desconto concedido
+      End If
+   End If
+   vII = Nota_Fiscal![Valor Total da Importação]
+   vIPI = Nota_Fiscal![Valor Total IPI dos Produtos] + Nota_Fiscal![Valor Total IPI dos Conjuntos] + Nota_Fiscal![Valor Total IPI das Peças]
+   vPIS = Nota_Fiscal![Valor Total Do PIS]
+   vCOFINS = Nota_Fiscal![Valor Total Do COFINS]
+   If Nota_Fiscal![Outras Despesas] > 0 Then
+      vOutro = Nota_Fiscal![Outras Despesas] ' valor de outras despesas
+   End If
+   
+   If Servicos.RecordCount > 0 Then
+      totServ = Nota_Fiscal![Valor Total dos Serviços]
+      totBCISS = Nota_Fiscal![Valor Total dos Serviços] - TotDescISS
+      totISS = Round((totBCISS * Nota_Fiscal![Alíquota Do ISS] / 100), 2)
+      totPisISS = Round((totBCISS * 1.65 / 100), 2)
+      totCofinsISS = Round((totBCISS * 7.6 / 100), 2)
+      TotalTribISS = totISS + totPisISS + totCofinsISS
+      dCompet = Format(Now, "yyyy-MM-dd")
+   Else
+      totServ = 0
+      totBCISS = 0
+      totISS = 0
+      totPisISS = 0
+      totCofinsISS = 0
+      TotalTribISS = 0
+   End If
+   
+   vTotTrib = Nota_Fiscal![Valor Total Do Tributo] + TotalTribISS
+   vNF = Nota_Fiscal![Valor Total da Nota Fiscal]
+   vICMSDeson = 0
+   'Gera Total ICMS
+   'Lei da Transparencia
+    If Item.RecordCount = 0 Then
+       TotalICMS = objNFeUtil.totalICMSNT2015003(0, 0, 0, 0, 0, 0, 0, vDesc, 0, 0, 0, 0, 0, vNF, vTotTrib, 0, 0, 0, 0)
+    Else
+       TotalICMS = objNFeUtil.totalICMSNT2015003(vBC, vICMS, vBCST, vST, vProd, vFrete, vSeg, vDesc, vII, vIPI, vPIS, vCOFINS, vOutro, vNF, vTotTrib, vICMSDeson, TotICMSUFDest, TotICMSUFRemet, TotvFCPUFDest)
+    End If
+    If Servicos.RecordCount > 0 Then
+       ISSQNTot = objNFeUtil.totalISS310(totServ, totBCISS, totISS, totPisISS, totCofinsISS, dCompet, 0, 0, 0, TotDescISS, 0, "")
+    Else
+       ISSQNTot = ""
+    End If
+   'Gera Totais da NFe
+    Total = objNFeUtil.Total(TotalICMS, ISSQNTot, retTrib)
+   
+   '=========Dados da Transportadora=====================
+   If Not Nota_Fiscal![Transportadora Avulsa] Then
+      If Transportadora!Tipo = 0 Then
+         TransCPF = RemoveCaracteres(Transportadora![CPF e CNPJ])
+      Else
+         TransCNPJ = RemoveCaracteres(Transportadora![CPF e CNPJ])
+         TransIE = RemoveCaracteres(Transportadora![RG e IE])
+      End If
+      TransxNome = Substitui(SuperTiraAcentos(Trim(Transportadora![Razão Social])), "&", "E", 1)
+      TransxEnder = RemoveCaracteres(SuperTiraAcentos(Trim(Transportadora!Endereço)), True)
+      TransxMun = RemoveCaracteres(SuperTiraAcentos(Trim(Transportadora!Municipio)), True)
+      TransUF = Transportadora!UF
+   Else
+      If Len(SuperTiraAcentos(RemoveCaracteres(Trim(Nota_Fiscal![Documento da Transportadora])))) = 11 Then 'CPF
+         TransCPF = SuperTiraAcentos(RemoveCaracteres(Trim(Nota_Fiscal![Documento da Transportadora])))
+      Else 'CNPJ
+         TransCNPJ = SuperTiraAcentos(RemoveCaracteres(Trim(Nota_Fiscal![Documento da Transportadora])))
+      End If
+      TransIE = RemoveCaracteres(Nota_Fiscal![IE da Transportadora])
+      TransxNome = RemoveCaracteres(Substitui(SuperTiraAcentos(Trim(Nota_Fiscal![Nome da Transportadora Avulsa])), "&", "E", 1), True)
+      TransxEnder = RemoveCaracteres(SuperTiraAcentos(Trim(Nota_Fiscal![Endereço da Transportadora])))
+      TbAuxiliar "Municípios", "[Seqüência do Município] = " & Nota_Fiscal![Município da Transportadora], MunTransAvulsa
+      If MunTransAvulsa.RecordCount > 0 Then
+         TransxMun = RemoveCaracteres(SuperTiraAcentos(Trim(MunTransAvulsa!Descrição)), True)
+         TransUF = MunTransAvulsa!UF
+      End If
+   End If
+   
+   'Gera Dados da Transportadora
+   transporta = objNFeUtil.transporta(TransCNPJ, TransCPF, TransxNome, TransIE, TransxEnder, TransxMun, TransUF)
+   
+   'Dados do Frete
+   modFrete = IIf(Nota_Fiscal!frete = "Emitente", 0, 1)
+   
+   '=========Dados do Veiculo=====================
+   If Not Vazio(Nota_Fiscal![Placa Do Veículo]) And Not Vazio(Nota_Fiscal![UF Do Veículo]) Then
+      placa = RemoveCaracteres(SuperTiraAcentos(UCase(Nota_Fiscal![Placa Do Veículo])))
+      veicUF = Nota_Fiscal![UF Do Veículo]
+      If Nota_Fiscal![Transportadora Avulsa] Then
+         RNTC = Nota_Fiscal![Código da ANTT]
+      Else
+         RNTC = Transportadora![Código da ANTT]
+      End If
+      
+      'Gera Dados do Veiculo
+      veicTransp = objNFeUtil.veicTransp(placa, veicUF, RNTC)
+   End If
+   
+   '=========Dados do Volume=====================
+   qVol = Nota_Fiscal!Volume
+   esp = RemoveCaracteres(SuperTiraAcentos(Nota_Fiscal!Espécie))
+   marca = RemoveCaracteres(SuperTiraAcentos(Nota_Fiscal!marca))
+   nVol = Nota_Fiscal!Numeração
+   pesoL = Nota_Fiscal![Peso Líquido]
+   pesoB = Nota_Fiscal![Peso Bruto]
+   
+   'Gera Dados do Volume
+   vol = objNFeUtil.vol(qVol, esp, marca, nVol, pesoL, pesoB, lacres)
+   
+   'Gera Transporte
+   transp = objNFeUtil.transportador2G(modFrete, transporta, retTransp, veicTransp, reboque, vagao, balsa, vol)
+      
+   '=========Dados das Informações Adicionais=====================
+   If Not Nota_Fiscal![NFe Complementar] Then
+      infAdFisco = ReservadoFisco(Usado, Reducao, Diferido, CLng(Sequencia_da_Propriedade), Cliente!Revenda, Cliente!Isento, TotICMSUFDest, TotICMSUFRemet)
+      If Nota_Fiscal![Contra Apresentação] Then infCpl = infCpl & "Contra Apresentacao.;"
+      If Nota_Fiscal![Seqüência da Propriedade] > 0 Then
+         infCpl = infCpl & "Cliente Produtor, Inscricao Numero: " & Propriedade![Inscrição Estadual]
+         If Cliente!Tipo = 0 Then 'Fisica
+            If Not Vazio(Cliente![CPF e CNPJ]) Then infCpl = infCpl & " - CPF.: " & Cliente![CPF e CNPJ]
+         Else 'Juridica
+            If Not Vazio(Cliente![CPF e CNPJ]) Then infCpl = infCpl & " - CNPJ.: " & Cliente![CPF e CNPJ]
+         End If
+         If Cliente!Tipo = 0 Then 'Fisica
+            If Not Vazio(Cliente![RG e IE]) Then infCpl = infCpl & " - RG.: " & Cliente![RG e IE] & ".;"
+         Else 'Jurídica
+            'If Not Vazio(Cliente![RG e IE]) Then infCpl = infCpl & " - RG.: " & Cliente![RG e IE] & ".;"
+            infCpl = infCpl & ".;"
+         End If
+         If Vazio(Cliente![RG e IE]) Then infCpl = infCpl & ".;"
+      Else
+         If Cliente!Tipo = 0 Then 'Pessoa Fisica (Como não tem campo de RG na Nota entao vamos Jogar para as Observação)
+            If Not Vazio(Cliente![RG e IE]) Then infCpl = infCpl & "RG.: " & Cliente![RG e IE] & ".;"
+         Else
+            If dest_indIEDest = 2 Then infCpl = infCpl & "Cliente Inscricao Estadual ISENTO.;"
+         End If
+      End If
+   Else
+      infAdFisco = "NFe de COMPLEMENTO emitida para complementar a NFe:;"
+      infAdFisco = infAdFisco & Nota_Fiscal![Chave Acesso NFe Referenciada]
+   End If
+   infCpl = infCpl & Substitui(Substitui(SuperTiraAcentos(Trim(Nota_Fiscal!Histórico)), vbCrLf, ".;", 1), "&", "E", 1)
+   
+   'Gera Informações Adicionais
+   infAdic = objNFeUtil.infAdic2G(infAdFisco, infCpl, obsCont, obsFisco, procRef)
+   
+   '=========Dados da Fatura=====================
+   If Parcelas.RecordCount > 0 And Not Nota_Fiscal![Contra Apresentação] Then
+      nFat = Format(Nota_Fiscal![Número da NFe], "000000")
+      vOrig = Nota_Fiscal![Valor Total da Nota Fiscal]
+      vLiq = Nota_Fiscal![Valor Total da Nota Fiscal]
+      '=========Dados da Duplicata=====================
+      Parcelas.MoveFirst
+      Do While Not Parcelas.EOF
+         nDup = Parcelas![Número da Parcela]
+         dVenc = Parcelas![Data de Vencimento]
+         vDup = Parcelas![Valor da Parcela]
+         'Gera Duplicata
+         dup = dup & objNFeUtil.dup(nDup, dVenc, vDup)
+         Parcelas.MoveNext
+      Loop
+      'Gera Cobrança
+      Cobr = objNFeUtil.Cobr(nFat, vOrig, vDesc, vLiq, dup)
+   End If
+   
+   '=========Dados da Exportação==============
+   If Mid(NatOpe![Código da Natureza de Operação], 1, 1) = "7" Then
+      UFEmbarq = PegaValor("Orçamento", "UF de Embarque", "[Seqüência do Pedido] = " & Nota_Fiscal![Seqüência Do Pedido])  'UF de Embarque
+      xLocEmbarq = PegaValor("Orçamento", "Local de Embarque", "[Seqüência do Pedido] = " & Nota_Fiscal![Seqüência Do Pedido]) 'Local de Embarque
+      xLocDespacho = ""
+      'Gera Exportação
+      exporta = objNFeUtil.exporta310(UFEmbarq, xLocEmbarq, xLocDespacho)
+   End If
+   
+   '=========Dados da Nota Fiscal Eletrônica=====================
+   Id = chaveNFe
+   versao = "3.10"
+   Pag = ""
+   autXML = ""
+   'ufa finalmente
+   'Gera Consolidação da NFe
+   NFe = objNFeUtil.NFe310(versao, Id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
+   
+   'Salvando o xml...
+   Arq = FreeFile
+   If Parametros_da_NFe!ambiente = 0 Then 'Produção
+      If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
+      Open Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml" For Append As #Arq
+         Print #Arq, NFe
+      Close #Arq
+   Else 'Homologação
+      If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml"
+      Open Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_GERADO.xml" For Append As #Arq
+         Print #Arq, NFe
+      Close #Arq
+   End If
    
    'Histórico
    With vgTb
       .Edit
       If Vazio(!Observação) Then
-         !Observação = "Erro ao Buscar Retorno da NFe"
+         !Observação = "Gerando XML..."
       Else
-         !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe"
+         !Observação = !Observação & vbCrLf & "=================================================="
+         !Observação = !Observação & vbCrLf & vbCrLf & "Gerando XML..."
       End If
       .Update
       .BookMark = .LastModified
    End With
-   GoTo SaiDaSub
-
-   '           WS chamada com sucesso
-   '
-   '           105 – lote em processamento -> tentar novamente
-   '           106 – lote não localizado   -> tentar enviar o lote novamente ou verificar se o nroRecibo está correto
-   '           100 – NF-e autorizada       -> OK
-   '           2xx – motivo de rejeição do WS -> erro na elaboração da NF-e, verificar o código de erro e corrigir a NF-e
-Continua:
-   Select Case cStat
-      Case 5001 To 6423                ' erro da DLL
-         MsgBox "Descrição do erro: " & Chr(13) & Chr(13) + msgResultado, vbCritical + vbOKOnly, "Atenção: O Retorno da NFe falhou..."
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case 100    ' NF-e autorizada Sucessssooooo
-         With Nota_Fiscal
-            .Edit
-            !Autorizado = True
-            ![Protocolo de Autorização NFe] = nroProtocolo
-            ![Data e Hora da NFe] = dhProtocolo
-            If Vazio(!Observação) Then
-               !Observação = "NFe Autorizada com Sucesso!!!"
-            Else
-               !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!!!"
-            End If
-            .Update
-            .BookMark = .LastModified
-         End With
-         
-         'Salvando o xml...
-         Arq = FreeFile
-         If Parametros_da_NFe!ambiente = 0 Then 'Produção
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-            With XML
-               .AddNew
-               ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
-               !XML = procNFe
-               .Update
-            End With
-         Else 'Homologação
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-         End If
-         
-         MsgBox "NFe Autorizada!!!", vbInformation + vbOKOnly, vaTitulo
-                          
-      Case 101    ' NF-e denegada
-         With Nota_Fiscal
-            .Edit
-            !Autorizado = True
-            ![Protocolo de Autorização NFe] = nroProtocolo
-            ![Data e Hora da NFe] = dhProtocolo
-            If Vazio(!Observação) Then
-               !Observação = "NFe Autorizada com Sucesso!!!"
-            Else
-               !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!!!"
-            End If
-            .Update
-            .BookMark = .LastModified
-         End With
+   
+   TransmitirNFe310 NFe, chaveNFe 'Transmitindo... Inicio dos Testes 05/12/2014 Prazo Final para Implantação 01/04/2015
        
-         'Salvando o xml...
-         Arq = FreeFile
-         If Parametros_da_NFe!ambiente = 0 Then 'Produção
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Produção] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-            With XML
-               .AddNew
-               ![Seqüência da Nota Fiscal] = Nota_Fiscal![Seqüência da Nota Fiscal]
-               !XML = procNFe
-               .Update
-            End With
-         Else 'Homologação
-            If Dir(Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml", vbArchive) <> "" Then Kill Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_ASSINADO.xml"
-            Open Parametros_da_NFe![Diretório 1 NFe Homologação] & Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml" For Append As #Arq
-               Print #Arq, procNFe
-            Close #Arq
-         End If
-         
-         MsgBox "NFe Denegada!", vbInformation + vbOKOnly, vaTitulo
-                               
-      Case 106    ' Lote não localizado, verifique se o número do recibo está correto
-         MsgBox msgResultado, vbCritical + vbOKOnly, "Atenção: Lote não localizado"
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case 108, 109 'Que feio Servidor
-         MsgBox msgResultado & Chr(13) & Chr(13) + "O Web Service está com problemas de recepção.", vbCritical + vbOKOnly, "Atenção: WS com problemas na recepção!"
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-      Case Else
-         MsgBox "Descrição do erro: " & Chr(13) & Chr(13) & cStat & " - " & msgResultado, vbCritical + vbOKOnly, "Atenção: O WS rejeitou a NFe..."
-         
-         'Histórico
-         With vgTb
-            .Edit
-            If Vazio(!Observação) Then
-               !Observação = "Erro ao Buscar Retorno da NFe: " & msgResultado
-            Else
-               !Observação = !Observação & vbCrLf & "Erro ao Buscar Retorno da NFe: " & msgResultado
-            End If
-            !Transmitido = False
-            .Update
-            .BookMark = .LastModified
-         End With
-         GoTo SaiDaSub
-   End Select
-   
-   'Unidanfe
-   DANFE
-   
 DeuErro:
    If Err <> 0 Then
       MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
    End If
-  
+   
 SaiDaSub:
-   Set objNFeUtil = Nothing
+   Reposition
    Screen.MousePointer = vbDefault ' normal
+   Set objNFeUtil = Nothing
    If Parametros_da_NFe!ambiente = 0 Then
       lblProgresso.Caption = ""
    Else
@@ -9227,31 +10390,138 @@ SaiDaSub:
 End Sub
 
 
+'Layout 4.00 – Envio Síncrono de NF-e
+Private Sub TransmitirNFe310(NFe As String, chaveNFe As String)
+
+    '–––– parâmetros da chamada ao Web-Service ––––
+    Dim msgDados       As String
+    Dim msgRetWS       As String
+    Dim msgResultado   As String
+    Dim siglaWS        As String
+    Dim certificado    As String
+    Dim licenca        As String
+
+    '–––– variáveis do envio síncrono ––––
+    Dim NFXmlAssinada  As String   ' XML assinado que volta da DLL
+    Dim nroProtocolo   As String   ' nº do protocolo de autorização
+    Dim dhProtocolo    As String   ' data-hora do protocolo
+    Dim cStat          As Long     ' código de status
+    Dim versao         As String   ' “4.00”
+
+    '–––– infraestrutura local ––––
+    Dim i              As Integer
+    Dim objNFeUtil     As Object
+    Dim hFile          As Long
+    Dim proxy          As String
+    Dim usuario        As String
+    Dim senha          As String
+
+On Error GoTo DeuErro
+
+    Screen.MousePointer = vbHourglass
+    lblProgresso.Caption = "Transmitindo NFe..."
+    Set objNFeUtil = CreateObject("NFe_util_2G.util")
+
+    certificado = Parametros_da_NFe![Certificado Digital]
+    siglaWS = "SP"
+    versao = "4.00"
+    licenca = "23433296a6c7b3e6e602aa8c71ded18804ec302656cfa8590ff7b35454b14834f4f5aed7ed5b4e4986a6a2d2a4b1abad6758927b36d70c5a1d4588597eaf0de2"
+
+    ' tentativa de envio síncrono
+    For i = 1 To 5
+        NFXmlAssinada = objNFeUtil.EnviaNFSincrono( _
+            siglaWS, NFe, certificado, versao, _
+            msgDados, msgRetWS, cStat, msgResultado, _
+            nroProtocolo, dhProtocolo, NFXmlAssinada, _
+            proxy, usuario, senha, licenca)
+
+        GravaHistorico "Transmitindo NFe... Tentativa " & i
+
+        ' se não for “em processamento” (105), sai do loop
+        If cStat <> 105 Then GoTo Continua
+    Next
+
+    MsgBox "NFe Não Enviada! Tente Mais Tarde.", vbExclamation, vaTitulo
+    GravaHistorico "Erro ao Transmitir NFe"
+    GoTo SaiDaSub
+
+Continua:
+    Select Case cStat
+
+        Case 5000 To 7003
+            MsgBox "Descrição do erro: " & vbCrLf & msgResultado, vbCritical, "Envio falhou"
+            GravaHistorico "Erro ao Transmitir NFe: " & msgResultado
+            GoTo SaiDaSub
+
+        '––– SUCESSO SÍNCRONO IMEDIATO –––
+        Case 100, 150
+            RetornoNFe310 NFXmlAssinada, cStat, nroProtocolo, dhProtocolo, msgResultado
+            GoTo SaiDaSub
+
+        Case 101
+            RetornoNFe310 NFXmlAssinada, cStat, nroProtocolo, dhProtocolo, msgResultado
+            GoTo SaiDaSub
+
+        Case 108, 109
+            MsgBox msgResultado & vbCrLf & "WS com problemas na recepção.", vbCritical, "WS instável"
+            GravaHistorico "Erro ao Transmitir NFe: " & msgResultado
+            GoTo SaiDaSub
+
+        Case Else
+            MsgBox "Descrição do erro: " & vbCrLf & cStat & " - " & msgResultado, vbCritical, "WS rejeitou a NFe"
+            GravaHistorico "Erro ao Transmitir NFe: " & msgResultado
+            GoTo SaiDaSub
+    End Select
+
+SaiDaSub:
+    Screen.MousePointer = vbDefault
+    Set objNFeUtil = Nothing
+    lblProgresso.Caption = IIf(Parametros_da_NFe!ambiente = 0, "", "AMBIENTE NFe EM MODO TESTE")
+    Exit Sub
+
+DeuErro:
+    MsgBox Err.Description, vbCritical, vaTitulo
+    Resume SaiDaSub
+End Sub
+
+'– rotina auxiliar para histórico ––
+Private Sub GravaHistorico(txt As String)
+    With vgTb
+        .Edit
+        !Observação = IIf(Vazio(!Observação), txt, !Observação & vbCrLf & txt)
+        .Update
+        .BookMark = .LastModified
+    End With
+End Sub
 
 
+
+
+
+'layout 4.00
     
     'ROTINA QUE MONTA O XML DA NOTA FISCAL ELETRONICA
     Private Sub BlasterNFe400()
        'DECLARAÇÃO DAS VARIÁVEIS
        '-------Variáveis Avulsas--------------
        Dim Item As New GRecordSet, Cliente As New GRecordSet, Transportadora As New GRecordSet, Propriedade As New GRecordSet
-       Dim NatOpe As New GRecordSet, Parcelas As New GRecordSet, MunTransAvulsa As New GRecordSet
+       Dim NatOpe As New GRecordSet, Parcelas As New GRecordSet, objNFeUtil As Object, MunTransAvulsa As New GRecordSet
        Dim Arq As Long, Usado As Boolean, Reducao As Boolean, Diferido As Boolean, NatOpe2 As New GRecordSet
        Dim SemValores As New GRecordSet, Paises As New GRecordSet, Declaração As New GRecordSet
        Dim Servicos As New GRecordSet, TotalTribISS As Double, TotDescISS As Double
        Dim Suframa As Boolean
        '======Identificação do Documento=======
-       Dim ide_cUF As Long, ide_cNF As Long, ide_natOp As String, ide_indPag As Long, ide_mode As Long
+       Dim ide_cUF As Long, ide_cNF As String, ide_natOp As String, ide_indPag As Long, ide_mode As Long
        Dim ide_serie As Long, ide_nNF As Long, ide_tpNF As Long, ide_cMunFG As String
        Dim ide_tpImp As Long, ide_cDV As Long, ide_tpAmb As Long, ide_finNFe As Long, ide_tpEmis As Long, ide_procEmi As Long
        Dim ide_verProc As String, ide_NFref As String, ide_dhCont As String, ide_xJust As String
        'Campos Novos Identificação do Documento Layout 3.10
-       Dim ide_dhEmi As String, ide_dhSaiEnt As String
-       Dim ide_idDest  As Long, ide_indFinal As Long, ide_indPres As Long
-     '  Dim cMunFGIBS As String, tpNFDebito As String, tpNFCredito As String, gCompraGov As String, NFePagAntecipado As String
+       Dim ide_dhEmi As String, ide_dhSaiEnt As String, ide_idDest As Integer, ide_indFinal As Integer, ide_indPres As Integer
        '======Chave da NFe===========
-       Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpEmis, codigoseguranca As String
+       Dim resultado As Long, emi_CNPJ As String, cUF, Ano, Mes, modelo, serie, Numero, tpemis, codigoseguranca As String
        Dim msgResult As String, cNF As String, cDV As String
+       '======NFe Referenciada=======
+       Dim ide_NFRefs As String
        '======Identificação do Emitente=======
        Dim emi_CPF As String, emi_xNome As String, emi_xFant As String, emi_xLgr As String
        Dim emi_nro As String, emi_xCpl As String, emi_xBairro As String, emi_cMun As String, emi_xMun As String
@@ -9337,8 +10607,6 @@ End Sub
        Dim DetPag As String, vTroco_Opc As Double
        Dim DetalhesPagto As String, tPag As String, vPag As Double, tpIntegra_Opc As String, CNPJ_Opc As String
        Dim tBand_Opc As String, cAut_Opc As String
-       Dim xPag_Opc As String, dPag_Opc As String
-       Dim CNPJPag_Opc As String, UFPag_Opc As String, CNPJReceb_Opc As String, idTermPag_Opc As String
        '=====Identificação da Exportação=======================================================================
        Dim UFEmbarq As String, xLocEmbarq As String
        Dim xLocDespacho As String ' Campo Novo Layout 3.10
@@ -9362,12 +10630,8 @@ End Sub
        'Partilha 4.00
        Dim vBCFCPUFDest_Opc As Double
        Dim xmlDetPag As String
-       
-       Dim objNFeUtil As Object
-      
           
        'Bora lah Blaster
-       
        On Error GoTo DeuErro
        
        Screen.MousePointer = vbHourglass ' Ampulheta
@@ -9376,7 +10640,7 @@ End Sub
        
        Set Cliente = vgDb.OpenRecordSet("SELECT [CPF e CNPJ], Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], Descrição Municipio, UF, " & _
                                         "[RG e IE], [Razão Social], [Fone 1], Tipo, G.CEP, Email, Isento, [Seqüência do País], Revenda, [Código do Suframa] " & _
-                                        "FROM Geral G LEFT JOIN Municípios M ON G.[Seqüência do Município] = M.[Seqüência do Município] WHERE G.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência Do Geral])
+                                        "FROM Geral G LEFT JOIN Municípios M ON G.[Seqüência do Município] = M.[Seqüência do Município] WHERE G.[Seqüência do Geral] = " & Nota_Fiscal![Seqüência do Geral])
        Set Propriedade = vgDb.OpenRecordSet("SELECT CNPJ, Endereço, [Número do Endereço], Complemento, Bairro, [Código do IBGE], Descrição Municipio, UF, " & _
                                             "P.CEP, [Inscrição Estadual] " & _
                                             "FROM Propriedades P LEFT JOIN Municípios M ON P.[Seqüência do Município] = M.[Seqüência do Município] WHERE P.[Seqüência da Propriedade] = " & Nota_Fiscal![Seqüência da Propriedade])
@@ -9473,30 +10737,24 @@ End Sub
        ide_mode = 55                             ' modelo da nota fiscal eletronica
        ide_serie = 1                             ' série única = 0
         ide_nNF = Nota_Fiscal![Número da NFe]
-        
-    If Parametros_da_NFe![Horario de Verao] Then
-       ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-02:00"
-       ide_dhSaiEnt = Format(Now, "yyyy-MM-ddThh:mm:ss") & "-02:00"
-    Else
-       ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-03:00"
-       ide_dhSaiEnt = Format(Now, "yyyy-MM-ddThh:mm:ss") & "-03:00"
-    End If
-
-    ' Tipo de NF: 0 = entrada, 1 = saída
-    ide_tpNF = IIf(Nota_Fiscal![Tipo de Nota] = 0, 1, 0)
-
+If Parametros_da_NFe![Horario de Verao] Then
+   ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-02:00"
+Else
+   ide_dhEmi = Format(Me.txtCp(68), "yyyy-MM-ddThh:mm:ss") & "-03:00"
+End If
+       'A IRRIGAÇÃO NW MANDA COM DATA E HORA DE SAÍDA
+       ide_tpNF = IIf(Nota_Fiscal![Tipo de Nota] = 0, 1, 0) ' Tipo de NF 0 = Entrada 1 = Saida
        ide_cMunFG = "3537305"                    ' código do município do IBGE de ocorrência do FG do ICMS (Penápolis)
        ide_tpImp = 1                             ' orientação da impressão 1-retrato/2-paisagem
        ide_tpAmb = IIf(Parametros_da_NFe!ambiente = 0, 1, 2)  ' ambiente de envio da NFe 1-produção / 2 - homologação
-       ide_finNFe = finNFe ' finalidade da emissão da NF-e 1- NF-e normal 2 - NF-e Complementar - 3 NF-e de Ajuste - 4 Devolução / Retorno
+       ide_finNFe = FinNFe ' finalidade da emissão da NF-e 1- NF-e normal 2 - NF-e Complementar - 3 NF-e de Ajuste - 4 Devolução / Retorno
        ide_tpEmis = 1                            ' forma de emissão da NF-e 1- normal, 2 - contingência FS, 3 - contingência SCAN, etc.
        ide_procEmi = 0                           ' identificação do processo de emissão da NF-e 0 - aplicação do contribuinte
        ide_verProc = "NFe_Util_2G"               ' identificação da versão do processo de emissão
        ide_dhCont = ""            ' data e hora de entrada em contingência - informar quanto tpEmis diferente de 1, informe #12:00:00 AM# para deixar vazio em VB
        ide_xJust = ""                            ' justificativa para emissão em contingência
        
-      
-      'Campo Novo Layout 3.10
+       'Campo Novo Layout 3.10
        If ide_finNFe = 2 Then
           ide_indPres = 0
        Else
@@ -9545,14 +10803,12 @@ End Sub
        modelo = Trim(Str(ide_mode))
        serie = Trim(Str(ide_serie))
        Numero = Trim(Str(ide_nNF))
-       tpEmis = Trim(Str(ide_tpEmis))
+       tpemis = Trim(Str(ide_tpEmis))
        codigoseguranca = "segredo"     ' informar uma expressão para garantir o sigilo da forma de cálculo do cNF
         
+       Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
         
-        Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
-
-        
-       resultado = objNFeUtil.CriaChaveNFe2G(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpEmis, codigoseguranca, msgResult, cNF, cDV, chaveNFe)
+       resultado = objNFeUtil.CriaChaveNFe2G(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpemis, codigoseguranca, msgResult, cNF, cDV, chaveNFe)
         
        If resultado <> 5601 Then
           MsgBox "Ocorreu um Erro ao Gerar a Chave de Acesso " + msgResult, vbCritical, vaTitulo
@@ -9574,33 +10830,25 @@ End Sub
        
        'Gera Grupo NFeRef
        If Not Vazio(Nota_Fiscal![Chave Acesso NFe Referenciada]) Then
-          ide_NFref = objNFeUtil.NFeRef(Nota_Fiscal![Chave Acesso NFe Referenciada])
+          ide_NFRefs = objNFeUtil.NFeRef(Nota_Fiscal![Chave Acesso NFe Referenciada])
        End If
        
        If Nota_Fiscal![Nota de Devolução] Then
-          ide_NFref = objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução])
+          ide_NFRefs = objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução])
        End If
        
        If Nota_Fiscal![Nota de Devolução] And Chave_da_Devolucao_2 <> "" Then
-          ide_NFref = ide_NFref + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 2])
+          ide_NFRefs = ide_NFRefs + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 2])
        End If
        
        If Nota_Fiscal![Nota de Devolução] And Chave_da_Devolucao_3 <> "" Then
-          ide_NFref = ide_NFref + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 3])
+          ide_NFRefs = ide_NFRefs + objNFeUtil.NFeRef(Nota_Fiscal![Chave da Devolução 3])
        End If
-
-
-   
-ide = objNFeUtil.identificador400( _
-    ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, _
-    ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, _
-    ide_NFref, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, _
-    ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, _
-    ide_verProc, ide_dhCont, ide_xJust)
-
-
-
-
+       
+       'Gera Grupo ide
+        'ide = objNFeUtil.identificador300(ide_cUF, ide_cNF, ide_natOp, ide_indPag, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF,ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust)
+         'ide = objNFeUtil.identificador400(ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust)
+         ide = objNFeUtil.identificador202006(ide_cUF, ide_cNF, ide_natOp, ide_mode, ide_serie, ide_nNF, ide_dhEmi, ide_dhSaiEnt, ide_tpNF, ide_idDest, ide_cMunFG, ide_NFRefs, ide_tpImp, ide_tpEmis, ide_cDV, ide_tpAmb, ide_finNFe, ide_indFinal, ide_indPres, ide_procEmi, ide_verProc, ide_dhCont, ide_xJust, 0)
        '=====Grupo de Identificação do Emitente (Grupo B do Manual de Integração 4.01-NT2009/006 - página 113)=======
        '        <>&" são caracteres reservados do XML e devem ser evitados ou substituídos
        If Parametros_da_NFe!ambiente = 0 Then
@@ -9760,7 +11008,7 @@ ide = objNFeUtil.identificador400( _
              'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
              Prod_cEAN = "SEM GTIN"   'Item![Código de Barras]         ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
              Prod_xProd = SuperTiraAcentos(Substitui(Trim(Item![Descrição Produto]), "&", "E", UM_A_UM)) ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
-             Prod_NCM = IIf(finNFe = 3, "00", Item!Ncm)
+             Prod_NCM = IIf(FinNFe = 3, "00", Item!Ncm)
              Prod_Cest = Item!Cest
              Prod_NVE_Opc = ""                           ' Campo Opcional
              Prod_ExTIPI = ""                            ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
@@ -9798,7 +11046,7 @@ ide = objNFeUtil.identificador400( _
                 If Nota_Fiscal!Fechamento = 1 Then
                    TotalDosItens = Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]
                    PercentualRateio = Abs(Nota_Fiscal![Valor Do Fechamento] / TotalDosItens * 100)
-                   Prod_vDesc = Item![Valor Do Desconto] 'Round((Prod_vProd * PercentualRateio / 100),2) ' valor do desconto concedido
+                   Prod_vDesc = Item![Valor do Desconto] 'Round((Prod_vProd * PercentualRateio / 100),2) ' valor do desconto concedido
                 End If
              End If
              
@@ -9831,12 +11079,12 @@ ide = objNFeUtil.identificador400( _
                 If Not Declaração.EOF Then
                    Do While Not Declaração.EOF
                       'Gera Grupo das Adições
-                      Prod_Ad = Prod_Ad & objNFeUtil.adi310(Declaração![Número da Adição], Declaração![Seqüêncial do Item da Adição], Declaração!SeqGeralAd, Declaração![Valor Do Desconto], Prod_nDraw_Opc)
+                      Prod_Ad = Prod_Ad & objNFeUtil.adi310(Declaração![Número da Adição], Declaração![Seqüêncial do Item da Adição], Declaração!SeqGeralAd, Declaração![Valor do Desconto], Prod_nDraw_Opc)
                       Declaração.MoveNext
                    Loop
                    Declaração.MoveFirst
                    'Gera Grupo da Declaração
-                   Prod_DI = objNFeUtil.DI310(Declaração![Número da Declaração], Dta_Di, Declaração![Local de Desembaraço], Declaração![UF de Desembaraço], DtaDesembaraco, Declaração![Via Transporte], Declaração![Valor da Marinha Mercante], Prod_tpIntermediario, Prod_CNPJ_Opc, Prod_UFTerceiro, Declaração![Seqüência Do Geral], Prod_Ad) ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
+                   Prod_DI = objNFeUtil.DI310(Declaração![Número da Declaração], Dta_Di, Declaração![Local de Desembaraço], Declaração![UF de Desembaraço], DtaDesembaraco, Declaração![Via Transporte], Declaração![Valor da Marinha Mercante], Prod_tpIntermediario, Prod_CNPJ_Opc, Prod_UFTerceiro, Declaração![Seqüência do Geral], Prod_Ad) ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
                 Else
                    MsgBox "Informar a Declaração da Importação!" & vbCrLf & "Item: " & Item![Seqüência do Produto], vbExclamation + vbOKOnly, vaTitulo
                    GoTo SaiDaSub
@@ -9875,7 +11123,7 @@ ide = objNFeUtil.identificador400( _
              icms_modBC = 3                              ' modalidade de determinação da BC = 3-valor da operação
              icms_pRedBC = Item![Percentual da Redução]  ' percentual de redução da BC
              icms_vBC = Item![Valor da Base de Cálculo]  ' valor da BC do ICMS = vProd + vFrete + vSeguro + vOutro
-             icms_pICMS = IIf(Nota_Fiscal!finNFe = 3, 100, Item![Alíquota Do ICMS])  ' alíquota do ICMS com tratamento para finalidade 3
+             icms_pICMS = IIf(Nota_Fiscal!FinNFe = 3, 100, Item![Alíquota Do ICMS])  ' alíquota do ICMS com tratamento para finalidade 3
              icms_vICMS = Item![Valor Do Icms]           ' valor do ICMS
              icms_modBCST = 4                            ' modalidade de determinação da BC ICMS ST
              icms_pmVAST = Item!IVA                      ' percentual de valor de margem e valor adicionado
@@ -10797,6 +12045,8 @@ Continua:
             modFrete = 0
         Case "Destinatário"
             modFrete = 1
+        Case "Transportadora"
+            modFrete = 2
         Case "Transporte Próprio Remetente"
             modFrete = 3
         Case "Transporte Próprio Destinatário"
@@ -10904,29 +12154,32 @@ Continua:
           tBand_Opc = ""
           cAut_Opc = ""
           vTroco_Opc = 0
-           xPag_Opc = IIf(tPag = "99", "Outros meios de pagamento", "")
-       dPag_Opc = ""
-       CNPJPag_Opc = ""
-       UFPag_Opc = ""
-       CNPJReceb_Opc = ""
-       idTermPag_Opc = ""
           'xPag = IIf(tPag = "99", "Outros meios de pagamento", "")'
-          'DetPag = objNFeUtil.detPag2023004(ide_indPag, tPag, xPag_Opc, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc, dPag_Opc, CNPJPag_Opc, UFPag_Opc, CNPJReceb_Opc, idTermPag_Opc)'
-          DetPag = objNFeUtil.detPag2023004(ide_indPag, tPag, xPag_Opc, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc, dPag_Opc, CNPJPag_Opc, UFPag_Opc, CNPJReceb_Opc, idTermPag_Opc)
+          'DetPag = objNFeUtil.DetPag(ide_indPag, tPag, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc)'
+          DetPag = objNFeUtil.DetPag(ide_indPag, tPag, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc)
           Pag = objNFeUtil.pagamento400(DetPag, vTroco_Opc)
-        
        
         Else
-           If Nota_Fiscal!finNFe = 4 Or Nota_Fiscal!finNFe = 2 Or Nota_Fiscal!finNFe = 3 Then
+           If Nota_Fiscal!FinNFe = 4 Or Nota_Fiscal!FinNFe = 2 Or Nota_Fiscal!FinNFe = 3 Then
               tPag = "90": vPag = 0
            Else
               tPag = "99": vPag = Nota_Fiscal![Valor Total da Nota Fiscal]
            End If
             
  
-    xmlDetPag = objNFeUtil.detPag2023004(ide_indPag, tPag, xPag_Opc, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc, dPag_Opc, CNPJPag_Opc, UFPag_Opc, CNPJReceb_Opc, idTermPag_Opc)
+ 
+ 
 
-        
+'1) Gera o <detPag> exatamente com os 7 parâmetros exigidos pelo método
+xmlDetPag = objNFeUtil.DetPag( _
+               ide_indPag, _
+               tPag, _
+               vPag, _
+               tpIntegra_Opc, _
+               CNPJ_Opc, _
+               tBand_Opc, _
+               cAut_Opc _
+             )
 
 '2) Gera o nó <pag> definitivo
 Pag = objNFeUtil.pagamento400(xmlDetPag, vTroco_Opc)
@@ -10938,7 +12191,7 @@ End If
           xLocEmbarq = PegaValor("Orçamento", "Local de Embarque", "[Seqüência do Pedido] = " & Nota_Fiscal![Seqüência Do Pedido]) 'Local de Embarque
           xLocDespacho = ""
           'Gera Exportação
-          exporta = objNFeUtil.exporta400(UFEmbarq, xLocEmbarq, xLocDespacho)
+          exporta = objNFeUtil.exporta310(UFEmbarq, xLocEmbarq, xLocDespacho)
        End If
        
        '=========Dados da Nota Fiscal Eletrônica=====================
@@ -10947,7 +12200,7 @@ End If
        autXML = ""
        'ufa finalmente
        'Gera Consolidação da NFe
-       NFe = objNFeUtil.NFe400(versao, Id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
+       NFe = objNFeUtil.NFe310(versao, Id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
        
        'Salvando o xml...
        Arq = FreeFile
@@ -10976,8 +12229,7 @@ End If
           .BookMark = .LastModified
        End With
        
-        
-       TransmitirNFe400 NFe, chaveNFe 'Transmitindo... Inicio dos Testes 05/12/2014 Prazo Final para Implantao 01/04/2015
+       TransmitirNFe310 NFe, chaveNFe 'Transmitindo... Inicio dos Testes 05/12/2014 Prazo Final para Implantação 01/04/2015
            
 DeuErro:
        If Err <> 0 Then
@@ -11099,7 +12351,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_da_Importacao = txtCampo(57).Value
          Conjunto_Avulso = chkCampo(4).Value
          Descricao_Conjunto_Avulso = txtCampo(58).Value
-         finNFe = txtCampo(59).Value
+         FinNFe = txtCampo(59).Value
          Novo_Layout = chkCampo(9).Value
          Nota_de_Devolucao = chkCampo(6).Value
          Chave_da_Devolucao = txtCampo(60).Value
@@ -11124,7 +12376,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_da_Nota_Fiscal = IIf(IsNull(vgTb![Seqüência da Nota Fiscal]), 0, vgTb![Seqüência da Nota Fiscal])
          Numero_da_NFe = IIf(IsNull(vgTb![Número da NFe]), 0, vgTb![Número da NFe])
          Numero_da_NFSe = IIf(IsNull(vgTb![Número da NFSe]), 0, vgTb![Número da NFSe])
-         Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
+         Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência do Geral]), 0, vgTb![Seqüência do Geral])
          Sequencia_da_Natureza = IIf(IsNull(vgTb![Seqüência da Natureza]), 0, vgTb![Seqüência da Natureza])
          Transportadora_Avulsa = IIf(IsNull(vgTb![Transportadora Avulsa]), 0, vgTb![Transportadora Avulsa])
          Sequencia_da_Transportadora = IIf(IsNull(vgTb![Seqüência da Transportadora]), 0, vgTb![Seqüência da Transportadora])
@@ -11190,7 +12442,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_da_Importacao = IIf(IsNull(vgTb![Valor Total da Importação]), 0, vgTb![Valor Total da Importação])
          Conjunto_Avulso = IIf(IsNull(vgTb![Conjunto Avulso]), 0, vgTb![Conjunto Avulso])
          Descricao_Conjunto_Avulso = IIf(IsNull(vgTb![Descrição Conjunto Avulso]), "", vgTb![Descrição Conjunto Avulso])
-         finNFe = IIf(IsNull(vgTb!finNFe), 0, vgTb!finNFe)
+         FinNFe = IIf(IsNull(vgTb!FinNFe), 0, vgTb!FinNFe)
          Novo_Layout = IIf(IsNull(vgTb![Novo Layout]), 0, vgTb![Novo Layout])
          Nota_de_Devolucao = IIf(IsNull(vgTb![Nota de Devolução]), 0, vgTb![Nota de Devolução])
          Chave_da_Devolucao = IIf(IsNull(vgTb![Chave da Devolução]), "", vgTb![Chave da Devolução])
@@ -11282,32 +12534,26 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       End If
       If vgOk Then
-         If frete <> "Transporte Próprio Remetente" And frete <> "Transporte Próprio Destinatário" Then
-            If Transportadora_Avulsa = True Then
-               vgOk = (Municipio_da_Transportadora > 0)
-               vgMsg$ = "Municpio da Transportadora invlido!"
-               If Not vgOk Then vgColumn = 7
+         If Transportadora_Avulsa = True Then
+            vgOk = (Municipio_da_Transportadora > 0)
+            vgMsg$ = "Município da Transportadora inválido!"
+            If Not vgOk Then vgColumn = 7
+         End If
+      End If
+      If vgOk Then
+         If Transportadora_Avulsa = True Then
+            If Transportadora_Avulsa = 1 Then
+               vgOk = (ValidaIE(MunicipioAux!UF, IE_da_Transportadora, False))
+               vgMsg$ = "" & MsgValIE & ""
+               If Not vgOk Then vgColumn = 8
             End If
          End If
       End If
       If vgOk Then
-         If frete <> "Transporte Próprio Remetente" And frete <> "Transporte Próprio Destinatário" Then
-            If Transportadora_Avulsa = True Then
-               If Transportadora_Avulsa = 1 Then
-                  vgOk = (ValidaIE(MunicipioAux!UF, IE_da_Transportadora, False))
-                  vgMsg$ = "" & MsgValIE & ""
-                  If Not vgOk Then vgColumn = 8
-               End If
-            End If
-         End If
-      End If
-      If vgOk Then
-         If frete <> "Transporte Prprio Remetente" And frete <> "Transporte Prprio Destinatário" Then
-            If Transportadora_Avulsa = True Then
-               vgOk = (Not Vazio(Documento_da_Transportadora))
-               vgMsg$ = "CPF/CNPJ no pode ser Vazio"
-               If Not vgOk Then vgColumn = 4
-            End If
+         If Transportadora_Avulsa = True Then
+            vgOk = (Not Vazio(Documento_da_Transportadora))
+            vgMsg$ = "CPF/CNPJ não pode ser Vazio"
+            If Not vgOk Then vgColumn = 4
          End If
       End If
       If vgOk Then
@@ -11318,7 +12564,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       End If
       If vgOk Then
-         vgOk = (finNFe > 0)
+         vgOk = (FinNFe > 0)
          vgMsg$ = "Informar a Finalidade da NFe 1 - NFe Normal - 2 NFe Complementar - 3 NFe de Ajuste - 4 NFe Devolução / Retorno"
          If Not vgOk Then vgColumn = 60
       End If
@@ -11618,7 +12864,6 @@ Public Sub LigaDesligaAlterar()
    PrepBotoes Me, vgSituacao                           'acerta icones dos botoes
 End Sub
 
-…
 Private Sub Form_KeyPress(KeyAscii As Integer)
    Dim Ok As Boolean
    If Not Me.ActiveControl Is Nothing Then
@@ -11888,7 +13133,7 @@ Private Sub ExecutaPreValidacao()
    Ok = ((Autorizado = 0) And Nota_Cancelada = 0 And Nota_Fiscal![Nota Fiscal Avulsa] And Sequencia_do_Movimento = 0)
    txtCampo(29).Locked = Not (vgAlterar And txtCampo(29).Editable)
    txtCampo(29).Enabled = Ok Or Not vgAlterar
-   Ok = (finNFe = 2)
+   Ok = (FinNFe = 2)
    chkCampo(1).Locked = Not (vgAlterar And chkCampo(1).Editable)
    chkCampo(1).Enabled = Ok Or Not vgAlterar
    Ok = (Contra_Apresentacao = 0)
@@ -11918,7 +13163,7 @@ Private Sub ExecutaPreValidacao()
    Ok = (Conjunto_Avulso = True)
    txtCampo(58).Locked = Not (vgAlterar And txtCampo(58).Editable)
    txtCampo(58).Enabled = Ok Or Not vgAlterar
-   Ok = (finNFe = 4)
+   Ok = (FinNFe = 4)
    chkCampo(6).Locked = Not (vgAlterar And chkCampo(6).Editable)
    chkCampo(6).Enabled = Ok Or Not vgAlterar
    Ok = (Nota_de_Devolucao = True)
@@ -12346,21 +13591,6 @@ Private Sub Form_Load()
    On Error GoTo DeuErro
    Screen.MousePointer = vbHourglass
    Caption = LoadGasString(66500)
-   
-  '  Dim objNFeUtil As Object
-  ' Dim versaoDll As String
-  ' On Error Resume Next
-  ' Set objNFeUtil = CreateObject("NFe_Util_2G.Util")
-  ' If Err.Number = 0 Then
-  '    versaoDll = objNFeUtil.versao
-  '    MsgBox "Versão do NFe_Util instalada: " & versaoDll, vbInformation + vbOKOnly, vaTitulo
-  ' Else
-  '    MsgBox "NFe_Util não instalado ou não registrado.", vbExclamation + vbOKOnly, vaTitulo
-  '    Err.Clear
- '  End If
-  ' On Error GoTo DeuErro
- '  Set objNFeUtil = Nothing
-   
    vgFormID = 712
    vgIdentTab = "Nota Fiscal"
    vgFiltroEmUso = -1
@@ -12925,7 +14155,7 @@ Public Sub DefineControles()
    Set txtCampo(17).CtBot(BOT_COMBO) = bottxtCampo17(BOT_COMBO)
    Set bottxtCampo17(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(17).DataType = 0
-   txtCampo(17).ListFields = "Emitente|Destinatário|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
+   txtCampo(17).ListFields = "Emitente|Destinatário|Transportadora|Transporte Próprio Remetente|Transporte Próprio Destinatário|Sem Transporte"
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(17).DataField), txtCampo(17)
 
    Set txtCampo(26).CtPri = txtCp(26)
@@ -14372,7 +15602,7 @@ IniApDaTb:
       Valor_das_Despesas_Aduaneiras = Produtos_da_Nota_Fiscal![Valor das Despesas Aduaneiras]
       Valor_do_Imposto_de_Importacao = Produtos_da_Nota_Fiscal![Valor do Imposto de Importação]
       Valor_do_IOF = Produtos_da_Nota_Fiscal![Valor do IOF]
-      Valor_do_Desconto = Produtos_da_Nota_Fiscal![Valor Do Desconto]
+      Valor_do_Desconto = Produtos_da_Nota_Fiscal![Valor do Desconto]
       Valor_do_Frete = Produtos_da_Nota_Fiscal![Valor Do Frete]
       Bc_pis = Produtos_da_Nota_Fiscal![Bc Pis]
       Bc_cofins = Produtos_da_Nota_Fiscal![Bc Cofins]
@@ -14836,7 +16066,7 @@ IniApDaTb:
       CFOP = Conjuntos_da_Nota_Fiscal!CFOP
       CST = Conjuntos_da_Nota_Fiscal!CST
       Aliquota_do_ICMS_ST = Conjuntos_da_Nota_Fiscal![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Conjuntos_da_Nota_Fiscal![Valor Do Desconto]
+      Valor_do_Desconto = Conjuntos_da_Nota_Fiscal![Valor do Desconto]
       Valor_do_Frete = Conjuntos_da_Nota_Fiscal![Valor Do Frete]
       Bc_pis = Conjuntos_da_Nota_Fiscal![Bc Pis]
       Aliq_do_pis = Conjuntos_da_Nota_Fiscal![Aliq Do Pis]
@@ -15114,7 +16344,7 @@ IniApDaTb:
       CFOP = Pecas_da_Nota_Fiscal!CFOP
       CST = Pecas_da_Nota_Fiscal!CST
       Aliquota_do_ICMS_ST = Pecas_da_Nota_Fiscal![Alíquota Do ICMS ST]
-      Valor_do_Desconto = Pecas_da_Nota_Fiscal![Valor Do Desconto]
+      Valor_do_Desconto = Pecas_da_Nota_Fiscal![Valor do Desconto]
       Valor_do_Frete = Pecas_da_Nota_Fiscal![Valor Do Frete]
       Bc_pis = Pecas_da_Nota_Fiscal![Bc Pis]
       Aliq_do_pis = Pecas_da_Nota_Fiscal![Aliq Do Pis]
