@@ -415,35 +415,35 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-'* Sistema...: SISTEMA IRRIGA«√O PEN¡POLIS
-'* Empresa...: IRRIGA«√O PEN¡POLIS
-'* MÛdulo....: Conpedi
-'* FunÁ„o....: Controle de Pedidos (Vendas)
-'* CopyRight.: (C)2024 IRRIGA«√O PEN¡POLIS
-'* CriaÁ„o...: GAS-2007 - Gerador Autom·tico de Sistemas
+'* Sistema...: SISTEMA IRRIGA√á√ÉO PEN√ÅPOLIS
+'* Empresa...: IRRIGA√á√ÉO PEN√ÅPOLIS
+'* M√≥dulo....: Conpedi
+'* Fun√ß√£o....: Controle de Pedidos (Vendas)
+'* CopyRight.: (C)2024 IRRIGA√á√ÉO PEN√ÅPOLIS
+'* Cria√ß√£o...: GAS-2007 - Gerador Autom√°tico de Sistemas
 '* Data......: 16/08/2024 15:00:03
 '* * * * * * *
 
 Option Explicit
 DefInt A-Z
 
-Public vgSituacao As Integer                      'situaÁ„o de ediÁ„o que do mÛdulo
-Public vgCaracteristica As Integer                'caracteristica do mÛdulo
-Public vgTipo As Integer                          'tipo do mÛdulo
-Public vgPriVez As Integer                        'flag de carregamento do mÛdulo
-Public vgFormID As Long                           'identificador ˙nico para o mÛdulo
-Public vgIdentTab As String                       'nome da tabela principal do mÛdulo
-Public vgEmBrowse As Integer                      'flag se o mÛdulo esta em grade
-Public vgTemFiltro As Integer                     'flag se tem ou n„o filtro no mÛdulo
-Public vgCancelou As Integer                      'flag cancela ou nao o processo do mÛdulo
-Public vgQueryAtual As String                     'express„o SQL definada para o mÛdulo
+Public vgSituacao As Integer                      'situa√ß√£o de edi√ß√£o que do m√≥dulo
+Public vgCaracteristica As Integer                'caracteristica do m√≥dulo
+Public vgTipo As Integer                          'tipo do m√≥dulo
+Public vgPriVez As Integer                        'flag de carregamento do m√≥dulo
+Public vgFormID As Long                           'identificador √∫nico para o m√≥dulo
+Public vgIdentTab As String                       'nome da tabela principal do m√≥dulo
+Public vgEmBrowse As Integer                      'flag se o m√≥dulo esta em grade
+Public vgTemFiltro As Integer                     'flag se tem ou n√£o filtro no m√≥dulo
+Public vgCancelou As Integer                      'flag cancela ou nao o processo do m√≥dulo
+Public vgQueryAtual As String                     'express√£o SQL definada para o m√≥dulo
 
-Public vgFP As New frmPreview                     'formu·rio de preview do relatÛrio
-Public vgTooltips As New cTooltips                'classe de ajuda para os controes do mÛdulo
-Public vgFG As frmGauge                           'formul·rio do gauge
-Public vgQReg As Long                             'quantidade de j· feira para o gauge
+Public vgFP As New frmPreview                     'formu√°rio de preview do relat√≥rio
+Public vgTooltips As New cTooltips                'classe de ajuda para os controes do m√≥dulo
+Public vgFG As frmGauge                           'formul√°rio do gauge
+Public vgQReg As Long                             'quantidade de j√° feira para o gauge
 
-Dim txtCampo(3) As New FormataCampos              'classe dos compos tipo texto do mÛdulo
+Dim txtCampo(3) As New FormataCampos              'classe dos compos tipo texto do m√≥dulo
 Dim Orcamento As Double, NroNfe As Double, Prodstatus As Double
 Public Txtorc As Object, grdContas As Object, lblAjuste As Object
 Public Txtnfe As Object, txtProdstatus As Object, Grdcontas1 As Object
@@ -451,9 +451,9 @@ Public Txtnfe As Object, txtProdstatus As Object, Grdcontas1 As Object
 Private Function Cliente() As String
  Dim Pedido As New GRecordSet, Geral As New GRecordSet
  
-   Set Pedido = vgDb.OpenRecordSet("Select [Seq¸Íncia do Geral] Seq From OrÁamento Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
-   Set Geral = vgDb.OpenRecordSet("Select [Raz„o Social] From Geral Where [Seq¸Íncia do Geral] = " & Pedido!Seq)
-   Cliente = Geral![Raz„o Social]
+   Set Pedido = vgDb.OpenRecordSet("Select [Seq√º√™ncia do Geral] Seq From Or√ßamento Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
+   Set Geral = vgDb.OpenRecordSet("Select [Raz√£o Social] From Geral Where [Seq√º√™ncia do Geral] = " & Pedido!Seq)
+   Cliente = Geral![Raz√£o Social]
    
 End Function
 
@@ -463,8 +463,8 @@ Private Sub CarregaTotalizador()
 
     With grdContas
       .RowHeight = 315
-      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'n„o deixa o grid tentar gravar automaticamente
-      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botıes
+      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'n√£o deixa o grid tentar gravar automaticamente
+      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses bot√µes
       .FullRowSelect = False
       .BorderStyle = 1
       .NavigationAddMode = 1
@@ -472,11 +472,11 @@ Private Sub CarregaTotalizador()
       .AllowInsert = False
       .AllowEdit = True
       .AllowDelete = False
-      .AddColumn Nothing, , "N∫", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
-      .AddColumn Nothing, , "Cod", "Seq¸Íncia do Produto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
-      .AddColumn Nothing, , "Produto", "DescriÁ„o", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
+      .AddColumn Nothing, , "N¬∫", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
+      .AddColumn Nothing, , "Cod", "Seq√º√™ncia do Produto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
+      .AddColumn Nothing, , "Produto", "Descri√ß√£o", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
       .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245
-      .AddColumn Nothing, , "Andamento", "SituaÁ„o", TP_CARACTER, "@x", , False, , , , , , "¡ Produzir|Separado p/ Entregar|Entregue ao Cliente", , , , "1", , , , "0", 1, "0", 2300, , 12648447
+      .AddColumn Nothing, , "Andamento", "Situa√ß√£o", TP_CARACTER, "@x", , False, , , , , , "√Å Produzir|Separado p/ Entregar|Entregue ao Cliente", , , , "1", , , , "0", 1, "0", 2300, , 12648447
       .ShowSumCol(.Columns("Quantidade").Index) = False
       .ShowFilterBar = True
       .HideStatus = True
@@ -484,8 +484,8 @@ Private Sub CarregaTotalizador()
    'Conj
    With Grdcontas1
       .RowHeight = 315
-      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'n„o deixa o grid tentar gravar automaticamente
-      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botıes
+      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'n√£o deixa o grid tentar gravar automaticamente
+      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses bot√µes
       .FullRowSelect = False
       .BorderStyle = 1
       .NavigationAddMode = 1
@@ -493,11 +493,11 @@ Private Sub CarregaTotalizador()
       .AllowInsert = False
       .AllowEdit = True
       .AllowDelete = False
-      .AddColumn Nothing, , "N∫", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
-      .AddColumn Nothing, , "Cod", "Seq¸Íncia do Conjunto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
-      .AddColumn Nothing, , "Conjunto", "DescriÁ„o", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
+      .AddColumn Nothing, , "N¬∫", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
+      .AddColumn Nothing, , "Cod", "Seq√º√™ncia do Conjunto", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 700
+      .AddColumn Nothing, , "Conjunto", "Descri√ß√£o", TP_CARACTER, "", , True, , , , , , , , , , "0", , , , "0", 1, "0", 5820
       .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1245
-      .AddColumn Nothing, , "Andamento", "SituaÁ„o", TP_CARACTER, "@x", , False, , , , , , "¡ Produzir|¡ Galnanizar|Na GalvanizaÁ„o|Separado p/ Entregar|Falta MPrima|Entregue ao Cliente|Separado p/ Montar", , , , "1", , , , "0", 1, "0", 2300, , 12648447
+      .AddColumn Nothing, , "Andamento", "Situa√ß√£o", TP_CARACTER, "@x", , False, , , , , , "√Å Produzir|√Å Galnanizar|Na Galvaniza√ß√£o|Separado p/ Entregar|Falta MPrima|Entregue ao Cliente|Separado p/ Montar", , , , "1", , , , "0", 1, "0", 2300, , 12648447
       .ShowSumCol(.Columns("Quantidade").Index) = True
       .ShowFilterBar = True
       .HideStatus = True
@@ -520,8 +520,8 @@ Private Sub CarregaContas()
    MySQL
    AtuPedido
    
-   x$ = "SELECT [Seq¸Íncia do OrÁamento], [Itens Pendentes].[Seq¸Íncia do Produto], [Sequencia do Item], DescriÁ„o, Quantidade, [SituaÁ„o] " & _
-        "FROM [Itens Pendentes] LEFT JOIN Produtos ON [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] WHERE " & Filtro()
+   x$ = "SELECT [Seq√º√™ncia do Or√ßamento], [Itens Pendentes].[Seq√º√™ncia do Produto], [Sequencia do Item], Descri√ß√£o, Quantidade, [Situa√ß√£o] " & _
+        "FROM [Itens Pendentes] LEFT JOIN Produtos ON [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] WHERE " & Filtro()
       
    Set Tb = vgDb.OpenRecordSet(x$)
    
@@ -551,8 +551,8 @@ Private Sub CarregaContas2()
    On Error GoTo DeuErro
   
    
-   x$ = "SELECT [Seq¸Íncia do OrÁamento], [Itens Pendentes].[Seq¸Íncia do Conjunto], [Sequencia do Item], DescriÁ„o, Quantidade, [SituaÁ„o] " & _
-        "FROM [Itens Pendentes] LEFT JOIN Conjuntos ON [Itens Pendentes].[Seq¸Íncia do Conjunto] = Conjuntos.[Seq¸Íncia do Conjunto] WHERE " & Filtro5()
+   x$ = "SELECT [Seq√º√™ncia do Or√ßamento], [Itens Pendentes].[Seq√º√™ncia do Conjunto], [Sequencia do Item], Descri√ß√£o, Quantidade, [Situa√ß√£o] " & _
+        "FROM [Itens Pendentes] LEFT JOIN Conjuntos ON [Itens Pendentes].[Seq√º√™ncia do Conjunto] = Conjuntos.[Seq√º√™ncia do Conjunto] WHERE " & Filtro5()
       
    Set Tb = vgDb.OpenRecordSet(x$)
    
@@ -577,12 +577,12 @@ End Sub
   
 
 Private Function Filtro() As String
- Filtro = " [Seq¸Íncia do OrÁamento] = " & Orcamento
- Filtro = Filtro & " And Tp <> 2 And Produtos.[Seq¸Íncia do Produto] > 0"
+ Filtro = " [Seq√º√™ncia do Or√ßamento] = " & Orcamento
+ Filtro = Filtro & " And Tp <> 2 And Produtos.[Seq√º√™ncia do Produto] > 0"
 End Function
 
 Private Function Filtro5() As String
- Filtro5 = " [Seq¸Íncia do OrÁamento] = " & Orcamento
+ Filtro5 = " [Seq√º√™ncia do Or√ßamento] = " & Orcamento
  Filtro5 = Filtro5 & " And Tp = 2"
 End Function
 
@@ -596,9 +596,9 @@ Private Sub BuscaNota()
  Dim Tb As New GRecordSet
  Dim NFe As New GRecordSet
  
-  Set Tb = vgDb.OpenRecordSet("SELECT [Seq¸Íncia Do Pedido] From OrÁamento Where [Seq¸Íncia Do OrÁamento] = " & Orcamento)
-  If Tb![Seq¸Íncia Do Pedido] > 0 Then
-     Set NFe = vgDb.OpenRecordSet("SELECT [Seq¸Íncia Da Nota Fiscal] Seq From [Nota Fiscal] Where [Seq¸Íncia Do Pedido] = " & Tb![Seq¸Íncia Do Pedido])
+  Set Tb = vgDb.OpenRecordSet("SELECT [Seq√º√™ncia Do Pedido] From Or√ßamento Where [Seq√º√™ncia Do Or√ßamento] = " & Orcamento)
+  If Tb![Seq√º√™ncia Do Pedido] > 0 Then
+     Set NFe = vgDb.OpenRecordSet("SELECT [Seq√º√™ncia Da Nota Fiscal] Seq From [Nota Fiscal] Where [Seq√º√™ncia Do Pedido] = " & Tb![Seq√º√™ncia Do Pedido])
      Txtnfe.Value = NFe!Seq
  ' Else
      'MsgBox("Pedido Invalido!")
@@ -608,15 +608,15 @@ End Sub
 
 
 Private Function Filtro1() As String
- Filtro1 = "OrÁamento.[Seq¸Íncia Do OrÁamento] = " & Orcamento
+ Filtro1 = "Or√ßamento.[Seq√º√™ncia Do Or√ßamento] = " & Orcamento
 End Function
 
 Private Function Filtro2() As String
- Filtro2 = "OrÁamento.[Seq¸Íncia Do OrÁamento] = " & Orcamento
+ Filtro2 = "Or√ßamento.[Seq√º√™ncia Do Or√ßamento] = " & Orcamento
 End Function
 
 Private Function Filtro3() As String
- Filtro3 = "OrÁamento.[Seq¸Íncia Do OrÁamento] = " & Orcamento
+ Filtro3 = "Or√ßamento.[Seq√º√™ncia Do Or√ßamento] = " & Orcamento
 End Function
 
 Private Sub MySQL()
@@ -625,11 +625,11 @@ Private Sub MySQL()
  Dim SeqItem As Integer
  Dim cnGas As ADODB.Connection, rsGas As ADODB.RecordSet
  
- Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seq¸Íncia Do OrÁamento] = " & Orcamento)
+ Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seq√º√™ncia Do Or√ßamento] = " & Orcamento)
  
-   'Se j· existem itens pendentes para o orÁamento atual, remove para recriar os dados
+   'Se j√° existem itens pendentes para o or√ßamento atual, remove para recriar os dados
   If Tb1.RecordCount > 0 Then
-     vgDb.Execute "DELETE FROM [Itens pendentes] WHERE [Seq¸Íncia Do OrÁamento] = " & Orcamento
+     vgDb.Execute "DELETE FROM [Itens pendentes] WHERE [Seq√º√™ncia Do Or√ßamento] = " & Orcamento
      Set Tb1 = Nothing
   End If
  
@@ -637,7 +637,7 @@ Private Sub MySQL()
  Set cnGas = New ADODB.Connection
  Set rsGas = New ADODB.RecordSet
  
- ' 1) Abre conexÔøΩo
+ ' 1) Abre conex√Ø¬ø¬Ωo
     Set cnGas = New ADODB.Connection
     If EstaEmIDE And Environ("COMPUTERNAME") = "DESKTOP-CTAJU78" Then
         cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER={SQL Server Native Client 10.0};Server=DESKTOP-CTAJU78\SQLEXPRESS02;Database=IRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES"
@@ -652,22 +652,22 @@ Private Sub MySQL()
  Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
  
  SeqItem = 1
- SQL = "SELECT Tipo, [Seq¸Íncia Do Produto], DescriÁ„o, Quantidade, Total, [Valor Unit·rio] " & _
+ SQL = "SELECT Tipo, [Seq√º√™ncia Do Produto], Descri√ß√£o, Quantidade, Total, [Valor Unit√°rio] " & _
        "FROM( "
        
- SQL = SQL & "SELECT 1 As Tipo, [PeÁas do OrÁamento].[Seq¸Íncia do Produto], Produtos.DescriÁ„o, Sum([PeÁas do OrÁamento].Quantidade) Quantidade, " & _
-             "Sum([PeÁas do OrÁamento].[Valor Total]) As Total, [PeÁas do OrÁamento].[Valor Unit·rio] " & _
-             "FROM [PeÁas do OrÁamento] left join OrÁamento On [PeÁas do OrÁamento].[Seq¸Íncia do OrÁamento] = OrÁamento.[Seq¸Íncia do OrÁamento] " & _
-             "Left Join Produtos On [PeÁas do OrÁamento].[Seq¸Íncia Do Produto] = Produtos.[Seq¸Íncia Do Produto] WHERE " & Filtro1()
- SQL = SQL & " Group By [PeÁas do OrÁamento].[Seq¸Íncia Do Produto], Produtos.DescriÁ„o, [PeÁas do OrÁamento].[Valor Unit·rio] Union "
- SQL = SQL & "Select 2 As Tipo, [Conjuntos do OrÁamento].[Seq¸Íncia Do Conjunto], Conjuntos.DescriÁ„o, Sum([Conjuntos do OrÁamento].Quantidade) Quantidade, Sum([Conjuntos do OrÁamento].[Valor Total]) Total, [Conjuntos do OrÁamento].[Valor Unit·rio] " & _
-             "FROM [Conjuntos do OrÁamento] Left Join OrÁamento On [Conjuntos do OrÁamento].[Seq¸Íncia do OrÁamento] = OrÁamento.[Seq¸Íncia do OrÁamento] " & _
-             "Left Join Conjuntos On [Conjuntos do OrÁamento].[Seq¸Íncia Do Conjunto] = Conjuntos.[Seq¸Íncia Do Conjunto] WHERE " & Filtro2()
- SQL = SQL & " Group By [Conjuntos do OrÁamento].[Seq¸Íncia Do Conjunto], Conjuntos.DescriÁ„o, [Conjuntos do OrÁamento].[Valor Unit·rio] Union "
- SQL = SQL & "Select 3 As Tipo, [Produtos do OrÁamento].[Seq¸Íncia Do Produto], Produtos.DescriÁ„o, Sum([Produtos do OrÁamento].Quantidade) Quantidade, Sum([Produtos do OrÁamento].[Valor Total] + [Produtos do OrÁamento].[Valor Do IPI]) Total, [Produtos do OrÁamento].[Valor Unit·rio] " & _
-             "FROM [Produtos do OrÁamento] left Join OrÁamento On [Produtos do OrÁamento].[Seq¸Íncia do OrÁamento] = OrÁamento.[Seq¸Íncia do OrÁamento] " & _
-             "Left Join Produtos On [Produtos do OrÁamento].[Seq¸Íncia Do Produto] = Produtos.[Seq¸Íncia Do Produto] WHERE " & Filtro3()
- SQL = SQL & " Group By [Produtos do OrÁamento].[Seq¸Íncia Do Produto], Produtos.DescriÁ„o, [Produtos do OrÁamento].[Valor Unit·rio])A Order By Tipo Desc"
+ SQL = SQL & "SELECT 1 As Tipo, [Pe√ßas do Or√ßamento].[Seq√º√™ncia do Produto], Produtos.Descri√ß√£o, Sum([Pe√ßas do Or√ßamento].Quantidade) Quantidade, " & _
+             "Sum([Pe√ßas do Or√ßamento].[Valor Total]) As Total, [Pe√ßas do Or√ßamento].[Valor Unit√°rio] " & _
+             "FROM [Pe√ßas do Or√ßamento] left join Or√ßamento On [Pe√ßas do Or√ßamento].[Seq√º√™ncia do Or√ßamento] = Or√ßamento.[Seq√º√™ncia do Or√ßamento] " & _
+             "Left Join Produtos On [Pe√ßas do Or√ßamento].[Seq√º√™ncia Do Produto] = Produtos.[Seq√º√™ncia Do Produto] WHERE " & Filtro1()
+ SQL = SQL & " Group By [Pe√ßas do Or√ßamento].[Seq√º√™ncia Do Produto], Produtos.Descri√ß√£o, [Pe√ßas do Or√ßamento].[Valor Unit√°rio] Union "
+ SQL = SQL & "Select 2 As Tipo, [Conjuntos do Or√ßamento].[Seq√º√™ncia Do Conjunto], Conjuntos.Descri√ß√£o, Sum([Conjuntos do Or√ßamento].Quantidade) Quantidade, Sum([Conjuntos do Or√ßamento].[Valor Total]) Total, [Conjuntos do Or√ßamento].[Valor Unit√°rio] " & _
+             "FROM [Conjuntos do Or√ßamento] Left Join Or√ßamento On [Conjuntos do Or√ßamento].[Seq√º√™ncia do Or√ßamento] = Or√ßamento.[Seq√º√™ncia do Or√ßamento] " & _
+             "Left Join Conjuntos On [Conjuntos do Or√ßamento].[Seq√º√™ncia Do Conjunto] = Conjuntos.[Seq√º√™ncia Do Conjunto] WHERE " & Filtro2()
+ SQL = SQL & " Group By [Conjuntos do Or√ßamento].[Seq√º√™ncia Do Conjunto], Conjuntos.Descri√ß√£o, [Conjuntos do Or√ßamento].[Valor Unit√°rio] Union "
+ SQL = SQL & "Select 3 As Tipo, [Produtos do Or√ßamento].[Seq√º√™ncia Do Produto], Produtos.Descri√ß√£o, Sum([Produtos do Or√ßamento].Quantidade) Quantidade, Sum([Produtos do Or√ßamento].[Valor Total] + [Produtos do Or√ßamento].[Valor Do IPI]) Total, [Produtos do Or√ßamento].[Valor Unit√°rio] " & _
+             "FROM [Produtos do Or√ßamento] left Join Or√ßamento On [Produtos do Or√ßamento].[Seq√º√™ncia do Or√ßamento] = Or√ßamento.[Seq√º√™ncia do Or√ßamento] " & _
+             "Left Join Produtos On [Produtos do Or√ßamento].[Seq√º√™ncia Do Produto] = Produtos.[Seq√º√™ncia Do Produto] WHERE " & Filtro3()
+ SQL = SQL & " Group By [Produtos do Or√ßamento].[Seq√º√™ncia Do Produto], Produtos.Descri√ß√£o, [Produtos do Or√ßamento].[Valor Unit√°rio])A Order By Tipo Desc"
  
  rsGas.Open SQL, cnGas, adOpenStatic, adLockPessimistic
  
@@ -675,17 +675,17 @@ Private Sub MySQL()
  Do While Not rsGas.EOF
     With Tb1
      .AddNew
-       ![Seq¸Íncia do OrÁamento] = Orcamento
+       ![Seq√º√™ncia do Or√ßamento] = Orcamento
        ![Sequencia do Item] = SeqItem
         If rsGas!Tipo = 1 Or rsGas!Tipo = 3 Then
-           ![Seq¸Íncia do Produto] = rsGas![Seq¸Íncia do Produto]
+           ![Seq√º√™ncia do Produto] = rsGas![Seq√º√™ncia do Produto]
         End If
         If rsGas!Tipo = 2 Then
-           ![Seq¸Íncia do Conjunto] = rsGas![Seq¸Íncia do Produto]
+           ![Seq√º√™ncia do Conjunto] = rsGas![Seq√º√™ncia do Produto]
         End If
        !Quantidade = rsGas!Quantidade
        ![Valor Total] = rsGas!Total
-       ![Valor Unit·rio] = rsGas![Valor Unit·rio]
+       ![Valor Unit√°rio] = rsGas![Valor Unit√°rio]
        !Tp = rsGas!Tipo
      .Update
      .BookMark = .LastModified
@@ -715,19 +715,19 @@ End Sub
        
  'Screen.MousePointer = vbHourglass
               
-  'Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  'Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   ' If Tb.RecordCount > 0 Then
   '    'Editar os Registros
   '      Do While Not Tb.EOF
   '         With Tb
   '          .Edit
-  '            ![Id Do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+  '            ![Id Do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
   '            !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '            ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '            ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '            ![Qtde Total] = QtdeTotal(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '             Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-  '            !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '            ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '            ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '            ![Qtde Total] = QtdeTotal(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '             Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '            !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '          .Update
   '          .BookMark = .LastModified
   '         End With
@@ -735,25 +735,25 @@ End Sub
   '      Loop
    'Atualiza Os de Terceiros tb pai caso nao tiver
   '  Set TbAux = VgDb.OpenRecordSet("Receita Primaria")
-  '  Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '  Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
     
   '      Do While Not TerceirosAux.EOF
-  '         Set TbAux2 = VgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia Do Produto] & " And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '         Set TbAux2 = VgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia Do Produto] & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '         If TbAux2.RecordCount = 0 Then
   '          With TbAux
   '          .AddNew
-  '           ![Seq¸Íncia Do Produto] = TerceirosAux![Seq¸Íncia Do Produto]
-  '           ![Seq¸Íncia da MatÈria Prima] = TerceirosAux![Seq¸Íncia Do Produto]
-  '           ![Seq¸Íncia Do OrÁamento] = Orcamento
+  '           ![Seq√º√™ncia Do Produto] = TerceirosAux![Seq√º√™ncia Do Produto]
+  '           ![Seq√º√™ncia da Mat√©ria Prima] = TerceirosAux![Seq√º√™ncia Do Produto]
+  '           ![Seq√º√™ncia Do Or√ßamento] = Orcamento
   '           !Quantidade = TerceirosAux!Quantidade
-  '            Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '            Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '           ![Sequencia Do Item] = SeqItem!Sequencia + 1
-  '           ![Id Do Pedido] = MostraCompra(TerceirosAux![Seq¸Íncia Do Produto])
+  '           ![Id Do Pedido] = MostraCompra(TerceirosAux![Seq√º√™ncia Do Produto])
   '           !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '           ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seq¸Íncia Do Produto])
-  '           ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seq¸Íncia Do Produto])
-  '            Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia Do Produto])
-  '           !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '           ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seq√º√™ncia Do Produto])
+  '           ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seq√º√™ncia Do Produto])
+  '            Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia Do Produto])
+  '           !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '          .Update
   '          .BookMark = .LastModified
   '          End With
@@ -761,12 +761,12 @@ End Sub
   '      TerceirosAux.MoveNext
   '      Loop
         
-  '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
         
   '        Do While Not TbGravar.EOF
-  '           If Not Vazio (TbGravar!SituaÁ„o) Then
-  '              If TbGravar!SituaÁ„o = "Entregue ao Cliente" Or TbGravar!SituaÁ„o = "Separado p/ Entregar" Then
-  '                 VgDb.Execute "Update [Receita Primaria] Set SituaÁ„o = '" & TbGravar!SituaÁ„o & "' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & TbGravar![Seq¸Íncia Do Produto]
+  '           If Not Vazio (TbGravar!Situa√ß√£o) Then
+  '              If TbGravar!Situa√ß√£o = "Entregue ao Cliente" Or TbGravar!Situa√ß√£o = "Separado p/ Entregar" Then
+  '                 VgDb.Execute "Update [Receita Primaria] Set Situa√ß√£o = '" & TbGravar!Situa√ß√£o & "' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & TbGravar![Seq√º√™ncia Do Produto]
   '              End If
   '           End If
   '        TbGravar.MoveNext
@@ -775,59 +775,59 @@ End Sub
   '        AtualizaPai
         
   '    frmRecprima.Show
-  '    frmRecprima.vgFiltroInicial = "[Seq¸Íncia do OrÁamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
+  '    frmRecprima.vgFiltroInicial = "[Seq√º√™ncia do Or√ßamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
   '    InicializaFiltro frmRecprima
   '    frmRecprima.TxtDtaAtual.Value = Date
   '    Exit Sub
       
   ' Else
   '    Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
-  '    Set ProdAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where Lance = 0 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '    Set ProdAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where Lance = 0 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '       Do While Not ProdAux.EOF
-  '          Set MP = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & ProdAux![Seq¸Íncia Do Produto])
+  '          Set MP = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & ProdAux![Seq√º√™ncia Do Produto])
   '            If MP.RecordCount > 0 Then
   '               Do While Not MP.EOF
-  '               Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+  '               Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
   '                If Not PodeIncluir!Y Then
   '                  With Tb
   '                     .AddNew
-  '                        ![Seq¸Íncia Do Produto] = MP![Seq¸Íncia Do Produto]
-  '                        ![Seq¸Íncia da MatÈria Prima] = MP![Seq¸Íncia da MatÈria Prima]
-  '                        ![Seq¸Íncia Do OrÁamento] = Orcamento
-  '                        !Quantidade = MP![Quantidade de MatÈria Prima] * ProdAux!Quantidade
-  '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '                        ![Seq√º√™ncia Do Produto] = MP![Seq√º√™ncia Do Produto]
+  '                        ![Seq√º√™ncia da Mat√©ria Prima] = MP![Seq√º√™ncia da Mat√©ria Prima]
+  '                        ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+  '                        !Quantidade = MP![Quantidade de Mat√©ria Prima] * ProdAux!Quantidade
+  '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '                        ![Sequencia Do Item] = SeqItem!Sequencia + 1
-  '                        ![Id Do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+  '                        ![Id Do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
   '                        !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '                        ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '                        ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '                         Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-  '                        !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '                        ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                        ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                         Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                        !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '                     .Update
   '                     .BookMark = .LastModified
   '                  End With
   '                End If
   '                 'Secundaria
-  '                Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+  '                Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
   '                    If ReceitaAuxSec!x Then
-  '                       Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+  '                       Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
   '                        Do While Not Tb1.EOF
-  '                         Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+  '                         Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
   '                         If Not TB2!Y Then
   '                         With Tb
   '                           .AddNew
-  '                             ![Seq¸Íncia Do Produto] = ProdAux![Seq¸Íncia Do Produto]
-  '                             ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
-  '                             ![Seq¸Íncia Do OrÁamento] = Orcamento
-  '                             !Quantidade = Tb1![Quantidade de MatÈria Prima] * ProdAux!Quantidade
-  '                              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '                             ![Seq√º√™ncia Do Produto] = ProdAux![Seq√º√™ncia Do Produto]
+  '                             ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+  '                             ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+  '                             !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * ProdAux!Quantidade
+  '                              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '                             ![Sequencia Do Item] = SeqItem!Sequencia + 1
-  '                             ![Id Do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+  '                             ![Id Do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
   '                             !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '                             ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '                             ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-  '                              Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-  '                             !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '                             ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                             ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                              Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+  '                             !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '                          .Update
   '                          .BookMark = .LastModified
   '                         End With
@@ -844,52 +844,52 @@ End Sub
   '      Loop
   '    End If
       'iNTERMEDIARIOS
- '     Set Lances = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] LEFT JOIN Produtos ON PRODUTOS.[Seq¸Íncia do Produto] = [Itens Pendentes].[Seq¸Íncia do Produto] WHERE Lance = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '     Set Lances = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] LEFT JOIN Produtos ON PRODUTOS.[Seq√º√™ncia do Produto] = [Itens Pendentes].[Seq√º√™ncia do Produto] WHERE Lance = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '              Do While Not Lances.EOF
  '                  For i = 1 To Lances!Quantidade
- '                    Set TemReceita = vgDb.OpenRecordSet("SELECT * From [MatÈria Prima] Where [Seq¸Íncia Do Produto] = " & Lances![Seq¸Íncia Do Produto])
+ '                    Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Mat√©ria Prima] Where [Seq√º√™ncia Do Produto] = " & Lances![Seq√º√™ncia Do Produto])
  '                    Do While Not TemReceita.EOF
- '                    Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+ '                    Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
  '                      If Not PodeIncluir!Y Then
  '                       With Tb
  '                        .AddNew
- '                         ![Seq¸Íncia Do Produto] = Lances![Seq¸Íncia Do Produto]
- '                         ![Seq¸Íncia da MatÈria Prima] = TemReceita![Seq¸Íncia da MatÈria Prima]
- '                         ![Seq¸Íncia Do OrÁamento] = Orcamento
- '                         !Quantidade = TemReceita![Quantidade de MatÈria Prima] '* ReceitaAux!Quantidade
- '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '                         ![Seq√º√™ncia Do Produto] = Lances![Seq√º√™ncia Do Produto]
+ '                         ![Seq√º√™ncia da Mat√©ria Prima] = TemReceita![Seq√º√™ncia da Mat√©ria Prima]
+ '                         ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+ '                         !Quantidade = TemReceita![Quantidade de Mat√©ria Prima] '* ReceitaAux!Quantidade
+ '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '                         ![Sequencia Do Item] = SeqItem!Sequencia + 1
- '                         ![Id Do Pedido] = MostraCompra(TemReceita![Seq¸Íncia da MatÈria Prima])
+ '                         ![Id Do Pedido] = MostraCompra(TemReceita![Seq√º√™ncia da Mat√©ria Prima])
  '                         !Pagto = MostraFinanceiro(![Id Do Pedido])
- '                         ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
- '                         ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
- '                          Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
- '                         !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+ '                         ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+ '                         ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+ '                          Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+ '                         !Localiza√ß√£o = LocalAux!Localiza√ß√£o
  '                       .Update
  '                       .BookMark = .LastModified
  '                       End With
  '                      End If
  '                    'Secundaria
- '                     Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+ '                     Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
  '                      If ReceitaAuxSec!x Then
- '                         Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+ '                         Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
  '                         Do While Not Tb1.EOF
- '                         Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+ '                         Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
  '                          If Not TB2!y Then
  '                           With Tb
  '                            .AddNew
- '                              ![Seq¸Íncia Do Produto] = Lances![Seq¸Íncia Do Produto]
- '                              ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
- '                              ![Seq¸Íncia Do OrÁamento] = Orcamento
- '                              !Quantidade = Tb1![Quantidade de MatÈria Prima] '* Lances!Quantidade
- '                               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '                              ![Seq√º√™ncia Do Produto] = Lances![Seq√º√™ncia Do Produto]
+ '                              ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+ '                              ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+ '                              !Quantidade = Tb1![Quantidade de Mat√©ria Prima] '* Lances!Quantidade
+ '                               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '                              ![Sequencia Do Item] = SeqItem!Sequencia + 1
- '                              ![Id Do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+ '                              ![Id Do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
  '                              !Pagto = MostraFinanceiro(![Id Do Pedido])
- '                              ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
- '                              ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
- '                               Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
- '                              !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+ '                              ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+ '                              ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+ '                               Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+ '                              !Localiza√ß√£o = LocalAux!Localiza√ß√£o
  '                           .Update
  '                           .BookMark = .LastModified
  '                          End With
@@ -906,22 +906,22 @@ End Sub
  '      'AdqTerceiros TB Pai
  '       Set Tb = Nothing
  '       Set Tb = VgDb.OpenRecordSet("Receita Primaria")
- '       Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '       Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '       Do While Not TerceirosAux.EOF
  '          With Tb
  '          .AddNew
- '            ![Seq¸Íncia Do Produto] = TerceirosAux![Seq¸Íncia Do Produto]
- '            ![Seq¸Íncia da MatÈria Prima] = TerceirosAux![Seq¸Íncia Do Produto]
- '            ![Seq¸Íncia Do OrÁamento] = Orcamento
+ '            ![Seq√º√™ncia Do Produto] = TerceirosAux![Seq√º√™ncia Do Produto]
+ '            ![Seq√º√™ncia da Mat√©ria Prima] = TerceirosAux![Seq√º√™ncia Do Produto]
+ '            ![Seq√º√™ncia Do Or√ßamento] = Orcamento
  '            !Quantidade = TerceirosAux!Quantidade
- '             Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '             Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '            ![Sequencia Do Item] = SeqItem!Sequencia + 1
- '            ![Id Do Pedido] = MostraCompra(TerceirosAux![Seq¸Íncia Do Produto])
+ '            ![Id Do Pedido] = MostraCompra(TerceirosAux![Seq√º√™ncia Do Produto])
  '            !Pagto = MostraFinanceiro(![Id Do Pedido])
- '            ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seq¸Íncia Do Produto])
- '            ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seq¸Íncia Do Produto])
- '             Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia Do Produto])
- '            !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+ '            ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], TerceirosAux![Seq√º√™ncia Do Produto])
+ '            ![Qtde Restante] = QtdeRestante(![Id Do Pedido], TerceirosAux![Seq√º√™ncia Do Produto])
+ '             Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia Do Produto])
+ '            !Localiza√ß√£o = LocalAux!Localiza√ß√£o
  '          .Update
  '          .BookMark = .LastModified
  '          End With
@@ -932,33 +932,33 @@ End Sub
  '      Set Tb = Nothing
  '      Set MP = Nothing
        
- '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq¸Íncia do OrÁamento] = " & Orcamento)' 2 = conjunto
+ '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)' 2 = conjunto
  '      Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
  '       Do While Not Tb.EOF
- '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do Conjunto] = " & Tb![Seq¸Íncia Do Conjunto])  'so ad terc
+ '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Conjunto] = " & Tb![Seq√º√™ncia Do Conjunto])  'so ad terc
  '          If MP.RecordCount > 0 Then
  '                Do While Not MP.EOF
- '                Set NaoIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia Do Produto])
+ '                Set NaoIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia Do Produto])
  '                 If Not NaoIncluir!Y Then
  '                   With ConjAux 'Validar Nao sair no ckeck list
  '                      .AddNew
- '                         '![Seq¸Íncia Do Produto] = 13242
- '                         ![Seq¸Íncia Do Conjunto] = MP![Seq¸Íncia Do Conjunto]
- '                         Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq¸Íncia do Produto], DescriÁ„o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do Conjunto] = " & MP![Seq¸Íncia Do Conjunto] & " and DescriÁ„o Like '%Hidroturbo Semi Pronto%'")
- '                         ![Seq¸Íncia Do Produto] = HSemi![Seq¸Íncia Do Produto]
+ '                         '![Seq√º√™ncia Do Produto] = 13242
+ '                         ![Seq√º√™ncia Do Conjunto] = MP![Seq√º√™ncia Do Conjunto]
+ '                         Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq√º√™ncia do Produto], Descri√ß√£o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Conjunto] = " & MP![Seq√º√™ncia Do Conjunto] & " and Descri√ß√£o Like '%Hidroturbo Semi Pronto%'")
+ '                         ![Seq√º√™ncia Do Produto] = HSemi![Seq√º√™ncia Do Produto]
                           
- '                         ![Seq¸Íncia da MatÈria Prima] = MP![Seq¸Íncia Do Produto]
- '                         ![Seq¸Íncia Do OrÁamento] = Orcamento
+ '                         ![Seq√º√™ncia da Mat√©ria Prima] = MP![Seq√º√™ncia Do Produto]
+ '                         ![Seq√º√™ncia Do Or√ßamento] = Orcamento
  '                         !Quantidade = MP![Quantidade Do Produto] * Tb!Quantidade
- '                          Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '                          Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '                         ![Sequencia Do Item] = SeqItem!Sequencia + 1
- '                         ![Id Do Pedido] = MostraCompra(MP![Seq¸Íncia Do Produto])
+ '                         ![Id Do Pedido] = MostraCompra(MP![Seq√º√™ncia Do Produto])
  '                         !Pagto = MostraFinanceiro(![Id Do Pedido])
- '                         ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MP![Seq¸Íncia Do Produto])
- '                         ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MP![Seq¸Íncia Do Produto])
- '                          Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia Do Produto])
- '                         !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+ '                         ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MP![Seq√º√™ncia Do Produto])
+ '                         ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MP![Seq√º√™ncia Do Produto])
+ '                          Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia Do Produto])
+ '                         !Localiza√ß√£o = LocalAux!Localiza√ß√£o
  '                      .Update
  '                      .BookMark = .LastModified
  '                   End With
@@ -977,71 +977,71 @@ End Sub
  '      Set TB2 = Nothing
  '      Set ReceitaAuxSec = Nothing
        
- '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ '      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
  '      Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
  '       Do While Not Tb.EOF
- '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seq¸Íncia do Conjunto] = " & Tb![Seq¸Íncia Do Conjunto])
+ '          Set MP = VgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seq√º√™ncia do Conjunto] = " & Tb![Seq√º√™ncia Do Conjunto])
  '          If MP.RecordCount > 0 Then
  '           Do While Not MP.EOF
- '            Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia Do Produto])
+ '            Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia Do Produto])
  '             Do While Not Tb1.EOF
- '             Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+ '             Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
  '             If Not TB2!Y Then
  '              With ConjAux
  '              .AddNew
- '                ![Seq¸Íncia Do Produto] = 13242
- '                ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
- '                ![Sequencia produto principal] = Tb1![Seq¸Íncia Do Produto]
- '                ![Seq¸Íncia Do Conjunto] = MP![Seq¸Íncia Do Conjunto]
- '                ![Seq¸Íncia Do OrÁamento] = Orcamento
- '                !Quantidade = Tb1![Quantidade de MatÈria Prima] * Tb!Quantidade
+ '                ![Seq√º√™ncia Do Produto] = 13242
+ '                ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+ '                ![Sequencia produto principal] = Tb1![Seq√º√™ncia Do Produto]
+ '                ![Seq√º√™ncia Do Conjunto] = MP![Seq√º√™ncia Do Conjunto]
+ '                ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+ '                !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * Tb!Quantidade
                  
-                   'Set SemiPronto = vgDb.OpenRecordSet("SELECT  DescriÁ„o From Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia Do Produto])
-                   'If Mid(SemiPronto!DescriÁ„o, 1, 22) <> "Hidroturbo Semi Pronto" Then
-                   '  !Quantidade = Tb1![Quantidade de MatÈria Prima] * Tb!Quantidade
+                   'Set SemiPronto = vgDb.OpenRecordSet("SELECT  Descri√ß√£o From Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia Do Produto])
+                   'If Mid(SemiPronto!Descri√ß√£o, 1, 22) <> "Hidroturbo Semi Pronto" Then
+                   '  !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * Tb!Quantidade
                    'Else
-                   '  !Quantidade = Tb1![Quantidade de MatÈria Prima]
+                   '  !Quantidade = Tb1![Quantidade de Mat√©ria Prima]
                    'End If
                  
-  '               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '               ![Sequencia Do Item] = SeqItem!Sequencia + 1
-  '               ![Id Do Pedido] = MostraCompra(Tb1![Seq¸Íncia da MatÈria Prima])
+  '               ![Id Do Pedido] = MostraCompra(Tb1![Seq√º√™ncia da Mat√©ria Prima])
   '               !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '               ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb1![Seq¸Íncia da MatÈria Prima])
-  '               ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb1![Seq¸Íncia da MatÈria Prima])
-  '                Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia Do Produto])
-  '               !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '               ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], Tb1![Seq√º√™ncia da Mat√©ria Prima])
+  '               ![Qtde Restante] = QtdeRestante(![Id Do Pedido], Tb1![Seq√º√™ncia da Mat√©ria Prima])
+  '                Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia Do Produto])
+  '               !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '             .Update
   '             .BookMark = .LastModified
   '             End With
   '            End If
   '            'Dentro da Outra Receita
-  '            Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y, [Mostrar Receita Secundaria] X FROM Produtos WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+  '            Set PodeIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y, [Mostrar Receita Secundaria] X FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
   '             If PodeIncluir!X Then
   '                If Not PodeIncluir!Y Then
-  '                Set MPrimaSec = VgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+  '                Set MPrimaSec = VgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
   '                  If MPrimaSec.RecordCount > 0 Then
   '                     Do While Not MPrimaSec.EOF
-  '                     Set NaoIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq¸Íncia do Produto] = " & MPrimaSec![Seq¸Íncia da MatÈria Prima])
+  '                     Set NaoIncluir = VgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq√º√™ncia do Produto] = " & MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
   '                     If Not NaoIncluir!Y Then
   '                     With ConjAux
   '                      .AddNew
-  '                        ![Seq¸Íncia Do Produto] = 13242
-  '                        ![Seq¸Íncia da MatÈria Prima] = MPrimaSec![Seq¸Íncia da MatÈria Prima]
-  '                       ' ![Sequencia produto principal] = MPrimaSec![Seq¸Íncia Do Produto]
-  '                        ![Sequencia produto principal] = Tb1![Seq¸Íncia da MatÈria Prima] 'MPrimaSec![Seq¸Íncia Do Produto]
-  '                        ![Seq¸Íncia Do Conjunto] = MP![Seq¸Íncia do Conjunto]
-  '                        ![Seq¸Íncia Do OrÁamento] = Orcamento
-  '                        !Quantidade = MPrimaSec![Quantidade de MatÈria Prima] * Tb1![Quantidade de MatÈria Prima]'Tb!Quantidade
-  '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '                        ![Seq√º√™ncia Do Produto] = 13242
+  '                        ![Seq√º√™ncia da Mat√©ria Prima] = MPrimaSec![Seq√º√™ncia da Mat√©ria Prima]
+  '                       ' ![Sequencia produto principal] = MPrimaSec![Seq√º√™ncia Do Produto]
+  '                        ![Sequencia produto principal] = Tb1![Seq√º√™ncia da Mat√©ria Prima] 'MPrimaSec![Seq√º√™ncia Do Produto]
+  '                        ![Seq√º√™ncia Do Conjunto] = MP![Seq√º√™ncia do Conjunto]
+  '                        ![Seq√º√™ncia Do Or√ßamento] = Orcamento
+  '                        !Quantidade = MPrimaSec![Quantidade de Mat√©ria Prima] * Tb1![Quantidade de Mat√©ria Prima]'Tb!Quantidade
+  '                         Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '                        ![Sequencia Do Item] = SeqItem!Sequencia + 1
-  '                        ![Id Do Pedido] = MostraCompra(MPrimaSec![Seq¸Íncia da MatÈria Prima])
+  '                        ![Id Do Pedido] = MostraCompra(MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
   '                        !Pagto = MostraFinanceiro(![Id Do Pedido])
-  '                        ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MPrimaSec![Seq¸Íncia da MatÈria Prima])
-  '                        ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MPrimaSec![Seq¸Íncia da MatÈria Prima])
-  '                         Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & MPrimaSec![Seq¸Íncia da MatÈria Prima])
-  '                        !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+  '                        ![Qtde Recebida] = QtdeRecebida(![Id Do Pedido], MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+  '                        ![Qtde Restante] = QtdeRestante(![Id Do Pedido], MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+  '                         Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+  '                        !Localiza√ß√£o = LocalAux!Localiza√ß√£o
   '                      .Update
   '                      .BookMark = .LastModified
   '                     End With
@@ -1059,12 +1059,12 @@ End Sub
   '      Tb.MoveNext
   '      Loop
              
-  '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  '        Set TbGravar = VgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   '
   '        Do While Not TbGravar.EOF
-  '           If Not Vazio (TbGravar!SituaÁ„o) Then
-  '              If TbGravar!SituaÁ„o = "Entregue ao Cliente" Or TbGravar!SituaÁ„o = "Separado p/ Entregar" Then
-  '                 VgDb.Execute "Update [Receita Primaria] Set SituaÁ„o = '" & TbGravar!SituaÁ„o & "' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & TbGravar![Seq¸Íncia Do Produto]
+  '           If Not Vazio (TbGravar!Situa√ß√£o) Then
+  '              If TbGravar!Situa√ß√£o = "Entregue ao Cliente" Or TbGravar!Situa√ß√£o = "Separado p/ Entregar" Then
+  '                 VgDb.Execute "Update [Receita Primaria] Set Situa√ß√£o = '" & TbGravar!Situa√ß√£o & "' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & TbGravar![Seq√º√™ncia Do Produto]
   '              End If
   '           End If
   '        TbGravar.MoveNext
@@ -1074,7 +1074,7 @@ End Sub
   '
   '     Screen.MousePointer = vbDefault
   '     frmRecprima.Show
-  '     frmRecprima.vgFiltroInicial = "[Seq¸Íncia do OrÁamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
+  '     frmRecprima.vgFiltroInicial = "[Seq√º√™ncia do Or√ßamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
   '     InicializaFiltro frmRecprima
   '     frmRecprima.TxtDtaAtual.Value = Date
         
@@ -1083,9 +1083,9 @@ End Sub
 
 'Private Sub AtualizaSituacao()
 ' If Prodstatus = 0 Then Exit Sub
-' VgDb.Execute "UPDATE [Itens Pendentes] Set SituaÁ„o = '" & Statustela & "'" & " Where [Seq¸Íncia do Produto] > 0 And [Seq¸Íncia do Produto] = " & Prodstatus & " And [Seq¸Íncia do OrÁamento] = " & Orcamento
+' VgDb.Execute "UPDATE [Itens Pendentes] Set Situa√ß√£o = '" & Statustela & "'" & " Where [Seq√º√™ncia do Produto] > 0 And [Seq√º√™ncia do Produto] = " & Prodstatus & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento
 '  If Statustela = "Entregue ao Cliente" Or Statustela = "Separado p/ Entregar" Then
-'     VgDb.Execute "UPDATE [Receita Primaria] Set SituaÁ„o = '" & Statustela & "'" & " Where [Seq¸Íncia do Produto] > 0 And [Seq¸Íncia do Produto] = " & Prodstatus & " And [Seq¸Íncia do OrÁamento] = " & Orcamento
+'     VgDb.Execute "UPDATE [Receita Primaria] Set Situa√ß√£o = '" & Statustela & "'" & " Where [Seq√º√™ncia do Produto] > 0 And [Seq√º√™ncia do Produto] = " & Prodstatus & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento
 '  End If
 ' grdContas.Rebind
 ' Txtsituacao.Text = ""
@@ -1095,8 +1095,8 @@ End Sub
 Private Function MostraItem() As String
   Dim Tb1 As New GRecordSet
   
-  'Set Tb = VgDb.OpenRecordSet("SELECT [Seq¸Íncia do Produto] Cod FROM [Itens Pendentes] WHERE [Sequencia do Item] = " & Prodstatus & " And [Seq¸Íncia do OrÁamento] = " & Orcamento)
-  Set Tb1 = vgDb.OpenRecordSet("SELECT DescriÁ„o Nome FROM Produtos WHERE [Seq¸Íncia do Produto] = " & Prodstatus)
+  'Set Tb = VgDb.OpenRecordSet("SELECT [Seq√º√™ncia do Produto] Cod FROM [Itens Pendentes] WHERE [Sequencia do Item] = " & Prodstatus & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
+  Set Tb1 = vgDb.OpenRecordSet("SELECT Descri√ß√£o Nome FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & Prodstatus)
   MostraItem = Tb1!Nome
   
 End Function
@@ -1109,20 +1109,20 @@ Private Sub AtualizaPai()
  Dim TbVal As New GRecordSet
  
  Screen.MousePointer = vbHourglass 'Ampulheta
- Set TbVal = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
- Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+ Set TbVal = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
  
  If TbVal.RecordCount = 0 Then: Exit Sub
  
-' Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+' Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
  
  'Entregues ao Cliente
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = 'Entregue ao Cliente'")
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = 'Entregue ao Cliente'")
   '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
-  '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = 'Entregue ao Cliente' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Entregue ao Cliente' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '            End If
   '       Tb1.MoveNext
   '       Loop
@@ -1130,28 +1130,28 @@ Private Sub AtualizaPai()
   'Loop
 
   
-  'Na GalvanizaÁ„o
+  'Na Galvaniza√ß√£o
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = 'Na GalvanizaÁ„o'")
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = 'Na Galvaniza√ß√£o'")
   '            If PodeAtualizar.RecordCount > 0 Then
-  '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = 'Na GalvanizaÁ„o' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Na Galvaniza√ß√£o' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '            End If
   '       Tb1.MoveNext
   '       Loop
   'Tb.MoveNext
   'Loop
   
-  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
   
-  '¡ Produzir
+  '√Å Produzir
   Do While Not Tb.EOF
-     Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia do Produto])
+     Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia do Produto])
          Do While Not Tb1.EOF
-            Set PodeAtualizar = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia do Produto] & " And SituaÁ„o = '¡ Produzir'")
+            Set PodeAtualizar = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia do Produto] & " And Situa√ß√£o = '√Å Produzir'")
               If PodeAtualizar.RecordCount > 0 Then
-                 vgDb.Execute ("UPDATE [Itens Pendentes] Set SituaÁ„o = '¡ Produzir' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia do Produto])
+                 vgDb.Execute ("UPDATE [Itens Pendentes] Set Situa√ß√£o = '√Å Produzir' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia do Produto])
               End If
          Tb1.MoveNext
          Loop
@@ -1159,31 +1159,31 @@ Private Sub AtualizaPai()
   Loop
   
   
-  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
   
   'Falta MPrima
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = 'Falta MPrima'")
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = 'Falta MPrima'")
   '            If PodeAtualizar.RecordCount > 0 Then
-  '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = 'Falta MPrima' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Falta MPrima' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '            End If
   '       Tb1.MoveNext
   '       Loop
   'Tb.MoveNext
   'Loop
     
- '¡ Galnanizar
+ '√Å Galnanizar
    
-  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
   
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = '¡ Galnanizar'")
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = '√Å Galnanizar'")
   '            If PodeAtualizar.RecordCount > 0 Then
-  '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = '¡ Galnanizar' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = '√Å Galnanizar' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '            End If
   '       Tb1.MoveNext
   '       Loop
@@ -1191,14 +1191,14 @@ Private Sub AtualizaPai()
   'Loop
   
   'Separado p/ Montar
-  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+  'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
  
   'Do While Not Tb.EOF
-  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '       Do While Not Tb1.EOF
-  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = 'Separado p/ Montar'")
+  '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = 'Separado p/ Montar'")
   '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
-  '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = 'Separado p/ Montar' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+  '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Separado p/ Montar' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
   '            End If
   '       Tb1.MoveNext
   '       Loop
@@ -1207,14 +1207,14 @@ Private Sub AtualizaPai()
   
   'Separado p/ Entregar
  
-   'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And SituaÁ„o <> '' Order By [Seq¸Íncia do Produto]")
+   'Set Tb = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And Situa√ß√£o <> '' Order By [Seq√º√™ncia do Produto]")
  
    'Do While Not Tb.EOF
-   '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+   '   Set Tb1 = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
    '       Do While Not Tb1.EOF
-   '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto] & " And SituaÁ„o = 'Separado p/ Entregar'")
+   '          Set PodeAtualizar = VgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto] & " And Situa√ß√£o = 'Separado p/ Entregar'")
    '            If PodeAtualizar.RecordCount = Tb1.RecordCount Then
-   '               VgDb.Execute("UPDATE [Itens Pendentes] Set SituaÁ„o = 'Separado p/ Entregar' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia Do Produto])
+   '               VgDb.Execute("UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Separado p/ Entregar' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia Do Produto])
    '            End If
    '       Tb1.MoveNext
    '      Loop
@@ -1232,8 +1232,8 @@ Private Function MostraCompra(Item As Long) As Long
  
  Set Tb = vgDb.OpenRecordSet("SELECT [Pedido de Compra Novo].[Id do Pedido], [Id do Produto] From [Pedido de Compra Novo] " & _
                              "Left Join [Produtos Do Pedido Compra] On [Pedido de Compra Novo].[Id Do Pedido] = [Produtos Do Pedido Compra].[Id Do Pedido] " & _
-                             "Left Join [OrÁamentos da compra] On [Pedido de Compra Novo].[Id Do Pedido] = [OrÁamentos da compra].[Id Do Pedido] " & _
-                             "Where Cancelado = 0 And Prepedido = 0 And [OrÁamentos da compra].[Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Id do Produto] = " & Item)
+                             "Left Join [Or√ßamentos da compra] On [Pedido de Compra Novo].[Id Do Pedido] = [Or√ßamentos da compra].[Id Do Pedido] " & _
+                             "Where Cancelado = 0 And Prepedido = 0 And [Or√ßamentos da compra].[Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Id do Produto] = " & Item)
  If Tb.RecordCount > 0 Then
     If Tb![Id do Pedido] > 0 Then
        MostraCompra = Tb![Id do Pedido]
@@ -1297,7 +1297,7 @@ End Function
 Private Function MostraFinanceiro(Pedido As Long) As String
  Dim Tb1 As New GRecordSet
  
- Set Tb1 = vgDb.OpenRecordSet("SELECT SUM([Valor Pago]) Pago, Sum([Valor Restante]) Restante From [ManutenÁ„o Contas] WHERE [Sequencia da Compra] = " & Pedido & " And [Sequencia da Compra] > 0")
+ Set Tb1 = vgDb.OpenRecordSet("SELECT SUM([Valor Pago]) Pago, Sum([Valor Restante]) Restante From [Manuten√ß√£o Contas] WHERE [Sequencia da Compra] = " & Pedido & " And [Sequencia da Compra] > 0")
  
   'If Tb1.RecordCount = 0 Or IsNull(Tb1!Pago) Or IsNull(Tb1!Restante) Then MostraFinanceiro = "" :Exit Function
   
@@ -1328,19 +1328,19 @@ Private Sub AtuPedido()
 Dim Tb As New GRecordSet
 Dim LocalAux As New GRecordSet
 
- Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
    If Tb.RecordCount = 0 Then: Exit Sub
       'Editar os Registros
       Do While Not Tb.EOF
          With Tb
           .Edit
-            ![Id do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+            ![Id do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
             !Pagto = MostraFinanceiro(![Id do Pedido])
-            ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-            ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-            ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-             Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-            !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+            ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+            ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+            ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+             Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+            !Localiza√ß√£o = LocalAux!Localiza√ß√£o
           .Update
           .BookMark = .LastModified
         End With
@@ -1355,29 +1355,29 @@ Private Sub RecPrima(Item As Long)
  Dim i As Integer, Lances As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
- 'Set Lances = VgDb.OpenRecordSet("SELECT QUANTIDADE FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & Item)
+ 'Set Lances = VgDb.OpenRecordSet("SELECT QUANTIDADE FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & Item)
 
- vgDb.Execute "DELETE FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia Do Produto] = " & Item
+ vgDb.Execute "DELETE FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia Do Produto] = " & Item
 
    'For i = 1 To Lances!Quantidade
-   Set TemReceita = vgDb.OpenRecordSet("SELECT * From [MatÈria Prima] Where [Seq¸Íncia Do Produto] = " & Item)
+   Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Mat√©ria Prima] Where [Seq√º√™ncia Do Produto] = " & Item)
      Do While Not TemReceita.EOF
-        Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+        Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
           If Not PodeIncluir!y Then
              With Tb
                .AddNew
-                  ![Seq¸Íncia do Produto] = Item
-                  ![Seq¸Íncia da MatÈria Prima] = TemReceita![Seq¸Íncia da MatÈria Prima]
-                  ![Seq¸Íncia do OrÁamento] = Orcamento
-                  !Quantidade = TemReceita![Quantidade de MatÈria Prima] '* ReceitaAux!Quantidade
-                   Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                  ![Seq√º√™ncia do Produto] = Item
+                  ![Seq√º√™ncia da Mat√©ria Prima] = TemReceita![Seq√º√™ncia da Mat√©ria Prima]
+                  ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                  !Quantidade = TemReceita![Quantidade de Mat√©ria Prima] '* ReceitaAux!Quantidade
+                   Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                   ![Sequencia do Item] = SeqItem!Sequencia + 1
-                  ![Id do Pedido] = MostraCompra(TemReceita![Seq¸Íncia da MatÈria Prima])
+                  ![Id do Pedido] = MostraCompra(TemReceita![Seq√º√™ncia da Mat√©ria Prima])
                   !Pagto = MostraFinanceiro(![Id do Pedido])
-                  ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
-                  ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
-                   Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
-                  !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                  ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                  ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                   Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                  !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                 .Update
                 .BookMark = .LastModified
              End With
@@ -1391,10 +1391,10 @@ End Sub
 Private Sub Extornar()
  Dim Tb As New GRecordSet
  
- Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
   
   If Tb.RecordCount > 0 Then
-     vgDb.OpenRecordSet "DELETE FROM [Receita Primaria] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento
+     vgDb.OpenRecordSet "DELETE FROM [Receita Primaria] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento
   End If
   MsgBox ("Concluido com Sucesso!")
  
@@ -1403,8 +1403,8 @@ End Sub
 
 Private Sub Entregou()
 
- vgDb.Execute "UPDATE [Itens Pendentes] Set SituaÁ„o = 'Entregue ao Cliente' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento
- vgDb.Execute "UPDATE [Receita Primaria] Set SituaÁ„o = 'Entregue ao Cliente' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento
+ vgDb.Execute "UPDATE [Itens Pendentes] Set Situa√ß√£o = 'Entregue ao Cliente' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento
+ vgDb.Execute "UPDATE [Receita Primaria] Set Situa√ß√£o = 'Entregue ao Cliente' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento
  grdContas.SetFocus
  SendK (vbKeyF5)
 
@@ -1426,19 +1426,19 @@ Private Sub ReceitaP()
        
  Screen.MousePointer = vbHourglass
               
-  Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+  Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria] Left Join Produtos On [Receita Primaria].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
    If Tb.RecordCount > 0 Then
       'Editar os Registros
         Do While Not Tb.EOF
            With Tb
             .Edit
-              ![Id do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+              ![Id do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
               !Pagto = MostraFinanceiro(![Id do Pedido])
-              ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-              ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-              ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-               Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-              !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+              ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+              ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+              ![Qtde Total] = QtdeTotal(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+               Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+              !Localiza√ß√£o = LocalAux!Localiza√ß√£o
             .Update
             .BookMark = .LastModified
            End With
@@ -1446,25 +1446,25 @@ Private Sub ReceitaP()
         Loop
    'Atualiza Os de Terceiros tb pai caso nao tiver
     Set TbAux = vgDb.OpenRecordSet("Receita Primaria")
-    Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+    Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
     
         Do While Not TerceirosAux.EOF
-           Set TbAux2 = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia do Produto] & " And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+           Set TbAux2 = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia do Produto] & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
            If TbAux2.RecordCount = 0 Then
             With TbAux
             .AddNew
-             ![Seq¸Íncia do Produto] = TerceirosAux![Seq¸Íncia do Produto]
-             ![Seq¸Íncia da MatÈria Prima] = TerceirosAux![Seq¸Íncia do Produto]
-             ![Seq¸Íncia do OrÁamento] = Orcamento
+             ![Seq√º√™ncia do Produto] = TerceirosAux![Seq√º√™ncia do Produto]
+             ![Seq√º√™ncia da Mat√©ria Prima] = TerceirosAux![Seq√º√™ncia do Produto]
+             ![Seq√º√™ncia do Or√ßamento] = Orcamento
              !Quantidade = TerceirosAux!Quantidade
-              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
              ![Sequencia do Item] = SeqItem!Sequencia + 1
-             ![Id do Pedido] = MostraCompra(TerceirosAux![Seq¸Íncia do Produto])
+             ![Id do Pedido] = MostraCompra(TerceirosAux![Seq√º√™ncia do Produto])
              !Pagto = MostraFinanceiro(![Id do Pedido])
-             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seq¸Íncia do Produto])
-             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seq¸Íncia do Produto])
-              Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia do Produto])
-             !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seq√º√™ncia do Produto])
+             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seq√º√™ncia do Produto])
+              Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia do Produto])
+             !Localiza√ß√£o = LocalAux!Localiza√ß√£o
             .Update
             .BookMark = .LastModified
             End With
@@ -1472,12 +1472,12 @@ Private Sub ReceitaP()
         TerceirosAux.MoveNext
         Loop
         
-          Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+          Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
         
           Do While Not TbGravar.EOF
-             If Not Vazio(TbGravar!SituaÁ„o) Then
-                If TbGravar!SituaÁ„o = "Entregue ao Cliente" Or TbGravar!SituaÁ„o = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set SituaÁ„o = '" & TbGravar!SituaÁ„o & "' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & TbGravar![Seq¸Íncia do Produto]
+             If Not Vazio(TbGravar!Situa√ß√£o) Then
+                If TbGravar!Situa√ß√£o = "Entregue ao Cliente" Or TbGravar!Situa√ß√£o = "Separado p/ Entregar" Then
+                   vgDb.Execute "Update [Receita Primaria] Set Situa√ß√£o = '" & TbGravar!Situa√ß√£o & "' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & TbGravar![Seq√º√™ncia do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1485,17 +1485,17 @@ Private Sub ReceitaP()
           
           Set TbGravar = Nothing
           'produzir teste
-         ' Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+         ' Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
         
           'Do While Not TbGravar.EOF
-          '   If Not Vazio(TbGravar!SituaÁ„o) Then
-          '      If TbGravar!SituaÁ„o = "¡ Produzir" Then
-          '         Set TbMat3 = VgDb.OpenRecordSet("SELECT * From [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & TbGravar![Seq¸Íncia Do Produto])
+          '   If Not Vazio(TbGravar!Situa√ß√£o) Then
+          '      If TbGravar!Situa√ß√£o = "√Å Produzir" Then
+          '         Set TbMat3 = VgDb.OpenRecordSet("SELECT * From [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & TbGravar![Seq√º√™ncia Do Produto])
                     'produto em processo
           '           Do While Not TbMat3.EOF
-          '              Set SemiPronto = VgDb.OpenRecordSet("SELECT [Tipo do Produto] Tipo From Produtos WHERE [Seq¸Íncia do Produto] = " & TbMat3![Seq¸Íncia da MatÈria Prima])
+          '              Set SemiPronto = VgDb.OpenRecordSet("SELECT [Tipo do Produto] Tipo From Produtos WHERE [Seq√º√™ncia do Produto] = " & TbMat3![Seq√º√™ncia da Mat√©ria Prima])
           '                If SemiPronto!Tipo = 6 then'produto em processo
-          '                   vgDb.Execute "Update [Receita Primaria] Set SituaÁ„o = '¡ Produzir' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia da MatÈria Prima] = " & TbMat3![Seq¸Íncia da MatÈria Prima]
+          '                   vgDb.Execute "Update [Receita Primaria] Set Situa√ß√£o = '√Å Produzir' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia da Mat√©ria Prima] = " & TbMat3![Seq√º√™ncia da Mat√©ria Prima]
           '                End If
           '              TbMat3.MoveNext
           '           Loop
@@ -1509,59 +1509,59 @@ Private Sub ReceitaP()
           
       'AtualizaPai
       frmRecprima.Show
-      frmRecprima.vgFiltroInicial = "[Seq¸Íncia do OrÁamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
+      frmRecprima.vgFiltroInicial = "[Seq√º√™ncia do Or√ßamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
       InicializaFiltro frmRecprima
       frmRecprima.TxtDtaAtual.Value = Date
       Exit Sub
       
    Else
       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
-      Set ProdAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where Lance = 0 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+      Set ProdAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where Lance = 0 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
          Do While Not ProdAux.EOF
-            Set MP = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & ProdAux![Seq¸Íncia do Produto])
+            Set MP = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & ProdAux![Seq√º√™ncia do Produto])
               If MP.RecordCount > 0 Then
                  Do While Not MP.EOF
-                 Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+                 Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
                   If Not PodeIncluir!y Then
                     With Tb
                        .AddNew
-                          ![Seq¸Íncia do Produto] = MP![Seq¸Íncia do Produto]
-                          ![Seq¸Íncia da MatÈria Prima] = MP![Seq¸Íncia da MatÈria Prima]
-                          ![Seq¸Íncia do OrÁamento] = Orcamento
-                          !Quantidade = MP![Quantidade de MatÈria Prima] * ProdAux!Quantidade
-                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                          ![Seq√º√™ncia do Produto] = MP![Seq√º√™ncia do Produto]
+                          ![Seq√º√™ncia da Mat√©ria Prima] = MP![Seq√º√™ncia da Mat√©ria Prima]
+                          ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                          !Quantidade = MP![Quantidade de Mat√©ria Prima] * ProdAux!Quantidade
+                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                           ![Sequencia do Item] = SeqItem!Sequencia + 1
-                          ![Id do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+                          ![Id do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
                           !Pagto = MostraFinanceiro(![Id do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                           Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-                          !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+                          !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                        .Update
                        .BookMark = .LastModified
                     End With
                   End If
                    'Secundaria
-                  Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+                  Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
                       If ReceitaAuxSec!x Then
-                         Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia da MatÈria Prima])
+                         Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia da Mat√©ria Prima])
                           Do While Not Tb1.EOF
-                           Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+                           Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
                            If Not TB2!y Then
                            With Tb
                              .AddNew
-                               ![Seq¸Íncia do Produto] = ProdAux![Seq¸Íncia do Produto]
-                               ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
-                               ![Seq¸Íncia do OrÁamento] = Orcamento
-                               !Quantidade = Tb1![Quantidade de MatÈria Prima] * ProdAux!Quantidade
-                                Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                               ![Seq√º√™ncia do Produto] = ProdAux![Seq√º√™ncia do Produto]
+                               ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+                               ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                               !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * ProdAux!Quantidade
+                                Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                                ![Sequencia do Item] = SeqItem!Sequencia + 1
-                               ![Id do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+                               ![Id do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
                                !Pagto = MostraFinanceiro(![Id do Pedido])
-                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                                Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-                               !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                                Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+                               !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                             .Update
                             .BookMark = .LastModified
                            End With
@@ -1578,52 +1578,52 @@ Private Sub ReceitaP()
         Loop
       End If
       'iNTERMEDIARIOS
-      Set Lances = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] LEFT JOIN Produtos ON PRODUTOS.[Seq¸Íncia do Produto] = [Itens Pendentes].[Seq¸Íncia do Produto] WHERE Lance = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+      Set Lances = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] LEFT JOIN Produtos ON PRODUTOS.[Seq√º√™ncia do Produto] = [Itens Pendentes].[Seq√º√™ncia do Produto] WHERE Lance = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                Do While Not Lances.EOF
                    For i = 1 To Lances!Quantidade
-                     Set TemReceita = vgDb.OpenRecordSet("SELECT * From [MatÈria Prima] Where [Seq¸Íncia Do Produto] = " & Lances![Seq¸Íncia do Produto])
+                     Set TemReceita = vgDb.OpenRecordSet("SELECT * From [Mat√©ria Prima] Where [Seq√º√™ncia Do Produto] = " & Lances![Seq√º√™ncia do Produto])
                      Do While Not TemReceita.EOF
-                     Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+                     Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
                        If Not PodeIncluir!y Then
                         With Tb
                          .AddNew
-                          ![Seq¸Íncia do Produto] = Lances![Seq¸Íncia do Produto]
-                          ![Seq¸Íncia da MatÈria Prima] = TemReceita![Seq¸Íncia da MatÈria Prima]
-                          ![Seq¸Íncia do OrÁamento] = Orcamento
-                          !Quantidade = TemReceita![Quantidade de MatÈria Prima] '* ReceitaAux!Quantidade
-                          Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                          ![Seq√º√™ncia do Produto] = Lances![Seq√º√™ncia do Produto]
+                          ![Seq√º√™ncia da Mat√©ria Prima] = TemReceita![Seq√º√™ncia da Mat√©ria Prima]
+                          ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                          !Quantidade = TemReceita![Quantidade de Mat√©ria Prima] '* ReceitaAux!Quantidade
+                          Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                           ![Sequencia do Item] = SeqItem!Sequencia + 1
-                          ![Id do Pedido] = MostraCompra(TemReceita![Seq¸Íncia da MatÈria Prima])
+                          ![Id do Pedido] = MostraCompra(TemReceita![Seq√º√™ncia da Mat√©ria Prima])
                           !Pagto = MostraFinanceiro(![Id do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seq¸Íncia da MatÈria Prima])
-                           Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
-                          !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
+                          !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                         .Update
                         .BookMark = .LastModified
                         End With
                        End If
                      'Secundaria
-                      Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+                      Set ReceitaAuxSec = vgDb.OpenRecordSet("SELECT [Mostrar Receita Secundaria] X From Produtos Where [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
                        If ReceitaAuxSec!x Then
-                          Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & TemReceita![Seq¸Íncia da MatÈria Prima])
+                          Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & TemReceita![Seq√º√™ncia da Mat√©ria Prima])
                           Do While Not Tb1.EOF
-                          Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+                          Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
                            If Not TB2!y Then
                             With Tb
                              .AddNew
-                               ![Seq¸Íncia do Produto] = Lances![Seq¸Íncia do Produto]
-                               ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
-                               ![Seq¸Íncia do OrÁamento] = Orcamento
-                               !Quantidade = Tb1![Quantidade de MatÈria Prima] '* Lances!Quantidade
-                                Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                               ![Seq√º√™ncia do Produto] = Lances![Seq√º√™ncia do Produto]
+                               ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+                               ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                               !Quantidade = Tb1![Quantidade de Mat√©ria Prima] '* Lances!Quantidade
+                                Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                                ![Sequencia do Item] = SeqItem!Sequencia + 1
-                               ![Id do Pedido] = MostraCompra(Tb![Seq¸Íncia da MatÈria Prima])
+                               ![Id do Pedido] = MostraCompra(Tb![Seq√º√™ncia da Mat√©ria Prima])
                                !Pagto = MostraFinanceiro(![Id do Pedido])
-                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq¸Íncia da MatÈria Prima])
-                                Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb![Seq¸Íncia da MatÈria Prima])
-                               !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                               ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                               ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb![Seq√º√™ncia da Mat√©ria Prima])
+                                Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb![Seq√º√™ncia da Mat√©ria Prima])
+                               !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                             .Update
                             .BookMark = .LastModified
                            End With
@@ -1640,22 +1640,22 @@ Private Sub ReceitaP()
        'AdqTerceiros TB Pai
         Set Tb = Nothing
         Set Tb = vgDb.OpenRecordSet("Receita Primaria")
-        Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+        Set TerceirosAux = vgDb.OpenRecordSet("SELECT * From [Itens Pendentes] Left Join Produtos On [Itens Pendentes].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
         Do While Not TerceirosAux.EOF
            With Tb
            .AddNew
-             ![Seq¸Íncia do Produto] = TerceirosAux![Seq¸Íncia do Produto]
-             ![Seq¸Íncia da MatÈria Prima] = TerceirosAux![Seq¸Íncia do Produto]
-             ![Seq¸Íncia do OrÁamento] = Orcamento
+             ![Seq√º√™ncia do Produto] = TerceirosAux![Seq√º√™ncia do Produto]
+             ![Seq√º√™ncia da Mat√©ria Prima] = TerceirosAux![Seq√º√™ncia do Produto]
+             ![Seq√º√™ncia do Or√ßamento] = Orcamento
              !Quantidade = TerceirosAux!Quantidade
-              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+              Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
              ![Sequencia do Item] = SeqItem!Sequencia + 1
-             ![Id do Pedido] = MostraCompra(TerceirosAux![Seq¸Íncia do Produto])
+             ![Id do Pedido] = MostraCompra(TerceirosAux![Seq√º√™ncia do Produto])
              !Pagto = MostraFinanceiro(![Id do Pedido])
-             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seq¸Íncia do Produto])
-             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seq¸Íncia do Produto])
-              Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & TerceirosAux![Seq¸Íncia do Produto])
-             !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+             ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], TerceirosAux![Seq√º√™ncia do Produto])
+             ![Qtde Restante] = QtdeRestante(![Id do Pedido], TerceirosAux![Seq√º√™ncia do Produto])
+              Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & TerceirosAux![Seq√º√™ncia do Produto])
+             !Localiza√ß√£o = LocalAux!Localiza√ß√£o
            .Update
            .BookMark = .LastModified
            End With
@@ -1666,33 +1666,33 @@ Private Sub ReceitaP()
        Set Tb = Nothing
        Set MP = Nothing
        
-       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq¸Íncia do OrÁamento] = " & Orcamento) ' 2 = conjunto
+       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento) ' 2 = conjunto
        Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
         Do While Not Tb.EOF
-           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seq¸Íncia do Conjunto] = " & Tb![Seq¸Íncia do Conjunto])  'so ad terc
+           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] WHERE [Material Adquirido de Terceiro] = 1 And [Seq√º√™ncia do Conjunto] = " & Tb![Seq√º√™ncia do Conjunto])  'so ad terc
            If MP.RecordCount > 0 Then
                  Do While Not MP.EOF
-                 Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia do Produto])
+                 Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia do Produto])
                   If Not NaoIncluir!y Then
                     With ConjAux 'Validar Nao sair no ckeck list
                        .AddNew
-                          '![Seq¸Íncia Do Produto] = 13242
-                          ![Seq¸Íncia do Conjunto] = MP![Seq¸Íncia do Conjunto]
-                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq¸Íncia do Produto], DescriÁ„o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do Conjunto] = " & MP![Seq¸Íncia do Conjunto] & " and DescriÁ„o Like '%Hidroturbo Semi Pronto%'")
-                          ![Seq¸Íncia do Produto] = 0 'HSemi![Seq¸Íncia do Produto]
+                          '![Seq√º√™ncia Do Produto] = 13242
+                          ![Seq√º√™ncia do Conjunto] = MP![Seq√º√™ncia do Conjunto]
+                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq√º√™ncia do Produto], Descri√ß√£o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Conjunto] = " & MP![Seq√º√™ncia do Conjunto] & " and Descri√ß√£o Like '%Hidroturbo Semi Pronto%'")
+                          ![Seq√º√™ncia do Produto] = 0 'HSemi![Seq√º√™ncia do Produto]
                           
-                          ![Seq¸Íncia da MatÈria Prima] = MP![Seq¸Íncia do Produto]
-                          ![Seq¸Íncia do OrÁamento] = Orcamento
+                          ![Seq√º√™ncia da Mat√©ria Prima] = MP![Seq√º√™ncia do Produto]
+                          ![Seq√º√™ncia do Or√ßamento] = Orcamento
                           !Quantidade = MP![Quantidade Do Produto] * Tb!Quantidade
-                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                           ![Sequencia do Item] = SeqItem!Sequencia + 1
-                          ![Id do Pedido] = MostraCompra(MP![Seq¸Íncia do Produto])
+                          ![Id do Pedido] = MostraCompra(MP![Seq√º√™ncia do Produto])
                           !Pagto = MostraFinanceiro(![Id do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MP![Seq¸Íncia do Produto])
-                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MP![Seq¸Íncia do Produto])
-                           Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia do Produto])
-                          !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MP![Seq√º√™ncia do Produto])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MP![Seq√º√™ncia do Produto])
+                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia do Produto])
+                          !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                        .Update
                        .BookMark = .LastModified
                     End With
@@ -1711,76 +1711,76 @@ Private Sub ReceitaP()
        Set TB2 = Nothing
        Set ReceitaAuxSec = Nothing
        
-       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq¸Íncia do OrÁamento] = " & Orcamento)
+       Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] Where TP = 2 And [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
        Set ConjAux = vgDb.OpenRecordSet("SELECT * FROM [Receita Primaria]")
        
         Do While Not Tb.EOF
-           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seq¸Íncia do Conjunto] = " & Tb![Seq¸Íncia do Conjunto])
+           Set MP = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] WHERE [Mostrar Receita Secundaria] = 1 And [Seq√º√™ncia do Conjunto] = " & Tb![Seq√º√™ncia do Conjunto])
            If MP.RecordCount > 0 Then
             Do While Not MP.EOF
-             Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & MP![Seq¸Íncia do Produto])
+             Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & MP![Seq√º√™ncia do Produto])
               Do While Not Tb1.EOF
-              Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+              Set TB2 = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y FROM Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
               If Not TB2!y Then
                With ConjAux
                .AddNew
-                 '![Seq¸Íncia do Produto] = 13242
-                 ![Seq¸Íncia da MatÈria Prima] = Tb1![Seq¸Íncia da MatÈria Prima]
-                 ![Sequencia Produto Principal] = Tb1![Seq¸Íncia do Produto]
-                 ![Seq¸Íncia do Conjunto] = MP![Seq¸Íncia do Conjunto]
-                   Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq¸Íncia do Produto], DescriÁ„o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do Conjunto] = " & MP![Seq¸Íncia do Conjunto] & " and DescriÁ„o Like '%Hidroturbo Semi Pronto%'")
-                  ![Seq¸Íncia do Produto] = HSemi![Seq¸Íncia do Produto]
-                 ![Seq¸Íncia do OrÁamento] = Orcamento
-                 !Quantidade = Tb1![Quantidade de MatÈria Prima] * Tb!Quantidade
+                 '![Seq√º√™ncia do Produto] = 13242
+                 ![Seq√º√™ncia da Mat√©ria Prima] = Tb1![Seq√º√™ncia da Mat√©ria Prima]
+                 ![Sequencia Produto Principal] = Tb1![Seq√º√™ncia do Produto]
+                 ![Seq√º√™ncia do Conjunto] = MP![Seq√º√™ncia do Conjunto]
+                   Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq√º√™ncia do Produto], Descri√ß√£o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Conjunto] = " & MP![Seq√º√™ncia do Conjunto] & " and Descri√ß√£o Like '%Hidroturbo Semi Pronto%'")
+                  ![Seq√º√™ncia do Produto] = HSemi![Seq√º√™ncia do Produto]
+                 ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                 !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * Tb!Quantidade
                  
-                   'Set SemiPronto = vgDb.OpenRecordSet("SELECT  DescriÁ„o From Produtos Where [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia Do Produto])
-                   'If Mid(SemiPronto!DescriÁ„o, 1, 22) <> "Hidroturbo Semi Pronto" Then
-                   '  !Quantidade = Tb1![Quantidade de MatÈria Prima] * Tb!Quantidade
+                   'Set SemiPronto = vgDb.OpenRecordSet("SELECT  Descri√ß√£o From Produtos Where [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia Do Produto])
+                   'If Mid(SemiPronto!Descri√ß√£o, 1, 22) <> "Hidroturbo Semi Pronto" Then
+                   '  !Quantidade = Tb1![Quantidade de Mat√©ria Prima] * Tb!Quantidade
                    'Else
-                   '  !Quantidade = Tb1![Quantidade de MatÈria Prima]
+                   '  !Quantidade = Tb1![Quantidade de Mat√©ria Prima]
                    'End If
                  
-                 Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                 Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                  ![Sequencia do Item] = SeqItem!Sequencia + 1
-                 ![Id do Pedido] = MostraCompra(Tb1![Seq¸Íncia da MatÈria Prima])
+                 ![Id do Pedido] = MostraCompra(Tb1![Seq√º√™ncia da Mat√©ria Prima])
                  !Pagto = MostraFinanceiro(![Id do Pedido])
-                 ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb1![Seq¸Íncia da MatÈria Prima])
-                 ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb1![Seq¸Íncia da MatÈria Prima])
-                  Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia do Produto])
-                 !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                 ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], Tb1![Seq√º√™ncia da Mat√©ria Prima])
+                 ![Qtde Restante] = QtdeRestante(![Id do Pedido], Tb1![Seq√º√™ncia da Mat√©ria Prima])
+                  Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia do Produto])
+                 !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                .Update
                .BookMark = .LastModified
                End With
               End If
               'Dentro da Outra Receita
-              Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y, [Mostrar Receita Secundaria] X FROM Produtos WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+              Set PodeIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y, [Mostrar Receita Secundaria] X FROM Produtos WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
                If PodeIncluir!x Then
                   If Not PodeIncluir!y Then
-                  Set MPrimaSec = vgDb.OpenRecordSet("SELECT * FROM [MatÈria Prima] WHERE [Seq¸Íncia do Produto] = " & Tb1![Seq¸Íncia da MatÈria Prima])
+                  Set MPrimaSec = vgDb.OpenRecordSet("SELECT * FROM [Mat√©ria Prima] WHERE [Seq√º√™ncia do Produto] = " & Tb1![Seq√º√™ncia da Mat√©ria Prima])
                     If MPrimaSec.RecordCount > 0 Then
                        Do While Not MPrimaSec.EOF
-                       Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq¸Íncia do Produto] = " & MPrimaSec![Seq¸Íncia da MatÈria Prima])
+                       Set NaoIncluir = vgDb.OpenRecordSet("SELECT [Nao sair no checklist] Y From Produtos WHERE [Seq√º√™ncia do Produto] = " & MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
                        If Not NaoIncluir!y Then
                        With ConjAux
                         .AddNew
                           
-                          ![Seq¸Íncia da MatÈria Prima] = MPrimaSec![Seq¸Íncia da MatÈria Prima]
-                         ' ![Sequencia produto principal] = MPrimaSec![Seq¸Íncia Do Produto]
-                          ![Sequencia Produto Principal] = Tb1![Seq¸Íncia da MatÈria Prima] 'MPrimaSec![Seq¸Íncia Do Produto]
-                          ![Seq¸Íncia do Conjunto] = MP![Seq¸Íncia do Conjunto]
+                          ![Seq√º√™ncia da Mat√©ria Prima] = MPrimaSec![Seq√º√™ncia da Mat√©ria Prima]
+                         ' ![Sequencia produto principal] = MPrimaSec![Seq√º√™ncia Do Produto]
+                          ![Sequencia Produto Principal] = Tb1![Seq√º√™ncia da Mat√©ria Prima] 'MPrimaSec![Seq√º√™ncia Do Produto]
+                          ![Seq√º√™ncia do Conjunto] = MP![Seq√º√™ncia do Conjunto]
                           
-                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq¸Íncia do Produto], DescriÁ„o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq¸Íncia do Produto] = Produtos.[Seq¸Íncia do Produto] Where [Seq¸Íncia do Conjunto] = " & MP![Seq¸Íncia do Conjunto] & " and DescriÁ„o Like '%Hidroturbo Semi Pronto%'")
-                          ![Seq¸Íncia do Produto] = HSemi![Seq¸Íncia do Produto]
-                          ![Seq¸Íncia do OrÁamento] = Orcamento
-                          !Quantidade = MPrimaSec![Quantidade de MatÈria Prima] * Tb1![Quantidade de MatÈria Prima] 'Tb!Quantidade
-                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                           Set HSemi = vgDb.OpenRecordSet("SELECT Produtos.[Seq√º√™ncia do Produto], Descri√ß√£o From [Itens do Conjunto] Left Join Produtos On [Itens do Conjunto].[Seq√º√™ncia do Produto] = Produtos.[Seq√º√™ncia do Produto] Where [Seq√º√™ncia do Conjunto] = " & MP![Seq√º√™ncia do Conjunto] & " and Descri√ß√£o Like '%Hidroturbo Semi Pronto%'")
+                          ![Seq√º√™ncia do Produto] = HSemi![Seq√º√™ncia do Produto]
+                          ![Seq√º√™ncia do Or√ßamento] = Orcamento
+                          !Quantidade = MPrimaSec![Quantidade de Mat√©ria Prima] * Tb1![Quantidade de Mat√©ria Prima] 'Tb!Quantidade
+                           Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Sequencia FROM [Receita Primaria] Where [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                           ![Sequencia do Item] = SeqItem!Sequencia + 1
-                          ![Id do Pedido] = MostraCompra(MPrimaSec![Seq¸Íncia da MatÈria Prima])
+                          ![Id do Pedido] = MostraCompra(MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
                           !Pagto = MostraFinanceiro(![Id do Pedido])
-                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MPrimaSec![Seq¸Íncia da MatÈria Prima])
-                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MPrimaSec![Seq¸Íncia da MatÈria Prima])
-                           Set LocalAux = vgDb.OpenRecordSet("SELECT LocalizaÁ„o From Produtos WHERE [Seq¸Íncia do Produto] = " & MPrimaSec![Seq¸Íncia da MatÈria Prima])
-                          !LocalizaÁ„o = LocalAux!LocalizaÁ„o
+                          ![Qtde Recebida] = QtdeRecebida(![Id do Pedido], MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+                          ![Qtde Restante] = QtdeRestante(![Id do Pedido], MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+                           Set LocalAux = vgDb.OpenRecordSet("SELECT Localiza√ß√£o From Produtos WHERE [Seq√º√™ncia do Produto] = " & MPrimaSec![Seq√º√™ncia da Mat√©ria Prima])
+                          !Localiza√ß√£o = LocalAux!Localiza√ß√£o
                         .Update
                         .BookMark = .LastModified
                        End With
@@ -1798,12 +1798,12 @@ Private Sub ReceitaP()
         Tb.MoveNext
         Loop
              
-          Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+          Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
         
           Do While Not TbGravar.EOF
-             If Not Vazio(TbGravar!SituaÁ„o) Then
-                If TbGravar!SituaÁ„o = "Entregue ao Cliente" Or TbGravar!SituaÁ„o = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set SituaÁ„o = '" & TbGravar!SituaÁ„o & "' WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento & " And [Seq¸Íncia do Produto] = " & TbGravar![Seq¸Íncia do Produto]
+             If Not Vazio(TbGravar!Situa√ß√£o) Then
+                If TbGravar!Situa√ß√£o = "Entregue ao Cliente" Or TbGravar!Situa√ß√£o = "Separado p/ Entregar" Then
+                   vgDb.Execute "Update [Receita Primaria] Set Situa√ß√£o = '" & TbGravar!Situa√ß√£o & "' WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento & " And [Seq√º√™ncia do Produto] = " & TbGravar![Seq√º√™ncia do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1813,7 +1813,7 @@ Private Sub ReceitaP()
                               
        Screen.MousePointer = vbDefault
        frmRecprima.Show
-       frmRecprima.vgFiltroInicial = "[Seq¸Íncia do OrÁamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
+       frmRecprima.vgFiltroInicial = "[Seq√º√™ncia do Or√ßamento] = " & Orcamento '& " And [Sequencia do Item] = 1"
        InicializaFiltro frmRecprima
        frmRecprima.TxtDtaAtual.Value = Date
         
@@ -1830,17 +1830,17 @@ Private Sub Grid_AfterUpdateRecord(Index As Integer, ByVal Row As Long, Columns(
  Situacao = Columns(5)
  
  If Index = 0 Then
-    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Produtos WHERE [Seq¸Íncia do Produto] = " & Produto)
+    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Produtos WHERE [Seq√º√™ncia do Produto] = " & Produto)
  Else
-    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Conjuntos WHERE [Seq¸Íncia do Conjunto] = " & Produto)
+    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Conjuntos WHERE [Seq√º√™ncia do Conjunto] = " & Produto)
  End If
  
    If Situacao = "" Then Exit Sub
    If Not PAux!x Then
-      MsgBox ("ATEN«√O Impossivel Prosseguir Receita N„o Conferida")
-        If Situacao = "¡ Produzir" Then
+      MsgBox ("ATEN√á√ÉO Impossivel Prosseguir Receita N√£o Conferida")
+        If Situacao = "√Å Produzir" Then
         vgDb.BeginTrans
-           vgDb.Execute "Update [Itens Pendentes] set SituaÁ„o = '' WHERE [Seq¸Íncia do Produto] = " & Produto & " And [Seq¸Íncia do OrÁamento] = " & Orcamento
+           vgDb.Execute "Update [Itens Pendentes] set Situa√ß√£o = '' WHERE [Seq√º√™ncia do Produto] = " & Produto & " And [Seq√º√™ncia do Or√ßamento] = " & Orcamento
         vgDb.CommitTrans
            frmConpedi.Txtorc.SetFocus
            grdContas.ReBind
@@ -1859,23 +1859,23 @@ Private Sub PreValidaPedido()
    On Error GoTo DeuErro
   
    Set Itens = vgDb.OpenRecordSet("SELECT * FROM(" & _
-                                  "SELECT PO.[Seq¸Íncia do OrÁamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seq¸Íncia do Produto], P.DescriÁ„o, U.[Sigla da Unidade], PO.[Valor Unit·rio] " & _
-                                  "FROM [Produtos do OrÁamento] PO LEFT JOIN Produtos P ON PO.[Seq¸Íncia Do Produto] = P.[Seq¸Íncia Do Produto] " & _
-                                  "LEFT JOIN Unidades U ON P.[Seq¸Íncia da Unidade] = U.[Seq¸Íncia da Unidade] " & _
+                                  "SELECT PO.[Seq√º√™ncia do Or√ßamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seq√º√™ncia do Produto], P.Descri√ß√£o, U.[Sigla da Unidade], PO.[Valor Unit√°rio] " & _
+                                  "FROM [Produtos do Or√ßamento] PO LEFT JOIN Produtos P ON PO.[Seq√º√™ncia Do Produto] = P.[Seq√º√™ncia Do Produto] " & _
+                                  "LEFT JOIN Unidades U ON P.[Seq√º√™ncia da Unidade] = U.[Seq√º√™ncia da Unidade] " & _
                                   "UNION ALL " & _
-                                  "SELECT CO.[Seq¸Íncia do OrÁamento],'Conjuntos' Tipo, C.[Receita Conferida], C.[Seq¸Íncia Do Conjunto], C.DescriÁ„o, U.[Sigla da Unidade], CO.[Valor Unit·rio] " & _
-                                  "FROM [Conjuntos do OrÁamento] CO LEFT JOIN Conjuntos C ON CO.[Seq¸Íncia Do Conjunto] = C.[Seq¸Íncia Do Conjunto] " & _
-                                  "LEFT JOIN Unidades U ON C.[Seq¸Íncia da Unidade] = U.[Seq¸Íncia da Unidade] " & _
-                                  "LEFT JOIN OrÁamento O ON CO.[Seq¸Íncia do OrÁamento] = O.[Seq¸Íncia do OrÁamento] " & _
+                                  "SELECT CO.[Seq√º√™ncia do Or√ßamento],'Conjuntos' Tipo, C.[Receita Conferida], C.[Seq√º√™ncia Do Conjunto], C.Descri√ß√£o, U.[Sigla da Unidade], CO.[Valor Unit√°rio] " & _
+                                  "FROM [Conjuntos do Or√ßamento] CO LEFT JOIN Conjuntos C ON CO.[Seq√º√™ncia Do Conjunto] = C.[Seq√º√™ncia Do Conjunto] " & _
+                                  "LEFT JOIN Unidades U ON C.[Seq√º√™ncia da Unidade] = U.[Seq√º√™ncia da Unidade] " & _
+                                  "LEFT JOIN Or√ßamento O ON CO.[Seq√º√™ncia do Or√ßamento] = O.[Seq√º√™ncia do Or√ßamento] " & _
                                   "UNION ALL " & _
-                                  "SELECT PeOrc.[Seq¸Íncia do OrÁamento],'PeÁas' Tipo, Pe.[Receita Conferida], Pe.[Seq¸Íncia Do Produto], Pe.DescriÁ„o, U.[Sigla da Unidade], PeOrc.[Valor Unit·rio] " & _
-                                  "FROM [PeÁas do OrÁamento] PeOrc LEFT JOIN Produtos Pe ON PeOrc.[Seq¸Íncia Do Produto] = Pe.[Seq¸Íncia Do Produto] " & _
-                                  "LEFT JOIN Unidades U ON Pe.[Seq¸Íncia da Unidade] = U.[Seq¸Íncia da Unidade] " & _
-                                  "LEFT JOIN OrÁamento O ON PeOrc.[Seq¸Íncia do OrÁamento] = O.[Seq¸Íncia do OrÁamento] " & _
+                                  "SELECT PeOrc.[Seq√º√™ncia do Or√ßamento],'Pe√ßas' Tipo, Pe.[Receita Conferida], Pe.[Seq√º√™ncia Do Produto], Pe.Descri√ß√£o, U.[Sigla da Unidade], PeOrc.[Valor Unit√°rio] " & _
+                                  "FROM [Pe√ßas do Or√ßamento] PeOrc LEFT JOIN Produtos Pe ON PeOrc.[Seq√º√™ncia Do Produto] = Pe.[Seq√º√™ncia Do Produto] " & _
+                                  "LEFT JOIN Unidades U ON Pe.[Seq√º√™ncia da Unidade] = U.[Seq√º√™ncia da Unidade] " & _
+                                  "LEFT JOIN Or√ßamento O ON PeOrc.[Seq√º√™ncia do Or√ßamento] = O.[Seq√º√™ncia do Or√ßamento] " & _
                                   ") A " & _
-                                  "WHERE [Seq¸Íncia do OrÁamento] = " & Orcamento)
+                                  "WHERE [Seq√º√™ncia do Or√ßamento] = " & Orcamento)
                                   
-   'Set Servicos = vgDb.OpenRecordSet("SELECT * FROM [ServiÁos do OrÁamento] WHERE [Seq¸Íncia do OrÁamento] = " & Sequencia_do_Orcamento)
+   'Set Servicos = vgDb.OpenRecordSet("SELECT * FROM [Servi√ßos do Or√ßamento] WHERE [Seq√º√™ncia do Or√ßamento] = " & Sequencia_do_Orcamento)
                                                                
    If Itens.RecordCount = 0 Then Exit Sub
    
@@ -1885,7 +1885,7 @@ Private Sub PreValidaPedido()
  
    Do While Not Itens.EOF
 
-      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seq¸Íncia do Produto] & " - " & Itens!DescriÁ„o
+      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seq√º√™ncia do Produto] & " - " & Itens!Descri√ß√£o
       Itens.MoveNext
    Loop
       
@@ -1911,11 +1911,11 @@ End Sub
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
-   On Error Resume Next                           'prepara para possÌveis erros
+   On Error Resume Next                           'prepara para poss√≠veis erros
    Orcamento = txtCampo(0).Value
    NroNfe = txtCampo(1).Value
    Prodstatus = txtCampo(2).Value
-   If Err Then Err.Clear                          'se deu algum erro, vamos reset·-lo
+   If Err Then Err.Clear                          'se deu algum erro, vamos reset√°-lo
 End Sub
 
 'poe relacionamento e filtro na lista externa (combobox)
@@ -1923,26 +1923,26 @@ Private Sub PoeRelEFiltroCbo(Index As Integer)
    On Error Resume Next
    Select Case Index
       Case 0
-         txtCampo(0).Filter = "(((([Seq¸Íncia do OrÁamento] > " & 0 & ") AND [Venda Fechada] = " & 1 & ") AND Cancelado = " & 0 & ") OR [Seq¸Íncia do Geral] = " & 517 & ") OR [Seq¸Íncia do Geral] = " & 3960 & " Or [Ordem Interna] = " & 1 & ""
+         txtCampo(0).Filter = "(((([Seq√º√™ncia do Or√ßamento] > " & 0 & ") AND [Venda Fechada] = " & 1 & ") AND Cancelado = " & 0 & ") OR [Seq√º√™ncia do Geral] = " & 517 & ") OR [Seq√º√™ncia do Geral] = " & 3960 & " Or [Ordem Interna] = " & 1 & ""
       Case 1
          txtCampo(1).Filter = "(Transmitido = " & 1 & ") AND Autorizado = " & 1 & ""
       Case 2
-         txtCampo(2).Filter = "([Seq¸Íncia do Produto] > " & 0 & ") AND Inativo = " & 0 & ""
+         txtCampo(2).Filter = "([Seq√º√™ncia do Produto] > " & 0 & ") AND Inativo = " & 0 & ""
    End Select
 End Sub
 
-'executa processos/validacoes nos campos do formu·rio
+'executa processos/validacoes nos campos do formu√°rio
 Public Function Executar(vgOq As String) As String
    Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
    On Error GoTo DeuErro                          'fica na espera de um erro...
    vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
-   vgOk = True                                    'se a validaÁ„o esta OK
-   vgNVez = 0                                     'porque n„o fez o processo/validacoes
+   vgOk = True                                    'se a valida√ß√£o esta OK
+   vgNVez = 0                                     'porque n√£o fez o processo/validacoes
    If vgOq = VALIDACOES Then
       InicializaApelidos COM_TEXTBOX
       If True Then
          vgOk = (Orcamento > 0)
-         vgMsg$ = "Informe o OrÁamento!"
+         vgMsg$ = "Informe o Or√ßamento!"
          If Not vgOk Then txtCampo(0).SetFocus
       End If
       If vgOk Then vgMsg$ = ""
@@ -1955,24 +1955,24 @@ Public Function Executar(vgOq As String) As String
       ExecutaVisivel
       ExecutaPreValidacao
    End If
-   Executar = vgMsg$                              'prepara saida da funÁ„o
+   Executar = vgMsg$                              'prepara saida da fun√ß√£o
    Exit Function                                  'e cai fora...
 
 DeuErro:
    Select Case Err                                'vamos verificar se deu algum erro
-      Case 3197                                   'registro acabou de ser alterado por outro usu·rio
+      Case 3197                                   'registro acabou de ser alterado por outro usu√°rio
          Resume
       Case 3046, 3158, 3186, 3187, 3188, 3189, 3218, 3260
-         vgNVez = vgNVez + 1                      'outro usu·rio acessando
+         vgNVez = vgNVez + 1                      'outro usu√°rio acessando
          If vgNVez <= 10 Then                     'vamos tentar 10 vezes
             Delay 0.5                             'mais antes espera 1/2 segundo
             Resume                                'antes de tentar
          End If
    End Select
-   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'n„o teve jeito o erro n„o pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'n√£o teve jeito o erro n√£o pode ser evitado...
 End Function
 
-'mostra fÛrmulas no formul·rio
+'mostra f√≥rmulas no formul√°rio
 Private Sub MostraFormulas()
    On Error Resume Next                           'previne erros...
    Label(2).Caption = Cliente()
@@ -1982,7 +1982,7 @@ Private Sub MostraFormulas()
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
-'executa a prÈ-validaÁ„o dos campos
+'executa a pr√©-valida√ß√£o dos campos
 Private Sub ExecutaPreValidacao()
    Dim Ok As Boolean
    On Error Resume Next                           'prepara para possiveis erros
@@ -1997,17 +1997,25 @@ Private Sub ExecutaPreValidacao()
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
-'coloca os campos visÌveis segundo a condiÁ„o
-Private Sub ExecutaVisivel()
-   On Error Resume Next                           'prepara para possiveis erros
-   txtCampo(2).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
+   'apaga dados antigos do oramento atual antes de recarregar
+   vgDb.ExecuteSQL "DELETE FROM [Itens Pendentes] WHERE [Seqncia Do Oramento] = " & Orcamento
+
+   'recria registros conforme o oramento selecionado
+   MySQL
+
+   Call CarregaContas
+
+   'se a tela de Receita Primria estiver aberta, atualiza seu grid de forma forada
+   If frmRecprima.Visible Then
+       frmRecprima.Reposition True, False
+   End If
    Label(4).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    txtCampo(3).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    Botao(3).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
-'evento - quando o bot„o for pressionado o Bot„o do PopupMenu
+'evento - quando o bot√£o for pressionado o Bot√£o do PopupMenu
 Public Sub AcaoPopUp0(Index As Integer)
    Select Case Index
       Case 1
@@ -2024,7 +2032,7 @@ Private Sub PcbAtualizaOrc_Click()
    If frmRecprima.Visible Then frmRecprima.Reposition
 End Sub
 
-'evento - quando o conte˙do do campo for alterado
+'evento - quando o conte√∫do do campo for alterado
 Private Sub txtCp_Change(Index As Integer)
    If vgPriVez Or txtCampo(Index).PriVez Then Exit Sub
    InicializaApelidos COM_TEXTBOX                         'inicializa apelidos com o que esta sendo digitado
@@ -2072,7 +2080,7 @@ Private Sub txtCp_LostFocus(Index As Integer)
 End Sub
 
 
-'evento - inicializaÁ„o do formul·rio
+'evento - inicializa√ß√£o do formul√°rio
 Private Sub Form_Load()
    On Error GoTo DeuErro
    Screen.MousePointer = vbHourglass
@@ -2120,18 +2128,18 @@ DeuErro:
 End Sub
 
 
-'evento - quando o formul·rio receber o foco
+'evento - quando o formul√°rio receber o foco
 Private Sub Form_Activate()
    Dim i As Integer
    AtivaForm Me
 End Sub
 
-'evento - redefinido o tamanho do formul·rio
+'evento - redefinido o tamanho do formul√°rio
 Private Sub Form_Resize()
    AjustaPanFundo Me
 End Sub
 
-'define as propriedades das classe dos campos do formu·rio
+'define as propriedades das classe dos campos do formu√°rio
 Public Sub DefineControles()
  On Error GoTo DeuErro
 
@@ -2141,9 +2149,9 @@ Public Sub DefineControles()
    Set bottxtCampo2(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(2).DataType = 1
    txtCampo(2).Mask = ""
-   txtCampo(2).BoundColumn = "Seq¸Íncia do Produto"
-   txtCampo(2).ListFields = "Seq¸Íncia do Produto; DescriÁ„o"
-   txtCampo(2).OrderFields = "Seq¸Íncia do Produto; DescriÁ„o"
+   txtCampo(2).BoundColumn = "Seq√º√™ncia do Produto"
+   txtCampo(2).ListFields = "Seq√º√™ncia do Produto; Descri√ß√£o"
+   txtCampo(2).OrderFields = "Seq√º√™ncia do Produto; Descri√ß√£o"
    txtCampo(2).Relation = ""
    txtCampo(2).Source = "Produtos"
    txtCampo(2).vgfrmGMCale.grdListaG.AutoRebind = True
@@ -2161,20 +2169,20 @@ Public Sub DefineControles()
    Set txtCampo(0).CtPri = txtCp(0)
    txtCampo(0).DataType = 1
    txtCampo(0).Mask = "999999"
-   txtCampo(0).BoundColumn = "Seq¸Íncia do OrÁamento"
-   txtCampo(0).ListFields = "Seq¸Íncia do OrÁamento"
-   txtCampo(0).OrderFields = "Seq¸Íncia do OrÁamento-"
+   txtCampo(0).BoundColumn = "Seq√º√™ncia do Or√ßamento"
+   txtCampo(0).ListFields = "Seq√º√™ncia do Or√ßamento"
+   txtCampo(0).OrderFields = "Seq√º√™ncia do Or√ßamento-"
    txtCampo(0).Relation = ""
-   txtCampo(0).Source = "OrÁamento"
+   txtCampo(0).Source = "Or√ßamento"
    txtCampo(0).vgfrmGMCale.grdListaG.AutoRebind = True
 
    Set txtCampo(1).CtPri = txtCp(1)
    txtCampo(1).DataType = 1
    txtCampo(1).Mask = "999999"
    txtCampo(1).Editable = False
-   txtCampo(1).BoundColumn = "Seq¸Íncia da Nota Fiscal"
-   txtCampo(1).ListFields = "N˙mero da NFe"
-   txtCampo(1).OrderFields = "N˙mero da NFe-"
+   txtCampo(1).BoundColumn = "Seq√º√™ncia da Nota Fiscal"
+   txtCampo(1).ListFields = "N√∫mero da NFe"
+   txtCampo(1).OrderFields = "N√∫mero da NFe-"
    txtCampo(1).Relation = ""
    txtCampo(1).Source = "Nota Fiscal"
    txtCampo(1).vgfrmGMCale.grdListaG.AutoRebind = True
@@ -2188,7 +2196,7 @@ DeuErro:
  CErr.Show
 End Sub
 
-'evento - descarregando o formul·rio da memÛria
+'evento - descarregando o formul√°rio da mem√≥ria
 Private Sub Form_Unload(Cancel As Integer)
    Dim i As Integer
    On Error Resume Next
@@ -2205,17 +2213,17 @@ Private Sub Form_Unload(Cancel As Integer)
    Next
    Set vgFG = Nothing
    Set vgTooltips = Nothing
-   Set frmConpedi = Nothing                       'libera o segmento de cÛdigo do form
+   Set frmConpedi = Nothing                       'libera o segmento de c√≥digo do form
 End Sub
 
-'evento - quando qq tecla for digitada no formul·rio
+'evento - quando qq tecla for digitada no formul√°rio
 Private Sub Form_KeyPress(KeyAscii As Integer)
    If KeyAscii = vbKeyEscape Then                 'se teclou ESC
-      Unload Me                                   'tira este form da memÛria
+      Unload Me                                   'tira este form da mem√≥ria
    End If
 End Sub
 
-'evento - quando o bot„o for pressionado
+'evento - quando o bot√£o for pressionado
 Private Sub Botao_Click(Index As Integer)
    Dim Cancel As Boolean, hMenu As Long, pt As POINTAPI
    If vgPriVez Then Exit Sub
@@ -2224,7 +2232,7 @@ Private Sub Botao_Click(Index As Integer)
          ReceitaP
       Case 1
          hMenu = CreatePopupMenu()
-         AppendMenu hMenu, MF_STRING, 1, "SituaÁ„o do Pedido"
+         AppendMenu hMenu, MF_STRING, 1, "Situa√ß√£o do Pedido"
          GetCursorPos pt
          AcaoPopUp0 TrackPopupMenuEx(hMenu, TPM_LEFTALIGN Or TPM_RETURNCMD Or TPM_RIGHTBUTTON, pt.x, pt.y, Me.hWnd, ByVal 0&)
          DestroyMenu hMenu
@@ -2236,7 +2244,7 @@ Private Sub Botao_Click(Index As Integer)
 End Sub
 
 
-'evento - quando o bot„o for apertado
+'evento - quando o bot√£o for apertado
 Private Sub bottxtCampo2_Click(Index As Integer)
    txtCampo(2).SetFocus
    DoEvents
