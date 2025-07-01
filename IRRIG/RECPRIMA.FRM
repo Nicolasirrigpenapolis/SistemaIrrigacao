@@ -1,288 +1,216 @@
-Version 5.00
-Begin VB.Form frmRecprima
-   ForeColor                =   &H80000008
-   BorderStyle              =   2
-   Height                   =   10425
-   Left                     =   1605
-   LinkTopic                =   "Recprima"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   9990
-   ScaleWidth               =   17160
-   Top                      =   745
-   Width                    =   17250
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   0
-      BevelInner               =   0
-      BorderWidth              =   1
-      BevelWidth               =   1
-      BorderStyle              =   2
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   9810
-      Left                     =   15
-      Width                    =   16980
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   29935
-      _extenty                 =   17295
-      Index                    =   0 
-      Begin IRRIG.GListV Grid
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+VERSION 5.00
+Begin VB.Form frmRecprima 
+   ClientHeight    =   9840
+   ClientLeft      =   1725
+   ClientTop       =   1215
+   ClientWidth     =   17010
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Recprima"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   9840
+   ScaleWidth      =   17010
+   Begin IRRIG.GPainel Painel 
+      Height          =   9810
+      Index           =   0
+      Left            =   15
+      TabIndex        =   4
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   16980
+      _ExtentX        =   29924
+      _ExtentY        =   17304
+      BevelOuter      =   0
+      Stretch         =   -1  'True
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   0
+         Left            =   15600
+         TabIndex        =   2
+         TabStop         =   0   'False
+         Top             =   240
+         Width           =   1050
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         CellTextColor            =   &H80000008
-         EditTextColor            =   &H80000008
-         FilterBackColor          =   8454143
-         LeftBackColor            =   -2147483633
-         MaxBackColor             =   -2147483633
-         AvgBackColor             =   -2147483633
-         MinBackColor             =   -2147483633
-         SumBackColor             =   -2147483633
-         StatusBackColor          =   -2147483633
-         ColSelectBackColor       =   -2147483633
-         CellBackColor            =   -2147483643
-         EditBackColor            =   8454143
-         SelectBackColor          =   -2147483635
-         StripesBackColor         =   13750737
-         BackColor                =   -2147483643
-         CaptionBackColor         =   -2147483633
-         ColHeaderBackColor       =   -2147483633
-         GridLinesColor           =   14737632
-         FilterTextColor          =   -2147483640
-         AvgTextColor             =   16512
-         MinTextColor             =   255
-         MaxTextColor             =   49152
-         StatusTextColor          =   -2147483630
-         SumTextColor             =   16711680
-         ColTextBackColor         =   12582912
-         CellTextColor            =   -2147483640
-         SelectTextColor          =   -2147483634
-         EditTextColor            =   -2147483640
-         StripesTextColor         =   -2147483630
-         CaptionTextColor         =   -2147483630
-         ColHeaderTextColor       =   -2147483630
-         TabIndex                 =   0
-         TabStop                  =   -1
-         Stripes                  =   0
-         SaveGridBars             =   0
-         Height                   =   6360
-         Left                     =   120
-         Width                    =   16575
-         Top                      =   1035
-         Caption                  =   ""
-         ShowGridCaption          =   0
-         Index                    =   0 
+         Caption         =   "Imprimir"
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   16740
-         Width                    =   45
-         Top                      =   7740
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GListV Grid 
+         Height          =   6360
+         Index           =   0
+         Left            =   120
+         TabIndex        =   0
+         Top             =   1035
+         Width           =   16575
+         _ExtentX        =   0
+         _ExtentY        =   0
+         EditTextColor   =   -2147483640
+         CellTextColor   =   -2147483640
+         StripesBackColor=   14737632
+         RowHeight       =   330
+         ShowGridCaption =   0   'False
+         SaveGridStripes =   0   'False
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "."
-         Index                    =   0 
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   0
-         Height                   =   375
-         Left                     =   120
-         Width                    =   11550
-         Top                      =   120
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   14.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         DataField       =   "Seqüência do Orçamento"
+         Height          =   255
+         Index           =   0
+         Left            =   13605
+         MultiLine       =   -1  'True
+         TabIndex        =   1
+         Top             =   300
+         Width           =   720
+      End
+      Begin VB.CommandButton bottxtCampo1 
+         Height          =   300
+         Index           =   0
+         Left            =   1380
+         Style           =   1  'Graphical
+         TabIndex        =   9
+         TabStop         =   0   'False
+         Top             =   8730
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Seqüência do orçamento"
-         Index                    =   1 
+         Height          =   300
+         Index           =   1
+         Left            =   270
+         MaxLength       =   254
+         TabIndex        =   3
+         Top             =   8730
+         Width           =   1095
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   0
-         Height                   =   375
-         Left                     =   120
-         Width                    =   9525
-         Top                      =   495
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   14.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "."
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   0
+         Left            =   16740
+         TabIndex        =   5
+         Top             =   7740
+         Width           =   45
+      End
+      Begin VB.Label Label 
+         Caption         =   "Seqüência do orçamento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Situação dos Itens"
-         Index                    =   2 
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   1
+         Left            =   120
+         TabIndex        =   6
+         Top             =   120
+         Width           =   11550
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Caption         =   "Situação dos Itens"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         TabIndex                 =   1
-         TabStop                  =   -1
-         Height                   =   255
-         Left                     =   13605
-         Width                    =   720
-         Top                      =   300
-         DataField                =   "Seqüência do Orçamento"
-         Index                    =   0 
-         MultiLine                =   -1
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   2
+         Left            =   120
+         TabIndex        =   7
+         Top             =   495
+         Width           =   9525
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   2
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   480
-         Left                     =   15600
-         Width                    =   1050
-         Top                      =   240
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Verdana"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Imprimir"
-         Index                    =   0 
-      End
-      Begin VB.Label labFdo1
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   255
-         Top                      =   8715
-         Width                    =   1395
-         Height                   =   330
-      End
-      Begin VB.CommandButton bottxtCampo1
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   1380
-         Top                      =   8730
-         Width                    =   255
-         Height                   =   300
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   3
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   270
-         Width                    =   1095
-         Top                      =   8730
-         Index                    =   1 
+      Begin VB.Label labFdo1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   330
+         Left            =   255
+         TabIndex        =   8
+         Top             =   8715
+         Width           =   1395
       End
    End
-         Begin IRRIG.GListV grdBrowse 
-                  Height          =   795
-                  Left            =   60
-                  TabIndex        =   0
-                  Top             =   330
-                  Width           =   1575
-                  _ExtentX        =   2778
-                  _ExtentY        =   1402
-                  FullRowSelect   =   0           'False
-                  RowHeight       =   225
-                  AllowEdit       =   -1          'True
-                  AllowInsert     =   -1          'True
-                  AllowDelete     =   -1          'True
-                  ManualUpdate    =   -1          'True
-                  ManualDelete    =   -1          'True
-                  NavigationAddMode=   1
-                  ShowGridCaption =   0           'False
-                  ShowFilterBar   =   -1          'True
-                  Caption         =   ""
-                  CacheSize       =   100
-                  BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
-                           Size            =   8.25
-                           Charset         =   0
-                           Weight          =   400
-                           Underline       =   0  'False
-                           Italic          =   0  'False
-                           StrikeThrough   =   0  'False
-                  EndProperty
-         End
+   Begin IRRIG.GListV grdBrowse 
+      Height          =   795
+      Left            =   60
+      TabIndex        =   10
+      Top             =   330
+      Width           =   1575
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
+   End
 End
-Attribute VB_name = "frmRecprima"
+Attribute VB_Name = "frmRecprima"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -299,43 +227,44 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgFiltroInicial As String                  'filtro inicial do módulo   
+Public vgFiltroInicial As String                  'filtro inicial do módulo
 Public vgOrdemInicial As String                   'ordem inicial do módulo
-Public vgUltimaOrdem As String                    'última ordenação feita no módulo    
-Public vgUltimoFiltro As String                   'último filtro definido no módulo   
+Public vgUltimaOrdem As String                    'última ordenação feita no módulo
+Public vgUltimoFiltro As String                   'último filtro definido no módulo
 Public vgUltimoFiltroComTit As String             'titulo do último filtro definido no módulo
-Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo 
+Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo
 Public vgUltimoTabIndex As Integer                'último campo com foco do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
+Public vgPriVez As Integer                        'flag de carregamento do módulo
 Public WithEvents vgTb As GRecordSet              'tabela de dados do módulo
+Attribute vgTb.VB_VarHelpID = -1
 Public vgSQL As String                            'expressão SQL que define o módulo
-Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo 
-Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo 
-Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo 
+Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo
+Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo
+Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo 
+Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo
 Public vgTemAlteracaoGrids As Integer              'flag se tem ou não alteração nos grids
 Public vgTemBrowse As Integer                     'flag se tem ou não janela em grade no módulo
 Public vgSemVincDados As Integer                  'Flag para definir formulários sem vinculo com dados
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgRepeticao As Integer                     'flag de repetição do último reg digitado
 Public vgAlterar As Integer                       'flag de Alteracao de registros
 Public vgUltAlterar As Integer                    'flag de última situação de "pode alterar"
-Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso 
-Public vgIndDefault As String                     'indice default do módulo 
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
+Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso
+Public vgIndDefault As String                     'indice default do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
 Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
-Dim txtCampo(1) As New FormataCampos              'classe dos campos tipo texto do módulo  
+Dim txtCampo(1) As New FormataCampos              'classe dos campos tipo texto do módulo
 Dim Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade As Double
 Dim Sequencia_do_Orcamento As Long, Sequencia_do_Item As Long, Situacao As String
 Dim Pedidos As String, Id_do_Pedido As Long, Pagto As String
 Dim Qtde_Recebida As Double, Qt_Separada As Double, Sequencia_do_Conjunto As Long
 Dim Qtde_Restante As Double, Qtde_Total As Double, Localizacao As String
 Dim Sequencia_produto_principal As Long, Dt_Final As Variant
-Public Grdmp As Object, Lblajuste As Object, Txtorc As Object
+Public Grdmp As Object, lblAjuste As Object, Txtorc As Object
 Public TxtDtaAtual As Object
 Dim Receita_primaria As New GRecordSet, Produtos As New GRecordSet, Receita_primaria1 As New GRecordSet
 
@@ -345,8 +274,8 @@ Public Sub CarregaTotalizador()
    With Grdmp
     .ShowSumCol(.Columns("Quantidade").Index) = True
     .ShowFilterBar = True
-    .HideStatus = True      
-    '.ColumnWidth(CInt(.Columns("Seqüência do Produto").Index)) = 0                  
+    .HideStatus = True
+    '.ColumnWidth(CInt(.Columns("Seqüência do Produto").Index)) = 0
    End With
    
 End Sub
@@ -355,8 +284,8 @@ End Sub
 Private Function Cliente() As String
  Dim Pedido As New GRecordSet, Geral As New GRecordSet
  
-   Set Pedido = VgDb.OpenRecordSet("Select [Seqüência do Geral] Seq From Orçamento Where [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-   Set Geral = VgDb.OpenRecordSet("Select [Razão Social] From Geral Where [Seqüência do Geral] = " & Pedido!Seq)
+   Set Pedido = vgDb.OpenRecordSet("Select [Seqüência do Geral] Seq From Orçamento Where [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+   Set Geral = vgDb.OpenRecordSet("Select [Razão Social] From Geral Where [Seqüência do Geral] = " & Pedido!Seq)
    Cliente = Geral![Razão Social]
    
 End Function
@@ -382,7 +311,7 @@ End Function
  '      Tb.MoveNext
  '   Loop
  'Else
- 'MostraCompra = 0    
+ 'MostraCompra = 0
  'End If
  
 'End Function
@@ -470,10 +399,10 @@ Private Sub AtuEstoque(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima 
    Pedidos As String, Id_do_Pedido As Long, Pagto As String, _
    Qtde_Recebida As Double, Qt_Separada As Double, Sequencia_do_Conjunto As Long, _
    Qtde_Restante As Double, Qtde_Total As Double, Localizacao As String, _
-   Sequencia_produto_principal As Long) 
-  ContaEstoque(Sequencia_da_Materia_Prima)
-  ContaEstoque(Sequencia_do_Produto) 'teste
-  AtuSituacao(Sequencia_do_Produto) 
+   Sequencia_produto_principal As Long)
+  ContaEstoque (Sequencia_da_Materia_Prima)
+  ContaEstoque (Sequencia_do_Produto) 'teste
+  AtuSituacao (Sequencia_do_Produto)
 End Sub
 
 
@@ -487,29 +416,29 @@ Public Sub ContaEstoque(Produto As Long)
  Dim Comprados As Double
  
  Estoque = 0
- Set Produtos = vgDb.OpenRecordSet("SELECT * FROM Produtos Where Inativo = 0 And Produtos.[Seqüência do Produto] = " & Produto)  
+ Set Produtos = vgDb.OpenRecordSet("SELECT * FROM Produtos Where Inativo = 0 And Produtos.[Seqüência do Produto] = " & Produto)
 
    
    Do While Not Produtos.EOF
       Estoque = Produtos![Quantidade Contábil]
       
-      Set Saidas2 = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência Do Produto] & Filtro2() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Entregar
-      Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência Do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
+      Set Saidas2 = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro2() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Entregar
+      Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
    
-      If Saidas2.RecordCount > 0 Then 
+      If Saidas2.RecordCount > 0 Then
          Estoque = Estoque - Saidas2!Qtd
-         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]
+         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
-      If Saidas.RecordCount > 0 Then 
+      If Saidas.RecordCount > 0 Then
          Estoque = Estoque - Saidas!Qtd
-         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]
+         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Produtos![Material Adquirido de Terceiro] Then
-         Comprados = QtdeRecebida(Produtos![Seqüência Do Produto])
+         Comprados = QtdeRecebida(Produtos![Seqüência do Produto])
          Estoque = Estoque + Comprados
       End If
       
-   vgDb.Execute "Update Produtos Set [Quantidade Fisica] = " & Substitui(CDbl(Estoque), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]  
+   vgDb.Execute "Update Produtos Set [Quantidade Fisica] = " & Substitui(CDbl(Estoque), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
    Produtos.MoveNext
    Loop
     
@@ -518,7 +447,7 @@ End Sub
 
 Private Function QtdeRecebida(Produto As Long) As Double
  Dim Tb As New GRecordSet
- Dim Tb1 As New GRecordSet 
+ Dim Tb1 As New GRecordSet
 
  Set Tb = vgDb.OpenRecordSet("SELECT SUM([Qtde Restante]) X From [Bx Produtos Pedido Compra] Left Join [Pedido de Compra Novo] On [Bx Produtos Pedido Compra].[Id do Pedido] = [Pedido de Compra Novo].[Id do Pedido] Where [Bx Produtos Pedido Compra].[Id do Produto] = " & Produto & " And Cancelado = 0 And [Pedido Fechado] = 0 And Prepedido = 0")
  Set Tb1 = vgDb.OpenRecordSet("SELECT SUM(Qtde) X From [Produtos do Pedido Compra] Left Join [Pedido de Compra Novo] On [Produtos do Pedido Compra].[Id do Pedido] = [Pedido de Compra Novo].[Id do Pedido] Where [Produtos do Pedido Compra].[Id do Produto] = " & Produto & " And Cancelado = 0 And [Pedido Fechado] = 0 And Prepedido = 0")
@@ -527,11 +456,11 @@ Private Function QtdeRecebida(Produto As Long) As Double
    If Tb1.RecordCount > 0 Or Tb.RecordCount > 0 Then
    
       If Tb!x > 0 Then
-         QtdeRecebida = Tb!X
+         QtdeRecebida = Tb!x
       Else
-         QtdeRecebida = Tb1!X     
-      End If   
-      vgDb.Execute "Update Produtos Set [Comprados Aguardando] = " & Substitui(Cdbl(QtdeRecebida), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
+         QtdeRecebida = Tb1!x
+      End If
+      vgDb.Execute "Update Produtos Set [Comprados Aguardando] = " & Substitui(CDbl(QtdeRecebida), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produto
       
    End If
  
@@ -611,8 +540,9 @@ Private Sub Form_Load()
    AjustaTamanho Me
    IniciaFormDados Me
    Set Receita_primaria = vgTb
-   vgPriVez = False
-   Reposition
+      vgPriVez = False
+   Reposition True, False
+
    CarregaTotalizador
    Screen.MousePointer = vbDefault
    Exit Sub
@@ -644,36 +574,36 @@ Private Sub AtuSituacao(Item As Long)
   
 End Sub
 
-Public Sub LigaDesligaBotoes
-   Botao( 0 ).Enabled =    Botao( 0 ).Enabled And Permitido("Receita primaria", ACAO_NAVEGANDO)
-   Botao( 0 ).Enabled =    Botao( 0 ).Enabled And Permitido("Receita primaria", ACAO_NAVEGANDO)
+Public Sub LigaDesligaBotoes()
+   Botao(0).Enabled = Botao(0).Enabled And Permitido("Receita primaria", ACAO_NAVEGANDO)
+   Botao(0).Enabled = Botao(0).Enabled And Permitido("Receita primaria", ACAO_NAVEGANDO)
 End Sub
 
-Public Property Get txtCampoTab(Index As Integer) As FormataCampos   
+Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
 End Sub
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
-   If (vgTb.RecordCount > 0 And vgTb.Eof = False And vgTb.Bof = False) Or vgComOQue = COM_TEXTBOX Then
+   If (vgTb.RecordCount > 0 And vgTb.EOF = False And vgTb.BOF = False) Or vgComOQue = COM_TEXTBOX Then
       If vgComOQue = COM_TEXTBOX Then
-         Sequencia_do_Produto = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seqüência do Produto])
-         Sequencia_da_Materia_Prima = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seqüência da Matéria Prima])
-         Quantidade = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb!Quantidade)
+         Sequencia_do_Produto = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seqüência do Produto])
+         Sequencia_da_Materia_Prima = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seqüência da Matéria Prima])
+         Quantidade = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb!Quantidade)
          Sequencia_do_Orcamento = txtCampo(0).Value
-         Sequencia_do_Item = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Sequencia do Item])
-         Situacao = Iif(vgSituacao = ACAO_INCLUINDO,"", vgTb!Situação)
-         Pedidos = Iif(vgSituacao = ACAO_INCLUINDO,"", vgTb!Pedidos)
-         Id_do_Pedido = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Id do Pedido])
-         Pagto = Iif(vgSituacao = ACAO_INCLUINDO,"", vgTb!Pagto)
-         Qtde_Recebida = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Qtde Recebida])
-         Qt_Separada = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Qt Separada])
-         Sequencia_do_Conjunto = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seqüência do Conjunto])
-         Qtde_Restante = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Qtde Restante])
-         Qtde_Total = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Qtde Total])
-         Localizacao = Iif(vgSituacao = ACAO_INCLUINDO,"", vgTb!Localização)
-         Sequencia_produto_principal = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Sequencia produto principal])
+         Sequencia_do_Item = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Sequencia do Item])
+         Situacao = IIf(vgSituacao = ACAO_INCLUINDO, "", vgTb!Situação)
+         Pedidos = IIf(vgSituacao = ACAO_INCLUINDO, "", vgTb!Pedidos)
+         Id_do_Pedido = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Id do Pedido])
+         Pagto = IIf(vgSituacao = ACAO_INCLUINDO, "", vgTb!Pagto)
+         Qtde_Recebida = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Qtde Recebida])
+         Qt_Separada = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Qt Separada])
+         Sequencia_do_Conjunto = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seqüência do Conjunto])
+         Qtde_Restante = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Qtde Restante])
+         Qtde_Total = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Qtde Total])
+         Localizacao = IIf(vgSituacao = ACAO_INCLUINDO, "", vgTb!Localização)
+         Sequencia_produto_principal = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Sequencia Produto Principal])
       Else
          Sequencia_do_Produto = IIf(IsNull(vgTb![Seqüência do Produto]), 0, vgTb![Seqüência do Produto])
          Sequencia_da_Materia_Prima = IIf(IsNull(vgTb![Seqüência da Matéria Prima]), 0, vgTb![Seqüência da Matéria Prima])
@@ -690,7 +620,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Qtde_Restante = IIf(IsNull(vgTb![Qtde Restante]), 0, vgTb![Qtde Restante])
          Qtde_Total = IIf(IsNull(vgTb![Qtde Total]), 0, vgTb![Qtde Total])
          Localizacao = IIf(IsNull(vgTb!Localização), "", vgTb!Localização)
-         Sequencia_produto_principal = IIf(IsNull(vgTb![Sequencia produto principal]), 0, vgTb![Sequencia produto principal])
+         Sequencia_produto_principal = IIf(IsNull(vgTb![Sequencia Produto Principal]), 0, vgTb![Sequencia Produto Principal])
       End If
       Dt_Final = txtCampo(1).Value
    End If
@@ -706,13 +636,13 @@ Private Sub AnalisaCondicoes()
       If mdiIRRIG.ActiveForm.Name <> Me.Name And Me.Visible Then Exit Sub
    End If
    With mdiIRRIG
-      i = (False) and Permitido(vgIdentTab, ACAO_INCLUINDO)
+      i = (False) And Permitido(vgIdentTab, ACAO_INCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemInclusao = i
       grdBrowse.AllowInsert = i
       .botInclui.Enabled = i
       .Menu_Inclui.Enabled = i
-      i = (False) and Permitido(vgIdentTab, ACAO_EXCLUINDO)
+      i = (False) And Permitido(vgIdentTab, ACAO_EXCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemExclusao = i
       grdBrowse.AllowDelete = i
@@ -747,7 +677,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       End If
       If vgOk Then
          vgMsg$ = ""
-      ElseIf vgColumn <> -1  And Not vgEmBrowse  Then
+      ElseIf vgColumn <> -1 And Not vgEmBrowse Then
          txtCampo(vgColumn - 1).SetFocus
       End If
       DoEvents
@@ -762,16 +692,16 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          InicializaApelidos COM_TEXTBOX
          On Error Resume Next
          txtCampo(1).Value = Date
-         On Error Goto DeuErro
+         On Error GoTo DeuErro
          InicializaApelidos COM_TEXTBOX
-         ExecutaPTabs 
+         ExecutaPTabs
       End If
    ElseIf vgOq = PEGA_DO_ARQUIVO Then
       If vgTb.RecordCount > 0 And vgTb.EOF = False And vgTb.BOF = False Then
          vgPriVez = True
          vgTb.Resync 1             'adAffectCurrent
          InicializaApelidos COM_REGISTRO
-         ExecutaPTabs 
+         ExecutaPTabs
          For i = 0 To UBound(txtCampo)
             If Len(txtCampo(i).DataField) > 0 Then
                txtCampo(i).SetOriginalValue = True
@@ -837,7 +767,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       Qtde_Restante = IIf(IsNull(vgTb![Qtde Restante]), 0, vgTb![Qtde Restante])
       Qtde_Total = IIf(IsNull(vgTb![Qtde Total]), 0, vgTb![Qtde Total])
       Localizacao = IIf(IsNull(vgTb!Localização), "", vgTb!Localização)
-      Sequencia_produto_principal = IIf(IsNull(vgTb![Sequencia produto principal]), 0, vgTb![Sequencia produto principal])
+      Sequencia_produto_principal = IIf(IsNull(vgTb![Sequencia Produto Principal]), 0, vgTb![Sequencia Produto Principal])
    ElseIf vgOq = INI_APELIDOS Then
       InicializaApelidos COM_REGISTRO
       ExecutaVisivel
@@ -865,7 +795,7 @@ DeuErro:
          PrepBotoes Me, vgSituacao                'acerta icones dos botoes
 
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
    If Err = 3265 Then Executar = Executar & vbCrLf & vbCrLf & txtCampo(i).DataField
    If Not vgRsError Is Nothing Then
       vgRsError.CancelUpdate
@@ -907,7 +837,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.Recordset.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -921,7 +851,7 @@ End Sub
 
 'liga/desliga flag de repetição do último reg visualizado
 Public Sub LigaDesligaAlterar()
-   vgAlterar = Not vgAlterar          
+   vgAlterar = Not vgAlterar
    vgUltAlterar = vgAlterar                            'guarda situação de "pode alterar"
    AnalisaCondicoes                                    'vamos atualizar as condições para inclusão, exclusão, alteração...
    MostraFormulas
@@ -968,38 +898,50 @@ Public Sub SaveGrids()
    Next
 End Sub
 
-'prepara botões e o formulário para o novo registro
 Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boolean = True)
-   Dim i As Integer, x As String, MudouFiltro As Boolean, vgCols() As Variant
-   On Error GoTo DeuErro
-   If vgPriVez Then Exit Sub
-   Set Receita_primaria = vgTb
-   If vgSituacao <> ACAO_INCLUINDO And vgSituacao <> ACAO_EDITANDO Then Executar PEGA_DO_ARQUIVO
-   If vgSituacao = ACAO_NAVEGANDO Then
-      AnalisaCondicoes 
-   End If
-   ExecutaPTabs
-   If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
-      Grid(0).CloseRecordset
-   Else
-      x$ = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
-      MudouFiltro = (x$ <> Grid(0).SQLSource)
-      If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
-         If Len(Grid(0).Recordset.RsSource) > 0 Then
-            Grid(0).CloseRecordSet
-         End If
-         Grid(0).OpenRecordSet x$, CURSOR_TABLE
-      End If
-   End If
-      x$ = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
-   ExecutaVisivel
-   MostraFormulas
-   vgTemAlteracaoGrids = Not LockGrids
-   Executar PODE_ALTERAR
-   If vgEmBrowse And vgSituacao = ACAO_NAVEGANDO And vgFrmImpCons Is Nothing Then grdBrowse.Refresh
+    Dim i As Integer
+    Dim x As String
+    Dim MudouFiltro As Boolean
+    Dim vgCols() As Variant
+    On Error GoTo DeuErro
+
+    If vgPriVez Then Exit Sub
+    Set Receita_primaria = vgTb
+
+    If vgSituacao <> ACAO_INCLUINDO And vgSituacao <> ACAO_EDITANDO Then Executar PEGA_DO_ARQUIVO
+    If vgSituacao = ACAO_NAVEGANDO Then AnalisaCondicoes
+    ExecutaPTabs
+
+    If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Then
+        Grid(0).CloseRecordset
+    End If
+
+    x = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
+    MudouFiltro = (x <> Grid(0).SQLSource)
+    If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
+        If Len(Grid(0).RecordSet.RsSource) > 0 Then
+            Grid(0).CloseRecordset
+        End If
+        Grid(0).OpenRecordSet x, CURSOR_TABLE
+    End If
+
+    x = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
+    ExecutaVisivel
+    MostraFormulas
+    vgTemAlteracaoGrids = Not LockGrids
+    Executar PODE_ALTERAR
+    If vgEmBrowse And vgSituacao = ACAO_NAVEGANDO And vgFrmImpCons Is Nothing Then
+        grdBrowse.Refresh
+    End If
+
+    Exit Sub
+
 DeuErro:
-   
+    ' Tratar erros conforme necessário
 End Sub
+
+
+
 
 'reposiciona arquivos relacionados
 Private Sub ExecutaPTabs()
@@ -1017,7 +959,7 @@ End Sub
 'mostra fórmulas na janela
 Private Sub MostraFormulas()
    On Error Resume Next                           'previne erros...
-   Label(1).Caption = "Pedido " & " - " & Format(Sequencia_do_Orcamento,"000000") & " " & Cliente()
+   Label(1).Caption = "Pedido " & " - " & Format(Sequencia_do_Orcamento, "000000") & " " & Cliente()
    If Err Then Err = 0: Label(1).Caption = ""
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
@@ -1071,7 +1013,7 @@ End Sub
 'evento - quando qq tecla for digitada no campo
 Private Sub txtCp_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
    If KeyCode = vbKeyReturn And vgSituacao <> ACAO_NAVEGANDO Then  'se tela esta em edição e digitou ENTER
-      ExecutaPtabs                                                 'procura os novos regs relacionados
+      ExecutaPTabs                                                 'procura os novos regs relacionados
       ExecutaVisivel                                               'torna camos visiveis
    End If
    txtCampo(Index).KeyDown KeyCode, Shift
@@ -1087,7 +1029,7 @@ Private Sub txtCp_LostFocus(Index As Integer)
    txtCampo(Index).LostFocus
    If vgSituacao <> ACAO_NAVEGANDO Then           'se tela esta em edição
       InicializaApelidos COM_TEXTBOX              'pega apelidos dos campos
-      ExecutaPtabs                                'procura os novos regs relacionados
+      ExecutaPTabs                                'procura os novos regs relacionados
       MostraFormulas                              'mostra formulas na janela
       ExecutaVisivel                              'torna camos visiveis
    End If
@@ -1104,10 +1046,10 @@ Private Sub Form_Activate()
    
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
    If FormEstaAberto("frmEnviaEmail") Then
-      If Not frmEnviaEmail.Visible Then
-         UnLoad vgFrmImpCons
+      If Not frmEnviaEMail.Visible Then
+         Unload vgFrmImpCons
          Set vgFrmImpCons = Nothing
-         UnLoad frmEnviaEmail
+         Unload frmEnviaEMail
       End If
    End If
    Screen.MousePointer = vbDefault
@@ -1115,8 +1057,8 @@ End Sub
 
 Public Sub DefineControles()
  On Error GoTo DeuErro
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hwnd           'não deixa o grid tentar gravar automaticamente
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hwnd             'se estiver perdendo o foco para esses botões
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
    grdBrowse.AllowDelete = True
    grdBrowse.AllowEdit = vgAlterar
    grdBrowse.SpecialPopupDisabled POP_GRID_BARS Or POP_GRID_STRIPES
@@ -1145,10 +1087,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -1172,7 +1114,7 @@ Private Sub Form_Unload(Cancel As Integer)
    On Error Resume Next
    FinalizaForm Me
    Set Grdmp = Nothing
-   Set Lblajuste = Nothing
+   Set lblAjuste = Nothing
    Set Txtorc = Nothing
    Set TxtDtaAtual = Nothing
    For i = 0 To UBound(txtCampo)
@@ -1183,16 +1125,16 @@ Private Sub Form_Unload(Cancel As Integer)
       Set Receita_primaria = Nothing
    End If
    If Not Produtos Is Nothing Then
-      Produtos.CloseRecordSet
+      Produtos.CloseRecordset
       Set Produtos = Nothing
    End If
    If Not Receita_primaria1 Is Nothing Then
-      Receita_primaria1.CloseRecordSet
+      Receita_primaria1.CloseRecordset
       Set Receita_primaria1 = Nothing
    End If
 
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
-   UnLoad vgFrmImpCons
+   Unload vgFrmImpCons
    Set vgFrmImpCons = Nothing
 
    'vamos descarregar todos os grids
@@ -1255,7 +1197,7 @@ End Sub
 Private Sub Grid_AfterDeleteRecord(Index As Integer, ByVal vgItem As Long, vgColumns() As Variant, vgIsValid As Boolean, vgColumn As Integer, vgErrorMessage As String)
    GeraLog Me, ACAO_EXCLUINDO, Index, False
    mdiIRRIG.RemontaForm                                   'vamos atualizar os forms de dados
-   Grid(Index).Repaint -1                                 'atualiza dados do grid (registro posicionado) 
+   Grid(Index).Repaint -1                                 'atualiza dados do grid (registro posicionado)
 End Sub
 
 Private Sub Grid_ControlButtonClick(Index As Integer)
@@ -1273,7 +1215,7 @@ End Sub
 
 Private Sub Grid_StatusChanged(Index As Integer, ByVal vgNewStatus As Integer)
    Dim vgTemAltGrdOld As Boolean
-   If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = - vgNewStatus
+   If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = -vgNewStatus
    PrepBotoes Me, vgNewStatus                                     'acerta icones dos botoes
    vgTemAltGrdOld = vgTemAlteracaoGrids
    mdiIRRIG.RemontaForm                                           'remonta dos os form da tela
@@ -1295,14 +1237,14 @@ End Sub
 'inicializações, validações e processos para o grid
 Private Function ExecutaGrid(Index As Integer, ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Select Case Index
-      Case  0 
+      Case 0
          ExecutaGrid = ExecutaGrid0(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
    End Select
 End Function
 
 'inicializações, validações e processos do grid filho
 Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
-   Dim vgRetVal As Variant, vgRsError As GRecordSet, x as String, vgNVez As Integer
+   Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade As Double
    Dim Sequencia_do_Item As Long, Situacao As String, Pedidos As String
    Dim Id_do_Pedido As Long, Pagto As String, Qtde_Recebida As Double
@@ -1340,7 +1282,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Receita primaria]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "([Seqüência do Orçamento] = " & Receita_primaria![Seqüência do Orçamento] & ") And 
+      x$ = "([Seqüência do Orçamento] = " & Receita_primaria![Seqüência do Orçamento] & ") And "
 
       'vamos definir a expressão de filtragem
       x$ = x$ & "[Seqüência do Orçamento] = " & Sequencia_do_Orcamento & ""
@@ -1354,11 +1296,11 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (Sequencia_produto_principal >= 0)
-         If Not vgIsValid Then vgColumn =  1 
+         If Not vgIsValid Then vgColumn = 1
          vgErrorMessage$ = "Sequencia produto principal inválido!"
          If vgIsValid And vgCol = -1 Then
-            vgIsValid = ((Qt_Separada <= Quantidade) AND Qt_Separada >= 0)
-            If Not vgIsValid Then vgColumn =  6 
+            vgIsValid = ((Qt_Separada <= Quantidade) And Qt_Separada >= 0)
+            If Not vgIsValid Then vgColumn = 6
             vgErrorMessage$ = "Qtd Separada deve ser menor ou igual a Quantidade Vendida!"
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
@@ -1368,7 +1310,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Abs(vgSituacao) = ACAO_EDITANDO Then
             AtuEstoque Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade, Sequencia_do_Orcamento, Sequencia_do_Item, Situacao, _
    Pedidos, Id_do_Pedido, Pagto, Qtde_Recebida, Qt_Separada, Sequencia_do_Conjunto, _
-   Qtde_Restante, Qtde_Total, Localizacao, Sequencia_produto_principal 
+   Qtde_Restante, Qtde_Total, Localizacao, Sequencia_produto_principal
          End If
       End If
    End If
@@ -1386,7 +1328,7 @@ IniApDaCol:
    Situacao = ColumnValue(7) & ""
    Pedidos = ColumnValue(8) & ""
    If Grid(0).Status <> ACAO_INCLUINDO Then
-      If Receita_primaria1.Eof = False And Receita_primaria1.BOF = False And Receita_primaria1.RecordCount > 0 Then
+      If Receita_primaria1.EOF = False And Receita_primaria1.BOF = False And Receita_primaria1.RecordCount > 0 Then
          Sequencia_do_Item = Receita_primaria1![Sequencia do Item]
          Id_do_Pedido = Receita_primaria1![Id do Pedido]
          Pagto = Receita_primaria1!Pagto
@@ -1402,7 +1344,7 @@ IniApDaCol:
 
 IniApDaTb:
    On Error Resume Next
-   If Receita_primaria1.Eof = False And Receita_primaria1.BOF = False And Receita_primaria1.RecordCount > 0 Then
+   If Receita_primaria1.EOF = False And Receita_primaria1.BOF = False And Receita_primaria1.RecordCount > 0 Then
       Sequencia_do_Produto = Receita_primaria1![Seqüência do Produto]
       Sequencia_da_Materia_Prima = Receita_primaria1![Seqüência da Matéria Prima]
       Quantidade = Receita_primaria1!Quantidade
@@ -1417,7 +1359,7 @@ IniApDaTb:
       Qtde_Restante = Receita_primaria1![Qtde Restante]
       Qtde_Total = Receita_primaria1![Qtde Total]
       Localizacao = Receita_primaria1!Localização
-      Sequencia_produto_principal = Receita_primaria1![Sequencia produto principal]
+      Sequencia_produto_principal = Receita_primaria1![Sequencia Produto Principal]
    End If
    If Err Then Err.Clear
    On Error GoTo DeuErro
@@ -1465,7 +1407,7 @@ Private Sub Botao_Click(Index As Integer)
          AppendMenu hMenu, MF_STRING, 1, "Check List (Hidroturbo)"
          AppendMenu hMenu, MF_STRING, 2, "Check List (Hidroturbo Peças Avulsas)"
          GetCursorPos pt
-         AcaoPopup0 TrackPopupMenuEx(hMenu, TPM_LEFTALIGN Or TPM_RETURNCMD Or TPM_RIGHTBUTTON, Pt.x, Pt.y, Me.HWnd, ByVal 0&)
+         AcaoPopUp0 TrackPopupMenuEx(hMenu, TPM_LEFTALIGN Or TPM_RETURNCMD Or TPM_RIGHTBUTTON, pt.x, pt.y, Me.hWnd, ByVal 0&)
          DestroyMenu hMenu
    End Select
 End Sub
@@ -1475,11 +1417,11 @@ End Sub
 Private Sub bottxtCampo1_Click(Index As Integer)
    txtCampo(1).SetFocus
    DoEvents
-   txtCampo(1).botClick Index
+   txtCampo(1).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 
