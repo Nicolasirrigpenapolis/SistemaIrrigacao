@@ -25,12 +25,147 @@ Begin VB.Form frmNotaFisc
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   14
-         Left            =   9705
-         TabIndex        =   94
+         Height          =   435
+         Index           =   0
+         Left            =   11430
+         TabIndex        =   85
          TabStop         =   0   'False
-         Top             =   375
+         Top             =   525
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "DANFE"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   1
+         Left            =   10020
+         TabIndex        =   90
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   2
+         Left            =   11430
+         TabIndex        =   75
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   9
+         Left            =   9825
+         TabIndex        =   76
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   10
+         Left            =   15180
+         TabIndex        =   82
+         Top             =   60
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   75
+         TabIndex        =   83
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14475
+         TabIndex        =   84
+         TabStop         =   0   'False
+         Top             =   1560
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -70,11 +205,11 @@ Begin VB.Form frmNotaFisc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   12
-         Left            =   14475
-         TabIndex        =   84
+         Index           =   14
+         Left            =   9705
+         TabIndex        =   94
          TabStop         =   0   'False
-         Top             =   1560
+         Top             =   375
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -88,141 +223,6 @@ Begin VB.Form frmNotaFisc
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   75
-         TabIndex        =   83
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   10
-         Left            =   15180
-         TabIndex        =   82
-         Top             =   60
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   9
-         Left            =   9825
-         TabIndex        =   76
-         TabStop         =   0   'False
-         Top             =   1560
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   2
-         Left            =   11430
-         TabIndex        =   75
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   1
-         Left            =   10020
-         TabIndex        =   90
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   0
-         Left            =   11430
-         TabIndex        =   85
-         TabStop         =   0   'False
-         Top             =   525
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "DANFE"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin TabDlg.SSTab Tabs 
@@ -423,13 +423,13 @@ Begin VB.Form frmNotaFisc
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "txtCp(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(3)"
+         Tab(0).Control(86)=   "Botao(8)"
          Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "Botao(4)"
+         Tab(0).Control(87)=   "Botao(5)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "Botao(5)"
+         Tab(0).Control(88)=   "Botao(4)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "Botao(8)"
+         Tab(0).Control(89)=   "Botao(3)"
          Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
@@ -599,11 +599,11 @@ Begin VB.Form frmNotaFisc
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   8
-            Left            =   5505
-            TabIndex        =   86
+            Index           =   3
+            Left            =   11175
+            TabIndex        =   22
             TabStop         =   0   'False
-            Top             =   2835
+            Top             =   1905
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -621,9 +621,31 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   7
-            Left            =   -71670
-            TabIndex        =   39
+            Index           =   4
+            Left            =   5205
+            TabIndex        =   14
+            TabStop         =   0   'False
+            Top             =   1440
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   5
+            Left            =   5100
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -665,9 +687,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   5100
-            TabIndex        =   5
+            Index           =   7
+            Left            =   -71670
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -687,33 +709,11 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   5205
-            TabIndex        =   14
+            Index           =   8
+            Left            =   5505
+            TabIndex        =   86
             TabStop         =   0   'False
-            Top             =   1440
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   3
-            Left            =   11175
-            TabIndex        =   22
-            TabStop         =   0   'False
-            Top             =   1905
+            Top             =   2835
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1414,17 +1414,26 @@ Begin VB.Form frmNotaFisc
             Tag             =   "1"
             Top             =   450
             Width           =   14385
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   315
-            savegridbars    =   -1
-            caption         =   "Produtos"
-            font            =   "NOTAFISC.frx":001C
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   315
+            SaveGridBars    =   -1  'True
+            SaveGridStripes =   0   'False
+            Caption         =   "Produtos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin IRRIG.GListV Grid 
             Height          =   4785
@@ -1434,17 +1443,26 @@ Begin VB.Form frmNotaFisc
             Tag             =   "1"
             Top             =   450
             Width           =   14385
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   315
-            savegridbars    =   -1
-            caption         =   "Serviços"
-            font            =   "NOTAFISC.frx":0040
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   315
+            SaveGridBars    =   -1  'True
+            SaveGridStripes =   0   'False
+            Caption         =   "Serviços"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.CommandButton bottxtCampo27 
             Height          =   270
@@ -1486,17 +1504,26 @@ Begin VB.Form frmNotaFisc
             Tag             =   "1"
             Top             =   855
             Width           =   14385
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   315
-            savegridbars    =   -1
-            caption         =   "Conjuntos"
-            font            =   "NOTAFISC.frx":0064
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   315
+            SaveGridBars    =   -1  'True
+            SaveGridStripes =   0   'False
+            Caption         =   "Conjuntos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin IRRIG.GListV Grid 
             Height          =   4800
@@ -1506,17 +1533,26 @@ Begin VB.Form frmNotaFisc
             Tag             =   "1"
             Top             =   480
             Width           =   14385
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   315
-            savegridbars    =   -1
-            caption         =   "Peças"
-            font            =   "NOTAFISC.frx":0088
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   315
+            SaveGridBars    =   -1  'True
+            SaveGridStripes =   0   'False
+            Caption         =   "Peças"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.CommandButton bottxtCampo28 
             Height          =   270
@@ -1616,18 +1652,27 @@ Begin VB.Form frmNotaFisc
             Tag             =   "1"
             Top             =   750
             Width           =   4515
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   315
-            showgridcaption =   0
-            savegridbars    =   -1
-            caption         =   ""
-            font            =   "NOTAFISC.frx":00AC
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   315
+            ShowGridCaption =   0   'False
+            SaveGridBars    =   -1  'True
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.CheckBox ChkCp 
             Caption         =   "NFe Complementar"
@@ -5245,22 +5290,31 @@ Begin VB.Form frmNotaFisc
       TabIndex        =   257
       Top             =   330
       Width           =   1575
-      _extentx        =   2778
-      _extenty        =   1402
-      fullrowselect   =   0
-      stripesbackcolor=   14737632
-      rowheight       =   285
-      allowedit       =   -1
-      allowinsert     =   -1
-      allowdelete     =   -1
-      manualupdate    =   -1
-      manualdelete    =   -1
-      navigationaddmode=   1
-      showfilterbar   =   -1
-      showgridcaption =   0
-      caption         =   ""
-      font            =   "NOTAFISC.frx":00D0
-      cachesize       =   100
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
    End
    Begin VB.Timer timUnLoad 
       Enabled         =   0   'False
@@ -8104,7 +8158,7 @@ End Sub
 
 Private Sub SuperAtualizaProdutos(Opcao As Byte)
    Dim Tributos As Double, OutrasDespesas As Double, PercentualOutros As Double
-   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double, VrReducao As Double
+   Dim totalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double, VrReducao As Double
    Dim ValorFrete As Double, ValorAcresDesc As Double, IPI As Double, Diferido As Boolean, Reducao As Double, CFOP As String
    Dim AliquotaIcms As Integer, Geral As New GRecordSet, GRevenda As Boolean, AuxCFOP As String
    
@@ -8148,18 +8202,18 @@ Private Sub SuperAtualizaProdutos(Opcao As Byte)
                 Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Nota_Fiscal![Seqüência Do Geral])
                 GRevenda = Geral!Revenda ' Revendedor
                 
-                TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
-                PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
+                totalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+                PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / totalItens * 100)
                 VrItem = Round((Produtos_da_Nota_Fiscal!Quantidade * Produtos_da_Nota_Fiscal![Valor Unitário]), 2)
                 ValorAcresDesc = (VrItem * PercentualRateio / 100) 'Valor do Desconto
                 
                 'Valor do Frete Rateado entre os Produtos
-                PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
+                PercentualFrete = (Nota_Fiscal![Valor Do Frete] / totalItens * 100)
                 ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
                 AuxCFOP = PegaValor("Natureza de Operação", "Código da Natureza de Operação", "[Seqüência da Natureza] = " & Sequencia_da_Natureza)
                 
                 'Outras despesas
-                PercentualOutros = (Nota_Fiscal![Outras Despesas] / TotalItens * 100)
+                PercentualOutros = (Nota_Fiscal![Outras Despesas] / totalItens * 100)
                 OutrasDespesas = (VrItem * PercentualOutros / 100)
                 ![Valor Do Frete] = ValorFrete
                 ![Valor Do Desconto] = Abs(ValorAcresDesc)
@@ -8314,7 +8368,7 @@ End Sub
 
 Private Sub AtualizaValoresConjuntos()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
+   Dim PercentualFrete As Double, totalItens As Double, PercentualRateio As Double
    Dim VrItem As Double, BC As Double
       
    Screen.MousePointer = vbHourglass
@@ -8333,13 +8387,13 @@ Private Sub AtualizaValoresConjuntos()
             'Valor do Desconto Rateado entre os produtos
             If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
             If Nota_Fiscal!Fechamento = 1 Then 'Valor
-            TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
+            totalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / totalItens * 100)
             VrItem = Round((Conjuntos_da_Nota_Fiscal!Quantidade * Conjuntos_da_Nota_Fiscal![Valor Unitário]), 2)
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
+            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             End If
             End If
@@ -8397,7 +8451,7 @@ End Sub
 
 Private Sub AtualizaValoresPecas()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim PercentualFrete As Double, TotalItens As Double, PercentualRateio As Double
+   Dim PercentualFrete As Double, totalItens As Double, PercentualRateio As Double
    Dim VrItem As Double, BC As Double
           
    Screen.MousePointer = vbHourglass
@@ -8416,13 +8470,13 @@ Private Sub AtualizaValoresPecas()
             'Valor do Desconto Rateado entre os produtos
             If Nota_Fiscal![Valor Do Fechamento] < 0 Or Nota_Fiscal![Valor Do Frete] > 0 Then
             If Nota_Fiscal!Fechamento = 1 Then 'Valor
-            TotalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
-            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / TotalItens * 100)
+            totalItens = Round((Nota_Fiscal![Valor Total dos Produtos] + Nota_Fiscal![Valor Total dos Conjuntos] + Nota_Fiscal![Valor Total das Peças] + Nota_Fiscal![Valor Total das Peças Usadas] + Nota_Fiscal![Valor Total de Produtos Usados] + Nota_Fiscal![Valor Total Conjuntos Usados]), 2)
+            PercentualRateio = (Nota_Fiscal![Valor Do Fechamento] / totalItens * 100)
             VrItem = Round((Pecas_da_Nota_Fiscal!Quantidade * Pecas_da_Nota_Fiscal![Valor Unitário]), 2)
             ValorAcresDesc = (VrItem * PercentualRateio / 100) ' Valor do Desconto
             
             ' Valor do Frete Rateado entre os Produtos
-            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / TotalItens * 100)
+            PercentualFrete = (Nota_Fiscal![Valor Do Frete] / totalItens * 100)
             ValorFrete = (VrItem * PercentualFrete / 100) 'Valor do Frete
             ![Valor Do Frete] = ValorFrete
             ![Valor Do Desconto] = Abs(ValorAcresDesc)

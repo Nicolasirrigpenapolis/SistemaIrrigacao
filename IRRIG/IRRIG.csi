@@ -1,13 +1,14 @@
 [History]
-1=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701084213	#P7#=0	#P8#=429	.
-2=#P0#=mb	#P1#=AtualizaCamposFrete	#P2#=IRRIG/frmOrcament/AtualizaCamposFrete	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701084100	#P7#=0	#P8#=-5	.
-3=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmOrcament/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701084035	#P7#=0	#P8#=-7	.
-4=#P0#=mb	#P1#=CodigoFrete	#P2#=IRRIG/frmOrcament/CodigoFrete	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701084035	#P7#=0	#P8#=20	.
-5=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmOrcament/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083907	#P7#=0	#P8#=139	.
-6=#P0#=mb	#P1#=AtuEstoque	#P2#=IRRIG/frmRecprima/AtuEstoque	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083738	#P7#=0	#P8#=-19	.
-7=#P0#=mb	#P1#=SaveGrids	#P2#=IRRIG/frmRecprima/SaveGrids	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701082838	#P7#=0	#P8#=8	.
-8=#P0#=mb	#P1#=Reposition	#P2#=IRRIG/frmRecprima/Reposition	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083604	#P7#=0	#P8#=35	.
-9=#P0#=mb	#P1#=ExecutaPTabs	#P2#=IRRIG/frmRecprima/ExecutaPTabs	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083106	#P7#=0	#P8#=-1	.
-10=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmRecprima/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701081633	#P7#=0	#P8#=52	.
-11=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmConpedi/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701075838	#P7#=0	#P8#=-4	.
-12=#P0#=mb	#P1#=PcbAtualizaOrc_Click	#P2#=IRRIG/frmConpedi/PcbAtualizaOrc_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701084459	#P7#=0	#P8#=7	.
+1=#P0#=mb	#P1#=ReceitaP	#P2#=IRRIG/frmConpedi/ReceitaP	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701093254	#P7#=0	#P8#=346	.
+2=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701090141	#P7#=0	#P8#=426	.
+3=#P0#=mb	#P1#=AtualizaCamposFrete	#P2#=IRRIG/frmOrcament/AtualizaCamposFrete	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701084100	#P7#=0	#P8#=-5	.
+4=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmOrcament/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701084035	#P7#=0	#P8#=-7	.
+5=#P0#=mb	#P1#=CodigoFrete	#P2#=IRRIG/frmOrcament/CodigoFrete	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701084035	#P7#=0	#P8#=20	.
+6=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmOrcament/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083907	#P7#=0	#P8#=139	.
+7=#P0#=mb	#P1#=AtuEstoque	#P2#=IRRIG/frmRecprima/AtuEstoque	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701083738	#P7#=0	#P8#=-26	.
+8=#P0#=mb	#P1#=SaveGrids	#P2#=IRRIG/frmRecprima/SaveGrids	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701082838	#P7#=0	#P8#=8	.
+9=#P0#=mb	#P1#=Reposition	#P2#=IRRIG/frmRecprima/Reposition	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701092202	#P7#=0	#P8#=24	.
+10=#P0#=mb	#P1#=ExecutaPTabs	#P2#=IRRIG/frmRecprima/ExecutaPTabs	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250701092205	#P7#=0	#P8#=-3	.
+11=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmRecprima/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701081633	#P7#=0	#P8#=52	.
+12=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmConpedi/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701075838	#P7#=0	#P8#=-4	.
+13=#P0#=mb	#P1#=PcbAtualizaOrc_Click	#P2#=IRRIG/frmConpedi/PcbAtualizaOrc_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250701102134	#P7#=0	#P8#=7	.

@@ -29,9 +29,9 @@ Begin VB.Form frmConpedi
          Left            =   8970
          TabIndex        =   9
          Top             =   1740
-         Width           =   2130
-         _ExtentX        =   0
-         _ExtentY        =   0
+         Width           =   1870
+         _ExtentX        =   3307
+         _ExtentY        =   661
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
@@ -47,24 +47,25 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   8.25
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Entregue ao Cliente"
+         Caption         =   "Receita"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -92,37 +93,41 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   9.75
+            Size            =   8.25
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
+         Caption         =   "Entregue ao Cliente"
          CaptionOffset   =   50
       End
       Begin VB.PictureBox PcbAtualizaOrc 
-         Height          =   540
-         Left            =   10500
-         Picture         =   "CONPEDI.frx":0000
-         ScaleHeight     =   480
-         ScaleWidth      =   480
+         BorderStyle     =   0  'None
+         DragIcon        =   "CONPEDI.frx":0000
+         FillStyle       =   0  'Solid
+         Height          =   480
+         Left            =   11000
+         MousePointer    =   4  'Icon
+         Picture         =   "CONPEDI.frx":10CA
+         ScaleHeight     =   711.111
+         ScaleMode       =   0  'User
+         ScaleWidth      =   5925.926
          TabIndex        =   19
          TabStop         =   0   'False
-         Top             =   1200
-         Width           =   540
+         Top             =   1570
+         Width           =   480
       End
       Begin IRRIG.GCpMM mmCampo 
          Height          =   1710
@@ -2028,11 +2033,17 @@ End Sub
 'End Sub
 
 Private Sub PcbAtualizaOrc_Click()
-
+    ' 1) Limpa Itens Pendentes
     vgDb.Execute "DELETE FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento
 
-    MySQL
+    ' 2) Limpa também toda a Receita Primária para este orçamento
+    vgDb.Execute "DELETE FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento
 
+    ' 3) Recria Itens Pendentes e Receita Primária
+    MySQL
+    ReceitaP
+
+    ' 4) Atualiza as grades na tela
     Call CarregaContas
 
     If Not frmRecprima.Visible Then
@@ -2046,8 +2057,10 @@ Private Sub PcbAtualizaOrc_Click()
         InicializaFiltro frmRecprima
         frmRecprima.Reposition True, False
     End If
-    MsgBox "Grades atualizadas com sucesso!", vbInformation, "Atualizao Concluda"
+
+    MsgBox "Grades atualizadas com sucesso!", vbInformation, "Atualização Concluída"
 End Sub
+
 
 
 'evento - quando o conteúdo do campo for alterado

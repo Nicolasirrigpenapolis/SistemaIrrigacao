@@ -898,6 +898,7 @@ Public Sub SaveGrids()
    Next
 End Sub
 
+
 Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boolean = True)
     Dim i As Integer
     Dim x As String
@@ -912,24 +913,30 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
     If vgSituacao = ACAO_NAVEGANDO Then AnalisaCondicoes
     ExecutaPTabs
 
-    If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Then
-        Grid(0).CloseRecordset
-    End If
+    ' Fecha sempre antes de reabrir
+    Grid(0).CloseRecordset
 
+    ' Reconstrói o SQL e verifica mudança de filtro
     x = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
     MudouFiltro = (x <> Grid(0).SQLSource)
-    If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
-        If Len(Grid(0).RecordSet.RsSource) > 0 Then
-            Grid(0).CloseRecordset
-        End If
+
+    ' Reabre o recordset se necessário
+    If Err = 0 And (ForceRebind Or MudouFiltro) Then
         Grid(0).OpenRecordSet x, CURSOR_TABLE
+        ' ————— ADICIONADO AQUI —————
+        Grid(0).ReBind
+        ' ———————————————————————
     End If
 
+    ' Aplica condições especiais e fórmulas
     x = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
     ExecutaVisivel
     MostraFormulas
+
     vgTemAlteracaoGrids = Not LockGrids
     Executar PODE_ALTERAR
+
+    ' Se estiver em modo browse, atualiza o grid de navegação
     If vgEmBrowse And vgSituacao = ACAO_NAVEGANDO And vgFrmImpCons Is Nothing Then
         grdBrowse.Refresh
     End If
@@ -939,8 +946,6 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
 DeuErro:
     ' Tratar erros conforme necessário
 End Sub
-
-
 
 
 'reposiciona arquivos relacionados
