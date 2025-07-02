@@ -27,6 +27,52 @@ Begin VB.Form frmMvtoConN
       BevelWidth      =   2
       BorderWidth     =   2
       Stretch         =   -1  'True
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   9
+         Left            =   13815
+         TabIndex        =   14
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1665
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   330
+         Index           =   0
+         Left            =   15330
+         TabIndex        =   8
+         TabStop         =   0   'False
+         Top             =   1320
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
       Begin VB.PictureBox picBox 
          BorderStyle     =   0  'None
          ForeColor       =   &H80000008&
@@ -207,28 +253,6 @@ Begin VB.Form frmMvtoConN
          Top             =   1335
          Width           =   6840
       End
-      Begin IRRIG.GBotao Botao 
-         Height          =   330
-         Index           =   0
-         Left            =   15330
-         TabIndex        =   8
-         TabStop         =   0   'False
-         Top             =   1320
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
       Begin TabDlg.SSTab Tabs 
          Height          =   5100
          Index           =   0
@@ -403,6 +427,196 @@ Begin VB.Form frmMvtoConN
          Tab(4).Control(51)=   "Label(11)"
          Tab(4).Control(52)=   "Label(10)"
          Tab(4).ControlCount=   53
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   8
+            Left            =   -64770
+            TabIndex        =   44
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1455
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   7
+            Left            =   -61635
+            TabIndex        =   41
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   6
+            Left            =   -64770
+            TabIndex        =   39
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1455
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   5
+            Left            =   -61665
+            TabIndex        =   36
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   4
+            Left            =   -64920
+            TabIndex        =   34
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   3
+            Left            =   -61635
+            TabIndex        =   31
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   2
+            Left            =   -64710
+            TabIndex        =   29
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   1
+            Left            =   -67155
+            TabIndex        =   16
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
             DataField       =   "Observação"
@@ -544,28 +758,6 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   15
             Top             =   690
             Width           =   6195
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   1
-            Left            =   -67155
-            TabIndex        =   16
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo5 
             Height          =   300
@@ -925,30 +1117,6 @@ Begin VB.Form frmMvtoConN
             Top             =   675
             Width           =   900
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   2
-            Left            =   -64710
-            TabIndex        =   29
-            TabStop         =   0   'False
-            Top             =   735
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
          Begin VB.CommandButton bottxtCampo16 
             Height          =   300
             Index           =   2
@@ -979,30 +1147,6 @@ Begin VB.Form frmMvtoConN
             TabStop         =   0   'False
             Top             =   690
             Width           =   840
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   3
-            Left            =   -61635
-            TabIndex        =   31
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   1635
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo17 
             Height          =   300
@@ -1066,30 +1210,6 @@ Begin VB.Form frmMvtoConN
             Top             =   435
             Width           =   840
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   4
-            Left            =   -64920
-            TabIndex        =   34
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
          Begin VB.CommandButton bottxtCampo19 
             Height          =   300
             Index           =   2
@@ -1119,30 +1239,6 @@ Begin VB.Form frmMvtoConN
             TabStop         =   0   'False
             Top             =   450
             Width           =   840
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   5
-            Left            =   -61665
-            TabIndex        =   36
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1650
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo20 
             Height          =   300
@@ -1206,30 +1302,6 @@ Begin VB.Form frmMvtoConN
             Top             =   675
             Width           =   900
          End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   6
-            Left            =   -64770
-            TabIndex        =   39
-            TabStop         =   0   'False
-            Top             =   735
-            Width           =   1455
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
          Begin VB.CommandButton bottxtCampo22 
             Height          =   300
             Index           =   2
@@ -1259,30 +1331,6 @@ Begin VB.Form frmMvtoConN
             TabStop         =   0   'False
             Top             =   690
             Width           =   855
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   7
-            Left            =   -61635
-            TabIndex        =   41
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   1635
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo23 
             Height          =   300
@@ -1345,30 +1393,6 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   43
             Top             =   675
             Width           =   900
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   8
-            Left            =   -64770
-            TabIndex        =   44
-            TabStop         =   0   'False
-            Top             =   735
-            Width           =   1455
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo25 
             Height          =   300
@@ -2192,30 +2216,6 @@ Begin VB.Form frmMvtoConN
          Top             =   1365
          Width           =   1260
       End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   9
-         Left            =   13815
-         TabIndex        =   14
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1665
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
       Begin VB.CommandButton bottxtCampo27 
          Height          =   300
          Index           =   2
@@ -2722,7 +2722,7 @@ Private Function ProcessaProdutos(Sequencia_do_Movimento As Long, Sequencia_do_P
    vgDb.BeginTrans
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Quantidade * Valor_Unitario), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then  'Saída
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then  'Saída
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Custo
    End If
@@ -2758,7 +2758,7 @@ Private Function ProcessaDespesas(Sequencia_do_Movimento As Long, Sequencia_Desp
    vgDb.BeginTrans
    vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo 'Valor Total
    vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Quantidade * Valor_Unitario), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then 'Saída
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then 'Saída
       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo   'Valor Custo
    End If
@@ -2788,7 +2788,7 @@ Private Function ProcessaConjuntos(Sequencia_do_Movimento As Long, Sequencia_Con
      
    vgDb.BeginTrans
    vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then 'Saída
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then 'Saída
       vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Custo
    End If
@@ -2919,7 +2919,7 @@ Private Function TemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_Produto
    Valor_total_compra As Double) As Boolean
    Dim B As New GRecordSet
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoque = True: GoTo Fim
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then TemEstoque = True: GoTo Fim
    
    On Error Resume Next
    Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
@@ -2945,8 +2945,8 @@ Private Function BlasterTemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_
    
    On Error Resume Next
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoque = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoque = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
    
    Set B = vgDb.OpenRecordSet("SELECT [Seqüência da Matéria Prima] As MateriaPrima, [Quantidade de Matéria Prima] As QtdeUsada, P2.[Quantidade Contábil] As QtdeContabil, SP.Descrição Sub " & _
                               "FROM [Matéria Prima] MP LEFT JOIN Produtos P ON MP.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -3069,7 +3069,7 @@ Private Function TemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequencia_Des
    Valor_da_Substituicao As Double, Valor_do_ipi_compra As Double, Valor_total_compra As Double) As Boolean
    Dim B As New GRecordSet
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoqueDespesa = True: GoTo Fim
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then TemEstoqueDespesa = True: GoTo Fim
    
    On Error Resume Next
    Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Despesas WHERE [Seqüência da Despesa] = " & Sequencia_da_Despesa)
@@ -3092,7 +3092,7 @@ Private Function BlasterTemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequen
       
    On Error Resume Next
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then BlasterTemEstoqueDespesa = True: Exit Function
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then BlasterTemEstoqueDespesa = True: Exit Function
 
    Set B = vgDb.OpenRecordSet("SELECT DMvto.Quantidade, D.[Quantidade Contábil] FROM Despesas D LEFT JOIN [Despesas Mvto Contábil Novo] DMvto ON D.[Seqüência da Despesa] = DMvto.[Seqüência da Despesa] " & _
                               "WHERE D.[Seqüência da Despesa] = " & Sequencia_da_Despesa & IIf(vgSituacao = -ACAO_INCLUINDO, " AND 1 = 1", " AND Dmvto.[Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo))
@@ -3167,14 +3167,14 @@ Private Sub IncluiRegistro(ByVal Codigo As Long, ByVal Produto As Long, ByVal Qu
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqProduto
-      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
+      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "P"
-      If ![Tipo Do Movimento] = 0 Then 'Entrada
+      If ![Tipo do Movimento] = 0 Then 'Entrada
          ![Seqüência do Produto] = TbProduto![Seqüência do Produto]
          ![Valor Do PIS] = TbProduto![Valor Do PIS]
          ![Valor Do Cofins] = TbProduto![Valor Do Cofins]
@@ -3209,14 +3209,14 @@ Private Sub IncluiDespesa(ByVal Codigo As Long, ByVal Despesa As Long, ByVal Qua
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqDespesa
-      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
+      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "D"
-      If ![Tipo Do Movimento] = 0 Then 'Entrada
+      If ![Tipo do Movimento] = 0 Then 'Entrada
          ![Seqüência Da Despesa] = TbDespesa![Seqüência Da Despesa]
          ![Valor Do PIS] = TbDespesa![Valor Do PIS]
          ![Valor Do Cofins] = TbDespesa![Valor Do Cofins]
@@ -3389,12 +3389,12 @@ Private Sub IncluiRegistroC(ByVal Codigo As Long, ByVal Produto As Long, ByVal Q
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqConjunto
-      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
+      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
-      If ![Tipo Do Movimento] = 0 Then 'Entrada
+      If ![Tipo do Movimento] = 0 Then 'Entrada
          If LancaProduto Then
             ![Seqüência do Produto] = TbProduto![Seqüência do Conjunto]
          Else
@@ -3774,7 +3774,7 @@ Private Function VrUnit(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvt
    
    If ProdutoAux.RecordCount = 0 Then Exit Function
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
       If ProdutoAux![Tipo Do Produto] = 0 Or ProdutoAux![Tipo Do Produto] = 6 Then
          RetVal = CalculaValorEntrada2(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, _
    Quantidade, Valor_Unitario, Valor_de_Custo, _
@@ -3804,7 +3804,7 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
    
    If DespesaAux.RecordCount = 0 Then Exit Function
    
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
       RetVal = DespesaAux![Valor Contábil Atual]
    Else
       RetVal = 0
@@ -3814,15 +3814,15 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
 End Function
 
 Private Function Executa() As Boolean
-   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
+   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
 End Function
 
 Private Function Executa2() As Boolean
-   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
+   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
 End Function
 
 Private Function Executa3() As Boolean
-   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência Da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
+   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência Da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
 End Function
 
 'Quando deletar o Registro Pai deletar os filhos também
@@ -3939,8 +3939,8 @@ Private Function BlasterTemEstoqueConj(Sequencia_do_Movimento As Long, Sequencia
    
    On Error Resume Next
          
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
-   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoqueConj = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
+   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoqueConj = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
    
    Set Receita = vgDb.OpenRecordSet("SELECT IC.[Seqüência do Produto] As MateriaPrima, IC.[Quantidade do Produto] As QtdeUsada, P.[Quantidade Contábil] As QtdeContabil " & _
                                     "FROM [Itens Do Conjunto] IC INNER JOIN Produtos P ON IC.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -4103,7 +4103,7 @@ Private Sub IncluiPPropria() ' Qdo Estiver Marcado Produção Propria Criar Regist
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo Do Movimento] = 0 'Entrada
+         ![Tipo do Movimento] = 0 'Entrada
          ![Tipo Movimento] = 1 'Entrada Produção Propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4133,7 +4133,7 @@ Private Sub AlteraEntraPPropria()
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo Do Movimento] = 0 'Entrada
+         ![Tipo do Movimento] = 0 'Entrada
          ![Tipo Movimento] = 1 'Entrada Produção Propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4307,7 +4307,7 @@ Private Sub IncluiBxConsumo()
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo Do Movimento] = 1 'Saida
+         ![Tipo do Movimento] = 1 'Saida
          ![Tipo Movimento] = 0 ' 0 = Mvto 1 = Entrada prod propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4333,7 +4333,7 @@ Private Sub AlteraBxConsumo()
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo Do Movimento] = 1 'Saida
+         ![Tipo do Movimento] = 1 'Saida
          ![Tipo Movimento] = 0 'Mvto
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4399,58 +4399,86 @@ Private Function EntradaProdBxConsumo()
 End Function
 
 
-Private Function Ultimo(Oque As String, Produto As Long) As Currency
-    Dim Tb As New GRecordSet
-    Dim Custo As Currency, Total As Currency, Estoque As Double
-    Dim Mensagem As String
-    
+
+Private Function Ultimo( _
+        Oque As String, _
+        Produto As Long, _
+        Optional ExibirAlerta As Boolean) As Currency   '? default implícito = False
+
+    Dim Tb            As New GRecordSet
+    Dim Custo         As Currency
+    Dim Total         As Currency
+    Dim Estoque       As Double
+    Dim Mensagem      As String
+    Dim AvisouEstZero As Boolean
+
+    '-- 1. Verifica se há movimentos -------------------------------------------
+    Set Tb = vgDb.OpenRecordSet( _
+        "SELECT COUNT(*) AS Qtde " & _
+        "FROM [Baixa do Estoque Contábil] " & _
+        "WHERE [Seqüência do Produto] = " & Produto & _
+        " AND [Data do Movimento] <= " & D(Data_do_Movimento))
+
+    If IsNull(Tb!Qtde) Or Tb!Qtde = 0 Then   'retorna 0 sem MsgBox
+        Exit Function
+    End If
+    Set Tb = Nothing
+    '----------------------------------------------------------------------------
+
     If Oque = "Qtde" Then
         Set Tb = vgDb.OpenRecordSet( _
             "SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque " & _
             "FROM [Baixa do Estoque Contábil] " & _
             "WHERE [Seqüência do Produto] = " & Produto & _
             " AND [Data do Movimento] <= " & D(Data_do_Movimento))
-            
+
         If Not IsNull(Tb!Estoque) Then Ultimo = Tb!Estoque
-        
+
     ElseIf Oque = "Custo" Or Oque = "Total" Then
         Set Tb = vgDb.OpenRecordSet( _
             "SELECT * FROM [Baixa do Estoque Contábil] " & _
             "WHERE [Seqüência do Produto] = " & Produto & _
             " AND [Data do Movimento] <= " & D(Data_do_Movimento) & _
             " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
-        
+
+        AvisouEstZero = False
+
         Do While Not Tb.EOF
-            Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo Do Movimento] = 1, -1, 1)
-            
-            If Tb![Tipo Do Movimento] = 0 Then                 '-- entradas
-                If Custo = 0 Then                              'primeira entrada
+            Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo do Movimento] = 1, -1, 1)
+
+            If Tb![Tipo do Movimento] = 0 Then                 'entradas
+                If Custo = 0 Then
                     Custo = Tb![Valor de Custo]
                     Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
-                Else                                           'demais entradas
-                    If Estoque = 0 Then                        'estoque havia zerado
-                        Mensagem = "Não é possível calcular o custo médio: o estoque está zerado." & vbCrLf & _
-                                   "Produto: " & Produto
-                        MsgBox Mensagem, vbCritical + vbOKOnly, vaTitulo
+                Else
+                    If Estoque = 0 Then                        'estoque zerou
+                        If Not AvisouEstZero And ExibirAlerta Then
+                            Mensagem = "Não é possível calcular o custo médio: estoque zerado." & vbCrLf & _
+                                       "Produto: " & Produto
+                            MsgBox Mensagem, vbCritical, vaTitulo
+                            AvisouEstZero = True
+                        End If
                         Custo = Tb![Valor de Custo]
                         Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
-                    Else                                       'cálculo normal
+                    Else
                         Custo = Round((Total + Tb!Quantidade * Tb![Valor de Custo]) / Estoque, 4)
                         Total = Round(Total + Tb!Quantidade * Tb![Valor de Custo], 2)
                     End If
                 End If
-            ElseIf Tb![Tipo Do Movimento] = 1 Then             '-- saídas
+            ElseIf Tb![Tipo do Movimento] = 1 Then             'saídas
                 Total = Total - Round(Tb!Quantidade * Custo, 2)
             End If
-            
+
             Tb.MoveNext
         Loop
-        
+
         Ultimo = IIf(Oque = "Custo", Custo, Total)
     End If
-    
+
     Set Tb = Nothing
 End Function
+
+
 
 
 
@@ -5644,7 +5672,7 @@ Private Sub GerarConsumo()
  With BxEstoque
   .AddNew
     ![Seqüência do Movimento] = Sequencia_do_Movimento
-    ![Tipo Do Movimento] = 1
+    ![Tipo do Movimento] = 1
     ![Data do Movimento] = Data_do_Movimento
     !Documento = "Consumo"
     ![Seqüência do Produto] = Consumo_inclui
@@ -5723,7 +5751,7 @@ Private Sub GerarDevolucao()
  With BxEstoque
   .AddNew
     ![Seqüência do Movimento] = Sequencia_do_Movimento
-    ![Tipo Do Movimento] = 0
+    ![Tipo do Movimento] = 0
     ![Data do Movimento] = Data_do_Movimento
     !Documento = Documento
     ![Seqüência do Produto] = Devolucao_inclui
@@ -5757,11 +5785,11 @@ Private Function TotalInicial(Qual As String) As Currency
    Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Devolucao_inclui & " AND [Data do Movimento] <= " & D(Nota![Data de Emissão]) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
    
    Do While Not BxEstoque.EOF
-      Qtde = Qtde + BxEstoque!Quantidade * IIf(BxEstoque![Tipo Do Movimento] = 0, 1, -1)
-      If BxEstoque![Tipo Do Movimento] = 0 Then
+      Qtde = Qtde + BxEstoque!Quantidade * IIf(BxEstoque![Tipo do Movimento] = 0, 1, -1)
+      If BxEstoque![Tipo do Movimento] = 0 Then
          Custo = (Total + BxEstoque!Quantidade * BxEstoque![Valor de Custo]) / Qtde
       End If
-      Total = Total + BxEstoque!Quantidade * IIf(BxEstoque![Tipo Do Movimento] = 0, BxEstoque![Valor de Custo], -1 * Custo)
+      Total = Total + BxEstoque!Quantidade * IIf(BxEstoque![Tipo do Movimento] = 0, BxEstoque![Valor de Custo], -1 * Custo)
       Total = Round(Total, 2)
       BxEstoque.MoveNext
    Loop
@@ -6034,7 +6062,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
       Else
          Sequencia_do_Movimento = IIf(IsNull(vgTb![Seqüência do Movimento]), 0, vgTb![Seqüência do Movimento])
          Data_do_Movimento = vgTb![Data do Movimento]
-         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo Do Movimento]), 0, vgTb![Tipo Do Movimento])
+         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo do Movimento]), 0, vgTb![Tipo do Movimento])
          Documento = IIf(IsNull(vgTb!Documento), "", vgTb!Documento)
          Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
@@ -6314,7 +6342,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       Next
       InicializaApelidos COM_TEXTBOX
-      vgTb![Tipo Do Movimento] = Tipo_do_Movimento
+      vgTb![Tipo do Movimento] = Tipo_do_Movimento
       vgTb!Devolução = Devolucao
       Seq_Prod_Propria = IIf(IsNull(vgTb![Seq Prod Propria]), 0, vgTb![Seq Prod Propria])
       E_Producao_Propria = IIf(IsNull(vgTb![E Produção Propria]), 0, vgTb![E Produção Propria])
@@ -8017,9 +8045,9 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 12
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case 16
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8067,7 +8095,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 16
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(0).Col = 16 Then
@@ -8155,7 +8183,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
                If Valor_Unitario = 0 Then
                   vgIsValid = (Valor_Unitario > 0)
                   If Not vgIsValid Then vgColumn = 12
@@ -8164,7 +8192,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
                If Valor_Unitario > 0 Then
                   vgIsValid = (ValidaUnitario(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
@@ -8199,7 +8227,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8227,7 +8255,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaProduto(Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8358,9 +8386,9 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8399,7 +8427,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_do_Cofins
             End If
          Case 10
-            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), CalculaConjunto2(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
@@ -8408,7 +8436,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), 0)
             If Grid(1).Col = 11 Then
@@ -8444,14 +8472,14 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgErrorMessage$ = "Matéria Prima Insuficiente ou Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
                If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
                vgIsValid = (Valor_de_Custo > 0)
                If Not vgIsValid Then vgColumn = 11
                vgErrorMessage$ = "Valor de Custo inválido!"
@@ -8470,7 +8498,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa2 Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8489,7 +8517,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaConjunto(Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8611,9 +8639,9 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8663,7 +8691,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(2).Col = 11 Then
@@ -8699,7 +8727,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgErrorMessage$ = "Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
                If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
@@ -8725,7 +8753,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
@@ -8744,7 +8772,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
          GoSub IniApDaTb
          Movimento_Contabil_Novo.Edit
          Set vgRsError = Movimento_Contabil_Novo
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Despesa_Mvto_Novo) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Despesa_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
