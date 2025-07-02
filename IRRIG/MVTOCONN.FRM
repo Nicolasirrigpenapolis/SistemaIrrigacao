@@ -217,6 +217,7 @@ Begin VB.Form frmMvtoConN
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
+         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -265,22 +266,30 @@ Begin VB.Form frmMvtoConN
          Tab(1).Control(1)=   "txtCp(24)"
          Tab(1).Control(2)=   "txtCp(23)"
          Tab(1).Control(3)=   "bottxtCampo23(2)"
+         Tab(1).Control(3).Enabled=   0   'False
          Tab(1).Control(4)=   "bottxtCampo23(1)"
+         Tab(1).Control(4).Enabled=   0   'False
          Tab(1).Control(5)=   "labFdo23"
          Tab(1).Control(6)=   "Botao(7)"
          Tab(1).Control(7)=   "txtCp(22)"
+         Tab(1).Control(7).Enabled=   0   'False
          Tab(1).Control(8)=   "bottxtCampo22(2)"
+         Tab(1).Control(8).Enabled=   0   'False
          Tab(1).Control(9)=   "labFdo22"
          Tab(1).Control(10)=   "Botao(6)"
          Tab(1).Control(11)=   "txtCp(21)"
          Tab(1).Control(12)=   "txtCp(20)"
          Tab(1).Control(13)=   "bottxtCampo20(2)"
+         Tab(1).Control(13).Enabled=   0   'False
          Tab(1).Control(14)=   "bottxtCampo20(1)"
+         Tab(1).Control(14).Enabled=   0   'False
          Tab(1).Control(15)=   "labFdo20"
          Tab(1).Control(16)=   "Botao(3)"
          Tab(1).Control(17)=   "Label(28)"
          Tab(1).Control(18)=   "txtCp(16)"
+         Tab(1).Control(18).Enabled=   0   'False
          Tab(1).Control(19)=   "bottxtCampo16(2)"
+         Tab(1).Control(19).Enabled=   0   'False
          Tab(1).Control(20)=   "labFdo16"
          Tab(1).Control(21)=   "Botao(2)"
          Tab(1).Control(22)=   "Label(27)"
@@ -288,7 +297,9 @@ Begin VB.Form frmMvtoConN
          Tab(1).Control(24)=   "Label(26)"
          Tab(1).Control(25)=   "txtCp(14)"
          Tab(1).Control(26)=   "bottxtCampo14(2)"
+         Tab(1).Control(26).Enabled=   0   'False
          Tab(1).Control(27)=   "bottxtCampo14(1)"
+         Tab(1).Control(27).Enabled=   0   'False
          Tab(1).Control(28)=   "labFdo14"
          Tab(1).Control(29)=   "Label(7)"
          Tab(1).Control(30)=   "Grid(0)"
@@ -297,7 +308,9 @@ Begin VB.Form frmMvtoConN
          Tab(2).ControlEnabled=   0   'False
          Tab(2).Control(0)=   "Botao(5)"
          Tab(2).Control(1)=   "txtCp(19)"
+         Tab(2).Control(1).Enabled=   0   'False
          Tab(2).Control(2)=   "bottxtCampo19(2)"
+         Tab(2).Control(2).Enabled=   0   'False
          Tab(2).Control(3)=   "labFdo19"
          Tab(2).Control(4)=   "Label(31)"
          Tab(2).Control(5)=   "Botao(4)"
@@ -305,7 +318,9 @@ Begin VB.Form frmMvtoConN
          Tab(2).Control(7)=   "txtCp(18)"
          Tab(2).Control(8)=   "txtCp(17)"
          Tab(2).Control(9)=   "bottxtCampo17(2)"
+         Tab(2).Control(9).Enabled=   0   'False
          Tab(2).Control(10)=   "bottxtCampo17(1)"
+         Tab(2).Control(10).Enabled=   0   'False
          Tab(2).Control(11)=   "labFdo17"
          Tab(2).Control(12)=   "Label(29)"
          Tab(2).Control(13)=   "Label(8)"
@@ -319,8 +334,11 @@ Begin VB.Form frmMvtoConN
          TabCaption(4)   =   "5 - Financeiro"
          Tab(4).ControlEnabled=   0   'False
          Tab(4).Control(0)=   "txtCp(25)"
+         Tab(4).Control(0).Enabled=   0   'False
          Tab(4).Control(1)=   "bottxtCampo25(2)"
+         Tab(4).Control(1).Enabled=   0   'False
          Tab(4).Control(2)=   "bottxtCampo25(1)"
+         Tab(4).Control(2).Enabled=   0   'False
          Tab(4).Control(3)=   "labFdo25"
          Tab(4).Control(4)=   "Label(34)"
          Tab(4).Control(5)=   "Label(33)"
@@ -335,39 +353,52 @@ Begin VB.Form frmMvtoConN
          Tab(4).Control(14)=   "Label(22)"
          Tab(4).Control(15)=   "Label(21)"
          Tab(4).Control(16)=   "txtCp(13)"
+         Tab(4).Control(16).Enabled=   0   'False
          Tab(4).Control(17)=   "Label(20)"
          Tab(4).Control(18)=   "txtCp(12)"
+         Tab(4).Control(18).Enabled=   0   'False
          Tab(4).Control(19)=   "txtCp(11)"
+         Tab(4).Control(19).Enabled=   0   'False
          Tab(4).Control(20)=   "Label(19)"
          Tab(4).Control(21)=   "Label(18)"
          Tab(4).Control(22)=   "txtCp(10)"
+         Tab(4).Control(22).Enabled=   0   'False
          Tab(4).Control(23)=   "Label(17)"
          Tab(4).Control(24)=   "txtCp(9)"
          Tab(4).Control(25)=   "bottxtCampo9(0)"
+         Tab(4).Control(25).Enabled=   0   'False
          Tab(4).Control(26)=   "labFdo9"
          Tab(4).Control(27)=   "txtCp(8)"
          Tab(4).Control(28)=   "bottxtCampo8(0)"
+         Tab(4).Control(28).Enabled=   0   'False
          Tab(4).Control(29)=   "labFdo8"
          Tab(4).Control(30)=   "txtCp(7)"
          Tab(4).Control(31)=   "bottxtCampo7(2)"
+         Tab(4).Control(31).Enabled=   0   'False
          Tab(4).Control(32)=   "labFdo7"
          Tab(4).Control(33)=   "Label(16)"
          Tab(4).Control(34)=   "Label(15)"
          Tab(4).Control(35)=   "txtCp(6)"
          Tab(4).Control(36)=   "bottxtCampo6(2)"
+         Tab(4).Control(36).Enabled=   0   'False
          Tab(4).Control(37)=   "bottxtCampo6(1)"
+         Tab(4).Control(37).Enabled=   0   'False
          Tab(4).Control(38)=   "labFdo6"
          Tab(4).Control(39)=   "Label(14)"
          Tab(4).Control(40)=   "Label(13)"
          Tab(4).Control(41)=   "txtCp(5)"
          Tab(4).Control(42)=   "bottxtCampo5(2)"
+         Tab(4).Control(42).Enabled=   0   'False
          Tab(4).Control(43)=   "bottxtCampo5(1)"
+         Tab(4).Control(43).Enabled=   0   'False
          Tab(4).Control(44)=   "labFdo5"
          Tab(4).Control(45)=   "Label(12)"
          Tab(4).Control(46)=   "Botao(1)"
          Tab(4).Control(47)=   "txtCp(4)"
          Tab(4).Control(48)=   "bottxtCampo4(2)"
+         Tab(4).Control(48).Enabled=   0   'False
          Tab(4).Control(49)=   "bottxtCampo4(1)"
+         Tab(4).Control(49).Enabled=   0   'False
          Tab(4).Control(50)=   "labFdo4"
          Tab(4).Control(51)=   "Label(11)"
          Tab(4).Control(52)=   "Label(10)"
@@ -524,6 +555,7 @@ Begin VB.Form frmMvtoConN
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "MS Sans Serif"
                Size            =   8.25
@@ -816,6 +848,7 @@ Begin VB.Form frmMvtoConN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   390
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -902,6 +935,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1425
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   12
@@ -956,6 +990,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1635
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   12
@@ -1041,6 +1076,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1425
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   12
@@ -1094,6 +1130,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1650
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   12
@@ -1179,6 +1216,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1455
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   9
@@ -1232,6 +1270,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1635
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   12
@@ -1317,6 +1356,7 @@ Begin VB.Form frmMvtoConN
             Width           =   1455
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Verdana"
                Size            =   9
@@ -2162,6 +2202,7 @@ Begin VB.Form frmMvtoConN
          Width           =   1665
          _ExtentX        =   0
          _ExtentY        =   0
+         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Microsoft Sans Serif"
             Size            =   12
@@ -4359,37 +4400,58 @@ End Function
 
 
 Private Function Ultimo(Oque As String, Produto As Long) As Currency
-   Dim Tb As New GRecordSet, Custo As Currency, Total As Currency, Estoque As Double
-   If Oque = "Qtde" Then
-      Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Produto & " AND [Data do Movimento] <= " & D(Data_do_Movimento))
-      If Not IsNull(Tb!Estoque) Then Ultimo = Tb!Estoque
-   ElseIf Oque = "Custo" Or Oque = "Total" Then
-      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Produto & " AND [Data do Movimento] <= " & D(Data_do_Movimento) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
-      Do While Not Tb.EOF
-         Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo Do Movimento] = 1, -1, 1)
-         'If Estoque <> 0 Then
-            If Tb![Tipo Do Movimento] = 0 Then
-               If Custo = 0 Then
-                  Custo = Tb![Valor de Custo]
-                  Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
-               Else
-                  Custo = Round((Total + Tb!Quantidade * Tb![Valor de Custo]) / Estoque, 4)
-                  Total = Round(Total + Tb!Quantidade * Tb![Valor de Custo], 2)
-               End If
-            ElseIf Tb![Tipo Do Movimento] = 1 Then
-               Total = Total - Round(Tb!Quantidade * Custo, 2)
+    Dim Tb As New GRecordSet
+    Dim Custo As Currency, Total As Currency, Estoque As Double
+    Dim Mensagem As String
+    
+    If Oque = "Qtde" Then
+        Set Tb = vgDb.OpenRecordSet( _
+            "SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque " & _
+            "FROM [Baixa do Estoque Contábil] " & _
+            "WHERE [Seqüência do Produto] = " & Produto & _
+            " AND [Data do Movimento] <= " & D(Data_do_Movimento))
+            
+        If Not IsNull(Tb!Estoque) Then Ultimo = Tb!Estoque
+        
+    ElseIf Oque = "Custo" Or Oque = "Total" Then
+        Set Tb = vgDb.OpenRecordSet( _
+            "SELECT * FROM [Baixa do Estoque Contábil] " & _
+            "WHERE [Seqüência do Produto] = " & Produto & _
+            " AND [Data do Movimento] <= " & D(Data_do_Movimento) & _
+            " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
+        
+        Do While Not Tb.EOF
+            Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo Do Movimento] = 1, -1, 1)
+            
+            If Tb![Tipo Do Movimento] = 0 Then                 '-- entradas
+                If Custo = 0 Then                              'primeira entrada
+                    Custo = Tb![Valor de Custo]
+                    Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
+                Else                                           'demais entradas
+                    If Estoque = 0 Then                        'estoque havia zerado
+                        Mensagem = "Não é possível calcular o custo médio: o estoque está zerado." & vbCrLf & _
+                                   "Produto: " & Produto
+                        MsgBox Mensagem, vbCritical + vbOKOnly, vaTitulo
+                        Custo = Tb![Valor de Custo]
+                        Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
+                    Else                                       'cálculo normal
+                        Custo = Round((Total + Tb!Quantidade * Tb![Valor de Custo]) / Estoque, 4)
+                        Total = Round(Total + Tb!Quantidade * Tb![Valor de Custo], 2)
+                    End If
+                End If
+            ElseIf Tb![Tipo Do Movimento] = 1 Then             '-- saídas
+                Total = Total - Round(Tb!Quantidade * Custo, 2)
             End If
-        ' Else
-        '    Total = 0
-        '    Custo = 0
-        ' End If
-         Tb.MoveNext
-      Loop
-      Ultimo = IIf(Oque = "Custo", Custo, Total)
-   End If
-   Set Tb = Nothing
-   
+            
+            Tb.MoveNext
+        Loop
+        
+        Ultimo = IIf(Oque = "Custo", Custo, Total)
+    End If
+    
+    Set Tb = Nothing
 End Function
+
 
 
 Private Function ValidaProduto(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvto_Novo As Long, Sequencia_do_Produto As Long, _

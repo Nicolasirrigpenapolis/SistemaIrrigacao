@@ -24,6 +24,138 @@ Begin VB.Form frmF_CopRec
       _ExtentY        =   5450
       BevelOuter      =   0
       Stretch         =   -1  'True
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   3
+         Left            =   6600
+         TabIndex        =   8
+         TabStop         =   0   'False
+         Top             =   1620
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   2
+         Left            =   6600
+         TabIndex        =   7
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao botCancela 
+         Height          =   360
+         Left            =   5340
+         TabIndex        =   5
+         Top             =   2535
+         Width           =   1500
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancela"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao botOk 
+         Height          =   360
+         Left            =   3825
+         TabIndex        =   4
+         Top             =   2535
+         Width           =   1500
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Prossegue"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   1
+         Left            =   6600
+         TabIndex        =   9
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   0
+         Left            =   6600
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1620
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
       Begin VB.CommandButton bottxtCampo0 
          Height          =   270
          Index           =   1
@@ -64,94 +196,6 @@ Begin VB.Form frmF_CopRec
          Top             =   1635
          Width           =   5385
       End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   0
-         Left            =   6600
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1620
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   1
-         Left            =   6600
-         TabIndex        =   9
-         TabStop         =   0   'False
-         Top             =   2085
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao botOk 
-         Height          =   360
-         Left            =   3825
-         TabIndex        =   4
-         Top             =   2535
-         Width           =   1500
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Prossegue"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao botCancela 
-         Height          =   360
-         Left            =   5340
-         TabIndex        =   5
-         Top             =   2535
-         Width           =   1500
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancela"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
       Begin VB.CommandButton bottxtCampo1 
          Height          =   270
          Index           =   1
@@ -191,28 +235,6 @@ Begin VB.Form frmF_CopRec
          TabIndex        =   1
          Top             =   2100
          Width           =   5385
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   2
-         Left            =   6600
-         TabIndex        =   7
-         TabStop         =   0   'False
-         Top             =   2085
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin VB.CommandButton bottxtCampo2 
          Height          =   270
@@ -293,28 +315,6 @@ Begin VB.Form frmF_CopRec
          TabIndex        =   3
          Top             =   2100
          Width           =   5385
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   3
-         Left            =   6600
-         TabIndex        =   8
-         TabStop         =   0   'False
-         Top             =   1620
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
       End
       Begin IRRIG.GPainel Painel 
          Height          =   240
@@ -873,8 +873,8 @@ Private Sub Form_Load()
    AjustaTamanho Me
    Executar INICIALIZACOES
    InicializaApelidos COM_TEXTBOX
-   defaultBack55 = txtCampo(55).BackColor
-    Call ExecutaPreValidacao
+  'defaultBack55 = txtCampo(55).BackColor
+   ' Call ExecutaPreValidacao
    ExecutaVisivel
    MostraFormulas
    CentraNaTela Me

@@ -24,30 +24,39 @@ Begin VB.Form frmDNFSe
    MinButton       =   0   'False
    ScaleHeight     =   8100
    ScaleWidth      =   10050
-   Begin SHDocVwCtl.WebBrowser IE_Web 
+   Begin VB.PictureBox IE_Web5 
       Height          =   10000
       Left            =   0
+      ScaleHeight     =   9945
+      ScaleWidth      =   10260
       TabIndex        =   0
       Top             =   0
       Width           =   10320
-      ExtentX         =   18203
-      ExtentY         =   17639
-      ViewMode        =   0
-      Offline         =   0
-      Silent          =   0
-      RegisterAsBrowser=   0
-      RegisterAsDropTarget=   1
-      AutoArrange     =   0   'False
-      NoClientEdge    =   0   'False
-      AlignLeft       =   0   'False
-      NoWebView       =   0   'False
-      HideFileNames   =   0   'False
-      SingleClick     =   0   'False
-      SingleSelection =   0   'False
-      NoFolders       =   0   'False
-      Transparent     =   0   'False
-      ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-      Location        =   ""
+      Begin SHDocVwCtl.WebBrowser IE_Web 
+         Height          =   5535
+         Left            =   840
+         TabIndex        =   1
+         Top             =   720
+         Width           =   6855
+         ExtentX         =   12091
+         ExtentY         =   9763
+         ViewMode        =   0
+         Offline         =   0
+         Silent          =   0
+         RegisterAsBrowser=   0
+         RegisterAsDropTarget=   1
+         AutoArrange     =   0   'False
+         NoClientEdge    =   0   'False
+         AlignLeft       =   0   'False
+         NoWebView       =   0   'False
+         HideFileNames   =   0   'False
+         SingleClick     =   0   'False
+         SingleSelection =   0   'False
+         NoFolders       =   0   'False
+         Transparent     =   0   'False
+         ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
+         Location        =   ""
+      End
    End
 End
 Attribute VB_Name = "frmDNFSe"
@@ -63,7 +72,7 @@ Private Sub Form_Unload(Cancel As Integer)
 End Sub
 
 Public Sub AbreSite(Site As String)
-   Do While IE_Web.ReadyState <> 4: DoEvents: Loop
+   Do While IE_Web.readyState <> 4: DoEvents: Loop
    IE_Web.Navigate Site
    Me.Show
 End Sub
