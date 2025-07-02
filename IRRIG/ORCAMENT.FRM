@@ -26,11 +26,11 @@ Begin VB.Form frmOrcament
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   0
+         Index           =   16
          Left            =   13125
-         TabIndex        =   55
+         TabIndex        =   195
          TabStop         =   0   'False
-         Top             =   180
+         Top             =   165
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -44,17 +44,130 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Gerar Nota"
+         Caption         =   "Imprimir"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   8
-         Left            =   14565
-         TabIndex        =   56
+         Index           =   15
+         Left            =   12810
+         TabIndex        =   190
          TabStop         =   0   'False
-         Top             =   750
+         Top             =   735
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   14
+         Left            =   7410
+         TabIndex        =   187
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   2580
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mapa da Propriedade"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   13
+         Left            =   10050
+         TabIndex        =   182
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Ficha Técnica"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14580
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   15180
+         TabIndex        =   59
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   10
+         Left            =   9810
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   1650
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -96,54 +209,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   10
-         Left            =   9810
-         TabIndex        =   4
+         Index           =   8
+         Left            =   14565
+         TabIndex        =   56
          TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   15180
-         TabIndex        =   59
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14580
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1650
+         Top             =   750
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -161,81 +231,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   13
-         Left            =   10050
-         TabIndex        =   182
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Ficha Técnica"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   14
-         Left            =   7410
-         TabIndex        =   187
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   2580
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mapa da Propriedade"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   15
-         Left            =   12810
-         TabIndex        =   190
-         TabStop         =   0   'False
-         Top             =   735
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   16
+         Index           =   0
          Left            =   13125
-         TabIndex        =   195
+         TabIndex        =   55
          TabStop         =   0   'False
-         Top             =   165
+         Top             =   180
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -249,7 +249,7 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Imprimir"
+         Caption         =   "Gerar Nota"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
@@ -579,13 +579,13 @@ Begin VB.Form frmOrcament
          Tab(0).Control(136).Enabled=   0   'False
          Tab(0).Control(137)=   "txtCp(1)"
          Tab(0).Control(137).Enabled=   0   'False
-         Tab(0).Control(138)=   "Botao(5)"
+         Tab(0).Control(138)=   "Botao(1)"
          Tab(0).Control(138).Enabled=   0   'False
-         Tab(0).Control(139)=   "Botao(4)"
+         Tab(0).Control(139)=   "Botao(3)"
          Tab(0).Control(139).Enabled=   0   'False
-         Tab(0).Control(140)=   "Botao(3)"
+         Tab(0).Control(140)=   "Botao(4)"
          Tab(0).Control(140).Enabled=   0   'False
-         Tab(0).Control(141)=   "Botao(1)"
+         Tab(0).Control(141)=   "Botao(5)"
          Tab(0).Control(141).Enabled=   0   'False
          Tab(0).ControlCount=   142
          TabCaption(1)   =   "&2 - Produtos"
@@ -959,56 +959,58 @@ Begin VB.Form frmOrcament
          Tab(8).Control(1)=   "Label(171)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   1
-            Left            =   3300
-            TabIndex        =   28
+            Height          =   315
+            Index           =   7
+            Left            =   -64005
+            TabIndex        =   105
             TabStop         =   0   'False
-            Top             =   2700
-            Width           =   240
+            Top             =   495
+            Width           =   2055
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
                Charset         =   0
-               Weight          =   400
+               Weight          =   700
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            Caption         =   "Parcelamento"
             CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   2
-            Left            =   -71670
-            TabIndex        =   42
+            Height          =   375
+            Index           =   6
+            Left            =   -65505
+            TabIndex        =   104
             TabStop         =   0   'False
-            Top             =   450
-            Width           =   240
+            Top             =   4695
+            Width           =   5070
             _ExtentX        =   0
             _ExtentY        =   0
-            ForeColor       =   0
+            ForeColor       =   32768
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
                Charset         =   0
-               Weight          =   400
+               Weight          =   700
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            Caption         =   "Atualizar Valor dos Produtos"
             CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   3
-            Left            =   10125
-            TabIndex        =   19
+            Index           =   5
+            Left            =   9120
+            TabIndex        =   93
             TabStop         =   0   'False
-            Top             =   1380
+            Top             =   4620
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1048,11 +1050,11 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   9120
-            TabIndex        =   93
+            Index           =   3
+            Left            =   10125
+            TabIndex        =   19
             TabStop         =   0   'False
-            Top             =   4620
+            Top             =   1380
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1069,49 +1071,47 @@ Begin VB.Form frmOrcament
             CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
-            Height          =   375
-            Index           =   6
-            Left            =   -65505
-            TabIndex        =   104
+            Height          =   300
+            Index           =   2
+            Left            =   -71670
+            TabIndex        =   42
             TabStop         =   0   'False
-            Top             =   4695
-            Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   32768
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Atualizar Valor dos Produtos"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   315
-            Index           =   7
-            Left            =   -64005
-            TabIndex        =   105
-            TabStop         =   0   'False
-            Top             =   495
-            Width           =   2055
+            Top             =   450
+            Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
                Charset         =   0
-               Weight          =   700
+               Weight          =   400
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Parcelamento"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   1
+            Left            =   3300
+            TabIndex        =   28
+            TabStop         =   0   'False
+            Top             =   2700
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -1901,26 +1901,17 @@ Begin VB.Form frmOrcament
             Tag             =   "1"
             Top             =   930
             Width           =   14475
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   315
-            SaveGridBars    =   -1  'True
-            SaveGridStripes =   0   'False
-            Caption         =   "Conjuntos"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   9
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1  'True
+            stripesbackcolor=   14737632
+            rowheight       =   315
+            savegridbars    =   -1  'True
+            caption         =   "Conjuntos"
+            font            =   "ORCAMENT.frx":0038
          End
          Begin IRRIG.GListV Grid 
             Height          =   4845
@@ -1930,26 +1921,17 @@ Begin VB.Form frmOrcament
             Tag             =   "1"
             Top             =   450
             Width           =   14475
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   315
-            SaveGridBars    =   -1  'True
-            SaveGridStripes =   0   'False
-            Caption         =   "Peças"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   9
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1  'True
+            stripesbackcolor=   14737632
+            rowheight       =   315
+            savegridbars    =   -1  'True
+            caption         =   "Peças"
+            font            =   "ORCAMENT.frx":005C
          End
          Begin VB.CommandButton bottxtCampo34 
             Height          =   270
@@ -1999,27 +1981,18 @@ Begin VB.Form frmOrcament
             Tag             =   "1"
             Top             =   900
             Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   315
-            ShowGridCaption =   0   'False
-            SaveGridBars    =   -1  'True
-            SaveGridStripes =   0   'False
-            Caption         =   ""
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   9
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1  'True
+            stripesbackcolor=   14737632
+            rowheight       =   315
+            showgridcaption =   0   'False
+            savegridbars    =   -1  'True
+            caption         =   ""
+            font            =   "ORCAMENT.frx":0080
          End
          Begin VB.CommandButton bottxtCampo35 
             Height          =   270
@@ -2059,26 +2032,17 @@ Begin VB.Form frmOrcament
             Tag             =   "1"
             Top             =   540
             Width           =   14475
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   315
-            SaveGridBars    =   -1  'True
-            SaveGridStripes =   0   'False
-            Caption         =   "Produtos"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   9
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1  'True
+            stripesbackcolor=   14737632
+            rowheight       =   315
+            savegridbars    =   -1  'True
+            caption         =   "Produtos"
+            font            =   "ORCAMENT.frx":00A4
          End
          Begin IRRIG.GListV Grid 
             Height          =   4845
@@ -2088,26 +2052,17 @@ Begin VB.Form frmOrcament
             Tag             =   "1"
             Top             =   450
             Width           =   14475
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   315
-            SaveGridBars    =   -1  'True
-            SaveGridStripes =   0   'False
-            Caption         =   "Serviços"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   9
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1  'True
+            stripesbackcolor=   14737632
+            rowheight       =   315
+            savegridbars    =   -1  'True
+            caption         =   "Serviços"
+            font            =   "ORCAMENT.frx":00C8
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -4948,19 +4903,11 @@ Begin VB.Form frmOrcament
             TabStop         =   0   'False
             Top             =   1005
             Width           =   14430
-            _ExtentX        =   0
-            _ExtentY        =   0
-            Locked          =   -1  'True
-            ScrollBars      =   0   'False
-            BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            captionfont     =   "ORCAMENT.frx":00EC
+            locked          =   -1  'True
+            scrollbars      =   0   'False
          End
          Begin VB.CommandButton bottxtCampo147 
             Height          =   270
@@ -8956,7 +8903,7 @@ Begin VB.Form frmOrcament
          End
          Begin VB.Label Label 
             AutoSize        =   -1  'True
-            Caption         =   $"ORCAMENT.frx":0038
+            Caption         =   $"ORCAMENT.frx":011A
             BeginProperty Font 
                Name            =   "Verdana"
                Size            =   9
@@ -9536,21 +9483,13 @@ Begin VB.Form frmOrcament
          TabStop         =   0   'False
          Top             =   120
          Width           =   1335
-         _ExtentX        =   0
-         _ExtentY        =   0
-         Locked          =   -1  'True
-         ScrollBars      =   0   'False
-         Appearance      =   0
-         BorderStyle     =   0
-         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         captionfont     =   "ORCAMENT.frx":01A3
+         appearance      =   0
+         borderstyle     =   0
+         locked          =   -1  'True
+         scrollbars      =   0   'False
       End
       Begin VB.CommandButton bottxtCampo161 
          Height          =   270
@@ -9832,31 +9771,22 @@ Begin VB.Form frmOrcament
       TabIndex        =   461
       Top             =   330
       Width           =   1575
-      _ExtentX        =   2778
-      _ExtentY        =   1402
-      FullRowSelect   =   0   'False
-      StripesBackColor=   14737632
-      RowHeight       =   285
-      AllowEdit       =   -1  'True
-      AllowInsert     =   -1  'True
-      AllowDelete     =   -1  'True
-      ManualUpdate    =   -1  'True
-      ManualDelete    =   -1  'True
-      NavigationAddMode=   1
-      ShowFilterBar   =   -1  'True
-      ShowGridCaption =   0   'False
-      SaveGridStripes =   0   'False
-      Caption         =   ""
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      CacheSize       =   100
+      _extentx        =   2778
+      _extenty        =   1402
+      fullrowselect   =   0   'False
+      stripesbackcolor=   14737632
+      rowheight       =   285
+      allowedit       =   -1  'True
+      allowinsert     =   -1  'True
+      allowdelete     =   -1  'True
+      manualupdate    =   -1  'True
+      manualdelete    =   -1  'True
+      navigationaddmode=   1
+      showfilterbar   =   -1  'True
+      showgridcaption =   0   'False
+      caption         =   ""
+      font            =   "ORCAMENT.frx":01D1
+      cachesize       =   100
    End
    Begin VB.Timer timUnLoad 
       Enabled         =   0   'False
@@ -9929,7 +9859,7 @@ Dim Fechamento As Integer, Valor_do_Fechamento As Double, Valor_Total_IPI_dos_Pr
 Dim Valor_Total_IPI_dos_Conjuntos As Double, Valor_Total_do_ICMS As Double, Valor_Total_dos_Produtos As Double
 Dim Valor_Total_dos_Conjuntos As Double, Valor_Total_de_Produtos_Usados As Double, Valor_Total_Conjuntos_Usados As Double
 Dim Valor_Total_dos_Servicos As Double, Valor_Total_do_Orcamento As Double, Nome_Cliente As String
-Dim Endereco As String, CEP As String, Telefone As String
+Dim endereco As String, CEP As String, Telefone As String
 Dim Fax As String, Email As String, Sequencia_do_Vendedor As Long
 Dim Sequencia_do_Pedido As Long, Tipo As Integer, CPF_e_CNPJ As String
 Dim RG_e_IE As String, Forma_de_Pagamento As String, Ocultar_Valor_Unitario As Boolean
@@ -14627,7 +14557,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_dos_Servicos = txtCampo(43).Value
          Valor_Total_do_Orcamento = txtCampo(36).Value
          Nome_Cliente = txtCampo(18).Value
-         Endereco = txtCampo(24).Value
+         endereco = txtCampo(24).Value
          CEP = txtCampo(8).Value
          Telefone = txtCampo(22).Value
          Fax = txtCampo(12).Value
@@ -14760,7 +14690,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Valor_Total_dos_Servicos = IIf(IsNull(vgTb![Valor Total dos Serviços]), 0, vgTb![Valor Total dos Serviços])
          Valor_Total_do_Orcamento = IIf(IsNull(vgTb![Valor Total do Orçamento]), 0, vgTb![Valor Total do Orçamento])
          Nome_Cliente = IIf(IsNull(vgTb![Nome Cliente]), "", vgTb![Nome Cliente])
-         Endereco = IIf(IsNull(vgTb!Endereço), "", vgTb!Endereço)
+         endereco = IIf(IsNull(vgTb!Endereço), "", vgTb!Endereço)
          CEP = IIf(IsNull(vgTb!CEP), "", vgTb!CEP)
          Telefone = IIf(IsNull(vgTb!Telefone), "", vgTb!Telefone)
          Fax = IIf(IsNull(vgTb!Fax), "", vgTb!Fax)
@@ -16165,16 +16095,8 @@ Private Sub chkCp_Click(Index As Integer)
       chkCampo(Index).Change
    End If
    Select Case Index
-      Case 5
-         SuperAtualizaProdutos
-         SuperAtualizaConjuntos
-         SuperAtualizaPecas
       Case 6
          DesmarcaFw
-      Case 9
-         SuperAtualizaProdutos
-         SuperAtualizaConjuntos
-         SuperAtualizaPecas
    End Select
 End Sub
 

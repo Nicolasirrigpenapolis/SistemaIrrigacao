@@ -2667,6 +2667,7 @@ Public Txtbuscageral As Object, lblAjuste As Object, GrdProdutos As Object
 Public grdConjuntos As Object, GrdDespesas As Object, txtForma_de_Pagamento As Object
 Public lblParcelamento As Object, Grdparcelamento As Object, txtProduto As Object
 Public txtQtde_Caixinha As Object, Txtid As Object, txtConjunto As Object
+Public RecalcularDepoisExclusao As Boolean
 Public Txtqtde_caixinhaconjunto As Object, Txtidconj As Object, Txtconsumo As Object
 Public Txtqtde_caixinhaconsumo As Object, Txtidconsumo As Object, Txtdevolucao_inclui As Object
 Public Txtqtde_devolucao As Object, LblTemConta As Object, LblTemConta2 As Object
@@ -2722,7 +2723,7 @@ Private Function ProcessaProdutos(Sequencia_do_Movimento As Long, Sequencia_do_P
    vgDb.BeginTrans
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
    vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Quantidade * Valor_Unitario), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then  'Saída
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then  'Saída
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Produtos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Produto Mvto Novo] = " & Sequencia_do_Produto_Mvto_Novo   'Valor Custo
    End If
@@ -2758,7 +2759,7 @@ Private Function ProcessaDespesas(Sequencia_do_Movimento As Long, Sequencia_Desp
    vgDb.BeginTrans
    vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo 'Valor Total
    vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Total Compra] = " & Substitui(CStr(Quantidade * Valor_Unitario), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then 'Saída
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then 'Saída
       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Despesas Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo   'Valor Custo
    End If
@@ -2788,7 +2789,7 @@ Private Function ProcessaConjuntos(Sequencia_do_Movimento As Long, Sequencia_Con
      
    vgDb.BeginTrans
    vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Total] = " & Substitui(CStr(Quantidade * Valor_de_Custo), ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo 'Valor Total
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then 'Saída
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then 'Saída
       vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor Unitário] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Unitario
       vgDb.Execute "Update [Conjuntos Mvto Contábil Novo] Set [Valor de Custo] = " & Substitui(Tb![Valor Contábil Atual], ",", ".", SO_UM) & " WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência Conjunto Mvto Novo] = " & Sequencia_Conjunto_Mvto_Novo   'Valor Custo
    End If
@@ -2919,7 +2920,7 @@ Private Function TemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_Produto
    Valor_total_compra As Double) As Boolean
    Dim B As New GRecordSet
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then TemEstoque = True: GoTo Fim
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoque = True: GoTo Fim
    
    On Error Resume Next
    Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Produtos WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
@@ -2945,8 +2946,8 @@ Private Function BlasterTemEstoque(Sequencia_do_Movimento As Long, Sequencia_do_
    
    On Error Resume Next
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoque = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoque = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
    
    Set B = vgDb.OpenRecordSet("SELECT [Seqüência da Matéria Prima] As MateriaPrima, [Quantidade de Matéria Prima] As QtdeUsada, P2.[Quantidade Contábil] As QtdeContabil, SP.Descrição Sub " & _
                               "FROM [Matéria Prima] MP LEFT JOIN Produtos P ON MP.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -3069,7 +3070,7 @@ Private Function TemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequencia_Des
    Valor_da_Substituicao As Double, Valor_do_ipi_compra As Double, Valor_total_compra As Double) As Boolean
    Dim B As New GRecordSet
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then TemEstoqueDespesa = True: GoTo Fim
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then TemEstoqueDespesa = True: GoTo Fim
    
    On Error Resume Next
    Set B = vgDb.OpenRecordSet("SELECT [Quantidade Contábil] FROM Despesas WHERE [Seqüência da Despesa] = " & Sequencia_da_Despesa)
@@ -3092,7 +3093,7 @@ Private Function BlasterTemEstoqueDespesa(Sequencia_do_Movimento As Long, Sequen
       
    On Error Resume Next
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then BlasterTemEstoqueDespesa = True: Exit Function
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then BlasterTemEstoqueDespesa = True: Exit Function
 
    Set B = vgDb.OpenRecordSet("SELECT DMvto.Quantidade, D.[Quantidade Contábil] FROM Despesas D LEFT JOIN [Despesas Mvto Contábil Novo] DMvto ON D.[Seqüência da Despesa] = DMvto.[Seqüência da Despesa] " & _
                               "WHERE D.[Seqüência da Despesa] = " & Sequencia_da_Despesa & IIf(vgSituacao = -ACAO_INCLUINDO, " AND 1 = 1", " AND Dmvto.[Seqüência Despesa Mvto Novo] = " & Sequencia_Despesa_Mvto_Novo))
@@ -3167,14 +3168,14 @@ Private Sub IncluiRegistro(ByVal Codigo As Long, ByVal Produto As Long, ByVal Qu
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqProduto
-      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
+      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "P"
-      If ![Tipo do Movimento] = 0 Then 'Entrada
+      If ![Tipo Do Movimento] = 0 Then 'Entrada
          ![Seqüência do Produto] = TbProduto![Seqüência do Produto]
          ![Valor Do PIS] = TbProduto![Valor Do PIS]
          ![Valor Do Cofins] = TbProduto![Valor Do Cofins]
@@ -3209,14 +3210,14 @@ Private Sub IncluiDespesa(ByVal Codigo As Long, ByVal Despesa As Long, ByVal Qua
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqDespesa
-      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
+      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Tipo Do Produto] = Tb![Tipo Do Produto]
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
       !Estoque = "D"
-      If ![Tipo do Movimento] = 0 Then 'Entrada
+      If ![Tipo Do Movimento] = 0 Then 'Entrada
          ![Seqüência Da Despesa] = TbDespesa![Seqüência Da Despesa]
          ![Valor Do PIS] = TbDespesa![Valor Do PIS]
          ![Valor Do Cofins] = TbDespesa![Valor Do Cofins]
@@ -3389,12 +3390,12 @@ Private Sub IncluiRegistroC(ByVal Codigo As Long, ByVal Produto As Long, ByVal Q
       .AddNew
       ![Seqüência do Movimento] = Sequencia_do_Movimento
       ![Seqüência Do Item 2] = SeqConjunto
-      ![Tipo do Movimento] = IIf(Receita, IIf(B![Tipo do Movimento] = 0, 1, ""), B![Tipo do Movimento])
+      ![Tipo Do Movimento] = IIf(Receita, IIf(B![Tipo Do Movimento] = 0, 1, ""), B![Tipo Do Movimento])
       ![Data do Movimento] = B![Data do Movimento]
       !Documento = Left(B!Documento, 8)
       ![Seqüência Do Geral] = B![Seqüência Do Geral]
       !Observação = B!Observação
-      If ![Tipo do Movimento] = 0 Then 'Entrada
+      If ![Tipo Do Movimento] = 0 Then 'Entrada
          If LancaProduto Then
             ![Seqüência do Produto] = TbProduto![Seqüência do Conjunto]
          Else
@@ -3774,7 +3775,7 @@ Private Function VrUnit(Sequencia_do_Movimento As Long, Sequencia_do_Produto_Mvt
    
    If ProdutoAux.RecordCount = 0 Then Exit Function
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
       If ProdutoAux![Tipo Do Produto] = 0 Or ProdutoAux![Tipo Do Produto] = 6 Then
          RetVal = CalculaValorEntrada2(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, _
    Quantidade, Valor_Unitario, Valor_de_Custo, _
@@ -3804,7 +3805,7 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
    
    If DespesaAux.RecordCount = 0 Then Exit Function
    
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
       RetVal = DespesaAux![Valor Contábil Atual]
    Else
       RetVal = 0
@@ -3814,15 +3815,15 @@ Private Function VrUnitDespesa(Sequencia_do_Movimento As Long, Sequencia_Despesa
 End Function
 
 Private Function Executa() As Boolean
-   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
+   BaixaReceita Produtos_Mvto_Contabil_No![Seqüência do Produto], Produtos_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Produtos_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Produtos_Mvto_Contabil_No![Seqüência Do Produto Mvto Novo]
 End Function
 
 Private Function Executa2() As Boolean
-   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
+   BaixaConjunto Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto], Conjuntos_Mvto_Contabil_N!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Conjuntos_Mvto_Contabil_N![Seqüência do Movimento], Conjuntos_Mvto_Contabil_N![Seqüência Conjunto Mvto Novo]
 End Function
 
 Private Function Executa3() As Boolean
-   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência Da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
+   BaixaDespesa Despesas_Mvto_Contabil_No![Seqüência Da Despesa], Despesas_Mvto_Contabil_No!Quantidade, Movimento_Contabil_Novo![Tipo Do Movimento], "-", Despesas_Mvto_Contabil_No![Seqüência do Movimento], Movimento_Contabil_Novo![Data do Movimento], Despesas_Mvto_Contabil_No![Seqüência Despesa Mvto Novo]
 End Function
 
 'Quando deletar o Registro Pai deletar os filhos também
@@ -3832,12 +3833,13 @@ Private Sub DeletaBaixa()
 
    On Error GoTo DeuErro
    
+   RecalcularDepoisExclusao = True
    If Seq_Prod_Propria > 0 And vgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 0 Then
-      DeletaProdPropria
+      DeletaProdPropria False
    End If
    
    If Seq_Baixa_Consumo > 0 And vgSituacao = ACAO_EXCLUINDO And Tipo_do_Movimento = 1 Then
-      DeletaBxConsumo
+      DeletaBxConsumo False
    End If
    
    Set BxContabil = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento)
@@ -3877,19 +3879,19 @@ Private Sub AlteraRegistro()
    AlteraManutencao
 End Sub
 
-Private Function ExcluiBaixaReceitaProduto(ByVal SeqProduto As Long) As Boolean
+Private Function ExcluiBaixaReceitaProduto(ByVal SeqProduto As Long, Optional Atualizar As Boolean = True) As Boolean
    Dim BaixaMP As New GRecordSet, MP() As Long, i As Variant
    
    'Deletando Baixa da Materia Prima
    vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Item 2] = " & SeqProduto
    
-   MegaEstoqueContabil 0, 0 'Nova Rotina Super Rapida
+If Atualizar Then MegaEstoqueContabil 0, 0    'Nova Rotina Super Rapida
    
    'Exclui os Itens do Mvto Irrig
    If vgSituacao = -ACAO_EXCLUINDO Then
    If Baixa_Consumo = True And Tipo_do_Movimento = 1 And Seq_Baixa_Consumo > 0 Then
      vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
-     AtualizaEstoque 1, 0
+     If Atualizar Then AtualizaEstoque 1, 0
    End If
    End If
    
@@ -3900,20 +3902,20 @@ Private Function ExcluiBaixaReceitaProduto(ByVal SeqProduto As Long) As Boolean
    If Seq_Prod_Propria > 0 Then
    vgDb.Execute "DELETE FROM [Baixa MP Produto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
    vgDb.Execute "DELETE FROM [Produtos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Produto] = " & Produtos_Mvto_Contabil_No![Seqüência do Produto]
-   AtualizaEstoque 1, 0
+   If Atualizar Then AtualizaEstoque 1, 0
    End If
    End If
    End If
     
 End Function
 
-Private Function ExcluiBaixaReceitaConjunto(ByVal SeqConjunto As Integer) As Boolean
+Private Function ExcluiBaixaReceitaConjunto(ByVal SeqConjunto As Integer, Optional Atualizar As Boolean = True) As Boolean
    Dim BaixaMP As New GRecordSet, MP() As Long, i As Variant
       
    'Deletando Baixa da Materia Prima
    vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Movimento] = " & Sequencia_do_Movimento & " AND [Seqüência do Item 2] = " & SeqConjunto
    
-   MegaEstoqueContabil 1, 0 'Nova Rotina Super Rapida
+   If Atualizar Then MegaEstoqueContabil 1, 0 'Nova Rotina Super Rapida
    
    If vgSituacao = -ACAO_EXCLUINDO Then
    If E_Producao_Propria = False Then Exit Function
@@ -3921,8 +3923,8 @@ Private Function ExcluiBaixaReceitaConjunto(ByVal SeqConjunto As Integer) As Boo
    If Seq_Prod_Propria > 0 Then
    vgDb.Execute "DELETE FROM [Baixa MP Conjunto] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Item] = " & Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
    vgDb.Execute "DELETE FROM [Conjuntos do Movimento Estoque] WHERE [Seqüência do Movimento] = " & Seq_Prod_Propria & " AND [Seqüência do Conjunto] = " & Conjuntos_Mvto_Contabil_N![Seqüência do Conjunto]
-   AtualizaEstoque 2, 0
-   AtualizaEstoque 1, 0
+   If Atualizar Then AtualizaEstoque 2, 0
+   If Atualizar Then AtualizaEstoque 1, 0
    End If
    End If
    End If
@@ -3939,8 +3941,8 @@ Private Function BlasterTemEstoqueConj(Sequencia_do_Movimento As Long, Sequencia
    
    On Error Resume Next
          
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
-   If Movimento_Contabil_Novo![Tipo do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoqueConj = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 1 Then GoTo SaidaMateria 'Se for Saida vamos validar somente o estoque do Item, vamos esquecer a receita
+   If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 And Movimento_Contabil_Novo!Devolução Then BlasterTemEstoqueConj = True: Exit Function 'Se for Entrada, Mas Devolução entao nw vamos validar as receitar
    
    Set Receita = vgDb.OpenRecordSet("SELECT IC.[Seqüência do Produto] As MateriaPrima, IC.[Quantidade do Produto] As QtdeUsada, P.[Quantidade Contábil] As QtdeContabil " & _
                                     "FROM [Itens Do Conjunto] IC INNER JOIN Produtos P ON IC.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
@@ -4103,7 +4105,7 @@ Private Sub IncluiPPropria() ' Qdo Estiver Marcado Produção Propria Criar Regist
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo do Movimento] = 0 'Entrada
+         ![Tipo Do Movimento] = 0 'Entrada
          ![Tipo Movimento] = 1 'Entrada Produção Propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4133,7 +4135,7 @@ Private Sub AlteraEntraPPropria()
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo do Movimento] = 0 'Entrada
+         ![Tipo Do Movimento] = 0 'Entrada
          ![Tipo Movimento] = 1 'Entrada Produção Propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4205,10 +4207,10 @@ CaiFora:
    Set MPrima = Nothing
    Set Mvto = Nothing
    Set ProdMvto = Nothing
-   AtualizaEstoque 1, 0
+   If Atualizar Then AtualizaEstoque 1, 0
 End Function
 
-Private Sub DeletaProdPropria()
+Private Sub DeletaProdPropria(Optional Atualizar As Boolean = True)
   Dim Mvto As New GRecordSet, Tpo As Integer, BxMPrima As New GRecordSet
   
   On Error GoTo DeuErro
@@ -4307,7 +4309,7 @@ Private Sub IncluiBxConsumo()
        Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo do Movimento] = 1 'Saida
+         ![Tipo Do Movimento] = 1 'Saida
          ![Tipo Movimento] = 0 ' 0 = Mvto 1 = Entrada prod propria
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4333,7 +4335,7 @@ Private Sub AlteraBxConsumo()
      Set Mvto = vgDb.OpenRecordSet("SELECT TOP 1 * FROM [Movimento do Estoque]")
        With Mvto
          .AddNew
-         ![Tipo do Movimento] = 1 'Saida
+         ![Tipo Do Movimento] = 1 'Saida
          ![Tipo Movimento] = 0 'Mvto
          !Documento = Documento
          ![Data de Entrada] = Data_do_Movimento
@@ -4349,7 +4351,7 @@ Private Sub AlteraBxConsumo()
 End Sub
 
 
-Private Sub DeletaBxConsumo()
+Private Sub DeletaBxConsumo(Optional Atualizar As Boolean = True)
   Dim Mvto As New GRecordSet, Tpo As Integer, ProdMvto As New GRecordSet
   
   On Error GoTo DeuErro
@@ -4367,7 +4369,7 @@ Private Sub DeletaBxConsumo()
         "WHERE [Seqüência do Movimento] = " & Seq_Baixa_Consumo
      End If
      
-   AtualizaEstoque 1, 0
+   If Atualizar Then AtualizaEstoque 1, 0
     
 DeuErro:
    If Err.Number <> 0 Then
@@ -4444,9 +4446,9 @@ Private Function Ultimo( _
         AvisouEstZero = False
 
         Do While Not Tb.EOF
-            Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo do Movimento] = 1, -1, 1)
+            Estoque = Estoque + Tb!Quantidade * IIf(Tb![Tipo Do Movimento] = 1, -1, 1)
 
-            If Tb![Tipo do Movimento] = 0 Then                 'entradas
+            If Tb![Tipo Do Movimento] = 0 Then                 'entradas
                 If Custo = 0 Then
                     Custo = Tb![Valor de Custo]
                     Total = Round(Tb!Quantidade * Tb![Valor de Custo], 2)
@@ -4465,7 +4467,7 @@ Private Function Ultimo( _
                         Total = Round(Total + Tb!Quantidade * Tb![Valor de Custo], 2)
                     End If
                 End If
-            ElseIf Tb![Tipo do Movimento] = 1 Then             'saídas
+            ElseIf Tb![Tipo Do Movimento] = 1 Then             'saídas
                 Total = Total - Round(Tb!Quantidade * Custo, 2)
             End If
 
@@ -5672,7 +5674,7 @@ Private Sub GerarConsumo()
  With BxEstoque
   .AddNew
     ![Seqüência do Movimento] = Sequencia_do_Movimento
-    ![Tipo do Movimento] = 1
+    ![Tipo Do Movimento] = 1
     ![Data do Movimento] = Data_do_Movimento
     !Documento = "Consumo"
     ![Seqüência do Produto] = Consumo_inclui
@@ -5751,7 +5753,7 @@ Private Sub GerarDevolucao()
  With BxEstoque
   .AddNew
     ![Seqüência do Movimento] = Sequencia_do_Movimento
-    ![Tipo do Movimento] = 0
+    ![Tipo Do Movimento] = 0
     ![Data do Movimento] = Data_do_Movimento
     !Documento = Documento
     ![Seqüência do Produto] = Devolucao_inclui
@@ -5785,11 +5787,11 @@ Private Function TotalInicial(Qual As String) As Currency
    Set BxEstoque = vgDb.OpenRecordSet("SELECT * FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & Devolucao_inclui & " AND [Data do Movimento] <= " & D(Nota![Data de Emissão]) & " ORDER BY [Data do Movimento], [Tipo do Movimento], [Seqüência da Baixa]")
    
    Do While Not BxEstoque.EOF
-      Qtde = Qtde + BxEstoque!Quantidade * IIf(BxEstoque![Tipo do Movimento] = 0, 1, -1)
-      If BxEstoque![Tipo do Movimento] = 0 Then
+      Qtde = Qtde + BxEstoque!Quantidade * IIf(BxEstoque![Tipo Do Movimento] = 0, 1, -1)
+      If BxEstoque![Tipo Do Movimento] = 0 Then
          Custo = (Total + BxEstoque!Quantidade * BxEstoque![Valor de Custo]) / Qtde
       End If
-      Total = Total + BxEstoque!Quantidade * IIf(BxEstoque![Tipo do Movimento] = 0, BxEstoque![Valor de Custo], -1 * Custo)
+      Total = Total + BxEstoque!Quantidade * IIf(BxEstoque![Tipo Do Movimento] = 0, BxEstoque![Valor de Custo], -1 * Custo)
       Total = Round(Total, 2)
       BxEstoque.MoveNext
    Loop
@@ -6062,7 +6064,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
       Else
          Sequencia_do_Movimento = IIf(IsNull(vgTb![Seqüência do Movimento]), 0, vgTb![Seqüência do Movimento])
          Data_do_Movimento = vgTb![Data do Movimento]
-         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo do Movimento]), 0, vgTb![Tipo do Movimento])
+         Tipo_do_Movimento = IIf(IsNull(vgTb![Tipo Do Movimento]), 0, vgTb![Tipo Do Movimento])
          Documento = IIf(IsNull(vgTb!Documento), "", vgTb!Documento)
          Sequencia_do_Geral = IIf(IsNull(vgTb![Seqüência Do Geral]), 0, vgTb![Seqüência Do Geral])
          Observacao = IIf(IsNull(vgTb!Observação), "", vgTb!Observação)
@@ -6342,7 +6344,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       Next
       InicializaApelidos COM_TEXTBOX
-      vgTb![Tipo do Movimento] = Tipo_do_Movimento
+      vgTb![Tipo Do Movimento] = Tipo_do_Movimento
       vgTb!Devolução = Devolucao
       Seq_Prod_Propria = IIf(IsNull(vgTb![Seq Prod Propria]), 0, vgTb![Seq Prod Propria])
       E_Producao_Propria = IIf(IsNull(vgTb![E Produção Propria]), 0, vgTb![E Produção Propria])
@@ -8045,9 +8047,9 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 12
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 16
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8095,7 +8097,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 16
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCusto(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Sequencia_Unidade_Speed, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(0).Col = 16 Then
@@ -8183,7 +8185,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                If Valor_Unitario = 0 Then
                   vgIsValid = (Valor_Unitario > 0)
                   If Not vgIsValid Then vgColumn = 12
@@ -8192,7 +8194,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                If Valor_Unitario > 0 Then
                   vgIsValid = (ValidaUnitario(Sequencia_do_Movimento, Sequencia_do_Produto_Mvto_Novo, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
@@ -8227,7 +8229,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8255,7 +8257,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaProduto(Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(1, Sequencia_do_Produto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_do_Produto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(0, 0) Then
@@ -8386,9 +8388,9 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8427,7 +8429,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_do_Cofins
             End If
          Case 10
-            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_Unitario = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, IIf(ConjuntoProduzido(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), CalculaConjunto2(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
@@ -8436,7 +8438,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CustoConjunto(Sequencia_do_Movimento, Sequencia_Conjunto_Mvto_Novo, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao), 0)
             If Grid(1).Col = 11 Then
@@ -8472,14 +8474,14 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgErrorMessage$ = "Matéria Prima Insuficiente ou Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
                If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_de_Custo > 0)
                If Not vgIsValid Then vgColumn = 11
                vgErrorMessage$ = "Valor de Custo inválido!"
@@ -8498,7 +8500,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If Executa2 Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8517,7 +8519,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          If ExcluiBaixaReceitaConjunto(Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
+         If ValorCustoContabilNovo(2, Sequencia_do_Conjunto, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Conjunto_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If MegaEstoqueContabil(1, 0) Then
@@ -8639,9 +8641,9 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       GoSub IniApDaCol
       Select Case vgCol
          Case 10
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case 11
-            vgRetVal = Not (Movimento_Contabil_Novo![Tipo do Movimento] = 0)
+            vgRetVal = Not (Movimento_Contabil_Novo![Tipo Do Movimento] = 0)
          Case Else
             vgRetVal = False
       End Select
@@ -8691,7 +8693,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
                vgRetVal = Valor_Unitario
             End If
          Case 11
-            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
+            Valor_de_Custo = IIf(Movimento_Contabil_Novo![Tipo Do Movimento] = 0, CalculaValorCustoDespesa(Sequencia_do_Movimento, Sequencia_Despesa_Mvto_Novo, Sequencia_da_Despesa, Quantidade, Valor_Unitario, Valor_de_Custo, _
    Valor_Total, Valor_do_PIS, Valor_do_Cofins, Valor_do_IPI, Valor_do_ICMS, Valor_do_Frete, _
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra), 0)
             If Grid(2).Col = 11 Then
@@ -8727,7 +8729,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgErrorMessage$ = "Quantidade inválida!"
          End If
          If vgIsValid And vgCol = -1 Then
-            If Movimento_Contabil_Novo![Tipo do Movimento] = 0 Then
+            If Movimento_Contabil_Novo![Tipo Do Movimento] = 0 Then
                vgIsValid = (Valor_Unitario > 0)
                If Not vgIsValid Then vgColumn = 10
                vgErrorMessage$ = "Valor Unitário inválido!"
@@ -8753,7 +8755,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_da_Substituicao, Valor_do_ipi_compra, Valor_total_compra) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento]) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento]) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
@@ -8772,7 +8774,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
          GoSub IniApDaTb
          Movimento_Contabil_Novo.Edit
          Set vgRsError = Movimento_Contabil_Novo
-         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo do Movimento], Sequencia_Despesa_Mvto_Novo) Then
+         If ValorCustoContabilNovo(3, Sequencia_da_Despesa, Movimento_Contabil_Novo![Tipo Do Movimento], Sequencia_Despesa_Mvto_Novo) Then
             Movimento_Contabil_Novo![Seqüência do Movimento] = (0)
          End If
          If Executa3 Then
