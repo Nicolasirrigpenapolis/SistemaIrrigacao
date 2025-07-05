@@ -1,3 +1,3 @@
-cd C:\Projetos\Irrig\figuras\
-"c:\program files (x86)\microsoft visual studio\vb98\wizards\rc.exe" -r -fo c:\projetos\irrig\irrig\irrig.res c:\projetos\irrig\irrig\irrig.rc
-cd C:\PROJETOS\IRRIG\IRRIG\
+cd C:\Projetos\SistemaIrrigacao\figuras\
+"c:\program files (x86)\microsoft visual studio\vb98\wizards\rc.exe" -r -fo C:\Projetos\SistemaIrrigacao\IRRIG\IRRIG.res C:\Projetos\SistemaIrrigacao\IRRIG\IRRIG.rc
+cd C:\Projetos\SistemaIrrigacao\IRRIG\

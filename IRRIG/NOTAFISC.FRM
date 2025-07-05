@@ -237,7 +237,6 @@ Begin VB.Form frmNotaFisc
          _Version        =   393216
          Style           =   1
          Tabs            =   7
-         Tab             =   5
          TabsPerRow      =   7
          TabHeight       =   519
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -251,232 +250,262 @@ Begin VB.Form frmNotaFisc
          EndProperty
          TabCaption(0)   =   "&1 - Dados Principais"
          TabPicture(0)   =   "NOTAFISC.frx":0000
-         Tab(0).ControlEnabled=   0   'False
-         Tab(0).Control(0)=   "Botao(8)"
-         Tab(0).Control(1)=   "Botao(5)"
-         Tab(0).Control(2)=   "Botao(4)"
-         Tab(0).Control(3)=   "Botao(3)"
-         Tab(0).Control(4)=   "txtCp(2)"
+         Tab(0).ControlEnabled=   -1  'True
+         Tab(0).Control(0)=   "labFdo61"
+         Tab(0).Control(0).Enabled=   0   'False
+         Tab(0).Control(1)=   "Label(69)"
+         Tab(0).Control(1).Enabled=   0   'False
+         Tab(0).Control(2)=   "labFdo59"
+         Tab(0).Control(2).Enabled=   0   'False
+         Tab(0).Control(3)=   "Label(67)"
+         Tab(0).Control(3).Enabled=   0   'False
+         Tab(0).Control(4)=   "Label(65)"
          Tab(0).Control(4).Enabled=   0   'False
-         Tab(0).Control(5)=   "txtCp(3)"
-         Tab(0).Control(6)=   "txtCp(4)"
-         Tab(0).Control(7)=   "txtCp(5)"
+         Tab(0).Control(5)=   "Label(58)"
+         Tab(0).Control(5).Enabled=   0   'False
+         Tab(0).Control(6)=   "Label(55)"
+         Tab(0).Control(6).Enabled=   0   'False
+         Tab(0).Control(7)=   "Label(54)"
          Tab(0).Control(7).Enabled=   0   'False
-         Tab(0).Control(8)=   "bottxtCampo6(1)"
+         Tab(0).Control(8)=   "Label(52)"
          Tab(0).Control(8).Enabled=   0   'False
-         Tab(0).Control(9)=   "bottxtCampo6(2)"
+         Tab(0).Control(9)=   "Label(45)"
          Tab(0).Control(9).Enabled=   0   'False
-         Tab(0).Control(10)=   "txtCp(6)"
-         Tab(0).Control(11)=   "txtCp(7)"
-         Tab(0).Control(12)=   "txtCp(8)"
+         Tab(0).Control(10)=   "Label(44)"
+         Tab(0).Control(10).Enabled=   0   'False
+         Tab(0).Control(11)=   "Label(43)"
+         Tab(0).Control(11).Enabled=   0   'False
+         Tab(0).Control(12)=   "Label(42)"
          Tab(0).Control(12).Enabled=   0   'False
-         Tab(0).Control(13)=   "txtCp(9)"
+         Tab(0).Control(13)=   "Label(41)"
          Tab(0).Control(13).Enabled=   0   'False
-         Tab(0).Control(14)=   "bottxtCampo10(0)"
+         Tab(0).Control(14)=   "Label(40)"
          Tab(0).Control(14).Enabled=   0   'False
-         Tab(0).Control(15)=   "txtCp(10)"
-         Tab(0).Control(16)=   "txtCp(11)"
-         Tab(0).Control(17)=   "txtCp(12)"
-         Tab(0).Control(18)=   "bottxtCampo13(1)"
+         Tab(0).Control(15)=   "Label(39)"
+         Tab(0).Control(15).Enabled=   0   'False
+         Tab(0).Control(16)=   "Label(38)"
+         Tab(0).Control(16).Enabled=   0   'False
+         Tab(0).Control(17)=   "Label(37)"
+         Tab(0).Control(17).Enabled=   0   'False
+         Tab(0).Control(18)=   "Label(36)"
          Tab(0).Control(18).Enabled=   0   'False
-         Tab(0).Control(19)=   "bottxtCampo13(2)"
+         Tab(0).Control(19)=   "Label(35)"
          Tab(0).Control(19).Enabled=   0   'False
-         Tab(0).Control(20)=   "txtCp(13)"
-         Tab(0).Control(21)=   "bottxtCampo14(1)"
+         Tab(0).Control(20)=   "Label(34)"
+         Tab(0).Control(20).Enabled=   0   'False
+         Tab(0).Control(21)=   "Label(33)"
          Tab(0).Control(21).Enabled=   0   'False
-         Tab(0).Control(22)=   "bottxtCampo14(2)"
+         Tab(0).Control(22)=   "Label(32)"
          Tab(0).Control(22).Enabled=   0   'False
-         Tab(0).Control(23)=   "txtCp(14)"
-         Tab(0).Control(24)=   "txtCp(15)"
-         Tab(0).Control(25)=   "bottxtCampo16(2)"
+         Tab(0).Control(23)=   "Label(31)"
+         Tab(0).Control(23).Enabled=   0   'False
+         Tab(0).Control(24)=   "Linha(1)"
+         Tab(0).Control(24).Enabled=   0   'False
+         Tab(0).Control(25)=   "Label(8)"
          Tab(0).Control(25).Enabled=   0   'False
-         Tab(0).Control(26)=   "txtCp(16)"
-         Tab(0).Control(27)=   "bottxtCampo17(2)"
+         Tab(0).Control(26)=   "Label(7)"
+         Tab(0).Control(26).Enabled=   0   'False
+         Tab(0).Control(27)=   "Linha(0)"
          Tab(0).Control(27).Enabled=   0   'False
-         Tab(0).Control(28)=   "txtCp(17)"
-         Tab(0).Control(29)=   "txtCp(19)"
-         Tab(0).Control(30)=   "txtCp(20)"
-         Tab(0).Control(31)=   "txtCp(21)"
-         Tab(0).Control(32)=   "txtCp(22)"
-         Tab(0).Control(33)=   "txtCp(23)"
-         Tab(0).Control(34)=   "txtCp(24)"
-         Tab(0).Control(35)=   "txtCp(25)"
-         Tab(0).Control(36)=   "txtCp(26)"
-         Tab(0).Control(37)=   "ChkCp(2)"
+         Tab(0).Control(28)=   "Label(6)"
+         Tab(0).Control(28).Enabled=   0   'False
+         Tab(0).Control(29)=   "labtxtCampo21"
+         Tab(0).Control(29).Enabled=   0   'False
+         Tab(0).Control(30)=   "labFdo17"
+         Tab(0).Control(30).Enabled=   0   'False
+         Tab(0).Control(31)=   "labFdo16"
+         Tab(0).Control(31).Enabled=   0   'False
+         Tab(0).Control(32)=   "Label(5)"
+         Tab(0).Control(32).Enabled=   0   'False
+         Tab(0).Control(33)=   "labFdo14"
+         Tab(0).Control(33).Enabled=   0   'False
+         Tab(0).Control(34)=   "labFdo13"
+         Tab(0).Control(34).Enabled=   0   'False
+         Tab(0).Control(35)=   "Label(3)"
+         Tab(0).Control(35).Enabled=   0   'False
+         Tab(0).Control(36)=   "labFdo10"
+         Tab(0).Control(36).Enabled=   0   'False
+         Tab(0).Control(37)=   "Label(2)"
          Tab(0).Control(37).Enabled=   0   'False
-         Tab(0).Control(38)=   "Painel(1)"
-         Tab(0).Control(39)=   "txtCp(50)"
+         Tab(0).Control(38)=   "Label(1)"
+         Tab(0).Control(38).Enabled=   0   'False
+         Tab(0).Control(39)=   "labFdo6"
          Tab(0).Control(39).Enabled=   0   'False
-         Tab(0).Control(40)=   "txtCp(51)"
+         Tab(0).Control(40)=   "txtCp(64)"
          Tab(0).Control(40).Enabled=   0   'False
-         Tab(0).Control(41)=   "txtCp(54)"
-         Tab(0).Control(42)=   "ChkCp(3)"
+         Tab(0).Control(41)=   "txtCp(61)"
+         Tab(0).Control(41).Enabled=   0   'False
+         Tab(0).Control(42)=   "bottxtCampo61(1)"
          Tab(0).Control(42).Enabled=   0   'False
-         Tab(0).Control(43)=   "txtCp(56)"
+         Tab(0).Control(43)=   "txtCp(59)"
          Tab(0).Control(43).Enabled=   0   'False
-         Tab(0).Control(44)=   "ChkCp(5)"
-         Tab(0).Control(45)=   "bottxtCampo59(2)"
+         Tab(0).Control(44)=   "bottxtCampo59(2)"
+         Tab(0).Control(44).Enabled=   0   'False
+         Tab(0).Control(45)=   "ChkCp(5)"
          Tab(0).Control(45).Enabled=   0   'False
-         Tab(0).Control(46)=   "txtCp(59)"
-         Tab(0).Control(47)=   "bottxtCampo61(1)"
+         Tab(0).Control(46)=   "txtCp(56)"
+         Tab(0).Control(46).Enabled=   0   'False
+         Tab(0).Control(47)=   "ChkCp(3)"
          Tab(0).Control(47).Enabled=   0   'False
-         Tab(0).Control(48)=   "txtCp(61)"
+         Tab(0).Control(48)=   "txtCp(54)"
          Tab(0).Control(48).Enabled=   0   'False
-         Tab(0).Control(49)=   "txtCp(64)"
+         Tab(0).Control(49)=   "txtCp(51)"
          Tab(0).Control(49).Enabled=   0   'False
-         Tab(0).Control(50)=   "labFdo6"
-         Tab(0).Control(51)=   "Label(1)"
-         Tab(0).Control(52)=   "Label(2)"
-         Tab(0).Control(53)=   "labFdo10"
-         Tab(0).Control(54)=   "Label(3)"
-         Tab(0).Control(55)=   "labFdo13"
-         Tab(0).Control(56)=   "labFdo14"
-         Tab(0).Control(57)=   "Label(5)"
-         Tab(0).Control(58)=   "labFdo16"
-         Tab(0).Control(59)=   "labFdo17"
-         Tab(0).Control(60)=   "labtxtCampo21"
-         Tab(0).Control(61)=   "Label(6)"
-         Tab(0).Control(62)=   "Linha(0)"
-         Tab(0).Control(63)=   "Label(7)"
-         Tab(0).Control(64)=   "Label(8)"
-         Tab(0).Control(65)=   "Linha(1)"
-         Tab(0).Control(66)=   "Label(31)"
-         Tab(0).Control(67)=   "Label(32)"
-         Tab(0).Control(68)=   "Label(33)"
-         Tab(0).Control(69)=   "Label(34)"
-         Tab(0).Control(70)=   "Label(35)"
-         Tab(0).Control(71)=   "Label(36)"
-         Tab(0).Control(72)=   "Label(37)"
-         Tab(0).Control(73)=   "Label(38)"
-         Tab(0).Control(74)=   "Label(39)"
-         Tab(0).Control(75)=   "Label(40)"
-         Tab(0).Control(76)=   "Label(41)"
-         Tab(0).Control(77)=   "Label(42)"
-         Tab(0).Control(78)=   "Label(43)"
-         Tab(0).Control(79)=   "Label(44)"
-         Tab(0).Control(80)=   "Label(45)"
-         Tab(0).Control(81)=   "Label(52)"
-         Tab(0).Control(82)=   "Label(54)"
-         Tab(0).Control(83)=   "Label(55)"
-         Tab(0).Control(84)=   "Label(58)"
-         Tab(0).Control(85)=   "Label(65)"
-         Tab(0).Control(86)=   "Label(67)"
-         Tab(0).Control(87)=   "labFdo59"
-         Tab(0).Control(88)=   "Label(69)"
-         Tab(0).Control(89)=   "labFdo61"
+         Tab(0).Control(50)=   "txtCp(50)"
+         Tab(0).Control(50).Enabled=   0   'False
+         Tab(0).Control(51)=   "Painel(1)"
+         Tab(0).Control(51).Enabled=   0   'False
+         Tab(0).Control(52)=   "ChkCp(2)"
+         Tab(0).Control(52).Enabled=   0   'False
+         Tab(0).Control(53)=   "txtCp(26)"
+         Tab(0).Control(53).Enabled=   0   'False
+         Tab(0).Control(54)=   "txtCp(25)"
+         Tab(0).Control(54).Enabled=   0   'False
+         Tab(0).Control(55)=   "txtCp(24)"
+         Tab(0).Control(55).Enabled=   0   'False
+         Tab(0).Control(56)=   "txtCp(23)"
+         Tab(0).Control(56).Enabled=   0   'False
+         Tab(0).Control(57)=   "txtCp(22)"
+         Tab(0).Control(57).Enabled=   0   'False
+         Tab(0).Control(58)=   "txtCp(21)"
+         Tab(0).Control(58).Enabled=   0   'False
+         Tab(0).Control(59)=   "txtCp(20)"
+         Tab(0).Control(59).Enabled=   0   'False
+         Tab(0).Control(60)=   "txtCp(19)"
+         Tab(0).Control(60).Enabled=   0   'False
+         Tab(0).Control(61)=   "txtCp(17)"
+         Tab(0).Control(61).Enabled=   0   'False
+         Tab(0).Control(62)=   "bottxtCampo17(2)"
+         Tab(0).Control(62).Enabled=   0   'False
+         Tab(0).Control(63)=   "txtCp(16)"
+         Tab(0).Control(63).Enabled=   0   'False
+         Tab(0).Control(64)=   "bottxtCampo16(2)"
+         Tab(0).Control(64).Enabled=   0   'False
+         Tab(0).Control(65)=   "txtCp(15)"
+         Tab(0).Control(65).Enabled=   0   'False
+         Tab(0).Control(66)=   "txtCp(14)"
+         Tab(0).Control(66).Enabled=   0   'False
+         Tab(0).Control(67)=   "bottxtCampo14(2)"
+         Tab(0).Control(67).Enabled=   0   'False
+         Tab(0).Control(68)=   "bottxtCampo14(1)"
+         Tab(0).Control(68).Enabled=   0   'False
+         Tab(0).Control(69)=   "txtCp(13)"
+         Tab(0).Control(69).Enabled=   0   'False
+         Tab(0).Control(70)=   "bottxtCampo13(2)"
+         Tab(0).Control(70).Enabled=   0   'False
+         Tab(0).Control(71)=   "bottxtCampo13(1)"
+         Tab(0).Control(71).Enabled=   0   'False
+         Tab(0).Control(72)=   "txtCp(12)"
+         Tab(0).Control(72).Enabled=   0   'False
+         Tab(0).Control(73)=   "txtCp(11)"
+         Tab(0).Control(73).Enabled=   0   'False
+         Tab(0).Control(74)=   "txtCp(10)"
+         Tab(0).Control(74).Enabled=   0   'False
+         Tab(0).Control(75)=   "bottxtCampo10(0)"
+         Tab(0).Control(75).Enabled=   0   'False
+         Tab(0).Control(76)=   "txtCp(9)"
+         Tab(0).Control(76).Enabled=   0   'False
+         Tab(0).Control(77)=   "txtCp(8)"
+         Tab(0).Control(77).Enabled=   0   'False
+         Tab(0).Control(78)=   "txtCp(7)"
+         Tab(0).Control(78).Enabled=   0   'False
+         Tab(0).Control(79)=   "txtCp(6)"
+         Tab(0).Control(79).Enabled=   0   'False
+         Tab(0).Control(80)=   "bottxtCampo6(2)"
+         Tab(0).Control(80).Enabled=   0   'False
+         Tab(0).Control(81)=   "bottxtCampo6(1)"
+         Tab(0).Control(81).Enabled=   0   'False
+         Tab(0).Control(82)=   "txtCp(5)"
+         Tab(0).Control(82).Enabled=   0   'False
+         Tab(0).Control(83)=   "txtCp(4)"
+         Tab(0).Control(83).Enabled=   0   'False
+         Tab(0).Control(84)=   "txtCp(3)"
+         Tab(0).Control(84).Enabled=   0   'False
+         Tab(0).Control(85)=   "txtCp(2)"
+         Tab(0).Control(85).Enabled=   0   'False
+         Tab(0).Control(86)=   "Botao(3)"
+         Tab(0).Control(86).Enabled=   0   'False
+         Tab(0).Control(87)=   "Botao(4)"
+         Tab(0).Control(87).Enabled=   0   'False
+         Tab(0).Control(88)=   "Botao(5)"
+         Tab(0).Control(88).Enabled=   0   'False
+         Tab(0).Control(89)=   "Botao(8)"
+         Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
          TabPicture(1)   =   "NOTAFISC.frx":001C
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Grid(0)"
-         Tab(1).Control(1)=   "Label(10)"
+         Tab(1).Control(0)=   "Label(10)"
+         Tab(1).Control(1)=   "Grid(0)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          TabPicture(2)   =   "NOTAFISC.frx":0038
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Grid(1)"
-         Tab(2).Control(1)=   "Label(13)"
+         Tab(2).Control(0)=   "Label(13)"
+         Tab(2).Control(1)=   "Grid(1)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Grid(2)"
-         Tab(3).Control(1)=   "Label(11)"
-         Tab(3).Control(2)=   "Label(53)"
-         Tab(3).Control(3)=   "labFdo49"
-         Tab(3).Control(4)=   "bottxtCampo49(1)"
+         Tab(3).Control(0)=   "txtCp(58)"
+         Tab(3).Control(1)=   "ChkCp(4)"
+         Tab(3).Control(1).Enabled=   0   'False
+         Tab(3).Control(2)=   "Botao(7)"
+         Tab(3).Control(3)=   "txtCp(49)"
+         Tab(3).Control(4)=   "bottxtCampo49(2)"
          Tab(3).Control(4).Enabled=   0   'False
-         Tab(3).Control(5)=   "bottxtCampo49(2)"
+         Tab(3).Control(5)=   "bottxtCampo49(1)"
          Tab(3).Control(5).Enabled=   0   'False
-         Tab(3).Control(6)=   "txtCp(49)"
-         Tab(3).Control(7)=   "Botao(7)"
-         Tab(3).Control(8)=   "ChkCp(4)"
-         Tab(3).Control(8).Enabled=   0   'False
-         Tab(3).Control(9)=   "txtCp(58)"
+         Tab(3).Control(6)=   "labFdo49"
+         Tab(3).Control(7)=   "Label(53)"
+         Tab(3).Control(8)=   "Label(11)"
+         Tab(3).Control(9)=   "Grid(2)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Grid(3)"
-         Tab(4).Control(1)=   "Label(12)"
+         Tab(4).Control(0)=   "Label(12)"
+         Tab(4).Control(1)=   "Grid(3)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "NOTAFISC.frx":0054
-         Tab(5).ControlEnabled=   -1  'True
+         Tab(5).ControlEnabled=   0   'False
          Tab(5).Control(0)=   "Label(66)"
-         Tab(5).Control(0).Enabled=   0   'False
          Tab(5).Control(1)=   "Label(64)"
-         Tab(5).Control(1).Enabled=   0   'False
          Tab(5).Control(2)=   "Label(63)"
-         Tab(5).Control(2).Enabled=   0   'False
          Tab(5).Control(3)=   "Formato(2)"
-         Tab(5).Control(3).Enabled=   0   'False
          Tab(5).Control(4)=   "Label(62)"
-         Tab(5).Control(4).Enabled=   0   'False
          Tab(5).Control(5)=   "Formato(1)"
-         Tab(5).Control(5).Enabled=   0   'False
          Tab(5).Control(6)=   "Label(61)"
-         Tab(5).Control(6).Enabled=   0   'False
          Tab(5).Control(7)=   "Formato(0)"
-         Tab(5).Control(7).Enabled=   0   'False
          Tab(5).Control(8)=   "Label(60)"
-         Tab(5).Control(8).Enabled=   0   'False
          Tab(5).Control(9)=   "Label(57)"
-         Tab(5).Control(9).Enabled=   0   'False
          Tab(5).Control(10)=   "Label(56)"
-         Tab(5).Control(10).Enabled=   0   'False
          Tab(5).Control(11)=   "Label(30)"
-         Tab(5).Control(11).Enabled=   0   'False
          Tab(5).Control(12)=   "Label(29)"
-         Tab(5).Control(12).Enabled=   0   'False
          Tab(5).Control(13)=   "Label(28)"
-         Tab(5).Control(13).Enabled=   0   'False
          Tab(5).Control(14)=   "Label(27)"
-         Tab(5).Control(14).Enabled=   0   'False
          Tab(5).Control(15)=   "Label(26)"
-         Tab(5).Control(15).Enabled=   0   'False
          Tab(5).Control(16)=   "Label(25)"
-         Tab(5).Control(16).Enabled=   0   'False
          Tab(5).Control(17)=   "Label(24)"
-         Tab(5).Control(17).Enabled=   0   'False
          Tab(5).Control(18)=   "Label(23)"
-         Tab(5).Control(18).Enabled=   0   'False
          Tab(5).Control(19)=   "Label(22)"
-         Tab(5).Control(19).Enabled=   0   'False
          Tab(5).Control(20)=   "Label(21)"
-         Tab(5).Control(20).Enabled=   0   'False
          Tab(5).Control(21)=   "Label(20)"
-         Tab(5).Control(21).Enabled=   0   'False
          Tab(5).Control(22)=   "Label(19)"
-         Tab(5).Control(22).Enabled=   0   'False
          Tab(5).Control(23)=   "Label(18)"
-         Tab(5).Control(23).Enabled=   0   'False
          Tab(5).Control(24)=   "Label(17)"
-         Tab(5).Control(24).Enabled=   0   'False
          Tab(5).Control(25)=   "Label(16)"
-         Tab(5).Control(25).Enabled=   0   'False
          Tab(5).Control(26)=   "Linha(2)"
-         Tab(5).Control(26).Enabled=   0   'False
          Tab(5).Control(27)=   "Label(15)"
-         Tab(5).Control(27).Enabled=   0   'False
          Tab(5).Control(28)=   "Label(14)"
-         Tab(5).Control(28).Enabled=   0   'False
          Tab(5).Control(29)=   "Label(9)"
-         Tab(5).Control(29).Enabled=   0   'False
          Tab(5).Control(30)=   "labFdo29"
-         Tab(5).Control(30).Enabled=   0   'False
          Tab(5).Control(31)=   "labFdo28"
-         Tab(5).Control(31).Enabled=   0   'False
          Tab(5).Control(32)=   "labFdo27"
-         Tab(5).Control(32).Enabled=   0   'False
          Tab(5).Control(33)=   "labFdo18"
-         Tab(5).Control(33).Enabled=   0   'False
          Tab(5).Control(34)=   "Label(4)"
-         Tab(5).Control(34).Enabled=   0   'False
          Tab(5).Control(35)=   "labFdo1"
-         Tab(5).Control(35).Enabled=   0   'False
          Tab(5).Control(36)=   "Label(0)"
-         Tab(5).Control(36).Enabled=   0   'False
          Tab(5).Control(37)=   "labFdo0"
-         Tab(5).Control(37).Enabled=   0   'False
          Tab(5).Control(38)=   "txtCp(57)"
          Tab(5).Control(38).Enabled=   0   'False
          Tab(5).Control(39)=   "txtCp(53)"
@@ -484,7 +513,6 @@ Begin VB.Form frmNotaFisc
          Tab(5).Control(40)=   "txtCp(52)"
          Tab(5).Control(40).Enabled=   0   'False
          Tab(5).Control(41)=   "Painel(2)"
-         Tab(5).Control(41).Enabled=   0   'False
          Tab(5).Control(42)=   "txtCp(48)"
          Tab(5).Control(42).Enabled=   0   'False
          Tab(5).Control(43)=   "txtCp(47)"
@@ -512,79 +540,71 @@ Begin VB.Form frmNotaFisc
          Tab(5).Control(54)=   "txtCp(36)"
          Tab(5).Control(54).Enabled=   0   'False
          Tab(5).Control(55)=   "Grid(4)"
-         Tab(5).Control(55).Enabled=   0   'False
          Tab(5).Control(56)=   "ChkCp(0)"
          Tab(5).Control(56).Enabled=   0   'False
          Tab(5).Control(57)=   "txtCp(29)"
-         Tab(5).Control(57).Enabled=   0   'False
          Tab(5).Control(58)=   "bottxtCampo29(2)"
          Tab(5).Control(58).Enabled=   0   'False
          Tab(5).Control(59)=   "bottxtCampo29(1)"
          Tab(5).Control(59).Enabled=   0   'False
          Tab(5).Control(60)=   "txtCp(28)"
-         Tab(5).Control(60).Enabled=   0   'False
          Tab(5).Control(61)=   "bottxtCampo28(2)"
          Tab(5).Control(61).Enabled=   0   'False
          Tab(5).Control(62)=   "txtCp(27)"
-         Tab(5).Control(62).Enabled=   0   'False
          Tab(5).Control(63)=   "bottxtCampo27(0)"
          Tab(5).Control(63).Enabled=   0   'False
          Tab(5).Control(64)=   "txtCp(18)"
-         Tab(5).Control(64).Enabled=   0   'False
          Tab(5).Control(65)=   "bottxtCampo18(0)"
          Tab(5).Control(65).Enabled=   0   'False
          Tab(5).Control(66)=   "txtCp(1)"
-         Tab(5).Control(66).Enabled=   0   'False
          Tab(5).Control(67)=   "bottxtCampo1(0)"
          Tab(5).Control(67).Enabled=   0   'False
          Tab(5).Control(68)=   "txtCp(0)"
-         Tab(5).Control(68).Enabled=   0   'False
          Tab(5).Control(69)=   "bottxtCampo0(0)"
          Tab(5).Control(69).Enabled=   0   'False
          Tab(5).Control(70)=   "Botao(6)"
-         Tab(5).Control(70).Enabled=   0   'False
          Tab(5).ControlCount=   71
          TabCaption(6)   =   "&7 - Dados NFe/NFSe"
          TabPicture(6)   =   "NOTAFISC.frx":0070
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "ChkCp(1)"
-         Tab(6).Control(1)=   "bottxtCampo30(1)"
-         Tab(6).Control(1).Enabled=   0   'False
-         Tab(6).Control(2)=   "bottxtCampo30(2)"
-         Tab(6).Control(2).Enabled=   0   'False
-         Tab(6).Control(3)=   "txtCp(30)"
-         Tab(6).Control(4)=   "txtCp(31)"
-         Tab(6).Control(4).Enabled=   0   'False
-         Tab(6).Control(5)=   "txtCp(32)"
-         Tab(6).Control(5).Enabled=   0   'False
-         Tab(6).Control(6)=   "txtCp(33)"
-         Tab(6).Control(6).Enabled=   0   'False
-         Tab(6).Control(7)=   "txtCp(34)"
-         Tab(6).Control(7).Enabled=   0   'False
-         Tab(6).Control(8)=   "txtCp(35)"
-         Tab(6).Control(8).Enabled=   0   'False
-         Tab(6).Control(9)=   "txtCp(55)"
-         Tab(6).Control(9).Enabled=   0   'False
-         Tab(6).Control(10)=   "ChkCp(6)"
-         Tab(6).Control(11)=   "txtCp(60)"
+         Tab(6).Control(0)=   "Label(71)"
+         Tab(6).Control(1)=   "Label(70)"
+         Tab(6).Control(2)=   "Label(68)"
+         Tab(6).Control(3)=   "Label(59)"
+         Tab(6).Control(4)=   "Label(51)"
+         Tab(6).Control(5)=   "Label(50)"
+         Tab(6).Control(6)=   "Label(49)"
+         Tab(6).Control(7)=   "Label(48)"
+         Tab(6).Control(8)=   "Label(47)"
+         Tab(6).Control(9)=   "Label(46)"
+         Tab(6).Control(10)=   "labFdo30"
+         Tab(6).Control(11)=   "txtCp(63)"
          Tab(6).Control(12)=   "txtCp(62)"
-         Tab(6).Control(13)=   "txtCp(63)"
-         Tab(6).Control(14)=   "labFdo30"
-         Tab(6).Control(15)=   "Label(46)"
-         Tab(6).Control(16)=   "Label(47)"
-         Tab(6).Control(17)=   "Label(48)"
-         Tab(6).Control(18)=   "Label(49)"
-         Tab(6).Control(19)=   "Label(50)"
-         Tab(6).Control(20)=   "Label(51)"
-         Tab(6).Control(21)=   "Label(59)"
-         Tab(6).Control(22)=   "Label(68)"
-         Tab(6).Control(23)=   "Label(70)"
-         Tab(6).Control(24)=   "Label(71)"
+         Tab(6).Control(13)=   "txtCp(60)"
+         Tab(6).Control(14)=   "ChkCp(6)"
+         Tab(6).Control(15)=   "txtCp(55)"
+         Tab(6).Control(15).Enabled=   0   'False
+         Tab(6).Control(16)=   "txtCp(35)"
+         Tab(6).Control(16).Enabled=   0   'False
+         Tab(6).Control(17)=   "txtCp(34)"
+         Tab(6).Control(17).Enabled=   0   'False
+         Tab(6).Control(18)=   "txtCp(33)"
+         Tab(6).Control(18).Enabled=   0   'False
+         Tab(6).Control(19)=   "txtCp(32)"
+         Tab(6).Control(19).Enabled=   0   'False
+         Tab(6).Control(20)=   "txtCp(31)"
+         Tab(6).Control(20).Enabled=   0   'False
+         Tab(6).Control(21)=   "txtCp(30)"
+         Tab(6).Control(22)=   "bottxtCampo30(2)"
+         Tab(6).Control(22).Enabled=   0   'False
+         Tab(6).Control(23)=   "bottxtCampo30(1)"
+         Tab(6).Control(23).Enabled=   0   'False
+         Tab(6).Control(24)=   "ChkCp(1)"
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
             Index           =   8
-            Left            =   -69495
+            Left            =   5505
             TabIndex        =   86
             TabStop         =   0   'False
             Top             =   2835
@@ -628,7 +648,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GBotao Botao 
             Height          =   300
             Index           =   6
-            Left            =   9345
+            Left            =   -65655
             TabIndex        =   48
             TabStop         =   0   'False
             Top             =   960
@@ -650,7 +670,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GBotao Botao 
             Height          =   300
             Index           =   5
-            Left            =   -69900
+            Left            =   5100
             TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
@@ -672,7 +692,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GBotao Botao 
             Height          =   300
             Index           =   4
-            Left            =   -69795
+            Left            =   5205
             TabIndex        =   14
             TabStop         =   0   'False
             Top             =   1440
@@ -694,7 +714,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GBotao Botao 
             Height          =   300
             Index           =   3
-            Left            =   -63825
+            Left            =   11175
             TabIndex        =   22
             TabStop         =   0   'False
             Top             =   1905
@@ -716,7 +736,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo0 
             Height          =   270
             Index           =   0
-            Left            =   9315
+            Left            =   -65685
             Style           =   1  'Graphical
             TabIndex        =   115
             TabStop         =   0   'False
@@ -739,7 +759,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   0
-            Left            =   7485
+            Left            =   -67515
             MultiLine       =   -1  'True
             TabIndex        =   51
             Top             =   1380
@@ -748,7 +768,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo1 
             Height          =   270
             Index           =   0
-            Left            =   9315
+            Left            =   -65685
             Style           =   1  'Graphical
             TabIndex        =   118
             TabStop         =   0   'False
@@ -771,7 +791,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   1
-            Left            =   7485
+            Left            =   -67515
             MultiLine       =   -1  'True
             TabIndex        =   50
             Top             =   1380
@@ -791,7 +811,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   2
-            Left            =   -73695
+            Left            =   1305
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   78
@@ -813,7 +833,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   3
-            Left            =   -73695
+            Left            =   1305
             MaxLength       =   20
             TabIndex        =   24
             Top             =   2370
@@ -833,7 +853,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   4
-            Left            =   -73695
+            Left            =   1305
             MaxLength       =   60
             TabIndex        =   12
             Top             =   1440
@@ -853,7 +873,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   5
-            Left            =   -68040
+            Left            =   6960
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   81
@@ -864,7 +884,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo6 
             Height          =   270
             Index           =   1
-            Left            =   -64110
+            Left            =   10890
             Style           =   1  'Graphical
             TabIndex        =   120
             TabStop         =   0   'False
@@ -874,7 +894,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo6 
             Height          =   270
             Index           =   2
-            Left            =   -64365
+            Left            =   10635
             Style           =   1  'Graphical
             TabIndex        =   121
             TabStop         =   0   'False
@@ -896,7 +916,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   6
-            Left            =   -68025
+            Left            =   6975
             TabIndex        =   21
             Top             =   1920
             Width           =   3645
@@ -915,7 +935,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   7
-            Left            =   -62610
+            Left            =   12390
             MaxLength       =   15
             TabIndex        =   23
             Top             =   1905
@@ -935,7 +955,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   8
-            Left            =   -73695
+            Left            =   1305
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   79
@@ -957,7 +977,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   9
-            Left            =   -62610
+            Left            =   12390
             Locked          =   -1  'True
             MaxLength       =   254
             TabIndex        =   80
@@ -968,7 +988,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo10 
             Height          =   270
             Index           =   0
-            Left            =   -66915
+            Left            =   8085
             Style           =   1  'Graphical
             TabIndex        =   125
             TabStop         =   0   'False
@@ -990,7 +1010,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   10
-            Left            =   -68025
+            Left            =   6975
             TabIndex        =   6
             Top             =   465
             Width           =   1095
@@ -1009,7 +1029,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   11
-            Left            =   -66000
+            Left            =   9000
             TabIndex        =   7
             Top             =   450
             Width           =   870
@@ -1028,7 +1048,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   12
-            Left            =   -73695
+            Left            =   1305
             MaxLength       =   40
             TabIndex        =   20
             Top             =   1905
@@ -1037,7 +1057,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo13 
             Height          =   270
             Index           =   1
-            Left            =   -70065
+            Left            =   4935
             Style           =   1  'Graphical
             TabIndex        =   128
             TabStop         =   0   'False
@@ -1047,7 +1067,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo13 
             Height          =   270
             Index           =   2
-            Left            =   -70320
+            Left            =   4680
             Style           =   1  'Graphical
             TabIndex        =   129
             TabStop         =   0   'False
@@ -1069,7 +1089,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   13
-            Left            =   -73680
+            Left            =   1320
             TabIndex        =   13
             Top             =   1455
             Width           =   3345
@@ -1077,7 +1097,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo14 
             Height          =   270
             Index           =   1
-            Left            =   -70185
+            Left            =   4815
             Style           =   1  'Graphical
             TabIndex        =   132
             TabStop         =   0   'False
@@ -1087,7 +1107,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo14 
             Height          =   270
             Index           =   2
-            Left            =   -70440
+            Left            =   4560
             Style           =   1  'Graphical
             TabIndex        =   133
             TabStop         =   0   'False
@@ -1109,7 +1129,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   14
-            Left            =   -73680
+            Left            =   1320
             TabIndex        =   4
             Top             =   465
             Width           =   3225
@@ -1128,7 +1148,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   15
-            Left            =   -62610
+            Left            =   12390
             MaxLength       =   8
             TabIndex        =   18
             Top             =   1440
@@ -1137,7 +1157,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo16 
             Height          =   270
             Index           =   2
-            Left            =   -60870
+            Left            =   14130
             Style           =   1  'Graphical
             TabIndex        =   136
             TabStop         =   0   'False
@@ -1159,7 +1179,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   16
-            Left            =   -61155
+            Left            =   13845
             TabIndex        =   19
             Top             =   1455
             Width           =   270
@@ -1167,7 +1187,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo17 
             Height          =   270
             Index           =   2
-            Left            =   -66660
+            Left            =   8340
             Style           =   1  'Graphical
             TabIndex        =   138
             TabStop         =   0   'False
@@ -1189,7 +1209,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   17
-            Left            =   -68025
+            Left            =   6975
             TabIndex        =   16
             Top             =   1455
             Width           =   1350
@@ -1197,7 +1217,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo18 
             Height          =   270
             Index           =   0
-            Left            =   4665
+            Left            =   -70335
             Style           =   1  'Graphical
             TabIndex        =   140
             TabStop         =   0   'False
@@ -1220,7 +1240,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   18
-            Left            =   2820
+            Left            =   -72180
             MultiLine       =   -1  'True
             TabIndex        =   46
             Top             =   975
@@ -1241,7 +1261,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   19
-            Left            =   -71535
+            Left            =   3465
             MultiLine       =   -1  'True
             TabIndex        =   25
             Top             =   2370
@@ -1261,7 +1281,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   20
-            Left            =   -70215
+            Left            =   4785
             MaxLength       =   20
             TabIndex        =   26
             Top             =   2370
@@ -1281,7 +1301,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   1345
             Index           =   21
-            Left            =   -74880
+            Left            =   120
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   34
@@ -1302,7 +1322,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   22
-            Left            =   -68040
+            Left            =   6960
             MaxLength       =   20
             TabIndex        =   27
             Top             =   2370
@@ -1323,7 +1343,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   23
-            Left            =   -62610
+            Left            =   12390
             MultiLine       =   -1  'True
             TabIndex        =   29
             Top             =   2370
@@ -1344,7 +1364,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   24
-            Left            =   -73695
+            Left            =   1305
             MultiLine       =   -1  'True
             TabIndex        =   30
             Top             =   2835
@@ -1364,7 +1384,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   25
-            Left            =   -65175
+            Left            =   9825
             MaxLength       =   20
             TabIndex        =   28
             Top             =   2370
@@ -1384,7 +1404,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   26
-            Left            =   -65610
+            Left            =   9390
             MaxLength       =   20
             TabIndex        =   17
             Top             =   1440
@@ -1451,7 +1471,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo27 
             Height          =   270
             Index           =   0
-            Left            =   4650
+            Left            =   -70350
             Style           =   1  'Graphical
             TabIndex        =   146
             TabStop         =   0   'False
@@ -1474,7 +1494,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   27
-            Left            =   2820
+            Left            =   -72180
             MultiLine       =   -1  'True
             TabIndex        =   49
             Top             =   1440
@@ -1541,7 +1561,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo28 
             Height          =   270
             Index           =   2
-            Left            =   4380
+            Left            =   -70620
             Style           =   1  'Graphical
             TabIndex        =   148
             TabStop         =   0   'False
@@ -1563,7 +1583,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   28
-            Left            =   2820
+            Left            =   -72180
             TabIndex        =   42
             Top             =   510
             Width           =   1560
@@ -1571,7 +1591,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo29 
             Height          =   270
             Index           =   1
-            Left            =   9075
+            Left            =   -65925
             Style           =   1  'Graphical
             TabIndex        =   150
             TabStop         =   0   'False
@@ -1581,7 +1601,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo29 
             Height          =   270
             Index           =   2
-            Left            =   8820
+            Left            =   -66180
             Style           =   1  'Graphical
             TabIndex        =   151
             TabStop         =   0   'False
@@ -1603,7 +1623,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   29
-            Left            =   7485
+            Left            =   -67515
             TabIndex        =   47
             Top             =   975
             Width           =   1590
@@ -1622,7 +1642,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00000080&
             Height          =   240
             Index           =   0
-            Left            =   4725
+            Left            =   -70275
             TabIndex        =   43
             TabStop         =   0   'False
             Top             =   600
@@ -1631,7 +1651,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GListV Grid 
             Height          =   4455
             Index           =   4
-            Left            =   9960
+            Left            =   -65040
             TabIndex        =   52
             Tag             =   "1"
             Top             =   750
@@ -1824,7 +1844,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00000080&
             Height          =   240
             Index           =   2
-            Left            =   -69480
+            Left            =   5520
             TabIndex        =   15
             TabStop         =   0   'False
             Top             =   1545
@@ -1870,7 +1890,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   36
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   64
@@ -1894,7 +1914,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   37
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   53
@@ -1918,7 +1938,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   38
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   54
@@ -1942,7 +1962,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   39
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   56
@@ -1966,7 +1986,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   40
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   55
@@ -1990,7 +2010,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   41
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   57
@@ -2014,7 +2034,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   42
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   58
@@ -2038,7 +2058,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   43
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   60
@@ -2062,7 +2082,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   44
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   59
@@ -2086,7 +2106,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   45
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   63
@@ -2110,7 +2130,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   46
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   62
@@ -2134,7 +2154,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   47
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   65
@@ -2158,7 +2178,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   48
-            Left            =   2805
+            Left            =   -72195
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   61
@@ -2169,7 +2189,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   1
-            Left            =   -62610
+            Left            =   12390
             TabIndex        =   199
             TabStop         =   0   'False
             Top             =   480
@@ -2232,7 +2252,7 @@ Begin VB.Form frmNotaFisc
          Begin IRRIG.GPainel Painel 
             Height          =   240
             Index           =   2
-            Left            =   7470
+            Left            =   -67530
             TabIndex        =   201
             TabStop         =   0   'False
             Top             =   525
@@ -2346,7 +2366,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   50
-            Left            =   -68040
+            Left            =   6960
             Locked          =   -1  'True
             MaxLength       =   30
             TabIndex        =   32
@@ -2368,7 +2388,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   51
-            Left            =   -71820
+            Left            =   3180
             Locked          =   -1  'True
             MaxLength       =   255
             TabIndex        =   31
@@ -2392,7 +2412,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   52
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   87
@@ -2416,7 +2436,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   53
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   88
@@ -2439,7 +2459,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   54
-            Left            =   -64395
+            Left            =   10605
             MultiLine       =   -1  'True
             TabIndex        =   8
             Top             =   450
@@ -2459,7 +2479,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   3
-            Left            =   -63780
+            Left            =   11220
             TabIndex        =   9
             TabStop         =   0   'False
             Top             =   555
@@ -2503,7 +2523,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   56
-            Left            =   -62610
+            Left            =   12390
             Locked          =   -1  'True
             TabIndex        =   33
             TabStop         =   0   'False
@@ -2526,7 +2546,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   57
-            Left            =   7470
+            Left            =   -67530
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   96
@@ -2589,7 +2609,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00000080&
             Height          =   300
             Index           =   5
-            Left            =   -68085
+            Left            =   6915
             TabIndex        =   99
             Top             =   3255
             Width           =   4545
@@ -2597,7 +2617,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo59 
             Height          =   270
             Index           =   2
-            Left            =   -65400
+            Left            =   9600
             Style           =   1  'Graphical
             TabIndex        =   222
             TabStop         =   0   'False
@@ -2620,7 +2640,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   59
-            Left            =   -68040
+            Left            =   6960
             TabIndex        =   100
             Top             =   885
             Width           =   2625
@@ -2668,7 +2688,7 @@ Begin VB.Form frmNotaFisc
          Begin VB.CommandButton bottxtCampo61 
             Height          =   270
             Index           =   1
-            Left            =   -62115
+            Left            =   12885
             Style           =   1  'Graphical
             TabIndex        =   226
             TabStop         =   0   'False
@@ -2691,7 +2711,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   270
             Index           =   61
-            Left            =   -63345
+            Left            =   11655
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   104
@@ -2755,7 +2775,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             Height          =   360
             Index           =   64
-            Left            =   -68460
+            Left            =   6540
             MaxLength       =   254
             MultiLine       =   -1  'True
             TabIndex        =   111
@@ -2768,7 +2788,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7470
+            Left            =   -67530
             TabIndex        =   114
             Top             =   1365
             Width           =   2115
@@ -2789,7 +2809,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   0
-            Left            =   5880
+            Left            =   -69120
             TabIndex        =   116
             Top             =   1395
             Width           =   1515
@@ -2799,7 +2819,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7470
+            Left            =   -67530
             TabIndex        =   117
             Top             =   1365
             Width           =   2115
@@ -2809,7 +2829,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -68040
+            Left            =   6960
             TabIndex        =   119
             Top             =   1905
             Width           =   4200
@@ -2829,7 +2849,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   1
-            Left            =   -63000
+            Left            =   12000
             TabIndex        =   122
             Top             =   1935
             Width           =   315
@@ -2849,7 +2869,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   2
-            Left            =   -69015
+            Left            =   5985
             TabIndex        =   123
             Top             =   1935
             Width           =   900
@@ -2859,7 +2879,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -68040
+            Left            =   6960
             TabIndex        =   124
             Top             =   450
             Width           =   1395
@@ -2879,7 +2899,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   3
-            Left            =   -74865
+            Left            =   135
             TabIndex        =   126
             Top             =   2400
             Width           =   1095
@@ -2889,7 +2909,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -73695
+            Left            =   1305
             TabIndex        =   127
             Top             =   1440
             Width           =   3900
@@ -2909,7 +2929,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   4
-            Left            =   6225
+            Left            =   -68775
             TabIndex        =   130
             Top             =   525
             Width           =   1170
@@ -2919,7 +2939,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -73695
+            Left            =   1305
             TabIndex        =   131
             Top             =   450
             Width           =   3780
@@ -2939,7 +2959,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   5
-            Left            =   -74655
+            Left            =   345
             TabIndex        =   134
             Top             =   480
             Width           =   885
@@ -2949,7 +2969,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -61170
+            Left            =   13830
             TabIndex        =   135
             Top             =   1440
             Width           =   570
@@ -2959,7 +2979,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -68040
+            Left            =   6960
             TabIndex        =   137
             Top             =   1440
             Width           =   1650
@@ -2969,7 +2989,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   2805
+            Left            =   -72195
             TabIndex        =   139
             Top             =   960
             Width           =   2130
@@ -2988,7 +3008,7 @@ Begin VB.Form frmNotaFisc
             EndProperty
             ForeColor       =   &H80000008&
             Height          =   240
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   141
             Top             =   3810
             Width           =   840
@@ -3008,7 +3028,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00000000&
             Height          =   240
             Index           =   6
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   142
             Top             =   915
             Width           =   3615
@@ -3016,8 +3036,8 @@ Begin VB.Form frmNotaFisc
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   0
-            X1              =   -74880
-            X2              =   -60525
+            X1              =   120
+            X2              =   14475
             Y1              =   1305
             Y2              =   1305
          End
@@ -3036,7 +3056,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   7
-            Left            =   -63150
+            Left            =   11850
             TabIndex        =   143
             Top             =   480
             Width           =   465
@@ -3056,7 +3076,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00000000&
             Height          =   240
             Index           =   8
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   144
             Top             =   3300
             Width           =   2700
@@ -3064,8 +3084,8 @@ Begin VB.Form frmNotaFisc
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   1
-            X1              =   -74880
-            X2              =   -60525
+            X1              =   120
+            X2              =   14475
             Y1              =   3630
             Y2              =   3630
          End
@@ -3074,7 +3094,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   2805
+            Left            =   -72195
             TabIndex        =   145
             Top             =   1425
             Width           =   2115
@@ -3084,7 +3104,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   2805
+            Left            =   -72195
             TabIndex        =   147
             Top             =   495
             Width           =   1845
@@ -3094,7 +3114,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   7470
+            Left            =   -67530
             TabIndex        =   149
             Top             =   960
             Width           =   1875
@@ -3117,7 +3137,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H00FFFFFF&
             Height          =   255
             Index           =   9
-            Left            =   9960
+            Left            =   -65040
             TabIndex        =   152
             Top             =   495
             Width           =   4515
@@ -3227,7 +3247,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   14
-            Left            =   675
+            Left            =   -74325
             TabIndex        =   160
             Top             =   525
             Width           =   2055
@@ -3247,7 +3267,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   15
-            Left            =   6465
+            Left            =   -68535
             TabIndex        =   161
             Top             =   990
             Width           =   930
@@ -3255,8 +3275,8 @@ Begin VB.Form frmNotaFisc
          Begin VB.Line Linha 
             BorderColor     =   &H00C0C0C0&
             Index           =   2
-            X1              =   600
-            X2              =   9585
+            X1              =   -74400
+            X2              =   -65415
             Y1              =   1830
             Y2              =   1830
          End
@@ -3276,7 +3296,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   16
-            Left            =   795
+            Left            =   -74205
             TabIndex        =   162
             Top             =   1980
             Width           =   1935
@@ -3297,7 +3317,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   17
-            Left            =   720
+            Left            =   -74280
             TabIndex        =   163
             Top             =   2445
             Width           =   2010
@@ -3318,7 +3338,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   18
-            Left            =   1020
+            Left            =   -73980
             TabIndex        =   164
             Top             =   2910
             Width           =   1710
@@ -3339,7 +3359,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   19
-            Left            =   1395
+            Left            =   -73605
             TabIndex        =   165
             Top             =   3375
             Width           =   1335
@@ -3360,7 +3380,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   20
-            Left            =   195
+            Left            =   -74805
             TabIndex        =   166
             Top             =   4305
             Width           =   2535
@@ -3381,7 +3401,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   21
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   167
             Top             =   4755
             Width           =   2610
@@ -3401,7 +3421,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   22
-            Left            =   5520
+            Left            =   -69480
             TabIndex        =   168
             Top             =   5220
             Width           =   1875
@@ -3421,7 +3441,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   23
-            Left            =   5640
+            Left            =   -69360
             TabIndex        =   169
             Top             =   3375
             Width           =   1755
@@ -3441,7 +3461,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   24
-            Left            =   5850
+            Left            =   -69150
             TabIndex        =   170
             Top             =   2910
             Width           =   1545
@@ -3461,7 +3481,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   25
-            Left            =   5550
+            Left            =   -69450
             TabIndex        =   171
             Top             =   2445
             Width           =   1845
@@ -3481,7 +3501,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   26
-            Left            =   5625
+            Left            =   -69375
             TabIndex        =   172
             Top             =   1980
             Width           =   1770
@@ -3502,7 +3522,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   27
-            Left            =   420
+            Left            =   -74580
             TabIndex        =   173
             Top             =   5220
             Width           =   2310
@@ -3522,7 +3542,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   28
-            Left            =   1470
+            Left            =   -73530
             TabIndex        =   174
             Top             =   990
             Width           =   1260
@@ -3542,7 +3562,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   29
-            Left            =   1410
+            Left            =   -73590
             TabIndex        =   175
             Top             =   1455
             Width           =   1320
@@ -3563,7 +3583,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   30
-            Left            =   675
+            Left            =   -74325
             TabIndex        =   176
             Top             =   3840
             Width           =   2055
@@ -3583,7 +3603,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   31
-            Left            =   -69540
+            Left            =   5460
             TabIndex        =   177
             Top             =   480
             Width           =   945
@@ -3603,7 +3623,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   32
-            Left            =   -66570
+            Left            =   8430
             TabIndex        =   178
             Top             =   480
             Width           =   495
@@ -3623,7 +3643,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   33
-            Left            =   -74730
+            Left            =   270
             TabIndex        =   179
             Top             =   1470
             Width           =   960
@@ -3643,7 +3663,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   34
-            Left            =   -68625
+            Left            =   6375
             TabIndex        =   180
             Top             =   1470
             Width           =   510
@@ -3663,7 +3683,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   35
-            Left            =   -66285
+            Left            =   8715
             TabIndex        =   181
             Top             =   1470
             Width           =   600
@@ -3683,7 +3703,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   36
-            Left            =   -63255
+            Left            =   11745
             TabIndex        =   182
             Top             =   1470
             Width           =   570
@@ -3703,7 +3723,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   37
-            Left            =   -61635
+            Left            =   13365
             TabIndex        =   183
             Top             =   1470
             Width           =   390
@@ -3723,7 +3743,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   38
-            Left            =   -69090
+            Left            =   5910
             TabIndex        =   184
             Top             =   1935
             Width           =   975
@@ -3743,7 +3763,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   39
-            Left            =   -74700
+            Left            =   300
             TabIndex        =   185
             Top             =   1935
             Width           =   930
@@ -3763,7 +3783,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   40
-            Left            =   -72000
+            Left            =   3000
             TabIndex        =   186
             Top             =   2400
             Width           =   390
@@ -3783,7 +3803,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   41
-            Left            =   -70740
+            Left            =   4260
             TabIndex        =   187
             Top             =   2400
             Width           =   450
@@ -3803,7 +3823,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   42
-            Left            =   -68730
+            Left            =   6270
             TabIndex        =   188
             Top             =   2400
             Width           =   615
@@ -3823,7 +3843,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   43
-            Left            =   -66360
+            Left            =   8640
             TabIndex        =   189
             Top             =   2400
             Width           =   1110
@@ -3843,7 +3863,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   44
-            Left            =   -63420
+            Left            =   11580
             TabIndex        =   190
             Top             =   2400
             Width           =   735
@@ -3863,7 +3883,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   45
-            Left            =   -74700
+            Left            =   300
             TabIndex        =   191
             Top             =   2865
             Width           =   930
@@ -4003,7 +4023,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   52
-            Left            =   -74790
+            Left            =   210
             TabIndex        =   198
             Top             =   2400
             Width           =   1020
@@ -4054,7 +4074,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   54
-            Left            =   -68805
+            Left            =   6195
             TabIndex        =   207
             Top             =   2865
             Width           =   690
@@ -4075,7 +4095,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   55
-            Left            =   -72345
+            Left            =   2655
             TabIndex        =   208
             Top             =   2865
             Width           =   450
@@ -4096,7 +4116,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   56
-            Left            =   5550
+            Left            =   -69450
             TabIndex        =   209
             Top             =   4305
             Width           =   1845
@@ -4117,7 +4137,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   57
-            Left            =   5745
+            Left            =   -69255
             TabIndex        =   210
             Top             =   3840
             Width           =   1650
@@ -4138,7 +4158,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   58
-            Left            =   -65055
+            Left            =   9945
             TabIndex        =   211
             Top             =   480
             Width           =   585
@@ -4179,7 +4199,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   60
-            Left            =   9960
+            Left            =   -65040
             TabIndex        =   213
             Top             =   5280
             Width           =   600
@@ -4190,7 +4210,7 @@ Begin VB.Form frmNotaFisc
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   0
-            Left            =   10635
+            Left            =   -64365
             Shape           =   1  'Square
             Top             =   5325
             Width           =   180
@@ -4210,7 +4230,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   61
-            Left            =   10860
+            Left            =   -64140
             TabIndex        =   214
             Top             =   5280
             Width           =   990
@@ -4221,7 +4241,7 @@ Begin VB.Form frmNotaFisc
             FillColor       =   &H000000FF&
             Height          =   165
             Index           =   1
-            Left            =   12015
+            Left            =   -62985
             Shape           =   1  'Square
             Top             =   5325
             Width           =   180
@@ -4241,7 +4261,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   62
-            Left            =   12255
+            Left            =   -62745
             TabIndex        =   215
             Top             =   5280
             Width           =   1050
@@ -4252,7 +4272,7 @@ Begin VB.Form frmNotaFisc
             FillColor       =   &H000000FF&
             Height          =   150
             Index           =   2
-            Left            =   13470
+            Left            =   -61530
             Shape           =   1  'Square
             Top             =   5325
             Width           =   165
@@ -4272,7 +4292,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   63
-            Left            =   13695
+            Left            =   -61305
             TabIndex        =   216
             Top             =   5280
             Width           =   300
@@ -4292,7 +4312,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   64
-            Left            =   6345
+            Left            =   -68655
             TabIndex        =   217
             Top             =   1380
             Width           =   1050
@@ -4312,7 +4332,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   65
-            Left            =   -63255
+            Left            =   11745
             TabIndex        =   218
             Top             =   2865
             Width           =   570
@@ -4332,7 +4352,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   66
-            Left            =   5520
+            Left            =   -69480
             TabIndex        =   219
             Top             =   4755
             Width           =   1875
@@ -4352,7 +4372,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   67
-            Left            =   -70035
+            Left            =   4965
             TabIndex        =   220
             Top             =   885
             Width           =   1920
@@ -4362,7 +4382,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -68055
+            Left            =   6945
             TabIndex        =   221
             Top             =   870
             Width           =   2925
@@ -4402,7 +4422,7 @@ Begin VB.Form frmNotaFisc
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   69
-            Left            =   -65040
+            Left            =   9960
             TabIndex        =   224
             Top             =   900
             Width           =   1620
@@ -4412,7 +4432,7 @@ Begin VB.Form frmNotaFisc
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -63360
+            Left            =   11640
             TabIndex        =   225
             Top             =   900
             Width           =   1515
@@ -12152,9 +12172,9 @@ End If
           DetPag = objNFeUtil.DetPag(ide_indPag, tPag, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc)
           Pag = objNFeUtil.pagamento400(DetPag, vTroco_Opc)
            If Parametros_da_NFe!ambiente = 1 And xPag <> "" Then
-             Dim pos As Long
-             pos = InStr(1, DetPag, "<vPag>")
-             If pos > 0 Then DetPag = Left(DetPag, pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(DetPag, pos)
+             Dim Pos As Long
+             Pos = InStr(1, DetPag, "<vPag>")
+             If Pos > 0 Then DetPag = Left(DetPag, Pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(DetPag, Pos)
           End If
        
         Else
@@ -12185,8 +12205,8 @@ xmlDetPag = objNFeUtil.DetPag( _
              )
              
              If Parametros_da_NFe!ambiente = 1 And xPag <> "" Then
-             pos = InStr(1, xmlDetPag, "<vPag>")
-             If pos > 0 Then xmlDetPag = Left(xmlDetPag, pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(xmlDetPag, pos)
+             Pos = InStr(1, xmlDetPag, "<vPag>")
+             If Pos > 0 Then xmlDetPag = Left(xmlDetPag, Pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(xmlDetPag, Pos)
           End If
              
 
