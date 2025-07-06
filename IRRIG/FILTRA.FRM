@@ -427,7 +427,7 @@ Attribute VB_Exposed = False
 '* Função....: Monta expressão de filtro
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 24/06/2025 17:03:51
+'* Data......: 05/07/2025 23:25:47
 '* * * * * * *
 
 Option Explicit                                   'requer declaração de variáveis

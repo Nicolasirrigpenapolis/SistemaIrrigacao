@@ -1,15 +1,5 @@
 [History]
-1=#P0#=mb	#P1#=AlteraEntraPPropria	#P2#=IRRIG/frmMvtoConN/AlteraEntraPPropria	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702155728	#P7#=0	#P8#=25	.
-2=#P0#=mb	#P1#=DeletaBxConsumo	#P2#=IRRIG/frmMvtoConN/DeletaBxConsumo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702154311	#P7#=0	#P8#=3	.
-3=#P0#=mb	#P1#=ExcluiBaixaReceitaConjunto	#P2#=IRRIG/frmMvtoConN/ExcluiBaixaReceitaConjunto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702154153	#P7#=0	#P8#=8	.
-4=#P0#=mb	#P1#=ExcluiBaixaReceitaProduto	#P2#=IRRIG/frmMvtoConN/ExcluiBaixaReceitaProduto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702154020	#P7#=0	#P8#=26	.
-5=#P0#=mb	#P1#=DeletaBaixa	#P2#=IRRIG/frmMvtoConN/DeletaBaixa	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702153913	#P7#=0	#P8#=-1	.
-6=#P0#=mb	#P1#=ExcluiRegistro	#P2#=IRRIG/mdiIRRIG/ExcluiRegistro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702153736	#P7#=0	#P8#=45	.
-7=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250702155010	#P7#=0	#P8#=32	.
-8=#P0#=mb	#P1#=DANFE	#P2#=IRRIG/frmNotaFisc/DANFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702153049	#P7#=0	#P8#=50	.
-9=#P0#=mb	#P1#=PreValidaNFSe	#P2#=IRRIG/frmNotaFisc/PreValidaNFSe	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702145714	#P7#=0	#P8#=-5	.
-10=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmNotaFisc/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702152837	#P7#=0	#P8#=-2	.
-11=#P0#=mb	#P1#=BlasterNFe310	#P2#=IRRIG/frmNotaFisc/BlasterNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702155141	#P7#=0	#P8#=354	.
-12=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmNotaFisc/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702134544	#P7#=0	#P8#=164	.
-13=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702162426	#P7#=0	#P8#=1671	.
-14=#P0#=mb	#P1#=AbreSite	#P2#=IRRIG/frmDNFSe/AbreSite	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250702111159	#P7#=0	#P8#=6	.
+1=#P0#=mb	#P1#=ValorCusto	#P2#=IRRIG/modIRRIG/ValorCusto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706010632	#P7#=0	#P8#=-3	.
+2=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmOrcament/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250705233901	#P7#=0	#P8#=21	.
+3=#P0#=mb	#P1#=bottxtCampo150_Click	#P2#=IRRIG/frmOrcament/bottxtCampo150_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250705233512	#P7#=0	#P8#=1	.
+4=#P0#=mb	#P1#=LigaDesligaBotoes	#P2#=IRRIG/frmOrcament/LigaDesligaBotoes	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250705233429	#P7#=0	#P8#=6611	.
