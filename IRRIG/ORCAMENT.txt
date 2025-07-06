@@ -10034,6 +10034,8 @@ Public Sub RepositionOrcamento()
    ExecutaGrid 4, Col(), CONDICOES_ESPECIAIS
    
    'Alteração
+   ' Garante que o RecordSet esteja carregado antes de acessar seus campos
+   If Orcamento Is Nothing Then Set Orcamento = vgTb
    lblAlteracao.Caption = Orcamento![Usuário da Alteração] & " " & Orcamento![Data da Alteração] & " " & Orcamento![Hora da Alteração]
    CarregaFotos
    
