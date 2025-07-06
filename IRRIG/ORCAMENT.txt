@@ -9793,6 +9793,12 @@ Begin VB.Form frmOrcament
       EndProperty
       CacheSize       =   100
    End
+   Begin VB.Timer timUnLoad
+      Enabled         =   0
+      Interval        =   5
+      left            =   30
+      top             =   950
+   End
 End
 Attribute VB_Name = "frmOrcament"
 Attribute VB_GlobalNameSpace = False
