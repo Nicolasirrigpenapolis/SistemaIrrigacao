@@ -16044,7 +16044,12 @@ Private Sub txtCp_GotFocus(Index As Integer)
             PoeRelEFiltroCbo 161
       End Select
    End If
-   txtCampo(Index).GotFocus
+   'Evita erro caso o objeto do campo já tenha sido liberado
+   If Index >= LBound(txtCampo) And Index <= UBound(txtCampo) Then
+      If Not txtCampo(Index) Is Nothing Then
+         txtCampo(Index).GotFocus
+      End If
+   End If
 End Sub
 
 Private Sub txtCp_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
