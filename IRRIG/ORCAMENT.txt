@@ -9831,6 +9831,7 @@ Public vgPriVez As Integer                        'flag de carregamento do módu
 Public WithEvents vgTb As GRecordSet              'tabela de dados do módulo
 Attribute vgTb.VB_VarHelpID = -1
 Public vgSQL As String                            'expressão SQL que define o módulo
+Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo
 Dim txtCampo(161) As New FormataCampos            'classe dos campos tipo texto do mdulo
 Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo
 Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo
