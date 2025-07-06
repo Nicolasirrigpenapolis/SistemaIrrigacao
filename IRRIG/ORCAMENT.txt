@@ -13354,6 +13354,11 @@ End Function
 
 Private Sub CarregaFotos()
 
+    ' Verifica se o recordset de parâmetros está disponível para evitar o erro
+    ' "Object variable or With block variable not set" caso ainda não tenha sido
+    ' carregado.
+    If Parametros Is Nothing Then Exit Sub
+
     If Vazio(Parametros![Diretorio das Fotos]) Then
        Exit Sub
     End If
@@ -15781,7 +15786,10 @@ Private Sub ExecutaPreValidacao()
    chkCampo(9).Enabled = Ok Or Not vgAlterar
    Ok = (vgSituacao = ACAO_NAVEGANDO)
    Botao(13).Enabled = Ok
-   Ok = (vgSituacao = ACAO_NAVEGANDO And Existe(Parametros![Diretorio das Fotos] & "Orc_" & Sequencia_do_Orcamento & ".jpg"))
+   ' Garante que a variável Parametros esteja definida antes de verificar a existência
+   ' do arquivo da foto; evita erro de objeto não definido.
+   Ok = (vgSituacao = ACAO_NAVEGANDO And Not Parametros Is Nothing _
+         And Existe(Parametros![Diretorio das Fotos] & "Orc_" & Sequencia_do_Orcamento & ".jpg"))
    Botao(14).Enabled = Ok
    Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "MAYSA" Or vgPWUsuario = "VANESSA" Or vgPWUsuario = "JERONIMO" Or vgPWUsuario = "ALEXANDRA" Or vgPWUsuario = "WAGNER")
    chkCampo(10).Locked = Not (vgAlterar And chkCampo(10).Editable)
