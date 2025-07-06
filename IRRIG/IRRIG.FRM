@@ -3550,7 +3550,7 @@ Attribute VB_Exposed = False
 '* Função....: Janela principal - MDI
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 05/07/2025 23:24:20
+'* Data......: 06/07/2025 12:04:29
 '* * * * * * *
 
 Option Explicit                                   'requer variáveis explicitamente declaradas

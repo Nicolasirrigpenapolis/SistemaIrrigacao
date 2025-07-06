@@ -1,5 +1,9 @@
 [History]
-1=#P0#=mb	#P1#=ValorCusto	#P2#=IRRIG/modIRRIG/ValorCusto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706010632	#P7#=0	#P8#=-3	.
-2=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmOrcament/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250705233901	#P7#=0	#P8#=21	.
-3=#P0#=mb	#P1#=bottxtCampo150_Click	#P2#=IRRIG/frmOrcament/bottxtCampo150_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250705233512	#P7#=0	#P8#=1	.
-4=#P0#=mb	#P1#=LigaDesligaBotoes	#P2#=IRRIG/frmOrcament/LigaDesligaBotoes	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250705233429	#P7#=0	#P8#=6611	.
+1=#P0#=mb	#P1#=bottxtCampo151_Click	#P2#=IRRIG/frmOrcament/bottxtCampo151_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706132328	#P7#=0	#P8#=3	.
+2=#P0#=mb	#P1#=LigaDesligaBotoes	#P2#=IRRIG/frmOrcament/LigaDesligaBotoes	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706132222	#P7#=0	#P8#=6612	.
+3=#P0#=mb	#P1#=txtCp_MouseDown	#P2#=IRRIG/frmOrcament/txtCp_MouseDown	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706132202	#P7#=0	#P8#=-1	.
+4=#P0#=mb	#P1#=txtCampoTab	#P2#=IRRIG/frmOrcament/txtCampoTab [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20250706132059	#P7#=0	#P8#=6613	.
+5=#P0#=mb	#P1#=DefineControles3	#P2#=IRRIG/frmOrcament/DefineControles3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706125032	#P7#=0	#P8#=265	.
+6=#P0#=mb	#P1#=DefineControles1	#P2#=IRRIG/frmOrcament/DefineControles1	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706125011	#P7#=0	#P8#=6886	.
+7=#P0#=mb	#P1#=MostraFormulas	#P2#=IRRIG/frmOrcament/MostraFormulas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706124944	#P7#=0	#P8#=12185	.
+8=#P0#=mb	#P1#=DefineControles	#P2#=IRRIG/frmOrcament/DefineControles	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250706120926	#P7#=0	#P8#=21	.

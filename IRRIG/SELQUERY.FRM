@@ -91,7 +91,7 @@ Attribute VB_Exposed = False
 '* Função....: Menu de consultas gravadas
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 05/07/2025 23:25:46
+'* Data......: 06/07/2025 12:05:59
 '* * * * * * *
 
 Option Explicit                                   'requer declaração explícita

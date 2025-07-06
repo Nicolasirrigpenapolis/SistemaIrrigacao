@@ -646,7 +646,7 @@ Attribute VB_Exposed = False
 '* Função....: Construtor de consultas SQL
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 05/07/2025 23:25:47
+'* Data......: 06/07/2025 12:05:59
 '* * * * * * *
 
 Option Explicit                                   'variáveis explicictamente declaradas
