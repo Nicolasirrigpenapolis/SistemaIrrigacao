@@ -24,10 +24,35 @@ Begin VB.MDIForm mdiIRRIG
       Stretch         =   -1  'True
       AutoRedraw      =   -1  'True
       Begin IRRIG.GBotao Botao 
+         Height          =   315
+         Index           =   12
+         Left            =   7440
+         TabIndex        =   23
+         TabStop         =   0   'False
+         Top             =   60
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "A"
+         CaptionAlign    =   3
+         ButtonStyle     =   1
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
          Height          =   1005
-         Index           =   1
-         Left            =   19050
-         TabIndex        =   12
+         Index           =   11
+         Left            =   16500
+         TabIndex        =   22
          TabStop         =   0   'False
          Top             =   75
          Width           =   1215
@@ -38,21 +63,145 @@ Begin VB.MDIForm mdiIRRIG
             Name            =   "Verdana"
             Size            =   9
             Charset         =   0
-            Weight          =   400
+            Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Pagar"
+         Caption         =   "Pivô"
          CaptionAlign    =   1
          ButtonStyle     =   1
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   1005
-         Index           =   2
-         Left            =   17755
-         TabIndex        =   13
+         Index           =   10
+         Left            =   15240
+         TabIndex        =   21
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1215
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Consulta"
+         CaptionAlign    =   1
+         ButtonStyle     =   1
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   210
+         Index           =   9
+         Left            =   615
+         TabIndex        =   20
+         TabStop         =   0   'False
+         Top             =   2385
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonStyle     =   1
+         Buttontype      =   1
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   1005
+         Index           =   8
+         Left            =   11420
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1215
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mvto"
+         CaptionAlign    =   1
+         ButtonStyle     =   1
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   1005
+         Index           =   7
+         Left            =   10210
+         TabIndex        =   18
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1140
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Conjuntos"
+         CaptionAlign    =   1
+         ButtonStyle     =   1
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   1005
+         Index           =   6
+         Left            =   13955
+         TabIndex        =   17
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1215
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Nota Fiscal"
+         CaptionAlign    =   1
+         ButtonStyle     =   1
+         CaptionOffset   =   100
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   1005
+         Index           =   5
+         Left            =   12655
+         TabIndex        =   16
          TabStop         =   0   'False
          Top             =   75
          Width           =   1215
@@ -68,7 +217,32 @@ Begin VB.MDIForm mdiIRRIG
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receber"
+         Caption         =   "Orçamento"
+         CaptionAlign    =   1
+         ButtonStyle     =   1
+         CaptionOffset   =   100
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   1005
+         Index           =   4
+         Left            =   7770
+         TabIndex        =   15
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1230
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Geral"
          CaptionAlign    =   1
          ButtonStyle     =   1
          CaptionOffset   =   50
@@ -100,34 +274,9 @@ Begin VB.MDIForm mdiIRRIG
       End
       Begin IRRIG.GBotao Botao 
          Height          =   1005
-         Index           =   4
-         Left            =   7770
-         TabIndex        =   15
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1230
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Geral"
-         CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   1005
-         Index           =   5
-         Left            =   12655
-         TabIndex        =   16
+         Index           =   2
+         Left            =   17755
+         TabIndex        =   13
          TabStop         =   0   'False
          Top             =   75
          Width           =   1215
@@ -143,16 +292,16 @@ Begin VB.MDIForm mdiIRRIG
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Orçamento"
+         Caption         =   "Receber"
          CaptionAlign    =   1
          ButtonStyle     =   1
-         CaptionOffset   =   100
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   1005
-         Index           =   6
-         Left            =   13955
-         TabIndex        =   17
+         Index           =   1
+         Left            =   19050
+         TabIndex        =   12
          TabStop         =   0   'False
          Top             =   75
          Width           =   1215
@@ -162,163 +311,14 @@ Begin VB.MDIForm mdiIRRIG
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
             Size            =   9
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Nota Fiscal"
-         CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   100
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   1005
-         Index           =   7
-         Left            =   10210
-         TabIndex        =   18
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1140
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Conjuntos"
-         CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   1005
-         Index           =   8
-         Left            =   11420
-         TabIndex        =   19
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1215
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mvto"
-         CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   210
-         Index           =   9
-         Left            =   615
-         TabIndex        =   20
-         TabStop         =   0   'False
-         Top             =   2385
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ButtonStyle     =   1
-         Buttontype      =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   1005
-         Index           =   10
-         Left            =   15240
-         TabIndex        =   21
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1215
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Consulta"
+         Caption         =   "Pagar"
          CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   1005
-         Index           =   11
-         Left            =   16500
-         TabIndex        =   22
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1215
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Pivô"
-         CaptionAlign    =   1
-         ButtonStyle     =   1
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   315
-         Index           =   12
-         Left            =   7440
-         TabIndex        =   23
-         TabStop         =   0   'False
-         Top             =   60
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "A"
-         CaptionAlign    =   3
          ButtonStyle     =   1
          CaptionOffset   =   50
       End
@@ -335,107 +335,10 @@ Begin VB.MDIForm mdiIRRIG
          BevelOuter      =   0
          Stretch         =   -1  'True
          AutoRedraw      =   -1  'True
-         Begin IRRIG.GBotao Botao 
-            Height          =   495
-            Index           =   0
-            Left            =   2550
-            TabIndex        =   0
-            TabStop         =   0   'False
-            Top             =   0
-            Width           =   1260
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Grade"
-            CaptionAlign    =   4
-            ButtonStyle     =   1
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao botProcura 
-            Height          =   999
-            Left            =   3840
-            TabIndex        =   1
-            TabStop         =   0   'False
-            Top             =   0
-            Width           =   720
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Ctrl + P"
-            CaptionAlign    =   1
-            ButtonStyle     =   1
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao botConfImp 
-            Height          =   495
-            Left            =   2550
-            TabIndex        =   2
-            TabStop         =   0   'False
-            Top             =   525
-            Width           =   1260
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Configura"
-            CaptionAlign    =   4
-            ButtonStyle     =   1
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao botFiltra 
-            Height          =   999
-            Left            =   4575
-            TabIndex        =   3
-            TabStop         =   0   'False
-            Top             =   0
-            Width           =   720
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Ctrl + F"
-            CaptionAlign    =   1
-            ButtonStyle     =   1
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao botUltimo 
+         Begin IRRIG.GBotao botSeguinte 
             Height          =   1005
-            Left            =   6795
-            TabIndex        =   4
+            Left            =   6300
+            TabIndex        =   11
             TabStop         =   0   'False
             Top             =   0
             Width           =   465
@@ -451,15 +354,39 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "F8"
+            Caption         =   "F7"
             CaptionAlign    =   1
             ButtonStyle     =   1
             CaptionOffset   =   160
          End
-         Begin IRRIG.GBotao botCancela 
+         Begin IRRIG.GBotao botPrimeiro 
+            Height          =   1005
+            Left            =   5310
+            TabIndex        =   10
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   465
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "F5"
+            CaptionAlign    =   1
+            ButtonStyle     =   1
+            CaptionOffset   =   160
+         End
+         Begin IRRIG.GBotao botExclui 
             Height          =   495
-            Left            =   0
-            TabIndex        =   5
+            Left            =   1275
+            TabIndex        =   9
             TabStop         =   0   'False
             Top             =   525
             Width           =   1260
@@ -475,15 +402,15 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Cancelar"
+            Caption         =   "Excluir"
             CaptionAlign    =   4
             ButtonStyle     =   1
             CaptionOffset   =   50
          End
-         Begin IRRIG.GBotao botInclui 
+         Begin IRRIG.GBotao botSalva 
             Height          =   495
-            Left            =   0
-            TabIndex        =   6
+            Left            =   1275
+            TabIndex        =   8
             TabStop         =   0   'False
             Top             =   0
             Width           =   1260
@@ -499,7 +426,7 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Incluir"
+            Caption         =   "Gravar"
             CaptionAlign    =   4
             ButtonStyle     =   1
             CaptionOffset   =   50
@@ -528,10 +455,10 @@ Begin VB.MDIForm mdiIRRIG
             ButtonStyle     =   1
             CaptionOffset   =   160
          End
-         Begin IRRIG.GBotao botSalva 
+         Begin IRRIG.GBotao botInclui 
             Height          =   495
-            Left            =   1275
-            TabIndex        =   8
+            Left            =   0
+            TabIndex        =   6
             TabStop         =   0   'False
             Top             =   0
             Width           =   1260
@@ -547,15 +474,15 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Gravar"
+            Caption         =   "Incluir"
             CaptionAlign    =   4
             ButtonStyle     =   1
             CaptionOffset   =   50
          End
-         Begin IRRIG.GBotao botExclui 
+         Begin IRRIG.GBotao botCancela 
             Height          =   495
-            Left            =   1275
-            TabIndex        =   9
+            Left            =   0
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   525
             Width           =   1260
@@ -571,15 +498,15 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Excluir"
+            Caption         =   "Cancelar"
             CaptionAlign    =   4
             ButtonStyle     =   1
             CaptionOffset   =   50
          End
-         Begin IRRIG.GBotao botPrimeiro 
+         Begin IRRIG.GBotao botUltimo 
             Height          =   1005
-            Left            =   5310
-            TabIndex        =   10
+            Left            =   6795
+            TabIndex        =   4
             TabStop         =   0   'False
             Top             =   0
             Width           =   465
@@ -595,18 +522,18 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "F5"
+            Caption         =   "F8"
             CaptionAlign    =   1
             ButtonStyle     =   1
             CaptionOffset   =   160
          End
-         Begin IRRIG.GBotao botSeguinte 
-            Height          =   1005
-            Left            =   6300
-            TabIndex        =   11
+         Begin IRRIG.GBotao botFiltra 
+            Height          =   999
+            Left            =   4575
+            TabIndex        =   3
             TabStop         =   0   'False
             Top             =   0
-            Width           =   465
+            Width           =   720
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
@@ -619,10 +546,83 @@ Begin VB.MDIForm mdiIRRIG
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "F7"
+            Caption         =   "Ctrl + F"
             CaptionAlign    =   1
             ButtonStyle     =   1
-            CaptionOffset   =   160
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao botConfImp 
+            Height          =   495
+            Left            =   2550
+            TabIndex        =   2
+            TabStop         =   0   'False
+            Top             =   525
+            Width           =   1260
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Configura"
+            CaptionAlign    =   4
+            ButtonStyle     =   1
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao botProcura 
+            Height          =   999
+            Left            =   3840
+            TabIndex        =   1
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   720
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Ctrl + P"
+            CaptionAlign    =   1
+            ButtonStyle     =   1
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   495
+            Index           =   0
+            Left            =   2550
+            TabIndex        =   0
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   1260
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Grade"
+            CaptionAlign    =   4
+            ButtonStyle     =   1
+            CaptionOffset   =   50
          End
       End
       Begin VB.Label Label 
