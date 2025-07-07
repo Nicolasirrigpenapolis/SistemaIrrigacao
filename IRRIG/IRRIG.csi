@@ -1,6 +1,0 @@
-[History]
-1=#P0#=mb	#P1#=chkCp_Click	#P2#=IRRIG/frmOrcament/chkCp_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250707150918	#P7#=0	#P8#=11	.
-2=#P0#=mb	#P1#=VerificaFormulario	#P2#=IRRIG/frmOrcament/VerificaFormulario	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250707151524	#P7#=0	#P8#=-5	.
-3=#P0#=mb	#P1#=SuperAtualizaConjuntos	#P2#=IRRIG/frmOrcament/SuperAtualizaConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250707144017	#P7#=0	#P8#=2	.
-4=#P0#=mb	#P1#=SuperAtualizaPecas	#P2#=IRRIG/frmOrcament/SuperAtualizaPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250707150732	#P7#=0	#P8#=4	.
-5=#P0#=mb	#P1#=DistribuiFreteTotal	#P2#=IRRIG/frmOrcament/DistribuiFreteTotal	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250707150919	#P7#=0	#P8#=-3	.
