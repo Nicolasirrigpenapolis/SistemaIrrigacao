@@ -284,7 +284,13 @@ Private Sub GeraNFe()
    Set objNFeUtil = CreateObject("NFe_Util_2G.util")
    F = FreeFile
 
-   nomeArquivo = Parametros_da_NFe![Diretório 2 NFe Homologação] & Format(txtSeqNotaTela.Text, "000000") & "_AUTORIZADO.xml"
+   If Parametros_da_NFe!ambiente = 0 Then
+      nomeArquivo = Parametros_da_NFe![Diretório 2 NFe Produção] & _
+                     Format(txtSeqNotaTela.Text, "000000") & "_AUTORIZADO.xml"
+   Else
+      nomeArquivo = "C:\Projetos\HOMOLOG IRRIG\" & _
+                     Format(txtSeqNotaTela.Text, "000000") & "_AUTORIZADO.xml"
+   End If
 
    Open nomeArquivo For Input As F
       Do While Not EOF(F)
@@ -301,7 +307,11 @@ Private Sub GeraNFe()
    quadroISSQN = "N"            ' imprimir o quadro de ISSQN
    DPEC = ""                    ' informar quando a NF-e tiver sido emitido em contingência DPEC
    separadorItem = "l"          ' traço para separar o item quando o item ocupar mais de uma linha
-   gravaPDF = "[RODAPE=Desenvolvido por programacao@irrigpenapolis.com.br][CORSOMBREADO=#D3D3D3][VISUALIZAR]"                ' informar o nome do arquivo do PDF.
+   If Parametros_da_NFe!ambiente = 0 Then
+      gravaPDF = "[RODAPE=Desenvolvido por programacao@irrigpenapolis.com.br][CORSOMBREADO=#D3D3D3][VISUALIZAR]"
+   Else
+      gravaPDF = "[RODAPE=Desenvolvido por programacao@irrigpenapolis.com.br][CORSOMBREADO=#D3D3D3][VISUALIZAR][PASTA=C:\\Projetos\\HOMOLOG IRRIG]"
+   End If                ' informar o nome do arquivo do PDF.
                                 ' Se informado o literal [NFeId.PDF] a DLL irá gravar o PDF identificado com o chave de acesso da NF-e.
                                 ' A omissão do nome gera uma visualização em tela.
                                 '-----------------------------------------------------

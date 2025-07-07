@@ -5,6 +5,7 @@ Begin VB.Form frmINOVE
    ClientLeft      =   7605
    ClientTop       =   6075
    ClientWidth     =   6585
+   Icon            =   "INOVE.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   5055
    ScaleWidth      =   6585

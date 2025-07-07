@@ -26,11 +26,11 @@ Begin VB.Form frmOrcament
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   0
+         Index           =   16
          Left            =   13125
-         TabIndex        =   55
+         TabIndex        =   195
          TabStop         =   0   'False
-         Top             =   180
+         Top             =   165
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -44,17 +44,130 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Gerar Nota"
+         Caption         =   "Imprimir"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   8
-         Left            =   14565
-         TabIndex        =   56
+         Index           =   15
+         Left            =   12810
+         TabIndex        =   190
          TabStop         =   0   'False
-         Top             =   750
+         Top             =   735
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   14
+         Left            =   7410
+         TabIndex        =   187
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   2580
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mapa da Propriedade"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   13
+         Left            =   10050
+         TabIndex        =   182
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Ficha Técnica"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14580
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   15180
+         TabIndex        =   59
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   10
+         Left            =   9810
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   1650
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -96,54 +209,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   10
-         Left            =   9810
-         TabIndex        =   4
+         Index           =   8
+         Left            =   14565
+         TabIndex        =   56
          TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   15180
-         TabIndex        =   59
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14580
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1650
+         Top             =   750
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -161,81 +231,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   13
-         Left            =   10050
-         TabIndex        =   182
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Ficha Técnica"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   14
-         Left            =   7410
-         TabIndex        =   187
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   2580
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mapa da Propriedade"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   15
-         Left            =   12810
-         TabIndex        =   190
-         TabStop         =   0   'False
-         Top             =   735
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   16
+         Index           =   0
          Left            =   13125
-         TabIndex        =   195
+         TabIndex        =   55
          TabStop         =   0   'False
-         Top             =   165
+         Top             =   180
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -249,7 +249,7 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Imprimir"
+         Caption         =   "Gerar Nota"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
@@ -593,436 +593,438 @@ Begin VB.Form frmOrcament
          Tab(0).Control(143).Enabled=   0   'False
          Tab(0).Control(144)=   "txtCp(1)"
          Tab(0).Control(144).Enabled=   0   'False
-         Tab(0).Control(145)=   "Botao(5)"
+         Tab(0).Control(145)=   "Botao(4)"
          Tab(0).Control(145).Enabled=   0   'False
-         Tab(0).Control(146)=   "Botao(3)"
+         Tab(0).Control(146)=   "Botao(1)"
          Tab(0).Control(146).Enabled=   0   'False
-         Tab(0).Control(147)=   "Botao(1)"
+         Tab(0).Control(147)=   "Botao(3)"
          Tab(0).Control(147).Enabled=   0   'False
-         Tab(0).Control(148)=   "Botao(4)"
+         Tab(0).Control(148)=   "Botao(5)"
          Tab(0).Control(148).Enabled=   0   'False
          Tab(0).ControlCount=   149
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Grid(3)"
-         Tab(1).Control(1)=   "Label(50)"
+         Tab(1).Control(0)=   "Label(50)"
+         Tab(1).Control(1)=   "Grid(3)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Grid(4)"
-         Tab(2).Control(1)=   "Label(49)"
+         Tab(2).Control(0)=   "Label(49)"
+         Tab(2).Control(1)=   "Grid(4)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Grid(0)"
-         Tab(3).Control(1)=   "labFdo34"
-         Tab(3).Control(2)=   "bottxtCampo34(1)"
-         Tab(3).Control(2).Enabled=   0   'False
-         Tab(3).Control(3)=   "bottxtCampo34(2)"
-         Tab(3).Control(3).Enabled=   0   'False
-         Tab(3).Control(4)=   "txtCp(34)"
-         Tab(3).Control(5)=   "Botao(2)"
-         Tab(3).Control(6)=   "Label(39)"
-         Tab(3).Control(7)=   "Label(47)"
-         Tab(3).Control(8)=   "ChkCp(3)"
-         Tab(3).Control(9)=   "txtCp(61)"
+         Tab(3).Control(0)=   "txtCp(61)"
+         Tab(3).Control(1)=   "ChkCp(3)"
+         Tab(3).Control(2)=   "Label(47)"
+         Tab(3).Control(3)=   "Label(39)"
+         Tab(3).Control(4)=   "Botao(2)"
+         Tab(3).Control(5)=   "txtCp(34)"
+         Tab(3).Control(6)=   "bottxtCampo34(2)"
+         Tab(3).Control(6).Enabled=   0   'False
+         Tab(3).Control(7)=   "bottxtCampo34(1)"
+         Tab(3).Control(7).Enabled=   0   'False
+         Tab(3).Control(8)=   "labFdo34"
+         Tab(3).Control(9)=   "Grid(0)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Grid(1)"
-         Tab(4).Control(1)=   "Label(48)"
+         Tab(4).Control(0)=   "Label(48)"
+         Tab(4).Control(1)=   "Grid(1)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "ORCAMENT.frx":001C
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Label(173)"
-         Tab(5).Control(1)=   "labFdo57"
-         Tab(5).Control(2)=   "Label(59)"
-         Tab(5).Control(3)=   "Label(58)"
-         Tab(5).Control(4)=   "Label(55)"
-         Tab(5).Control(5)=   "Label(54)"
-         Tab(5).Control(6)=   "Label(38)"
-         Tab(5).Control(7)=   "Label(30)"
-         Tab(5).Control(8)=   "labFdo47"
-         Tab(5).Control(9)=   "Label(29)"
-         Tab(5).Control(10)=   "Label(28)"
-         Tab(5).Control(11)=   "labFdo45"
-         Tab(5).Control(12)=   "Label(27)"
-         Tab(5).Control(13)=   "Label(26)"
-         Tab(5).Control(14)=   "Label(25)"
-         Tab(5).Control(15)=   "Label(24)"
-         Tab(5).Control(16)=   "Label(23)"
-         Tab(5).Control(17)=   "Label(22)"
-         Tab(5).Control(18)=   "Label(21)"
-         Tab(5).Control(19)=   "Label(20)"
-         Tab(5).Control(20)=   "Label(19)"
-         Tab(5).Control(21)=   "Label(18)"
-         Tab(5).Control(22)=   "Label(17)"
-         Tab(5).Control(23)=   "Linha(0)"
-         Tab(5).Control(24)=   "Label(13)"
-         Tab(5).Control(25)=   "Label(12)"
-         Tab(5).Control(26)=   "Label(11)"
-         Tab(5).Control(27)=   "Formato(2)"
-         Tab(5).Control(28)=   "Label(10)"
-         Tab(5).Control(29)=   "Formato(1)"
-         Tab(5).Control(30)=   "Label(9)"
-         Tab(5).Control(31)=   "Formato(0)"
-         Tab(5).Control(32)=   "Label(8)"
-         Tab(5).Control(33)=   "Label(7)"
-         Tab(5).Control(34)=   "labFdo35"
-         Tab(5).Control(35)=   "labFdo32"
-         Tab(5).Control(36)=   "Label(5)"
-         Tab(5).Control(37)=   "txtCp(148)"
-         Tab(5).Control(38)=   "txtCp(57)"
-         Tab(5).Control(39)=   "bottxtCampo57(0)"
-         Tab(5).Control(39).Enabled=   0   'False
-         Tab(5).Control(40)=   "txtCp(56)"
-         Tab(5).Control(40).Enabled=   0   'False
-         Tab(5).Control(41)=   "txtCp(53)"
-         Tab(5).Control(41).Enabled=   0   'False
-         Tab(5).Control(42)=   "txtCp(52)"
-         Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "Painel(2)"
-         Tab(5).Control(44)=   "txtCp(49)"
-         Tab(5).Control(44).Enabled=   0   'False
-         Tab(5).Control(45)=   "txtCp(47)"
-         Tab(5).Control(46)=   "bottxtCampo47(0)"
-         Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "txtCp(46)"
-         Tab(5).Control(47).Enabled=   0   'False
-         Tab(5).Control(48)=   "txtCp(45)"
-         Tab(5).Control(49)=   "bottxtCampo45(0)"
-         Tab(5).Control(49).Enabled=   0   'False
-         Tab(5).Control(50)=   "txtCp(44)"
-         Tab(5).Control(50).Enabled=   0   'False
-         Tab(5).Control(51)=   "txtCp(43)"
-         Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "txtCp(42)"
-         Tab(5).Control(52).Enabled=   0   'False
-         Tab(5).Control(53)=   "txtCp(41)"
-         Tab(5).Control(53).Enabled=   0   'False
-         Tab(5).Control(54)=   "txtCp(40)"
-         Tab(5).Control(54).Enabled=   0   'False
-         Tab(5).Control(55)=   "txtCp(39)"
-         Tab(5).Control(55).Enabled=   0   'False
-         Tab(5).Control(56)=   "txtCp(38)"
-         Tab(5).Control(56).Enabled=   0   'False
-         Tab(5).Control(57)=   "txtCp(37)"
-         Tab(5).Control(57).Enabled=   0   'False
-         Tab(5).Control(58)=   "txtCp(36)"
-         Tab(5).Control(58).Enabled=   0   'False
-         Tab(5).Control(59)=   "txtCp(35)"
-         Tab(5).Control(60)=   "bottxtCampo35(2)"
-         Tab(5).Control(60).Enabled=   0   'False
-         Tab(5).Control(61)=   "Grid(2)"
-         Tab(5).Control(62)=   "txtCp(32)"
-         Tab(5).Control(63)=   "bottxtCampo32(0)"
-         Tab(5).Control(63).Enabled=   0   'False
-         Tab(5).Control(64)=   "txtCp(31)"
-         Tab(5).Control(64).Enabled=   0   'False
-         Tab(5).Control(65)=   "txtCp(9)"
-         Tab(5).Control(65).Enabled=   0   'False
-         Tab(5).Control(66)=   "Botao(7)"
-         Tab(5).Control(67)=   "Botao(6)"
+         Tab(5).Control(0)=   "Botao(6)"
+         Tab(5).Control(1)=   "Botao(7)"
+         Tab(5).Control(2)=   "txtCp(9)"
+         Tab(5).Control(2).Enabled=   0   'False
+         Tab(5).Control(3)=   "txtCp(31)"
+         Tab(5).Control(3).Enabled=   0   'False
+         Tab(5).Control(4)=   "bottxtCampo32(0)"
+         Tab(5).Control(4).Enabled=   0   'False
+         Tab(5).Control(5)=   "txtCp(32)"
+         Tab(5).Control(6)=   "Grid(2)"
+         Tab(5).Control(7)=   "bottxtCampo35(2)"
+         Tab(5).Control(7).Enabled=   0   'False
+         Tab(5).Control(8)=   "txtCp(35)"
+         Tab(5).Control(9)=   "txtCp(36)"
+         Tab(5).Control(9).Enabled=   0   'False
+         Tab(5).Control(10)=   "txtCp(37)"
+         Tab(5).Control(10).Enabled=   0   'False
+         Tab(5).Control(11)=   "txtCp(38)"
+         Tab(5).Control(11).Enabled=   0   'False
+         Tab(5).Control(12)=   "txtCp(39)"
+         Tab(5).Control(12).Enabled=   0   'False
+         Tab(5).Control(13)=   "txtCp(40)"
+         Tab(5).Control(13).Enabled=   0   'False
+         Tab(5).Control(14)=   "txtCp(41)"
+         Tab(5).Control(14).Enabled=   0   'False
+         Tab(5).Control(15)=   "txtCp(42)"
+         Tab(5).Control(15).Enabled=   0   'False
+         Tab(5).Control(16)=   "txtCp(43)"
+         Tab(5).Control(16).Enabled=   0   'False
+         Tab(5).Control(17)=   "txtCp(44)"
+         Tab(5).Control(17).Enabled=   0   'False
+         Tab(5).Control(18)=   "bottxtCampo45(0)"
+         Tab(5).Control(18).Enabled=   0   'False
+         Tab(5).Control(19)=   "txtCp(45)"
+         Tab(5).Control(20)=   "txtCp(46)"
+         Tab(5).Control(20).Enabled=   0   'False
+         Tab(5).Control(21)=   "bottxtCampo47(0)"
+         Tab(5).Control(21).Enabled=   0   'False
+         Tab(5).Control(22)=   "txtCp(47)"
+         Tab(5).Control(23)=   "txtCp(49)"
+         Tab(5).Control(23).Enabled=   0   'False
+         Tab(5).Control(24)=   "Painel(2)"
+         Tab(5).Control(25)=   "txtCp(52)"
+         Tab(5).Control(25).Enabled=   0   'False
+         Tab(5).Control(26)=   "txtCp(53)"
+         Tab(5).Control(26).Enabled=   0   'False
+         Tab(5).Control(27)=   "txtCp(56)"
+         Tab(5).Control(27).Enabled=   0   'False
+         Tab(5).Control(28)=   "bottxtCampo57(0)"
+         Tab(5).Control(28).Enabled=   0   'False
+         Tab(5).Control(29)=   "txtCp(57)"
+         Tab(5).Control(30)=   "txtCp(148)"
+         Tab(5).Control(31)=   "Label(5)"
+         Tab(5).Control(32)=   "labFdo32"
+         Tab(5).Control(33)=   "labFdo35"
+         Tab(5).Control(34)=   "Label(7)"
+         Tab(5).Control(35)=   "Label(8)"
+         Tab(5).Control(36)=   "Formato(0)"
+         Tab(5).Control(37)=   "Label(9)"
+         Tab(5).Control(38)=   "Formato(1)"
+         Tab(5).Control(39)=   "Label(10)"
+         Tab(5).Control(40)=   "Formato(2)"
+         Tab(5).Control(41)=   "Label(11)"
+         Tab(5).Control(42)=   "Label(12)"
+         Tab(5).Control(43)=   "Label(13)"
+         Tab(5).Control(44)=   "Linha(0)"
+         Tab(5).Control(45)=   "Label(17)"
+         Tab(5).Control(46)=   "Label(18)"
+         Tab(5).Control(47)=   "Label(19)"
+         Tab(5).Control(48)=   "Label(20)"
+         Tab(5).Control(49)=   "Label(21)"
+         Tab(5).Control(50)=   "Label(22)"
+         Tab(5).Control(51)=   "Label(23)"
+         Tab(5).Control(52)=   "Label(24)"
+         Tab(5).Control(53)=   "Label(25)"
+         Tab(5).Control(54)=   "Label(26)"
+         Tab(5).Control(55)=   "Label(27)"
+         Tab(5).Control(56)=   "labFdo45"
+         Tab(5).Control(57)=   "Label(28)"
+         Tab(5).Control(58)=   "Label(29)"
+         Tab(5).Control(59)=   "labFdo47"
+         Tab(5).Control(60)=   "Label(30)"
+         Tab(5).Control(61)=   "Label(38)"
+         Tab(5).Control(62)=   "Label(54)"
+         Tab(5).Control(63)=   "Label(55)"
+         Tab(5).Control(64)=   "Label(58)"
+         Tab(5).Control(65)=   "Label(59)"
+         Tab(5).Control(66)=   "labFdo57"
+         Tab(5).Control(67)=   "Label(173)"
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "Label(69)"
-         Tab(6).Control(1)=   "txtCp(66)"
-         Tab(6).Control(2)=   "Label(70)"
-         Tab(6).Control(3)=   "Linha(2)"
-         Tab(6).Control(4)=   "Label(71)"
-         Tab(6).Control(5)=   "txtCp(67)"
-         Tab(6).Control(6)=   "Label(72)"
-         Tab(6).Control(7)=   "txtCp(68)"
-         Tab(6).Control(8)=   "Label(73)"
-         Tab(6).Control(9)=   "Label(74)"
-         Tab(6).Control(10)=   "txtCp(69)"
-         Tab(6).Control(11)=   "Label(75)"
-         Tab(6).Control(12)=   "txtCp(70)"
-         Tab(6).Control(12).Enabled=   0   'False
-         Tab(6).Control(13)=   "Label(76)"
-         Tab(6).Control(14)=   "txtCp(71)"
-         Tab(6).Control(14).Enabled=   0   'False
-         Tab(6).Control(15)=   "Label(77)"
-         Tab(6).Control(16)=   "txtCp(72)"
-         Tab(6).Control(17)=   "Linha(3)"
-         Tab(6).Control(18)=   "Linha(4)"
-         Tab(6).Control(19)=   "Label(78)"
-         Tab(6).Control(20)=   "Label(79)"
-         Tab(6).Control(21)=   "Label(80)"
-         Tab(6).Control(22)=   "txtCp(73)"
-         Tab(6).Control(23)=   "Label(81)"
-         Tab(6).Control(24)=   "txtCp(74)"
-         Tab(6).Control(25)=   "Label(82)"
-         Tab(6).Control(26)=   "txtCp(75)"
-         Tab(6).Control(27)=   "txtCp(76)"
+         Tab(6).Control(0)=   "Linha(15)"
+         Tab(6).Control(1)=   "Label(166)"
+         Tab(6).Control(2)=   "Label(165)"
+         Tab(6).Control(3)=   "Label(164)"
+         Tab(6).Control(4)=   "Label(163)"
+         Tab(6).Control(5)=   "Label(162)"
+         Tab(6).Control(6)=   "Label(161)"
+         Tab(6).Control(7)=   "Label(160)"
+         Tab(6).Control(8)=   "Linha(14)"
+         Tab(6).Control(9)=   "Label(159)"
+         Tab(6).Control(10)=   "Label(158)"
+         Tab(6).Control(11)=   "Label(157)"
+         Tab(6).Control(12)=   "Label(156)"
+         Tab(6).Control(13)=   "Label(155)"
+         Tab(6).Control(14)=   "Label(154)"
+         Tab(6).Control(15)=   "Label(153)"
+         Tab(6).Control(16)=   "txtCp(114)"
+         Tab(6).Control(16).Enabled=   0   'False
+         Tab(6).Control(17)=   "txtCp(113)"
+         Tab(6).Control(17).Enabled=   0   'False
+         Tab(6).Control(18)=   "txtCp(112)"
+         Tab(6).Control(18).Enabled=   0   'False
+         Tab(6).Control(19)=   "txtCp(111)"
+         Tab(6).Control(19).Enabled=   0   'False
+         Tab(6).Control(20)=   "Label(113)"
+         Tab(6).Control(21)=   "txtCp(110)"
+         Tab(6).Control(21).Enabled=   0   'False
+         Tab(6).Control(22)=   "txtCp(109)"
+         Tab(6).Control(22).Enabled=   0   'False
+         Tab(6).Control(23)=   "txtCp(108)"
+         Tab(6).Control(23).Enabled=   0   'False
+         Tab(6).Control(24)=   "Label(112)"
+         Tab(6).Control(25)=   "Label(111)"
+         Tab(6).Control(26)=   "txtCp(107)"
+         Tab(6).Control(26).Enabled=   0   'False
+         Tab(6).Control(27)=   "txtCp(106)"
          Tab(6).Control(27).Enabled=   0   'False
-         Tab(6).Control(28)=   "Label(83)"
-         Tab(6).Control(29)=   "Label(84)"
-         Tab(6).Control(30)=   "txtCp(77)"
-         Tab(6).Control(31)=   "txtCp(78)"
-         Tab(6).Control(32)=   "Label(85)"
-         Tab(6).Control(33)=   "txtCp(79)"
+         Tab(6).Control(28)=   "txtCp(105)"
+         Tab(6).Control(28).Enabled=   0   'False
+         Tab(6).Control(29)=   "Label(110)"
+         Tab(6).Control(30)=   "Label(109)"
+         Tab(6).Control(31)=   "txtCp(104)"
+         Tab(6).Control(31).Enabled=   0   'False
+         Tab(6).Control(32)=   "txtCp(103)"
+         Tab(6).Control(32).Enabled=   0   'False
+         Tab(6).Control(33)=   "txtCp(102)"
          Tab(6).Control(33).Enabled=   0   'False
-         Tab(6).Control(34)=   "txtCp(80)"
-         Tab(6).Control(34).Enabled=   0   'False
-         Tab(6).Control(35)=   "txtCp(81)"
-         Tab(6).Control(36)=   "Label(86)"
-         Tab(6).Control(37)=   "Label(87)"
-         Tab(6).Control(38)=   "txtCp(82)"
-         Tab(6).Control(39)=   "Label(88)"
-         Tab(6).Control(40)=   "txtCp(83)"
+         Tab(6).Control(34)=   "txtCp(101)"
+         Tab(6).Control(35)=   "bottxtCampo101(2)"
+         Tab(6).Control(35).Enabled=   0   'False
+         Tab(6).Control(36)=   "bottxtCampo101(1)"
+         Tab(6).Control(36).Enabled=   0   'False
+         Tab(6).Control(37)=   "labFdo101"
+         Tab(6).Control(38)=   "txtCp(100)"
+         Tab(6).Control(39)=   "bottxtCampo100(2)"
+         Tab(6).Control(39).Enabled=   0   'False
+         Tab(6).Control(40)=   "bottxtCampo100(1)"
          Tab(6).Control(40).Enabled=   0   'False
-         Tab(6).Control(41)=   "Label(89)"
-         Tab(6).Control(42)=   "txtCp(84)"
-         Tab(6).Control(42).Enabled=   0   'False
-         Tab(6).Control(43)=   "Label(90)"
-         Tab(6).Control(44)=   "txtCp(85)"
+         Tab(6).Control(41)=   "labFdo100"
+         Tab(6).Control(42)=   "Linha(9)"
+         Tab(6).Control(43)=   "txtCp(99)"
+         Tab(6).Control(44)=   "bottxtCampo99(2)"
          Tab(6).Control(44).Enabled=   0   'False
-         Tab(6).Control(45)=   "txtCp(86)"
+         Tab(6).Control(45)=   "bottxtCampo99(1)"
          Tab(6).Control(45).Enabled=   0   'False
-         Tab(6).Control(46)=   "txtCp(87)"
-         Tab(6).Control(46).Enabled=   0   'False
-         Tab(6).Control(47)=   "Label(91)"
-         Tab(6).Control(48)=   "Label(92)"
-         Tab(6).Control(49)=   "txtCp(88)"
-         Tab(6).Control(50)=   "Label(93)"
-         Tab(6).Control(51)=   "txtCp(89)"
-         Tab(6).Control(52)=   "Linha(5)"
-         Tab(6).Control(53)=   "Label(94)"
-         Tab(6).Control(54)=   "Label(95)"
-         Tab(6).Control(55)=   "txtCp(90)"
-         Tab(6).Control(56)=   "txtCp(91)"
-         Tab(6).Control(56).Enabled=   0   'False
-         Tab(6).Control(57)=   "txtCp(92)"
-         Tab(6).Control(57).Enabled=   0   'False
-         Tab(6).Control(58)=   "txtCp(93)"
-         Tab(6).Control(58).Enabled=   0   'False
-         Tab(6).Control(59)=   "txtCp(94)"
-         Tab(6).Control(59).Enabled=   0   'False
-         Tab(6).Control(60)=   "Label(96)"
-         Tab(6).Control(61)=   "Linha(6)"
-         Tab(6).Control(62)=   "Linha(7)"
+         Tab(6).Control(46)=   "labFdo99"
+         Tab(6).Control(47)=   "Label(108)"
+         Tab(6).Control(48)=   "txtCp(98)"
+         Tab(6).Control(49)=   "txtCp(97)"
+         Tab(6).Control(50)=   "Label(107)"
+         Tab(6).Control(51)=   "txtCp(96)"
+         Tab(6).Control(52)=   "Label(106)"
+         Tab(6).Control(53)=   "Label(105)"
+         Tab(6).Control(54)=   "Linha(8)"
+         Tab(6).Control(55)=   "Label(104)"
+         Tab(6).Control(56)=   "Label(103)"
+         Tab(6).Control(57)=   "Label(102)"
+         Tab(6).Control(58)=   "Label(101)"
+         Tab(6).Control(59)=   "Label(100)"
+         Tab(6).Control(60)=   "Label(99)"
+         Tab(6).Control(61)=   "txtCp(95)"
+         Tab(6).Control(62)=   "Label(98)"
          Tab(6).Control(63)=   "Label(97)"
-         Tab(6).Control(64)=   "Label(98)"
-         Tab(6).Control(65)=   "txtCp(95)"
-         Tab(6).Control(66)=   "Label(99)"
-         Tab(6).Control(67)=   "Label(100)"
-         Tab(6).Control(68)=   "Label(101)"
-         Tab(6).Control(69)=   "Label(102)"
-         Tab(6).Control(70)=   "Label(103)"
-         Tab(6).Control(71)=   "Label(104)"
-         Tab(6).Control(72)=   "Linha(8)"
-         Tab(6).Control(73)=   "Label(105)"
-         Tab(6).Control(74)=   "Label(106)"
-         Tab(6).Control(75)=   "txtCp(96)"
-         Tab(6).Control(76)=   "Label(107)"
-         Tab(6).Control(77)=   "txtCp(97)"
-         Tab(6).Control(78)=   "txtCp(98)"
-         Tab(6).Control(79)=   "Label(108)"
-         Tab(6).Control(80)=   "labFdo99"
-         Tab(6).Control(81)=   "bottxtCampo99(1)"
+         Tab(6).Control(64)=   "Linha(7)"
+         Tab(6).Control(65)=   "Linha(6)"
+         Tab(6).Control(66)=   "Label(96)"
+         Tab(6).Control(67)=   "txtCp(94)"
+         Tab(6).Control(67).Enabled=   0   'False
+         Tab(6).Control(68)=   "txtCp(93)"
+         Tab(6).Control(68).Enabled=   0   'False
+         Tab(6).Control(69)=   "txtCp(92)"
+         Tab(6).Control(69).Enabled=   0   'False
+         Tab(6).Control(70)=   "txtCp(91)"
+         Tab(6).Control(70).Enabled=   0   'False
+         Tab(6).Control(71)=   "txtCp(90)"
+         Tab(6).Control(72)=   "Label(95)"
+         Tab(6).Control(73)=   "Label(94)"
+         Tab(6).Control(74)=   "Linha(5)"
+         Tab(6).Control(75)=   "txtCp(89)"
+         Tab(6).Control(76)=   "Label(93)"
+         Tab(6).Control(77)=   "txtCp(88)"
+         Tab(6).Control(78)=   "Label(92)"
+         Tab(6).Control(79)=   "Label(91)"
+         Tab(6).Control(80)=   "txtCp(87)"
+         Tab(6).Control(80).Enabled=   0   'False
+         Tab(6).Control(81)=   "txtCp(86)"
          Tab(6).Control(81).Enabled=   0   'False
-         Tab(6).Control(82)=   "bottxtCampo99(2)"
+         Tab(6).Control(82)=   "txtCp(85)"
          Tab(6).Control(82).Enabled=   0   'False
-         Tab(6).Control(83)=   "txtCp(99)"
-         Tab(6).Control(84)=   "Linha(9)"
-         Tab(6).Control(85)=   "labFdo100"
-         Tab(6).Control(86)=   "bottxtCampo100(1)"
+         Tab(6).Control(83)=   "Label(90)"
+         Tab(6).Control(84)=   "txtCp(84)"
+         Tab(6).Control(84).Enabled=   0   'False
+         Tab(6).Control(85)=   "Label(89)"
+         Tab(6).Control(86)=   "txtCp(83)"
          Tab(6).Control(86).Enabled=   0   'False
-         Tab(6).Control(87)=   "bottxtCampo100(2)"
-         Tab(6).Control(87).Enabled=   0   'False
-         Tab(6).Control(88)=   "txtCp(100)"
-         Tab(6).Control(89)=   "labFdo101"
-         Tab(6).Control(90)=   "bottxtCampo101(1)"
-         Tab(6).Control(90).Enabled=   0   'False
-         Tab(6).Control(91)=   "bottxtCampo101(2)"
-         Tab(6).Control(91).Enabled=   0   'False
-         Tab(6).Control(92)=   "txtCp(101)"
-         Tab(6).Control(93)=   "txtCp(102)"
+         Tab(6).Control(87)=   "Label(88)"
+         Tab(6).Control(88)=   "txtCp(82)"
+         Tab(6).Control(89)=   "Label(87)"
+         Tab(6).Control(90)=   "Label(86)"
+         Tab(6).Control(91)=   "txtCp(81)"
+         Tab(6).Control(92)=   "txtCp(80)"
+         Tab(6).Control(92).Enabled=   0   'False
+         Tab(6).Control(93)=   "txtCp(79)"
          Tab(6).Control(93).Enabled=   0   'False
-         Tab(6).Control(94)=   "txtCp(103)"
-         Tab(6).Control(94).Enabled=   0   'False
-         Tab(6).Control(95)=   "txtCp(104)"
-         Tab(6).Control(95).Enabled=   0   'False
-         Tab(6).Control(96)=   "Label(109)"
-         Tab(6).Control(97)=   "Label(110)"
-         Tab(6).Control(98)=   "txtCp(105)"
-         Tab(6).Control(98).Enabled=   0   'False
-         Tab(6).Control(99)=   "txtCp(106)"
+         Tab(6).Control(94)=   "Label(85)"
+         Tab(6).Control(95)=   "txtCp(78)"
+         Tab(6).Control(96)=   "txtCp(77)"
+         Tab(6).Control(97)=   "Label(84)"
+         Tab(6).Control(98)=   "Label(83)"
+         Tab(6).Control(99)=   "txtCp(76)"
          Tab(6).Control(99).Enabled=   0   'False
-         Tab(6).Control(100)=   "txtCp(107)"
-         Tab(6).Control(100).Enabled=   0   'False
-         Tab(6).Control(101)=   "Label(111)"
-         Tab(6).Control(102)=   "Label(112)"
-         Tab(6).Control(103)=   "txtCp(108)"
-         Tab(6).Control(103).Enabled=   0   'False
-         Tab(6).Control(104)=   "txtCp(109)"
-         Tab(6).Control(104).Enabled=   0   'False
-         Tab(6).Control(105)=   "txtCp(110)"
-         Tab(6).Control(105).Enabled=   0   'False
-         Tab(6).Control(106)=   "Label(113)"
-         Tab(6).Control(107)=   "txtCp(111)"
-         Tab(6).Control(107).Enabled=   0   'False
-         Tab(6).Control(108)=   "txtCp(112)"
-         Tab(6).Control(108).Enabled=   0   'False
-         Tab(6).Control(109)=   "txtCp(113)"
-         Tab(6).Control(109).Enabled=   0   'False
-         Tab(6).Control(110)=   "txtCp(114)"
-         Tab(6).Control(110).Enabled=   0   'False
-         Tab(6).Control(111)=   "Label(153)"
-         Tab(6).Control(112)=   "Label(154)"
-         Tab(6).Control(113)=   "Label(155)"
-         Tab(6).Control(114)=   "Label(156)"
-         Tab(6).Control(115)=   "Label(157)"
-         Tab(6).Control(116)=   "Label(158)"
-         Tab(6).Control(117)=   "Label(159)"
-         Tab(6).Control(118)=   "Linha(14)"
-         Tab(6).Control(119)=   "Label(160)"
-         Tab(6).Control(120)=   "Label(161)"
-         Tab(6).Control(121)=   "Label(162)"
-         Tab(6).Control(122)=   "Label(163)"
-         Tab(6).Control(123)=   "Label(164)"
-         Tab(6).Control(124)=   "Label(165)"
-         Tab(6).Control(125)=   "Label(166)"
-         Tab(6).Control(126)=   "Linha(15)"
+         Tab(6).Control(100)=   "txtCp(75)"
+         Tab(6).Control(101)=   "Label(82)"
+         Tab(6).Control(102)=   "txtCp(74)"
+         Tab(6).Control(103)=   "Label(81)"
+         Tab(6).Control(104)=   "txtCp(73)"
+         Tab(6).Control(105)=   "Label(80)"
+         Tab(6).Control(106)=   "Label(79)"
+         Tab(6).Control(107)=   "Label(78)"
+         Tab(6).Control(108)=   "Linha(4)"
+         Tab(6).Control(109)=   "Linha(3)"
+         Tab(6).Control(110)=   "txtCp(72)"
+         Tab(6).Control(111)=   "Label(77)"
+         Tab(6).Control(112)=   "txtCp(71)"
+         Tab(6).Control(112).Enabled=   0   'False
+         Tab(6).Control(113)=   "Label(76)"
+         Tab(6).Control(114)=   "txtCp(70)"
+         Tab(6).Control(114).Enabled=   0   'False
+         Tab(6).Control(115)=   "Label(75)"
+         Tab(6).Control(116)=   "txtCp(69)"
+         Tab(6).Control(117)=   "Label(74)"
+         Tab(6).Control(118)=   "Label(73)"
+         Tab(6).Control(119)=   "txtCp(68)"
+         Tab(6).Control(120)=   "Label(72)"
+         Tab(6).Control(121)=   "txtCp(67)"
+         Tab(6).Control(122)=   "Label(71)"
+         Tab(6).Control(123)=   "Linha(2)"
+         Tab(6).Control(124)=   "Label(70)"
+         Tab(6).Control(125)=   "txtCp(66)"
+         Tab(6).Control(126)=   "Label(69)"
          Tab(6).ControlCount=   127
          TabCaption(7)   =   "Bomba / Motor"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "Label(114)"
-         Tab(7).Control(1)=   "Linha(10)"
-         Tab(7).Control(2)=   "Label(115)"
-         Tab(7).Control(3)=   "txtCp(115)"
-         Tab(7).Control(4)=   "Label(116)"
-         Tab(7).Control(5)=   "txtCp(116)"
-         Tab(7).Control(6)=   "Label(117)"
-         Tab(7).Control(7)=   "Label(118)"
-         Tab(7).Control(8)=   "txtCp(117)"
-         Tab(7).Control(9)=   "txtCp(118)"
-         Tab(7).Control(10)=   "Label(119)"
-         Tab(7).Control(11)=   "Label(120)"
-         Tab(7).Control(12)=   "txtCp(119)"
-         Tab(7).Control(13)=   "Label(121)"
-         Tab(7).Control(14)=   "txtCp(120)"
-         Tab(7).Control(15)=   "txtCp(121)"
-         Tab(7).Control(15).Enabled=   0   'False
-         Tab(7).Control(16)=   "Label(122)"
-         Tab(7).Control(17)=   "txtCp(122)"
-         Tab(7).Control(17).Enabled=   0   'False
-         Tab(7).Control(18)=   "Label(123)"
-         Tab(7).Control(19)=   "Label(124)"
-         Tab(7).Control(20)=   "txtCp(123)"
-         Tab(7).Control(21)=   "Label(125)"
-         Tab(7).Control(22)=   "txtCp(124)"
-         Tab(7).Control(23)=   "Label(126)"
-         Tab(7).Control(24)=   "Label(127)"
-         Tab(7).Control(25)=   "Label(128)"
-         Tab(7).Control(26)=   "Label(129)"
-         Tab(7).Control(27)=   "Label(130)"
-         Tab(7).Control(28)=   "txtCp(125)"
-         Tab(7).Control(28).Enabled=   0   'False
-         Tab(7).Control(29)=   "Label(131)"
-         Tab(7).Control(30)=   "Linha(11)"
-         Tab(7).Control(31)=   "Linha(12)"
-         Tab(7).Control(32)=   "Label(132)"
-         Tab(7).Control(33)=   "Label(133)"
+         Tab(7).Control(0)=   "txtCp(142)"
+         Tab(7).Control(1)=   "txtCp(141)"
+         Tab(7).Control(2)=   "txtCp(140)"
+         Tab(7).Control(3)=   "txtCp(139)"
+         Tab(7).Control(4)=   "txtCp(138)"
+         Tab(7).Control(5)=   "Label(152)"
+         Tab(7).Control(6)=   "Label(151)"
+         Tab(7).Control(7)=   "Label(150)"
+         Tab(7).Control(8)=   "Label(149)"
+         Tab(7).Control(9)=   "Label(148)"
+         Tab(7).Control(10)=   "Label(147)"
+         Tab(7).Control(11)=   "txtCp(136)"
+         Tab(7).Control(11).Enabled=   0   'False
+         Tab(7).Control(12)=   "Label(145)"
+         Tab(7).Control(13)=   "txtCp(135)"
+         Tab(7).Control(13).Enabled=   0   'False
+         Tab(7).Control(14)=   "Label(144)"
+         Tab(7).Control(15)=   "txtCp(134)"
+         Tab(7).Control(16)=   "Linha(13)"
+         Tab(7).Control(17)=   "Label(143)"
+         Tab(7).Control(18)=   "txtCp(133)"
+         Tab(7).Control(18).Enabled=   0   'False
+         Tab(7).Control(19)=   "Label(142)"
+         Tab(7).Control(20)=   "Label(141)"
+         Tab(7).Control(21)=   "Label(140)"
+         Tab(7).Control(22)=   "txtCp(132)"
+         Tab(7).Control(22).Enabled=   0   'False
+         Tab(7).Control(23)=   "txtCp(131)"
+         Tab(7).Control(24)=   "Label(139)"
+         Tab(7).Control(25)=   "Label(138)"
+         Tab(7).Control(26)=   "txtCp(130)"
+         Tab(7).Control(27)=   "txtCp(129)"
+         Tab(7).Control(28)=   "Label(137)"
+         Tab(7).Control(29)=   "Label(136)"
+         Tab(7).Control(30)=   "txtCp(128)"
+         Tab(7).Control(31)=   "txtCp(127)"
+         Tab(7).Control(32)=   "Label(135)"
+         Tab(7).Control(33)=   "Label(134)"
          Tab(7).Control(34)=   "txtCp(126)"
-         Tab(7).Control(35)=   "Label(134)"
-         Tab(7).Control(36)=   "Label(135)"
-         Tab(7).Control(37)=   "txtCp(127)"
-         Tab(7).Control(38)=   "txtCp(128)"
-         Tab(7).Control(39)=   "Label(136)"
-         Tab(7).Control(40)=   "Label(137)"
-         Tab(7).Control(41)=   "txtCp(129)"
-         Tab(7).Control(42)=   "txtCp(130)"
-         Tab(7).Control(43)=   "Label(138)"
-         Tab(7).Control(44)=   "Label(139)"
-         Tab(7).Control(45)=   "txtCp(131)"
-         Tab(7).Control(46)=   "txtCp(132)"
-         Tab(7).Control(46).Enabled=   0   'False
-         Tab(7).Control(47)=   "Label(140)"
-         Tab(7).Control(48)=   "Label(141)"
-         Tab(7).Control(49)=   "Label(142)"
-         Tab(7).Control(50)=   "txtCp(133)"
-         Tab(7).Control(50).Enabled=   0   'False
-         Tab(7).Control(51)=   "Label(143)"
-         Tab(7).Control(52)=   "Linha(13)"
-         Tab(7).Control(53)=   "txtCp(134)"
-         Tab(7).Control(54)=   "Label(144)"
-         Tab(7).Control(55)=   "txtCp(135)"
-         Tab(7).Control(55).Enabled=   0   'False
-         Tab(7).Control(56)=   "Label(145)"
-         Tab(7).Control(57)=   "txtCp(136)"
-         Tab(7).Control(57).Enabled=   0   'False
-         Tab(7).Control(58)=   "Label(147)"
-         Tab(7).Control(59)=   "Label(148)"
-         Tab(7).Control(60)=   "Label(149)"
-         Tab(7).Control(61)=   "Label(150)"
-         Tab(7).Control(62)=   "Label(151)"
-         Tab(7).Control(63)=   "Label(152)"
-         Tab(7).Control(64)=   "txtCp(138)"
-         Tab(7).Control(65)=   "txtCp(139)"
-         Tab(7).Control(66)=   "txtCp(140)"
-         Tab(7).Control(67)=   "txtCp(141)"
-         Tab(7).Control(68)=   "txtCp(142)"
+         Tab(7).Control(35)=   "Label(133)"
+         Tab(7).Control(36)=   "Label(132)"
+         Tab(7).Control(37)=   "Linha(12)"
+         Tab(7).Control(38)=   "Linha(11)"
+         Tab(7).Control(39)=   "Label(131)"
+         Tab(7).Control(40)=   "txtCp(125)"
+         Tab(7).Control(40).Enabled=   0   'False
+         Tab(7).Control(41)=   "Label(130)"
+         Tab(7).Control(42)=   "Label(129)"
+         Tab(7).Control(43)=   "Label(128)"
+         Tab(7).Control(44)=   "Label(127)"
+         Tab(7).Control(45)=   "Label(126)"
+         Tab(7).Control(46)=   "txtCp(124)"
+         Tab(7).Control(47)=   "Label(125)"
+         Tab(7).Control(48)=   "txtCp(123)"
+         Tab(7).Control(49)=   "Label(124)"
+         Tab(7).Control(50)=   "Label(123)"
+         Tab(7).Control(51)=   "txtCp(122)"
+         Tab(7).Control(51).Enabled=   0   'False
+         Tab(7).Control(52)=   "Label(122)"
+         Tab(7).Control(53)=   "txtCp(121)"
+         Tab(7).Control(53).Enabled=   0   'False
+         Tab(7).Control(54)=   "txtCp(120)"
+         Tab(7).Control(55)=   "Label(121)"
+         Tab(7).Control(56)=   "txtCp(119)"
+         Tab(7).Control(57)=   "Label(120)"
+         Tab(7).Control(58)=   "Label(119)"
+         Tab(7).Control(59)=   "txtCp(118)"
+         Tab(7).Control(60)=   "txtCp(117)"
+         Tab(7).Control(61)=   "Label(118)"
+         Tab(7).Control(62)=   "Label(117)"
+         Tab(7).Control(63)=   "txtCp(116)"
+         Tab(7).Control(64)=   "Label(116)"
+         Tab(7).Control(65)=   "txtCp(115)"
+         Tab(7).Control(66)=   "Label(115)"
+         Tab(7).Control(67)=   "Linha(10)"
+         Tab(7).Control(68)=   "Label(114)"
          Tab(7).ControlCount=   69
          TabCaption(8)   =   "Mapa da Propriedade"
          Tab(8).ControlEnabled=   0   'False
-         Tab(8).Control(0)=   "Label(171)"
-         Tab(8).Control(1)=   "mmCampo(0)"
+         Tab(8).Control(0)=   "mmCampo(0)"
+         Tab(8).Control(1)=   "Label(171)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   4
-            Left            =   9100
-            TabIndex        =   30
+            Height          =   315
+            Index           =   7
+            Left            =   -64005
+            TabIndex        =   105
             TabStop         =   0   'False
-            Top             =   2700
-            Width           =   255
-            _ExtentX        =   450
-            _ExtentY        =   529
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   1
-            Left            =   3300
-            TabIndex        =   28
-            TabStop         =   0   'False
-            Top             =   2700
-            Width           =   240
+            Top             =   495
+            Width           =   2055
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
                Charset         =   0
-               Weight          =   400
+               Weight          =   700
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            Caption         =   "Parcelamento"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   375
+            Index           =   6
+            Left            =   -65505
+            TabIndex        =   104
+            TabStop         =   0   'False
+            Top             =   4695
+            Width           =   5070
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   32768
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Atualizar Valor dos Produtos"
             CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   2
-            Left            =   -71670
-            TabIndex        =   42
+            Index           =   5
+            Left            =   3300
+            TabIndex        =   93
             TabStop         =   0   'False
-            Top             =   450
+            Top             =   4620
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1062,11 +1064,11 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   3300
-            TabIndex        =   93
+            Index           =   2
+            Left            =   -71670
+            TabIndex        =   42
             TabStop         =   0   'False
-            Top             =   4620
+            Top             =   450
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1083,49 +1085,47 @@ Begin VB.Form frmOrcament
             CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
-            Height          =   375
-            Index           =   6
-            Left            =   -65505
-            TabIndex        =   104
+            Height          =   300
+            Index           =   1
+            Left            =   3300
+            TabIndex        =   28
             TabStop         =   0   'False
-            Top             =   4695
-            Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   32768
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Atualizar Valor dos Produtos"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   315
-            Index           =   7
-            Left            =   -64005
-            TabIndex        =   105
-            TabStop         =   0   'False
-            Top             =   495
-            Width           =   2055
+            Top             =   2700
+            Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
                Charset         =   0
-               Weight          =   700
+               Weight          =   400
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Caption         =   "Parcelamento"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   4
+            Left            =   9100
+            TabIndex        =   30
+            TabStop         =   0   'False
+            Top             =   2700
+            Width           =   255
+            _ExtentX        =   450
+            _ExtentY        =   529
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -1924,7 +1924,6 @@ Begin VB.Form frmOrcament
             stripesbackcolor=   14737632
             rowheight       =   315
             savegridbars    =   -1  'True
-            savegridstripes =   0   'False
             caption         =   "Conjuntos"
             font            =   "ORCAMENT.frx":0038
          End
@@ -1945,7 +1944,6 @@ Begin VB.Form frmOrcament
             stripesbackcolor=   14737632
             rowheight       =   315
             savegridbars    =   -1  'True
-            savegridstripes =   0   'False
             caption         =   "Peças"
             font            =   "ORCAMENT.frx":005C
          End
@@ -2007,7 +2005,6 @@ Begin VB.Form frmOrcament
             rowheight       =   315
             showgridcaption =   0   'False
             savegridbars    =   -1  'True
-            savegridstripes =   0   'False
             caption         =   ""
             font            =   "ORCAMENT.frx":0080
          End
@@ -2058,7 +2055,6 @@ Begin VB.Form frmOrcament
             stripesbackcolor=   14737632
             rowheight       =   315
             savegridbars    =   -1  'True
-            savegridstripes =   0   'False
             caption         =   "Produtos"
             font            =   "ORCAMENT.frx":00A4
          End
@@ -2079,7 +2075,6 @@ Begin VB.Form frmOrcament
             stripesbackcolor=   14737632
             rowheight       =   315
             savegridbars    =   -1  'True
-            savegridstripes =   0   'False
             caption         =   "Serviços"
             font            =   "ORCAMENT.frx":00C8
          End
@@ -4924,9 +4919,9 @@ Begin VB.Form frmOrcament
             Width           =   14430
             _extentx        =   0
             _extenty        =   0
+            captionfont     =   "ORCAMENT.frx":00EC
             locked          =   -1  'True
             scrollbars      =   0   'False
-            captionfont     =   "ORCAMENT.frx":00EC
          End
          Begin VB.CommandButton bottxtCampo147 
             Height          =   300
@@ -9642,11 +9637,11 @@ Begin VB.Form frmOrcament
          Width           =   1335
          _extentx        =   0
          _extenty        =   0
-         locked          =   -1  'True
-         scrollbars      =   0   'False
+         captionfont     =   "ORCAMENT.frx":01A3
          appearance      =   0
          borderstyle     =   0
-         captionfont     =   "ORCAMENT.frx":01A3
+         locked          =   -1  'True
+         scrollbars      =   0   'False
       End
       Begin VB.CommandButton bottxtCampo161 
          Height          =   270
@@ -9941,7 +9936,6 @@ Begin VB.Form frmOrcament
       navigationaddmode=   1
       showfilterbar   =   -1  'True
       showgridcaption =   0   'False
-      savegridstripes =   0   'False
       caption         =   ""
       font            =   "ORCAMENT.frx":01D1
       cachesize       =   100
@@ -16339,52 +16333,76 @@ Private Sub chkCp_Click(Index As Integer)
    End Select
 End Sub
 
-
-' Rotina para ratear o valor do frete entre todos os itens do orcamento
-
 Private Sub DistribuiFreteTotal()
-    Dim totalFrete  As Double
-    Dim totalItens  As Long
-    Dim freteUnit   As Double
-    Dim freteValue  As Double
-    Dim assignedSum As Double
-    Dim Rs          As GRecordSet
-    Dim idx         As Long
-    Dim tbl         As Variant
+    Dim totalFrete      As Double
+    Dim somaValorItens  As Double
+    Dim ValorUnit       As Double
+    Dim Quantidade      As Double
+    Dim valorItem       As Double
+    Dim freteValue      As Double
+    Dim assignedSum     As Double
+    Dim totalRegs       As Long
+    Dim idx             As Long
+    Dim Rs              As GRecordSet
+    Dim tbl             As Variant
 
     '1) Valor total informado no financeiro
     totalFrete = Orcamento![Valor Do Frete]
     If totalFrete = 0 Then Exit Sub
 
-    '2) Quantidade total de registros existentes nos grids
-    totalItens = ContaRegs("[Produtos do Orçamento]") _
-               + ContaRegs("[Conjuntos do Orçamento]") _
-               + ContaRegs("[Peças do Orçamento]")
-    If totalItens = 0 Then Exit Sub
-
-    '3) Calcula o valor unitario e zera o acumulador
-    freteUnit = Round(totalFrete / totalItens, 2)
-    assignedSum = 0
-    idx = 0
-    
-    '4) Percorre todas as tabelas e grava o frete proporcional
+    '2) Soma o valor de todos os itens do orçamento
+    somaValorItens = 0
     For Each tbl In Array( _
         "[Produtos do Orçamento]", _
         "[Conjuntos do Orçamento]", _
         "[Peças do Orçamento]" _
     )
         Set Rs = vgDb.OpenRecordSet( _
-            "SELECT * FROM " & tbl & _
+            "SELECT [Valor Unitário], [Quantidade] FROM " & tbl & _
+            " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
+                ValorUnit = IIf(IsNull(Rs![Valor Unitrio]), 0, Rs![Valor Unitário])
+                Quantidade = IIf(IsNull(Rs![Quantidade]), 1, Rs![Quantidade])
+                somaValorItens = somaValorItens + (ValorUnit * Quantidade)
+                Rs.MoveNext
+            Loop
+        End If
+        Rs.CloseRecordset
+    Next tbl
+    If somaValorItens = 0 Then Exit Sub
+
+    '3) Conta quantos registros existem para ajustar o último
+    totalRegs = ContaRegs("[Produtos do Orçamento]") _
+              + ContaRegs("[Conjuntos do Orçamento]") _
+              + ContaRegs("[Peças do Orçamento]")
+
+    '4) Distribui o frete proporcional ao valor de cada item
+    assignedSum = 0
+    idx = 0
+    For Each tbl In Array( _
+        "[Produtos do Orçamento]", _
+        "[Conjuntos do Orçamento]", _
+        "[Peças do Orçamento]" _
+    )
+        Set Rs = vgDb.OpenRecordSet( _
+            "SELECT [Valor Do Frete], [Valor Unitário], [Quantidade] FROM " & tbl & _
             " WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
         If Not Rs.EOF Then
             Rs.MoveFirst
             Do While Not Rs.EOF
                 idx = idx + 1
-                If idx < totalItens Then
-                    freteValue = freteUnit
+                ValorUnit = IIf(IsNull(Rs![Valor Unitário]), 0, Rs![Valor Unitário])
+                Quantidade = IIf(IsNull(Rs![Quantidade]), 1, Rs![Quantidade])
+                valorItem = ValorUnit * Quantidade
+
+                If idx < totalRegs Then
+                    freteValue = Round(totalFrete * (valorItem / somaValorItens), 2)
                 Else
                     freteValue = Round(totalFrete - assignedSum, 2)
                 End If
+
                 Rs.Edit
                   Rs![Valor Do Frete] = freteValue
                 Rs.Update
@@ -16396,13 +16414,11 @@ Private Sub DistribuiFreteTotal()
     Next tbl
 
     '5) Atualiza os grids visuais
-
     Grid(0).ReBind   ' Conjuntos
     Grid(1).ReBind   ' Peas
     Grid(3).ReBind   ' Produtos
 
 End Sub
-
 
 'evento - quando o check receber o foco
 Private Sub chkCp_GotFocus(Index As Integer)
