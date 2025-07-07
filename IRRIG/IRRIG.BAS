@@ -16,7 +16,7 @@ DefInt A-Z                                        'inteiras, por default
    Public Declare Sub NadaFaz Lib "OC30.DLL" ()
    Public Declare Sub NadaFaz Lib "MSGHOO32.OCX" ()
    Public Declare Sub NadaFaz Lib "IRRIG.RES" ()
-   Public Declare Sub NadaFaz Lib "IJL10.DLL" ()
+   Public Declare Sub NadaFaz Lib "ijl10.dll" ()
    Public Declare Sub NadaFaz Lib "EZTW32.DLL" ()
    Public Declare Sub NadaFaz Lib "IRRIGACAO-SQL.SQL" ()
    Public Declare Sub NadaFaz Lib "IRRIG.XML" ()
@@ -39,7 +39,7 @@ Public Const BOT_LISTA = 1
 Public Const BOT_COMBO = 2
 
 'constantes para a variavel "vgCaracteristica" de cada form
-Public Const F_COMUM = 0                          'sem controle de dados 
+Public Const F_COMUM = 0                          'sem controle de dados
 Public Const F_DADOS = 1                          'com controle de dados
 Public Const F_BROWSE = 6                         'que apresenta consultas
 Public Const F_VARIAVEL = 8                       'que recebe variáveis complementares
@@ -99,9 +99,9 @@ Public Const BRW_REBIND = 2                       'força rebind
 
 'usada para mostra o que foi solicitado no form de cale
 Public Const MOSTRA_NAO = -1                      'inicializando formulário dos extensores (combobox)
-Public Const MOSTRA_CALE = 0                      'extensor vai mostrar calendário 
-Public Const MOSTRA_LST_INTERNA = 1               'extensor vai mostrar lista interna 
-Public Const MOSTRA_LST_EXTERNA = 2               'extensor vai mostrar lista externa 
+Public Const MOSTRA_CALE = 0                      'extensor vai mostrar calendário
+Public Const MOSTRA_LST_INTERNA = 1               'extensor vai mostrar lista interna
+Public Const MOSTRA_LST_EXTERNA = 2               'extensor vai mostrar lista externa
 Public Const MOSTRA_LST_PESQUISA = 3              'extensor vai mostrar lista de pesquisa
 
 'usadas para definir o modo de abertura da pesquisa
@@ -149,18 +149,18 @@ Public Const PEGAEXPRESSAOPESQUISA = 30           'Pega expressão SQL para defin
 Public Const UM_A_UM = -1                         'só um caracter testado
 Public Const SO_UM = 0                            'todos os caracteres testados um a um
 
-'estilo da window 
+'estilo da window
 Public Const GWL_STYLE = (-16)                    'pega estilo da janela
-Public Const WS_HSCROLL = &H100000                'coloca barra de rolagem na janela 
+Public Const WS_HSCROLL = &H100000                'coloca barra de rolagem na janela
 
 'Constantes para controle do form
 Public Const SW_SHOW = 5
 Public Const SW_RESTORE = 9
 
 'para evento que simula tecla pressionada
-Public Const KEYEVENTF_EXTENDEDKEY = &H1          'envia simulação de tecla extendida 
+Public Const KEYEVENTF_EXTENDEDKEY = &H1          'envia simulação de tecla extendida
 Public Const KEYEVENTF_KEYUP = &H2                'envia simulação de tecla liberada
-Public Const VK_SHIFT = &H10                      'envia simulação de shift pressionado  
+Public Const VK_SHIFT = &H10                      'envia simulação de shift pressionado
 Public Const VK_CTRL = &HA2                       'envia simulação de ctrl pressionado
 
 Public Const LF_FACESIZE = 32                     'tamanho do nome da fonte
@@ -215,10 +215,10 @@ Public vgSpInt As String                          'separador de inteiros
 Public vgSpDec As String                          'separador de decimais
 Public vgImpConv As Integer                       'flag - impressora é uma impressora convêncional?
 Public vgSubsTab As String                        'separador das colunas da lista externa (combobox)
-Public CErr As New Dbox                           'classe para mostrar erros
+Public CErr As New DBox                           'classe para mostrar erros
 Public vgMsgQtReg As String                       'mensagem de quantidade de registro
 Public vgClausula(EXP_TODAS - 1) As String        'vetor com os nomes das cláusulas SQL
-Public vgFuncAgregadas(13) As String              'funções SQL 
+Public vgFuncAgregadas(13) As String              'funções SQL
 Public vgBarraFerr As Integer                     'status da barra de ferramentas
 Public vgAjudaAtiva As Integer                    'status da ajuda ativa
 Public vgNomeEstacao As String                    'nome da estação de trabalho
@@ -286,7 +286,7 @@ Public Type BROWSEINFO
 End Type
 
 'estrutura de fonte
-Public Type LogFont
+Public Type LOGFONT
    lfHeight As Long
    lfWidth As Long
    lfEscapement As Long
@@ -304,35 +304,35 @@ Public Type LogFont
 End Type
 
 'Windows API para imprimir
-Public Declare Function TextOut Lib "gdi32" Alias "TextOutA" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal lpString As String, ByVal nCount As Long) As Long  ' or Boolean
-Public Declare Function DeleteObject Lib "gdi32" (ByVal hObject As Long) As Long
-Public Declare Function CreateFontIndirect Lib "gdi32" Alias "CreateFontIndirectA" (lpLogFont As LogFont) As Long
-Public Declare Function SelectObject Lib "gdi32" (ByVal hdc As Long, ByVal hObject As Long) As Long
-Public Declare Function SetBkMode Lib "gdi32" (ByVal hdc As Long, ByVal nBkMode As Long) As Long
+Public Declare Function TextOut Lib "GDI32" Alias "TextOutA" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal lpString As String, ByVal nCount As Long) As Long  ' or Boolean
+Public Declare Function DeleteObject Lib "GDI32" (ByVal hObject As Long) As Long
+Public Declare Function CreateFontIndirect Lib "GDI32" Alias "CreateFontIndirectA" (lpLogFont As LOGFONT) As Long
+Public Declare Function SelectObject Lib "GDI32" (ByVal hdc As Long, ByVal hObject As Long) As Long
+Public Declare Function SetBkMode Lib "GDI32" (ByVal hdc As Long, ByVal nBkMode As Long) As Long
 
 'Windows API para ler e gravar no arquivo INI
-Declare Function GetPrivateProfileInt Lib "Kernel32" Alias "GetPrivateProfileIntA" (ByVal NAp As String, ByVal Chave As String, ByVal nDefa As Long, ByVal NArq As String) As Long
-Declare Function GetPrivateProfileString Lib "Kernel32" Alias "GetPrivateProfileStringA" (ByVal NAp As String, ByVal Chave As Any, ByVal nDefa As String, ByVal StRet As String, ByVal nTama As Long, ByVal NArq As String) As Long
-Declare Function WritePrivateProfileString Lib "Kernel32" Alias "WritePrivateProfileStringA" (ByVal NAp As String, ByVal Chave As Any, ByVal St As Any, ByVal NArq As String) As Long
+Declare Function GetPrivateProfileInt Lib "kernel32" Alias "GetPrivateProfileIntA" (ByVal NAp As String, ByVal Chave As String, ByVal nDefa As Long, ByVal NArq As String) As Long
+Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal NAp As String, ByVal Chave As Any, ByVal nDefa As String, ByVal StRet As String, ByVal nTama As Long, ByVal NArq As String) As Long
+Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal NAp As String, ByVal Chave As Any, ByVal St As Any, ByVal NArq As String) As Long
 
 'evia um mensagem para o windows
 Declare Sub keybd_event Lib "user32" (ByVal bVk As Byte, ByVal bScan As Byte, ByVal dwFlags As Long, ByVal dwExtraInfo As Long)
 
 'Windows API para criar forms irregulares
-Declare Function CreatePolygonRgn Lib "gdi32" (lpPoint As POINTAPI, ByVal nCount As Long, ByVal nPolyFillMode As Long) As Long
-Declare Function CreateRectRgn Lib "gdi32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
-Declare Function CreateRoundRectRgn Lib "gdi32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long, ByVal X3 As Long, ByVal Y3 As Long) As Long
-Declare Function CreateEllipticRgn Lib "gdi32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
-Declare Function CombineRgn Lib "gdi32" (ByVal hDestRgn As Long, ByVal hSrcRgn1 As Long, ByVal hSrcRgn2 As Long, ByVal nCombineMode As Long) As Long
+Declare Function CreatePolygonRgn Lib "GDI32" (lpPoint As POINTAPI, ByVal nCount As Long, ByVal nPolyFillMode As Long) As Long
+Declare Function CreateRectRgn Lib "GDI32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Declare Function CreateRoundRectRgn Lib "GDI32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long, ByVal X3 As Long, ByVal Y3 As Long) As Long
+Declare Function CreateEllipticRgn Lib "GDI32" (ByVal x1 As Long, ByVal y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Declare Function CombineRgn Lib "GDI32" (ByVal hDestRgn As Long, ByVal hSrcRgn1 As Long, ByVal hSrcRgn2 As Long, ByVal nCombineMode As Long) As Long
 Declare Function SetWindowRgn Lib "user32" (ByVal hWnd As Long, ByVal hRgn As Long, ByVal bRedraw As Boolean) As Long
 Declare Function ReleaseCapture Lib "user32" () As Long
-Declare Function GetPixel Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long) As Long
+Declare Function GetPixel Lib "GDI32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long) As Long
 
 'Declara API's para pegar outra instância desta aplicação rodando
-Declare Function ShowWindow Lib "User32" (ByVal hWnd As Long, ByVal wCmd As Long) As Long
-Declare Function FindWindow Lib "User32" Alias "FindWindowA" (ByVal Class As Long, ByVal Caption As Long) As Long
-Declare Function GetWindow Lib "User32" (ByVal hWnd As Long, ByVal wCmd As Long) As Long
-Declare Function GetWindowText Lib "User32" Alias "GetWindowTextA" (ByVal hWnd As Long, ByVal Buf As String, ByVal LBuf As Long) As Long
+Declare Function ShowWindow Lib "user32" (ByVal hWnd As Long, ByVal wCmd As Long) As Long
+Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal Class As Long, ByVal Caption As Long) As Long
+Declare Function GetWindow Lib "user32" (ByVal hWnd As Long, ByVal wCmd As Long) As Long
+Declare Function GetWindowText Lib "user32" Alias "GetWindowTextA" (ByVal hWnd As Long, ByVal buf As String, ByVal LBuf As Long) As Long
 
 'Funções para controle do foco
 Declare Function GetWindowThreadProcessId Lib "user32" (ByVal hWnd As Long, lpdwProcessId As Long) As Long
@@ -340,25 +340,25 @@ Declare Function AttachThreadInput Lib "user32" (ByVal idAttach As Long, ByVal i
 Declare Function GetForegroundWindow Lib "user32" () As Long
 Declare Function SetForegroundWindow Lib "user32" (ByVal hWnd As Long) As Long
 Declare Function IsIconic Lib "user32" (ByVal hWnd As Long) As Long
-Declare Function GetParent Lib "user32" (ByVal hwnd As Long) As Long
-Declare Function GetClassName Lib "user32" Alias "GetClassNameA" (ByVal hwnd As Long, ByVal lpClassName As String, ByVal nMaxCount As Long) As Long
+Declare Function GetParent Lib "user32" (ByVal hWnd As Long) As Long
+Declare Function GetClassName Lib "user32" Alias "GetClassNameA" (ByVal hWnd As Long, ByVal lpClassName As String, ByVal nMaxCount As Long) As Long
 
-Public Declare Function GetCursorPos Lib "user32" Alias "GetCursorPos" (lpPoint As POINTAPI) As Long
+Public Declare Function GetCursorPos Lib "user32" (lpPoint As POINTAPI) As Long
 'Windows API's - apresenta help da aplicacao
-Declare Function WinHelp Lib "User32" Alias "WinHelpA" (ByVal hWnd As Long, ByVal HelpFile As String, ByVal wCmd As Long, ByVal dwData As Long) As Long
+Declare Function WinHelp Lib "user32" Alias "WinHelpA" (ByVal hWnd As Long, ByVal HelpFile As String, ByVal wCmd As Long, ByVal dwData As Long) As Long
 
 'Windows API's - para ler WIN.INI
-Declare Function GetProfileString Lib "Kernel32" Alias "GetProfileStringA" (ByVal lpAppName As String, ByVal lpkeyName As String, ByVal lpDefa As String, ByVal lpRet As String, ByVal NSize As Long) As Long
+Declare Function GetProfileString Lib "kernel32" Alias "GetProfileStringA" (ByVal lpAppName As String, ByVal lpkeyName As String, ByVal lpDefa As String, ByVal lpRet As String, ByVal nSize As Long) As Long
 
 'Windows API's - trabalha com os forms
-Declare Function SetWindowWord Lib "User32" (ByVal hWnd As Long, ByVal nCmd As Long, ByVal nVal As Long) As Long
-Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
-Declare Function GetWindowLong Lib "user32" Alias "GetWindowLongA" (ByVal hwnd As Long, ByVal nIndex As Long) As Long
+Declare Function SetWindowWord Lib "user32" (ByVal hWnd As Long, ByVal nCmd As Long, ByVal nVal As Long) As Long
+Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal hWnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
+Declare Function GetWindowLong Lib "user32" Alias "GetWindowLongA" (ByVal hWnd As Long, ByVal nIndex As Long) As Long
 
-Declare Function GetTextMetrics Lib "gdi32" Alias "GetTextMetricsA" (ByVal hdc As Long, lpMetrics As TEXTMETRIC) As Long
+Declare Function GetTextMetrics Lib "GDI32" Alias "GetTextMetricsA" (ByVal hdc As Long, lpMetrics As TEXTMETRIC) As Long
 
 'Windows API's - pega coordenada do form em relação a tela
-Declare Function ClientToScreen Lib "user32" (ByVal hwnd As Long, lpPoint As POINTAPI) As Long
+Declare Function ClientToScreen Lib "user32" (ByVal hWnd As Long, lpPoint As POINTAPI) As Long
 
 'Windows API's - abre browser para capturar uma pasta
 Declare Function SHGetPathFromIDList Lib "shell32.dll" Alias "SHGetPathFromIDListA" (ByVal pidl As Long, ByVal pszPath As String) As Long
@@ -366,18 +366,18 @@ Declare Function SHBrowseForFolder Lib "shell32.dll" Alias "SHBrowseForFolderA" 
 
 'Windows API's - executa um commando com o arquivo associado
 Public Declare Function ShellExecute Lib "shell32" Alias "ShellExecuteA" ( _
-                        ByVal hwnd As Long, ByVal lpOperation As String, _
-                        ByVal lpfile As String, ByVal lpparameters As String, _
+                        ByVal hWnd As Long, ByVal lpOperation As String, _
+                        ByVal lpFile As String, ByVal lpParameters As String, _
                         ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
 
 'Windows API's - boot no computador
-Declare Function ExitWindows Lib "User32" (ByVal wReserved As Long, ByVal wRetCode As Long) As Long
+Declare Function ExitWindows Lib "user32" (ByVal wReserved As Long, ByVal wRetCode As Long) As Long
 
 'Windows API's - pega o nome da estacao
 Declare Function GetComputerName Lib "kernel32" Alias "GetComputerNameA" (ByVal lpBuffer As String, nSize As Long) As Long
 
 'Windows API's - envia uma mensagem para o windows
-Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal hwnd As Long, ByVal wMsg As Long, ByVal wParam As Long, lParam As Any) As Long
+Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal hWnd As Long, ByVal wMsg As Long, ByVal wParam As Long, lParam As Any) As Long
 
 'Windows API's - utilizada para tratamento do resource
 Declare Sub CopyMemory Lib "kernel32" Alias "RtlMoveMemory" (hpvDest As Any, hpvSource As Any, ByVal cbCopy As Long)
@@ -390,7 +390,7 @@ Declare Function SystemParametersInfo Lib "user32" Alias "SystemParametersInfoA"
 Public Const SPI_GETWORKAREA = 48
 
 'Pega long referente para cor OLE
-Public Declare Function TranslateColor Lib "olepro32.dll" Alias "OleTranslateColor" (ByVal clr As OLE_COLOR, ByVal palet As Long, Col As Long) As Long
+Public Declare Function TranslateColor Lib "OLEPRO32.DLL" Alias "OleTranslateColor" (ByVal clr As OLE_COLOR, ByVal palet As Long, Col As Long) As Long
 
 'Windows API's - desenha size grip
 Declare Function DrawFrameControl Lib "user32" (ByVal hdc&, lpRect As RECT, ByVal un1 As Long, ByVal un2 As Long) As Boolean
@@ -510,14 +510,14 @@ Public ProcAcertoEstoqueC As New frmAcertEst 'Processo Acerto Estoque Irrigação/
 Public ProcAcertoEstoqueAbertoC As Boolean
 Public ProcAcertoEstoqueD As New frmAcertEst 'Processo Acerto Estoque Irrigação/Contabilidade (Despesas)
 Public ProcAcertoEstoqueAbertoD As Boolean
-Public Const PAGAR As String = "P"
-Public Const RECEBER As String = "R"
+Public Const Pagar As String = "P"
+Public Const Receber As String = "R"
 Public Const BxProduto As String = "P"
 Public Const BxConjunto As String = "C"
 Public Const BxDespesa As String = "D"
 Public MsgValIE As String
 Public Const EM_GETLINE = &HC4
-Public Usuario As String, Grupo As String, Senha2 As String
+Public usuario As String, Grupo As String, Senha2 As String
 Public NFe_Consulta As Long 'Utilizada na CCe
 Public Const SuperSenha As String = "I271410"
 Public InputArmando As String
@@ -531,7 +531,7 @@ Public QtdEstoqueAux As Double
 Public UnidFornecedor As Long
 Public ValorEntradaAux As Double
 Public QtdParcelaAux As Double
-Public PrePedido As New frmPComprN
+Public Prepedido As New frmPComprN
 Public PrePedidoAberto As Boolean
 Public PedidoAberto As Boolean
 Public Pedido As New frmPComprN
@@ -541,15 +541,15 @@ Public Const BIF_RETURNONLYFSDIRSARMANDO = 1
 Public Const BIF_DONTGOBELOWDOMAINARMANDO = 2
 Public Const MAX_PATHARMANDO = 260
 
-Public Declare Function SHBrowseForFolderArmando Lib "shell32" Alias "SHBrowseForFolder" (lpbi As BrowseInfoArmando) As Long
+Public Declare Function SHBrowseForFolderArmando Lib "shell32" Alias "SHBrowseForFolder" (lpBI As BrowseInfoArmando) As Long
 Public Declare Function SHGetPathFromIDListArmando Lib "shell32" Alias "SHGetPathFromIDList" (ByVal pidList As Long, ByVal lpBuffer As String) As Long
 Public Declare Function lstrcatArmando Lib "kernel32" Alias "lstrcatA" (ByVal lpString1 As String, ByVal lpString2 As String) As Long
 Public Declare Function GetUserName Lib "advapi32.dll" Alias "GetUserNameA" (ByVal lpBuffer As String, nSize As Long) As Long
 
 'Tipo para default
 Public Type BrowseInfoArmando
-   hWndOwner As Long
-   pIDLRoot As Long
+   hwndOwner As Long
+   pidlRoot As Long
    pszDisplayName As Long
    lpszTitle As Long
    ulFlags As Long
@@ -562,17 +562,17 @@ End Type
 Public Sub mdiLoad()
   With mdiIRRIG
      .WindowState = vbMaximized
-  End With 
-  mnuCapitaliza.Enabled = False 
+  End With
+  mnuCapitaliza.Enabled = False
   mnuCapitaliza.Checked = True
-  cmdCapitaliza.Value = True  
+  cmdCapitaliza.Value = True
   paneControles.Visible = False
   lblTitulo.Visible = True
-  Status  
+  Status
   VerificaAtualizacao
   PreparaArqLog2
   Load frmAtaGeral
-  FrmAtaGeral.Show
+  frmAtaGeral.Show
 End Sub
 
 'Precisa Atualizar?
@@ -585,7 +585,7 @@ Private Sub VerificaAtualizacao()
    On Error Resume Next
    
   'Não Esquecer de Colocar a "\" no final do caminho da atualização
-  If Parametros![Nome Do Servidor] & " - " = UCase(vgNomeEstacao) Then
+  If Parametros![Nome do Servidor] & " - " = UCase(vgNomeEstacao) Then
      'If UCase(vgNomeEstacao) = "SRV01 - " Then
         Origem = Parametros![Caminho Atualização] 'Origem da Atualização, Terminal Service
      Else
@@ -607,7 +607,7 @@ Public Sub Status()
    Dia = Format(Date, "dd") & "/" & Format(Date, "mm") & "/" & Format(Date, "yyyy") 'Dia
    Hora = Format(Hour(Time), "00") & ":" & Format(Minute(Time), "00") 'Horas
       
-   lblDataHora.Caption = Dia & " " & Hora  
+   lblDataHora.Caption = Dia & " " & Hora
    
 End Sub
 
@@ -629,15 +629,15 @@ Public Sub PegaDir()
 End Sub
 
 'Captura Pasta
-Public Sub PegaDir2(Formulario As Form)
+Public Sub PegaDir2(formulario As Form)
    Dim lpIDList As Long, sBuffer As String, szTitle As String
    Dim tBrowseInfo As BrowseInfoArmando
 
    'Personaliza a procura
    szTitle = "Pasta NFe/NFSe"
    With tBrowseInfo
-      .hWndOwner = Formulario.hWnd
-      .lpszTitle = lstrcatARMANDO(szTitle, "")
+      .hwndOwner = formulario.hWnd
+      .lpszTitle = lstrcatArmando(szTitle, "")
       .ulFlags = BIF_RETURNONLYFSDIRSARMANDO + BIF_DONTGOBELOWDOMAINARMANDO
    End With
 
@@ -650,14 +650,14 @@ Public Sub PegaDir2(Formulario As Form)
       sBuffer = Space(MAX_PATHARMANDO)
       SHGetPathFromIDListArmando lpIDList, sBuffer
       sBuffer = Left(sBuffer, InStr(sBuffer, vbNullChar) - 1)
-      vaDir = sBuffer & "\"      
+      vaDir = sBuffer & "\"
    End If
 
 End Sub
 
 'Abrindo Grade da Tabela Ativa
 Public Sub AbreGrade()
-   If mdiIRRIG.ActiveForm.vgEmBrowse = False AND mdiIRRIG.ActiveForm.vgTipo = Tp_Tabela Then
+   If mdiIRRIG.ActiveForm.vgEmBrowse = False And mdiIRRIG.ActiveForm.vgTipo = TP_TABELA Then
       mdiIRRIG.ActiveForm.vgEmBrowse = True
    Else
       mdiIRRIG.ActiveForm.vgEmBrowse = False
@@ -679,15 +679,15 @@ Public Function PegaValor(Tabela As String, Campo As String, Optional Filtro As 
 End Function
 
 'ROTINA QUE TIRA OS ACENTOS DE UM TEXTO
-Public Function SuperTiraAcentos(Texto As String) As String
+Public Function SuperTiraAcentos(texto As String) As String
    Dim Vector As String, x As Long, y As Long, Igual As Boolean, Retorno As String
       
    Vector = "AEIOUaeiouAEIOUaeiouAOaoAEIOUaeiouAEIOUaeiouYycCÁÉÍÓÚáéíóúÀÈÌÒÙàèìòùÃÕãõÂÊÎÔÛâêîôûÄËÏÖÜäëïöüÝýçÇ"
    y = 1
    
-   For x = 1 To Len(Texto)
+   For x = 1 To Len(texto)
       Do While (y <= 96)
-         If Mid(Texto, x, 1) = Mid(Vector, y, 1) And y > 48 Then
+         If Mid(texto, x, 1) = Mid(Vector, y, 1) And y > 48 Then
             Igual = True
             Retorno$ = Retorno$ & Mid(Vector, Abs(y - 48), 1)
             Exit Do
@@ -695,7 +695,7 @@ Public Function SuperTiraAcentos(Texto As String) As String
          y = y + 1
       Loop
       If Igual <> True Then
-         Retorno$ = Retorno$ & Mid(Texto, x, 1)
+         Retorno$ = Retorno$ & Mid(texto, x, 1)
       End If
       Igual = False
       y = 1
@@ -706,12 +706,12 @@ Public Function SuperTiraAcentos(Texto As String) As String
 End Function
 
 'ROTINA PARA AJUSTAR A BORDA DA JANELA AUTOMATICAMENTE
-Public Sub AjustaBorda(janela As Form, ajuste As Label)
+Public Sub AjustaBorda(janela As Form, Ajuste As Label)
    On Error Resume Next
       
    With janela
-      .Height = ajuste.Top + 700
-      .Width = ajuste.Left + 300
+      .Height = Ajuste.Top + 700
+      .Width = Ajuste.Left + 300
       .grdBrowse.ShowFilterBar = True
    End With
 
@@ -794,15 +794,15 @@ End Sub
 'ROTINA PARA PEGAR A SEQUENCIA DA TABELA
 'PQ O PEGASEQUENCIA DO GAS NW PRESTA
 Public Function SuperPegaSequencial(Tabela As String, Campo As String, Optional Filtro As String) As Long
-   Dim Sql As String, Tb As GRecordSet
+   Dim SQL As String, Tb As GRecordSet
    
    On Error Resume Next
    
-   Sql = "SELECT MAX([" & Campo & "]) Seq " & _
+   SQL = "SELECT MAX([" & Campo & "]) Seq " & _
          "FROM [" & Tabela & "] " & _
          "WHERE " & IIf(Not Vazio(Filtro), Filtro, "1 = 1")
          
-   Set Tb = vgDb.OpenRecordSet(Sql)
+   Set Tb = vgDb.OpenRecordSet(SQL)
          
    If Tb.RecordCount > 0 Then
       SuperPegaSequencial = Tb!Seq + 1
@@ -814,14 +814,14 @@ End Function
 
 'ROTINA PARA PEGAR UMA TABELA AUXILIAR
 Public Sub TbAuxiliar(Tabela As String, Optional Filtro As String, Optional ByRef TabAuxiliar As GRecordSet)
-   Dim sql As String
+   Dim SQL As String
    
    On Error Resume Next
      
-   sql = "SELECT * FROM [" & Tabela & "] " & _
+   SQL = "SELECT * FROM [" & Tabela & "] " & _
          "WHERE " & IIf(Not Vazio(Filtro), Filtro, "1 = 1")
    
-   Set TabAuxiliar = vgDb.OpenRecordSet(sql)
+   Set TabAuxiliar = vgDb.OpenRecordSet(SQL)
    
 End Sub
 
@@ -892,7 +892,7 @@ Public Sub AbreManutenção(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       ManutencaoPagar.Caption = "Manutenção do Contas a Pagar"
-      ManutencaoPagar.vgFiltroInicial = "[Seqüência da Manutenção] > 0 AND Conta = '" & PAGAR & "'"
+      ManutencaoPagar.vgFiltroInicial = "[Seqüência da Manutenção] > 0 AND Conta = '" & Pagar & "'"
       ManutencaoPagar.Show
       InicializaFiltro ManutencaoPagar
       ManutencaoPagar.Reposition
@@ -903,7 +903,7 @@ Public Sub AbreManutenção(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       ManutencaoReceber.Caption = "Manutenção do Contas a Receber"
-      ManutencaoReceber.vgFiltroInicial = "[Seqüência da Manutenção] > 0 AND Conta = '" & RECEBER & "'"
+      ManutencaoReceber.vgFiltroInicial = "[Seqüência da Manutenção] > 0 AND Conta = '" & Receber & "'"
       ManutencaoReceber.Show
       InicializaFiltro ManutencaoReceber
       ManutencaoReceber.Reposition
@@ -921,7 +921,7 @@ Public Sub AbreEntrada(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       EntradaPagar.Caption = "Entrada do Contas a Pagar"
-      EntradaPagar.vgFiltroInicial = "[Seqüência da Entrada] > 0 AND Conta = '" & PAGAR & "'"
+      EntradaPagar.vgFiltroInicial = "[Seqüência da Entrada] > 0 AND Conta = '" & Pagar & "'"
       EntradaPagar.Show
       InicializaFiltro EntradaPagar
       EntradaPagar.Reposition
@@ -932,7 +932,7 @@ Public Sub AbreEntrada(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       EntradaReceber.Caption = "Entrada do Contas a Receber"
-      EntradaReceber.vgFiltroInicial = "[Seqüência da Entrada] > 0 AND Conta = '" & RECEBER & "'"
+      EntradaReceber.vgFiltroInicial = "[Seqüência da Entrada] > 0 AND Conta = '" & Receber & "'"
       EntradaReceber.Show
       InicializaFiltro EntradaReceber
       EntradaReceber.Reposition
@@ -950,7 +950,7 @@ Public Sub AbreBaixa(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       BaixaPagar.Caption = "Baixa do Contas a Pagar"
-      BaixaPagar.vgFiltroInicial = "[Seqüência da Baixa] > 0 AND Conta = '" & PAGAR & "'"
+      BaixaPagar.vgFiltroInicial = "[Seqüência da Baixa] > 0 AND Conta = '" & Pagar & "'"
       BaixaPagar.Show
       InicializaFiltro BaixaPagar
       BaixaPagar.Reposition
@@ -961,7 +961,7 @@ Public Sub AbreBaixa(Qual As String, Sequencia As Long)
          Exit Sub
       End If
       BaixaReceber.Caption = "Baixa do Contas a Receber"
-      BaixaReceber.vgFiltroInicial = "[Seqüência da Baixa] > 0 AND Conta = '" & RECEBER & "'"
+      BaixaReceber.vgFiltroInicial = "[Seqüência da Baixa] > 0 AND Conta = '" & Receber & "'"
       BaixaReceber.Show
       InicializaFiltro BaixaReceber
       BaixaReceber.Reposition
@@ -997,7 +997,7 @@ Public Sub AbrePropriedades(SeqGeral As Long, Optional ByVal SeqProp As Long)
    frmPropried.Show
    InicializaFiltro frmPropried
    frmPropried.Reposition
-   frmPropried.SetFocus     
+   frmPropried.SetFocus
             
 End Sub
 
@@ -1035,14 +1035,14 @@ Public Function BaixaConjunto(TipoNF As Byte, Sequencia_do_Conjunto As Long, Qtd
    
    On Error GoTo DeuErro
    
-   If Not Baixar Then Exit Function   
-   Operador = IIf(TipoNF = 0, IIf(Tipo = "Direta", "-", "+"), IIf(Tipo = "Direta", "+", "-"))   
+   If Not Baixar Then Exit Function
+   Operador = IIf(TipoNF = 0, IIf(Tipo = "Direta", "-", "+"), IIf(Tipo = "Direta", "+", "-"))
    vgDb.Execute "Update Conjuntos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui(CStr(Qtde), ",", ".", SO_UM) & " WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto
        
 DeuErro:
    If Err.Number <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
-      MsgBox "Estoque Não Baixado!", vbExclamation + vbOkOnly, vaTitulo      
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+      MsgBox "Estoque Não Baixado!", vbExclamation + vbOKOnly, vaTitulo
    End If
    
 End Function
@@ -1053,69 +1053,69 @@ Public Function BaixaProduto(TipoNF As Byte, Sequencia_do_Produto As Long, Qtde 
    
    On Error GoTo DeuErro
    
-   If Not Baixar Then Exit Function   
-   Operador = IIf(TipoNF = 0, IIf(Tipo = "Direta", "-", "+"), IIf(Tipo = "Direta", "+", "-"))   
+   If Not Baixar Then Exit Function
+   Operador = IIf(TipoNF = 0, IIf(Tipo = "Direta", "-", "+"), IIf(Tipo = "Direta", "+", "-"))
    vgDb.Execute "Update Produtos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui(CStr(Qtde), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Sequencia_do_Produto
 
 DeuErro:
    If Err.Number <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
-      MsgBox "Estoque Não Baixado!", vbExclamation + vbOkOnly, vaTitulo      
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+      MsgBox "Estoque Não Baixado!", vbExclamation + vbOKOnly, vaTitulo
    End If
 
 End Function
 
 'Baixa Materia Prima Produto
 Public Function BaixaMPProduto(Sequencia_do_Produto As Long, Tipo As String, Quantidade As Variant, Tipo2 As Byte) As Boolean
-   Dim Operador As String, Tb As New GRecordset, Produtos As New GRecordset
-   
-   On Error GoTo DeuErro
-   
-   If Tipo2 = 0 then Exit Function
-   
-   Operador = IIf(Tipo = "Direta", "-", "+")
-   Set Tb = vgdb.OpenRecordset("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
-   If Tb.RecordCount = 0 Then Exit Function
-   Do While Not Tb.EOF
-      TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima], Produtos
-      If Produtos.RecordCount > 0 Then
-         vgdb.Execute "Update Produtos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui((Quantidade * Tb![Quantidade de Matéria Prima]), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]                 
-      End If
-      Tb.MoveNext
-   Loop
-   
-DeuErro:
-   If Err.Number <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
-      MsgBox "Matéria Prima Não Baixada!", vbExclamation + vbOkOnly, vaTitulo      
-   End If   
-
-End Function
-
-'Baixa Receita do Conjunto
-Public Function BaixaMPConjunto(Sequencia_do_Conjunto As Long, Tipo As String, Quantidade As Variant, Tipo2 As Byte) As Boolean
-   Dim Operador As String, Tb As New GRecordset, Produtos As New GRecordset
+   Dim Operador As String, Tb As New GRecordSet, Produtos As New GRecordSet
    
    On Error GoTo DeuErro
    
    If Tipo2 = 0 Then Exit Function
    
    Operador = IIf(Tipo = "Direta", "-", "+")
-   Set Tb = vgdb.OpenRecordset("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto)
+   Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Matéria Prima] WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
    If Tb.RecordCount = 0 Then Exit Function
    Do While Not Tb.EOF
-      TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Tb![Seqüência Do Produto], Produtos
+      TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Tb![Seqüência da Matéria Prima], Produtos
       If Produtos.RecordCount > 0 Then
-         vgdb.Execute "Update Produtos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui((Quantidade * Tb![Quantidade Do Produto]), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência Do Produto]
+         vgDb.Execute "Update Produtos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui((Quantidade * Tb![Quantidade de Matéria Prima]), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       Tb.MoveNext
-   Loop   
+   Loop
    
 DeuErro:
    If Err.Number <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
-      MsgBox "Receita Não Baixada!", vbExclamation + vbOkOnly, vaTitulo      
-   End If   
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+      MsgBox "Matéria Prima Não Baixada!", vbExclamation + vbOKOnly, vaTitulo
+   End If
+
+End Function
+
+'Baixa Receita do Conjunto
+Public Function BaixaMPConjunto(Sequencia_do_Conjunto As Long, Tipo As String, Quantidade As Variant, Tipo2 As Byte) As Boolean
+   Dim Operador As String, Tb As New GRecordSet, Produtos As New GRecordSet
+   
+   On Error GoTo DeuErro
+   
+   If Tipo2 = 0 Then Exit Function
+   
+   Operador = IIf(Tipo = "Direta", "-", "+")
+   Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Conjunto] = " & Sequencia_do_Conjunto)
+   If Tb.RecordCount = 0 Then Exit Function
+   Do While Not Tb.EOF
+      TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Tb![Seqüência do Produto], Produtos
+      If Produtos.RecordCount > 0 Then
+         vgDb.Execute "Update Produtos Set [Quantidade no Estoque] = [Quantidade no Estoque] " & Operador & " " & Substitui((Quantidade * Tb![Quantidade Do Produto]), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
+      End If
+      Tb.MoveNext
+   Loop
+   
+DeuErro:
+   If Err.Number <> 0 Then
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+      MsgBox "Receita Não Baixada!", vbExclamation + vbOKOnly, vaTitulo
+   End If
 
 End Function
 
@@ -1979,23 +1979,23 @@ DeuErro:
    
 End Function
 
-Public Function Capitaliza(ByVal Texto As String) As String
-   Dim Exceções As Variant, Ind As Long, Pos As Long
-   Texto = " " & LCase(Texto) & " "
+Public Function Capitaliza(ByVal texto As String) As String
+   Dim Exceções As Variant, Ind As Long, pos As Long
+   texto = " " & LCase(texto) & " "
    Exceções = Array(" Com ", " Da ", " Das ", " De ", " Des ", " Do ", " Dos ", " E ")
-   For Pos = 1 To Len(Texto) - 1
-      Select Case Asc(Mid(Texto, Pos, 1))
+   For pos = 1 To Len(texto) - 1
+      Select Case Asc(Mid(texto, pos, 1))
          Case 10, 32 To 47, 58 To 64, 91 To 96, 123 To 127
-            Mid(Texto, Pos + 1, 1) = UCase(Mid(Texto, Pos + 1, 1))
+            Mid(texto, pos + 1, 1) = UCase(Mid(texto, pos + 1, 1))
       End Select
       For Ind = LBound(Exceções) To UBound(Exceções)
-         If Mid(Texto, Pos, Len(Exceções(Ind))) = Exceções(Ind) Then Mid(Texto, Pos, Len(Exceções(Ind))) = LCase(Mid(Texto, Pos, Len(Exceções(Ind))))
+         If Mid(texto, pos, Len(Exceções(Ind))) = Exceções(Ind) Then Mid(texto, pos, Len(Exceções(Ind))) = LCase(Mid(texto, pos, Len(Exceções(Ind))))
       Next Ind
-   Next Pos
-   Capitaliza = Mid(Texto, 2, Len(Texto) - 2)
+   Next pos
+   Capitaliza = Mid(texto, 2, Len(texto) - 2)
 End Function
 
-Public Function D(Data As Variant) As String   
+Public Function D(Data As Variant) As String
    D = "CONVERT(VARCHAR, '" & Format(Data, "yyyy-mm-dd") & "', 120)"
 End Function
 
@@ -2026,7 +2026,7 @@ End Function
    
 '   Set Galvanizado = vgDb.OpenRecordSet("SELECT * FROM Produtos Where [Seqüência do Produto] = " & SeqProd)
 '    If Galvanizado![Seqüência Do Grupo Produto] = 6 And Galvanizado![Seqüência Do SubGrupo Produto] = 67 Then ' Galvanização Pula
-'       Exit Function   
+'       Exit Function
 '    End If
    
    'Tenha Respeito com essa Query por favor rsrs
@@ -2149,7 +2149,7 @@ End Function
  '                       "LEFT JOIN [Matéria Prima] MP ON P2.[Seqüência do Produto] = MP.[Seqüência do Produto] " & _
  '               "WHERE P2.[Valor de Custo] <> ISNULL(Custo, 0) AND MP.[Seqüência do Produto] IS NULL AND " & IIf(SeqProd > 0, "P2.[Seqüência do Produto] = " & SeqProd, "1 = 1") & _
  '            ") TabelaA"
- '            
+ '
  '  vgDb(1).Execute SQL, True 'Atualizando
                 
 'AtualizaProdutoComReceita:
@@ -2191,7 +2191,7 @@ End Function
   '                                           "GROUP BY S.Produto, GP.Descrição " & _
   '                                        ") TabelaA CROSS JOIN [Parâmetros do Produto] " & _
   '                               ") TabelaA ON P.[Seqüência do Produto] = TabelaA.Produto"
-  '                               
+  '
   ' Else 'produto em processo
    'SQL = SQL & "UPDATE Produtos SET [Valor de Custo] = Custo, [Valor Total] = Round(Custo * [Margem de Lucro], 2) " & _
    '         "FROM Produtos P JOIN ( " & _
@@ -2207,7 +2207,7 @@ End Function
    '                                          "GROUP BY S.Produto, GP.Descrição " & _
    '                                       ") TabelaA CROSS JOIN [Parâmetros do Produto] " & _
    '                              ") TabelaA ON P.[Seqüência do Produto] = TabelaA.Produto"
-  ' 
+  '
   ' End If
                                  
   ' vgDb(1).Execute SQL, True 'Atualizando
@@ -2223,7 +2223,7 @@ Public Function ValorCustoDespesas(SeqDespesa As Long, Optional SeqGrid As Long)
    Set Tb = vgDb.OpenRecordSet("SELECT TOP 1 ROUND([Valor Unitário] + (([Valor Unitário] * [Porcentagem de IPI]) / 100) + [Valor ICMS ST] / Quantidade, 2) Custo FROM [Movimento do Estoque] " & _
                                "INNER JOIN [Despesas do Movimento Estoque] ON [Movimento do Estoque].[Seqüência do Movimento] = [Despesas do Movimento Estoque].[Seqüência do Movimento] " & _
                                "WHERE [Processar Custo] = 1 AND [Tipo Movimento] = 0 AND [Seqüência da Despesa] = " & SeqDespesa & IIf(SeqGrid > 0, " AND [Seqüência da Despesa Movimento] <> " & SeqGrid, "") & _
-                               " ORDER BY [Movimento do Estoque].[Seqüência do Movimento] DESC")   
+                               " ORDER BY [Movimento do Estoque].[Seqüência do Movimento] DESC")
                                      
    If Tb.RecordCount > 0 Then
       vgDb.Execute "UPDATE Despesas SET [Valor de Custo] = " & Substitui(Tb!Custo, ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqDespesa
@@ -2234,41 +2234,41 @@ Public Function ValorCustoDespesas(SeqDespesa As Long, Optional SeqGrid As Long)
 End Function
 
 Public Function ValorTotal(SeqProduto As Long) As Boolean
-   Dim Tb As New GRecordset
+   Dim Tb As New GRecordSet
 
    On Error Resume Next
    
-   Set Tb = vgdb.OpenRecordset("SELECT [Margem de Lucro], [Valor de Custo] FROM Produtos WHERE [Seqüência do Produto] = " & SeqProduto)
+   Set Tb = vgDb.OpenRecordSet("SELECT [Margem de Lucro], [Valor de Custo] FROM Produtos WHERE [Seqüência do Produto] = " & SeqProduto)
    
    If Tb.RecordCount > 0 Then
-      vgdb.Execute "Update Produtos Set [Valor Total] = " & Substitui(Tb![Valor de Custo] * Tb![Margem de Lucro], ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqProduto
+      vgDb.Execute "Update Produtos Set [Valor Total] = " & Substitui(Tb![Valor de Custo] * Tb![Margem de Lucro], ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqProduto
    End If
    
 End Function
 
 Public Function ValorTotalDespesas(SeqDespesa As Long) As Boolean
-   Dim Tb As New GRecordset
+   Dim Tb As New GRecordSet
 
    On Error Resume Next
    
-   Set Tb = vgdb.OpenRecordset("SELECT [Margem de Lucro], [Valor de Custo] FROM Despesas WHERE [Seqüência da Despesa] = " & SeqDespesa)
+   Set Tb = vgDb.OpenRecordSet("SELECT [Margem de Lucro], [Valor de Custo] FROM Despesas WHERE [Seqüência da Despesa] = " & SeqDespesa)
    
    If Tb.RecordCount > 0 Then
-      vgdb.Execute "Update Despesas Set [Valor Total] = " & Substitui(Tb![Valor de Custo] * Tb![Margem de Lucro], ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqDespesa
+      vgDb.Execute "Update Despesas Set [Valor Total] = " & Substitui(Tb![Valor de Custo] * Tb![Margem de Lucro], ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqDespesa
    End If
    
 End Function
 
 'Oq: 1=CFOP, 2=Redução, 3=%ICMS, 4=%IPI, 5=CST, 6=BC do ICMS, 7=Valor do ICMS, 8=Valor do IPI, 9=Diferido, 10=PIS, 11=COFINS, 12=IVA, 13=BC do ICMS ST, 14=Valor do ICMS ST, 15=%ICMS ST
 'Tabela = 1-Produtos, 2-Conjuntos, 3-Peças
-Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer, Tabela As Integer, VrTotal As Double, vrAdicional As Double, SeqProp As Long, Optional NCM As Long, Optional SemIPI As Boolean, Optional UFAvulso As String, Optional vFrete As Double) As Variant
-   Dim Tb1 As New GRecordSet, TB2 As New GRecordSet, Tb3 As New GRecordSet, TB4 As New GRecordSet, TB5 As New GRecordSet, TB6 As New GRecordSet
-   Dim Revenda As Boolean, Substituicao As Boolean, MateriaPrima As Boolean, ForadoEstado As Boolean, ForadoPais As Boolean, Reducao As Boolean,TotPecas As Double,TotPecasUsadas As Double,ProdTerceiro As Boolean
-   Dim Contribuinte As Boolean, Norte As String, Nordeste As String, Sul As String, Sudeste As String, CentroOeste As String, ProdutorPaulista As Boolean,SomaProdutos As Double,TotProUsado As Double,BCAjustada As Double,Suframa As Boolean
+Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer, Tabela As Integer, VrTotal As Double, vrAdicional As Double, SeqProp As Long, Optional Ncm As Long, Optional SemIPI As Boolean, Optional UFAvulso As String, Optional vFrete As Double) As Variant
+   Dim Tb1 As New GRecordSet, TB2 As New GRecordSet, Tb3 As New GRecordSet, TB4 As New GRecordSet, Tb5 As New GRecordSet, TB6 As New GRecordSet
+   Dim Revenda As Boolean, Substituicao As Boolean, MateriaPrima As Boolean, ForadoEstado As Boolean, ForadoPais As Boolean, Reducao As Boolean, TotPecas As Double, TotPecasUsadas As Double, ProdTerceiro As Boolean
+   Dim Contribuinte As Boolean, Norte As String, Nordeste As String, Sul As String, Sudeste As String, CentroOeste As String, ProdutorPaulista As Boolean, SomaProdutos As Double, TotProUsado As Double, BCAjustada As Double, Suframa As Boolean
    Dim BC As Double, BCRed As Double, AliqICMS As Double, AliqRed As Double, IVA As Double, VrICMS As Double, ValorAdicional As Double, Cumulativo As Boolean
-   Dim Convenio As Boolean, Sucata As Boolean, UF As String, Isento As Boolean, Importado As Boolean, Imobilizado As Integer, OrgonPublico As Boolean, EmpresaProdutor As Boolean 
+   Dim Convenio As Boolean, Sucata As Boolean, UF As String, Isento As Boolean, Importado As Boolean, Imobilizado As Integer, OrgonPublico As Boolean, EmpresaProdutor As Boolean
    Dim TabelaIVA As New GRecordSet
-   Dim NCM2 As String,RedPis As Double, RedCofins As Double
+   Dim NCM2 As String, RedPis As Double, RedCofins As Double
    
    On Error Resume Next
    ICMSAux = 0
@@ -2288,7 +2288,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
    End Select
    If Tb1.RecordCount = 0 Then CalculaImposto = 0: Exit Function
    If Tabela = "2" Or Tabela = "3" Then 'Conjuntos e Peças
-      Set TB2 = vgDb.OpenRecordSet("SELECT * FROM [Classificação Fiscal] WHERE [Seqüência da Classificação] = " & NCM & " AND [Seqüência da Classificação] > 0") 'Classificação Fiscal (NCM)
+      Set TB2 = vgDb.OpenRecordSet("SELECT * FROM [Classificação Fiscal] WHERE [Seqüência da Classificação] = " & Ncm & " AND [Seqüência da Classificação] > 0") 'Classificação Fiscal (NCM)
    Else
       Set TB2 = vgDb.OpenRecordSet("SELECT * FROM [Classificação Fiscal] WHERE [Seqüência da Classificação] = " & Tb1![Seqüência da Classificação] & " AND [Seqüência da Classificação] > 0") 'Classificação Fiscal (NCM)
    End If
@@ -2298,52 +2298,52 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
    Set Tb3 = vgDb.OpenRecordSet("SELECT * FROM Geral WHERE [Seqüência do Geral] = " & SeqGeral & " AND [Seqüência do Geral] > 0") 'Geral
    If SeqProp > 0 Then
       Set TB4 = vgDb.OpenRecordSet("SELECT * FROM Propriedades WHERE [Seqüência da Propriedade] = " & SeqProp & " AND [Seqüência da Propriedade] > 0") 'Propriedade
-      Set TB5 = vgDb.OpenRecordSet("SELECT * FROM Municípios WHERE [Seqüência do Município] = " & TB4![Seqüência Do Município] & " AND [Seqüência do Município] > 0") 'Município (Propriedade)
+      Set Tb5 = vgDb.OpenRecordSet("SELECT * FROM Municípios WHERE [Seqüência do Município] = " & TB4![Seqüência Do Município] & " AND [Seqüência do Município] > 0") 'Município (Propriedade)
    Else
-      Set TB5 = vgDb.OpenRecordSet("SELECT * FROM Municípios WHERE [Seqüência do Município] = " & Tb3![Seqüência Do Município] & " AND [Seqüência do Município] > 0") 'Município (Geral)
+      Set Tb5 = vgDb.OpenRecordSet("SELECT * FROM Municípios WHERE [Seqüência do Município] = " & Tb3![Seqüência Do Município] & " AND [Seqüência do Município] > 0") 'Município (Geral)
    End If
    'If Tb3.RecordCount = 0 Then CalculaImposto = 0: Exit Function
    If SeqProp > 0 Then
       If TB4.RecordCount = 0 Then CalculaImposto = 0: Exit Function
    End If
-   If TB5.RecordCount = 0 Then
+   If Tb5.RecordCount = 0 Then
       Set TB6 = vgDb.OpenRecordSet("SELECT * FROM ICMS WHERE UF = '" & UFAvulso & "'")
       UF = UFAvulso
       If UF = "" Then CalculaImposto = 0: Exit Function
    Else
-      Set TB6 = vgDb.OpenRecordSet("SELECT * FROM ICMS WHERE UF = '" & TB5!UF & "'")
-      UF = TB5!UF
+      Set TB6 = vgDb.OpenRecordSet("SELECT * FROM ICMS WHERE UF = '" & Tb5!UF & "'")
+      UF = Tb5!UF
    End If
    
    If TB2.RecordCount > 0 Then
    'Antes
       'Set TabelaIVA = vgDb.OpenRecordSet("SELECT * From [Iva From UFs] Where [UF] = '" & UF & "'" & " And NCM = '" & TB2!NCM & "'")
-   'Depois  
-   Set TabelaIVA = vgDb.OpenRecordSet("SELECT NCM, MVA.UF, MVA.IVA From MVA Left Join [Iva From UFs] On MVA.[Id MVA] = [Iva From UFs].[Id MVA] Where MVA.UF = '" & UF & "'" & " And NCM = '" & TB2!NCM & "'") 
+   'Depois
+   Set TabelaIVA = vgDb.OpenRecordSet("SELECT NCM, MVA.UF, MVA.IVA From MVA Left Join [Iva From UFs] On MVA.[Id MVA] = [Iva From UFs].[Id MVA] Where MVA.UF = '" & UF & "'" & " And NCM = '" & TB2!Ncm & "'")
       'A MERDA DO % IVA pro Mesmo NCM é Diferente PARA CADA ESTADO VAI SIFUDE SEFAZ
    End If
    
    'Opções
-   OrgonPublico = Tb3![Orgõn Publico]' Orgon Publico nw Calcula Imposto
-   NCM = Tb2![Seqüência da Classificação]
-   NCM2 = Tb2!NCM
+   OrgonPublico = Tb3![Orgõn Publico] ' Orgon Publico nw Calcula Imposto
+   Ncm = TB2![Seqüência da Classificação]
+   NCM2 = TB2!Ncm
    Imobilizado = Tb1![Tipo Do Produto] 'Alterado Ygor Imobilizado
    ProdTerceiro = Tb1![Material Adquirido de Terceiro]
    Revenda = Tb3!Revenda 'Contribuinte Substituído (Revenda)
    Convenio = TB2![Tem Convênio] 'Opa vamos Reduzir em 80%
    If TabelaIVA.RecordCount > 0 Then
       If TabelaIVA!IVA > 0 Then
-         Substituicao = True'TabelaIVA.RecordCount > 0  'Item Faz Parte da Substituição?
+         Substituicao = True 'TabelaIVA.RecordCount > 0  'Item Faz Parte da Substituição?
       Else
          Substituicao = False
-      End If   
+      End If
    Else
       Substituicao = False
-   End If   
+   End If
    Isento = Tb3!Isento 'Inscrição Isenta: Não Calcula ICMS
    Cumulativo = Tb3!Cumulativo
-   Suframa =(CBool(Not Vazio(Tb3![Código Do Suframa])))
-   EmpresaProdutor = Tb3![Empresa Produtor] 
+   Suframa = (CBool(Not Vazio(Tb3![Código Do Suframa])))
+   EmpresaProdutor = Tb3![Empresa Produtor]
     
    If Tabela = 1 Then
       MateriaPrima = (Tb1![Material Adquirido de Terceiro] Or Tb1!Usado) 'É Mercadoria Adquirida de Terceiros?
@@ -2372,14 +2372,14 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
    Sul = "PR RS SC"
    
    If Tb3!Tipo = 0 And SeqProp = 0 And UF <> "SP" Then ' Tirando a Redução p/ nw Contribuinte fora do estado conforme alteração do convenio 52/91
-      Tb2![Redução de Base de Cálculo] = False
+      TB2![Redução de Base de Cálculo] = False
    End If
    
    'If Tb3!Tipo = 1 And SeqProp = 0 And UF <> "SP" And Tb3!Isento Then ' Tirando a Redução p/ nw Contribuinte fora do estado conforme alteração do convenio 52/91
    '   Tb2![Redução de Base de Cálculo] = False
    'End If
    
-' If Not EmpresaProdutor Then  
+' If Not EmpresaProdutor Then
 '   If Contribuinte Then 'Tem Inscrição Estadual Entao é Contribuinte
 '      If Tb2![Redução de Base de Cálculo] Then
 '         If Tb2![Anexo da Redução] = 0 Then 'Anexo I
@@ -2412,7 +2412,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
  '              AliqRed = CCur(53.33) 'Alíquota da Redução
  '           End If
  '        End If
- '     End If  
+ '     End If
  '  Else '
       'Se tiver Redução entao vamos fazer o Calculo conforme o Convenio ICMS 52-91
  '     If Tb2![Redução de Base de Cálculo] Then
@@ -2430,19 +2430,19 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
  '               AliqRed = CCur(41.66) 'Alíquota da Redução
  '                'AliqRed = CCur(33.33)
  '           End If
- '        Else 'Revenda dentro do estado 
+ '        Else 'Revenda dentro do estado
  '              If Revenda Then
  '                 BCRed = CCur(0) 'Base de Cálculo Reduzida
  '                 AliqICMS = 0 'Alíquota do ICMS
  '                 AliqRed = CCur(100) 'Alíquota da Redução
- '              Else 
+ '              Else
  '                 'BCRed = CCur(58.34)   'Base de Cálculo Reduzida
  '                 'AliqICMS = 12    'Alíquota do ICMS
  '                 'AliqRed = CCur(41.66) 'Alíquota da Redução
  '                 BCRed = CCur(46.67)   'Base de Cálculo Reduzida
  '                 AliqICMS = 12    'Alíquota do ICMS
  '                 AliqRed = CCur(53.33) 'Alíquota da Redução
- '              End If   
+ '              End If
  '        End If
  '     Else 'Opa se nw tem redução o esquema é outro
  '       If Tb3!Tipo = 0 Then 'Pessoa Fisica
@@ -2453,7 +2453,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
  '     End If
  '  End If
    
- 'End If 
+ 'End If
  
  If Not EmpresaProdutor Then
    If Contribuinte Then 'Tem Inscrição Estadual Entao é Contribuinte
@@ -2534,9 +2534,9 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
       End If
       Else 'Opa se nw tem redução o esquema é outro
         If Tb3!Tipo = 0 Then 'Pessoa Fisica
-           AliqICMS = Tb6![Porcentagem de ICMS] '18 Alíquota do ICMS
+           AliqICMS = TB6![Porcentagem de ICMS] '18 Alíquota do ICMS
         Else 'Pessoa Juridica, porém não Contribuinte, pq nw ela nw tem propriedade entao vamos pegar a Aliquota vigente do estado do Cabloco
-           AliqICMS = Tb6![Porcentagem de ICMS] 'Alíquota do ICMS
+           AliqICMS = TB6![Porcentagem de ICMS] 'Alíquota do ICMS
         End If
       End If
    End If
@@ -2577,15 +2577,15 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             End If
          End If
       Else
-      AliqICMS = Tb6![Porcentagem de ICMS] 'Alíquota do ICMS
+      AliqICMS = TB6![Porcentagem de ICMS] 'Alíquota do ICMS
         End If
       End If
  
  ' O Sistema da Irrigaçaõ Nw Deixa Cadastrar Propriedade se o Cliente For Fora do Estado e Tiver CNPJ(EMPRESA) Então Fiz o recurso abaixo
- ' Para Fazer Os Calculos Como Produtor e Pegar A Redução E ALIQ do Icms Conforme Sua Região 
- If EmpresaProdutor Then 
-      If Tb2![Redução de Base de Cálculo] Then
-         If Tb2![Anexo da Redução] = 0 Then 'Anexo I
+ ' Para Fazer Os Calculos Como Produtor e Pegar A Redução E ALIQ do Icms Conforme Sua Região
+ If EmpresaProdutor Then
+      If TB2![Redução de Base de Cálculo] Then
+         If TB2![Anexo da Redução] = 0 Then 'Anexo I
             If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(73.43)   'Base de Cálculo Reduzida
                AliqICMS = 7    'Alíquota do ICMS
@@ -2609,7 +2609,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                AliqRed = CCur(41.67) 'Alíquota da Redução
                'AliqRed = CCur(33.33) 'Alíquota da Redução
             End If
-            If UF = "SP"Then 'Segundo O Sergio faverão maldonado se Tiver Redução Em SP Calcula da Seguinte Forma Abaixo:
+            If UF = "SP" Then 'Segundo O Sergio faverão maldonado se Tiver Redução Em SP Calcula da Seguinte Forma Abaixo:
                BCRed = CCur(46.67)   'Base de Cálculo Reduzida
                AliqICMS = 12    'Alíquota do ICMS
                AliqRed = CCur(53.33) 'Alíquota da Redução
@@ -2626,7 +2626,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If Not ForadoPais Then
             If Suframa And Not MateriaPrima Then CalculaImposto = "6109": Exit Function
             If Suframa And MateriaPrima Then CalculaImposto = "6110": Exit Function
-            If Not ForadoEstado And Sucata Then CalculaImposto = "5101": Exit Function' Sucata
+            If Not ForadoEstado And Sucata Then CalculaImposto = "5101": Exit Function ' Sucata
             If ForadoEstado And Sucata Then CalculaImposto = "6101": Exit Function ' Sucata
             If ForadoEstado And Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = "6403": Exit Function 'De acordo com a contabilidade
             If Not ForadoEstado And Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = "5403": Exit Function 'S.T
@@ -2653,14 +2653,14 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             If Imobilizado = 4 And ForadoEstado Then CalculaImposto = "6551": Exit Function  'Ativo Imobilizado
             'Revenda e Substituição e Produção Propria
             If Revenda And Substituicao And Not ForadoEstado And Not MateriaPrima Then CalculaImposto = "5401": Exit Function  'Revenda e Substituicao
-            If Revenda And Substituicao And ForadoEstado And Not MateriaPrima Then CalculaImposto = "6401": Exit Function  'Revenda e Substituicao 
+            If Revenda And Substituicao And ForadoEstado And Not MateriaPrima Then CalculaImposto = "6401": Exit Function  'Revenda e Substituicao
             ' Prod Propria ou Não
             If Not MateriaPrima And Not ForadoEstado Then
                CalculaImposto = "5101"
             ElseIf Not MateriaPrima And ForadoEstado Then
-               CalculaImposto = "6101" 
-            Exit Function     
-            End If   
+               CalculaImposto = "6101"
+            Exit Function
+            End If
          Else
             If Not MateriaPrima Then CalculaImposto = "7101": Exit Function
             If MateriaPrima Then CalculaImposto = "7102": Exit Function
@@ -2678,7 +2678,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          Exit Function
       Case "3" '% ICMS
          If Suframa Then CalculaImposto = 0: Exit Function
-         If Imobilizado = 4 Then CalculaImposto = 0: Exit Function' Venda do Ativo
+         If Imobilizado = 4 Then CalculaImposto = 0: Exit Function ' Venda do Ativo
          If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: Exit Function 'Orgon Publico
          'Calculos para Rebocador Aeronautico
          'Região Sul e Sudeste menos ES
@@ -2688,10 +2688,10 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          'Calc Para conjunto de gerador Dentro do Estado calcula icms 12%  conforme contabilidade
          If Not ForadoEstado Then
             If (NCM2 = "85021110" Or NCM2 = "85021210" Or NCM2 = "85016400" Or NCM2 = "85444200" Or NCM2 = "85389010" Or NCM2 = "90308990" Or NCM2 = "85365090") Then CalculaImposto = 12: Exit Function
-            If NCM2 = "85016100" Then CalculaImposto = 18: Exit Function 
+            If NCM2 = "85016100" Then CalculaImposto = 18: Exit Function
          End If
          ' Continua
-         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then  CalculaImposto = AliqICMS: Exit Function ' Pessoa Juridica Isento de IE 
+         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then CalculaImposto = AliqICMS: Exit Function  ' Pessoa Juridica Isento de IE
          If Not ForadoEstado And Sucata Then CalculaImposto = 0: Exit Function 'É sucata entao nw calcula nada
          If Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = 0: Exit Function 'Tem Substituição pago antecipado entao vamos cair fora
          If TB2![Produto Diferido] And ProdutorPaulista And Not Tb1!Usado Then CalculaImposto = 0: Exit Function 'Se For Produtor Paulista Vamos Cair Fora
@@ -2701,38 +2701,38 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             CalculaImposto = AliqICMS 'Vamos Pegar de Acordo com A redução
          Else
             If TB2![Redução de Base de Cálculo] Then 'Tem Redução
-               CalculaImposto = AliqICMS 'Vamos Pegar de Acordo com A redução   
-            Else 'Nw Tem       
+               CalculaImposto = AliqICMS 'Vamos Pegar de Acordo com A redução
+            Else 'Nw Tem
                If Contribuinte Then
                   CalculaImposto = TB6![Porcentagem de ICMS] 'Vamos Pegar do Estado
                Else 'Isento ou Pessoa Fisica, lembrando pessoa fisica sempre 18%
                   CalculaImposto = AliqICMS
                End If
             End If
-         End If  
+         End If
          Exit Function
       Case "4", "8" '% IPI, Vr IPI
          If Not ForadoEstado And Sucata Then CalculaImposto = 0: Exit Function 'É sucata entao nw calcula nada
          If MateriaPrima Then CalculaImposto = 0: Exit Function 'Se Mercadoria de Terceiro CFOP(5102, 6102, 7102)
          If Tb3.RecordCount > 0 Then _
             If Not Vazio(Tb3![Código Do Suframa]) Then CalculaImposto = 0: Exit Function 'Se Cliente Suframa
-         If TB2![Porcentagem Do IPI] = 0 Then CalculaImposto = 0: Exit Function 'Se nw Tiver Percentual
+         If TB2![Porcentagem do IPI] = 0 Then CalculaImposto = 0: Exit Function 'Se nw Tiver Percentual
          If Tb1!Usado Then CalculaImposto = 0: Exit Function 'Se Item for Usado ou se for conjunto
          If Oq = 4 Then '%IPI
-            CalculaImposto = TB2![Porcentagem Do IPI] 
+            CalculaImposto = TB2![Porcentagem do IPI]
          Else 'Valor IPI
-            If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0 : Exit Function  'Orgon Publico     
-            CalculaImposto = Round((VrTotal * (TB2![Porcentagem Do IPI] / 100)), 2)
+            If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: Exit Function   'Orgon Publico
+            CalculaImposto = Round((VrTotal * (TB2![Porcentagem do IPI] / 100)), 2)
          End If
          Exit Function
       Case "5" 'CST 'Alteração em 19/09/2024 - Inserção e validação do CST 70 na lógica
          If Suframa Then CalculaImposto = "040": Exit Function
          If ProdutorPaulista And TB2![Produto Diferido] And Not Tb1!Usado Then CalculaImposto = "051": Exit Function
-         If Not ForadoEstado And Sucata Then CalculaImposto = "051": Exit Function' Sucata dentro da UF é Diferido
+         If Not ForadoEstado And Sucata Then CalculaImposto = "051": Exit Function ' Sucata dentro da UF é Diferido
          If TB2![Redução de Base de Cálculo] And Not (Revenda And Substituicao And Not MateriaPrima) Then CalculaImposto = "020": Exit Function 'Redução de BC
-         If OrgonPublico And Not ForadoEstado Then CalculaImposto = "040": Exit Function'Orgon Publico
+         If OrgonPublico And Not ForadoEstado Then CalculaImposto = "040": Exit Function 'Orgon Publico
          If Importado And Not ForadoEstado And Sucata Then CalculaImposto = "151": Exit Function 'Sucata e Produto Importado e Diferido
-         If Not ForadoEstado And Sucata Then CalculaImposto = "051": Exit Function' Sucata dentro da UF é Diferido
+         If Not ForadoEstado And Sucata Then CalculaImposto = "051": Exit Function ' Sucata dentro da UF é Diferido
          If Importado And ForadoEstado And Sucata Then CalculaImposto = "100": Exit Function 'Produto Importado
          If ForadoEstado And Sucata Then CalculaImposto = "000": Exit Function
          If Importado And ForadoPais Then CalculaImposto = "141": Exit Function 'Exterior e Produto Importado
@@ -2750,31 +2750,31 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If Imobilizado = 4 Then CalculaImposto = "040": Exit Function 'Ativo Imobilizado
          If Revenda And Substituicao And Not MateriaPrima And Not TB2![Redução de Base de Cálculo] Then CalculaImposto = "010": Exit Function
          If Revenda And Substituicao And Not MateriaPrima And TB2![Redução de Base de Cálculo] Then CalculaImposto = "070": Exit Function
-            CalculaImposto = "000": Exit Function ' se não cai em nenhum acima cata 00 tributada integralmente 
+            CalculaImposto = "000": Exit Function ' se não cai em nenhum acima cata 00 tributada integralmente
      Case "6" 'BC ICMS
          If Suframa Then CalculaImposto = 0: Exit Function
-         If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: Exit Function 'Orgon Publico        
+         If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: Exit Function 'Orgon Publico
          If Imobilizado = 4 Then CalculaImposto = 0: Exit Function 'Ativo Imobilizado
          If Not ForadoEstado And Sucata Then CalculaImposto = 0: Exit Function 'É sucata entao nw calcula nada
          If Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = 0: Exit Function 'Tem Substituição e materia Prima pagou antecipado St
          If TB2![Produto Diferido] And ProdutorPaulista And Not Tb1!Usado Then CalculaImposto = 0: Exit Function 'Produtor Paulista, Item Diferido e Novo
-         If Not SemIPI And TB2![Porcentagem Do IPI] > 0 And Not Suframa And Not Tb1!Usado And Tabela = 1 And Not Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw For Materia Prima
-            BC = Round(VrTotal * (TB2![Porcentagem Do IPI] / 100), 2) 'Vamos Adicionar o IPI na Base de ICMS
+         If Not SemIPI And TB2![Porcentagem do IPI] > 0 And Not Suframa And Not Tb1!Usado And Tabela = 1 And Not Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw For Materia Prima
+            BC = Round(VrTotal * (TB2![Porcentagem do IPI] / 100), 2) 'Vamos Adicionar o IPI na Base de ICMS
          End If
          'If Not SemIPI And TB2![Porcentagem Do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw For Materia Prima
          ' BC = Round(VrTotal * (TB2![Porcentagem Do IPI] / 100), 2) 'Vamos Adicionar o IPI na Base de ICMS
          'End If
          If Tb1!Usado And Convenio Then 'Item Usado e a classificação faz parte do convenio Reduzir a BC em 80%
-            BC = Round((BC + VrTotal + vrAdicional) * 20 / 100, 2)'Alterado Ygor
+            BC = Round((BC + VrTotal + vrAdicional) * 20 / 100, 2) 'Alterado Ygor
             CalculaImposto = BC
             Exit Function
          Else
             'If TB2![Redução de Base de Cálculo] And Not Isento Then 'Tem Redução
-            '    BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)       
-            'Else 
+            '    BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)
+            'Else
             If TB2![Redução de Base de Cálculo] Then 'Tem Redução
-                BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)       
-            Else 
+                BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)
+            Else
             If TB2![Redução de Base de Cálculo] And SeqGeral = 2701 Then 'Tem Redução
                 BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)
             Else 'Nw tem Redução
@@ -2783,7 +2783,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             End If
             CalculaImposto = BC
             Exit Function
-         End If  
+         End If
       Case "7" 'Valor do ICMS
       'Calc Para conjunto de gerador
          If Not ForadoEstado Then
@@ -2792,23 +2792,23 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          End If
          'Calc Para Rebocador aliq de 12 (Sul / Sudeste) segundo a Marina
          If (InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0) And NCM2 = "84271090" Then
-             CalculaImposto = Round(VrTotal * (12 / 100), 2): ICMSAux = CalculaImposto: Exit Function 
-         End If 
+             CalculaImposto = Round(VrTotal * (12 / 100), 2): ICMSAux = CalculaImposto: Exit Function
+         End If
          ' Continua
          If Suframa Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function
-         If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'Orgon Publico  
+         If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'Orgon Publico
          If Imobilizado = 4 Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'Ativo Imobilizado
          If Not ForadoEstado And Sucata Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'É sucata entao nw calcula nada
          If Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'Tem Substituição e Materia Prima St Pago Antecipado
          If TB2![Produto Diferido] And ProdutorPaulista And Not Tb1!Usado Then CalculaImposto = 0: ICMSAux = CalculaImposto: Exit Function 'Produtor Paulista, Item Diferido e Novo
-         If Not SemIPI And TB2![Porcentagem Do IPI] > 0 And Not Suframa And Not Tb1!Usado And Tabela = 1 And Not Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
-            BC = Round(VrTotal * (TB2![Porcentagem Do IPI] / 100), 2) 'Vamos Adicionar o IPI na Base de ICMS
+         If Not SemIPI And TB2![Porcentagem do IPI] > 0 And Not Suframa And Not Tb1!Usado And Tabela = 1 And Not Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
+            BC = Round(VrTotal * (TB2![Porcentagem do IPI] / 100), 2) 'Vamos Adicionar o IPI na Base de ICMS
          End If
         ' If Not SemIPI And TB2![Porcentagem Do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Revenda And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
           '  CalculaImposto = Round(BC * (AliqICMS / 100), 2)
         ' End If
          If Tb1!Usado And Convenio Then 'Item Usado e a classificação faz parte do convenio Reduzir a BC em 80%
-            BC = Round((BC + VrTotal + vrAdicional) * 20 / 100, 2)'Alterado Ygor
+            BC = Round((BC + VrTotal + vrAdicional) * 20 / 100, 2) 'Alterado Ygor
             CalculaImposto = Round((BC * (AliqICMS / 100)), 2)
             ICMSAux = CalculaImposto
          Else
@@ -2816,7 +2816,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                BC = Round(((BC + VrTotal + vrAdicional) * (BCRed / 100)), 2)
                CalculaImposto = Round(BC * (AliqICMS / 100), 2)
                ICMSAux = CalculaImposto
-               Exit Function          
+               Exit Function
             Else
                BC = Round(BC + VrTotal + vrAdicional, 2)
             End If
@@ -2838,18 +2838,18 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                End If
             End If
          End If
-         If Importado And Not ForadoEstado Then 
-            CalculaImposto = Round(BC * (18 / 100), 2)' Importado Dentro da UF Calcula 18 Assim diz o Sergio Maldonado
+         If Importado And Not ForadoEstado Then
+            CalculaImposto = Round(BC * (18 / 100), 2) ' Importado Dentro da UF Calcula 18 Assim diz o Sergio Maldonado
             ICMSAux = CalculaImposto
          End If
          If Importado And ForadoEstado Then
-            CalculaImposto = Round(BC * (4 / 100), 2)' Importado Fora da UF Calcula 4 Assim diz o Sergio Maldonado
+            CalculaImposto = Round(BC * (4 / 100), 2) ' Importado Fora da UF Calcula 4 Assim diz o Sergio Maldonado
             ICMSAux = CalculaImposto
          End If
-         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then 
+         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then
             CalculaImposto = Round(BC * (AliqICMS / 100), 2)
             ICMSAux = CalculaImposto
-         End If    
+         End If
          Exit Function
       Case "9" 'Diferido
          If Sucata And Not ForadoEstado Then CalculaImposto = 1: Exit Function
@@ -2864,56 +2864,56 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
        'CalculaImposto = Round((VrTotal - ICMSAux) * (1.65 / 100), 2) ' Antes de mexer no pis
        'Depois
         If vrAdicional < 0 Or vFrete > 0 Then 'Tem Desconto Ou Frete
-           If (Mid(NCM2,1,5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2,1,5) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
+           If (Mid(NCM2, 1, 5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2, 1, 5) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
               CalculaImposto = Round((VrTotal) * (2 / 100), 2)
            Else
               CalculaImposto = Round((VrTotal) * (1.65 / 100), 2)
-           End If  
+           End If
         Else 'Não Tem desconto ou frete
-           If (Mid(NCM2,1,5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2,1,4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then 
+           If (Mid(NCM2, 1, 5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2, 1, 4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
               CalculaImposto = Round((VrTotal - ICMSAux) * (2 / 100), 2)
-           Else  
-              CalculaImposto = Round((VrTotal - ICMSAux) * (1.65 / 100), 2)   
-           End If   
-        End If 
+           Else
+              CalculaImposto = Round((VrTotal - ICMSAux) * (1.65 / 100), 2)
+           End If
+        End If
        '==================================================================
      Case "11" 'Valor do COFINS
        'If Suframa and Not Revenda and Not Cumulativo Then CalculaImposto = 0: Exit Function
        'If Suframa and Revenda and Not Cumulativo Then CalculaImposto = 0: Exit Function
        If Suframa Then CalculaImposto = 0: Exit Function
        If Imobilizado = 4 Then CalculaImposto = 0: Exit Function 'Alterado Ygor Imobilizado
-       'antes 
+       'antes
        'CalculaImposto = Round((VrTotal - ICMSAux) * (7.6 / 100), 2)
        'Depois rewformulada a pediod do oziris
         If vrAdicional < 0 Or vFrete > 0 Then 'Tem Desconto Ou Frete
-           If (Mid(NCM2,1,5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2,1,4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
-              CalculaImposto = Round((VrTotal) * (9.6 / 100), 2) 
+           If (Mid(NCM2, 1, 5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2, 1, 4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
+              CalculaImposto = Round((VrTotal) * (9.6 / 100), 2)
            Else
               CalculaImposto = Round((VrTotal) * (7.6 / 100), 2)
-           End If   
-        Else 'Não Tem 
-          If (Mid(NCM2,1,5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2,1,4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
+           End If
+        Else 'Não Tem
+          If (Mid(NCM2, 1, 5) = "84248" Or Tabela = 2 Or Tabela = 3 Or Mid(NCM2, 1, 4) = "73090" Or NCM2 = "87162000") And Not ProdTerceiro Then
              CalculaImposto = Round((VrTotal - ICMSAux) * (9.6 / 100), 2)
           Else
              CalculaImposto = Round((VrTotal - ICMSAux) * (7.6 / 100), 2)
-          End If   
-        End If     
+          End If
+        End If
      Case "12" 'IVA
-         'If Revenda And Substituicao Then  CalculaImposto = 0: Exit Function 
+         'If Revenda And Substituicao Then  CalculaImposto = 0: Exit Function
            'Agora
             If Revenda And Substituicao And Not MateriaPrima Then
              If TabelaIVA.RecordCount = 0 Then
-                MsgBox("Cliente de Revenda e % do IVA do Item " & SeqItem & " Não Cadastrado Procure o Contador!!")
+                MsgBox ("Cliente de Revenda e % do IVA do Item " & SeqItem & " Não Cadastrado Procure o Contador!!")
                 CalculaImposto = 0
-               Exit Function   
+               Exit Function
              End If
             If TabelaIVA!IVA = 0 Then CalculaImposto = 0: Exit Function ' Alguns estados não cobram o St
-            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function 
+            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function
             'Formula: (((1 + (IVA Original / 100)) * (1 - (Porcentagem de ICMS / 100)) / (1 - (Alíquota InterEstadual / 100))) - 1) * 100 Esta linha ja estava comentada
             If Not Importado Then
                IVA = Round((((1 + (TabelaIVA!IVA / 100)) * (1 - (TB6![Porcentagem de ICMS] / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100, 2)
             Else 'Produtos Importados fora da UF sempre será cobrado 4% de ICMS
-               If ForadoEstado  Then
+               If ForadoEstado Then
                   IVA = Round((((1 + (TabelaIVA!IVA / 100)) * (1 - (4 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100, 2)
                Else
                   IVA = Round((((1 + (TabelaIVA!IVA / 100)) * (1 - (18 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100, 2)
@@ -2928,9 +2928,9 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If Revenda And Substituicao And Not MateriaPrima Then 'Se for Revenda e Substituicao
           If TabelaIVA.RecordCount = 0 Then CalculaImposto = 0: Exit Function
            If TabelaIVA!IVA = 0 Then CalculaImposto = 0: Exit Function
-            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function 
-            If TB2![Porcentagem Do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
-               BC = Round(VrTotal * (TB2![Porcentagem Do IPI] / 100 + 1), 2) 'Vamos Adicionar o IPI na Base de ICMS
+            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function
+            If TB2![Porcentagem do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
+               BC = Round(VrTotal * (TB2![Porcentagem do IPI] / 100 + 1), 2) 'Vamos Adicionar o IPI na Base de ICMS
             Else
                BC = VrTotal
             End If
@@ -2941,7 +2941,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                  IVA = (((1 + (TabelaIVA!IVA / 100)) * (1 - (4 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100
               Else
                  IVA = (((1 + (TabelaIVA!IVA / 100)) * (1 - (18 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100
-              End If 
+              End If
             End If
             CalculaImposto = Round((BC + vFrete - Abs(vrAdicional)) * ((IVA / 100) + 1), 2)
             Exit Function
@@ -2951,7 +2951,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If Revenda And Substituicao And Not MateriaPrima Then 'Se for Revenda e Substituicao
           If TabelaIVA.RecordCount = 0 Then CalculaImposto = 0: Exit Function
            If TabelaIVA!IVA = 0 Then CalculaImposto = 0: Exit Function
-            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function 
+            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function
             If Tb1!Usado And Convenio Then 'Item Usado e Conjunto Reduzir a BC em 80%
                BC = (BC + VrTotal * (20 / 100))
             End If
@@ -2968,17 +2968,17 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                   VrICMS = BC * (TB6![Porcentagem de ICMS] / 100)
                   IVA = Round((((1 + (TabelaIVA!IVA / 100)) * (1 - (TB6![Porcentagem de ICMS] / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100, 2)
                End If
-            Else 'Produtos Importados 
+            Else 'Produtos Importados
               If ForadoEstado Then
                  VrICMS = BC * (4 / 100)
                  IVA = (((1 + (TabelaIVA!IVA / 100)) * (1 - (4 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100
               Else
                  VrICMS = BC * (18 / 100)
                  IVA = (((1 + (TabelaIVA!IVA / 100)) * (1 - (18 / 100)) / (1 - (TB6![Alíquota InterEstadual] / 100))) - 1) * 100
-              End If 
+              End If
             End If
-            If TB2![Porcentagem Do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
-               BC = VrTotal * (TB2![Porcentagem Do IPI] / 100 + 1) 'Vamos Adicionar o IPI na Base de ICMS
+            If TB2![Porcentagem do IPI] > 0 And Not Tb1!Usado And Tabela = 1 And Not MateriaPrima Then 'Se for Produto tem IPI, for Novo e nw for Revenda e nw for Materia Prima
+               BC = VrTotal * (TB2![Porcentagem do IPI] / 100 + 1) 'Vamos Adicionar o IPI na Base de ICMS
                BC = BC + vFrete - Abs(vrAdicional)
             End If
             CalculaImposto = (BC) * ((IVA / 100) + 1)
@@ -2991,7 +2991,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If Revenda And Substituicao And Not MateriaPrima Then 'Se for Revenda e Substituicao
           If TabelaIVA.RecordCount = 0 Then CalculaImposto = 0: Exit Function
            If TabelaIVA!IVA = 0 Then CalculaImposto = 0: Exit Function
-            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function 
+            If Importado And MateriaPrima Then CalculaImposto = 0: Exit Function
             CalculaImposto = TB6![Alíquota InterEstadual]
             Exit Function
          End If
@@ -3003,7 +3003,7 @@ End Function
 
 'Tabela: 1 = Produtos e Peças; 2 = Conjuntos; 3 = Despesas
 'Reformulado Data 22/02/2013
-Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean   
+Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
    Dim SQL As String
 
    On Error Resume Next
@@ -3096,7 +3096,7 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                   "WHERE Quantidade <> [Quantidade no Estoque] " & _
                ") TabelaA"
                
-         vgDb.Execute SQL 'Executa Query              
+         vgDb.Execute SQL 'Executa Query
     
       Case 3 'DESPESAS
          'Bom agora que vem a MasterMegaSuperQuery
@@ -3114,7 +3114,7 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                   "WHERE Quantidade <> [Quantidade no Estoque] " & _
                ") TabelaA"
                
-         vgDb.Execute SQL 'Executa Query         
+         vgDb.Execute SQL 'Executa Query
          
    End Select 'Ufa fim dos Cases ainda bem
 
@@ -3209,7 +3209,7 @@ Public Function CustoMedio(SeqProduto As Long, Optional SeqGrid As Long) As Bool
    If Tb.RecordCount > 0 Then
       vgDb.Execute "Update Produtos Set [Custo Médio] = " & Substitui(Tb!Medio, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqProduto
    Else
-SemCustoMedio:   
+SemCustoMedio:
       vgDb.Execute "Update Produtos Set [Custo Médio] = 0 WHERE [Seqüência do Produto] = " & SeqProduto
    End If
                                   
@@ -3256,7 +3256,7 @@ Public Function UltimaMvto(Tabela As Byte, SeqItem As Long, Optional SeqGrid As 
       Set Tb = vgDb.OpenRecordSet("SELECT MAX(Movimento) Mvto FROM (" & _
                                   "SELECT MAX([Data do Movimento]) Movimento FROM [Movimento Contábil Novo] " & _
                                   "INNER JOIN [Despesas Mvto Contábil Novo] ON [Movimento Contábil Novo].[Seqüência do Movimento] = [Despesas Mvto Contábil Novo].[Seqüência do Movimento] " & _
-                                  "WHERE [Seqüência da Despesa] = " & SeqItem & IIf(SeqGrid > 0, " AND [Seqüência Despesa Mvto Novo] <> " & SeqGrid, "") & _                                  
+                                  "WHERE [Seqüência da Despesa] = " & SeqItem & IIf(SeqGrid > 0, " AND [Seqüência Despesa Mvto Novo] <> " & SeqGrid, "") & _
                                   ")A")
                                   
       If Tb.RecordCount > 0 Then
@@ -3319,7 +3319,7 @@ Public Function ValorCustoContabil(Tabela As Byte, SeqItem As Long, Tipo As Byte
                                   "FROM [Movimento do Estoque Contábil] M INNER JOIN [Despesas do Movimento Contábil] DM ON M.[Seqüência do Movimento] = DM.[Seqüência do Movimento] " & _
                                   "INNER JOIN Despesas D ON DM.[Seqüência da Despesa] = D.[Seqüência da Despesa] " & _
                                   "WHERE [Tipo do Movimento] = 0 AND DM.[Seqüência da Despesa] = " & SeqItem & IIf(SeqGrid > 0, " AND [Seqüência da Despesa Movimento] <> " & SeqGrid, "") & _
-                                  " ORDER BY [Seqüência Da Despesa Movimento] DESC")   
+                                  " ORDER BY [Seqüência Da Despesa Movimento] DESC")
    Else 'Conjuntos
       Set Tb = vgDb.OpenRecordSet("SELECT Top 1 CM.[Valor de Custo] VrCusto " & _
                                   "FROM [Movimento do Estoque Contábil] M INNER JOIN [Conjuntos Movimento Contábil] CM ON M.[Seqüência do Movimento] = CM.[Seqüência do Movimento] " & _
@@ -3330,11 +3330,11 @@ Public Function ValorCustoContabil(Tabela As Byte, SeqItem As Long, Tipo As Byte
                                
    If Tb.RecordCount > 0 Then
       If Tabela = 1 Then 'Produtos
-         vgDb.Execute "Update Produtos Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqItem
+         vgDb.Execute "Update Produtos Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqItem
       ElseIf Tabela = 3 Then 'Despesas
-         vgDb.Execute "Update Despesas Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqItem
+         vgDb.Execute "Update Despesas Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqItem
       Else 'Conjuntos
-         vgDb.Execute "Update Conjuntos Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência do Conjunto] = " & SeqItem
+         vgDb.Execute "Update Conjuntos Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência do Conjunto] = " & SeqItem
       End If
    Else
       If Tabela = 1 Then 'Produtos
@@ -3343,7 +3343,7 @@ Public Function ValorCustoContabil(Tabela As Byte, SeqItem As Long, Tipo As Byte
          vgDb.Execute "Update Despesas Set [Valor Contábil Atual] = 0 WHERE [Seqüência da Despesa] = " & SeqItem
       Else 'Conjuntos
          vgDb.Execute "Update Conjuntos Set [Valor Contábil Atual] = 0 WHERE [Seqüência do Conjunto] = " & SeqItem
-      End If   
+      End If
    End If
 
 End Function
@@ -3379,11 +3379,11 @@ Public Function ValorCustoContabilNovo(Tabela As Byte, SeqItem As Long, Tipo As 
                                
    If Tb.RecordCount > 0 Then
       If Tabela = 1 Then 'Produtos
-         vgDb.Execute "Update Produtos Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqItem
+         vgDb.Execute "Update Produtos Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & SeqItem
       ElseIf Tabela = 3 Then 'Despesas
-         vgDb.Execute "Update Despesas Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqItem
+         vgDb.Execute "Update Despesas Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência da Despesa] = " & SeqItem
       Else 'Conjuntos
-         vgDb.Execute "Update Conjuntos Set [Valor Contábil Atual] = " & Substitui(Tb!VrCusto, ",", ".", SO_UM) & " WHERE [Seqüência do Conjunto] = " & SeqItem
+         vgDb.Execute "Update Conjuntos Set [Valor Contábil Atual] = " & Substitui(Tb!Vrcusto, ",", ".", SO_UM) & " WHERE [Seqüência do Conjunto] = " & SeqItem
       End If
    Else
       If Tabela = 1 Then 'Produtos
@@ -3398,17 +3398,17 @@ Public Function ValorCustoContabilNovo(Tabela As Byte, SeqItem As Long, Tipo As 
 End Function
 
 Public Function ExtraiLinhaMemo(ByVal hWndMemo As Long, ByVal Linha As Long) As String
-   Dim Tamanho As Long, Texto As String
-   Texto$ = Space$(1056)
-   Tamanho = SendMessage(hWndMemo, EM_GETLINE, Linha, ByVal Texto$)
-   Texto$ = Left$(Texto$, Tamanho)                             'acerta o tamanho 
-   'se tiver só um espaço na frente então tira (resultado de quebra de linha no meio de frase) 
-   If Len(Texto$) > 1 Then                                     'se tem info, 
-      If Asc(Texto$) = 32 And Asc(Mid$(Texto$, 2)) <> 32 Then
-         Texto$ = LTrim$(Texto$)                               'tira o espaço da frente 
+   Dim Tamanho As Long, texto As String
+   texto$ = Space$(1056)
+   Tamanho = SendMessage(hWndMemo, EM_GETLINE, Linha, ByVal texto$)
+   texto$ = Left$(texto$, Tamanho)                             'acerta o tamanho
+   'se tiver só um espaço na frente então tira (resultado de quebra de linha no meio de frase)
+   If Len(texto$) > 1 Then                                     'se tem info,
+      If Asc(texto$) = 32 And Asc(Mid$(texto$, 2)) <> 32 Then
+         texto$ = LTrim$(texto$)                               'tira o espaço da frente
       End If
    End If
-   ExtraiLinhaMemo$ = Texto$
+   ExtraiLinhaMemo$ = texto$
 End Function
 
 Public Function SaldoContas(Banco As Long, CC As Long) As Boolean
@@ -3423,7 +3423,7 @@ Public Function SaldoContas(Banco As Long, CC As Long) As Boolean
    
    VrAtual = VrEntrada!Entrada + VrSaida!Saida
    
-   'Atualizando   
+   'Atualizando
    vgDb.Execute "Update [Conta Corrente da Agência] Set [Valor de Entrada] = " & Substitui(VrEntrada!Entrada, ",", ".", SO_UM) & " Where [Seqüência da Agência] = " & Banco & " AND [Seqüência da CC da Agência] = " & CC 'Vr Entrada
    vgDb.Execute "Update [Conta Corrente da Agência] Set [Valor de Saída] = " & Substitui(VrSaida!Saida, ",", ".", SO_UM) & " Where [Seqüência da Agência] = " & Banco & " AND [Seqüência da CC da Agência] = " & CC 'Vr Saída
    vgDb.Execute "Update [Conta Corrente da Agência] Set [Valor Atual] = " & Substitui(CStr(VrAtual), ",", ".", SO_UM) & " Where [Seqüência da Agência] = " & Banco & " AND [Seqüência da CC da Agência] = " & CC 'Vr Atual
@@ -3453,7 +3453,7 @@ End Sub
 'Tipo 1:CPF; 2:CNPJ
 Public Function PoeMascara(Tipo As Byte, Numero As Variant) As String
    Dim Retorno As String
-   On error Resume Next 'Deu erro que se fod...
+   On Error Resume Next 'Deu erro que se fod...
    
    Numero = RemoveCaracteres(CStr(Numero))
    
@@ -3462,7 +3462,7 @@ Public Function PoeMascara(Tipo As Byte, Numero As Variant) As String
          Retorno$ = Mid(Numero, 1, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 7, 3) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 10, 2)         
+         Retorno$ = Retorno$ & Mid(Numero, 10, 2)
       Case 2 'CNPJ
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."
@@ -3478,87 +3478,87 @@ End Function
 Public Function PoeMascara2(Numero As Variant, UF As String) As String
    Dim Retorno As String
 
-   On error Resume Next
+   On Error Resume Next
             
    Select Case UF
       Case "MG" '999.999.999/9999
          Retorno$ = Mid(Numero, 1, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 7, 3) & "/"
-         Retorno$ = Retorno$ & Mid(Numero, 10, 3)              
+         Retorno$ = Retorno$ & Mid(Numero, 10, 3)
       Case "ES", "GO", "MA", "MS", "PA" '999.999.99-9
          Retorno$ = Mid(Numero, 1, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 7, 2) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 9, 1)              
+         Retorno$ = Retorno$ & Mid(Numero, 9, 1)
       Case "RJ" '99.999.99-9
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 6, 2) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 8, 1)               
+         Retorno$ = Retorno$ & Mid(Numero, 8, 1)
       Case "SC" '999.999.999
          Retorno$ = Mid(Numero, 1, 3) & "."
          Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 7, 3) & "-"               
+         Retorno$ = Retorno$ & Mid(Numero, 7, 3) & "-"
       Case "DF" '99.999999.999-99
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 6) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 9, 3) & "-"               
-         Retorno$ = Retorno$ & Mid(Numero, 12, 2)               
+         Retorno$ = Retorno$ & Mid(Numero, 9, 3) & "-"
+         Retorno$ = Retorno$ & Mid(Numero, 12, 2)
       Case "PR" '99.999.999-99
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 6) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "-"               
-         Retorno$ = Retorno$ & Mid(Numero, 9, 2)         
+         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "-"
+         Retorno$ = Retorno$ & Mid(Numero, 9, 2)
       Case "PE" '9.999.999-99
          Retorno$ = Mid(Numero, 1, 1) & "."
          Retorno$ = Retorno$ & Mid(Numero, 2, 3) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "-"               
-         Retorno$ = Retorno$ & Mid(Numero, 7, 2)         
+         Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "-"
+         Retorno$ = Retorno$ & Mid(Numero, 7, 2)
       Case "RN", "AM", "PB" '99.999.999-9
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "-"               
-         Retorno$ = Retorno$ & Mid(Numero, 7, 1)         
+         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "-"
+         Retorno$ = Retorno$ & Mid(Numero, 7, 1)
       Case "RS" '999/999999-9
          Retorno$ = Mid(Numero, 1, 3) & "/"
          Retorno$ = Retorno$ & Mid(Numero, 4, 6) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 9, 1)               
+         Retorno$ = Retorno$ & Mid(Numero, 9, 1)
       Case "RO" '9999999999999-9
          Retorno$ = Mid(Numero, 1, 13) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 14, 1)               
-      Case "SP" '999.999.999.999      
-         Retorno = Format(Numero, "###,###,###,###")             
+         Retorno$ = Retorno$ & Mid(Numero, 14, 1)
+      Case "SP" '999.999.999.999
+         Retorno = Format(Numero, "###,###,###,###")
       Case "BA" '#99.999.999
          If Len(Numero) = 9 Then
             Retorno$ = Mid(Numero, 1, 2) & "."
-            Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."               
+            Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."
             Retorno$ = Retorno$ & Mid(Numero, 6, 3)
          Else
             Retorno$ = Mid(Numero, 1, 3) & "."
-            Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."               
+            Retorno$ = Retorno$ & Mid(Numero, 4, 3) & "."
             Retorno$ = Retorno$ & Mid(Numero, 7, 3)
-         End If               
+         End If
       Case "CE", "AL", "AP", "PI", "SE", "RR" '99999999-9
          Retorno$ = Mid(Numero, 1, 8) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 9, 1)              
+         Retorno$ = Retorno$ & Mid(Numero, 9, 1)
       Case "AC" '99.999.999/999-99
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 3) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "/"               
+         Retorno$ = Retorno$ & Mid(Numero, 6, 3) & "/"
          Retorno$ = Retorno$ & Mid(Numero, 9, 3) & "-"
          Retorno$ = Retorno$ & Mid(Numero, 12, 2) & "-"
       Case "MT" '9999999999-9
          Retorno$ = Mid(Numero, 1, 10) & "-"
-         Retorno$ = Retorno$ & Mid(Numero, 11, 1)         
+         Retorno$ = Retorno$ & Mid(Numero, 11, 1)
       Case "TO" '99.99.999999-9
          Retorno$ = Mid(Numero, 1, 2) & "."
          Retorno$ = Retorno$ & Mid(Numero, 3, 2) & "."
-         Retorno$ = Retorno$ & Mid(Numero, 5, 6) & "-"               
-         Retorno$ = Retorno$ & Mid(Numero, 11, 1)         
-   End Select   
+         Retorno$ = Retorno$ & Mid(Numero, 5, 6) & "-"
+         Retorno$ = Retorno$ & Mid(Numero, 11, 1)
+   End Select
    
-   PoeMascara2 = Retorno$      
+   PoeMascara2 = Retorno$
 
 End Function
 
@@ -3641,11 +3641,11 @@ Public Sub AbreConsultas()
 End Sub
 
 Public Sub AtualizaSaldo()
-   Dim Tb As New GRecordset
+   Dim Tb As New GRecordSet
 
-   On error Goto DeuErro
+   On Error GoTo DeuErro
    
-   Set Tb = vgdb.OpenRecordset("SELECT [Seqüência da Agência], [Seqüência da CC da Agência] FROM [Conta Corrente da Agência] WHERE [Seqüência da Agência] > 0 AND [Seqüência da CC da Agência] > 0")
+   Set Tb = vgDb.OpenRecordSet("SELECT [Seqüência da Agência], [Seqüência da CC da Agência] FROM [Conta Corrente da Agência] WHERE [Seqüência da Agência] > 0 AND [Seqüência da CC da Agência] > 0")
    
    If Tb.RecordCount > 0 Then
       Do While Not Tb.EOF
@@ -3654,12 +3654,12 @@ Public Sub AtualizaSaldo()
       Loop
       'MsgBox "Processo Concluído com Sucesso!!!", vbInformation + vbOkOnly, vaTitulo
    Else
-      MsgBox "Nenhum Registro foi Alterado!!!", vbExclamation + vbOkOnly, vaTitulo
+      MsgBox "Nenhum Registro foi Alterado!!!", vbExclamation + vbOKOnly, vaTitulo
    End If
    
 DeuErro:
    If Err <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
    End If
 
 End Sub
@@ -3674,13 +3674,13 @@ End Sub
 'Quantidade em Estoque Contábil
 'Tipo: 0-Produto, 1-Conjunto
 'Inativo: usar o MegaEstoqueContabil
-Public Function QtdeEstoqueCont(Tipo As Byte, SeqItem As Long, Optional Quantidade as Double) As Boolean
+Public Function QtdeEstoqueCont(Tipo As Byte, SeqItem As Long, Optional Quantidade As Double) As Boolean
    Dim Tb As New GRecordSet, Estoque As Double
    
    On Error Resume Next
    
    If Tipo = 0 Then
-      Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & SeqItem)   
+      Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & SeqItem)
    Else
       Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Conjunto] = " & SeqItem)
    End If
@@ -3790,7 +3790,7 @@ Public Sub FechaSessao()
    'nw faremos logoff quando o usuario for programador ou Administrator
    If strUserName = "Programador" Or strUserName = "Administrator" Then Exit Sub
    'If UCase(vgNomeEstacao) = "SRV01 - " Then
-   If Parametros![Nome Do Servidor] & " - " = UCase(vgNomeEstacao) Then
+   If Parametros![Nome do Servidor] & " - " = UCase(vgNomeEstacao) Then
       Shell "logoff"
    End If
 
@@ -3807,9 +3807,9 @@ Public Function UsuarioPC() As String
    'Get the username
    GetUserName strUserName, 100
    'strip the rest of the buffer
-   strUserName = Left$(strUserName, InStr(strUserName, Chr$(0)) - 1) 
+   strUserName = Left$(strUserName, InStr(strUserName, Chr$(0)) - 1)
    
-   UsuarioPC = strUserName 
+   UsuarioPC = strUserName
 
 End Function
 
@@ -3861,12 +3861,12 @@ Public Sub DownloadNFe()
 End Sub
 
 'Função para Abreviar o textos
-Public Function Abreviacao(ByVal Texto As String) As String
+Public Function Abreviacao(ByVal texto As String) As String
    Dim map(15, 2) As String, i As Long, x$
    
    On Error Resume Next
          
-   x$ = Texto
+   x$ = texto
    
    map(0, 0) = "Rua": map(0, 1) = "R"
    map(1, 0) = "Avenida": map(1, 1) = "Av"
@@ -3895,58 +3895,58 @@ End Function
 
 'Rotina para preencher um texto
 'muito usado quando se faz arquivo de exportação
-Public Function PreencheTexto(Texto As String, Caracter As String, TamCampo As String) As String
+Public Function PreencheTexto(texto As String, Caracter As String, TamCampo As String) As String
    Dim x$, i As Long
 
    On Error Resume Next
          
-   For i = 1 To (TamCampo - Len(Texto))
+   For i = 1 To (TamCampo - Len(texto))
       x$ = x$ & Caracter
    Next
    
-   PreencheTexto = Left(Texto & x$, TamCampo)
+   PreencheTexto = Left(texto & x$, TamCampo)
 
 End Function
 
 'Rotina para atualizar a Manutenção do contas com o somatorio dos valores adicionais
 Public Sub AtualizaTotaisConta(Sequencia As Long)
-   Dim Valores As New GRecordset, Baixa As New GRecordset, Manutencao As New GRecordset
-   Dim Juros As Double, Desconto As Double, Restante As Double
+   Dim Valores As New GRecordSet, Baixa As New GRecordSet, Manutencao As New GRecordSet
+   Dim Juros As Double, desconto As Double, Restante As Double
    
    On Error GoTo DeuErro
    
-   vgdb.BeginTrans
+   vgDb.BeginTrans
    
-   Set Valores = vgdb.OpenRecordset("SELECT SUM([Valor do Juros]) Juros, SUM([Valor do Desconto]) Desconto " & _
+   Set Valores = vgDb.OpenRecordSet("SELECT SUM([Valor do Juros]) Juros, SUM([Valor do Desconto]) Desconto " & _
                                     "FROM [Valores Adicionais] " & _
                                     "WHERE [Seqüência da Manutenção] = " & Sequencia)
-   Set Baixa = vgdb.OpenRecordset("SELECT SUM([Valor do Juros]) Juros, SUM([Valor do Desconto]) Desconto " & _
+   Set Baixa = vgDb.OpenRecordSet("SELECT SUM([Valor do Juros]) Juros, SUM([Valor do Desconto]) Desconto " & _
                                   "FROM [Baixa Contas] " & _
-                                  "WHERE [Seqüência da Manutenção] = " & Sequencia)                                     
-   Set Manutencao = vgdb.OpenRecordset("SELECT [Valor da Parcela], [Valor Pago], [Valor Restante] " & _
+                                  "WHERE [Seqüência da Manutenção] = " & Sequencia)
+   Set Manutencao = vgDb.OpenRecordSet("SELECT [Valor da Parcela], [Valor Pago], [Valor Restante] " & _
                                        "FROM [Manutenção Contas] " & _
-                                       "WHERE [Seqüência da Manutenção] = " & Sequencia)                                  
+                                       "WHERE [Seqüência da Manutenção] = " & Sequencia)
                                   
-   If Valores.RecordCount = 0 AND Baixa.RecordCount = 0 Then Exit Sub
+   If Valores.RecordCount = 0 And Baixa.RecordCount = 0 Then Exit Sub
    
    'Vamos Reunir os totais
    Juros = Valores!Juros + Baixa!Juros
-   Desconto = Valores!Desconto + Baixa!Desconto
-   Restante = Manutencao![Valor da Parcela] + Juros - Desconto - Manutencao![Valor Pago]
+   desconto = Valores!desconto + Baixa!desconto
+   Restante = Manutencao![Valor da Parcela] + Juros - desconto - Manutencao![Valor Pago]
    
    'Vamos Atualizar a Manutenção
-   vgdb.Execute "UPDATE [Manutenção Contas] Set [Valor do Juros] = " & Substitui(CStr(Juros), ",", ".", SO_UM) & _
-                ", [Valor do Desconto] = " & Substitui(CStr(Desconto), ",", ".", SO_UM) & _
+   vgDb.Execute "UPDATE [Manutenção Contas] Set [Valor do Juros] = " & Substitui(CStr(Juros), ",", ".", SO_UM) & _
+                ", [Valor do Desconto] = " & Substitui(CStr(desconto), ",", ".", SO_UM) & _
                 ", [Valor Restante] = " & Substitui(CStr(Restante), ",", ".", SO_UM) & _
                 " WHERE [Seqüência da Manutenção] = " & Sequencia
                 
-   vgdb.CommitTrans                
+   vgDb.CommitTrans
                 
 DeuErro:
    If Err.Number <> 0 Then
-      vgdb.RollBackTrans
-      MsgBox Err.Description, vbCritical + vbOkOnly, vaTitulo
-   End If                   
+      vgDb.RollBackTrans
+      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+   End If
    
 End Sub
 
@@ -3962,8 +3962,8 @@ Private Function PreparaArqLog2() As Long
    
    'Aqui está o pulo do gato
    'Inicio Manual
-  ' If UCase(vgNomeEstacao) = "SRV01 - " And UCase(UsuarioPC) <> "PROGRAMADOR" Then 
-      If Parametros![Nome Do Servidor] & " - " = UCase(vgNomeEstacao) And UCase(UsuarioPC) <> "PROGRAMADOR" Then 'Terminal Service
+  ' If UCase(vgNomeEstacao) = "SRV01 - " And UCase(UsuarioPC) <> "PROGRAMADOR" Then
+      If Parametros![Nome do Servidor] & " - " = UCase(vgNomeEstacao) And UCase(UsuarioPC) <> "PROGRAMADOR" Then 'Terminal Service
       vgConsultaINI = "C:\DADOS\Sistemas\Irrigacao\TS\" + UsuarioPC + "\"
       vgArqLog$ = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\"))
    Else
@@ -4026,17 +4026,17 @@ Public Sub FinalizaForm(F As Form)
    'Inicio Manual
    'Proposito: Verificar se estamos fechando uma janela que venha de uma rotina avulsa
    If F.Caption = "Entrada do Contas a Pagar" Then          'Entrada Pagar
-      EntradaPagarAberto = False      
+      EntradaPagarAberto = False
    ElseIf F.Caption = "Entrada do Contas a Receber" Then    'Entrada Receber
-      EntradaReceberAberto = False      
+      EntradaReceberAberto = False
    ElseIf F.Caption = "Manutenção do Contas a Pagar" Then   'Manutencao Pagar
-      ManutencaoPagarAberto = False      
+      ManutencaoPagarAberto = False
    ElseIf F.Caption = "Manutenção do Contas a Receber" Then 'Manutencao Receber
-      ManutencaoReceberAberto = False      
+      ManutencaoReceberAberto = False
    ElseIf F.Caption = "Baixa do Contas a Pagar" Then        'Baixa Pagar
-      BaixaPagarAberto = False      
+      BaixaPagarAberto = False
    ElseIf F.Caption = "Baixa do Contas a Receber" Then      'Baixa Receber
-      BaixaReceberAberto = False               
+      BaixaReceberAberto = False
    End If
    'Fim Manual
    
@@ -4067,7 +4067,7 @@ Public Sub FinalizaForm(F As Form)
       End If
       On Error Resume Next                     'previne eventuais erros
       F.vgTb.CloseRecordset                    'fecha tabela
-      Set F.vgTb = Nothing                     'libera objeto relacionado      
+      Set F.vgTb = Nothing                     'libera objeto relacionado
    End If
 End Sub
 
@@ -4184,7 +4184,7 @@ End Sub
 
 
 Public Function UltimoFornecedor(SeqProduto As Long, Optional SeqGrid As Long) As Boolean 'Reformulada
-   Dim Tb As New GRecordSet, EMateriaPrima As New GRecordset
+   Dim Tb As New GRecordSet, EMateriaPrima As New GRecordSet
    
    On Error Resume Next
    
@@ -4240,13 +4240,13 @@ End Function
 'End Function
 
 
-Public Function QtdeEstoqueJer(Tipo As Byte, SeqItem As Long, Optional Quantidade as Double) As Boolean
+Public Function QtdeEstoqueJer(Tipo As Byte, SeqItem As Long, Optional Quantidade As Double) As Boolean
    Dim Tb As New GRecordSet, Estoque As Double
    
    On Error Resume Next
    
    If Tipo = 0 Then
-      Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & SeqItem)   
+      Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Produto] = " & SeqItem)
    Else
       Set Tb = vgDb.OpenRecordSet("SELECT SUM(Quantidade * CASE WHEN [Tipo do Movimento] = 1 THEN -1 ELSE 1 END) AS Estoque FROM [Baixa do Estoque Contábil] WHERE [Seqüência do Conjunto] = " & SeqItem)
    End If
@@ -4297,7 +4297,7 @@ Public Function TotalEBalanco(SeqProduto As Long, Dta As Date) As Double
                                "INNER JOIN [Produtos Mvto Contábil Novo] ON [Movimento Contábil Novo].[Seqüência do Movimento] = [Produtos Mvto Contábil Novo].[Seqüência do Movimento] " & _
                                "WHERE [Tipo do Movimento] = 0 And [Data do Movimento] >= " & D(Dta) & " And [Seqüência do Produto] = " & SeqProduto)
                                
-   TotalEBalanco = Tb!Compra
+   TotalEBalanco = Tb!compra
                                   
 End Function
 
@@ -4311,7 +4311,7 @@ Public Function TotalSBalanco(SeqProduto As Long, Dta As Date) As Double
                                "INNER JOIN [Produtos Mvto Contábil Novo] ON [Movimento Contábil Novo].[Seqüência do Movimento] = [Produtos Mvto Contábil Novo].[Seqüência do Movimento] " & _
                                "WHERE [Tipo do Movimento] = 1 And [Data do Movimento] >= " & D(Dta) & " And [Seqüência do Produto] = " & SeqProduto)
                                
-   TotalSBalanco = Tb!Compra
+   TotalSBalanco = Tb!compra
                                   
 End Function
 
@@ -4325,7 +4325,7 @@ Public Function TotalProducao(SeqProduto, Dta As Date) As Double
                                "INNER JOIN [Itens Saidas Balcao] ON [Saida de Balcao].[Sequencia da Saida] = [Itens Saidas Balcao].[Sequencia da Saida] " & _
                                "WHERE [Data da Saida] >= " & D(Dta) & " And [Seqüência da Matéria Prima] = " & SeqProduto)
                                
-   TotalProducao = Tb!X
+   TotalProducao = Tb!x
                                   
 End Function
 
@@ -4349,7 +4349,7 @@ Public Function ValorCusto(SeqProd As Long, Optional Processar As Boolean = True
    End If
    
    Set Galvanizado = vgDb.OpenRecordSet("SELECT * FROM Produtos Where [Seqüência do Produto] = " & SeqProd)
-    If Galvanizado![Seqüência Do Grupo Produto] = 6 And Galvanizado![Seqüência Do SubGrupo Produto] = 67 Then ' Galvanização Pula
+    If Galvanizado![Seqüência do Grupo Produto] = 6 And Galvanizado![Seqüência Do SubGrupo Produto] = 67 Then ' Galvanização Pula
        Exit Function
     End If
    
@@ -4434,34 +4434,34 @@ Public Function TotalProducao2(SeqProduto) As Double
                                "INNER JOIN [Itens da Produção] ON [Linha de Produção].[Sequencia da Produção] = [Itens da Produção].[Sequencia da Produção] " & _
                                "WHERE [Nao Calcula] = 1 And [Seqüência da Matéria Prima] = " & SeqProduto)
    
-   If Tb.RecordCount > 0 Then                            
-      TotalProducao2 = Tb!X
+   If Tb.RecordCount > 0 Then
+      TotalProducao2 = Tb!x
    Else
-      TotalProducao2 = 0 
-   End If   
+      TotalProducao2 = 0
+   End If
                                   
 End Function
 
 'abre banco de dados
 Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As Integer
-   Dim vgPV As Boolean, vgCriaDb As Boolean,i As Integer, vgCp As Object
+   Dim vgPV As Boolean, vgCriaDb As Boolean, i As Integer, vgCp As Object
    On Error GoTo DeuErro
    AbreBancoDeDados = False
-   vgDB.Clear
+   vgDb.Clear
    vgCriaDb = False
    vgPV = True
-   vgDB.RegisterDatabase vgAliasDb(1)             'registra o banco de dados para o aplicativo
-   vgDB(1).DataBaseType = vgTipoDb(1)
+   vgDb.RegisterDatabase vgAliasDb(1)             'registra o banco de dados para o aplicativo
+   vgDb(1).DataBaseType = vgTipoDb(1)
    vgDb(1).TrustedConnection = vgTrustConnDb(1)
-   vgDB(1).Username = vgUsuarioID$(1)
-   vgDB(1).Password = vgSenhaDb$(1)
-   vgDB(1).Provider = vgProviderDb$(1)
-   vgDB(1).Driver = vgDriverDb$(1)
-   vgDB(1).Server = vgServerDb$(1)
-   vgDB(1).DatabaseName = vgNomeDb$(1)
-   vgDB(1).DataBaseDir = vgDirDb$(1)
-   vgDB(1).StringConnection = vgStrConnectionDb$(1)
-   vgDB(1).OpenConnection vgCriaDb
+   vgDb(1).Username = vgUsuarioID$(1)
+   vgDb(1).Password = vgSenhaDb$(1)
+   vgDb(1).Provider = vgProviderDb$(1)
+   vgDb(1).Driver = vgDriverDb$(1)
+   vgDb(1).Server = vgServerDb$(1)
+   vgDb(1).DataBaseName = vgNomeDb$(1)
+   vgDb(1).DataBaseDir = vgDirDb$(1)
+   vgDb(1).StringConnection = vgStrConnectionDb$(1)
+   vgDb(1).OpenConnection vgCriaDb
 
    'abre arquivo de controle de cps sequenciais
    vgRsSequencia.Source = "SYS~Sequencial"
@@ -4472,7 +4472,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Importacao
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4486,7 +4486,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Parametros
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4500,7 +4500,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Parametros_da_Contabilidade
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4514,7 +4514,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Parametros_da_NFe
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4528,7 +4528,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Parametros_do_Produto
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4542,7 +4542,7 @@ Public Function AbreBancoDeDados(Optional ByVal vgIgnoraErros As Long = 0) As In
    With Parametros_do_SPED_ECF
       If .RecordCount = 0 Then
          .AddNew
-         For i = 0 to .Fields.Count - 1
+         For i = 0 To .Fields.Count - 1
             If .Fields(i).Type <> adLongVarBinary Then
              .Fields(i) = .Fields(i)
             End If
@@ -4588,17 +4588,17 @@ Public Sub FechaBancoDeDados()
    End If
 
    'fecha arquivos de perametros
-   Importacao.CloseRecordSet
+   Importacao.CloseRecordset
    Set Importacao = Nothing
-   Parametros.CloseRecordSet
+   Parametros.CloseRecordset
    Set Parametros = Nothing
-   Parametros_da_Contabilidade.CloseRecordSet
+   Parametros_da_Contabilidade.CloseRecordset
    Set Parametros_da_Contabilidade = Nothing
-   Parametros_da_NFe.CloseRecordSet
+   Parametros_da_NFe.CloseRecordset
    Set Parametros_da_NFe = Nothing
-   Parametros_do_Produto.CloseRecordSet
+   Parametros_do_Produto.CloseRecordset
    Set Parametros_do_Produto = Nothing
-   Parametros_do_SPED_ECF.CloseRecordSet
+   Parametros_do_SPED_ECF.CloseRecordset
    Set Parametros_do_SPED_ECF = Nothing
 
    'fecha arquivos de controle de senhas
@@ -4624,7 +4624,7 @@ Private Sub MostraMainForm()
 End Sub
 
 'pega senha para acesso ao sistema
-Public Sub PegaLogin(vgOque As Integer)
+Public Sub PegaLogin(vgOQue As Integer)
    If vgOQue <> PEGA_SENHA_INICIAL Then
       vgPWUsuario$ = ""                           'zera variáveis públicas...
       vgPWGrupo$ = ""
@@ -4635,10 +4635,10 @@ Public Sub PegaLogin(vgOque As Integer)
    mdiIRRIG.Visible = False                       'esconde form principal
    Load frmControle                               'carrega form de controle na memória
    With frmControle                               'vamos trabalhar no form de controle...
-      .Iniciaform vgOque                          'diz ao form o que queremos
+      .IniciaForm vgOQue                          'diz ao form o que queremos
    End With
-   UnLoad frmControle                             'vamos forçar a descarregar sempre
-   Set frmControle = Nothing           
+   Unload frmControle                             'vamos forçar a descarregar sempre
+   Set frmControle = Nothing
 
    'se usuário ok, habilita temporizador para apresentar o form principal
    If vgPWUsuario$ <> "" Then                     'digitou a senha
@@ -4648,7 +4648,7 @@ End Sub
 
 'Faz verificação de permissões para menus
 Public Sub VerificaMenus()
-   Dim vgOk As Integer, x As String, i As Long, p As Long, vgPerms As String, vgRsTemp As GRecordset
+   Dim vgOk As Integer, x As String, i As Long, p As Long, vgPerms As String, vgRsTemp As GRecordSet
    vgOk = True                                       'variável de retorno
    On Error Resume Next
    vgPerms = "|"
@@ -4667,7 +4667,7 @@ Public Sub VerificaMenus()
             If p = 0 Or vgPWGrupo = UCase$(LoadGasString(11166)) Then 'nao tem registro para controle de permissão para esse menu, vamos criar...
                vgOk = True
             Else
-               vgOk = (Val(Mid(vgPerms, p + Len(x), 1)) <> 0)     
+               vgOk = (Val(Mid(vgPerms, p + Len(x), 1)) <> 0)
             End If
             mdiIRRIG.Controls(i).Visible = vgOk
          End If
@@ -4911,8 +4911,8 @@ Public Function Permitido(ByVal vgNomeTab As String, ByVal vgAcao As Integer) As
          vgOk = Val(Mid$(x$, vgAcao, 1)) <> 0                                  'se posição da ação é 0 não tem permissão
       Else
          vgOk = 0
-         vgOk = vgOk + Val(Mid$(x$, 1, 1)) * 2^ 1 + Val(Mid$(x$, 2, 1)) * 2^ 2
-         vgOk = vgOk + Val(Mid$(x$, 3, 1)) * 2^ 3 + Val(Mid$(x$, 4, 1)) * 2^ 4
+         vgOk = vgOk + Val(Mid$(x$, 1, 1)) * 2 ^ 1 + Val(Mid$(x$, 2, 1)) * 2 ^ 2
+         vgOk = vgOk + Val(Mid$(x$, 3, 1)) * 2 ^ 3 + Val(Mid$(x$, 4, 1)) * 2 ^ 4
       End If
    End If
    Permitido = vgOk                               'retorna o que achou
@@ -4929,7 +4929,7 @@ Public Function PermitidoMenu(ByVal vgTagMenu As String) As Integer
       Exit Function
    End If
 
-   x$ = Encripta$("M." + Parse((vgTagMenu$), "|" )) 'identificacao do menu
+   x$ = Encripta$("M." + Parse((vgTagMenu$), "|"))  'identificacao do menu
    If vgRsPwTabelas.PTab("Chave tabelas", vgIDSistema$, Encripta$(vgPWGrupo$), x$) Then 'se achou...
       x$ = Decripta$(vgRsPwTabelas![PW~Permissoes])                                     'permissões: 01001
       vgOk = Val(Mid$(x$, 1, 1)) <> 0             'se posição é 0 não tem permissão
@@ -4993,7 +4993,7 @@ Public Sub FocoNoPriControle(F As Form)
       End If
    Next                                                  'próximo controle
    If i <> 999 Then                                      'se encontrou o 10. controle
-      mdiIRRIG.picAux.Move - 6000, - 6000
+      mdiIRRIG.picAux.Move -6000, -6000
       mdiIRRIG.picAux.Visible = True
       mdiIRRIG.picAux.SetFocus
       mdiIRRIG.picAux.Visible = False
@@ -5167,7 +5167,7 @@ Incrementa:
             vgValor = vgSeq                       'pega o default
          Else
             If vgTp = TP_CARACTER Then            'vamos somar o sequencial
-               vgValor = Ltrim$(str$(Val(![SYS~Valor]) + vgSeq)) 'string
+               vgValor = LTrim$(Str$(Val(![SYS~Valor]) + vgSeq)) 'string
             ElseIf vgTp = TP_DATA_HORA Then
                If InStr(![SYS~Valor], ".") > 0 Then              'se valor veio de reparação de bd, trata o formato yyyy-mm-dd hh:mm:ss.0000
                   vgValor = CDate(Mid(![SYS~Valor], 1, InStr(![SYS~Valor], ".") - 1)) + vgSeq 'data
@@ -5181,7 +5181,7 @@ Incrementa:
          ![SYS~ValorAnterior] = ![SYS~Valor]                                                  'grava valor anterior
          ![SYS~Valor] = CStr(vgValor)             'grava o novo valor
          ![SYS~Estacao] = vgNomeEstacao$          'estacao de trabalho
-         ![SYS~Identificacao] = CStr$(vgAppID)    'estacao de trabalho
+         ![SYS~Identificacao] = CStr(vgAppID)     'estacao de trabalho
          ![SYS~Pendentes] = ![SYS~Pendentes] + 1
          .Update                                  'grava na tabela
       End If
@@ -5268,7 +5268,7 @@ TentaDeNovo:
       vgOk = (.NoMatch = False)                                    'se achou
       If vgOk Then
          .Edit                                    'vamos editá-lo
-         If ![SYS~Estacao] = vgNomeEstacao$ And ![SYS~Identificacao] = CStr$(vgAppID) Then 'foi a propia estacao
+         If ![SYS~Estacao] = vgNomeEstacao$ And ![SYS~Identificacao] = CStr(vgAppID) Then  'foi a propia estacao
             ![SYS~Valor] = ![SYS~ValorAnterior]                                            'volta o valor
             ![SYS~Identificacao] = " "            'limpa para não fazer denovo
          End If
@@ -5311,7 +5311,7 @@ Public Sub GravaParametrosForm(F As Form)
    End If
    vgBrowseID$ = x$
    If F.vgTipo = TP_BROWSE Then
-      vgBrowseID$ = vgBrowseID$ + F.vgTitConsulta + str$(F.vgFromFormID)
+      vgBrowseID$ = vgBrowseID$ + F.vgTitConsulta + Str$(F.vgFromFormID)
    End If
    If F.WindowState = vbNormal Then               'gravar só em estado normal
       GravaNoIni x$, "Left", CStr(F.Left), vgNomeINI$ 'coordenada do form, esquerda
@@ -5321,10 +5321,10 @@ Public Sub GravaParametrosForm(F As Form)
    End If
    If F.vgCaracteristica <> F_COMUM Then
       GravaNoIni x$, "Ultimo filtro", F.vgUltimoFiltro, vgNomeINI$ 'salva ultimo filtro
-      If Len(F.vgUltimoFiltro) > 0 Then k$=F.vgUltimoFiltroComTit Else k$=""
+      If Len(F.vgUltimoFiltro) > 0 Then k$ = F.vgUltimoFiltroComTit Else k$ = ""
       GravaNoIni x$, "Ultimo filtro Com Titulo", k$, vgNomeINI$
       GravaNoIni x$, "Ultima ordem", F.vgUltimaOrdem, vgNomeINI$   'salva ultima ordem
-      If Len(F.vgUltimaOrdem) > 0 Then k$ = F.vgUltimaOrdemComTit Else k$=""
+      If Len(F.vgUltimaOrdem) > 0 Then k$ = F.vgUltimaOrdemComTit Else k$ = ""
       GravaNoIni x$, "Ultima ordem Com Titulo", k$, vgNomeINI$
       GravaNoIni x$, "Em browse", CStr(F.vgEmBrowse), vgNomeINI$   'está no grid?
       GravaNoIni x$, "Coord ant", F.Tag, vgNomeINI$                'coordenadas ateriores
@@ -5358,11 +5358,11 @@ Public Sub GravaParametrosForm(F As Form)
                'grava no ini a largura das colunas do grid
                If F.grdBrowse.SaveGridCols Then
                   For j = 1 To F.grdBrowse.Columns.Count
-                     GravaNoIni vgBrowseID$, "Larg grdBrowse" + str$(j), CStr(F.grdBrowse.ColumnWidth(j)), vgNomeINI$
-                     GravaNoIni vgBrowseID$, "SumCol grdBrowse" + str$(j), CStr(F.grdBrowse.ShowSumCol(j)), vgNomeINI$
-                     GravaNoIni vgBrowseID$, "AvgCol grdBrowse" + str$(j), CStr(F.grdBrowse.ShowAvgCol(j)), vgNomeINI$
-                     GravaNoIni vgBrowseID$, "MaxCol grdBrowse" + str$(j), CStr(F.grdBrowse.ShowMaxCol(j)), vgNomeINI$
-                     GravaNoIni vgBrowseID$, "MinCol grdBrowse" + str$(j), CStr(F.grdBrowse.ShowMinCol(j)), vgNomeINI$ 
+                     GravaNoIni vgBrowseID$, "Larg grdBrowse" + Str$(j), CStr(F.grdBrowse.ColumnWidth(j)), vgNomeINI$
+                     GravaNoIni vgBrowseID$, "SumCol grdBrowse" + Str$(j), CStr(F.grdBrowse.ShowSumCol(j)), vgNomeINI$
+                     GravaNoIni vgBrowseID$, "AvgCol grdBrowse" + Str$(j), CStr(F.grdBrowse.ShowAvgCol(j)), vgNomeINI$
+                     GravaNoIni vgBrowseID$, "MaxCol grdBrowse" + Str$(j), CStr(F.grdBrowse.ShowMaxCol(j)), vgNomeINI$
+                     GravaNoIni vgBrowseID$, "MinCol grdBrowse" + Str$(j), CStr(F.grdBrowse.ShowMinCol(j)), vgNomeINI$
                   Next
                End If
 
@@ -5380,12 +5380,12 @@ Public Sub GravaParametrosForm(F As Form)
             Err.Clear                                                  'não tem cancela o erro
          Else
             For j = 0 To F.Grid.Count - 1                              'grava altura de todos os grids filhos
-               GravaNoIni x$, "Alt grd" + str$(j), CStr(F.Grid(j).RowHeight), vgNomeINI$
+               GravaNoIni x$, "Alt grd" + Str$(j), CStr(F.Grid(j).RowHeight), vgNomeINI$
                
                'grava no ini flags de popup para gravações de layout do grid
-               GravaNoIni x$, "Save Bars" + str$(j), CStr(F.Grid(j).SaveGridBars), vgNomeINI$
-               GravaNoIni x$, "Save Cols" + str$(j), CStr(F.Grid(j).SaveGridCols), vgNomeINI$
-               GravaNoIni x$, "Save Stripes" + str$(j), CStr(F.Grid(j).SaveGridStripes), vgNomeINI$
+               GravaNoIni x$, "Save Bars" + Str$(j), CStr(F.Grid(j).SaveGridBars), vgNomeINI$
+               GravaNoIni x$, "Save Cols" + Str$(j), CStr(F.Grid(j).SaveGridCols), vgNomeINI$
+               GravaNoIni x$, "Save Stripes" + Str$(j), CStr(F.Grid(j).SaveGridStripes), vgNomeINI$
 
                'salva situação atual das barras do grid
                If F.Grid(j).SaveGridBars Then
@@ -5401,11 +5401,11 @@ Public Sub GravaParametrosForm(F As Form)
                'grava no ini a largura das colunas do grid
                If F.Grid(j).SaveGridCols Then                          'tag do grid = 1, significa que quer gravar
                   For i = 1 To F.Grid(j).Columns.Count
-                     GravaNoIni x$, "Larg grd" + str$(j) + str$(i), CStr(F.Grid(j).ColumnWidth(i)), vgNomeINI$
-                     GravaNoIni x$, "SumCol grd" + str$(j) + str$(i), CStr(F.Grid(j).ShowSumCol(i)), vgNomeINI$
-                     GravaNoIni x$, "AvgCol grd" + str$(j) + str$(i), CStr(F.Grid(j).ShowAvgCol(i)), vgNomeINI$
-                     GravaNoIni x$, "MaxCol grd" + str$(j) + str$(i), CStr(F.Grid(j).ShowMaxCol(i)), vgNomeINI$
-                     GravaNoIni x$, "MinCol grd" + str$(j) + str$(i), CStr(F.Grid(j).ShowMinCol(i)), vgNomeINI$
+                     GravaNoIni x$, "Larg grd" + Str$(j) + Str$(i), CStr(F.Grid(j).ColumnWidth(i)), vgNomeINI$
+                     GravaNoIni x$, "SumCol grd" + Str$(j) + Str$(i), CStr(F.Grid(j).ShowSumCol(i)), vgNomeINI$
+                     GravaNoIni x$, "AvgCol grd" + Str$(j) + Str$(i), CStr(F.Grid(j).ShowAvgCol(i)), vgNomeINI$
+                     GravaNoIni x$, "MaxCol grd" + Str$(j) + Str$(i), CStr(F.Grid(j).ShowMaxCol(i)), vgNomeINI$
+                     GravaNoIni x$, "MinCol grd" + Str$(j) + Str$(i), CStr(F.Grid(j).ShowMinCol(i)), vgNomeINI$
                   Next
                End If
    
@@ -5418,10 +5418,10 @@ Public Sub GravaParametrosForm(F As Form)
       End If
    ElseIf F.vgTipo = TP_RELAT Then                                     'form de relatorio
       GravaNoIni x$, "Ultimo filtro", F.vgUltimoFiltro, vgNomeINI$     'salva ultimo filtro
-      If Len(F.vgUltimoFiltro) > 0 Then k$=F.vgUltimoFiltroComTit Else k$=""
+      If Len(F.vgUltimoFiltro) > 0 Then k$ = F.vgUltimoFiltroComTit Else k$ = ""
       GravaNoIni x$, "Ultimo filtro Com Titulo", k$, vgNomeINI$
       GravaNoIni x$, "Ultima ordem", F.vgUltimaOrdem, vgNomeINI$       'salva ultima ordem
-      If Len(F.vgUltimaOrdem) > 0 Then k$ = F.vgUltimaOrdemComTit Else k$=""
+      If Len(F.vgUltimaOrdem) > 0 Then k$ = F.vgUltimaOrdemComTit Else k$ = ""
       GravaNoIni x$, "Ultima ordem Com Titulo", k$, vgNomeINI$
    End If
 End Sub
@@ -5443,7 +5443,7 @@ Public Sub LeParametrosForm(F As Form)
    End If
    vgBrowseID$ = x$
    If F.vgTipo = TP_BROWSE Then
-      vgBrowseID$ = vgBrowseID$ + F.vgTitConsulta + str$(F.vgFromFormID)
+      vgBrowseID$ = vgBrowseID$ + F.vgTitConsulta + Str$(F.vgFromFormID)
    End If
    F.Left = PegaIntDoIni(x$, "Left", F.Left, vgNomeINI$) 'posição do form
    F.Top = PegaIntDoIni(x$, "Top", F.Top, vgNomeINI$)
@@ -5495,17 +5495,17 @@ Public Sub LeParametrosForm(F As Form)
             'le largura das colunas do grid
             If F.grdBrowse.SaveGridCols Then                                        'tag do grid = 1, significa que quer le
                For j = 1 To F.grdBrowse.Columns.Count
-                  k$ = PegaStrDoIni(vgBrowseID$, "Larg grdBrowse" + str$(j), vgNomeINI$)
+                  k$ = PegaStrDoIni(vgBrowseID$, "Larg grdBrowse" + Str$(j), vgNomeINI$)
                   If Len(k$) > 0 Then
                      F.grdBrowse.ColumnWidth(j) = Val(k$)                           'acerta tamanho da coluna
                   End If
-                  k$ = PegaStrDoIni(vgBrowseID$, "SumCol grdBrowse" + str$(j), vgNomeINI$)
+                  k$ = PegaStrDoIni(vgBrowseID$, "SumCol grdBrowse" + Str$(j), vgNomeINI$)
                   If Len(k$) > 0 Then F.grdBrowse.ShowSumCol(j) = CBool(k$)
-                  k$ = PegaStrDoIni(vgBrowseID$, "AvgCol grdBrowse" + str$(j), vgNomeINI$)
+                  k$ = PegaStrDoIni(vgBrowseID$, "AvgCol grdBrowse" + Str$(j), vgNomeINI$)
                   If Len(k$) > 0 Then F.grdBrowse.ShowAvgCol(j) = CBool(k$)
-                  k$ = PegaStrDoIni(vgBrowseID$, "MaxCol grdBrowse" + str$(j), vgNomeINI$)
+                  k$ = PegaStrDoIni(vgBrowseID$, "MaxCol grdBrowse" + Str$(j), vgNomeINI$)
                   If Len(k$) > 0 Then F.grdBrowse.ShowMaxCol(j) = CBool(k$)
-                  k$ = PegaStrDoIni(vgBrowseID$, "MinCol grdBrowse" + str$(j), vgNomeINI$)
+                  k$ = PegaStrDoIni(vgBrowseID$, "MinCol grdBrowse" + Str$(j), vgNomeINI$)
                   If Len(k$) > 0 Then F.grdBrowse.ShowMinCol(j) = CBool(k$)
                Next
             End If
@@ -5532,52 +5532,52 @@ Public Sub LeParametrosForm(F As Form)
                k$ = PegaStrDoIni(x$, "Alt grd" + Str$(j), vgNomeINI$)
                If Len(k$) > 0 Then
                   F.Grid(j).RowHeight = Val(k$)   'restaura altura da linha do grid
-               End If 
+               End If
                
                'lê flags para salvar layout do grid
-               k$ = PegaStrDoIni(x$, "Save Bars" + str$(j), vgNomeINI$) 'salvar barras
+               k$ = PegaStrDoIni(x$, "Save Bars" + Str$(j), vgNomeINI$) 'salvar barras
                If Len(k$) Then F.Grid(j).SaveGridBars = CBool(k$)
-               k$ = PegaStrDoIni(x$, "Save Cols" + str$(j), vgNomeINI$) 'salvar colunas
+               k$ = PegaStrDoIni(x$, "Save Cols" + Str$(j), vgNomeINI$) 'salvar colunas
                If Len(k$) Then F.Grid(j).SaveGridCols = CBool(k$)
-               k$ = PegaStrDoIni(x$, "Save Stripes" + str$(j), vgNomeINI$) 'salvar zebrado
+               k$ = PegaStrDoIni(x$, "Save Stripes" + Str$(j), vgNomeINI$) 'salvar zebrado
                If Len(k$) Then F.Grid(j).SaveGridStripes = CBool(k$)
 
                'se está salvando as barras do grid, lê o que está gravado
                If F.Grid(j).SaveGridBars Then
-                  k$ = PegaStrDoIni(x$, "Show filter bar grd"+ str$(j), vgNomeINI$) 'barra de filtro
+                  k$ = PegaStrDoIni(x$, "Show filter bar grd" + Str$(j), vgNomeINI$) 'barra de filtro
                   If Len(k$) Then F.Grid(j).ShowFilterBar = CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show status bar grd"+ str$(j), vgNomeINI$) 'barra de status
+                  k$ = PegaStrDoIni(x$, "Show status bar grd" + Str$(j), vgNomeINI$) 'barra de status
                   If Len(k$) Then F.Grid(j).HideStatus = Not CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show left bar grd"+ str$(j), vgNomeINI$)   'barra lateral esquerda
+                  k$ = PegaStrDoIni(x$, "Show left bar grd" + Str$(j), vgNomeINI$)  'barra lateral esquerda
                   If Len(k$) Then F.Grid(j).HideLeftBar = Not CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show sum bar grd"+ str$(j), vgNomeINI$)    'barra de somatório
+                  k$ = PegaStrDoIni(x$, "Show sum bar grd" + Str$(j), vgNomeINI$)   'barra de somatório
                   If Len(k$) Then F.Grid(j).ShowSumBar = CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show min bar grd"+ str$(j), vgNomeINI$)    'barra de mínimo
+                  k$ = PegaStrDoIni(x$, "Show min bar grd" + Str$(j), vgNomeINI$)   'barra de mínimo
                   If Len(k$) Then F.Grid(j).ShowMinBar = CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show max bar grd"+ str$(j), vgNomeINI$)    'barra de máximo
+                  k$ = PegaStrDoIni(x$, "Show max bar grd" + Str$(j), vgNomeINI$)   'barra de máximo
                   If Len(k$) Then F.Grid(j).ShowMaxBar = CBool(k$)
-                  k$ = PegaStrDoIni(x$, "Show avg bar grd"+ str$(j), vgNomeINI$)    'barra de média
+                  k$ = PegaStrDoIni(x$, "Show avg bar grd" + Str$(j), vgNomeINI$)   'barra de média
                   If Len(k$) Then F.Grid(j).ShowAvgBar = CBool(k$)
                End If
                
                'se está salvando o zebrado, lê o que está gravado
                If F.Grid(j).SaveGridStripes Then
-                  k$ = PegaStrDoIni(x$, "Stripes grd" + str$(j), vgNomeINI$)        'zebrado
+                  k$ = PegaStrDoIni(x$, "Stripes grd" + Str$(j), vgNomeINI$)        'zebrado
                   If Len(k$) Then F.Grid(j).Stripes = CBool(k$)
                End If
 
                'le largura das colunas do grid se elas estão sendo gravadas
                If F.Grid(j).SaveGridCols Then
                   For i = 1 To F.Grid(j).Columns.Count
-                     k$ = PegaStrDoIni(x$, "Larg grd" + str$(j) + str$(i), vgNomeINI$)
+                     k$ = PegaStrDoIni(x$, "Larg grd" + Str$(j) + Str$(i), vgNomeINI$)
                      If Len(k$) > 0 Then F.Grid(j).ColumnWidth(i) = Val(k$)
-                     k$ = PegaStrDoIni(x$, "SumCol grd" + str$(j) + str$(i), vgNomeINI$)
+                     k$ = PegaStrDoIni(x$, "SumCol grd" + Str$(j) + Str$(i), vgNomeINI$)
                      If Len(k$) > 0 Then F.Grid(j).ShowSumCol(i) = CBool(k$)
-                     k$ = PegaStrDoIni(x$, "AvgCol grd" + str$(j) + str$(i), vgNomeINI$)
+                     k$ = PegaStrDoIni(x$, "AvgCol grd" + Str$(j) + Str$(i), vgNomeINI$)
                      If Len(k$) > 0 Then F.Grid(j).ShowAvgCol(i) = CBool(k$)
-                     k$ = PegaStrDoIni(x$, "MaxCol grd" + str$(j) + str$(i), vgNomeINI$)
+                     k$ = PegaStrDoIni(x$, "MaxCol grd" + Str$(j) + Str$(i), vgNomeINI$)
                      If Len(k$) > 0 Then F.Grid(j).ShowMaxCol(i) = CBool(k$)
-                     k$ = PegaStrDoIni(x$, "MinCol grd" + str$(j) + str$(i), vgNomeINI$)
+                     k$ = PegaStrDoIni(x$, "MinCol grd" + Str$(j) + Str$(i), vgNomeINI$)
                      If Len(k$) > 0 Then F.Grid(j).ShowMinCol(i) = CBool(k$)
                   Next
                End If
@@ -5629,7 +5629,7 @@ Public Sub InicializaFiltro(F As Form)
          End If
       End If
    ElseIf F.vgTipo = TP_BROWSE Then
-      With F.grdBrowse.Recordset
+      With F.grdBrowse.RecordSet
          If .RsSource <> "" Then
             vgPosicReg = (.RecordCount > 0 And .EOF = False And .BOF = False)
          End If
@@ -5649,7 +5649,7 @@ Public Sub InicializaFiltro(F As Form)
             End If
          Next
       End If
-      On Error Goto 0
+      On Error GoTo 0
       
       F.vgTb.ExternalOrderBy = vgOrder$
       F.vgTb.Where = vgWhere$
@@ -5702,7 +5702,7 @@ Public Sub InicializaFiltro(F As Form)
       F.vgOrdemAtual = vgOrder
    End If
    F.vgSQL = vgNovaSQL$
-   vgBotoesOk = vgBOK                             'retorna situacao
+   vgBotoesOK = vgBOK                             'retorna situacao
 End Sub
 
 'Inicializa os controles de dados, filtros, variáveis públicas e permissões para o formulário
@@ -5787,7 +5787,7 @@ End Sub
 'Inicializa o sistema mostrando logotipo, pega nome da estação, diretório de trabalho, senhas, etc..
 Public Sub Main()
    Dim j As Long, i As Long, vgDCon As String, p As String * 50
-   vgDirEXE$ = App.Path                           'diretório onde a aplicação está sendo executada
+   vgDirEXE$ = App.path                           'diretório onde a aplicação está sendo executada
    If Right(vgDirEXE$, 1) <> "\" Then             'se diretório da aplicação não for o
       vgDirEXE$ = vgDirEXE$ + "\"                 'raiz, coloca "\" no fim do path
    End If
@@ -5834,11 +5834,11 @@ Public Sub Main()
    vgAliasDb$(1) = "IRRIGACAO"
    vgSenhaLog(1) = "IRRIGACAOPLIS"
    vgTiposPermDb(1) = 8
-   vgSenhaLog(1) = Chr$( 105 ) + Chr$( 114 ) + Chr$( 114 ) + Chr$( 105 ) + Chr$( 103 ) + Chr$( 97 ) + Chr$( 99 ) + Chr$( 97 ) + Chr$( 111 ) + Chr$( 112 ) + Chr$( 108 ) + Chr$( 105 ) + Chr$( 115 )  'irrigacaoplis
+   vgSenhaLog(1) = Chr$(105) + Chr$(114) + Chr$(114) + Chr$(105) + Chr$(103) + Chr$(97) + Chr$(99) + Chr$(97) + Chr$(111) + Chr$(112) + Chr$(108) + Chr$(105) + Chr$(115)                            'irrigacaoplis
    vgNomeCupom$ = vgDirEXE$ + "CUPOM.ECF"         'espelho do último cupom fiscal...
    i = GetComputerName(p$, Len(p$))               'tenta pega o nome da estacao
    If i > 0 Then                                  'ok! pega o mome da estação
-      vgNomeEstacao$ = Left$(p$, Instr(p$ + Chr$(0), Chr$(0)) - 1)
+      vgNomeEstacao$ = Left$(p$, InStr(p$ + Chr$(0), Chr$(0)) - 1)
    Else                                           'o windows não sabe quem é!!!
       vgNomeEstacao$ = ""
    End If
@@ -5907,7 +5907,7 @@ Public Sub Main()
    mdiIRRIG.PoeTiraBarra
    On Error Resume Next                               'pode não ser um impressora convensional
    Printer.FontName = "Courier New"                   'ajusta tipo da fontes impressora
-   vgImpConv = (Err=0)                                'impressora convêncional?
+   vgImpConv = (Err = 0)                              'impressora convêncional?
    If Not vgImpConv Then                              'não pode configurar...
       Beep
       PrepBotoes mdiIRRIG, mdiIRRIG.vgSituacao
@@ -5929,11 +5929,11 @@ Public Sub Main()
 
    PegaLogin PEGA_SENHA_INICIAL                       'pega senha, 1a. vez...
    If vgPWUsuario$ = "" Then                          'não disse quem é...
-      UnLoad mdiIRRIG                                 'descarrega form principal
+      Unload mdiIRRIG                                 'descarrega form principal
       FinalizaAplicacao                               'finaliza a aplicação
       End
    End If
-      PrepBotoes mdiIRRIG, mdiIRRIG.vgSituacao 
+      PrepBotoes mdiIRRIG, mdiIRRIG.vgSituacao
    GeraLogAcao LoadGasString(293)
 End Sub
 
@@ -5953,7 +5953,7 @@ Public Function LeInfDb(Optional vgTipo As EnumDataBaseType = -1) As Boolean
       vgServerDb(1) = PegaStrDoIni(vgNomeEstacao$ + "Geral", "Server de " + vgAliasDb(1), vgNomeINI$)
       vgTrustConnDb(1) = PegaIntDoIni(vgNomeEstacao$ + "Geral", "Trusted Connection de " + vgAliasDb(1), 0, vgNomeINI$)
       vgUsuarioID(1) = Decripta$(PegaStrDoIni(vgNomeEstacao$ + "Geral", "Usuário de " + vgAliasDb(1), vgNomeINI$))
-      vgSenhaDb(1) = DeCripta$(PegaStrDoIni(vgNomeEstacao$ + "Geral", "Senha de " + vgAliasDb(1), vgNomeINI$))
+      vgSenhaDb(1) = Decripta$(PegaStrDoIni(vgNomeEstacao$ + "Geral", "Senha de " + vgAliasDb(1), vgNomeINI$))
       vgProviderDb(1) = PegaStrDoIni(vgNomeEstacao$ + "Geral", "Provider de " + vgAliasDb(1), vgNomeINI$)
       vgDriverDb(1) = PegaStrDoIni(vgNomeEstacao$ + "Geral", "Driver de " + vgAliasDb(1), vgNomeINI$)
       vgStrConnectionDb(1) = PegaStrDoIni(vgNomeEstacao$ + "Geral", "String Connection de " + vgAliasDb(1), vgNomeINI$)
@@ -5975,7 +5975,7 @@ End Sub
 
 'cria os registros de senhas para as tabelas
 Public Function CriaUsuarioAdm() As Boolean
-   Dim vgTb As New GRecordSet, vgTbG As New GRecordset
+   Dim vgTb As New GRecordSet, vgTbG As New GRecordSet
                
    On Error GoTo DeuErro                              'vamos esperar os erros...
    Set vgTbG = vgDb.OpenRecordSet("SELECT * FROM PW~Grupos WHERE [PW~Nome]='" & Encripta$(UCase$(LoadGasString(11166))) & "'") 'abre a tabela de grupos
@@ -6072,21 +6072,21 @@ Public Function PegaErro() As String
          x$ = LoadGasString(72)
       Case -2147352571                            'tipo de dado inválido
          x$ = LoadGasString(71)
-      Case  -2147217900, -2147217973              'ja existe/erro de integridade
+      Case -2147217900, -2147217973               'ja existe/erro de integridade
          x$ = LoadGasString(65)
       Case 3600
          x$ = LoadGasString(121)
       Case 3601
          x$ = LoadGasString(121)
          CErr.Fatal = True
-      Case 3800      
+      Case 3800
          If Len(CErr.Mensagem) = 0 Then
             x$ = LoadGasPicture(124)              'erro ao gravar
-         End If 
+         End If
       Case 3801
          x$ = LoadGasPicture(123)                 'erro ao excluir
    End Select
-   PegaErro = x$ 
+   PegaErro = x$
 End Function
 
 'habilita/desabilita e troca icones dos botões da barra de ferramenta
@@ -6110,7 +6110,7 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
          vgHaRegNaoInc = False                      'não pode esta incluindo...
       End If
    ElseIf F.vgTipo = TP_BROWSE Then
-      vgHaRegNaoInc = ((F.grdBrowse.Recordset.RecordCount > 0 And F.grdBrowse.Recordset.EOF = False) And vgAcao = ACAO_NAVEGANDO) 'tem registro na tabela e não está editando
+      vgHaRegNaoInc = ((F.grdBrowse.RecordSet.RecordCount > 0 And F.grdBrowse.RecordSet.EOF = False) And vgAcao = ACAO_NAVEGANDO) 'tem registro na tabela e não está editando
    Else                                           'se não é form de dados
       vgHaRegNaoInc = False                       'não pode esta incluindo...
    End If
@@ -6143,7 +6143,7 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       End If
       .botProcura.Enabled = False                 'desabilita botões para depois
       .Menu_Procura.Enabled = False
-      If F.vgTipo = TP_TABELA Or F.vgTipo = TP_PARAMETROS Then 'so tabela tem repetição 
+      If F.vgTipo = TP_TABELA Or F.vgTipo = TP_PARAMETROS Then 'so tabela tem repetição
          .Menu_Repeticao.Enabled = (F.vgRepeticao > -10 And F.vgTipo <> TP_PARAMETROS)
          .Menu_Paltera.Enabled = (F.vgTemAlteracao And F.vgAlterar > -10 And vgAcao <> ACAO_INCLUINDO)
             .Menu_Repeticao.Checked = vbUnchecked
@@ -6156,7 +6156,7 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       Else
          .Menu_Repeticao.Enabled = False
          .Menu_Paltera.Enabled = False
-      End If  
+      End If
       .botPrimeiro.Enabled = False                             'verificar se tem necessidade
       .Menu_Primeiro.Enabled = False
       .botAnterior.Enabled = False                             'de liga-los
@@ -6236,18 +6236,18 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       .Menu_1081(1).Visible = (False And (Permitido("Nota Fiscal", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1081(1).Tag)))
       .Menu_1081(0).Visible = (False And (PermitidoMenu(.Menu_1081(0).Tag)))
       .Menu_1081(2).Visible = (False And (PermitidoMenu(.Menu_1081(2).Tag)))
-      .Menu_875(0).Visible = (EstaEMIDE And (Permitido("Produtos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_875(0).Tag)))
+      .Menu_875(0).Visible = (EstaEmIDE And (Permitido("Produtos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_875(0).Tag)))
       .Menu_1020(2).Visible = (False And (Permitido("Conjuntos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(2).Tag)))
       .Menu_1081(4).Visible = (False And (PermitidoMenu(.Menu_1081(4).Tag)))
       .Menu_915(0).Visible = (EstaEmIDE And (PermitidoMenu(.Menu_915(0).Tag)))
-      .Menu_875(1).Visible = (EstaEMIDE And (Permitido("Produtos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_875(1).Tag)))
+      .Menu_875(1).Visible = (EstaEmIDE And (Permitido("Produtos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_875(1).Tag)))
       .Menu_821(1).Visible = (False And (PermitidoMenu(.Menu_821(1).Tag)))
       .Menu_1020(21).Visible = (False And (PermitidoMenu(.Menu_1020(21).Tag)))
       .Menu_1047(5).Visible = (EstaEmIDE And (PermitidoMenu(.Menu_1047(5).Tag)))
       .Menu_639(3).Visible = (False And (Permitido("Despesas", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_639(3).Tag)))
       .Menu_1020(17).Visible = (False And (Permitido("Baixa do Estoque Contábil", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(17).Tag)))
       .Menu_1020(18).Visible = (False And (Permitido("Produtos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(18).Tag)))
-      .Menu_663(3).Visible = (EstaEmIDE Or vgPwUsuario = "ARMANDO" And (PermitidoMenu(.Menu_663(3).Tag)))
+      .Menu_663(3).Visible = (EstaEmIDE Or vgPWUsuario = "ARMANDO" And (PermitidoMenu(.Menu_663(3).Tag)))
       .Menu_1020(13).Visible = (False And (Permitido("Baixa do Estoque Contábil", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(13).Tag)))
       .Menu_1020(3).Visible = (False And (Permitido("Baixa do Estoque Contábil", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(3).Tag)))
       .Menu_1020(19).Visible = (False And (Permitido("Baixa do Estoque Contábil", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(19).Tag)))
@@ -6274,7 +6274,7 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       .Menu_1097(0).Visible = (vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_1097(0).Tag)))
       .Menu_1095(3).Visible = (vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_1095(3).Tag)))
       .Menu_1020(15).Visible = (False And (Permitido("Nota Fiscal", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1020(15).Tag)))
-      .Menu_783(2).Visible = (vgPWUsuario = "DAYANE" OR vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_783(2).Tag)))
+      .Menu_783(2).Visible = (vgPWUsuario = "DAYANE" Or vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_783(2).Tag)))
       .Menu_872(4).Visible = (False And (Permitido("Conta do Vendedor", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_872(4).Tag)))
       .Menu_1019(2).Visible = (False And (Permitido("Conjuntos", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1019(2).Tag)))
       .Menu_570(1).Visible = (vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_570(1).Tag)))
@@ -6300,10 +6300,10 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       .Menu_1397(1).Enabled = vgPWUsuario = "YGOR" Or vgPWUsuario = "ELIANE DE OLIVEIRA" Or vgPWUsuario = "EDUARDO THEODORO" Or vgPWUsuario = "ANA JULIA" Or vgPWUsuario = "MARIA FERNANDA"
       .Menu_1384(9).Visible = (False And (PermitidoMenu(.Menu_1384(9).Tag)))
       .Menu_1097(4).Enabled = vgPWUsuario = "YGOR"
-      .Menu_677(5).Visible = (vgPWUsuario = "RUBENS" OR vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_677(5).Tag)))
+      .Menu_677(5).Visible = (vgPWUsuario = "RUBENS" Or vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_677(5).Tag)))
       .Menu_1351(4).Visible = (False And (Permitido("Materia prima orçamento", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(4).Tag)))
       .Menu_1351(6).Visible = (False And (Permitido("Check list maquina", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(6).Tag)))
-      .Menu_1088(6).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ALEXANDRE" Or vgPWUsuario = "ALEXANDRA" Or vgPWUsuario = "JORGE RICARDO" And (Permitido("Projeto de Irrigação", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1088(6).Tag)))
+      .Menu_1088(6).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ALEXANDRE" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "LUANA" And (Permitido("Projeto de Irrigação", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1088(6).Tag)))
       .Menu_1095(7).Visible = (vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_1095(7).Tag)))
       .Menu_1351(7).Visible = (False And (PermitidoMenu(.Menu_1351(7).Tag)))
       .Menu_1351(8).Visible = (False And (Permitido("Simula estoque", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(8).Tag)))
@@ -6328,12 +6328,12 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
    vgBotoesOK = (vgAcao = ACAO_NAVEGANDO)                      'flag - se os botões não estão em edição
    F.vgSituacao = vgAcao                                       'coloca situação atual que se encontra o form
    If F.vgTipo = TP_TABELA Or F.vgTipo = TP_PARAMETROS Then
-      F.Executar PODE_ALTERAR 
+      F.Executar PODE_ALTERAR
    End If
 
    'coloca a qtde de registro da tabela
    On Error Resume Next                                        'este form tem data control
-   mdiIRRIG.labQtReg.Caption = Substitui$(vgMsgQtReg$, "#", Mid$(str$(F.vgTb.RecordCount), 2), SO_UM)
+   mdiIRRIG.labQtReg.Caption = Substitui$(vgMsgQtReg$, "#", Mid$(Str$(F.vgTb.RecordCount), 2), SO_UM)
    If Err Then                                                 'epa! este form não tem...
       Err.Clear                                                'reseta o erro
       mdiIRRIG.labQtReg.Visible = False                        'some com o label
@@ -6524,7 +6524,7 @@ Public Sub GeraLog(F As Form, vgSit As Integer, Optional IndGrid As Integer = -1
    vgSit = Abs(vgSit)
    On Error GoTo DeuErro
    vgSep$ = Chr(160)
-   vgArqLog$ = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\" ))
+   vgArqLog$ = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\"))
    vgArqLog$ = vgArqLog$ + vgAliasDb$(1) + ".Lag"
    vgRet = PreparaArqLog
    If vgRet > 0 Then Error vgRet
@@ -6573,7 +6573,7 @@ Public Sub GeraLog(F As Form, vgSit As Integer, Optional IndGrid As Integer = -1
       x$ = ""
       For i = 1 To vgDb.Tables(vgIdentTb$).Columns.Count
          If vgDb.Tables(vgIdentTb$).Columns(i).ColumnType <> TP_BINARIO And Not vgDb.Tables(vgIdentTb$).Columns(i).Hidden Then 'imagem ou campo invisivel não pode
-               If vgDadosAntTabela$(i) <> vgDadosPostTabela$(i) Or vgSit <> ACAO_EDITANDO Or InStr(vgCamposChave$, UCase(";" + vgDb.Tables(vgIdentTb$).Columns(i).Name + ";" )) > 0 Then
+               If vgDadosAntTabela$(i) <> vgDadosPostTabela$(i) Or vgSit <> ACAO_EDITANDO Or InStr(vgCamposChave$, UCase(";" + vgDb.Tables(vgIdentTb$).Columns(i).Name + ";")) > 0 Then
                   If vgDb.Tables(vgIdentTb$).Columns(i).ColumnType = TP_MEMO Then
                      GoSub PegaPos
                   End If
@@ -6595,7 +6595,7 @@ Public Sub GeraLog(F As Form, vgSit As Integer, Optional IndGrid As Integer = -1
                   End If
                End If
                vgLin$ = vgLin$ + x$
-         End If 
+         End If
          x$ = vgSep$
       Next
       If vgGrvLog Then
@@ -6603,7 +6603,7 @@ Public Sub GeraLog(F As Form, vgSit As Integer, Optional IndGrid As Integer = -1
          Open vgArqLog For Append As vgHandleArqLog
          Print #vgHandleArqLog, Cript$(vgLin$, vgSenhaLog$(1))
          Close vgHandleArqLog
-      End If 
+      End If
    End If
    Exit Sub
    
@@ -6655,13 +6655,13 @@ Public Sub GeraLogAcao(vgAcao As String)
        vgLin As String, vgSep As String
    On Error GoTo DeuErro
    vgSep$ = Chr(160)
-   vgArqLog$ = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\" ))
+   vgArqLog$ = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\"))
    vgArqLog$ = vgArqLog$ + vgAliasDb$(1) + ".Lag"
    vgRet = PreparaArqLog
    If vgRet > 0 Then Error vgRet
    vgLin$ = Format(Now, "yyyy/mm/dd hh:mm") + vgSep$                    'data e hora
    vgLin$ = vgLin$ + LoadGasString(1140) + vgSep$ + vgPWUsuario$ + vgSep$ 'nome da tabela e usuário
-   vgLin$ = vgLin$ + "[A]" + vgSep$ + vgAcao$                             'tipo da operação + ação 
+   vgLin$ = vgLin$ + "[A]" + vgSep$ + vgAcao$                             'tipo da operação + ação
    vgHandleArqLog = FreeFile
    Open vgArqLog For Append As vgHandleArqLog
    Print #vgHandleArqLog, Cript$(vgLin$, vgSenhaLog$(1))
@@ -6694,7 +6694,7 @@ Private Function PreparaArqLog() As Long
       For i = 1 To vgDb.Tables.Count                                                'para cada tabela do banco
          With vgDb.Tables(i)
             If Not .System And Not .Hidden Then                                     'não é tabela de sistema e se não for tabela invisível
-               vgLin$ = "*" + .Name + vgSep$                                        'nome da tabela 
+               vgLin$ = "*" + .Name + vgSep$                                        'nome da tabela
                For j = 1 To .Columns.Count                                          'para cada campo da tabela
                   If .Columns(j).ColumnType <> TP_BINARIO And Not .Columns(j).Hidden Then 'imagem ou campo invisivel não pode
                      If j > 1 Then vgLin$ = vgLin$ + ";"
