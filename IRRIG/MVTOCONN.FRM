@@ -5938,12 +5938,12 @@ Public Sub ContaEstoque(Produto As Long)
       Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
       
       If Saidas2.RecordCount > 0 Then
-         Estoque = Estoque - Saidas2!Qtd
-         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
+         Estoque = Estoque - Saidas2!qtd
+         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Saidas.RecordCount > 0 Then
-         Estoque = Estoque - Saidas!Qtd
-         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
+         Estoque = Estoque - Saidas!qtd
+         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Produtos![Material Adquirido de Terceiro] Then
          Comprados = QtdeRecebida(Produtos![Seqüência do Produto])
@@ -6123,7 +6123,7 @@ Private Sub AnalisaCondicoes()
       grdBrowse.AllowInsert = i
       .botInclui.Enabled = i
       .Menu_Inclui.Enabled = i
-      i = (Produtos_Mvto_Contabil_No.RecordCount = 0 And Conjuntos_Mvto_Contabil_N.RecordCount = 0 And Parcelas_mvto_contabil.RecordCount = 0) And Permitido(vgIdentTab, ACAO_EXCLUINDO)
+      i = (Produtos_Mvto_Contabil_No.RecordCount = 0 And Conjuntos_Mvto_Contabil_N.RecordCount = 0 And Parcelas_mvto_contabil.RecordCount = 0) And Permitido(vgIdentTab, ACAO_EXCLUINDO) Or vgPWUsuario = "JUCELI" Or vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO"
       If Err Then Err.Clear: i = False
       vgTemExclusao = i
       grdBrowse.AllowDelete = i
@@ -8064,7 +8064,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
          Grid(0).AllowEdit = (False)
       On Error Resume Next
-         Grid(0).AllowDelete = (vgPWUsuario = "YGOR") Or (vgPWUsuario = "JUCELI")
+         Grid(0).AllowDelete = (vgPWUsuario = "YGOR") Or (vgPWUsuario = "JUCELI") Or (vgPWUsuario = "JERONIMO")
       End If
       vgRetVal = ""
    ElseIf vgOq = ABRE_TABELA_GRID Then

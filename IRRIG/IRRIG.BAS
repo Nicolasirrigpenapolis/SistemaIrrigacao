@@ -1980,18 +1980,18 @@ DeuErro:
 End Function
 
 Public Function Capitaliza(ByVal texto As String) As String
-   Dim Exceções As Variant, Ind As Long, pos As Long
+   Dim Exceções As Variant, Ind As Long, Pos As Long
    texto = " " & LCase(texto) & " "
    Exceções = Array(" Com ", " Da ", " Das ", " De ", " Des ", " Do ", " Dos ", " E ")
-   For pos = 1 To Len(texto) - 1
-      Select Case Asc(Mid(texto, pos, 1))
+   For Pos = 1 To Len(texto) - 1
+      Select Case Asc(Mid(texto, Pos, 1))
          Case 10, 32 To 47, 58 To 64, 91 To 96, 123 To 127
-            Mid(texto, pos + 1, 1) = UCase(Mid(texto, pos + 1, 1))
+            Mid(texto, Pos + 1, 1) = UCase(Mid(texto, Pos + 1, 1))
       End Select
       For Ind = LBound(Exceções) To UBound(Exceções)
-         If Mid(texto, pos, Len(Exceções(Ind))) = Exceções(Ind) Then Mid(texto, pos, Len(Exceções(Ind))) = LCase(Mid(texto, pos, Len(Exceções(Ind))))
+         If Mid(texto, Pos, Len(Exceções(Ind))) = Exceções(Ind) Then Mid(texto, Pos, Len(Exceções(Ind))) = LCase(Mid(texto, Pos, Len(Exceções(Ind))))
       Next Ind
-   Next pos
+   Next Pos
    Capitaliza = Mid(texto, 2, Len(texto) - 2)
 End Function
 
@@ -2258,6 +2258,8 @@ Public Function ValorTotalDespesas(SeqDespesa As Long) As Boolean
    End If
    
 End Function
+
+
 
 'Oq: 1=CFOP, 2=Redução, 3=%ICMS, 4=%IPI, 5=CST, 6=BC do ICMS, 7=Valor do ICMS, 8=Valor do IPI, 9=Diferido, 10=PIS, 11=COFINS, 12=IVA, 13=BC do ICMS ST, 14=Valor do ICMS ST, 15=%ICMS ST
 'Tabela = 1-Produtos, 2-Conjuntos, 3-Peças
@@ -2999,6 +3001,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
    End Select
    
 End Function
+
 
 
 'Tabela: 1 = Produtos e Peças; 2 = Conjuntos; 3 = Despesas

@@ -6289,7 +6289,7 @@ Private Sub AjustaValores()
    Dim BaseSTProdutos As New GRecordSet, BaseSTConjuntos As New GRecordSet, BaseSTPecas As New GRecordSet
    Dim ValorProdutosUsados As New GRecordSet, ValorConjuntosUsados As New GRecordSet, ValorPecasUsadas As New GRecordSet
    Dim ValorProdutos As New GRecordSet, ValorConjuntos As New GRecordSet, ValorPecas As New GRecordSet, ValorServicos As New GRecordSet
-   Dim ValorPIS As New GRecordSet, ValorCOFINS As New GRecordSet, BaseServicos As New GRecordSet, ValorISS As New GRecordSet
+   Dim ValorPIS As New GRecordSet, valorCofins As New GRecordSet, BaseServicos As New GRecordSet, ValorISS As New GRecordSet
    Dim ValorNF As Currency, ValorII As New GRecordSet, ValorTributos As New GRecordSet
 
    On Error GoTo DeuErro
@@ -6351,7 +6351,7 @@ Private Sub AjustaValores()
                                      "SELECT [Peças da Nota Fiscal].[Valor do PIS] " & _
                                      "FROM [Nota Fiscal] INNER JOIN [Peças da Nota Fiscal] ON [Nota Fiscal].[Seqüência da Nota Fiscal] = [Peças da Nota Fiscal].[Seqüência da Nota Fiscal] " & _
                                      "WHERE [Nota Fiscal].[Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal & ") A") 'PIS
-   Set ValorCOFINS = vgDb.OpenRecordSet("SELECT SUM([Valor do Cofins]) COFINS " & _
+   Set valorCofins = vgDb.OpenRecordSet("SELECT SUM([Valor do Cofins]) COFINS " & _
                                         "FROM(" & _
                                         "SELECT [Produtos da Nota Fiscal].[Valor do Cofins] " & _
                                         "FROM [Nota Fiscal] INNER JOIN [Produtos da Nota Fiscal] ON [Nota Fiscal].[Seqüência da Nota Fiscal] = [Produtos da Nota Fiscal].[Seqüência da Nota Fiscal] " & _
@@ -6415,7 +6415,7 @@ Private Sub AjustaValores()
    vgDb.Execute "Update [Nota Fiscal] Set [Valor Total dos Serviços] = " & Substitui(ValorServicos!Total, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Serviços
    vgDb.Execute "Update [Nota Fiscal] Set [Valor Total da Nota Fiscal] = " & Substitui(CStr(ValorNF), ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor da Nota
    vgDb.Execute "Update [Nota Fiscal] Set [Valor Total do PIS] = " & Substitui(ValorPIS!pis, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor Total do PIS
-   vgDb.Execute "Update [Nota Fiscal] Set [Valor Total do COFINS] = " & Substitui(ValorCOFINS!cofins, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor Total do COFINS
+   vgDb.Execute "Update [Nota Fiscal] Set [Valor Total do COFINS] = " & Substitui(valorCofins!cofins, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor Total do COFINS
    vgDb.Execute "Update [Nota Fiscal] Set [Valor Total da Importação] = " & Substitui(ValorII!Total, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor do Imposto de Importação
    vgDb.Execute "Update [Nota Fiscal] Set [Valor Total do Tributo] = " & Substitui(ValorTributos!Tributos, ",", ".", SO_UM) & " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal 'Valor do Tributo
    vgDb.CommitTrans
@@ -6878,18 +6878,19 @@ End Function
 
 Private Sub GeraNota()
     '–––– variáveis ––––
-    Dim hFile              As Long      ' handle de arquivo (era Arq As String)
-    Dim NFXmlAssinada      As String    ' conteúdo do XML
-    Dim caminhoXML         As String
-    Dim UltimaEletronica   As New GRecordSet
-    Dim tpAmb              As Integer
-    Dim DataEmissaoAtual   As Date
+    Dim hFile            As Long          ' handle de arquivo
+    Dim NFXmlAssinada    As String        ' conteúdo do XML
+    Dim caminhoXML       As String
+    Dim caminhoBase      As String        ' ? NOVO
+    Dim UltimaEletronica As New GRecordSet
+    Dim tpAmb            As Integer
+    Dim DataEmissaoAtual As Date
 
     On Error Resume Next
 
     ' Se já tiver Número da NF > 0, sai
     If Nota_Fiscal![Número da Nota Fiscal] > 0 Then Exit Sub
-    ' Se Nº da NFe < 9000 e usuário ? YGOR, sai
+    ' Se Nº da NFe < 9000 e usuário <> YGOR, sai
     If Nota_Fiscal![Número da NFe] < 9000 And vgPWUsuario <> "YGOR" Then Exit Sub
 
     ' Confirma envio quando ainda não está transmitida
@@ -6905,49 +6906,42 @@ Private Sub GeraNota()
         "FROM [Nota Fiscal]")
 
     ' Atribui novo número de NFe, se ainda for zero
-    If Numero_da_NFe = 0 Then
+    If Nota_Fiscal![Número da NFe] = 0 Then
         vgDb.Execute "UPDATE [Nota Fiscal] SET [Número da NFe] = " & UltimaEletronica!NFe + 1 & _
-                     " WHERE [Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal
+                     " WHERE [Seqüência da Nota Fiscal] = " & Nota_Fiscal![Seqüência da Nota Fiscal]
         Reposition
     End If
 
-    '–––– fluxo A: ainda não transmitida ? pré-validação ––––
+    ' –––– fluxo A: ainda não transmitida – pré-validação ––––
     If Not Transmitido Then
-        tpAmb = Parametros_da_NFe!ambiente          ' 0 = prod / 1 = homol (ajuste se for diferente)
-        DataEmissaoAtual = txtCampo(68).Value       ' índice do seu campo de data
+        tpAmb = Parametros_da_NFe!ambiente       ' 0 = prod / 1 = homol
+        DataEmissaoAtual = txtCampo(68).Value
 
         If tpAmb <> 0 Then
             MsgBox "Você está EMITINDO EM HOMOLOGAÇÃO." & vbCrLf & _
                    "Data de Emissão que será usada no XML: " & _
-                   Format(DataEmissaoAtual, "dd\/mm\/yyyy"), _
+                   Format(DataEmissaoAtual, "dd/mm/yyyy"), _
                    vbInformation, "Aviso de Homologação"
         End If
 
-        PreValidaNFE                                ' monta e assina o XML
+        PreValidaNFE                             ' monta e assina o XML
         Exit Sub
     End If
 
-    '–––– fluxo B: já transmitida ? apenas buscar retorno ––––
-    ' monta caminho do XML ASSINADO/AUTORIZADO existente em disco
-    If Parametros_da_NFe!ambiente = 0 Then     ' Produção
-        caminhoXML = Parametros_da_NFe![Diretório 1 NFe Produção] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
-    Else                                       ' Homologação
-        caminhoXML = Parametros_da_NFe![Diretório 1 NFe Homologação] & _
-                     Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
-    End If
+    ' –––– fluxo B: já transmitida ––––
+    caminhoBase = "\\Srvdc\Rede$\Faturamento\Nfe_Autorizados\"
+    caminhoXML = caminhoBase & _
+                 Format(Nota_Fiscal![Número da NFe], "000000") & "_AUTORIZADO.xml"
 
-    ' lê todo o XML para NFXmlAssinada
     hFile = FreeFile
     Open caminhoXML For Input As #hFile
         NFXmlAssinada = Input$(LOF(hFile), hFile)
     Close #hFile
 
-    ' chama a rotina de retorno já no novo formato (5 parâmetros)
     If Not Novo_Layout Then
-        RetornoNFe310 NFXmlAssinada, 0, "", "", ""   ' cStat/nroProt/dhProt/msgRes sem valor aqui
+        RetornoNFe310 NFXmlAssinada, 0, "", "", ""
     Else
-        RetornoNFe NFXmlAssinada, 0, "", "", ""      ' idem para o fluxo antigo adaptado
+        RetornoNFe NFXmlAssinada, 0, "", "", ""
     End If
 End Sub
 
@@ -7214,7 +7208,7 @@ Private Sub PreValidaNFE()
     If FinNFe <> 3 Then
    If Trim(txtCp(24).Text) = "" Or Trim(txtCp(19).Text) = "" Or _
       Trim(txtCp(23).Text) = "" Or _
-      Val(txtCp(24).Text) = 0 Or Val(txtCp(19).Text) = 0 Or Val(txtCp(23).Text) = 0 Then
+      CDbl(txtCp(24).Text) = 0 Or CDbl(txtCp(19).Text) = 0 Or CDbl(txtCp(23).Text) = 0 Then
 
       MsgBox "Preencha Peso Bruto, Peso Líquido e Volumes antes de autorizar a nota." & vbCrLf & _
              "Os valores não podem ficar em branco nem ser zero.", _
@@ -8680,7 +8674,7 @@ Private Sub RetornoNFe310( _
 
     On Error GoTo DeuErro
     Screen.MousePointer = vbHourglass
-    lblProgresso.Caption = "Processando retorno da NFe..."
+    MsgBox "Processando retorno da NFe...", vbInformation + vbOKOnly, "Aguarde"
 
     '––– ambiente
     If Parametros_da_NFe!ambiente = 0 Then
@@ -8696,7 +8690,6 @@ Private Sub RetornoNFe310( _
         ' 100 / 150  –  Autorizada
         '------------------------------------------------
         Case 100, 150
-            ' Atualiza a nota
             With Nota_Fiscal
                 .Edit
                 !Autorizado = True
@@ -8712,7 +8705,6 @@ Private Sub RetornoNFe310( _
                 .BookMark = .LastModified
             End With
 
-            ' Histórico em vgTb
             With vgTb
                 .Edit
                 If Vazio(!Observação) Then
@@ -8724,7 +8716,6 @@ Private Sub RetornoNFe310( _
                 .BookMark = .LastModified
             End With
 
-            ' Grava o XML autorizado
             SalvaXML NFXmlAssinada, tpAmbiente, True
             MsgBox "NFe Autorizada!", vbInformation, vaTitulo
 
@@ -8732,7 +8723,6 @@ Private Sub RetornoNFe310( _
         ' 101  –  Denegada
         '------------------------------------------------
         Case 101
-            ' Atualiza a nota
             With Nota_Fiscal
                 .Edit
                 !Autorizado = True
@@ -8748,7 +8738,6 @@ Private Sub RetornoNFe310( _
                 .BookMark = .LastModified
             End With
 
-            ' Histórico em vgTb
             With vgTb
                 .Edit
                 If Vazio(!Observação) Then
@@ -8760,7 +8749,6 @@ Private Sub RetornoNFe310( _
                 .BookMark = .LastModified
             End With
 
-            ' Grava o XML (mesmo denegado)
             SalvaXML NFXmlAssinada, tpAmbiente, False
             MsgBox "NFe Denegada!", vbExclamation, vaTitulo
 
@@ -8785,13 +8773,13 @@ Private Sub RetornoNFe310( _
 
 SaiDaSub:
     Screen.MousePointer = vbDefault
-    lblProgresso.Caption = IIf(Parametros_da_NFe!ambiente = 0, "", "AMBIENTE NFe EM MODO TESTE")
     Exit Sub
 
 DeuErro:
     MsgBox Err.Description, vbCritical, vaTitulo
     Resume SaiDaSub
 End Sub
+
 
 
 
@@ -10243,8 +10231,26 @@ Continua:
    'Gera Dados da Transportadora
    transporta = objNFeUtil.transporta(TransCNPJ, TransCPF, TransxNome, TransIE, TransxEnder, TransxMun, TransUF)
    
-   'Dados do Frete
-   modFrete = IIf(Nota_Fiscal!frete = "Emitente", 0, 1)
+   'Dados do Frete.
+   Dim escolha As String
+   escolha = Trim$(Nota_Fiscal![frete])
+   Select Case escolha
+       Case "Emitente"
+           modFrete = 0
+       Case "Destinatrio"
+           modFrete = 1
+       Case "Transporte Próprio Remetente"
+           modFrete = 3
+       Case "Transporte Próprio Destinatário"
+           modFrete = 4
+       Case "Sem Transporte"
+           modFrete = 9
+       Case Else
+           modFrete = 9
+   End Select
+   
+   
+   
    
    '=========Dados do Veiculo=====================
    If Not Vazio(Nota_Fiscal![Placa Do Veículo]) And Not Vazio(Nota_Fiscal![UF Do Veículo]) Then

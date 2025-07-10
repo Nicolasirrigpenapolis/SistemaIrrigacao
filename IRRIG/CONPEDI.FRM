@@ -24,48 +24,25 @@ Begin VB.Form frmConpedi
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   375
-         Index           =   3
-         Left            =   8970
-         TabIndex        =   9
-         Top             =   1740
-         Width           =   1870
-         _ExtentX        =   3307
-         _ExtentY        =   661
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Atualiza Receita"
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   9.75
+            Size            =   8.25
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
+         Caption         =   "Entregue ao Cliente"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -93,24 +70,47 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   8.25
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Entregue ao Cliente"
+         Caption         =   "Receita"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   1870
+         _ExtentX        =   3307
+         _ExtentY        =   661
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Atualiza Receita"
          CaptionOffset   =   50
       End
       Begin VB.PictureBox PcbAtualizaOrc 
@@ -1480,9 +1480,9 @@ Private Sub ReceitaP()
           Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento)
         
           Do While Not TbGravar.EOF
-             If Not Vazio(TbGravar!Situação) Then
-                If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
+             If Not Vazio(TbGravar!situação) Then
+                If TbGravar!situação = "Entregue ao Cliente" Or TbGravar!situação = "Separado p/ Entregar" Then
+                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1806,9 +1806,9 @@ Private Sub ReceitaP()
           Set TbGravar = vgDb.OpenRecordSet("SELECT * FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento)
         
           Do While Not TbGravar.EOF
-             If Not Vazio(TbGravar!Situação) Then
-                If TbGravar!Situação = "Entregue ao Cliente" Or TbGravar!Situação = "Separado p/ Entregar" Then
-                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!Situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
+             If Not Vazio(TbGravar!situação) Then
+                If TbGravar!situação = "Entregue ao Cliente" Or TbGravar!situação = "Separado p/ Entregar" Then
+                   vgDb.Execute "Update [Receita Primaria] Set Situação = '" & TbGravar!situação & "' WHERE [Seqüência do Orçamento] = " & Orcamento & " And [Seqüência do Produto] = " & TbGravar![Seqüência do Produto]
                 End If
              End If
           TbGravar.MoveNext
@@ -1825,35 +1825,110 @@ Private Sub ReceitaP()
 End Sub
 
 
-Private Sub Grid_AfterUpdateRecord(Index As Integer, ByVal Row As Long, Columns() As Variant, IsValid As Boolean, Column As Integer, ErrorMessage As String)
- Dim Situacao As String
- Dim Produto As Long
- Dim PAux As New GRecordSet
 
- 
- Produto = Columns(2)
- Situacao = Columns(5)
- 
- If Index = 0 Then
-    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Produtos WHERE [Seqüência do Produto] = " & Produto)
- Else
-    Set PAux = vgDb.OpenRecordSet("SELECT [Receita Conferida] X From Conjuntos WHERE [Seqüência do Conjunto] = " & Produto)
- End If
- 
-   If Situacao = "" Then Exit Sub
-   If Not PAux!x Then
-      MsgBox ("ATENÇÃO Impossivel Prosseguir Receita Não Conferida")
-        If Situacao = "Á Produzir" Then
-        vgDb.BeginTrans
-           vgDb.Execute "Update [Itens Pendentes] set Situação = '' WHERE [Seqüência do Produto] = " & Produto & " And [Seqüência do Orçamento] = " & Orcamento
-        vgDb.CommitTrans
-           frmConpedi.Txtorc.SetFocus
-           grdContas.ReBind
-           grdContas.SetFocus
+'--------------------------------------------------------------------
+' 1) AFTER-UPDATE DO GRID
+'--------------------------------------------------------------------
+Private Sub Grid_AfterUpdateRecord(Index As Integer, _
+                                   ByVal Row As Long, _
+                                   Columns() As Variant, _
+                                   IsValid As Boolean, _
+                                   Column As Integer, _
+                                   ErrorMessage As String)
+
+    Const COL_SITUACAO As Integer = 4   ' <-- era 5
+    Dim Situacao  As String
+    Dim CodigoID  As Long
+    Dim PAux      As New GRecordSet
+
+    CodigoID = Columns(1)               ' <-- era 2; agora captura o código correto
+    Situacao = Columns(COL_SITUACAO)
+
+    '–– grava apenas se a coluna alterada for a de situação
+    If Column = COL_SITUACAO Then
+        Call GravarSituacao(Index, CodigoID, Situacao, Orcamento)
+        If Index = 0 Then
+            grdContas.ReBind           ' Produtos
+        Else
+            Grdcontas1.ReBind          ' Conjuntos
         End If
-   End If
- 
+    End If
+
+    '–– verifica se a receita foi conferida
+    If Index = 0 Then
+        Set PAux = vgDb.OpenRecordSet( _
+                 "SELECT [Receita Conferida] AS X " & _
+                 "FROM Produtos WHERE [Seqüência do Produto] = " & CodigoID)
+    Else
+        Set PAux = vgDb.OpenRecordSet( _
+                 "SELECT [Receita Conferida] AS X " & _
+                 "FROM Conjuntos WHERE [Seqüência do Conjunto] = " & CodigoID)
+    End If
+
+    If Situacao = "" Then Exit Sub
+    If Not PAux!x Then
+        MsgBox "ATENÇÃO: Impossível prosseguir. Receita não conferida.", _
+               vbExclamation + vbOKOnly, "Receita não conferida"
+
+        ' Se tentou marcar “Á Produzir” sem conferência, limpa de volta
+        If Trim(Situacao) = "Á Produzir" Then
+            vgDb.BeginTrans
+            vgDb.Execute "UPDATE [Itens Pendentes] SET [Situação] = '' " & _
+                         "WHERE " & IIf(Index = 0, _
+                                        "[Seqüência do Produto]", _
+                                        "[Seqüência do Conjunto]") & _
+                         " = " & CodigoID & _
+                         " AND [Seqüência do Orçamento] = " & Orcamento
+            vgDb.CommitTrans
+            frmConpedi.Txtorc.SetFocus
+            If Index = 0 Then grdContas.ReBind Else Grdcontas1.ReBind
+        End If
+    End If
 End Sub
+
+
+'--------------------------------------------------------------------
+' 2) GRAVA A SITUAÇÃO NO BANCO
+'--------------------------------------------------------------------
+Private Sub GravarSituacao(Index As Integer, _
+                           CodigoSel As Long, _
+                           SituacaoSel As String, _
+                           Orc As Double)
+    On Error GoTo DeuErro
+
+    Dim CampoID As String
+    CampoID = IIf(Index = 0, _
+                  "[Seqüência do Produto]", _
+                  "[Seqüência do Conjunto]")
+
+    vgDb.BeginTrans
+
+    '– Itens Pendentes
+    vgDb.Execute "UPDATE [Itens Pendentes] SET [Situação] = '" & SituacaoSel & "' " & _
+                 "WHERE " & CampoID & " = " & CodigoSel & _
+                 " AND [Seqüência do Orçamento] = " & Orc
+
+    '– Receita Primária só existe para produtos
+    If Index = 0 And (SituacaoSel = "Entregue ao Cliente" Or _
+                      SituacaoSel = "Separado p/ Entregar") Then
+        vgDb.Execute "UPDATE [Receita Primária] SET [Situação] = '" & SituacaoSel & "' " & _
+                     "WHERE [Seqüência do Produto] = " & CodigoSel & _
+                     " AND [Seqüência do Orçamento] = " & Orc
+    End If
+
+    vgDb.CommitTrans
+    Exit Sub
+
+DeuErro:
+    vgDb.RollBackTrans
+    MsgBox Err.Description, vbCritical + vbOKOnly, "Erro ao gravar situação"
+End Sub
+
+
+
+
+
+
 
 Private Sub PreValidaPedido()
    Dim Tb As New GRecordSet, Itens As New GRecordSet
@@ -2009,6 +2084,7 @@ Private Sub ExecutaVisivel()
    Label(4).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    txtCampo(3).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    Botao(3).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
+   PcbAtualizaOrc.Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO")
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
@@ -2093,10 +2169,26 @@ Private Sub txtCp_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer
    txtCampo(Index).KeyDown KeyCode, Shift
 End Sub
 
+
 'evento - quando qq tecla for digitada no campo
 Private Sub txtCp_KeyPress(Index As Integer, KeyAscii As Integer)
+   ' Tratamento especial para o campo de placa (indice 15)
+   If Index = 15 Then
+      If KeyAscii <> vbKeyBack Then
+         If (KeyAscii >= 48 And KeyAscii <= 57) Or _
+            (KeyAscii >= 65 And KeyAscii <= 90) Or _
+            (KeyAscii >= 97 And KeyAscii <= 122) Then
+            KeyAscii = Asc(UCase$(Chr$(KeyAscii)))
+         Else
+            KeyAscii = 0
+         End If
+      End If
+   End If
+
+   ' Propaga para o controle GAS
    txtCampo(Index).KeyPress KeyAscii
 End Sub
+
 
 'evento - quando o campo perder o foco
 Private Sub txtCp_LostFocus(Index As Integer)
