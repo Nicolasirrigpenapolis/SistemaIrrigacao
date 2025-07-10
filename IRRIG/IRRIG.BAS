@@ -2949,6 +2949,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             Exit Function
          End If
          CalculaImposto = 0: Exit Function
+         'teste
       Case "14" 'Valor do ICMS ST
          If Revenda And Substituicao And Not MateriaPrima Then 'Se for Revenda e Substituicao
           If TabelaIVA.RecordCount = 0 Then CalculaImposto = 0: Exit Function

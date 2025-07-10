@@ -1,16 +1,16 @@
 [History]
-1=#P0#=mb	#P1#=ReceitaP	#P2#=IRRIG/frmConpedi/ReceitaP	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710194638	#P7#=0	#P8#=399	.
+1=#P0#=mb	#P1#=ReceitaP	#P2#=IRRIG/frmConpedi/ReceitaP	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710194638	#P7#=0	#P8#=393	.
 2=#P0#=mb	#P1#=PcbAtualizaOrc_Click	#P2#=IRRIG/frmConpedi/PcbAtualizaOrc_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710194618	#P7#=0	#P8#=9	.
 3=#P0#=mb	#P1#=txtCp_LostFocus	#P2#=IRRIG/frmConpedi/txtCp_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710194407	#P7#=0	#P8#=-4	.
 4=#P0#=mb	#P1#=txtCp_KeyDown	#P2#=IRRIG/frmConpedi/txtCp_KeyDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710194401	#P7#=0	#P8#=0	.
 5=#P0#=mb	#P1#=GravarSituacao	#P2#=IRRIG/frmConpedi/GravarSituacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710175750	#P7#=0	#P8#=26	.
-6=#P0#=mb	#P1#=Grid_AfterUpdateRecord	#P2#=IRRIG/frmConpedi/Grid_AfterUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710204259	#P7#=0	#P8#=-6	.
+6=#P0#=mb	#P1#=Grid_AfterUpdateRecord	#P2#=IRRIG/frmConpedi/Grid_AfterUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710204259	#P7#=0	#P8#=-4	.
 7=#P0#=mb	#P1#=PreValidaPedido	#P2#=IRRIG/frmConpedi/PreValidaPedido	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710194640	#P7#=0	#P8#=-4	.
-8=#P0#=mb	#P1#=Grid_AfterUpdateRecord	#P2#=IRRIG/frmOrcament/Grid_AfterUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710174700	#P7#=0	#P8#=0	.
+8=#P0#=mb	#P1#=Grid_AfterUpdateRecord	#P2#=IRRIG/frmOrcament/Grid_AfterUpdateRecord	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250710204645	#P7#=0	#P8#=-2	.
 9=#P0#=mb	#P1#=SalvaXML	#P2#=IRRIG/frmNotaFisc/SalvaXML	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710170905	#P7#=0	#P8#=-2	.
 10=#P0#=mb	#P1#=RetornoNFe310	#P2#=IRRIG/frmNotaFisc/RetornoNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710170931	#P7#=0	#P8#=115	.
 11=#P0#=mb	#P1#=CarregaTotalizador	#P2#=IRRIG/frmOrcament/CarregaTotalizador	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710164129	#P7#=0	#P8#=-2	.
 12=#P0#=mb	#P1#=ProcessaPecas	#P2#=IRRIG/frmOrcament/ProcessaPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710164122	#P7#=0	#P8#=38	.
-13=#P0#=mb	#P1#=CalculaImposto	#P2#=IRRIG/modIRRIG/CalculaImposto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710164006	#P7#=0	#P8#=693	.
+13=#P0#=mb	#P1#=CalculaImposto	#P2#=IRRIG/modIRRIG/CalculaImposto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710204659	#P7#=0	#P8#=679	.
 14=#P0#=mb	#P1#=AtualizaEstoque	#P2#=IRRIG/modIRRIG/AtualizaEstoque	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710163948	#P7#=0	#P8#=-5	.
 15=#P0#=mb	#P1#=VerificaFormulario	#P2#=IRRIG/frmOrcament/VerificaFormulario	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250710163617	#P7#=0	#P8#=-3	.
