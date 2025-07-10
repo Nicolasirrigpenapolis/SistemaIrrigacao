@@ -1926,7 +1926,23 @@ End Sub
 
 
 
+Public Sub CancelGrids()
+   Dim i As Integer
+   For i = 0 To Grid.Count - 1
+      If Grid(i).Status <> ACAO_NAVEGANDO Then
+         Grid(i).CancelEdit
+      End If
+   Next
+End Sub
 
+Public Sub SaveGrids()
+   Dim i As Integer
+   For i = 0 To Grid.Count - 1
+      If Grid(i).Status <> ACAO_NAVEGANDO Then
+         Grid(i).SaveEdit
+      End If
+   Next
+End Sub
 
 
 
