@@ -8658,114 +8658,150 @@ End Function
 '  • msgResultado   ?  descrição textual do status
 '------------------------------------------------------------
 
-'============================================================
-'   SalvaXML – grava o XML AUTORIZADO ou DENEGADO em disco
-'============================================================
-Private Sub RetornoNFe310( _
-        NFXmlAssinada As String, _
-        cStat As Long, _
-        nroProtocolo As String, _
-        dhProtocolo As String, _
-        msgResultado As String)
 
-    Dim Arq        As Long
-    Dim tpAmbiente As Long
-    Dim XML        As New GRecordSet
+Private Sub RetornoNFe310( _
+    NFXmlAssinada As String, _
+    cStat As Long, _
+    nroProtocolo As String, _
+    dhProtocolo As String, _
+    msgResultado As String)
+
+    Dim tpAmbiente   As Long
+    Dim XML          As New GRecordSet
+    Dim pos          As Long
+    Dim chaveAcesso  As String
 
     On Error GoTo DeuErro
     Screen.MousePointer = vbHourglass
-    MsgBox "Processando retorno da NFe...", vbInformation + vbOKOnly, "Aguarde"
 
-    '––– ambiente
-    If Parametros_da_NFe!ambiente = 0 Then
-        tpAmbiente = 1    ' Produção
+    '––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    ' 1) Extrai chave de acesso (44 dígitos) do XML
+    pos = InStr(NFXmlAssinada, "Id=""NFe")
+    If pos > 0 Then
+        chaveAcesso = Mid$(NFXmlAssinada, pos + 6, 44)
     Else
-        tpAmbiente = 2    ' Homologação
+        chaveAcesso = ""
+    End If
+    '––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    '––– determina ambiente: 1=produção, 2=homologação
+    If Parametros_da_NFe!ambiente = 0 Then
+        tpAmbiente = 1
+    Else
+        tpAmbiente = 2
     End If
 
-    '––––– trata o status já devolvido pela SEFAZ –––––
     Select Case cStat
 
-        '------------------------------------------------
-        ' 100 / 150  –  Autorizada
-        '------------------------------------------------
+        Case 0
+            ' Serviço da SEFAZ fora do ar ou sem resposta
+            MsgBox "Serviço da SEFAZ indisponível ou sem resposta." & vbCrLf & _
+                   "Verifique sua conexão ou tente novamente mais tarde.", _
+                   vbExclamation, "SEFAZ Offline"
+
         Case 100, 150
+            '------------------------------------------------
+            ' Autorizada
+            '------------------------------------------------
             With Nota_Fiscal
                 .Edit
                 !Autorizado = True
                 !Transmitido = True
                 ![Protocolo de Autorização NFe] = nroProtocolo
                 ![Data e Hora da NFe] = dhProtocolo
-                If Vazio(!Observação) Then
-                    !Observação = "NFe Autorizada com Sucesso!"
-                Else
-                    !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!"
-                End If
+                ![Chave de Acesso da NFe] = chaveAcesso            ' grava a chave
+                !Observação = IIf(Vazio(!Observação), _
+                                 "NFe Autorizada com Sucesso!", _
+                                  !Observação & vbCrLf & "NFe Autorizada com Sucesso!")
                 .Update
                 .BookMark = .LastModified
             End With
 
             With vgTb
                 .Edit
-                If Vazio(!Observação) Then
-                    !Observação = "NFe Autorizada com Sucesso!"
-                Else
-                    !Observação = !Observação & vbCrLf & "NFe Autorizada com Sucesso!"
-                End If
+                !Observação = IIf(Vazio(!Observação), _
+                                 "NFe Autorizada com Sucesso!", _
+                                  !Observação & vbCrLf & "NFe Autorizada com Sucesso!")
                 .Update
                 .BookMark = .LastModified
             End With
 
             SalvaXML NFXmlAssinada, tpAmbiente, True
-            MsgBox "NFe Autorizada!", vbInformation, vaTitulo
+            MsgBox "NFe Autorizada com Sucesso!" & vbCrLf & _
+                   "Protocolo: " & nroProtocolo & vbCrLf & _
+                   "Data/Hora: " & dhProtocolo, _
+                   vbInformation, vaTitulo
 
-        '------------------------------------------------
-        ' 101  –  Denegada
-        '------------------------------------------------
+            Call DANFE    ' abre automaticamente o DANFE
+
         Case 101
+            '------------------------------------------------
+            ' Denegada
+            '------------------------------------------------
             With Nota_Fiscal
                 .Edit
                 !Autorizado = True
                 !Transmitido = True
                 ![Protocolo de Autorização NFe] = nroProtocolo
                 ![Data e Hora da NFe] = dhProtocolo
-                If Vazio(!Observação) Then
-                    !Observação = "NFe Denegada!"
-                Else
-                    !Observação = !Observação & vbCrLf & "NFe Denegada!"
-                End If
+                ![Chave de Acesso da NFe] = chaveAcesso            ' grava a chave
+                !Observação = IIf(Vazio(!Observação), _
+                                 "NFe Denegada!", _
+                                  !Observação & vbCrLf & "NFe Denegada!")
                 .Update
                 .BookMark = .LastModified
             End With
 
             With vgTb
                 .Edit
-                If Vazio(!Observação) Then
-                    !Observação = "NFe Denegada!"
-                Else
-                    !Observação = !Observação & vbCrLf & "NFe Denegada!"
-                End If
+                !Observação = IIf(Vazio(!Observação), _
+                                 "NFe Denegada!", _
+                                  !Observação & vbCrLf & "NFe Denegada!")
                 .Update
                 .BookMark = .LastModified
             End With
 
             SalvaXML NFXmlAssinada, tpAmbiente, False
-            MsgBox "NFe Denegada!", vbExclamation, vaTitulo
+            MsgBox "NFe Denegada!" & vbCrLf & msgResultado, _
+                   vbExclamation, vaTitulo
 
-        '------------------------------------------------
-        ' Demais códigos – rejeição
-        '------------------------------------------------
+        Case 204
+            '------------------------------------------------
+            ' Rejeição: NF-e já inutilizada anteriormente
+            '------------------------------------------------
+            MsgBox "204 – Rejeição: NF-e já inutilizada anteriormente." & vbCrLf & _
+                   msgResultado, vbExclamation, vaTitulo
+
+        Case 301
+            '------------------------------------------------
+            ' Rejeição: CFOP ou campo inválido no XML
+            '------------------------------------------------
+            MsgBox "301 – Rejeição: CFOP ou campo inválido no XML." & vbCrLf & _
+                   msgResultado, vbExclamation, vaTitulo
+
+        Case 302
+            '------------------------------------------------
+            ' Rejeição: Duplicidade de NF-e
+            '------------------------------------------------
+            MsgBox "302 – Rejeição: Duplicidade de NF-e." & vbCrLf & _
+                   msgResultado, vbExclamation, vaTitulo
+
         Case Else
-            MsgBox cStat & " – " & msgResultado, vbCritical, "NFe Rejeitada"
+            '------------------------------------------------
+            ' Demais códigos de rejeição da SEFAZ
+            '------------------------------------------------
+            MsgBox "Status SEFAZ: " & cStat & vbCrLf & _
+                   "Motivo     : " & msgResultado & vbCrLf & _
+                   "Protocolo  : " & nroProtocolo & vbCrLf & _
+                   "Data/Hora  : " & dhProtocolo, _
+                   vbCritical, "NFe Rejeitada"
 
             With vgTb
                 .Edit
                 !Transmitido = False
-                If Vazio(!Observação) Then
-                    !Observação = "Rejeição SEFAZ: " & msgResultado
-                Else
-                    !Observação = !Observação & vbCrLf & "Rejeição SEFAZ: " & msgResultado
-                End If
+                !Observação = IIf(Vazio(!Observação), _
+                                 "Rejeição SEFAZ: " & msgResultado, _
+                                  !Observação & vbCrLf & "Rejeição SEFAZ: " & msgResultado)
                 .Update
                 .BookMark = .LastModified
             End With
@@ -8776,9 +8812,18 @@ SaiDaSub:
     Exit Sub
 
 DeuErro:
-    MsgBox Err.Description, vbCritical, vaTitulo
+    '------------------------------------------------
+    ' Erro interno de automação ou runtime
+    '------------------------------------------------
+    MsgBox "Erro " & Err.Number & " em RetornoNFe310:" & vbCrLf & _
+           Err.Description & vbCrLf & _
+           "Origem     : " & Err.Source, _
+           vbCritical, "Erro Interno"
     Resume SaiDaSub
+
 End Sub
+
+
 
 
 'teste
@@ -8910,7 +8955,7 @@ Private Sub BlasterNFe310()
    '=====Identificação da Compra=====
    '=====Identificação da Cana=====
    '=====Consolidação da NFe=======
-   Dim NFe As String, versao As String, Id As String, ide As String, emit As String, avulsa As String, dest As String
+   Dim NFe As String, versao As String, id As String, ide As String, emit As String, avulsa As String, dest As String
    Dim retirada As String, Entrega As String, Detalhes As String, Total As String, transp As String, Cobr As String
    Dim infAdic As String, exporta As String, compra As String, cana As String, chaveNFe As String
    Dim Pag As String, autXML As String ' Campos Novos Layout 3.10
@@ -10343,13 +10388,13 @@ Continua:
    End If
    
    '=========Dados da Nota Fiscal Eletrônica=====================
-   Id = chaveNFe
+   id = chaveNFe
    versao = "3.10"
    Pag = ""
    autXML = ""
    'ufa finalmente
    'Gera Consolidação da NFe
-   NFe = objNFeUtil.NFe310(versao, Id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
+   NFe = objNFeUtil.NFe310(versao, id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
    
    'Salvando o xml...
    Arq = FreeFile
@@ -10621,7 +10666,7 @@ End Sub
        '=====Identificação da Compra=====
        '=====Identificação da Cana=====
        '=====Consolidação da NFe=======
-       Dim NFe As String, versao As String, Id As String, ide As String, emit As String, avulsa As String, dest As String
+       Dim NFe As String, versao As String, id As String, ide As String, emit As String, avulsa As String, dest As String
        Dim retirada As String, Entrega As String, Detalhes As String, Total As String, transp As String, Cobr As String
        Dim infAdic As String, exporta As String, compra As String, cana As String, chaveNFe As String
        Dim Pag As String, autXML As String ' Campos Novos Layout 3.10
@@ -12178,9 +12223,9 @@ End If
           DetPag = objNFeUtil.DetPag(ide_indPag, tPag, vPag, tpIntegra_Opc, CNPJ_Opc, tBand_Opc, cAut_Opc)
           Pag = objNFeUtil.pagamento400(DetPag, vTroco_Opc)
            If Parametros_da_NFe!ambiente = 1 And xPag <> "" Then
-             Dim Pos As Long
-             Pos = InStr(1, DetPag, "<vPag>")
-             If Pos > 0 Then DetPag = Left(DetPag, Pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(DetPag, Pos)
+             Dim pos As Long
+             pos = InStr(1, DetPag, "<vPag>")
+             If pos > 0 Then DetPag = Left(DetPag, pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(DetPag, pos)
           End If
        
         Else
@@ -12211,8 +12256,8 @@ xmlDetPag = objNFeUtil.DetPag( _
              )
              
              If Parametros_da_NFe!ambiente = 1 And xPag <> "" Then
-             Pos = InStr(1, xmlDetPag, "<vPag>")
-             If Pos > 0 Then xmlDetPag = Left(xmlDetPag, Pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(xmlDetPag, Pos)
+             pos = InStr(1, xmlDetPag, "<vPag>")
+             If pos > 0 Then xmlDetPag = Left(xmlDetPag, pos - 1) & "<xPag>" & xPag & "</xPag>" & Mid(xmlDetPag, pos)
           End If
              
 
@@ -12230,12 +12275,12 @@ End If
        End If
        
        '=========Dados da Nota Fiscal Eletrônica=====================
-       Id = chaveNFe
+       id = chaveNFe
        versao = "4.00"
        autXML = ""
        'ufa finalmente
        'Gera Consolidação da NFe
-       NFe = objNFeUtil.NFe310(versao, Id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
+       NFe = objNFeUtil.NFe310(versao, id, ide, emit, avulsa, dest, retirada, Entrega, Detalhes, Total, transp, Cobr, Pag, infAdic, exporta, compra, cana, autXML)
        
        'Salvando o xml...
        Arq = FreeFile
@@ -13420,10 +13465,32 @@ Private Sub txtCp_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer
    txtCampo(Index).KeyDown KeyCode, Shift
 End Sub
 
+
+
 'evento - quando qq tecla for digitada no campo
 Private Sub txtCp_KeyPress(Index As Integer, KeyAscii As Integer)
+   '*** Tratamento da Placa do Veiculo ***
+   ' Quando o campo corresponde a placa (Index = 15),
+   ' converte letras para maiusculo e bloqueia caracteres invalidos.
+   If Index = 15 Then
+      If KeyAscii <> vbKeyBack Then
+         ' Permite somente letras ou numeros
+         If (KeyAscii >= 48 And KeyAscii <= 57) Or _
+            (KeyAscii >= 65 And KeyAscii <= 90) Or _
+            (KeyAscii >= 97 And KeyAscii <= 122) Then
+            ' Converte para maiusculo
+            KeyAscii = Asc(UCase$(Chr$(KeyAscii)))
+         Else
+            ' Descarta caracteres invalidos
+            KeyAscii = 0
+         End If
+      End If
+   End If
+
+   ' Propaga o caractere para o controle de dados
    txtCampo(Index).KeyPress KeyAscii
 End Sub
+
 
 'evento - quando o campo perder o foco
 Private Sub txtCp_LostFocus(Index As Integer)

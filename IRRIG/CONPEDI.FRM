@@ -24,25 +24,48 @@ Begin VB.Form frmConpedi
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   480
-         Index           =   2
-         Left            =   9015
-         TabIndex        =   8
-         Top             =   675
-         Width           =   2385
-         _ExtentX        =   0
-         _ExtentY        =   0
+         Height          =   375
+         Index           =   3
+         Left            =   8970
+         TabIndex        =   9
+         Top             =   1740
+         Width           =   1870
+         _ExtentX        =   3307
+         _ExtentY        =   661
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   8.25
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Entregue ao Cliente"
+         Caption         =   "Atualiza Receita"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   0
+         Left            =   10245
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   180
+         Width           =   1170
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Receita"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -70,47 +93,24 @@ Begin VB.Form frmConpedi
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
-         Index           =   0
-         Left            =   10245
-         TabIndex        =   5
-         TabStop         =   0   'False
-         Top             =   180
-         Width           =   1170
+         Index           =   2
+         Left            =   9015
+         TabIndex        =   8
+         Top             =   675
+         Width           =   2385
          _ExtentX        =   0
          _ExtentY        =   0
          ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
-            Size            =   9.75
+            Size            =   8.25
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Receita"
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   375
-         Index           =   3
-         Left            =   8970
-         TabIndex        =   9
-         Top             =   1740
-         Width           =   1870
-         _ExtentX        =   3307
-         _ExtentY        =   661
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Atualiza Receita"
+         Caption         =   "Entregue ao Cliente"
          CaptionOffset   =   50
       End
       Begin VB.PictureBox PcbAtualizaOrc 
@@ -137,21 +137,13 @@ Begin VB.Form frmConpedi
          TabStop         =   0   'False
          Top             =   195
          Width           =   1545
-         _ExtentX        =   0
-         _ExtentY        =   0
-         Locked          =   -1  'True
-         ScrollBars      =   0   'False
-         Appearance      =   0
-         BorderStyle     =   0
-         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         locked          =   -1  'True
+         scrollbars      =   0   'False
+         appearance      =   0
+         borderstyle     =   0
+         captionfont     =   "CONPEDI.frx":2194
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -181,26 +173,18 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   3960
          Width           =   11325
-         _ExtentX        =   0
-         _ExtentY        =   0
-         EditBackColor   =   16777152
-         EditTextColor   =   -2147483640
-         CellTextColor   =   -2147483640
-         Stripes         =   -1  'True
-         StripesBackColor=   14737632
-         RowHeight       =   315
-         SaveGridBars    =   -1  'True
-         SaveGridStripes =   0   'False
-         Caption         =   "Produtos"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         savegridstripes =   0   'False
+         caption         =   "Produtos"
+         font            =   "CONPEDI.frx":21C2
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -282,26 +266,18 @@ Begin VB.Form frmConpedi
          Tag             =   "1"
          Top             =   2160
          Width           =   11325
-         _ExtentX        =   0
-         _ExtentY        =   0
-         EditBackColor   =   16777152
-         EditTextColor   =   -2147483640
-         CellTextColor   =   -2147483640
-         Stripes         =   -1  'True
-         StripesBackColor=   14737632
-         RowHeight       =   315
-         SaveGridBars    =   -1  'True
-         SaveGridStripes =   0   'False
-         Caption         =   "Conjuntos"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         _extentx        =   0
+         _extenty        =   0
+         editbackcolor   =   16777152
+         edittextcolor   =   -2147483640
+         celltextcolor   =   -2147483640
+         stripes         =   -1  'True
+         stripesbackcolor=   14737632
+         rowheight       =   315
+         savegridbars    =   -1  'True
+         savegridstripes =   0   'False
+         caption         =   "Conjuntos"
+         font            =   "CONPEDI.frx":21E6
       End
       Begin VB.Label Label 
          AutoSize        =   -1  'True
@@ -510,43 +486,57 @@ Private Sub CarregaTotalizador()
       
 End Sub
 
-
+'-------------------------------------------------------------
+' CarregaContas – exibe os itens pendentes do orçamento no grid
+' Agora NÃO apaga nem recria registros: só faz SELECT e vincula.
+'-------------------------------------------------------------
 Private Sub CarregaContas()
-   Dim x As String, Tb As New GRecordSet, MsgValida As String
-   
-   If Orcamento = 0 Then
-      Exit Sub
-   End If
-   
-   Screen.MousePointer = vbHourglass
-   
-   On Error GoTo DeuErro
-   BuscaNota
-   MySQL
-   AtuPedido
-   
-   x$ = "SELECT [Seqüência do Orçamento], [Itens Pendentes].[Seqüência do Produto], [Sequencia do Item], Descrição, Quantidade, [Situação] " & _
-        "FROM [Itens Pendentes] LEFT JOIN Produtos ON [Itens Pendentes].[Seqüência do Produto] = Produtos.[Seqüência do Produto] WHERE " & Filtro()
-      
-   Set Tb = vgDb.OpenRecordSet(x$)
-   
-  ' If Tb.RecordCount > 0 Then TemRecordset = True
-   MsgValida$ = Executar(VALIDACOES)
-   If MsgValida$ <> "" Then MsgBox MsgValida$, vbCritical + vbOKOnly, vaTitulo: Exit Sub
-   ExecutaPreValidacao
-   
-   With grdContas
-      .OpenRecordSet x$, CURSOR_TABLE
-   End With
-   CarregaContas2
-   Screen.MousePointer = vbDefault
-   
-DeuErro:
-   If Err Then
-      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
-   End If
+    Dim x           As String
+    Dim Tb          As New GRecordSet
+    Dim MsgValida   As String
 
+    If Orcamento = 0 Then Exit Sub
+
+    Screen.MousePointer = vbHourglass
+    On Error GoTo DeuErro
+
+    '– Atualiza cabeçalho/nota, mas NÃO recria itens pendentes –
+    BuscaNota
+    'MySQL  << REMOVIDO: recriação de itens acontece só em PcbAtualizaOrc_Click
+    AtuPedido
+
+    '– Monta o SELECT apenas para leitura –
+    x = "SELECT [Seqüência do Orçamento], " & _
+        "[Itens Pendentes].[Seqüência do Produto], " & _
+        "[Sequencia do Item], Descrição, Quantidade, [Situação] " & _
+        "FROM [Itens Pendentes] " & _
+        "LEFT JOIN Produtos ON [Itens Pendentes].[Seqüência do Produto] = Produtos.[Seqüência do Produto] " & _
+        "WHERE " & Filtro()
+
+    '– Validações antes de exibir –
+    Set Tb = vgDb.OpenRecordSet(x)
+    MsgValida = Executar(VALIDACOES)
+    If MsgValida <> "" Then
+        MsgBox MsgValida, vbCritical + vbOKOnly, vaTitulo
+        GoTo Limpa
+    End If
+    ExecutaPreValidacao
+
+    '– Exibe no grid –
+    With grdContas
+        .OpenRecordSet x, CURSOR_TABLE
+    End With
+    CarregaContas2
+
+Limpa:
+    Screen.MousePointer = vbDefault
+    Exit Sub
+
+DeuErro:
+    MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+    Resume Limpa
 End Sub
+
 
 Private Sub CarregaContas2()
    Dim x As String, Tb As New GRecordSet, MsgValida As String
@@ -624,85 +614,122 @@ Private Function Filtro3() As String
  Filtro3 = "Orçamento.[Seqüência Do Orçamento] = " & Orcamento
 End Function
 
+
 Private Sub MySQL()
- Dim SQL As String
- Dim Tb1 As New GRecordSet
- Dim SeqItem As Integer
- Dim cnGas As ADODB.Connection, rsGas As ADODB.RecordSet
- 
- Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes] Where [Seqüência Do Orçamento] = " & Orcamento)
- 
-   'Se já existem itens pendentes para o orçamento atual, remove para recriar os dados
-  If Tb1.RecordCount > 0 Then
-     vgDb.Execute "DELETE FROM [Itens pendentes] WHERE [Seqüência Do Orçamento] = " & Orcamento
-     Set Tb1 = Nothing
-  End If
- 
- 
- Set cnGas = New ADODB.Connection
- Set rsGas = New ADODB.RecordSet
- 
- ' 1) Abre conexï¿½o
+    Dim SQL     As String
+    Dim Tb1     As New GRecordSet
+    Dim SeqItem As Long
+    Dim cnGas   As ADODB.Connection
+    Dim rsGas   As ADODB.RecordSet
+    Dim rsMax   As GRecordSet            ' pega último Sequencia do Item
+
+    '-----------------------------------------------------------------
+    ' 1) Recordset alvo já filtrado
+    '-----------------------------------------------------------------
+    Set Tb1 = vgDb.OpenRecordSet( _
+        "SELECT * FROM [Itens pendentes] " & _
+        "WHERE [Seqüência Do Orçamento] = " & Orcamento)
+
+    ' Descobre próximo número de item
+    Set rsMax = vgDb.OpenRecordSet( _
+        "SELECT Max([Sequencia do Item]) AS Ult " & _
+        "FROM [Itens pendentes] " & _
+        "WHERE [Seqüência Do Orçamento] = " & Orcamento)
+    SeqItem = IIf(rsMax.EOF Or IsNull(rsMax!Ult), 1, rsMax!Ult + 1)
+    Set rsMax = Nothing
+
+    '-----------------------------------------------------------------
+    ' 2) Conexão SQL Server
+    '-----------------------------------------------------------------
     Set cnGas = New ADODB.Connection
-    If EstaEmIDE And Environ("COMPUTERNAME") = "DESKTOP-CTAJU78" Then
-        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER={SQL Server Native Client 10.0};Server=DESKTOP-CTAJU78\SQLEXPRESS02;Database=IRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES"
+    If EstaEmIDE And Environ$("COMPUTERNAME") = "DESKTOP-CTAJU78" Then
+        cnGas.ConnectionString = _
+            "Provider=SQLOLEDB.1;Server=DESKTOP-CTAJU78\SQLEXPRESS02;" & _
+            "Database=IRRIGACAO;Integrated Security=SSPI"
     ElseIf EstaEmIDE Then
-        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=DESKTOP-CHS14C0\SQLIRRIGACAO;Database=IRRIGACAO;Integrated Security=SSPI;Trusted_Connection=YES"
+        cnGas.ConnectionString = _
+            "Provider=SQLOLEDB.1;Server=DESKTOP-CHS14C0\SQLIRRIGACAO;" & _
+            "Database=IRRIGACAO;Integrated Security=SSPI"
     Else
-        cnGas.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;DRIVER=[DRIVER];Server=SRVSQL\SQLEXPRESS;UID=ygor;Pwd=5139249_;Database=IRRIGACAO;Trusted_Connection=NO"
+        cnGas.ConnectionString = _
+            "Provider=SQLOLEDB.1;Server=SRVSQL\SQLEXPRESS;" & _
+            "Database=IRRIGACAO;UID=ygor;Pwd=5139249_"
     End If
     cnGas.Open
-'no cnGas.Open
-                                                                                                                                                                                                          
- Set Tb1 = vgDb.OpenRecordSet("SELECT * From [Itens pendentes]")
- 
- SeqItem = 1
- SQL = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " & _
-       "FROM( "
-       
- SQL = SQL & "SELECT 1 As Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, Sum([Peças do Orçamento].Quantidade) Quantidade, " & _
-             "Sum([Peças do Orçamento].[Valor Total]) As Total, [Peças do Orçamento].[Valor Unitário] " & _
-             "FROM [Peças do Orçamento] left join Orçamento On [Peças do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Produtos On [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro1()
- SQL = SQL & " Group By [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] Union "
- SQL = SQL & "Select 2 As Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, Sum([Conjuntos do Orçamento].Quantidade) Quantidade, Sum([Conjuntos do Orçamento].[Valor Total]) Total, [Conjuntos do Orçamento].[Valor Unitário] " & _
-             "FROM [Conjuntos do Orçamento] Left Join Orçamento On [Conjuntos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Conjuntos On [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] WHERE " & Filtro2()
- SQL = SQL & " Group By [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] Union "
- SQL = SQL & "Select 3 As Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, Sum([Produtos do Orçamento].Quantidade) Quantidade, Sum([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]) Total, [Produtos do Orçamento].[Valor Unitário] " & _
-             "FROM [Produtos do Orçamento] left Join Orçamento On [Produtos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " & _
-             "Left Join Produtos On [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] WHERE " & Filtro3()
- SQL = SQL & " Group By [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário])A Order By Tipo Desc"
- 
- rsGas.Open SQL, cnGas, adOpenStatic, adLockPessimistic
- 
- 
- Do While Not rsGas.EOF
-    With Tb1
-     .AddNew
-       ![Seqüência do Orçamento] = Orcamento
-       ![Sequencia do Item] = SeqItem
-        If rsGas!Tipo = 1 Or rsGas!Tipo = 3 Then
-           ![Seqüência do Produto] = rsGas![Seqüência do Produto]
-        End If
-        If rsGas!Tipo = 2 Then
-           ![Seqüência do Conjunto] = rsGas![Seqüência do Produto]
-        End If
-       !Quantidade = rsGas!Quantidade
-       ![Valor Total] = rsGas!Total
-       ![Valor Unitário] = rsGas![Valor Unitário]
-       !Tp = rsGas!Tipo
-     .Update
-     .BookMark = .LastModified
-    End With
- rsGas.MoveNext
- SeqItem = SeqItem + 1
- Loop
- rsGas.Close
-               
+
+    '-----------------------------------------------------------------
+    ' 3) Monta consulta unificada (sem exceder 25 continuations)
+    '-----------------------------------------------------------------
+    SQL = "SELECT Tipo, [Seqüência Do Produto], Descrição, Quantidade, Total, [Valor Unitário] " _
+        & "FROM ( "
+
+    SQL = SQL & _
+        "SELECT 1 AS Tipo, [Peças do Orçamento].[Seqüência do Produto], Produtos.Descrição, " _
+        & "SUM([Peças do Orçamento].Quantidade) AS Quantidade, " _
+        & "SUM([Peças do Orçamento].[Valor Total]) AS Total, " _
+        & "[Peças do Orçamento].[Valor Unitário] AS [Valor Unitário] " _
+        & "FROM [Peças do Orçamento] " _
+        & "LEFT JOIN Orçamento ON [Peças do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " _
+        & "LEFT JOIN Produtos ON [Peças do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] " _
+        & "WHERE " & Filtro1() & " " _
+        & "GROUP BY [Peças do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Peças do Orçamento].[Valor Unitário] "
+
+    SQL = SQL & _
+        "UNION " _
+        & "SELECT 2 AS Tipo, [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, " _
+        & "SUM([Conjuntos do Orçamento].Quantidade), " _
+        & "SUM([Conjuntos do Orçamento].[Valor Total]), [Conjuntos do Orçamento].[Valor Unitário] " _
+        & "FROM [Conjuntos do Orçamento] " _
+        & "LEFT JOIN Orçamento ON [Conjuntos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " _
+        & "LEFT JOIN Conjuntos ON [Conjuntos do Orçamento].[Seqüência Do Conjunto] = Conjuntos.[Seqüência Do Conjunto] " _
+        & "WHERE " & Filtro2() & " " _
+        & "GROUP BY [Conjuntos do Orçamento].[Seqüência Do Conjunto], Conjuntos.Descrição, [Conjuntos do Orçamento].[Valor Unitário] "
+
+    SQL = SQL & _
+        "UNION " _
+        & "SELECT 3 AS Tipo, [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, " _
+        & "SUM([Produtos do Orçamento].Quantidade), " _
+        & "SUM([Produtos do Orçamento].[Valor Total] + [Produtos do Orçamento].[Valor Do IPI]), " _
+        & "[Produtos do Orçamento].[Valor Unitário] " _
+        & "FROM [Produtos do Orçamento] " _
+        & "LEFT JOIN Orçamento ON [Produtos do Orçamento].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] " _
+        & "LEFT JOIN Produtos ON [Produtos do Orçamento].[Seqüência Do Produto] = Produtos.[Seqüência Do Produto] " _
+        & "WHERE " & Filtro3() & " " _
+        & "GROUP BY [Produtos do Orçamento].[Seqüência Do Produto], Produtos.Descrição, [Produtos do Orçamento].[Valor Unitário] " _
+        & ") A ORDER BY Tipo DESC"
+
+    '-----------------------------------------------------------------
+    ' 4) Executa consulta e insere novos registros
+    '-----------------------------------------------------------------
+    Set rsGas = New ADODB.RecordSet
+    rsGas.Open SQL, cnGas, adOpenStatic, adLockReadOnly
+
+    Do While Not rsGas.EOF
+        With Tb1
+            .AddNew
+            ![Seqüência do Orçamento] = Orcamento
+            ![Sequencia do Item] = SeqItem
+
+            If rsGas!Tipo = 2 Then
+                ![Seqüência do Conjunto] = rsGas![Seqüência do Produto]
+            Else
+                ![Seqüência do Produto] = rsGas![Seqüência do Produto]
+            End If
+
+            !Quantidade = rsGas!Quantidade
+            ![Valor Total] = rsGas!Total
+            ![Valor Unitário] = rsGas![Valor Unitário]
+            !Tp = rsGas!Tipo
+            .Update
+        End With
+
+        SeqItem = SeqItem + 1
+        rsGas.MoveNext
+    Loop
+
+    rsGas.Close
+    cnGas.Close
 End Sub
-
-
 
 
 'Private Sub ReceitaP()
@@ -1836,7 +1863,7 @@ Private Sub Grid_AfterUpdateRecord(Index As Integer, _
                                    Column As Integer, _
                                    ErrorMessage As String)
 
-    Const COL_SITUACAO As Integer = 4   ' <-- era 5
+    Const COL_SITUACAO As Integer = 5   ' <-- era 5
     Dim Situacao  As String
     Dim CodigoID  As Long
     Dim PAux      As New GRecordSet
@@ -2125,32 +2152,65 @@ End Sub
 'End Sub
 
 Private Sub PcbAtualizaOrc_Click()
-    ' 1) Limpa Itens Pendentes
-    vgDb.Execute "DELETE FROM [Itens Pendentes] WHERE [Seqüência do Orçamento] = " & Orcamento
+    Dim resp As VbMsgBoxResult
+    On Error GoTo DeuErro
 
-    ' 2) Limpa também toda a Receita Primária para este orçamento
-    vgDb.Execute "DELETE FROM [Receita Primaria] WHERE [Seqüência do Orçamento] = " & Orcamento
+    '––– Confirmação –––
+    resp = MsgBox( _
+            "Isto vai apagar e recriar todos os itens pendentes e a receita primária " & _
+            "deste orçamento. Deseja continuar?", _
+            vbQuestion + vbYesNo + vbDefaultButton2, _
+            "Recarregar orçamento")
+    If resp = vbNo Then Exit Sub
 
-    ' 3) Recria Itens Pendentes e Receita Primária
-    MySQL
-    ReceitaP
+    Screen.MousePointer = vbHourglass
+    vgDb.BeginTrans
 
-    ' 4) Atualiza as grades na tela
+    ' 1) Remove Itens Pendentes
+    vgDb.Execute _
+        "DELETE FROM [Itens Pendentes] " & _
+        "WHERE [Seqüência do Orçamento] = " & Orcamento
+
+    ' 2) Remove Receita Primária
+    vgDb.Execute _
+        "DELETE FROM [Receita Primaria] " & _
+        "WHERE [Seqüência do Orçamento] = " & Orcamento
+
+    ' 3) Recria
+    Call MySQL       ' insere pendentes
+    Call ReceitaP    ' insere receita primária
+    vgDb.CommitTrans ' confirma tudo
+
+    ' 4) Recarrega e dá refresh nos grids
     Call CarregaContas
+    grdContas.ReBind      ' ? força o grid de produtos a reler o recordset
+    Grdcontas1.ReBind     ' ? força o grid de conjuntos a reler o recordset
 
+    ' 5) Atualiza/abre o form de Receita Primária
     If Not frmRecprima.Visible Then
         Load frmRecprima
-        frmRecprima.vgFiltroInicial = "[Seqüência do Orçamento] = " & Orcamento
+        frmRecprima.vgFiltroInicial = _
+            "[Seqüência do Orçamento] = " & Orcamento
         InicializaFiltro frmRecprima
         frmRecprima.Reposition True, False
         Unload frmRecprima
     Else
-        frmRecprima.vgFiltroInicial = "[Seqüência do Orçamento] = " & Orcamento
+        frmRecprima.vgFiltroInicial = _
+            "[Seqüência do Orçamento] = " & Orcamento
         InicializaFiltro frmRecprima
         frmRecprima.Reposition True, False
     End If
 
-    MsgBox "Grades atualizadas com sucesso!", vbInformation, "Atualização Concluída"
+    MsgBox "Grades atualizadas com sucesso!", _
+           vbInformation, "Atualização concluída"
+    Screen.MousePointer = vbDefault
+    Exit Sub
+
+DeuErro:
+    Screen.MousePointer = vbDefault
+    vgDb.RollBackTrans
+    MsgBox "Erro ao recarregar orçamento: " & Err.Description, _
+           vbCritical, "Erro"
 End Sub
 
 
@@ -2335,25 +2395,30 @@ DeuErro:
  CErr.Show
 End Sub
 
-'evento - descarregando o formulário da memória
 Private Sub Form_Unload(Cancel As Integer)
-   Dim i As Integer
-   On Error Resume Next
-   FinalizaForm Me
-   Set Txtorc = Nothing
-   Set grdContas = Nothing
-   Set lblAjuste = Nothing
-   Set Txtnfe = Nothing
-   Set txtProdstatus = Nothing
-   Set Grdcontas1 = Nothing
-   For i = 0 To UBound(txtCampo)
-      txtCampo(i).Finalize
-      Set txtCampo(i) = Nothing
-   Next
-   Set vgFG = Nothing
-   Set vgTooltips = Nothing
-   Set frmConpedi = Nothing                       'libera o segmento de código do form
+    ' 1) Salva qualquer edição pendente nos grids
+    SaveGrids
+    
+    ' 2) Limpeza de objetos
+    Dim i As Integer
+    FinalizaForm Me
+    Set Txtorc = Nothing
+    Set grdContas = Nothing
+    Set lblAjuste = Nothing
+    Set Txtnfe = Nothing
+    Set txtProdstatus = Nothing
+    Set Grdcontas1 = Nothing
+
+    For i = 0 To UBound(txtCampo)
+        txtCampo(i).Finalize
+        Set txtCampo(i) = Nothing
+    Next
+
+    Set vgFG = Nothing
+    Set vgTooltips = Nothing
+    Set frmConpedi = Nothing
 End Sub
+
 
 'evento - quando qq tecla for digitada no formulário
 Private Sub Form_KeyPress(KeyAscii As Integer)
