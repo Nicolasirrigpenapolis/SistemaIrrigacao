@@ -12924,7 +12924,7 @@ End Sub
 
 Private Sub DistribuiDescontoTotal()
     Dim totalDesc       As Double
-    Dim rs               As GRecordSet
+    Dim Rs               As GRecordSet
     Dim tbl              As Variant
     Dim somaValorItens   As Double
     Dim ValorUnit        As Double
@@ -12946,29 +12946,29 @@ Private Sub DistribuiDescontoTotal()
         "[Conjuntos do Orçamento]", _
         "[Peças do Orçamento]" _
     )
-        Set rs = vgDb.OpenRecordSet( _
+        Set Rs = vgDb.OpenRecordSet( _
             "SELECT [Valor Unitário], [Quantidade] " & _
             "FROM " & tbl & " " & _
             "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-        If Not rs.EOF Then
-            rs.MoveFirst
-            Do While Not rs.EOF
-                If IsNull(rs![Valor Unitário]) Then
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
+                If IsNull(Rs![Valor Unitário]) Then
                     ValorUnit = 0
                 Else
-                    ValorUnit = rs![Valor Unitário]
+                    ValorUnit = Rs![Valor Unitário]
                 End If
-                If IsNull(rs![Quantidade]) Then
+                If IsNull(Rs![Quantidade]) Then
                     Quantidade = 1
                 Else
-                    Quantidade = rs![Quantidade]
+                    Quantidade = Rs![Quantidade]
                 End If
 
                 somaValorItens = somaValorItens + (ValorUnit * Quantidade)
-                rs.MoveNext
+                Rs.MoveNext
             Loop
         End If
-        rs.CloseRecordset
+        Rs.CloseRecordset
     Next tbl
     If somaValorItens = 0 Then Exit Sub
 
@@ -12979,15 +12979,15 @@ Private Sub DistribuiDescontoTotal()
         "[Conjuntos do Orçamento]", _
         "[Peças do Orçamento]" _
     )
-        Set rs = vgDb.OpenRecordSet( _
+        Set Rs = vgDb.OpenRecordSet( _
             "SELECT 1 " & _
             "FROM " & tbl & " " & _
             "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-        Do While Not rs.EOF
+        Do While Not Rs.EOF
             totalRegs = totalRegs + 1
-            rs.MoveNext
+            Rs.MoveNext
         Loop
-        rs.CloseRecordset
+        Rs.CloseRecordset
     Next tbl
 
     ' 4) distribui desconto proporcional, ajustando o último
@@ -12999,26 +12999,26 @@ Private Sub DistribuiDescontoTotal()
         "[Peças do Orçamento]" _
     )
         ' ## aqui incluímos [Valor Do Desconto] no SELECT ##
-        Set rs = vgDb.OpenRecordSet( _
+        Set Rs = vgDb.OpenRecordSet( _
             "SELECT [Valor Do Desconto], [Valor Unitário], [Quantidade] " & _
             "FROM " & tbl & " " & _
             "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
 
-        If Not rs.EOF Then
-            rs.MoveFirst
-            Do While Not rs.EOF
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
                 idx = idx + 1
 
                 ' trata possíveis Nulls
-                If IsNull(rs![Valor Unitário]) Then
+                If IsNull(Rs![Valor Unitário]) Then
                     ValorUnit = 0
                 Else
-                    ValorUnit = rs![Valor Unitário]
+                    ValorUnit = Rs![Valor Unitário]
                 End If
-                If IsNull(rs![Quantidade]) Then
+                If IsNull(Rs![Quantidade]) Then
                     Quantidade = 1
                 Else
-                    Quantidade = rs![Quantidade]
+                    Quantidade = Rs![Quantidade]
                 End If
 
                 valorItem = ValorUnit * Quantidade
@@ -13031,15 +13031,15 @@ Private Sub DistribuiDescontoTotal()
 
                 If descValue > valorItem Then descValue = valorItem
 
-                rs.Edit
-                    rs![Valor Do Desconto] = descValue
-                rs.Update
+                Rs.Edit
+                    Rs![Valor Do Desconto] = descValue
+                Rs.Update
 
                 assignedSum = assignedSum + descValue
-                rs.MoveNext
+                Rs.MoveNext
             Loop
         End If
-        rs.CloseRecordset
+        Rs.CloseRecordset
     Next tbl
 
     ' 5) rebind para atualizar a tela
@@ -14627,89 +14627,97 @@ DeuErro:
 
 End Sub
 
-
 Private Sub PreValidaNFE()
-   Dim Tb As New GRecordSet, Itens As New GRecordSet
-   Dim Vector() As String
-   Dim i As Long, vaPrivez As Boolean, Campo As Variant, Mensagem As String
-   Dim Servicos As New GRecordSet
-   
-   On Error GoTo DeuErro
-   'Verifica obrigatoriedade dos campos de Peso Bruto, Peso Lquido e Volumes
-   If Trim(txtCampo(143).Text) = "" Or Trim(txtCampo(144).Text) = "" Or _
-      Trim(txtCampo(145).Text) = "" Or _
-      CDbl(txtCampo(143).Text) = 0 Or CDbl(txtCampo(144).Text) = 0 Or Val(txtCampo(145).Text) = 0 Then
+    Dim Itens     As New GRecordSet
+    Dim Servicos  As New GRecordSet
+    Dim Vector()  As String
+    Dim i         As Long, Campo As Variant, Mensagem As String
+    Dim TipoFrete As Long        ' declaração correta
 
-      MsgBox "Preencha Peso Bruto, Peso Lquido e Volumes antes de gerar a nota." & vbCrLf & _
-             "Os valores no podem ficar em branco nem ser zero.", _
-             vbExclamation + vbOKOnly, vaTitulo
-      Exit Sub
-   End If
+    On Error GoTo DeuErro
 
-    Dim TipoFrete As Integer
-    TipoFrete = CodigoFrete()
-    
-    If TipoFrete = 3 Or TipoFrete = 4 Then
-        ' Placa e UF
-        If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
-            MsgBox "Para frete próprio é obrigatório informar Placa e UF.", _
-                   vbExclamation + vbOKOnly, vaTitulo
-            Exit Sub
-        End If
+    ' 1) Peso Bruto / Líquido / Volumes – aviso com opção de corrigir
+    If Val(txtCampo(143).Text) = 0 _
+       Or Val(txtCampo(144).Text) = 0 _
+       Or Val(txtCampo(145).Text) = 0 Then
+
+        If MsgBox( _
+                "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos (<> 0)." & vbCrLf & _
+                "Clique Sim para corrigir agora ou Não para continuar mesmo assim.", _
+                vbYesNo + vbExclamation, vaTitulo) = vbYes Then
+            Exit Sub   ' usuário quer corrigir
+        End If         ' usuário quer continuar ? segue
     End If
 
-
-
-   Set Itens = vgDb.OpenRecordSet("SELECT * FROM(" & _
-                                  "SELECT PO.[Seqüência do Orçamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seqüência do Produto], P.Descrição, U.[Sigla da Unidade], PO.[Valor Unitário] " & _
-                                  "FROM [Produtos do Orçamento] PO LEFT JOIN Produtos P ON PO.[Seqüência Do Produto] = P.[Seqüência Do Produto] " & _
-                                  "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
-                                  "UNION ALL " & _
-                                  "SELECT CO.[Seqüência do Orçamento],'Conjuntos' Tipo, C.[Receita Conferida], C.[Seqüência Do Conjunto], C.Descrição, U.[Sigla da Unidade], CO.[Valor Unitário] " & _
-                                  "FROM [Conjuntos do Orçamento] CO LEFT JOIN Conjuntos C ON CO.[Seqüência Do Conjunto] = C.[Seqüência Do Conjunto] " & _
-                                  "LEFT JOIN Unidades U ON C.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
-                                  "LEFT JOIN Orçamento O ON CO.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
-                                  "UNION ALL " & _
-                                  "SELECT PeOrc.[Seqüência do Orçamento],'Peças' Tipo, Pe.[Receita Conferida], Pe.[Seqüência Do Produto], Pe.Descrição, U.[Sigla da Unidade], PeOrc.[Valor Unitário] " & _
-                                  "FROM [Peças do Orçamento] PeOrc LEFT JOIN Produtos Pe ON PeOrc.[Seqüência Do Produto] = Pe.[Seqüência Do Produto] " & _
-                                  "LEFT JOIN Unidades U ON Pe.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
-                                  "LEFT JOIN Orçamento O ON PeOrc.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
-                                  ") A " & _
-                                  "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-                                  
-   Set Servicos = vgDb.OpenRecordSet("SELECT * FROM [Serviços do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-                                                               
-   If Itens.RecordCount = 0 And Servicos.RecordCount = 0 Then Exit Sub
-   
-   'Vamos Validar
-   i = 0 'Tamanho do Vetor
-   ReDim Preserve Vector(0) As String
- 
-   Do While Not Itens.EOF
-      'If Itens![Valor Unitário] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência Do Produto] & " - " & Itens!Descrição
-      If Itens![Receita Conferida] = 0 Then i = i + 1: ReDim Preserve Vector(i): Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
-      Itens.MoveNext
-   Loop
-      
-   If UBound(Vector) > 0 And vgPWUsuario <> "YGOR" Then
-      Mensagem = "Alguns Itens (sem conferencia da Receita):" & vbCrLf
-      For Each Campo In Vector
-         Mensagem = Mensagem & vbCrLf & Campo
-      Next
-      If Mensagem <> "" Then
-         MsgBox Mensagem, vbCritical + vbOKOnly, vaTitulo
-         Exit Sub
-      End If
-   End If
-   
-   AbreGerar
+    ' 2) Placa e UF obrigatórios para frete próprio
+    TipoFrete = CodigoFrete()
+    If TipoFrete = 3 Or TipoFrete = 4 Then
+        If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
+            If MsgBox( _
+                    "Para frete próprio (tipos 3 ou 4) é obrigatório informar Placa e UF." & vbCrLf & _
+                    "Clique Sim para corrigir agora ou Não para continuar.", _
+                    vbYesNo + vbExclamation, vaTitulo) = vbYes Then
+                Exit Sub
+            End If
+        End If
+    End If
     
-DeuErro:
-   If Err <> 0 Then
-      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
-   End If
+    ' 3) Carrega Itens e Serviços do Orçamento
+    Set Itens = vgDb.OpenRecordSet("SELECT * FROM(" & _
+                      "SELECT PO.[Seqüência do Orçamento], 'Produto' Tipo, P.[Receita Conferida], P.[Seqüência do Produto], P.Descrição, U.[Sigla da Unidade], PO.[Valor Unitário] " & _
+                      "FROM [Produtos do Orçamento] PO LEFT JOIN Produtos P ON PO.[Seqüência Do Produto] = P.[Seqüência do Produto] " & _
+                      "LEFT JOIN Unidades U ON P.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                      "UNION ALL " & _
+                      "SELECT CO.[Seqüência do Orçamento],'Conjuntos' Tipo, C.[Receita Conferida], C.[Seqüência Do Conjunto], C.Descrição, U.[Sigla da Unidade], CO.[Valor Unitário] " & _
+                      "FROM [Conjuntos do Orçamento] CO LEFT JOIN Conjuntos C ON CO.[Seqüência Do Conjunto] = C.[Seqüência Do Conjunto] " & _
+                      "LEFT JOIN Unidades U ON C.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                      "LEFT JOIN Orçamento O ON CO.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
+                      "UNION ALL " & _
+                      "SELECT PeOrc.[Seqüência do Orçamento],'Peças' Tipo, Pe.[Receita Conferida], Pe.[Seqüência Do Produto], Pe.Descrição, U.[Sigla da Unidade], PeOrc.[Valor Unitário] " & _
+                      "FROM [Peças do Orçamento] PeOrc LEFT JOIN Produtos Pe ON PeOrc.[Seqüência Do Produto] = Pe.[Seqüência do Produto] " & _
+                      "LEFT JOIN Unidades U ON Pe.[Seqüência da Unidade] = U.[Seqüência da Unidade] " & _
+                      "LEFT JOIN Orçamento O ON PeOrc.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
+                      ") A " & _
+                      "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+    
+    Set Servicos = vgDb.OpenRecordSet( _
+        "SELECT * FROM [Serviços do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+    
+    ' Se não houver itens nem serviços, sai da rotina
+    If Itens.RecordCount = 0 And Servicos.RecordCount = 0 Then Exit Sub
+    
+    ' 4) Validação de Receita Conferida nos itens
+    i = 0
+    ReDim Preserve Vector(0) As String
+    
+    Do While Not Itens.EOF
+        If Itens![Receita Conferida] = 0 Then
+            i = i + 1
+            ReDim Preserve Vector(i) As String
+            Vector(i - 1) = "ITEM: " & Itens![Seqüência do Produto] & " - " & Itens!Descrição
+        End If
+        Itens.MoveNext
+    Loop
+    
+    If UBound(Vector) > 0 And vgPWUsuario <> "YGOR" Then
+        Mensagem = "Aviso: alguns itens não têm conferência de Receita:" & vbCrLf
+        For Each Campo In Vector
+            Mensagem = Mensagem & vbCrLf & Campo
+        Next
+        MsgBox Mensagem, vbExclamation + vbOKOnly, vaTitulo
+        ' continua mesmo após o aviso
+    End If
+    
+    ' 5) Chama a geração da NFe
+    AbreGerar
+    Exit Sub
 
+DeuErro:
+    If Err <> 0 Then
+        MsgBox "Erro em PreValidaNFE: " & Err.Description, vbCritical + vbOKOnly, vaTitulo
+    End If
 End Sub
+
 
 
 Private Sub DesmarcaFw()
@@ -16417,7 +16425,7 @@ Private Sub DistribuiFreteTotal()
     Dim assignedSum     As Double
     Dim totalRegs       As Long
     Dim idx             As Long
-    Dim rs              As GRecordSet
+    Dim Rs              As GRecordSet
     Dim tbl             As Variant
 
     '1) Valor total informado no financeiro
@@ -16431,19 +16439,19 @@ Private Sub DistribuiFreteTotal()
         "[Conjuntos do Orçamento]", _
         "[Peças do Orçamento]" _
     )
-        Set rs = vgDb.OpenRecordSet( _
+        Set Rs = vgDb.OpenRecordSet( _
             "SELECT [Valor Unitário], [Quantidade] FROM " & tbl & _
             " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-        If Not rs.EOF Then
-            rs.MoveFirst
-            Do While Not rs.EOF
-                ValorUnit = IIf(IsNull(rs![Valor Unitário]), 0, rs![Valor Unitário])
-                Quantidade = IIf(IsNull(rs![Quantidade]), 1, rs![Quantidade])
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
+                ValorUnit = IIf(IsNull(Rs![Valor Unitário]), 0, Rs![Valor Unitário])
+                Quantidade = IIf(IsNull(Rs![Quantidade]), 1, Rs![Quantidade])
                 somaValorItens = somaValorItens + (ValorUnit * Quantidade)
-                rs.MoveNext
+                Rs.MoveNext
             Loop
         End If
-        rs.CloseRecordset
+        Rs.CloseRecordset
     Next tbl
     If somaValorItens = 0 Then Exit Sub
 
@@ -16460,15 +16468,15 @@ Private Sub DistribuiFreteTotal()
         "[Conjuntos do Orçamento]", _
         "[Peças do Orçamento]" _
     )
-        Set rs = vgDb.OpenRecordSet( _
+        Set Rs = vgDb.OpenRecordSet( _
             "SELECT [Valor Do Frete], [Valor Unitário], [Quantidade] FROM " & tbl & _
             " WHERE [Seqüência do Orçamento]=" & Sequencia_do_Orcamento)
-        If Not rs.EOF Then
-            rs.MoveFirst
-            Do While Not rs.EOF
+        If Not Rs.EOF Then
+            Rs.MoveFirst
+            Do While Not Rs.EOF
                 idx = idx + 1
-                ValorUnit = IIf(IsNull(rs![Valor Unitário]), 0, rs![Valor Unitário])
-                Quantidade = IIf(IsNull(rs![Quantidade]), 1, rs![Quantidade])
+                ValorUnit = IIf(IsNull(Rs![Valor Unitário]), 0, Rs![Valor Unitário])
+                Quantidade = IIf(IsNull(Rs![Quantidade]), 1, Rs![Quantidade])
                 valorItem = ValorUnit * Quantidade
 
                 If idx < totalRegs Then
@@ -16477,14 +16485,14 @@ Private Sub DistribuiFreteTotal()
                     freteValue = Round(totalFrete - assignedSum, 2)
                 End If
 
-                rs.Edit
-                  rs![Valor Do Frete] = freteValue
-                rs.Update
+                Rs.Edit
+                  Rs![Valor Do Frete] = freteValue
+                Rs.Update
                 assignedSum = assignedSum + freteValue
-                rs.MoveNext
+                Rs.MoveNext
             Loop
         End If
-        rs.CloseRecordset
+        Rs.CloseRecordset
     Next tbl
 
     '5) Atualiza os grids visuais
