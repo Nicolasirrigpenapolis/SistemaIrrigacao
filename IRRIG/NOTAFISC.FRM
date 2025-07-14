@@ -9208,6 +9208,15 @@ End If
         
        ide_cNF = cNF    ' mantém os 8 dígitos, mesmo que comece com zero
         ide_cDV = cDV    ' mantém o dígito verificador
+         'Guarda a chave gerada na tabela e no campo visual
+        Chave_de_Acesso_da_NFe = chaveNFe
+        txtCampo(31).Value = chaveNFe
+        With vgTb
+           .Edit
+           ![Chave de Acesso da NFe] = chaveNFe
+           .Update
+           .BookMark = .LastModified
+        End With
 
        
        'Gera Grupo NFeRef
