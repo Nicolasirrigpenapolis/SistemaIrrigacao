@@ -27,7 +27,7 @@ Public Const PERM_EXCLUSAO = 4
 Type HashEntry
    Tama As String * 4                             'tamanho do recurso
    Offs As String * 4                             'offset
-   id   As String * 4                             'numero do recurso para comparar
+   Id   As String * 4                             'numero do recurso para comparar
 End Type
 
 Public Enum FORMA_EXPORTACAO
@@ -62,6 +62,24 @@ Private Declare Function GetDC Lib "user32" (ByVal hWnd As Long) As Long
 Private Declare Function StretchBlt Lib "GDI32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal nSrcWidth As Long, ByVal nSrcHeight As Long, ByVal dwRop As Long) As Long
 
 Private Crc32Table(255) As Long                   'Vetor para CRC
+
+
+'gera DV da chave de acesso da NFe (modulo 11 com pesos 2 a 9)
+Public Function GDVChaveNFe(vgSt As String) As String
+    'A NF-e exige o calculo do digito verificador com pesos que
+    'variam de 2 a 9, repetindo a sequencia da direita para a esquerda.
+    Dim peso As Integer, soma As Long, i As Integer, dv As Integer
+    peso = 2
+    For i = Len(vgSt) To 1 Step -1
+        soma = soma + Val(Mid$(vgSt, i, 1)) * peso
+        peso = peso + 1
+        If peso > 9 Then peso = 2
+    Next i
+    dv = 11 - (soma Mod 11)
+    If dv >= 10 Then dv = 0
+    GDVChaveNFe = CStr(dv)
+End Function
+
 
 Public Function GetCRC(Exp As String) As Long
    Dim lCrc32Value As Long
@@ -537,20 +555,20 @@ End Function
 
 'gera DV de 1 digito modulo 11
 Public Function GDV1(vgSt As String) As String
-   Dim Qu As Integer, Soma As Integer, Posi As Integer, Resto As Integer, _
+   Dim Qu As Integer, soma As Integer, Posi As Integer, Resto As Integer, _
          dvc As Integer, Num As String                             'dimensiona
    Num$ = RTrim$(Retira$(vgSt$, "./-,:", UM_A_UM))                 'remove separadores
    Qu = Len(Num$)                                                  'pega tamanho
    If Qu = 0 Then                                                  'se 0
       GDV1$ = ""                                  'retorna nulo
    Else                                           'senão
-      Soma = 0                                    'inicializa
+      soma = 0                                    'inicializa
       Posi = 0                                    'variáveis
       While Posi < Qu                             'vamos acumular
          Posi = Posi + 1                          'o valor do dígito
-         Soma = Soma + Val(Mid$(Num$, Qu + 1 - Posi, 1)) * (Posi + 1) 'com sua posição
+         soma = soma + Val(Mid$(Num$, Qu + 1 - Posi, 1)) * (Posi + 1) 'com sua posição
       Wend
-      Resto = Soma Mod 11                                             'divide por 11 e pega o resto
+      Resto = soma Mod 11                                             'divide por 11 e pega o resto
       If Resto < 2 Then                                               'se resto < 2
          dvc = 0                                  'o dv é 0
       Else                                        'senão,
@@ -671,7 +689,7 @@ End Function
 Public Function VCGC(St As String) As Integer
    Dim RetVal As Integer, x As String, Posi As Integer, _
          dv1c As Integer, dv2c As Integer, dv1f As Integer, dv2f As Integer, _
-         Num As String, Mu As String, Resto As Integer, DV As String
+         Num As String, Mu As String, Resto As Integer, dv As String
    x$ = RTrim$(Retira$(St$, "./-,:", UM_A_UM))
    If Len(x$) = 0 Then                            'se vazio...
       RetVal = True                               'preparamos retorno true
@@ -695,8 +713,8 @@ Public Function VCGC(St As String) As Integer
       Else                                        'senão,
          dv1c = 11 - Resto                        'este dv é a diferença 11 - resto
       End If
-      DV$ = Right$(Str$(dv1c), 1)                 'salva o dv calculado como string
-      Num$ = Num$ + DV$                           'incorpora dv1
+      dv$ = Right$(Str$(dv1c), 1)                 'salva o dv calculado como string
+      Num$ = Num$ + dv$                           'incorpora dv1
       dv2c = 0                                    'inicializa dv2
       Mu$ = "6" + Mu$                             'poe mais um dígito nos multiplicadores
       Posi = 13                                   'posição agora inicia em 13
@@ -3420,7 +3438,7 @@ End Function
 
 'transforma string (acentos) em uma expressão HTML
 Private Function MontaExpHtml(ByVal Exp As Variant) As String
-   Dim Texto As String, i As Long, RetVal As String, CharEsp As String, Char As String
+   Dim texto As String, i As Long, RetVal As String, CharEsp As String, Char As String
    CharEsp$ = Chr(60) + Chr(62) + Chr(38) + Chr(34) + Chr(198) + Chr(193) + Chr(194) + Chr(192) + _
               Chr(197) + Chr(195) + Chr(196) + Chr(199) + Chr(208) + Chr(201) + Chr(202) + Chr(200) + _
               Chr(203) + Chr(205) + Chr(206) + Chr(204) + Chr(207) + Chr(209) + Chr(211) + Chr(212) + _
@@ -3430,10 +3448,10 @@ Private Function MontaExpHtml(ByVal Exp As Variant) As String
               Chr(238) + Chr(236) + Chr(239) + Chr(241) + Chr(243) + Chr(244) + Chr(242) + Chr(248) + _
               Chr(245) + Chr(246) + Chr(223) + Chr(254) + Chr(250) + Chr(251) + Chr(249) + Chr(252) + _
               Chr(253) + Chr(255)
-   Texto = CStr(Exp & "")
+   texto = CStr(Exp & "")
    RetVal$ = ""
-   For i = 1 To Len(Texto$)
-      Char$ = Mid(Texto$, i, 1)
+   For i = 1 To Len(texto$)
+      Char$ = Mid(texto$, i, 1)
       If InStr(CharEsp$, Char$) Then
          Char$ = "&#" + CStr(Asc(Char$)) + ";"
       ElseIf Char$ = Chr(32) Then
