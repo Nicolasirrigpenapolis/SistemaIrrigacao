@@ -1,4 +1,9 @@
 [History]
-1=#P0#=mb	#P1#=TransmitirNFe310	#P2#=IRRIG/frmNotaFisc/TransmitirNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250714181738	#P7#=0	#P8#=82	.
-2=#P0#=mb	#P1#=MontaChaveAcessoNF	#P2#=IRRIG/frmNotaFisc/MontaChaveAcessoNF	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250714174910	#P7#=0	#P8#=5	.
-3=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250714174854	#P7#=0	#P8#=-5	.
+1=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmOrcament/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133720	#P7#=0	#P8#=21	.
+2=#P0#=mb	#P1#=PreValidaNFE	#P2#=IRRIG/frmNotaFisc/PreValidaNFE	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133556	#P7#=0	#P8#=8	.
+3=#P0#=mb	#P1#=Tabs_MouseDown	#P2#=IRRIG/frmNotaFisc/Tabs_MouseDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250715133456	#P7#=0	#P8#=11	.
+4=#P0#=mb	#P1#=GeraNota	#P2#=IRRIG/frmNotaFisc/GeraNota	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133441	#P7#=0	#P8#=44	.
+5=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133402	#P7#=0	#P8#=203	.
+6=#P0#=mb	#P1#=RetornoNFe310	#P2#=IRRIG/frmNotaFisc/RetornoNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133340	#P7#=0	#P8#=6	.
+7=#P0#=mb	#P1#=TransmitirNFe310	#P2#=IRRIG/frmNotaFisc/TransmitirNFe310	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715133325	#P7#=0	#P8#=1	.
+8=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250715105144	#P7#=0	#P8#=18	.

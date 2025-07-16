@@ -14061,6 +14061,12 @@ Private Sub AtualizaValoresProdutos()
          With Produtos_do_Orcamento
          .Edit
          
+         
+         
+         
+         
+         
+         
          If Orcamento![Valor Do Fechamento] = 0 Then
             ![Valor Do Desconto] = 0
          End If
@@ -14642,7 +14648,7 @@ Private Sub PreValidaNFE()
        Or Val(txtCampo(145).Text) = 0 Then
 
         If MsgBox( _
-                "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos (<> 0)." & vbCrLf & _
+                "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos!" & vbCrLf & _
                 "Clique Sim para corrigir agora ou Não para continuar mesmo assim.", _
                 vbYesNo + vbExclamation, vaTitulo) = vbYes Then
             Exit Sub   ' usuário quer corrigir
@@ -14654,7 +14660,7 @@ Private Sub PreValidaNFE()
     If TipoFrete = 3 Or TipoFrete = 4 Then
         If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
             If MsgBox( _
-                    "Para frete próprio (tipos 3 ou 4) é obrigatório informar Placa e UF." & vbCrLf & _
+                    "Para frete próprio é obrigatório informar Placa e UF." & vbCrLf & _
                     "Clique Sim para corrigir agora ou Não para continuar.", _
                     vbYesNo + vbExclamation, vaTitulo) = vbYes Then
                 Exit Sub

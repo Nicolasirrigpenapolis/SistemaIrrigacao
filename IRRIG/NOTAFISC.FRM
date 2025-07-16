@@ -25,12 +25,147 @@ Begin VB.Form frmNotaFisc
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   14
-         Left            =   9705
-         TabIndex        =   94
+         Height          =   435
+         Index           =   0
+         Left            =   11430
+         TabIndex        =   85
          TabStop         =   0   'False
-         Top             =   375
+         Top             =   525
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "DANFE"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   1
+         Left            =   10020
+         TabIndex        =   90
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   2
+         Left            =   11430
+         TabIndex        =   75
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   9
+         Left            =   9825
+         TabIndex        =   76
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   10
+         Left            =   15180
+         TabIndex        =   82
+         Top             =   60
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   75
+         TabIndex        =   83
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14475
+         TabIndex        =   84
+         TabStop         =   0   'False
+         Top             =   1560
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -70,11 +205,11 @@ Begin VB.Form frmNotaFisc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   12
-         Left            =   14475
-         TabIndex        =   84
+         Index           =   14
+         Left            =   9705
+         TabIndex        =   94
          TabStop         =   0   'False
-         Top             =   1560
+         Top             =   375
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -88,141 +223,6 @@ Begin VB.Form frmNotaFisc
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   75
-         TabIndex        =   83
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   10
-         Left            =   15180
-         TabIndex        =   82
-         Top             =   60
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   9
-         Left            =   9825
-         TabIndex        =   76
-         TabStop         =   0   'False
-         Top             =   1560
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   2
-         Left            =   11430
-         TabIndex        =   75
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   1
-         Left            =   10020
-         TabIndex        =   90
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   0
-         Left            =   11430
-         TabIndex        =   85
-         TabStop         =   0   'False
-         Top             =   525
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "DANFE"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin TabDlg.SSTab Tabs 
@@ -423,13 +423,13 @@ Begin VB.Form frmNotaFisc
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "txtCp(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(3)"
+         Tab(0).Control(86)=   "Botao(8)"
          Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "Botao(4)"
+         Tab(0).Control(87)=   "Botao(5)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "Botao(5)"
+         Tab(0).Control(88)=   "Botao(4)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "Botao(8)"
+         Tab(0).Control(89)=   "Botao(3)"
          Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
@@ -603,11 +603,11 @@ Begin VB.Form frmNotaFisc
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   8
-            Left            =   5505
-            TabIndex        =   86
+            Index           =   3
+            Left            =   11175
+            TabIndex        =   22
             TabStop         =   0   'False
-            Top             =   2835
+            Top             =   1905
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -625,9 +625,31 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   7
-            Left            =   -71670
-            TabIndex        =   39
+            Index           =   4
+            Left            =   5205
+            TabIndex        =   14
+            TabStop         =   0   'False
+            Top             =   1440
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   5
+            Left            =   5100
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -669,9 +691,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   5100
-            TabIndex        =   5
+            Index           =   7
+            Left            =   -71670
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -691,33 +713,11 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   5205
-            TabIndex        =   14
+            Index           =   8
+            Left            =   5505
+            TabIndex        =   86
             TabStop         =   0   'False
-            Top             =   1440
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   3
-            Left            =   11175
-            TabIndex        =   22
-            TabStop         =   0   'False
-            Top             =   1905
+            Top             =   2835
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -5596,9 +5596,9 @@ Private Sub MostraFormulas()
    lblNNota.Value = IIf(Numero_da_NFe > 0, Format(Numero_da_NFe, "0000000"), IIf(Numero_da_NFSe > 0, Format(Numero_da_NFSe, "0000000"), IIf(Numero_da_Nota_Fiscal > 0, Format(Numero_da_Nota_Fiscal, "0000000"), "")))
    If Err Then Err = 0: lblNNota.Text = ""
    'Origem
-   txtOrigem1.Value = numero(0)
+   txtOrigem1.Value = Numero(0)
    If Err Then Err = 0: txtOrigem1.Value = ""
-   txtOrigem2.Value = numero(1)
+   txtOrigem2.Value = Numero(1)
    If Err Then Err = 0: txtOrigem2.Value = ""
    txtContrato.Value = "Contrato: " & Format(Numero_do_Contrato, "000000")
    If Err Then Err = 0: txtContrato.Value = ""
@@ -7041,6 +7041,10 @@ Private Sub RetornoNFe( _
         Case 100, 150           ' Autorizada
             GravaAutorizada NFXmlAssinada, nroProtocolo, dhProtocolo, tpAmbiente, True
             MsgBox "NFe Autorizada!", vbInformation, vaTitulo
+            vgSituacao = ACAO_NAVEGANDO
+            PrepBotoes Me, vgSituacao
+            ExecutaPreValidacao
+            DANFE
 
         Case 101                ' Denegada
             GravaAutorizada NFXmlAssinada, nroProtocolo, dhProtocolo, tpAmbiente, False
@@ -7209,7 +7213,7 @@ End Sub
 If FinNFe <> 3 Then
     If Val(txtCp(24).Text) = 0 Or Val(txtCp(19).Text) = 0 Or Val(txtCp(23).Text) = 0 Then
         If MsgBox( _
-                "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos (? 0)." & vbCrLf & _
+                "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos!." & vbCrLf & _
                 "Clique Sim para corrigir agora ou Não para continuar mesmo assim.", _
                 vbYesNo + vbExclamation, vaTitulo) = vbYes Then
             Exit Sub   ' usuário optou por corrigir ? interrompe a emissão
@@ -7519,7 +7523,7 @@ Private Sub MasterNFSe()
    Dim Situacao As String, retido As String, atividade As String, aliquotaAp As String, deducao As String
    Dim Imposto As String, retencao As String, Observacao As String, cpfCNPJ As String, nomeRazaoSocial As String
    Dim nomeFantasia As String, cMunicipio As String, Bairro As String, CEP As String, prefixo As String
-   Dim logradouro As String, Complemento As String, numero As String, dentroPais As String, dedMat As String
+   Dim logradouro As String, Complemento As String, Numero As String, dentroPais As String, dedMat As String
    Dim dataVecnt As String, dadosNFSe As String, pis As String, cofins As String, inss As String, ir As String
    Dim csll As String, outraRetencoes As String
    '====SERVICOS====
@@ -7570,7 +7574,7 @@ Private Sub MasterNFSe()
       CEP = RemoveCaracteres(Propriedade!CEP)
       logradouro = Propriedade!Endereço
       Complemento = Propriedade!Complemento
-      numero = IIf(Propriedade![Número Do Endereço] = "", "S/N", Propriedade![Número Do Endereço])
+      Numero = IIf(Propriedade![Número Do Endereço] = "", "S/N", Propriedade![Número Do Endereço])
       dentroPais = IIf(Propriedade!UF <> "EX", "S", "N")
       If Cliente!Tipo = 0 Then
          If Not Vazio(Cliente![CPF e CNPJ]) Then Observacao = "CPF: " & Cliente![CPF e CNPJ]
@@ -7593,7 +7597,7 @@ Private Sub MasterNFSe()
       CEP = RemoveCaracteres(Cliente!CEP)
       logradouro = Cliente!Endereço
       Complemento = Cliente!Complemento
-      numero = IIf(Cliente![Número Do Endereço] = "", "S/N", Cliente![Número Do Endereço])
+      Numero = IIf(Cliente![Número Do Endereço] = "", "S/N", Cliente![Número Do Endereço])
       dentroPais = IIf(Cliente!UF <> "EX", "S", "N")
       If Cliente!Tipo = 0 Then 'Fisica
          If Not Vazio(Cliente![RG e IE]) Then Observacao = Observacao & ", RG: " & Cliente![RG e IE]
@@ -7625,7 +7629,7 @@ Private Sub MasterNFSe()
    
    'Gera xml dos dados da Nota
    dadosNFSe = objNFSe.Nota(rps, lote, Sequencia, DataEmissao, horaEmissao, localserv, Situacao, retido, atividade, aliquotaAp, deducao, Imposto, retencao, Observacao, cpfCNPJ, nomeRazaoSocial, nomeFantasia, cMunicipio, Bairro, CEP, prefixo, _
-                            logradouro, Complemento, numero, dentroPais, dedMat, dataVecnt, pis, cofins, inss, ir, csll, outraRetencoes)
+                            logradouro, Complemento, Numero, dentroPais, dedMat, dataVecnt, pis, cofins, inss, ir, csll, outraRetencoes)
                             
    '----Grupo de Informações dos Serviços----
    Do While Not Item.EOF
@@ -7867,7 +7871,7 @@ End Function
 Private Sub AbreOrigem(Tp As Byte)
    Dim Sequencia As Long, Origem As String
    
-   numero Tp, Sequencia, Origem 'Descobrindo a Origem
+   Numero Tp, Sequencia, Origem 'Descobrindo a Origem
    seqRegistro = Sequencia
    
    Select Case Origem 'Vamos que será que vamos abrir
@@ -7918,7 +7922,7 @@ Private Sub AbreOrigem(Tp As Byte)
 End Sub
 
 'Tp 0 = (Orçamento ou F. Proforma)/Ordem de Serviço; 1 = Pedido/Mvto
-Private Function numero(Tp As Byte, Optional Sequencia As Long, Optional Origem As String) As String
+Private Function Numero(Tp As Byte, Optional Sequencia As Long, Optional Origem As String) As String
    Dim Tb As New GRecordSet
    
    On Error Resume Next
@@ -7929,34 +7933,34 @@ Private Function numero(Tp As Byte, Optional Sequencia As Long, Optional Origem 
                                   "WHERE Pedido.[Seqüência Do Pedido] = " & Sequencia_do_Pedido & " AND Pedido.[Seqüência Do Pedido] > 0")
             
       If Tb.RecordCount = 0 Then _
-      numero = "Orç...: 000000": Exit Function 'Se não tem nada vai fora daqui ladrão rsrs
+      Numero = "Orç...: 000000": Exit Function 'Se não tem nada vai fora daqui ladrão rsrs
       
       If Tb![Seqüência do Orçamento] > 0 Then  ' Orçamento
          Sequencia = Tb![Seqüência do Orçamento]
          If Tb![Fatura Proforma] Then
             Origem = "F. Proforma"
-            numero = "F. Pro.: " & Format(Tb![Número da Proforma], "000000")
+            Numero = "F. Pro.: " & Format(Tb![Número da Proforma], "000000")
          Else 'Orçamento
             Origem = "Orçamento"
-            numero = "Orç..: " & Format(Sequencia, "000000")
+            Numero = "Orç..: " & Format(Sequencia, "000000")
          End If
       ElseIf Tb![Seqüência da Ordem de Serviço] > 0 Then 'OS
          Sequencia = Tb![Seqüência da Ordem de Serviço]
          Origem = "Ordem"
-         numero = "OS...: " & Format(Sequencia, "000000")
+         Numero = "OS...: " & Format(Sequencia, "000000")
       End If
    ElseIf Tp = 1 Then 'Bom por aqui verificamos se é mvto ou pedido
       If Sequencia_do_Pedido > 0 Then 'Pedido
          'Sequencia = Sequencia_do_Pedido
          Origem = "Pedido"
          'Numero = "Ped.: " & Format(Sequencia, "000000")
-         numero = "Mvto.: " & Format(Sequencia, "000000")
+         Numero = "Mvto.: " & Format(Sequencia, "000000")
       ElseIf Sequencia_do_Movimento > 0 Then 'Mvto
          Sequencia = Sequencia_do_Movimento
          Origem = "Movimento"
-         numero = "Mvto.: " & Format(Sequencia, "000000")
+         Numero = "Mvto.: " & Format(Sequencia, "000000")
       Else
-         numero = "Mvto.: 000000"
+         Numero = "Mvto.: 000000"
       End If
    End If
    
@@ -8602,7 +8606,7 @@ End If
 
 Set Tb = vgDb.OpenRecordSet("Select Sum (PNF.Quantidade * P.Peso)As Soma from Produtos P,[Produtos da Nota Fiscal]PNF where P.[Seqüência do Produto] = PNF.[Seqüência do Produto] and PNF.[Seqüência da Nota Fiscal] = " & Sequencia_da_Nota_Fiscal)
 If Tb.RecordCount > 0 Then
-Bruto.Text = Tb!soma: Exit Function
+Bruto.Text = Tb!Soma: Exit Function
 End If
 End Function
 
@@ -8677,6 +8681,10 @@ Private Sub RetornoNFe310( _
 
             SalvaXML NFXmlAssinada, tpAmbiente, True
             MsgBox "NFe Autorizada!", vbInformation, vaTitulo
+            vgSituacao = ACAO_NAVEGANDO
+            PrepBotoes Me, vgSituacao
+            ExecutaPreValidacao
+            DANFE
 
         '------------------------------------------------
         ' 101  –  Denegada
@@ -8876,10 +8884,10 @@ End Sub
 
 'Gera a chave de acesso concatenando os campos da NFe
 Private Function MontaChaveAcessoNF(cUF As String, Ano As String, Mes As String, _
-   emiCNPJ As String, modelo As String, serie As String, numero As String, _
+   emiCNPJ As String, modelo As String, serie As String, Numero As String, _
    tpEmis As String, cNF As String, ByRef cDV As String) As String
    Dim chaveSemDV As String
-   chaveSemDV = cUF & Ano & Mes & emiCNPJ & modelo & serie & numero & tpEmis & cNF
+   chaveSemDV = cUF & Ano & Mes & emiCNPJ & modelo & serie & Numero & tpEmis & cNF
    cDV = GDVChaveNFe(chaveSemDV)           'calcula o digito verificador pelo modulo 11 (2 a 9)
    MontaChaveAcessoNF = chaveSemDV & cDV
 End Function
@@ -8906,7 +8914,7 @@ End Function
        '======Chave da NFe===========
        Dim resultado As Long
         Dim emi_CNPJ As String, cUF As String, Ano As String, Mes As String
-        Dim modelo As String, serie As String, numero As String, tpEmis As String
+        Dim modelo As String, serie As String, Numero As String, tpEmis As String
         Dim codigoseguranca As String
        
        Dim msgResult As String, cNF As String, cDV As String
@@ -9193,7 +9201,7 @@ End If
         Mes = Mid$(ide_dhEmi, 6, 2)
         modelo = Format$(ide_mode, "00")
         serie = Format$(ide_serie, "000")
-        numero = Format$(ide_nNF, "000000000")
+        Numero = Format$(ide_nNF, "000000000")
         tpEmis = Format$(ide_tpEmis, "0")
        codigoseguranca = "segredo"     ' informar uma expressão para garantir o sigilo da forma de cálculo do cNF
         
@@ -9201,7 +9209,7 @@ End If
         
        Randomize Timer
    cNF = Format$(Int(Rnd * 100000000), "00000000")
-   chaveNFe = MontaChaveAcessoNF(cUF, Ano, Mes, emi_CNPJ, modelo, serie, numero, tpEmis, cNF, cDV)
+   chaveNFe = MontaChaveAcessoNF(cUF, Ano, Mes, emi_CNPJ, modelo, serie, Numero, tpEmis, cNF, cDV)
         
        ide_cNF = cNF    ' mantém os 8 dígitos, mesmo que comece com zero
         ide_cDV = cDV    ' mantém o dígito verificador
