@@ -1,2178 +1,1942 @@
-Version 5.00
-Begin VB.Form frmBxContas
-   ForeColor                =   &H80000008
-   BorderStyle              =   2
-   Height                   =   8490
-   Left                     =   7725
-   LinkTopic                =   "BxContas"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   8055
-   ScaleWidth               =   10290
-   Top                      =   1030
-   Width                    =   10380
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   0
-      BevelInner               =   0
-      BorderWidth              =   1
-      BevelWidth               =   1
-      BorderStyle              =   2
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   7875
-      Left                     =   15
-      Width                    =   10110
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   17823
-      _extenty                 =   13883
-      Index                    =   0 
-      Begin IRRIG.GCpMM mmCampo
-         Appearance               =   0
-         BackColor                =   &H8000000F
-         BorderStyle              =   0
-         Stretch                  =   -1
-         Height                   =   1350
-         Left                     =   180
-         Width                    =   1320
-         Top                      =   120
-         Index                    =   0 
-         TabStop                  =   0
-         ScrollBars               =   0
-         Locked                   =   -1
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   465
-         Left                     =   1560
-         Width                    =   3195
-         Top                      =   225
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   20.25
-            Underline                =   -1
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Baixa do Contas"
-         Index                    =   0 
-      End
-      Begin VB.Label labFdo0
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &HE0E0E0
-         Left                     =   8955
-         Top                      =   8430
-         Width                    =   705
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo0
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   9390
-         Top                      =   8445
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   29
-         TabStop                  =   0
-         Height                   =   270
-         Left                     =   8970
-         Width                    =   405
-         Top                      =   8445
-         DataField                =   "Conta"
-         Index                    =   0 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   8160
-         Width                    =   570
-         Top                      =   8460
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Conta:"
-         Index                    =   1 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   23
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   780
-         Width                    =   3645
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   1 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   240
-         Width                    =   465
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Doc.:"
-         Index                    =   2 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   195
-         Width                    =   510
-         Top                      =   2520
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Total:"
-         Index                    =   3 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   345
-         Width                    =   360
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "NF.:"
-         Index                    =   4 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   22
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   2985
-         Width                    =   1275
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   2 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   0
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   780
-         Width                    =   855
-         Top                      =   1620
-         DataField                =   "Seqüência da Baixa"
-         TabStop                  =  0
-         Index                    =   3 
-         MultiLine                =   -1
-      End
-      Begin VB.Label labFdo4
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   2430
-         Top                      =   1620
-         Width                    =   1995
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo4
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   4155
-         Top                      =   1635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo4
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   3900
-         Top                      =   1635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   1
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   2445
-         Width                    =   1440
-         Top                      =   1635
-         DataField                =   "Seqüência da Manutenção"
-         Index                    =   4 
-      End
-      Begin VB.Label labFdo5
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5310
-         Top                      =   2490
-         Width                    =   1500
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo5
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   6540
-         Top                      =   2505
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   2
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5325
-         Width                    =   1200
-         Top                      =   2505
-         DataField                =   "Data da Baixa"
-         Index                    =   5 
-      End
-      Begin VB.Label labFdo6
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   2985
-         Top                      =   2895
-         Width                    =   1455
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo6
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   4170
-         Top                      =   2910
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   5
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   3000
-         Width                    =   1155
-         Top                      =   2910
-         DataField                =   "Valor Pago"
-         Index                    =   6 
-         MultiLine                =   -1
-      End
-      Begin VB.Label labFdo7
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   8130
-         Top                      =   2490
-         Width                    =   1545
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo7
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   9405
-         Top                      =   2505
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   3
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   8145
-         Width                    =   1245
-         Top                      =   2505
-         DataField                =   "Valor do Juros"
-         Index                    =   7 
-         MultiLine                =   -1
-      End
-      Begin VB.Label labFdo8
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   780
-         Top                      =   2895
-         Width                    =   1260
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo8
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   1770
-         Top                      =   2910
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   4
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   795
-         Width                    =   960
-         Top                      =   2910
-         DataField                =   "Valor do Desconto"
-         Index                    =   8 
-         MultiLine                =   -1
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   105
-         Width                    =   600
-         Top                      =   3855
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Grupo:"
-         Index                    =   5 
-      End
-      Begin VB.Line Linha
-         BorderColor              =   8421504
-         BorderStyle              =   1
-         BorderWidth              =   1
-         X1                       =   120
-         Y1                       =   3645
-         X2                       =   9675
-         Y2                       =   3645
-         Index                    =   0 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   20
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   5310
-         Width                    =   4365
-         Top                      =   1620
-         TabStop                  =  0
-         Index                    =   9 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   21
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   780
-         Width                    =   1260
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   10 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   24
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   5310
-         Width                    =   345
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   11 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         Locked                   =   -1
-         TabIndex                 =   25
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   6525
-         Width                    =   1095
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   12 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   26
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   8385
-         Width                    =   1290
-         Top                      =   2085
-         TabStop                  =  0
-         Index                    =   13 
-         MultiLine                =   -1
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   27
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   780
-         Width                    =   1260
-         Top                      =   2490
-         TabStop                  =  0
-         Index                    =   14 
-         MultiLine                =   -1
-      End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   18
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   300
-         Left                     =   4440
-         Width                    =   260
-         Top                      =   4245
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   ""
-         Index                    =   0 
-      End
-      Begin VB.Label labFdo15
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   780
-         Top                      =   4245
-         Width                    =   3630
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo15
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   4140
-         Top                      =   4260
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo15
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   3885
-         Top                      =   4260
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   12
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   795
-         Width                    =   3075
-         Top                      =   4260
-         DataField                =   "Seqüência da Agência"
-         Index                    =   15 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   20
-         BorderStyle              =   1
-         Alignment                =   0
-         TabIndex                 =   19
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   8145
-         Width                    =   1110
-         Top                      =   4245
-         DataField                =   "Número do Cheque"
-         Index                    =   16 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   9840
-         Width                    =   45
-         Top                      =   7860
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "-"
-         Index                    =   6 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   28
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   2985
-         Width                    =   1455
-         Top                      =   2490
-         TabStop                  =  0
-         Index                    =   17 
-         MultiLine                =   -1
-      End
-      Begin VB.Label labFdo18
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5430
-         Top                      =   4245
-         Width                    =   1815
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo18
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   6975
-         Top                      =   4260
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo18
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   6720
-         Top                      =   4260
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   13
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5445
-         Width                    =   1260
-         Top                      =   4260
-         DataField                =   "Seqüência da CC da Agência"
-         Index                    =   18 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   75
-         Width                    =   630
-         Top                      =   4275
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Banco:"
-         Index                    =   7 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4890
-         Width                    =   405
-         Top                      =   4275
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "C.C.:"
-         Index                    =   8 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   7320
-         Width                    =   750
-         Top                      =   4275
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Cheque:"
-         Index                    =   9 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   1710
-         Width                    =   645
-         Top                      =   1650
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "*Conta:"
-         Index                    =   10 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   240
-         Width                    =   465
-         Top                      =   1650
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Seq.:"
-         Index                    =   11 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4695
-         Width                    =   540
-         Top                      =   1650
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Geral:"
-         Index                    =   12 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   2355
-         Width                    =   555
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Dupli.:"
-         Index                    =   13 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4905
-         Width                    =   330
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Pc.:"
-         Index                    =   14 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   5730
-         Width                    =   720
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Vencto.:"
-         Index                    =   15 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   7695
-         Width                    =   615
-         Top                      =   2115
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Vr. Pc.:"
-         Index                    =   16 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   2115
-         Width                    =   795
-         Top                      =   2520
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Vr. Rest.:"
-         Index                    =   17 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4605
-         Width                    =   630
-         Top                      =   2520
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "*Baixa:"
-         Index                    =   18 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   7440
-         Width                    =   540
-         Top                      =   2520
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Juros:"
-         Index                    =   19 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   135
-         Width                    =   570
-         Top                      =   2895
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Desc.:"
-         Index                    =   20 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   2295
-         Width                    =   615
-         Top                      =   2895
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "*Pago:"
-         Index                    =   21 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   270
-         Width                    =   435
-         Top                      =   4980
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Hist.:"
-         Index                    =   22 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   0
-         TabIndex                 =   17
-         TabStop                  =   -1
-         Height                   =   2190
-         Left                     =   780
-         Width                    =   8835
-         Top                      =   5430
-         DataField                =   "Histórico"
-         Index                    =   19 
-         MultiLine                =   -1
-         ScrollBars               =   2
-      End
-      Begin VB.CheckBox ChkCp
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80
-         Alignment                =   0
-         TabIndex                 =   30
-         TabStop                  =   0
-         Height                   =   240
-         Left                     =   1560
-         Width                    =   1305
-         Top                      =   1155
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80
-         Alignment                =   0
-         Caption                  =   "Bloqueado"
-         Index                    =   0 
-         DataField                =   "Bloqueado"
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   0
-         Height                   =   240
-         Left                     =   4530
-         Width                    =   705
-         Top                      =   2895
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Carteira"
-         Index                    =   23 
-      End
-      Begin VB.Label labFdo20
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5340
-         Top                      =   2895
-         Width                    =   1470
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo20
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   6540
-         Top                      =   2910
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   6
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5355
-         Width                    =   1170
-         Top                      =   2910
-         DataField                =   "Carteira"
-         Index                    =   20 
-      End
-      Begin VB.Label labFdo21
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5340
-         Top                      =   3240
-         Width                    =   1470
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo21
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   6540
-         Top                      =   3255
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   7
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5355
-         Width                    =   1170
-         Top                      =   3255
-         DataField                =   "Cliente Carteira"
-         Index                    =   21 
-      End
-      Begin VB.Label labFdo22
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   8130
-         Top                      =   2895
-         Width                    =   1545
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo22
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   0
-         Left                     =   9405
-         Top                      =   2910
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   8
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   8145
-         Width                    =   1245
-         Top                      =   2910
-         DataField                =   "Data Recebimento"
-         Index                    =   22 
-      End
-      Begin VB.Label labFdo23
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000000
-         Left                     =   8355
-         Top                      =   470
-         Width                    =   1305
-         Height                   =   270
-      End
-      Begin VB.Label labtxtCampo23
-         Caption                  =   "Pesquisar"
-         BackStyle                =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H0
-         Left                     =   8355
-         Top                      =   180
-         Width                    =   915
-         Height                   =   240
-      End
-      Begin VB.CommandButton bottxtCampo23
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   9390
-         Top                      =   485
-         Width                    =   255
-         Height                   =   240
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000000
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   31
-         TabStop                  =   -1
-         Height                   =   240
-         Left                     =   8370
-         Width                    =   1005
-         Top                      =   485
-         Index                    =   23 
-         MultiLine                =   -1
-      End
-      Begin VB.CheckBox ChkCp
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Alignment                =   0
-         TabIndex                 =   32
-         TabStop                  =   0
-         Height                   =   255
-         Left                     =   9420
-         Width                    =   200
-         Top                      =   4275
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Alignment                =   0
-         Caption                  =   ""
-         Index                    =   1 
-         DataField                =   "Compensado"
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   0
-         Height                   =   240
-         Left                     =   960
-         Width                    =   1950
-         Top                      =   3255
-         Alignment                =   1
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Base da Comissão:"
-         Index                    =   24 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   1
-         Alignment                =   1
-         TabIndex                 =   9
-         TabStop                  =   -1
-         Height                   =   300
-         Left                     =   2970
-         Width                    =   1470
-         Top                      =   3240
-         DataField                =   "Pago"
-         Index                    =   24 
-         MultiLine                =   -1
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4125
-         Width                    =   1110
-         Top                      =   1215
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Beneficiario:"
-         Index                    =   25 
-      End
-      Begin VB.Label labFdo25
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5310
-         Top                      =   1200
-         Width                    =   4365
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo25
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   9405
-         Top                      =   1215
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo25
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   9150
-         Top                      =   1215
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   35
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5325
-         Width                    =   3810
-         Top                      =   1215
-         DataField                =   "Beneficiario"
-         Index                    =   25 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   270
-         Width                    =   435
-         Top                      =   4620
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Deb:"
-         Index                    =   26 
-      End
-      Begin VB.Label labFdo26
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   780
-         Top                      =   4620
-         Width                    =   3930
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo26
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   4440
-         Top                      =   4635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo26
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   4185
-         Top                      =   4635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   14
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   795
-         Width                    =   3375
-         Top                      =   4635
-         DataField                =   "Codigo do Debito"
-         Index                    =   26 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4815
-         Width                    =   480
-         Top                      =   4620
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Cred:"
-         Index                    =   27 
-      End
-      Begin VB.Label labFdo27
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5430
-         Top                      =   4620
-         Width                    =   4185
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo27
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   9345
-         Top                      =   4635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo27
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   9090
-         Top                      =   4635
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   15
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5445
-         Width                    =   3630
-         Top                      =   4635
-         DataField                =   "Codigo do Credito"
-         Index                    =   27 
-      End
-      Begin VB.Label labFdo28
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   780
-         Top                      =   4980
-         Width                    =   8850
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo28
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   9360
-         Top                      =   4995
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo28
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   9105
-         Top                      =   4995
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   16
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   795
-         Width                    =   8295
-         Top                      =   4995
-         DataField                =   "Codigo do Historico"
-         Index                    =   28 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   270
-         Left                     =   1560
-         Width                    =   2100
-         Top                      =   720
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Courier New"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   12
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &HFF
-         Caption                  =   "Gerou Contabíl"
-         Index                    =   28 
-      End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   33
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   480
-         Left                     =   780
-         Width                    =   1590
-         Top                      =   8520
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Lan Contabil"
-         Index                    =   1 
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &HE0E0E0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   1
-         Locked                   =   -1
-         TabIndex                 =   34
-         TabStop                  =   0
-         Height                   =   300
-         Left                     =   5340
-         Width                    =   750
-         Top                      =   2895
-         TabStop                  =  0
-         Index                    =   29 
-         MultiLine                =   -1
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   7095
-         Width                    =   930
-         Top                      =   2895
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Bx Cliente:"
-         Index                    =   29 
-      End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   4890
-         Width                    =   405
-         Top                      =   3855
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Sub:"
-         Index                    =   30 
-      End
-      Begin VB.Label labFdo30
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   780
-         Top                      =   3855
-         Width                    =   3900
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo30
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   4410
-         Top                      =   3870
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo30
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   4155
-         Top                      =   3870
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   10
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   795
-         Width                    =   3345
-         Top                      =   3870
-         DataField                =   "Seqüência Grupo Despesa"
-         Index                    =   30 
-      End
-      Begin VB.Label labFdo31
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   5430
-         Top                      =   3840
-         Width                    =   4185
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo31
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   9345
-         Top                      =   3855
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   11
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   5445
-         Width                    =   3885
-         Top                      =   3855
-         DataField                =   "Seqüência SubGrupo Despesa"
-         Index                    =   31 
+VERSION 5.00
+Begin VB.Form frmBxContas 
+   ClientHeight    =   7905
+   ClientLeft      =   7845
+   ClientTop       =   1500
+   ClientWidth     =   10140
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "BxContas"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   7905
+   ScaleWidth      =   10140
+   Begin IRRIG.GPainel Painel 
+      Height          =   7875
+      Index           =   0
+      Left            =   15
+      TabIndex        =   36
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   10110
+      _ExtentX        =   17833
+      _ExtentY        =   13891
+      BevelOuter      =   0
+      Stretch         =   -1  'True
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   0
+         Left            =   4440
+         TabIndex        =   18
+         TabStop         =   0   'False
+         Top             =   4245
+         Width           =   260
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   480
+         Index           =   1
+         Left            =   780
+         TabIndex        =   33
+         Top             =   8520
+         Width           =   1590
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Lan Contabil"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GCpMM mmCampo 
+         Height          =   1350
+         Index           =   0
+         Left            =   180
+         TabIndex        =   37
+         TabStop         =   0   'False
+         Top             =   120
+         Width           =   1320
+         _ExtentX        =   0
+         _ExtentY        =   0
+         Locked          =   -1  'True
+         ScrollBars      =   0   'False
+         Appearance      =   0
+         BorderStyle     =   0
+         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+      End
+      Begin VB.CommandButton bottxtCampo0 
+         Height          =   270
+         Index           =   2
+         Left            =   9390
+         Style           =   1  'Graphical
+         TabIndex        =   40
+         TabStop         =   0   'False
+         Top             =   8445
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BorderStyle     =   0  'None
+         DataField       =   "Conta"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   0
+         Left            =   8970
+         TabIndex        =   29
+         TabStop         =   0   'False
+         Top             =   8445
+         Width           =   405
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   1
+         Left            =   780
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   23
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   3645
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   2
+         Left            =   2985
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   22
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   1275
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         DataField       =   "Seqüência da Baixa"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   3
+         Left            =   780
+         Locked          =   -1  'True
+         MultiLine       =   -1  'True
+         TabIndex        =   0
+         TabStop         =   0   'False
+         Top             =   1620
+         Width           =   855
+      End
+      Begin VB.CommandButton bottxtCampo4 
+         Height          =   270
+         Index           =   1
+         Left            =   4155
+         Style           =   1  'Graphical
+         TabIndex        =   46
+         TabStop         =   0   'False
+         Top             =   1635
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo4 
+         Height          =   270
+         Index           =   2
+         Left            =   3900
+         Style           =   1  'Graphical
+         TabIndex        =   47
+         TabStop         =   0   'False
+         Top             =   1635
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência da Manutenção"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   4
+         Left            =   2445
+         TabIndex        =   1
+         Top             =   1635
+         Width           =   1440
+      End
+      Begin VB.CommandButton bottxtCampo5 
+         Height          =   270
+         Index           =   0
+         Left            =   6540
+         Style           =   1  'Graphical
+         TabIndex        =   49
+         TabStop         =   0   'False
+         Top             =   2505
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Data da Baixa"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   5
+         Left            =   5325
+         TabIndex        =   2
+         Top             =   2505
+         Width           =   1200
+      End
+      Begin VB.CommandButton bottxtCampo6 
+         Height          =   270
+         Index           =   0
+         Left            =   4170
+         Style           =   1  'Graphical
+         TabIndex        =   51
+         TabStop         =   0   'False
+         Top             =   2910
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Valor Pago"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   6
+         Left            =   3000
+         MultiLine       =   -1  'True
+         TabIndex        =   5
+         Top             =   2910
+         Width           =   1155
+      End
+      Begin VB.CommandButton bottxtCampo7 
+         Height          =   270
+         Index           =   0
+         Left            =   9405
+         Style           =   1  'Graphical
+         TabIndex        =   53
+         TabStop         =   0   'False
+         Top             =   2505
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Valor do Juros"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   7
+         Left            =   8145
+         MultiLine       =   -1  'True
+         TabIndex        =   3
+         Top             =   2505
+         Width           =   1245
+      End
+      Begin VB.CommandButton bottxtCampo8 
+         Height          =   270
+         Index           =   0
+         Left            =   1770
+         Style           =   1  'Graphical
+         TabIndex        =   55
+         TabStop         =   0   'False
+         Top             =   2910
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Valor do Desconto"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   8
+         Left            =   795
+         MultiLine       =   -1  'True
+         TabIndex        =   4
+         Top             =   2910
+         Width           =   960
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   9
+         Left            =   5310
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   20
+         TabStop         =   0   'False
+         Top             =   1620
+         Width           =   4365
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   10
+         Left            =   780
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   21
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   1260
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   11
+         Left            =   5310
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   24
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   345
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   12
+         Left            =   6525
+         Locked          =   -1  'True
+         MaxLength       =   254
+         TabIndex        =   25
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   1095
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   13
+         Left            =   8385
+         Locked          =   -1  'True
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   26
+         TabStop         =   0   'False
+         Top             =   2085
+         Width           =   1290
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   14
+         Left            =   780
+         Locked          =   -1  'True
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   27
+         TabStop         =   0   'False
+         Top             =   2490
+         Width           =   1260
+      End
+      Begin VB.CommandButton bottxtCampo15 
+         Height          =   270
+         Index           =   1
+         Left            =   4140
+         Style           =   1  'Graphical
+         TabIndex        =   58
+         TabStop         =   0   'False
+         Top             =   4260
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo15 
+         Height          =   270
+         Index           =   2
+         Left            =   3885
+         Style           =   1  'Graphical
+         TabIndex        =   59
+         TabStop         =   0   'False
+         Top             =   4260
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência da Agência"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   15
+         Left            =   795
+         TabIndex        =   12
+         Top             =   4260
+         Width           =   3075
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         DataField       =   "Número do Cheque"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   16
+         Left            =   8145
+         MaxLength       =   20
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   4245
+         Width           =   1110
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   17
+         Left            =   2985
+         Locked          =   -1  'True
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   28
+         TabStop         =   0   'False
+         Top             =   2490
+         Width           =   1455
+      End
+      Begin VB.CommandButton bottxtCampo18 
+         Height          =   270
+         Index           =   1
+         Left            =   6975
+         Style           =   1  'Graphical
+         TabIndex        =   62
+         TabStop         =   0   'False
+         Top             =   4260
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo18 
+         Height          =   270
+         Index           =   2
+         Left            =   6720
+         Style           =   1  'Graphical
+         TabIndex        =   63
+         TabStop         =   0   'False
+         Top             =   4260
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência da CC da Agência"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   18
+         Left            =   5445
+         TabIndex        =   13
+         Top             =   4260
+         Width           =   1260
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         DataField       =   "Histórico"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   2190
+         Index           =   19
+         Left            =   780
+         MultiLine       =   -1  'True
+         ScrollBars      =   2  'Vertical
+         TabIndex        =   17
+         Top             =   5430
+         Width           =   8835
+      End
+      Begin VB.CheckBox ChkCp 
+         Caption         =   "Bloqueado"
+         DataField       =   "Bloqueado"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000080&
+         Height          =   240
+         Index           =   0
+         Left            =   1560
+         TabIndex        =   30
+         TabStop         =   0   'False
+         Top             =   1155
+         Width           =   1305
+      End
+      Begin VB.CommandButton bottxtCampo20 
+         Height          =   270
+         Index           =   2
+         Left            =   6540
+         Style           =   1  'Graphical
+         TabIndex        =   82
+         TabStop         =   0   'False
+         Top             =   2910
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Carteira"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   20
+         Left            =   5355
+         TabIndex        =   6
+         Top             =   2910
+         Width           =   1170
+      End
+      Begin VB.CommandButton bottxtCampo21 
+         Height          =   270
+         Index           =   2
+         Left            =   6540
+         Style           =   1  'Graphical
+         TabIndex        =   84
+         TabStop         =   0   'False
+         Top             =   3255
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Cliente Carteira"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   21
+         Left            =   5355
+         TabIndex        =   7
+         Top             =   3255
+         Width           =   1170
+      End
+      Begin VB.CommandButton bottxtCampo22 
+         Height          =   270
+         Index           =   0
+         Left            =   9405
+         Style           =   1  'Graphical
+         TabIndex        =   86
+         TabStop         =   0   'False
+         Top             =   2910
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Data Recebimento"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   22
+         Left            =   8145
+         TabIndex        =   8
+         Top             =   2910
+         Width           =   1245
+      End
+      Begin VB.CommandButton bottxtCampo23 
+         Height          =   240
+         Index           =   1
+         Left            =   9390
+         Style           =   1  'Graphical
+         TabIndex        =   89
+         TabStop         =   0   'False
+         Top             =   485
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   240
+         Index           =   23
+         Left            =   8370
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   31
+         Top             =   485
+         Width           =   1005
+      End
+      Begin VB.CheckBox ChkCp 
+         DataField       =   "Compensado"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   1
+         Left            =   9420
+         TabIndex        =   32
+         TabStop         =   0   'False
+         Top             =   4275
+         Width           =   200
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         DataField       =   "Pago"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   24
+         Left            =   2970
+         MultiLine       =   -1  'True
+         TabIndex        =   9
+         Top             =   3240
+         Width           =   1470
+      End
+      Begin VB.CommandButton bottxtCampo25 
+         Height          =   270
+         Index           =   1
+         Left            =   9405
+         Style           =   1  'Graphical
+         TabIndex        =   93
+         TabStop         =   0   'False
+         Top             =   1215
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo25 
+         Height          =   270
+         Index           =   2
+         Left            =   9150
+         Style           =   1  'Graphical
+         TabIndex        =   94
+         TabStop         =   0   'False
+         Top             =   1215
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Beneficiario"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   25
+         Left            =   5325
+         TabIndex        =   35
+         Top             =   1215
+         Width           =   3810
+      End
+      Begin VB.CommandButton bottxtCampo26 
+         Height          =   270
+         Index           =   1
+         Left            =   4440
+         Style           =   1  'Graphical
+         TabIndex        =   97
+         TabStop         =   0   'False
+         Top             =   4635
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo26 
+         Height          =   270
+         Index           =   2
+         Left            =   4185
+         Style           =   1  'Graphical
+         TabIndex        =   98
+         TabStop         =   0   'False
+         Top             =   4635
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Codigo do Debito"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   26
+         Left            =   795
+         TabIndex        =   14
+         Top             =   4635
+         Width           =   3375
+      End
+      Begin VB.CommandButton bottxtCampo27 
+         Height          =   270
+         Index           =   1
+         Left            =   9345
+         Style           =   1  'Graphical
+         TabIndex        =   101
+         TabStop         =   0   'False
+         Top             =   4635
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo27 
+         Height          =   270
+         Index           =   2
+         Left            =   9090
+         Style           =   1  'Graphical
+         TabIndex        =   102
+         TabStop         =   0   'False
+         Top             =   4635
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Codigo do Credito"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   27
+         Left            =   5445
+         TabIndex        =   15
+         Top             =   4635
+         Width           =   3630
+      End
+      Begin VB.CommandButton bottxtCampo28 
+         Height          =   270
+         Index           =   1
+         Left            =   9360
+         Style           =   1  'Graphical
+         TabIndex        =   104
+         TabStop         =   0   'False
+         Top             =   4995
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo28 
+         Height          =   270
+         Index           =   2
+         Left            =   9105
+         Style           =   1  'Graphical
+         TabIndex        =   105
+         TabStop         =   0   'False
+         Top             =   4995
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Codigo do Historico"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   28
+         Left            =   795
+         TabIndex        =   16
+         Top             =   4995
+         Width           =   8295
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Index           =   29
+         Left            =   5340
+         Locked          =   -1  'True
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   34
+         TabStop         =   0   'False
+         Top             =   2895
+         Width           =   750
+      End
+      Begin VB.CommandButton bottxtCampo30 
+         Height          =   270
+         Index           =   1
+         Left            =   4410
+         Style           =   1  'Graphical
+         TabIndex        =   110
+         TabStop         =   0   'False
+         Top             =   3870
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo30 
+         Height          =   270
+         Index           =   2
+         Left            =   4155
+         Style           =   1  'Graphical
+         TabIndex        =   111
+         TabStop         =   0   'False
+         Top             =   3870
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência Grupo Despesa"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   30
+         Left            =   795
+         TabIndex        =   10
+         Top             =   3870
+         Width           =   3345
+      End
+      Begin VB.CommandButton bottxtCampo31 
+         Height          =   270
+         Index           =   2
+         Left            =   9345
+         Style           =   1  'Graphical
+         TabIndex        =   113
+         TabStop         =   0   'False
+         Top             =   3855
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         DataField       =   "Seqüência SubGrupo Despesa"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Index           =   31
+         Left            =   5445
+         TabIndex        =   11
+         Top             =   3855
+         Width           =   3885
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Baixa do Contas"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   465
+         Index           =   0
+         Left            =   1560
+         TabIndex        =   38
+         Top             =   225
+         Width           =   3195
+      End
+      Begin VB.Label labFdo0 
+         Appearance      =   0  'Flat
+         BackColor       =   &H00E0E0E0&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   8955
+         TabIndex        =   39
+         Top             =   8430
+         Width           =   705
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Conta:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   1
+         Left            =   8160
+         TabIndex        =   41
+         Top             =   8460
+         Width           =   570
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Doc.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   2
+         Left            =   240
+         TabIndex        =   42
+         Top             =   2115
+         Width           =   465
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Total:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   3
+         Left            =   195
+         TabIndex        =   43
+         Top             =   2520
+         Width           =   510
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "NF.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   4
+         Left            =   345
+         TabIndex        =   44
+         Top             =   2115
+         Width           =   360
+      End
+      Begin VB.Label labFdo4 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   2430
+         TabIndex        =   45
+         Top             =   1620
+         Width           =   1995
+      End
+      Begin VB.Label labFdo5 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5310
+         TabIndex        =   48
+         Top             =   2490
+         Width           =   1500
+      End
+      Begin VB.Label labFdo6 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   2985
+         TabIndex        =   50
+         Top             =   2895
+         Width           =   1455
+      End
+      Begin VB.Label labFdo7 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   8130
+         TabIndex        =   52
+         Top             =   2490
+         Width           =   1545
+      End
+      Begin VB.Label labFdo8 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   780
+         TabIndex        =   54
+         Top             =   2895
+         Width           =   1260
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Grupo:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   5
+         Left            =   105
+         TabIndex        =   56
+         Top             =   3855
+         Width           =   600
+      End
+      Begin VB.Line Linha 
+         BorderColor     =   &H00808080&
+         Index           =   0
+         X1              =   120
+         X2              =   9675
+         Y1              =   3645
+         Y2              =   3645
+      End
+      Begin VB.Label labFdo15 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   780
+         TabIndex        =   57
+         Top             =   4245
+         Width           =   3630
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "-"
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   6
+         Left            =   9840
+         TabIndex        =   60
+         Top             =   7860
+         Width           =   45
+      End
+      Begin VB.Label labFdo18 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5430
+         TabIndex        =   61
+         Top             =   4245
+         Width           =   1815
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Banco:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   7
+         Left            =   75
+         TabIndex        =   64
+         Top             =   4275
+         Width           =   630
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "C.C.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   8
+         Left            =   4890
+         TabIndex        =   65
+         Top             =   4275
+         Width           =   405
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Cheque:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   9
+         Left            =   7320
+         TabIndex        =   66
+         Top             =   4275
+         Width           =   750
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "*Conta:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   10
+         Left            =   1710
+         TabIndex        =   67
+         Top             =   1650
+         Width           =   645
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Seq.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   11
+         Left            =   240
+         TabIndex        =   68
+         Top             =   1650
+         Width           =   465
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Geral:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   12
+         Left            =   4695
+         TabIndex        =   69
+         Top             =   1650
+         Width           =   540
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Dupli.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   13
+         Left            =   2355
+         TabIndex        =   70
+         Top             =   2115
+         Width           =   555
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Pc.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   14
+         Left            =   4905
+         TabIndex        =   71
+         Top             =   2115
+         Width           =   330
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Vencto.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   15
+         Left            =   5730
+         TabIndex        =   72
+         Top             =   2115
+         Width           =   720
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Vr. Pc.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   16
+         Left            =   7695
+         TabIndex        =   73
+         Top             =   2115
+         Width           =   615
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Vr. Rest.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   17
+         Left            =   2115
+         TabIndex        =   74
+         Top             =   2520
+         Width           =   795
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "*Baixa:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   18
+         Left            =   4605
+         TabIndex        =   75
+         Top             =   2520
+         Width           =   630
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Juros:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   19
+         Left            =   7440
+         TabIndex        =   76
+         Top             =   2520
+         Width           =   540
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Desc.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   20
+         Left            =   135
+         TabIndex        =   77
+         Top             =   2895
+         Width           =   570
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "*Pago:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   21
+         Left            =   2295
+         TabIndex        =   78
+         Top             =   2895
+         Width           =   615
+      End
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "Hist.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   22
+         Left            =   270
+         TabIndex        =   79
+         Top             =   4980
+         Width           =   435
+      End
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Carteira"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   23
+         Left            =   4530
+         TabIndex        =   80
+         Top             =   2895
+         Width           =   705
+      End
+      Begin VB.Label labFdo20 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5340
+         TabIndex        =   81
+         Top             =   2895
+         Width           =   1470
+      End
+      Begin VB.Label labFdo21 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5340
+         TabIndex        =   83
+         Top             =   3240
+         Width           =   1470
+      End
+      Begin VB.Label labFdo22 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   8130
+         TabIndex        =   85
+         Top             =   2895
+         Width           =   1545
+      End
+      Begin VB.Label labFdo23 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   270
+         Left            =   8355
+         TabIndex        =   87
+         Top             =   470
+         Width           =   1305
+      End
+      Begin VB.Label labtxtCampo23 
+         BackStyle       =   0  'Transparent
+         Caption         =   "Pesquisar"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   240
+         Left            =   8355
+         TabIndex        =   88
+         Top             =   180
+         Width           =   915
+      End
+      Begin VB.Label Label 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Base da Comissão:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   24
+         Left            =   960
+         TabIndex        =   90
+         Top             =   3255
+         Width           =   1950
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Beneficiario:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   25
+         Left            =   4125
+         TabIndex        =   91
+         Top             =   1215
+         Width           =   1110
+      End
+      Begin VB.Label labFdo25 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5310
+         TabIndex        =   92
+         Top             =   1200
+         Width           =   4365
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Deb:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   26
+         Left            =   270
+         TabIndex        =   95
+         Top             =   4620
+         Width           =   435
+      End
+      Begin VB.Label labFdo26 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   780
+         TabIndex        =   96
+         Top             =   4620
+         Width           =   3930
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Cred:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   27
+         Left            =   4815
+         TabIndex        =   99
+         Top             =   4620
+         Width           =   480
+      End
+      Begin VB.Label labFdo27 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5430
+         TabIndex        =   100
+         Top             =   4620
+         Width           =   4185
+      End
+      Begin VB.Label labFdo28 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   780
+         TabIndex        =   103
+         Top             =   4980
+         Width           =   8850
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Gerou Contabíl"
+         BeginProperty Font 
+            Name            =   "Courier New"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   270
+         Index           =   28
+         Left            =   1560
+         TabIndex        =   106
+         Top             =   720
+         Width           =   2100
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Bx Cliente:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   29
+         Left            =   7095
+         TabIndex        =   107
+         Top             =   2895
+         Width           =   930
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Sub:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   30
+         Left            =   4890
+         TabIndex        =   108
+         Top             =   3855
+         Width           =   405
+      End
+      Begin VB.Label labFdo30 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   780
+         TabIndex        =   109
+         Top             =   3855
+         Width           =   3900
+      End
+      Begin VB.Label labFdo31 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   5430
+         TabIndex        =   112
+         Top             =   3840
+         Width           =   4185
       End
    End
-         Begin IRRIG.GListV grdBrowse 
-                  Height          =   795
-                  Left            =   60
-                  TabIndex        =   0
-                  Top             =   330
-                  Width           =   1575
-                  _ExtentX        =   2778
-                  _ExtentY        =   1402
-                  FullRowSelect   =   0           'False
-                  RowHeight       =   225
-                  AllowEdit       =   -1          'True
-                  AllowInsert     =   -1          'True
-                  AllowDelete     =   -1          'True
-                  ManualUpdate    =   -1          'True
-                  ManualDelete    =   -1          'True
-                  NavigationAddMode=   1
-                  ShowGridCaption =   0           'False
-                  ShowFilterBar   =   -1          'True
-                  Caption         =   ""
-                  CacheSize       =   100
-                  BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
-                           Size            =   8.25
-                           Charset         =   0
-                           Weight          =   400
-                           Underline       =   0  'False
-                           Italic          =   0  'False
-                           StrikeThrough   =   0  'False
-                  EndProperty
-         End
+   Begin IRRIG.GListV grdBrowse 
+      Height          =   795
+      Left            =   60
+      TabIndex        =   114
+      Top             =   330
+      Width           =   1575
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
+   End
 End
-Attribute VB_name = "frmBxContas"
+Attribute VB_Name = "frmBxContas"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -2189,36 +1953,37 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgFiltroInicial As String                  'filtro inicial do módulo   
+Public vgFiltroInicial As String                  'filtro inicial do módulo
 Public vgOrdemInicial As String                   'ordem inicial do módulo
-Public vgUltimaOrdem As String                    'última ordenação feita no módulo    
-Public vgUltimoFiltro As String                   'último filtro definido no módulo   
+Public vgUltimaOrdem As String                    'última ordenação feita no módulo
+Public vgUltimoFiltro As String                   'último filtro definido no módulo
 Public vgUltimoFiltroComTit As String             'titulo do último filtro definido no módulo
-Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo 
+Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo
 Public vgUltimoTabIndex As Integer                'último campo com foco do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
+Public vgPriVez As Integer                        'flag de carregamento do módulo
 Public WithEvents vgTb As GRecordSet              'tabela de dados do módulo
+Attribute vgTb.VB_VarHelpID = -1
 Public vgSQL As String                            'expressão SQL que define o módulo
-Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo 
-Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo 
-Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo 
+Public vgTemInclusao As Integer                   'flag se tem ou não inclusão no módulo
+Public vgTemExclusao As Integer                   'flag se tem ou não exclusão no módulo
+Public vgTemProcura As Integer                    'flag se tem ou não procura no módulo
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo 
+Public vgTemAlteracao As Integer                  'flag se tem ou não alteração no módulo
 Public vgTemAlteracaoGrids As Integer              'flag se tem ou não alteração nos grids
 Public vgTemBrowse As Integer                     'flag se tem ou não janela em grade no módulo
 Public vgSemVincDados As Integer                  'Flag para definir formulários sem vinculo com dados
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgRepeticao As Integer                     'flag de repetição do último reg digitado
 Public vgAlterar As Integer                       'flag de Alteracao de registros
 Public vgUltAlterar As Integer                    'flag de última situação de "pode alterar"
-Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso 
-Public vgIndDefault As String                     'indice default do módulo 
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
+Public vgFiltroEmUso As Integer                   'Indice do Filtro atual em uso
+Public vgIndDefault As String                     'indice default do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
 Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
-Dim txtCampo(31) As New FormataCampos             'classe dos campos tipo texto do módulo  
+Dim txtCampo(31) As New FormataCampos             'classe dos campos tipo texto do módulo
 Dim chkCampo(1) As New FormataCampos              'classe dos campos tipo lógico do módulo
 Dim Sequencia_da_Baixa As Long, Sequencia_da_Manutencao As Long, Data_da_Baixa As Variant
 Dim Valor_Pago As Double, Valor_do_Juros As Double, Valor_do_Desconto As Double
@@ -2235,14 +2000,14 @@ Public TxtCC As Object, txtMemo As Object, txtDtaCli As Object
 Public Seqk As Object, txtPago As Object, txtDebito As Object
 Public txtCredito As Object, txtGrupo As Object, txtSubGrupo As Object
 
-Private Manu As GRecordset, Manu2 As GRecordSet, GeralTb As GRecordset
+Private Manu As GRecordSet, Manu2 As GRecordSet, GeralTb As GRecordSet
 Private VrTotal As Double
 
 Private Sub TabelasAuxiliares()
    If vgSituacao = ACAO_INCLUINDO Then 'Tirando a Formula
-      Set Manu2 = Nothing      
+      Set Manu2 = Nothing
       Set GeralTb = Nothing
-   End If 
+   End If
    If txtSequencia_da_Manutencao.Text <> "" Then
       TbAuxiliar "Manutenção Contas", "[Seqüência da Manutenção] = " & txtSequencia_da_Manutencao.Text, Manu2
       If Manu2.RecordCount > 0 Then
@@ -2250,7 +2015,7 @@ Private Sub TabelasAuxiliares()
       End If
       MostraFormulas
       PegaVrTotal
-   End If   
+   End If
 End Sub
 
 
@@ -2260,12 +2025,12 @@ Private Sub BaixaConta()
    
    On Error GoTo DeuErro
    
-   If VgSituacao = ACAO_INCLUINDO Then
+   If vgSituacao = ACAO_INCLUINDO Then
       IncluiNoSpy
       LancamentoContabil
    End If
    
-   If VgSituacao = ACAO_EDITANDO Then
+   If vgSituacao = ACAO_EDITANDO Then
       IncluiNoSpyAltera
    '   AlteraContabil
    End If
@@ -2274,7 +2039,7 @@ Private Sub BaixaConta()
    '   AjustaComissao
    'End If
    
-   If VgSituacao = ACAO_EXCLUINDO Then
+   If vgSituacao = ACAO_EXCLUINDO Then
       'ZeraComissao
       DeletaContabil
    End If
@@ -2297,9 +2062,9 @@ Private Sub BaixaConta()
       !Histórico = !Histórico & vbCrLf & Historico
       ![Seqüência da Baixa] = Sequencia_da_Baixa
          If Manu2!Documento = "Rel. Viagem" Or Manu2!Documento = "Rel. Viagem " Or Manu2!Documento = "Rel.Viagem" Then
-            ![Notas da Compra] = "Pagamento Efetuado em " & ![Data da Baixa] & " - Sequencia da Baixa " & Sequencia_da_Baixa 
+            ![Notas da Compra] = "Pagamento Efetuado em " & ![Data da Baixa] & " - Sequencia da Baixa " & Sequencia_da_Baixa
          End If
-         If Manu2!Documento = "Reembolso" Or Manu2!Documento = "Reembolso " Then 
+         If Manu2!Documento = "Reembolso" Or Manu2!Documento = "Reembolso " Then
             ![Notas da Compra] = "Recebido em " & ![Data da Baixa] & " - Sequencia da Baixa " & Sequencia_da_Baixa
          End If
       'Se estiver excluindo a baixa entao vamos deixar imprimir o cheque novamente
@@ -2309,7 +2074,7 @@ Private Sub BaixaConta()
           If Manu2!Documento = "Rel. Viagem" Or Manu2!Documento = "Rel. Viagem " Or Manu2!Documento = "Reembolso" Or Manu2!Documento = "Reembolso " Then
             ![Notas da Compra] = ""
           End If
-       End If   
+       End If
       .Update
       .BookMark = .LastModified
    End With
@@ -2330,24 +2095,24 @@ Private Sub BaixaConta()
             Set MvtoCC = vgDb.OpenRecordSet("SELECT * FROM [Movimentação da Conta Corrente] WHERE [Seqüência da Movimentação CC] = 0")
          End If
          With MvtoCC
-            If vgSituacao = ACAO_INCLUINDO Or MvtoCC.RecordCount = 0 Then .AddNew             
+            If vgSituacao = ACAO_INCLUINDO Or MvtoCC.RecordCount = 0 Then .AddNew
             ![Seqüência da Agência] = Sequencia_da_Agencia
             ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia
-            ![Data Do Movimento] = Data_da_Baixa
+            ![Data do Movimento] = Data_da_Baixa
             ![Valor Total] = Valor_Pago
             ![Data Do Último Dia] = DateAdd("M", 1, Data_da_Baixa) - Day(DateAdd("M", 1, Data_da_Baixa))
             ![Seqüência Do Lançamento] = Sequencia_da_Manutencao 'Usado no sistema antigo
             !Conta = Conta
             ![Codigo Do Historico] = Codigo_do_Historico
-            ![Codigo Do Debito] = Codigo_do_Debito 
-            ![Codigo Do Credito] = Codigo_do_Credito 
+            ![Codigo Do Debito] = Codigo_do_Debito
+            ![Codigo Do Credito] = Codigo_do_Credito
             If Conta = "P" Then
                ![Origem da Movimentação] = "Manutenção do Contas a Pagar"
                !Histórico = Historico '"Gerado pelo Contas a Pagar nº " & Format(Sequencia_da_Manutencao, "000000") & ", Parcela Nº " & Manu2!Parcela & IIf(Not Vazio(Numero_do_Cheque), ", Cheque Nº " & Numero_do_Cheque, "")
                ![Tipo de Movimento da CC] = "Saída"
             Else
                ![Origem da Movimentação] = "Manutenção Do Contas a Receber"
-               ![Seqüência do Orçamento] = Numero 
+               ![Seqüência do Orçamento] = Numero
                !Histórico = Historico '"Gerado pelo Contas a Receber nº " & Format(Sequencia_da_Manutencao, "000000") & ", Parcela Nº " & Manu2!Parcela
                ![Tipo de Movimento da CC] = "Entrada"
             End If
@@ -2382,7 +2147,7 @@ Private Sub BaixaConta()
             vgDb.Execute "Update [Baixa Contas] Set [Seqüência da Movimentação CC] = 0 WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa
             With MvtoCC
                .Delete
-            End With         
+            End With
          End If
       End If
    End If
@@ -2394,7 +2159,7 @@ Private Sub BaixaConta()
    End If
    If vgSituacao = ACAO_EXCLUINDO Then
       DeleteLanAvulso
-   End If 
+   End If
    'If vgSituacao <> ACAO_EXCLUINDO Then
    '   vgDb.Execute "Update [Baixa Contas] Set [Seqüência Grupo Despesa] = " & Manu2![Seqüência Grupo Despesa] & " WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa
    '   vgDb.Execute "Update [Baixa Contas] Set [Seqüência SubGrupo Despesa] = " & Manu2![Seqüência SubGrupo Despesa] & " WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa
@@ -2413,8 +2178,8 @@ DeuErro:
    End If
 End Sub
 
-Private Sub VerificaFormulario
-   On error Resume Next
+Private Sub VerificaFormulario()
+   On Error Resume Next
    
    If Me.Caption = "Baixa do Contas a Pagar" Then
       BaixaPagarAberto = False
@@ -2440,11 +2205,11 @@ Private Sub MySearch()
    End If
 End Sub
 
-Private Function Filtro() As String   
+Private Function Filtro() As String
    Dim Tb As New GRecordSet, TB2 As New GRecordSet
       
    Filtro = "[Seqüência da Agência] > 0"
-   If vgSituacao = ACAO_NAVEGANDO Then      
+   If vgSituacao = ACAO_NAVEGANDO Then
       Exit Function
    End If
    
@@ -2467,11 +2232,11 @@ Private Function Filtro() As String
 End Function
 
 Private Sub PegaVrTotal()
-   On error Resume Next
+   On Error Resume Next
    
    If vgSituacao = ACAO_NAVEGANDO Then
       VrTotal = Valor_Pago
-   End If   
+   End If
    
 End Sub
 
@@ -2485,28 +2250,28 @@ Private Function ValidaValorPago() As Boolean
    If Tb.RecordCount = 0 Then
       ValidaValorPago = Valor_Pago >= 0 And Valor_Pago <= Manu2![Valor Restante] + Valor_do_Juros - Valor_do_Desconto
    Else
-      Restante = Tb![Valor Pago] + Manu2![Valor Restante] - Tb![Valor Do Juros] + Tb![Valor Do Desconto]
+      Restante = Tb![Valor Pago] + Manu2![Valor Restante] - Tb![Valor do Juros] + Tb![Valor Do Desconto]
       ValidaValorPago = Valor_Pago >= 0 And Valor_Pago <= Restante + Valor_do_Juros - Valor_do_Desconto
    End If
 
 End Function
 
-Private Function OnExitDuplicata()'Usado na Ação LostFocus de Seq (Ganbiarra do Ygor)
-Dim Tb As New GRecordSet 
+Private Function OnExitDuplicata() 'Usado na Ação LostFocus de Seq (Ganbiarra do Ygor)
+Dim Tb As New GRecordSet
 
    If Seq > 0 Then
-      If Sequencia_da_Baixa = Seq Then :Exit Function
+      If Sequencia_da_Baixa = Seq Then: Exit Function
          Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas] WHERE [Seqüência da Baixa] = " & Seq)
-         SeqRegistro = Tb![Seqüência da Baixa]
+         seqRegistro = Tb![Seqüência da Baixa]
       If BaixaReceberAberto Then
          BaixaReceber.Caption = "Baixa do Contas a Receber"
          InicializaFiltro BaixaReceber
          BaixaReceberAberto = True
-         BaixaReceber.vgFiltroInicial = "[Seqüência da Baixa] = " & seqRegistro 
+         BaixaReceber.vgFiltroInicial = "[Seqüência da Baixa] = " & seqRegistro
          Geral.SetFocus
          Seqk.SetFocus
-         SendK(13)   
-      End If   
+         SendK (13)
+      End If
    End If
    
 End Function
@@ -2514,24 +2279,24 @@ End Function
 Private Sub DeletaConciliacao()
 Dim Conciliacao As New GRecordSet
 Dim Bx As Long
-If Numero_do_Cheque <> "" And Compensado = True And vgSituacao = ACAO_EXCLUINDO And Conta = "P" And Sequencia_da_Agencia > 0 Then 
+If Numero_do_Cheque <> "" And Compensado = True And vgSituacao = ACAO_EXCLUINDO And Conta = "P" And Sequencia_da_Agencia > 0 Then
 Set Conciliacao = vgDb.OpenRecordSet("SELECT * FROM [Conciliação de Cheques] WHERE [N Cheque] = " & Numero_do_Cheque & " And Agencia = " & Sequencia_da_Agencia)
 If Conciliacao.RecordCount = 1 Then
 Bx = Conciliacao![Seq da Conciliação]
 vgDb.Execute "DELETE FROM [Conciliação de Cheques] " & _
-             "WHERE [Seq da Conciliação] = " & Bx   
-MsgBox("Cheque" & " " & Numero_do_Cheque & " " & "Foi Excluido da Conciliação")                       
+             "WHERE [Seq da Conciliação] = " & Bx
+MsgBox ("Cheque" & " " & Numero_do_Cheque & " " & "Foi Excluido da Conciliação")
 End If
 End If
 End Sub
 
-Private Sub ZeraBaixa()'Qdo Exclui a Baixa, Na Tabela de Manutenção Contas permanecia a sequencia da Baixa e Zuava o Relatorio de Comissoes nao pagas Corrigindo
+Private Sub ZeraBaixa() 'Qdo Exclui a Baixa, Na Tabela de Manutenção Contas permanecia a sequencia da Baixa e Zuava o Relatorio de Comissoes nao pagas Corrigindo
 Dim ManutencaoContas As New GRecordSet
   Set ManutencaoContas = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência da Manutenção] = " & Sequencia_da_Manutencao)
-     If ManutencaoContas![Seqüência da Baixa] > 0  Then
+     If ManutencaoContas![Seqüência da Baixa] > 0 Then
         vgDb.Execute "Update [Manutenção Contas] Set [Seqüência da Baixa] = 0 WHERE [Seqüência da Manutenção] = " & Sequencia_da_Manutencao
-        MsgBox("Baixa" & " " &  ManutencaoContas![Seqüência da Baixa] & " Excluida do Contas")
-     End If 
+        MsgBox ("Baixa" & " " & ManutencaoContas![Seqüência da Baixa] & " Excluida do Contas")
+     End If
 End Sub
 
 Private Sub IncluiNoSpy()
@@ -2545,12 +2310,12 @@ Dim Baixa As New GRecordSet, Spy As New GRecordSet
    Spy![Seq Do Spy] = SuperPegaSequencial("Spy Baixa Contas", "Seq do Spy")
    Spy![Seq da Baixa] = Sequencia_da_Baixa
    Spy![Dt Inclusão] = Now
-   Spy![Usuario] = vgPWUsuario 
+   Spy![usuario] = vgPWUsuario
    Spy![TpConta] = Baixa!Conta
    Spy![Manutencao] = Sequencia_da_Manutencao
    Spy![Dt Baixa] = Data_da_Baixa
    Spy![Juros] = Valor_do_Juros
-   Spy![Desconto] = Valor_do_Desconto
+   Spy![desconto] = Valor_do_Desconto
    Spy![Vr Pago] = Valor_Pago
    Spy![Tp Carteira] = Carteira
    Spy![Bx Cliente] = Data_Recebimento
@@ -2566,7 +2331,7 @@ End Sub
 
 Private Sub IncluiNoSpyAltera()
 Dim Baixa As New GRecordSet, SpySeq As New GRecordSet, Spy As New GRecordSet
-  If vgSituacao = ACAO_EDITANDO Then 
+  If vgSituacao = ACAO_EDITANDO Then
    Set Baixa = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa)
    Set Spy = vgDb.OpenRecordSet("Alteracao Baixa Contas")
    Set SpySeq = vgDb.OpenRecordSet("SELECT * FROM [Spy Baixa Contas] WHERE [Seq da Baixa] = " & Sequencia_da_Baixa)
@@ -2575,13 +2340,13 @@ Dim Baixa As New GRecordSet, SpySeq As New GRecordSet, Spy As New GRecordSet
    With Baixa
    Spy.AddNew
    Spy![Seq Do Spy] = SpySeq![Seq Do Spy]
-   Spy![Seq da Baixa] =  Sequencia_da_Baixa
+   Spy![Seq da Baixa] = Sequencia_da_Baixa
    Spy![Usu Alteracao] = vgPWUsuario
    Spy![Dt Modificacao] = Now
    Spy![Manutencao] = Sequencia_da_Manutencao
    Spy![Dta Baixa] = Data_da_Baixa
    Spy![Juros] = Valor_do_Juros
-   Spy![Desconto] = Valor_do_Desconto
+   Spy![desconto] = Valor_do_Desconto
    Spy![Vr Pago] = Valor_Pago
    Spy![Tp Carteira] = Carteira
    Spy![Bx Do Cliente] = Data_Recebimento
@@ -2593,8 +2358,8 @@ Dim Baixa As New GRecordSet, SpySeq As New GRecordSet, Spy As New GRecordSet
    vgDb.BeginTrans
    End With
   End If
- End If 
-End Sub 
+ End If
+End Sub
 
 
 'Private Sub AjustaComissao()
@@ -2607,11 +2372,11 @@ End Sub
  'If VgSituacao = ACAO_EXCLUINDO Then Exit Sub
   
  'If Comissao.RecordCount > 0 Then
-  'Atualizando 
+  'Atualizando
   ' vgDb.BeginTrans
   ' vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = " & Substitui(CStr(Pago), ",", ".", SO_UM)& " WHERE [Manutenção] = " & Sequencia_da_Manutencao & " And [Pagto Vendedor] = Null"
   ' vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Cliente] = " & D(Data_Recebimento)& " WHERE [Manutenção] = " & Sequencia_da_Manutencao & " And [Pagto Vendedor] = Null"
-  ' vgDb.CommitTrans    
+  ' vgDb.CommitTrans
  'End If
 'End Sub
 
@@ -2625,13 +2390,13 @@ End Sub
 '   If Comissao.RecordCount = 0 Then Exit Sub
    
 '   If Comissao.RecordCount > 0 Then
-  'Atualizando 
+  'Atualizando
 '   vgDb.BeginTrans
 '   vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = 0 WHERE [Manutenção] = " & Sequencia_da_Manutencao
 '   vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Cliente] = Null WHERE [Manutenção] = " & Sequencia_da_Manutencao
 '   vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Vendedor] = Null WHERE [Manutenção] = " & Sequencia_da_Manutencao
-'   vgDb.CommitTrans       
-' End If 
+'   vgDb.CommitTrans
+' End If
  
 'End Sub
 
@@ -2640,70 +2405,70 @@ Dim Comissao As New GRecordSet, NFe As New GRecordSet, VrFrete As Double
 
  If Conta = "P" Then Exit Sub
  
- Set Comissao = VgDb.OpenRecordSet("SELECT * From [Planilha de Adiantamento] Where [Manutenção] = " & Sequencia_da_Manutencao & " And [Pagto Vendedor] = null")
- Set NFe = VgDb.OpenRecordSet("SELECT * From [Nota Fiscal] Where [Número da NFe] = " & Duplicata)
+ Set Comissao = vgDb.OpenRecordSet("SELECT * From [Planilha de Adiantamento] Where [Manutenção] = " & Sequencia_da_Manutencao & " And [Pagto Vendedor] = null")
+ Set NFe = vgDb.OpenRecordSet("SELECT * From [Nota Fiscal] Where [Número da NFe] = " & Duplicata)
  VrFrete = 0
  
  If NFe.RecordCount = 1 Then
-    VrFrete = Round(((NFe![Valor Do Frete] / NFe![Valor Total da Nota Fiscal]) * Valor_da_Pc),2)
- End If 
+    VrFrete = Round(((NFe![Valor Do Frete] / NFe![Valor Total da Nota Fiscal]) * Valor_da_Pc), 2)
+ End If
  
  If Comissao.RecordCount = 0 Then Exit Sub
- If VgSituacao = ACAO_EXCLUINDO Then Exit Sub
+ If vgSituacao = ACAO_EXCLUINDO Then Exit Sub
   
  If Comissao.RecordCount > 0 Then
-  'Atualizando 
+  'Atualizando
    Do While Not Comissao.EOF
    vgDb.BeginTrans
    If Pago > 0 And Data_Recebimento <> "" Then
-   vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = " & Substitui(CStr(Pago), ",", ".", SO_UM)& " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
+   vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = " & Substitui(CStr(Pago), ",", ".", SO_UM) & " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    Else
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = 0 WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
-   End If 
+   End If
    If Data_Recebimento <> "" And Pago > 0 Then
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Cliente] = " & D(Data_Recebimento) & " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    Else
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Cliente] = Null WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    End If
    If Pago > 0 And Data_Recebimento <> "" Then
-   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Pago - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM)& " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
+   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Pago - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM) & " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    Else
-   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Valor_da_Pc - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM)& " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
+   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Valor_da_Pc - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM) & " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    End If
-   vgDb.CommitTrans    
+   vgDb.CommitTrans
    Comissao.MoveNext
-   Loop  
+   Loop
  End If
 End Sub
 
 
-Private Sub ZeraComissao()'Qdo Excluir A Baixa Zerar o Valor Pago e a Data do Pagto do Cliente
+Private Sub ZeraComissao() 'Qdo Excluir A Baixa Zerar o Valor Pago e a Data do Pagto do Cliente
 Dim Comissao As New GRecordSet, NFe As New GRecordSet, VrFrete As Double
    
  If Conta = "P" Then Exit Sub
  
-  Set Comissao = VgDb.OpenRecordSet("SELECT * From [Planilha de Adiantamento] Where [Manutenção] = " & Sequencia_da_Manutencao)
-  Set NFe = VgDb.OpenRecordSet("SELECT * From [Nota Fiscal] Where [Número da NFe] = " & Duplicata)
+  Set Comissao = vgDb.OpenRecordSet("SELECT * From [Planilha de Adiantamento] Where [Manutenção] = " & Sequencia_da_Manutencao)
+  Set NFe = vgDb.OpenRecordSet("SELECT * From [Nota Fiscal] Where [Número da NFe] = " & Duplicata)
   VrFrete = 0
    
    If NFe.RecordCount = 1 Then
-   VrFrete = Round(((NFe![Valor Do Frete] / NFe![Valor Total da Nota Fiscal]) * Valor_da_Pc),2)
-   End If 
+   VrFrete = Round(((NFe![Valor Do Frete] / NFe![Valor Total da Nota Fiscal]) * Valor_da_Pc), 2)
+   End If
    
    If Comissao.RecordCount = 0 Then Exit Sub
    
    If Comissao.RecordCount > 0 Then
   'Atualizando
-  Do While Not Comissao.EOF 
+  Do While Not Comissao.EOF
    vgDb.BeginTrans
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Valor Pago] = 0 WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Cliente] = Null WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    vgDb.Execute "Update [Planilha de Adiantamento] Set [Pagto Vendedor] = Null WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
-   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Valor_da_Pc - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM)& " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
+   vgDb.Execute "Update [Planilha de Adiantamento] Set [Comissão] = " & Substitui(CStr((((Valor_da_Pc - Comissao![VrIPI] - VrFrete) * Comissao![Percentual]) / 100)), ",", ".", SO_UM) & " WHERE [Seq do Adiantamento] = " & Comissao![Seq Do Adiantamento]
    vgDb.CommitTrans
    Comissao.MoveNext
-   Loop      
- End If 
+   Loop
+ End If
  
 End Sub
 
@@ -2715,7 +2480,7 @@ End Sub
 ' TbAuxiliar "Manutenção Contas", "[Seqüência da Manutenção] = " & txtSequencia_da_Manutencao.Text, ManuConta
 ' TbAuxiliar "Geral", "[Seqüência do Geral] = " & ManuConta![Seqüência Do Geral], GeralConta
  
-' If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then  
+' If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then
 '  If Sequencia_da_Agencia = 7 Then 'Banco Bradesco Atualmente so Usa Esse Banco
 '    If Conta = "R" Then
 '       txtDebito.Value = 2
@@ -2725,22 +2490,22 @@ End Sub
 '          txtCredito.Value = 4475 ' A Classificar
 '       End If
 '    Else' Pagar
-'      txtCredito.Value = 2 
+'      txtCredito.Value = 2
 '      If ManuConta!Documento = "Salario" Then
 '         txtDebito.Value = 281
 '      ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
-'         txtDebito.Value = GeralConta![Codigo Adiantamento] 
+'         txtDebito.Value = GeralConta![Codigo Adiantamento]
 '      ElseIf ManuConta!Documento = "Rel. Viagem" Then
-'         txtDebito.Value = 341       
+'         txtDebito.Value = 341
 '      Else
 '         If GeralConta![Codigo Contabil] = 0 Then
 '            txtDebito.Value = 4474 ' A classificar
 '         Else
 '            txtDebito.Value = GeralConta![Codigo Contabil]
 '         End If
-'      End If   
+'      End If
 '    End If
-'  End If   
+'  End If
  'Banco do Brasil
 '   If Sequencia_da_Agencia = 1 Then 'BB
 '    If Conta = "R" Then 'Receber
@@ -2748,18 +2513,18 @@ End Sub
 '       If GeralConta![Codigo Contabil] > 0 Then
 '          txtCredito.Value = GeralConta![Codigo Contabil] 'Cliente
 '       Else
-'          txtCredito.Value = 4475  
-'       End If   
+'          txtCredito.Value = 4475
+'       End If
 '    Else 'Pagar
-'      txtCredito.Value = 4 
-'      If GeralConta![Codigo Contabil] > 0 Then 
+'      txtCredito.Value = 4
+'      If GeralConta![Codigo Contabil] > 0 Then
 '         txtDebito.Value = GeralConta![Codigo Contabil]
 '      Else
 '         txtDebito.Value = 4474
-'      End If     
+'      End If
 '    End If
-'   End If    
-' End If 
+'   End If
+' End If
 
 'End Sub
 
@@ -2773,7 +2538,7 @@ End Sub
 ' TbAuxiliar "Manutenção Contas", "[Seqüência da Manutenção] = " & txtSequencia_da_Manutencao.Text, ManuConta
 ' TbAuxiliar "Geral", "[Seqüência do Geral] = " & ManuConta![Seqüência Do Geral], GeralConta
  
-' If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then  
+' If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then
 '  If Sequencia_da_Agencia = 7 Then 'Banco Bradesco Atualmente so Usa Esse Banco
 '    If Conta = "R" Then
 '       txtDebito.Value = 2
@@ -2783,22 +2548,22 @@ End Sub
 '          txtCredito.Value = 4475 ' A Classificar
 '       End If
 '    Else' Pagar
-'      txtCredito.Value = 2 
+'      txtCredito.Value = 2
 '      If ManuConta!Documento = "Salario" Then
 '         txtDebito.Value = 281
 '      ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
-'         txtDebito.Value = GeralConta![Codigo Adiantamento] 
+'         txtDebito.Value = GeralConta![Codigo Adiantamento]
 '      ElseIf ManuConta!Documento = "Rel. Viagem" Then
-'         txtDebito.Value = 341       
+'         txtDebito.Value = 341
 '      Else
 '         If GeralConta![Codigo Contabil] = 0 Then
 '            txtDebito.Value = 4474 ' A classificar
 '         Else
 '            txtDebito.Value = GeralConta![Codigo Contabil]
 '         End If
-'      End If   
+'      End If
 '    End If
-'  End If 
+'  End If
  'Itau
 ' If Sequencia_da_Agencia = 8 And Sequencia_da_CC_da_Agencia = 9 Then 'Banco Itau
 '    If Conta = "R" Then
@@ -2809,22 +2574,22 @@ End Sub
 '          txtCredito.Value = 4475 ' A Classificar
 '       End If
 '    Else' Pagar
-'      txtCredito.Value = 5 
+'      txtCredito.Value = 5
 '      If ManuConta!Documento = "Salario" Then
 '         txtDebito.Value = 281
  '     ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
- '        txtDebito.Value = GeralConta![Codigo Adiantamento] 
+ '        txtDebito.Value = GeralConta![Codigo Adiantamento]
  '     ElseIf ManuConta!Documento = "Rel. Viagem" Then
- '        txtDebito.Value = 341       
+ '        txtDebito.Value = 341
  '     Else
  '        If GeralConta![Codigo Contabil] = 0 Then
  '           txtDebito.Value = 4474 ' A classificar
  '        Else
  '           txtDebito.Value = GeralConta![Codigo Contabil]
  '        End If
- '     End If   
+ '     End If
  '   End If
- 'End If  
+ 'End If
  'Banco do Brasil
  '  If Sequencia_da_Agencia = 1 Then 'BB
  '   If Conta = "R" Then 'Receber
@@ -2832,25 +2597,25 @@ End Sub
  '      If GeralConta![Codigo Contabil] > 0 Then
  '         txtCredito.Value = GeralConta![Codigo Contabil] 'Cliente
  '      Else
- '         txtCredito.Value = 4475  
- '      End If   
+ '         txtCredito.Value = 4475
+ '      End If
  '   Else 'Pagar
- '     txtCredito.Value = 4 
- '     If GeralConta![Codigo Contabil] > 0 Then 
+ '     txtCredito.Value = 4
+ '     If GeralConta![Codigo Contabil] > 0 Then
  '        txtDebito.Value = GeralConta![Codigo Contabil]
  '     Else
  '        txtDebito.Value = 4474
- '     End If     
+ '     End If
  '   End If
- '  End If    
- 'End If 
+ '  End If
+ 'End If
 
 'End Sub
 
 Private Sub BuscaBanco()
  Dim ManuConta As New GRecordSet, GeralConta As New GRecordSet
  
- On error Resume Next
+ On Error Resume Next
  
  If vgSituacao = ACAO_NAVEGANDO Then Exit Sub
  
@@ -2858,12 +2623,12 @@ Private Sub BuscaBanco()
  TbAuxiliar "Geral", "[Seqüência do Geral] = " & ManuConta![Seqüência Do Geral], GeralConta
  
  If GeralConta![Codigo Contabil] = 0 Then
-    MsgBox("Por Favor soliciatar a contabilidade para Criar a Conta Contabil")
-    MDIIRRIG.CancelaAlteracoes
+    MsgBox ("Por Favor soliciatar a contabilidade para Criar a Conta Contabil")
+    mdiIRRIG.CancelaAlteracoes
     Exit Sub
  End If
  
- If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then  
+ If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then
   If Sequencia_da_Agencia = 7 Then 'Banco Bradesco Atualmente so Usa Esse Banco
     If Conta = "R" Then
        txtDebito.Value = 2
@@ -2872,23 +2637,23 @@ Private Sub BuscaBanco()
        'Else
        '   txtCredito.Value = 4475 ' A Classificar
        End If
-    Else' Pagar
-      txtCredito.Value = 2 
+    Else ' Pagar
+      txtCredito.Value = 2
       If ManuConta!Documento = "Salario" Then
          txtDebito.Value = 281
       ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
-         txtDebito.Value = GeralConta![Codigo Adiantamento] 
+         txtDebito.Value = GeralConta![Codigo Adiantamento]
       ElseIf ManuConta!Documento = "Rel. Viagem" Then
-         txtDebito.Value = GeralConta![Codigo Adiantamento]'341       
+         txtDebito.Value = GeralConta![Codigo Adiantamento] '341
       Else
            If ManuConta![Codigo Do Debito] > 0 Then
-              txtDebito.Value = ManuConta![Codigo Do Debito] 
-           Else      
+              txtDebito.Value = ManuConta![Codigo Do Debito]
+           Else
               txtDebito.Value = GeralConta![Codigo Contabil]
            End If
-      End If   
+      End If
     End If
-  End If 
+  End If
  'Itau
  If Sequencia_da_Agencia = 8 And Sequencia_da_CC_da_Agencia = 9 Then 'Banco Itau
     If Conta = "R" Then
@@ -2896,23 +2661,23 @@ Private Sub BuscaBanco()
        If GeralConta![Codigo Contabil] > 0 Then
           txtCredito.Value = GeralConta![Codigo Contabil]
        End If
-    Else' Pagar
-      txtCredito.Value = 5 
+    Else ' Pagar
+      txtCredito.Value = 5
       If ManuConta!Documento = "Salario" Then
          txtDebito.Value = 281
       ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
          txtDebito.Value = GeralConta![Codigo Adiantamento]
       ElseIf ManuConta!Documento = "Rel. Viagem" Then
-         txtDebito.Value = GeralConta![Codigo Adiantamento]'341       
+         txtDebito.Value = GeralConta![Codigo Adiantamento] '341
       Else
          If ManuConta![Codigo Do Debito] > 0 Then
-            txtDebito.Value = ManuConta![Codigo Do Debito] 
-         Else      
+            txtDebito.Value = ManuConta![Codigo Do Debito]
+         Else
             txtDebito.Value = GeralConta![Codigo Contabil]
          End If
-      End If   
+      End If
     End If
- End If  
+ End If
  'Topazio
  If Sequencia_da_Agencia = 19 And Sequencia_da_CC_da_Agencia = 21 Then 'sicob
     If Conta = "R" Then
@@ -2922,23 +2687,47 @@ Private Sub BuscaBanco()
        Else
           txtCredito.Value = 4475 ' A Classificar
        End If
-    Else' Pagar
-      txtCredito.Value = 6020 
+    Else ' Pagar
+      txtCredito.Value = 6020
       If ManuConta!Documento = "Salario" Then
          txtDebito.Value = 281
       ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
          txtDebito.Value = GeralConta![Codigo Adiantamento]
       ElseIf ManuConta!Documento = "Rel. Viagem" Then
-         txtDebito.Value = GeralConta![Codigo Adiantamento] '341      
+         txtDebito.Value = GeralConta![Codigo Adiantamento] '341
       Else
          If GeralConta![Codigo Contabil] = 0 Then
             txtDebito.Value = 4474 ' A classificar
          Else
             txtDebito.Value = GeralConta![Codigo Contabil]
          End If
-      End If   
+      End If
     End If
- End If  
+ End If
+ 'Banco Inter
+   If Sequencia_da_Agencia = 24 And Sequencia_da_CC_da_Agencia = 30 Then 'Inter
+      If Conta = "R" Then
+         txtDebito.Value = 8
+         If GeralConta![Codigo Contabil] > 0 Then
+            txtCredito.Value = GeralConta![Codigo Contabil]
+         End If
+      Else 'Pagar
+         txtCredito.Value = 8
+         If ManuConta!Documento = "Salario" Then
+            txtDebito.Value = 281
+         ElseIf (ManuConta!Documento = "Ad. Viagem" Or ManuConta!Documento = "Antecipado") And GeralConta![Codigo Adiantamento] > 0 Then
+            txtDebito.Value = GeralConta![Codigo Adiantamento]
+         ElseIf ManuConta!Documento = "Rel. Viagem" Then
+            txtDebito.Value = GeralConta![Codigo Adiantamento] '341
+         Else
+            If ManuConta![Codigo Do Debito] > 0 Then
+               txtDebito.Value = ManuConta![Codigo Do Debito]
+            Else
+               txtDebito.Value = GeralConta![Codigo Contabil]
+            End If
+         End If
+      End If
+   End If
  'Banco do Brasil
    If Sequencia_da_Agencia = 1 Then 'BB
      If Conta = "R" Then 'Receber
@@ -2956,8 +2745,8 @@ Private Sub BuscaBanco()
             txtDebito.Value = GeralConta![Codigo Adiantamento] '341
          Else
            If ManuConta![Codigo Do Debito] > 0 Then
-              txtDebito.Value = ManuConta![Codigo Do Debito] 
-           Else      
+              txtDebito.Value = ManuConta![Codigo Do Debito]
+           Else
               txtDebito.Value = GeralConta![Codigo Contabil]
            End If
          End If
@@ -2967,10 +2756,10 @@ Private Sub BuscaBanco()
 End Sub
 
 Private Sub PegaHistorico(Historico As Integer)
-   Dim Tb As GRecordset, ManuAux As New GRecordSet
+   Dim Tb As GRecordSet, ManuAux As New GRecordSet
    Dim GeralAux As New GRecordSet
 
-   On error Resume Next
+   On Error Resume Next
    
    If vgSituacao = ACAO_NAVEGANDO Then Exit Sub
    
@@ -2978,22 +2767,22 @@ Private Sub PegaHistorico(Historico As Integer)
    TbAuxiliar "Geral", "[Seqüência do Geral] = " & ManuAux![Seqüência Do Geral], GeralAux
    
    If Codigo_do_Historico > 0 Then
-      Set Tb = vgdb.OpenRecordset("SELECT * FROM [Historico Contabil] WHERE [Codigo do Historico] = " & Codigo_do_Historico)  
-   End If    
+      Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Historico Contabil] WHERE [Codigo do Historico] = " & Codigo_do_Historico)
+   End If
      
    If Codigo_do_Historico > 0 Then
     If Sequencia_da_Agencia > 0 And Sequencia_da_CC_da_Agencia > 0 Then
          If Conta = "R" Then
             If txtMemo.Text = "" Then
-            txtMemo.Text = "Duplicata " & ManuAux![Número da Duplicata] & " Pc nº " & Format(ManuAux!Parcela,"00") & " - " & GeralAux![Razão Social] 
+            txtMemo.Text = "Duplicata " & ManuAux![Número da Duplicata] & " Pc nº " & Format(ManuAux!Parcela, "00") & " - " & GeralAux![Razão Social]
             End If
          Else
             If txtMemo.Text = "" Then
-            txtMemo.Text = "Documento " & ManuAux!Documento & " Pc nº " & Format(ManuAux!Parcela,"00") & " " & GeralAux![Razão Social] & IIf(Not Vazio(Numero_do_Cheque), ", Cheque Nº " & Numero_do_Cheque, "")  
-            End If  
-         End If 
-       End If  
-    End If      
+            txtMemo.Text = "Documento " & ManuAux!Documento & " Pc nº " & Format(ManuAux!Parcela, "00") & " " & GeralAux![Razão Social] & IIf(Not Vazio(Numero_do_Cheque), ", Cheque Nº " & Numero_do_Cheque, "")
+            End If
+         End If
+       End If
+    End If
 End Sub
 
 
@@ -3004,98 +2793,98 @@ Private Sub LancamentoContabil()
  If Sequencia_da_Agencia = 0 Then: Exit Sub
 
   Set Lancamento = vgDb.OpenRecordSet("Lançamentos Contabil")
-  Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+  Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
 
  
    With Lancamento
     .AddNew
     ![Id Do Lançamento] = Tb!Seq + 1
-    ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+    ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
     ![Conta Debito] = Codigo_do_Debito
-    ![Conta Credito] = Codigo_do_Credito 
+    ![Conta Credito] = Codigo_do_Credito
      If Manu2![Valor da Parcela] > Valor_Pago And Valor_do_Juros = 0 And Valor_do_Desconto = 0 Then 'pagou parcial
-        ![Valor] = Valor_Pago                   
-     Else     
-        ![Valor] = Manu2![Valor da Parcela] '- Valor_do_Juros - Valor_do_Desconto 
-     End If   
+        ![Valor] = Valor_Pago
+     Else
+        ![Valor] = Manu2![Valor da Parcela] '- Valor_do_Juros - Valor_do_Desconto
+     End If
     ![Codigo Do Historico] = Codigo_do_Historico
-    ![Complemento Do Hist] = Historico 
-    ![Seqüência da Baixa] = Sequencia_da_Baixa 
+    ![Complemento Do Hist] = Historico
+    ![Seqüência da Baixa] = Sequencia_da_Baixa
     ![Data da Baixa] = Data_da_Baixa
     .Update
     .BookMark = .LastModified
-  End With 
+  End With
    
   If Valor_do_Juros > 0 And Conta = "P" Then
-     Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+     Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
    With Lancamento
      .AddNew
        ![Id Do Lançamento] = Tb!Seq + 1
-       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
        ![Conta Debito] = 366
-       ![Conta Credito] = Codigo_do_Credito 
-       ![Valor] = Valor_do_Juros 
+       ![Conta Credito] = Codigo_do_Credito
+       ![Valor] = Valor_do_Juros
        ![Codigo Do Historico] = 181
-       ![Complemento Do Hist] = Historico 
-       ![Seqüência da Baixa] = Sequencia_da_Baixa 
+       ![Complemento Do Hist] = Historico
+       ![Seqüência da Baixa] = Sequencia_da_Baixa
        ![Data da Baixa] = Data_da_Baixa
      .Update
      .BookMark = .LastModified
-   End With  
-   End If 
+   End With
+   End If
    
    If Valor_do_Desconto > 0 And Conta = "P" Then
-     Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+     Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
    With Lancamento
      .AddNew
        ![Id Do Lançamento] = Tb!Seq + 1
-       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
        ![Conta Debito] = Codigo_do_Credito
        ![Conta Credito] = 383
-       ![Valor] = Valor_do_Desconto 
+       ![Valor] = Valor_do_Desconto
        ![Codigo Do Historico] = 94
-       ![Complemento Do Hist] = Historico 
-       ![Seqüência da Baixa] = Sequencia_da_Baixa 
+       ![Complemento Do Hist] = Historico
+       ![Seqüência da Baixa] = Sequencia_da_Baixa
        ![Data da Baixa] = Data_da_Baixa
      .Update
      .BookMark = .LastModified
-   End With  
-   End If 
+   End With
+   End If
    
    If Valor_do_Juros > 0 And Conta = "R" Then
-      Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+      Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
    With Lancamento
      .AddNew
        ![Id Do Lançamento] = Tb!Seq + 1
-       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
        ![Conta Debito] = Codigo_do_Debito
        ![Conta Credito] = 382
-       ![Valor] = Valor_do_Juros 
+       ![Valor] = Valor_do_Juros
        ![Codigo Do Historico] = 95
-       ![Complemento Do Hist] = Historico 
-       ![Seqüência da Baixa] = Sequencia_da_Baixa 
+       ![Complemento Do Hist] = Historico
+       ![Seqüência da Baixa] = Sequencia_da_Baixa
        ![Data da Baixa] = Data_da_Baixa
      .Update
      .BookMark = .LastModified
-   End With  
-   End If 
+   End With
+   End If
    If Valor_do_Desconto > 0 And Conta = "R" Then
-     Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+     Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
    With Lancamento
      .AddNew
        ![Id Do Lançamento] = Tb!Seq + 1
-       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+       ![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
        ![Conta Debito] = 367
-       ![Conta Credito] = Codigo_do_Debito 
-       ![Valor] = Valor_do_Desconto 
+       ![Conta Credito] = Codigo_do_Debito
+       ![Valor] = Valor_do_Desconto
        ![Codigo Do Historico] = 96
-       ![Complemento Do Hist] = Historico 
-       ![Seqüência da Baixa] = Sequencia_da_Baixa 
+       ![Complemento Do Hist] = Historico
+       ![Seqüência da Baixa] = Sequencia_da_Baixa
        ![Data da Baixa] = Data_da_Baixa
      .Update
      .BookMark = .LastModified
-   End With  
-   End If  
+   End With
+   End If
     
 End Sub
 
@@ -3109,36 +2898,36 @@ Private Sub AlteraContabil()
    If Sequencia_da_Agencia = 0 Then: Exit Sub
    
    Set Lancamento = vgDb.OpenRecordSet("Lançamentos Contabil")
-   Set Tb = VgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
-   Set TemLanc = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa)   
+   Set Tb = vgDb.OpenRecordSet("SELECT MAX([Id do Lançamento]) Seq From [Lançamentos Contabil]")
+   Set TemLanc = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa)
       
-     With Lancamento   
-      If TemLanc.RecordCount = 0 Then 
+     With Lancamento
+      If TemLanc.RecordCount = 0 Then
         Lancamento.AddNew 'Incluindo
         Lancamento![Id Do Lançamento] = Tb!Seq + 1
-        Lancamento![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+        Lancamento![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
         Lancamento![Conta Debito] = Codigo_do_Debito
-        Lancamento![Conta Credito] = Codigo_do_Credito 
-        Lancamento![Valor] = Valor_Pago 
+        Lancamento![Conta Credito] = Codigo_do_Credito
+        Lancamento![Valor] = Valor_Pago
         Lancamento![Codigo Do Historico] = Codigo_do_Historico
-        Lancamento![Complemento Do Hist] = Historico 
-        Lancamento![Seqüência da Baixa] = Sequencia_da_Baixa 
+        Lancamento![Complemento Do Hist] = Historico
+        Lancamento![Seqüência da Baixa] = Sequencia_da_Baixa
         Lancamento![Data da Baixa] = Data_da_Baixa
         Lancamento.Update
-        Lancamento.BookMark = .LastModified   
+        Lancamento.BookMark = .LastModified
       Else 'Alterando
        TemLanc.Edit
-        TemLanc![Dt Do Lançamento] = Mid(Data_da_Baixa, 1,5)
+        TemLanc![Dt Do Lançamento] = Mid(Data_da_Baixa, 1, 5)
         TemLanc![Conta Debito] = Codigo_do_Debito
-        TemLanc![Conta Credito] = Codigo_do_Credito 
-        TemLanc![Valor] = Valor_Pago 
+        TemLanc![Conta Credito] = Codigo_do_Credito
+        TemLanc![Valor] = Valor_Pago
         TemLanc![Codigo Do Historico] = Codigo_do_Historico
-        TemLanc![Complemento Do Hist] = Historico 
-        TemLanc![Seqüência da Baixa] = Sequencia_da_Baixa 
+        TemLanc![Complemento Do Hist] = Historico
+        TemLanc![Seqüência da Baixa] = Sequencia_da_Baixa
         TemLanc![Data da Baixa] = Data_da_Baixa
         TemLanc.Update
-        TemLanc.BookMark = .LastModified   
-      End If       
+        TemLanc.BookMark = .LastModified
+      End If
      End With
         
 DeuErro:
@@ -3154,15 +2943,15 @@ Private Sub DeletaContabil()
  Dim Tb As New GRecordSet
  Dim Tb1 As New GRecordSet
  
- Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa) 
+ Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa)
  Set Tb1 = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC & " And [Seqüência da Movimentação CC] > 0")
  
  If Tb.RecordCount > 0 Then
-    vgDb.Execute "DELETE FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa                
- End If 
+    vgDb.Execute "DELETE FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa
+ End If
  If Tb1.RecordCount > 0 Then
-    vgDb.Execute "DELETE FROM [Lançamentos Contabil] WHERE [Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC                 
- End If   
+    vgDb.Execute "DELETE FROM [Lançamentos Contabil] WHERE [Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC
+ End If
  
 End Sub
 
@@ -3196,16 +2985,16 @@ Private Function SemBanco() As Boolean 'hahahaha tielf BRASILEIRO EH FODA
     SemBanco = True
     Exit Function
  End If
- If Conta = "P"  Then ' NO PAGAR NÃO DA PA ROUBAR NAO PASSOU NO TESTE DA POLITICA BRASILEIRA
+ If Conta = "P" Then  ' NO PAGAR NÃO DA PA ROUBAR NAO PASSOU NO TESTE DA POLITICA BRASILEIRA
     SemBanco = True
     Exit Function
- End If 
+ End If
  MsgBox "ATENÇÃO! " & vgPWUsuario & " Você esta tentando baixar uma conta sem a movimentção da conta corrente contate o administrador do financeiro e informe o motivo do desacordo", vbCritical + vbOKOnly, vaTitulo
  InputSenha
    If Not Vazio(InputYgorsBom) Then
       'If InputYgorsBom = "irrigpenapolis_66" Or InputYgorsBom = "5139249" Then
       If InputYgorsBom = "05101998" Then 'Solicitação da Andreza em 17/10/24 para alterar a senha da caveira
-         SemBanco = True   
+         SemBanco = True
       Else
          MsgBox "Senha Incorreta", vbCritical + vbOKOnly, vaTitulo
          SemBanco = False
@@ -3213,7 +3002,7 @@ Private Function SemBanco() As Boolean 'hahahaha tielf BRASILEIRO EH FODA
    End If
   InputYgorsBom = ""
   
-End Function 
+End Function
 
 
 Private Sub DeleteLanAvulso()
@@ -3222,7 +3011,7 @@ Private Sub DeleteLanAvulso()
   Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Manutenção Contas] WHERE [Seqüência da Manutenção] = " & Sequencia_da_Manutencao)
 
   If Tb.RecordCount > 0 And Tb![Sequencia Lan CC] > 0 Then
-     vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Sequencia Lan CC] = " & Sequencia_da_Movimentacao_CC                
+     vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Sequencia Lan CC] = " & Sequencia_da_Movimentacao_CC
   End If
   
 End Sub
@@ -3235,19 +3024,19 @@ Private Sub CorrigeContabil()
  
  If Sequencia_da_Agencia = 0 Then Exit Sub
  
- Set Lancamento = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa) 
+ Set Lancamento = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Baixa] = " & Sequencia_da_Baixa)
  Set LanCc = vgDb.OpenRecordSet("SELECT * FROM [Lançamentos Contabil] WHERE [Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC & "And [Seqüência da Movimentação CC] > 0")
  
  
  If Lancamento.RecordCount = 0 And LanCc.RecordCount = 0 Then
-    LancamentoContabil 
-    MsgBox("Gerado com Sucesso")
- End If 
+    LancamentoContabil
+    MsgBox ("Gerado com Sucesso")
+ End If
  
 End Sub
 
 Private Sub LimpaSubGrupo()
- If VgSituacao <> ACAO_INCLUINDO Then Exit Sub
+ If vgSituacao <> ACAO_INCLUINDO Then Exit Sub
  txtSubGrupo.Text = ""
 End Sub
 
@@ -3259,21 +3048,21 @@ End Sub
  ' txtGrupo.Value = Manu2![Seqüência Grupo Despesa]
  ' txtSubGrupo.Value = Manu2![Seqüência SubGrupo Despesa]
  
-'End Sub 
+'End Sub
 
 Private Sub GrupoInicial()
 
   If Conta = "R" Then
-     MsgBox("Favor Não esquecer de preencher a base da Comissão quando o cliente pagar!")
+     MsgBox ("Favor Não esquecer de preencher a base da Comissão quando o cliente pagar!")
      txtPago.SetFocus
-  End If 
+  End If
   If Sequencia_Grupo_Despesa > 0 Then Exit Sub
   If Sequencia_SubGrupo_Despesa > 0 Then Exit Sub
-  If Conta = "R" Then Exit Sub 
-  If VgSituacao = ACAO_NAVEGANDO Then Exit Sub
-  If VgSituacao = ACAO_INCLUINDO And txtSequencia_da_Manutencao.Text <> "" Then
-     txtGrupo.Value = Manu2![Seqüência Grupo Despesa] 
-     txtSubGrupo.Value = Manu2![Seqüência SubGrupo Despesa]       
+  If Conta = "R" Then Exit Sub
+  If vgSituacao = ACAO_NAVEGANDO Then Exit Sub
+  If vgSituacao = ACAO_INCLUINDO And txtSequencia_da_Manutencao.Text <> "" Then
+     txtGrupo.Value = Manu2![Seqüência Grupo Despesa]
+     txtSubGrupo.Value = Manu2![Seqüência SubGrupo Despesa]
   End If
 End Sub
 
@@ -3283,17 +3072,17 @@ Private Sub PreencheData()
  
  If Conta = "P" Then Exit Sub
  
- Set Tb = VgDb.OpenRecordSet("SELECT [Data de Emissão] From [Nota Fiscal] Where [Número da NFe] = " & Manu2![Número da Duplicata])
+ Set Tb = vgDb.OpenRecordSet("SELECT [Data de Emissão] From [Nota Fiscal] Where [Número da NFe] = " & Manu2![Número da Duplicata])
 
- If VgSituacao = ACAO_INCLUINDO Then
+ If vgSituacao = ACAO_INCLUINDO Then
     If Tb![Data de Emissão] > Data_da_Baixa + 30 Then
        txtDtaCli.Text = Tb![Data de Emissão]
     Else
-       txtDtaCli.Text = Data_da_Baixa 
-    End If   
+       txtDtaCli.Text = Data_da_Baixa
+    End If
  End If
     
-End Sub 
+End Sub
 
 Private Function Numero() As Long
    Dim Tb As New GRecordSet
@@ -3301,26 +3090,26 @@ Private Function Numero() As Long
    On Error Resume Next
       Set Tb = vgDb.OpenRecordSet("SELECT [Manutenção Contas].[Seqüência do Pedido], Pedido.[Seqüência Do Orçamento] " & _
                                   "FROM Pedido LEFT JOIN [Manutenção Contas] ON Pedido.[Seqüência Do Pedido] = [Manutenção Contas].[Seqüência Do Pedido] " & _
-                                  "WHERE Pedido.[Seqüência Do Pedido] = " &  Manu2![Seqüência Do Pedido] & " AND Pedido.[Seqüência Do Pedido] > 0")
+                                  "WHERE Pedido.[Seqüência Do Pedido] = " & Manu2![Seqüência Do Pedido] & " AND Pedido.[Seqüência Do Pedido] > 0")
          
-      If Tb![Seqüência Do Orçamento] > 0 Then  ' Orçamento
-         Numero = Tb![Seqüência Do Orçamento]                  
+      If Tb![Seqüência do Orçamento] > 0 Then  ' Orçamento
+         Numero = Tb![Seqüência do Orçamento]
       End If
 
 End Function
 
-Public Sub LigaDesligaBotoes
-   Botao( 0 ).Enabled =    Botao( 0 ).Enabled And Permitido("Agências", ACAO_NAVEGANDO)
+Public Sub LigaDesligaBotoes()
+   Botao(0).Enabled = Botao(0).Enabled And Permitido("Agências", ACAO_NAVEGANDO)
 End Sub
 
-Public Property Get txtCampoTab(Index As Integer) As FormataCampos   
+Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
 End Sub
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
-   If (vgTb.RecordCount > 0 And vgTb.Eof = False And vgTb.Bof = False) Or vgComOQue = COM_TEXTBOX Then
+   If (vgTb.RecordCount > 0 And vgTb.EOF = False And vgTb.BOF = False) Or vgComOQue = COM_TEXTBOX Then
       If vgComOQue = COM_TEXTBOX Then
          Sequencia_da_Baixa = txtCampo(3).Value
          Sequencia_da_Manutencao = txtCampo(4).Value
@@ -3333,15 +3122,15 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Conta = txtCampo(0).Value
          Sequencia_da_CC_da_Agencia = txtCampo(18).Value
          Historico = txtCampo(19).Value
-         Sequencia_da_Movimentacao_CC = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![Seqüência da Movimentação CC])
+         Sequencia_da_Movimentacao_CC = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seqüência da Movimentação CC])
          Bloqueado = chkCampo(0).Value
          Carteira = txtCampo(20).Value
          Cliente_Carteira = txtCampo(21).Value
          Data_Recebimento = txtCampo(22).Value
          Compensado = chkCampo(1).Value
          Pago = txtCampo(24).Value
-         Dt_Comissao = Iif(vgSituacao = ACAO_INCLUINDO,Null, vgTb![Dt Comissão])
-         NF_Comissao = Iif(vgSituacao = ACAO_INCLUINDO,0, vgTb![NF Comissão])
+         Dt_Comissao = IIf(vgSituacao = ACAO_INCLUINDO, Null, vgTb![Dt Comissão])
+         NF_Comissao = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![NF Comissão])
          Codigo_do_Historico = txtCampo(28).Value
          Codigo_do_Debito = txtCampo(26).Value
          Codigo_do_Credito = txtCampo(27).Value
@@ -3354,9 +3143,9 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Data_da_Baixa = vgTb![Data da Baixa]
          Valor_Pago = IIf(IsNull(vgTb![Valor Pago]), 0, vgTb![Valor Pago])
          Valor_do_Juros = IIf(IsNull(vgTb![Valor do Juros]), 0, vgTb![Valor do Juros])
-         Valor_do_Desconto = IIf(IsNull(vgTb![Valor do Desconto]), 0, vgTb![Valor do Desconto])
+         Valor_do_Desconto = IIf(IsNull(vgTb![Valor Do Desconto]), 0, vgTb![Valor Do Desconto])
          Sequencia_da_Agencia = IIf(IsNull(vgTb![Seqüência da Agência]), 0, vgTb![Seqüência da Agência])
-         Numero_do_Cheque = IIf(IsNull(vgTb![Número do Cheque]), "", vgTb![Número do Cheque])
+         Numero_do_Cheque = IIf(IsNull(vgTb![Número Do Cheque]), "", vgTb![Número Do Cheque])
          Conta = IIf(IsNull(vgTb!Conta), "", vgTb!Conta)
          Sequencia_da_CC_da_Agencia = IIf(IsNull(vgTb![Seqüência da CC da Agência]), 0, vgTb![Seqüência da CC da Agência])
          Historico = IIf(IsNull(vgTb!Histórico), "", vgTb!Histórico)
@@ -3369,9 +3158,9 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Pago = IIf(IsNull(vgTb!Pago), 0, vgTb!Pago)
          Dt_Comissao = vgTb![Dt Comissão]
          NF_Comissao = IIf(IsNull(vgTb![NF Comissão]), 0, vgTb![NF Comissão])
-         Codigo_do_Historico = IIf(IsNull(vgTb![Codigo do Historico]), 0, vgTb![Codigo do Historico])
-         Codigo_do_Debito = IIf(IsNull(vgTb![Codigo do Debito]), 0, vgTb![Codigo do Debito])
-         Codigo_do_Credito = IIf(IsNull(vgTb![Codigo do Credito]), 0, vgTb![Codigo do Credito])
+         Codigo_do_Historico = IIf(IsNull(vgTb![Codigo Do Historico]), 0, vgTb![Codigo Do Historico])
+         Codigo_do_Debito = IIf(IsNull(vgTb![Codigo Do Debito]), 0, vgTb![Codigo Do Debito])
+         Codigo_do_Credito = IIf(IsNull(vgTb![Codigo Do Credito]), 0, vgTb![Codigo Do Credito])
          Sequencia_Grupo_Despesa = IIf(IsNull(vgTb![Seqüência Grupo Despesa]), 0, vgTb![Seqüência Grupo Despesa])
          Sequencia_SubGrupo_Despesa = IIf(IsNull(vgTb![Seqüência SubGrupo Despesa]), 0, vgTb![Seqüência SubGrupo Despesa])
          Beneficiario = IIf(IsNull(vgTb!Beneficiario), 0, vgTb!Beneficiario)
@@ -3398,13 +3187,13 @@ Private Sub AnalisaCondicoes()
       grdBrowse.AllowInsert = i
       .botInclui.Enabled = i
       .Menu_Inclui.Enabled = i
-      i = (Not TemContabil()) and Permitido(vgIdentTab, ACAO_EXCLUINDO)
+      i = (Not TemContabil()) And Permitido(vgIdentTab, ACAO_EXCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemExclusao = i
       grdBrowse.AllowDelete = i
       .botExclui.Enabled = i
       .Menu_Exclui.Enabled = i
-      i = (Not TemContabil() Or vgPWUsuario = "YGOR") and Permitido(vgIdentTab, ACAO_EDITANDO)
+      i = (Not TemContabil() Or vgPWUsuario = "YGOR") And Permitido(vgIdentTab, ACAO_EDITANDO)
       If Err Then Err.Clear: i = False
       vgTemAlteracao = i
       grdBrowse.AllowEdit = i And vgAlterar
@@ -3474,7 +3263,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
          End If
       End If
       If vgOk Then
-         If Sequencia_da_Agencia > 0 and vgSituacao = ACAO_INCLUINDO Then
+         If Sequencia_da_Agencia > 0 And vgSituacao = ACAO_INCLUINDO Then
             vgOk = (Sequencia_da_CC_da_Agencia > 0)
             vgMsg$ = "Seqüência da CC da Agência inválido!"
             If Not vgOk Then vgColumn = 19
@@ -3523,7 +3312,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
       End If
       If vgOk Then
          vgMsg$ = ""
-      ElseIf vgColumn <> -1  And Not vgEmBrowse  Then
+      ElseIf vgColumn <> -1 And Not vgEmBrowse Then
          txtCampo(vgColumn - 1).SetFocus
       End If
       DoEvents
@@ -3540,7 +3329,7 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
                   txtCampo(0).Value = IIf(Me.Caption = "Baixa do Contas a Receber", "R", "P")
          chkCampo(0).Value = False
          chkCampo(1).Value = False
-         On Error Goto DeuErro
+         On Error GoTo DeuErro
          InicializaApelidos COM_TEXTBOX
          PoeRelEFiltroCbo 4
          PoeRelEFiltroCbo 15
@@ -3671,7 +3460,7 @@ DeuErro:
          PrepBotoes Me, vgSituacao                'acerta icones dos botoes
 
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
    If Err = 3265 Then Executar = Executar & vbCrLf & vbCrLf & txtCampo(i).DataField
    If Not vgRsError Is Nothing Then
       vgRsError.CancelUpdate
@@ -3718,7 +3507,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.Recordset.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -3732,7 +3521,7 @@ End Sub
 
 'liga/desliga flag de repetição do último reg visualizado
 Public Sub LigaDesligaAlterar()
-   vgAlterar = Not vgAlterar          
+   vgAlterar = Not vgAlterar
    vgUltAlterar = vgAlterar                            'guarda situação de "pode alterar"
    AnalisaCondicoes                                    'vamos atualizar as condições para inclusão, exclusão, alteração...
    MostraFormulas
@@ -3767,7 +3556,7 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
    If vgPriVez Then Exit Sub
    If vgSituacao <> ACAO_INCLUINDO And vgSituacao <> ACAO_EDITANDO Then Executar PEGA_DO_ARQUIVO
    If vgSituacao = ACAO_NAVEGANDO Then
-      AnalisaCondicoes 
+      AnalisaCondicoes
    End If
    TabelasAuxiliares
    ExecutaVisivel
@@ -3805,7 +3594,7 @@ Private Sub MostraFormulas()
    If Err Then Err = 0: txtCampo(14).Text = ""
    txtCampo(17).Value = Format(Manu2![Valor Restante], "##,###,##0.00")
    If Err Then Err = 0: txtCampo(17).Text = ""
-   Label(23).Caption = IIf(Conta = "R","Carteira","Pedido")
+   Label(23).Caption = IIf(Conta = "R", "Carteira", "Pedido")
    If Err Then Err = 0: Label(23).Caption = ""
    txtCampo(29).Value = Manu2![Sequencia da Compra]
    If Err Then Err = 0: txtCampo(29).Text = ""
@@ -3839,7 +3628,7 @@ Private Sub ExecutaPreValidacao()
    Ok = (Me.Caption = "Baixa do Contas a Pagar")
    txtCampo(16).Locked = Not (vgAlterar And txtCampo(16).Editable)
    txtCampo(16).Enabled = Ok Or Not vgAlterar
-   Ok = (Sequencia_da_Agencia > 0 and vgSituacao = ACAO_INCLUINDO)
+   Ok = (Sequencia_da_Agencia > 0 And vgSituacao = ACAO_INCLUINDO)
    txtCampo(18).Locked = Not (vgAlterar And txtCampo(18).Editable)
    txtCampo(18).Enabled = Ok Or Not vgAlterar
    Ok = (Me.Caption = "Baixa do Contas a Pagar")
@@ -3868,7 +3657,8 @@ Private Sub ExecutaPreValidacao()
    Ok = (Conta = "P" And vgSituacao = ACAO_INCLUINDO)
    txtCampo(26).Locked = Not (vgAlterar And txtCampo(26).Editable)
    txtCampo(26).Enabled = Ok Or Not vgAlterar
-   Ok = (Conta = "R" And vgSituacao = ACAO_INCLUINDO)
+   'Campo liberado para preenchimento independentemente do tipo de conta
+   Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(27).Locked = Not (vgAlterar And txtCampo(27).Editable)
    txtCampo(27).Enabled = Ok Or Not vgAlterar
    Ok = (vgSituacao = ACAO_INCLUINDO)
@@ -3908,7 +3698,7 @@ Private Sub ExecutaVisivel()
    txtCampo(24).Visible = (Conta = "R")
    Label(25).Visible = (Conta = "P")
    txtCampo(25).Visible = (Conta = "P")
-   Label(28).Visible = ((TemContabil()) AND Sequencia_da_Baixa > 0)
+   Label(28).Visible = ((TemContabil()) And Sequencia_da_Baixa > 0)
    txtCampo(29).Visible = (Conta = "P")
    Label(29).Visible = (Conta = "R")
    If Err Then Err.Clear                          'se houve erro, limpa...
@@ -3929,11 +3719,11 @@ Private Sub txtCp_Change(Index As Integer)
       Case 4
          TabelasAuxiliares
       Case 15
-         LimpaBanco  
+         LimpaBanco
       Case 28
          txtMemo.Text = ""
       Case 30
-         LimpaSubGrupo  
+         LimpaSubGrupo
    End Select
 End Sub
 
@@ -3993,13 +3783,13 @@ Private Sub txtCp_GotFocus(Index As Integer)
    End If
    Select Case Index
       Case 4
-         TabelasAuxiliares: MySearch
+TabelasAuxiliares:          MySearch
       Case 19
-         PegaHistorico Codigo_do_Historico 
+         PegaHistorico Codigo_do_Historico
       Case 26
-         BuscaBanco  
+         BuscaBanco
       Case 27
-         BuscaBanco  
+         BuscaBanco
    End Select
    txtCampo(Index).GotFocus
 End Sub
@@ -4029,17 +3819,17 @@ Private Sub txtCp_LostFocus(Index As Integer)
    End If
    Select Case Index
       Case 5
-         PreencheData  
+         PreencheData
       Case 6
-         GrupoInicial  
+         GrupoInicial
       Case 15
-         BuscaBanco  
+         BuscaBanco
       Case 18
-         BuscaBanco  
+         BuscaBanco
       Case 23
-         OnExitDuplicata  
+         OnExitDuplicata
       Case 28
-         PegaHistorico Codigo_do_Historico 
+         PegaHistorico Codigo_do_Historico
    End Select
 End Sub
 
@@ -4090,15 +3880,15 @@ Private Sub Form_Activate()
    Else
       vgPriVez = False
    End If
-   ExecutaVisivel: PosicionaRegistro Me, "Seqüência da Baixa", seqRegistro
+ExecutaVisivel:    PosicionaRegistro Me, "Seqüência da Baixa", seqRegistro
    AtivaForm Me
    
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
    If FormEstaAberto("frmEnviaEmail") Then
-      If Not frmEnviaEmail.Visible Then
-         UnLoad vgFrmImpCons
+      If Not frmEnviaEMail.Visible Then
+         Unload vgFrmImpCons
          Set vgFrmImpCons = Nothing
-         UnLoad frmEnviaEmail
+         Unload frmEnviaEMail
       End If
    End If
    Screen.MousePointer = vbDefault
@@ -4216,8 +4006,8 @@ End Sub
 
 Public Sub DefineControles()
  On Error GoTo DeuErro
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hwnd           'não deixa o grid tentar gravar automaticamente
- grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hwnd             'se estiver perdendo o foco para esses botões
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
+ grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
    grdBrowse.AllowDelete = True
    grdBrowse.AllowEdit = vgAlterar
    grdBrowse.SpecialPopupDisabled POP_GRID_BARS Or POP_GRID_STRIPES
@@ -4241,7 +4031,7 @@ Public Sub DefineControles()
    Set bottxtCampo4(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(4).DataType = 1
    txtCampo(4).Mask = "999999"
-   txtCampo(4).PesqModoAbertura =  2 
+   txtCampo(4).PesqModoAbertura = 2
    txtCampo(4).PesqFieldCapture = "[Manutenção Contas].[Seqüência da Manutenção]"
    txtCampo(4).BoundColumn = "Seqüência da Manutenção"
    txtCampo(4).ListFields = "Seqüência da Manutenção"
@@ -4350,7 +4140,7 @@ Public Sub DefineControles()
    Set bottxtCampo30(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(30).DataType = 1
    txtCampo(30).Mask = "9999"
-   txtCampo(30).PesqModoAbertura =  2 
+   txtCampo(30).PesqModoAbertura = 2
    txtCampo(30).PesqFieldCapture = "[Grupo da Despesa].[Seqüência Grupo Despesa]"
    txtCampo(30).BoundColumn = "Seqüência Grupo Despesa"
    txtCampo(30).ListFields = "Descrição"
@@ -4382,7 +4172,7 @@ Public Sub DefineControles()
    Set bottxtCampo15(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(15).DataType = 1
    txtCampo(15).Mask = "9999"
-   txtCampo(15).PesqModoAbertura =  2 
+   txtCampo(15).PesqModoAbertura = 2
    txtCampo(15).PesqFieldCapture = "Agências.[Seqüência da Agência]"
    txtCampo(15).BoundColumn = "Seqüência da Agência"
    txtCampo(15).ListFields = "Nome do Banco; Número do Banco"
@@ -4400,7 +4190,7 @@ Public Sub DefineControles()
    Set bottxtCampo18(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(18).DataType = 1
    txtCampo(18).Mask = "999"
-   txtCampo(18).PesqModoAbertura =  2 
+   txtCampo(18).PesqModoAbertura = 2
    txtCampo(18).PesqFieldCapture = "[Conta Corrente da Agência].[Seqüência da CC da Agência]"
    txtCampo(18).BoundColumn = "Seqüência da CC da Agência"
    txtCampo(18).ListFields = "Número da Conta Corrente"
@@ -4418,7 +4208,7 @@ Public Sub DefineControles()
    Set bottxtCampo26(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(26).DataType = 1
    txtCampo(26).Mask = "9999999"
-   txtCampo(26).PesqModoAbertura =  2 
+   txtCampo(26).PesqModoAbertura = 2
    txtCampo(26).PesqFieldCapture = "[Conta Contabil].[Codigo Contabil]"
    txtCampo(26).BoundColumn = "Codigo Contabil"
    txtCampo(26).ListFields = "Codigo Contabil; Descrição"
@@ -4436,7 +4226,7 @@ Public Sub DefineControles()
    Set bottxtCampo27(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(27).DataType = 1
    txtCampo(27).Mask = "9999999"
-   txtCampo(27).PesqModoAbertura =  2 
+   txtCampo(27).PesqModoAbertura = 2
    txtCampo(27).PesqFieldCapture = "[Conta Contabil].[Codigo Contabil]"
    txtCampo(27).BoundColumn = "Codigo Contabil"
    txtCampo(27).ListFields = "Codigo Contabil; Descrição"
@@ -4454,7 +4244,7 @@ Public Sub DefineControles()
    Set bottxtCampo28(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(28).DataType = 1
    txtCampo(28).Mask = "9999"
-   txtCampo(28).PesqModoAbertura =  2 
+   txtCampo(28).PesqModoAbertura = 2
    txtCampo(28).PesqFieldCapture = "[Historico Contabil].[Codigo do Historico]"
    txtCampo(28).BoundColumn = "Codigo do Historico"
    txtCampo(28).ListFields = "Codigo do Historico; Descrição"
@@ -4582,7 +4372,7 @@ Public Sub DefineControles()
    txtCampo(0).ListFields = "P|R"
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(0).DataField), txtCampo(0)
 
-   Set chkCampo(0).CtPri = chkCp(0)
+   Set chkCampo(0).CtPri = ChkCp(0)
    chkCampo(0).DataType = 5
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(0).DataField), chkCampo(0)
 
@@ -4593,7 +4383,7 @@ Public Sub DefineControles()
    bottxtCampo23(BOT_LISTA).Caption = "P"
    txtCampo(23).DataType = 1
    txtCampo(23).Mask = "999999"
-   txtCampo(23).PesqModoAbertura =  2 
+   txtCampo(23).PesqModoAbertura = 2
    txtCampo(23).PesqFieldCapture = "[Baixa Contas].[Seqüência da Baixa]"
    txtCampo(23).BoundColumn = ""
    txtCampo(23).ListFields = ""
@@ -4601,7 +4391,7 @@ Public Sub DefineControles()
    txtCampo(23).Relation = ""
    txtCampo(23).Source = ""
 
-   Set chkCampo(1).CtPri = chkCp(1)
+   Set chkCampo(1).CtPri = ChkCp(1)
    chkCampo(1).DataType = 5
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(1).DataField), chkCampo(1)
 
@@ -4623,7 +4413,7 @@ Public Sub DefineControles()
    Set bottxtCampo25(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(25).DataType = 1
    txtCampo(25).Mask = "999999"
-   txtCampo(25).PesqModoAbertura =  2 
+   txtCampo(25).PesqModoAbertura = 2
    txtCampo(25).BoundColumn = "Seqüência do Geral"
    txtCampo(25).ListFields = "Razão Social"
    txtCampo(25).OrderFields = "Razão Social"
@@ -4634,10 +4424,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -4730,7 +4520,7 @@ Private Sub Form_Unload(Cancel As Integer)
    Set chkCampo(1) = Nothing
 
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
-   UnLoad vgFrmImpCons
+   Unload vgFrmImpCons
    Set vgFrmImpCons = Nothing
 
    grdBrowse.Finalize                             'descarrega o grid
@@ -4743,10 +4533,10 @@ Private Sub Botao_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    Select Case Index
       Case 0
-         seqRegistro = Sequencia_da_Agencia 
+         seqRegistro = Sequencia_da_Agencia
          mdiIRRIG.MAgencias
       Case 1
-         CorrigeContabil  
+         CorrigeContabil
    End Select
 End Sub
 
@@ -4755,130 +4545,130 @@ End Sub
 Private Sub bottxtCampo4_Click(Index As Integer)
    txtCampo(4).SetFocus
    DoEvents
-   txtCampo(4).botClick Index
+   txtCampo(4).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo5_Click(Index As Integer)
    txtCampo(5).SetFocus
    DoEvents
-   txtCampo(5).botClick Index
+   txtCampo(5).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo7_Click(Index As Integer)
    txtCampo(7).SetFocus
    DoEvents
-   txtCampo(7).botClick Index
+   txtCampo(7).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo8_Click(Index As Integer)
    txtCampo(8).SetFocus
    DoEvents
-   txtCampo(8).botClick Index
+   txtCampo(8).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo6_Click(Index As Integer)
    txtCampo(6).SetFocus
    DoEvents
-   txtCampo(6).botClick Index
+   txtCampo(6).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo20_Click(Index As Integer)
    txtCampo(20).SetFocus
    DoEvents
-   txtCampo(20).botClick Index
+   txtCampo(20).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo21_Click(Index As Integer)
    txtCampo(21).SetFocus
    DoEvents
-   txtCampo(21).botClick Index
+   txtCampo(21).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo22_Click(Index As Integer)
    txtCampo(22).SetFocus
    DoEvents
-   txtCampo(22).botClick Index
+   txtCampo(22).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo30_Click(Index As Integer)
    txtCampo(30).SetFocus
    DoEvents
-   txtCampo(30).botClick Index
+   txtCampo(30).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo31_Click(Index As Integer)
    txtCampo(31).SetFocus
    DoEvents
-   txtCampo(31).botClick Index
+   txtCampo(31).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo15_Click(Index As Integer)
    txtCampo(15).SetFocus
    DoEvents
-   txtCampo(15).botClick Index
+   txtCampo(15).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo18_Click(Index As Integer)
    txtCampo(18).SetFocus
    DoEvents
-   txtCampo(18).botClick Index
+   txtCampo(18).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo26_Click(Index As Integer)
    txtCampo(26).SetFocus
    DoEvents
-   txtCampo(26).botClick Index
+   txtCampo(26).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo27_Click(Index As Integer)
    txtCampo(27).SetFocus
    DoEvents
-   txtCampo(27).botClick Index
+   txtCampo(27).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo28_Click(Index As Integer)
    txtCampo(28).SetFocus
    DoEvents
-   txtCampo(28).botClick Index
+   txtCampo(28).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo0_Click(Index As Integer)
    txtCampo(0).SetFocus
    DoEvents
-   txtCampo(0).botClick Index
+   txtCampo(0).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo23_Click(Index As Integer)
    txtCampo(23).SetFocus
    DoEvents
-   txtCampo(23).botClick Index
+   txtCampo(23).BotClick Index
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo25_Click(Index As Integer)
    txtCampo(25).SetFocus
    DoEvents
-   txtCampo(25).botClick Index
+   txtCampo(25).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 
