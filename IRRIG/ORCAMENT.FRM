@@ -14192,6 +14192,7 @@ Private Sub AtualizaValoresProdutos()
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
                       End If
                    End If
+                End If
                    If !CFOP = "5551" Or !CFOP = "6551" Then
                       ![Valor Do PIS] = 0
                    End If
@@ -14220,11 +14221,17 @@ Private Sub AtualizaValoresProdutos()
                          ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '(((!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc) - ![Valor Do ICMS]) * 1.65 / 100
                       End If
                    End If
+                End If
                    If !CFOP = "5551" Or !CFOP = "6551" Then
                       ![Valor Do PIS] = 0
                    End If
                 End If
               Else 'Entrega Futura
+               If Left(Trim(ProdutoNCMAux!Ncm), 5) = "84248" Then
+                    ![Aliq Do Pis] = 0
+                    ![Valor Do PIS] = 0
+                    ![Bc Pis] = 0
+                Else
                 If ReducaoAuxiliar = 0 Then
                    If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
                        RedPis = (VrItem2 - ICMSAuxiliar) * 48.1 / 100
@@ -14310,7 +14317,12 @@ Private Sub AtualizaValoresProdutos()
                      End If
                   End If
                End If
-            Else 'Entrega Futura
+            Else
+            If Left(Trim(ProdutoNCMAux!Ncm), 5) = "84248" Then
+                  ![Aliq Do Cofins] = 0
+                  ![Valor Do Cofins] = 0
+                  ![Bc Cofins] = 0
+               Else
                If ReducaoAuxiliar = 0 Then
                   If (Mid(ProdutoNCMAux!Ncm, 1, 5) = "84248" Or Mid(ProdutoNCMAux!Ncm, 1, 4) = "7309" Or ProdutoNCMAux!Ncm = "87162000") And Not ProdutoAux![Material Adquirido de Terceiro] Then
                       RedCofins = (VrItem2 - ICMSAuxiliar) * 48.1 / 100
@@ -14335,6 +14347,7 @@ Private Sub AtualizaValoresProdutos()
                   End If
                End If
             End If
+                End If
             If !CFOP = "5551" Or !CFOP = "6551" Then
                 ![Valor Do Cofins] = 0
             End If
@@ -14349,8 +14362,7 @@ Private Sub AtualizaValoresProdutos()
             .Update
             .BookMark = .LastModified
             .MoveNext
-            End If
-            End If
+        End If
             'Qdo Não Tem Desconto
             If Orcamento![Valor Do Fechamento] = 0 Then
             If Orcamento![Valor Do Frete] = 0 Then
@@ -14391,6 +14403,7 @@ Private Sub AtualizaValoresProdutos()
                   ![Aliq Do Pis] = 1.65
                   ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
                End If
+               End If
                If !CFOP = "5551" Or !CFOP = "6551" Then
                   ![Valor Do PIS] = 0
                End If
@@ -14417,6 +14430,7 @@ Private Sub AtualizaValoresProdutos()
                  ![Bc Pis] = Round(((Produtos_do_Orcamento!Quantidade * Produtos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms]), 2) '+ Int((ValorAcresDesc * 100) + 1) / 100) - Essa lógica força o arredondamento sempre pra cima, mas não foi preciso utilizar, pois o erro que era gerado no (vr unit * qtde) para o vr total foi corrigido
                  ![Aliq Do Pis] = 1.65
                  ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) '((!Quantidade * ![Valor Unitário]) - ![Valor Do ICMS]) * 1.65 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 1, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], , , MunicipioAux!UF)
+             End If
              End If
              If !CFOP = "5551" Or !CFOP = "6551" Then
                 ![Valor Do PIS] = 0
@@ -14450,11 +14464,11 @@ Private Sub AtualizaValoresProdutos()
             ![Valor Do Tributo] = Round(Tributos, 2) 'Tributos
             .Update
             .BookMark = .LastModified
-            .MoveNext
-            End If
-            End If
-    End With
-      Loop
+                        .MoveNext
+         End If  ' Fecha: If Orcamento!Fechamento = 1 Then
+      End If     ' Fecha: If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+   End With
+Loop
       GrdProdutos.ReBind 'Atualiza do Grid
       Reposition True    'Atualiza o Formulário
    End If
@@ -17122,6 +17136,7 @@ Private Sub Form_Load()
       .AllowInsert = Permitido("Conjuntos do Orçamento", ACAO_INCLUINDO)
       .AllowEdit = Permitido("Conjuntos do Orçamento", ACAO_EDITANDO)
       .AllowDelete = Permitido("Conjuntos do Orçamento", ACAO_EXCLUINDO)
+      '2
       .AddColumn Nothing, , "Conjunto", "Seqüência do Conjunto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Conjuntos", "Seqüência do Conjunto", "Seqüência do Conjunto; Descrição", "Seqüência do Conjunto; Descrição", "Seqüência do Conjunto; Descrição", "", , "1", "Conjuntos.[Seqüência do Conjunto]", "", "IRRIGACAO", "18", 2, "0", 4695
       .AddColumn Nothing, , "CST", "CST", TP_NUMERICO, "999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 435
       .AddColumn Nothing, , "CFOP", "CFOP", TP_NUMERICO, "9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 615
@@ -17129,7 +17144,7 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1095
       .AddColumn Nothing, , "Estoque", , TP_NUMERICO, "999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1095
       .AddColumn Nothing, , "Vr. Unitário", "Valor Unitário", TP_NUMERICO, "9.999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
-      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1200
+      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1200
       .AddColumn Nothing, , "Frete", "Valor do Frete", TP_NUMERICO, "9.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1230
       .AddColumn Nothing, , "Vr. Total", , TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1230
       .AddColumn Nothing, , "B. Cálc ICMS", "Valor da Base de Cálculo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
@@ -17143,10 +17158,10 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "B. Cálculo ICMS ST", "Base de Cálculo ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1575
       .AddColumn Nothing, , "Vr. ICMS ST", "Valor ICMS ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1080
       .AddColumn Nothing, , "% ICMS ST", "Alíquota do ICMS ST", TP_NUMERICO, "99,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 990
-      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1110
+      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1110
       .AddColumn Nothing, , "% Pis", "Aliq do pis", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 855
       .AddColumn Nothing, , "Vr. PIS", "Valor do PIS", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1020
-      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1065
+      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1065
       .AddColumn Nothing, , "% Cofins", "Aliq do cofins", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1020
       .AddColumn Nothing, , "Vr. COFINS", "Valor do Cofins", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1245
       .AddColumn Nothing, , "Vr. Tributo", "Valor do Tributo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
@@ -17162,6 +17177,7 @@ Private Sub Form_Load()
       .AllowInsert = Permitido("Peças do Orçamento", ACAO_INCLUINDO)
       .AllowEdit = Permitido("Peças do Orçamento", ACAO_EDITANDO)
       .AllowDelete = Permitido("Peças do Orçamento", ACAO_EXCLUINDO)
+      '3
       .AddColumn Nothing, , "Peça", "Seqüência do Produto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Produtos", "Seqüência do Produto", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "", , "1", "Produtos.[Seqüência do Produto]", "", "IRRIGACAO", "18", 2, "0", 4695
       .AddColumn Nothing, , "CST", "CST", TP_NUMERICO, "999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 435
       .AddColumn Nothing, , "CFOP", "CFOP", TP_NUMERICO, "9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 720
@@ -17171,7 +17187,7 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "Estoque", , TP_NUMERICO, "999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1020
       .AddColumn Nothing, , "Peso Total", , TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1170
       .AddColumn Nothing, , "Vr. Unitário", "Valor Unitário", TP_NUMERICO, "9.999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1170
-      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1125
+      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1125
       .AddColumn Nothing, , "Valor do Frete", "Valor do Frete", TP_NUMERICO, "9.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1350
       .AddColumn Nothing, , "Vr. Total", , TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
       .AddColumn Nothing, , "B. Cálc ICMS", "Valor da Base de Cálculo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
@@ -17185,10 +17201,10 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "B. Cálculo ICMS ST", "Base de Cálculo ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1800
       .AddColumn Nothing, , "Vr. ICMS ST", "Valor ICMS ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
       .AddColumn Nothing, , "% ICMS ST", "Alíquota do ICMS ST", TP_NUMERICO, "99,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 990
-      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1140
+      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1140
       .AddColumn Nothing, , "% Pis", "Aliq do pis", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 870
       .AddColumn Nothing, , "Vr. PIS", "Valor do PIS", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1155
-      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1110
+      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1110
       .AddColumn Nothing, , "% Cofins", "Aliq do cofins", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 900
       .AddColumn Nothing, , "Vr. COFINS", "Valor do Cofins", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1185
       .AddColumn Nothing, , "Vr. Tributo", "Valor do Tributo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
@@ -17222,37 +17238,38 @@ Private Sub Form_Load()
       .AllowInsert = Permitido("Produtos do Orçamento", ACAO_INCLUINDO)
       .AllowEdit = Permitido("Produtos do Orçamento", ACAO_EDITANDO)
       .AllowDelete = Permitido("Produtos do Orçamento", ACAO_EXCLUINDO)
+      '1
       .AddColumn Nothing, , "Produto", "Seqüência do Produto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Produtos", "Seqüência do Produto", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "", , "1", "Produtos.[Seqüência do Produto]", "", "IRRIGACAO", "18", 2, "0", 4695
       .AddColumn Nothing, , "NCM", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 1035
-      .AddColumn Nothing, , "CST", "CST", TP_NUMERICO, "999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 435
-      .AddColumn Nothing, , "CFOP", "CFOP", TP_NUMERICO, "9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 720
+      .AddColumn Nothing, , "CST", "CST", TP_NUMERICO, "999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 435
+      .AddColumn Nothing, , "CFOP", "CFOP", TP_NUMERICO, "9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 720
       .AddColumn Nothing, , "Un", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 615
       .AddColumn Nothing, , "Peso", , TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 945
       .AddColumn Nothing, , "Qtde", "Quantidade", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1095
       .AddColumn Nothing, , "Estoque", , TP_NUMERICO, "999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1080
       .AddColumn Nothing, , "Peso Total", , TP_NUMERICO, "99.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1170
       .AddColumn Nothing, , "Vr. Unitário", "Valor Unitário", TP_NUMERICO, "9.999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1185
-      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1140
+      .AddColumn Nothing, , "Desconto", "Valor do Desconto", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1140
       .AddColumn Nothing, , "Frete", "Valor do Frete", TP_NUMERICO, "9.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1020
       .AddColumn Nothing, , "Vr. Total", , TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
-      .AddColumn Nothing, , "B. Cálc ICMS", "Valor da Base de Cálculo", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
-      .AddColumn Nothing, , "Vr. ICMS", "Valor do ICMS", TP_NUMERICO, "9.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1185
-      .AddColumn Nothing, , "Vr. IPI", "Valor do IPI", TP_NUMERICO, "9.999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "B. Cálc ICMS", "Valor da Base de Cálculo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "Vr. ICMS", "Valor do ICMS", TP_NUMERICO, "9.999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1185
+      .AddColumn Nothing, , "Vr. IPI", "Valor do IPI", TP_NUMERICO, "9.999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
       .AddColumn Nothing, , "% ICMS", "Alíquota do ICMS", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 795
       .AddColumn Nothing, , "% IPI", "Alíquota do IPI", TP_NUMERICO, "999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 795
       .AddColumn Nothing, , "D.", "Diferido", TP_LOGICO, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 330
       .AddColumn Nothing, , "% Redução", "Percentual da Redução", TP_NUMERICO, "999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1230
       .AddColumn Nothing, , "IVA Ajustado", "IVA", TP_NUMERICO, "999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1185
-      .AddColumn Nothing, , "B. Cálculo ICMS ST", "Base de Cálculo ST", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1545
-      .AddColumn Nothing, , "Vr. ICMS ST", "Valor ICMS ST", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "B. Cálculo ICMS ST", "Base de Cálculo ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1545
+      .AddColumn Nothing, , "Vr. ICMS ST", "Valor ICMS ST", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
       .AddColumn Nothing, , "% ICMS ST", "Alíquota do ICMS ST", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 990
-      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1230
+      .AddColumn Nothing, , "BC. Pis", "Bc pis", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1230
       .AddColumn Nothing, , "% Pis", "Aliq do pis", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 945
-      .AddColumn Nothing, , "Vr. PIS", "Valor do PIS", TP_NUMERICO, "999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
-      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1290
+      .AddColumn Nothing, , "Vr. PIS", "Valor do PIS", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "BC. Cofins", "Bc cofins", TP_NUMERICO, "999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1290
       .AddColumn Nothing, , "% Cofins", "Aliq do cofins", TP_NUMERICO, "99,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 855
-      .AddColumn Nothing, , "Vr. COFINS", "Valor do Cofins", TP_NUMERICO, "999.999,9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
-      .AddColumn Nothing, , "Vr. Tributo", "Valor do Tributo", TP_NUMERICO, "99.999.999,99", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "Vr. COFINS", "Valor do Cofins", TP_NUMERICO, "999.999,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
+      .AddColumn Nothing, , "Vr. Tributo", "Valor do Tributo", TP_NUMERICO, "99.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1305
    End With
    With Grid(4)
       .RowHeight = 315
@@ -21259,6 +21276,13 @@ End Sub
 
 'evento - quer pegar valores para cada célula
 Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vgCol As Long, vgColumns() As Variant, ByRef FormField As FormataCampos, ByRef vgLocked As Boolean)
+
+   'libera edição para usuários autorizados
+   If UCase$(Trim$(vgPWUsuario)) = "YGOR" Or UCase$(Trim$(vgPWUsuario)) = "JUCELI" Then
+      vgLocked = False
+      Exit Sub
+   End If
+
    Select Case Index
       Case 0
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
@@ -21272,6 +21296,7 @@ Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vg
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
    End Select
 End Sub
+
 
 
 'evento - quando o tempo esgotar

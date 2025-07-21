@@ -1,16 +1,6 @@
 [History]
-1=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmBxContas/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718095352	#P7#=0	#P8#=39	.
-2=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmBxContas/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250718094332	#P7#=0	#P8#=15	.
-3=#P0#=mb	#P1#=Tributacao	#P2#=IRRIG/frmRellucro/Tributacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718084521	#P7#=0	#P8#=37	.
-4=#P0#=mb	#P1#=Menu_1088_Click	#P2#=IRRIG/mdiIRRIG/Menu_1088_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250718084232	#P7#=0	#P8#=12	.
-5=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718084038	#P7#=0	#P8#=10	.
-6=#P0#=mb	#P1#=BaixaConta	#P2#=IRRIG/frmBxContas/BaixaConta	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718081511	#P7#=0	#P8#=76	.
-7=#P0#=mb	#P1#=BuscaBanco	#P2#=IRRIG/frmBxContas/BuscaBanco	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718100116	#P7#=0	#P8#=96	.
-8=#P0#=mb	#P1#=Filtro	#P2#=IRRIG/frmArqCont/Filtro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718075359	#P7#=0	#P8#=1	.
-9=#P0#=mb	#P1#=Form_Activate	#P2#=IRRIG/frmArqCont/Form_Activate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250717175726	#P7#=0	#P8#=1	.
-10=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmArqCont/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250718074837	#P7#=0	#P8#=25	.
-11=#P0#=mb	#P1#=criaArquivo	#P2#=IRRIG/frmArqCont/criaArquivo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250718082908	#P7#=0	#P8#=35	.
-12=#P0#=mb	#P1#=TotalParcelas	#P2#=IRRIG/frmFinanc/TotalParcelas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250717163820	#P7#=0	#P8#=6	.
-13=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmFinanc/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250717163216	#P7#=0	#P8#=7	.
-14=#P0#=mb	#P1#=Botao_Click	#P2#=IRRIG/frmNovoPrg/Botao_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250717162803	#P7#=0	#P8#=0	.
-15=#P0#=mb	#P1#=Botao_Click	#P2#=IRRIG/mdiIRRIG/Botao_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250717162434	#P7#=0	#P8#=68	.
+1=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721133816	#P7#=0	#P8#=18	.
+2=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721134112	#P7#=0	#P8#=14	.
+3=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmNotaFisc/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721131418	#P7#=0	#P8#=54	.
+4=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmtransfer/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721112821	#P7#=0	#P8#=-3	.
+5=#P0#=mb	#P1#=PoeRelEFiltroCbo	#P2#=IRRIG/frmtransfer/PoeRelEFiltroCbo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721112944	#P7#=0	#P8#=-2	.
