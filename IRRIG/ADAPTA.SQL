@@ -587,6 +587,11 @@ If exists (select * from sysobjects where id = object_id('TB_Baixa_do_Estoque_Co
        DROP CONSTRAINT [TB_Baixa_do_Estoque_Contábil_FK_Seqüência_do_Geral]
 GO
 
+If exists (select * from sysobjects where id = object_id('TB_Baixa_do_Estoque_Contábil_FK_Seqüência_do_Movimento') and sysstat & 0xf = 11)
+ ALTER TABLE [dbo].[Baixa do Estoque Contábil]
+       DROP CONSTRAINT [TB_Baixa_do_Estoque_Contábil_FK_Seqüência_do_Movimento]
+GO
+
 If exists (select * from sysobjects where id = object_id('TB_Declarações_de_Importação_FK_Seqüência_do_Geral') and sysstat & 0xf = 11)
  ALTER TABLE [dbo].[Declarações de Importação]
        DROP CONSTRAINT [TB_Declarações_de_Importação_FK_Seqüência_do_Geral]

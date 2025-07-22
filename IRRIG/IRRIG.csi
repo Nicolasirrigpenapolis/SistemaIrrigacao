@@ -1,6 +1,0 @@
-[History]
-1=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721133816	#P7#=0	#P8#=18	.
-2=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721134112	#P7#=0	#P8#=14	.
-3=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmNotaFisc/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721131418	#P7#=0	#P8#=54	.
-4=#P0#=mb	#P1#=Executar	#P2#=IRRIG/frmtransfer/Executar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721112821	#P7#=0	#P8#=-3	.
-5=#P0#=mb	#P1#=PoeRelEFiltroCbo	#P2#=IRRIG/frmtransfer/PoeRelEFiltroCbo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250721112944	#P7#=0	#P8#=-2	.
