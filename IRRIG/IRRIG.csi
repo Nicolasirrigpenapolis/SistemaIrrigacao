@@ -1,9 +1,12 @@
 [History]
-1=#P0#=mb	#P1#=ValidaProduto3	#P2#=IRRIG/frmOrcament/ValidaProduto3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180906	#P7#=0	#P8#=0	.
-2=#P0#=mb	#P1#=ValidaConjx	#P2#=IRRIG/frmOrcament/ValidaConjx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180659	#P7#=0	#P8#=0	.
-3=#P0#=mb	#P1#=ValidaProdx	#P2#=IRRIG/frmOrcament/ValidaProdx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180644	#P7#=0	#P8#=9	.
-4=#P0#=mb	#P1#=ValidaPecasx	#P2#=IRRIG/frmOrcament/ValidaPecasx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180626	#P7#=0	#P8#=12	.
-5=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175402	#P7#=0	#P8#=14	.
-6=#P0#=mb	#P1#=AtualizaValoresPecas	#P2#=IRRIG/frmOrcament/AtualizaValoresPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175348	#P7#=0	#P8#=127	.
-7=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175237	#P7#=0	#P8#=-7	.
-8=#P0#=mb	#P1#=AtualizaValoresConjuntos	#P2#=IRRIG/frmOrcament/AtualizaValoresConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175240	#P7#=0	#P8#=147	.
+1=#P0#=mb	#P1#=SuperAtualizaProdutos	#P2#=IRRIG/frmOrcament/SuperAtualizaProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722182109	#P7#=0	#P8#=24	.
+2=#P0#=mb	#P1#=SuperAtualizaPecas	#P2#=IRRIG/frmOrcament/SuperAtualizaPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722182039	#P7#=0	#P8#=36	.
+3=#P0#=mb	#P1#=SuperAtualizaConjuntos	#P2#=IRRIG/frmOrcament/SuperAtualizaConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722181913	#P7#=0	#P8#=30	.
+4=#P0#=mb	#P1#=ValidaProduto3	#P2#=IRRIG/frmOrcament/ValidaProduto3	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722181156	#P7#=0	#P8#=10	.
+5=#P0#=mb	#P1#=ValidaConjx	#P2#=IRRIG/frmOrcament/ValidaConjx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180659	#P7#=0	#P8#=0	.
+6=#P0#=mb	#P1#=ValidaProdx	#P2#=IRRIG/frmOrcament/ValidaProdx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180644	#P7#=0	#P8#=9	.
+7=#P0#=mb	#P1#=ValidaPecasx	#P2#=IRRIG/frmOrcament/ValidaPecasx	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722180626	#P7#=0	#P8#=12	.
+8=#P0#=mb	#P1#=AtualizaValoresProdutos	#P2#=IRRIG/frmOrcament/AtualizaValoresProdutos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175402	#P7#=0	#P8#=14	.
+9=#P0#=mb	#P1#=AtualizaValoresPecas	#P2#=IRRIG/frmOrcament/AtualizaValoresPecas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175348	#P7#=0	#P8#=127	.
+10=#P0#=mb	#P1#=ValidaDesconto	#P2#=IRRIG/frmOrcament/ValidaDesconto	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175237	#P7#=0	#P8#=-7	.
+11=#P0#=mb	#P1#=AtualizaValoresConjuntos	#P2#=IRRIG/frmOrcament/AtualizaValoresConjuntos	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250722175240	#P7#=0	#P8#=147	.
