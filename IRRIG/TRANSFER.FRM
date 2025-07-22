@@ -666,7 +666,7 @@ Private Sub Lancar()
          ![Valor Total] = Valor_Total
          ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
          !Conta = "P"
-         ![Seqüência Do Histórico] = 105
+         ![Seqüência do Histórico] = 105
           If Sequencia_da_Agencia = 341 Then
              ![Codigo Do Debito] = 4
              ![Codigo Do Credito] = 5
@@ -701,7 +701,9 @@ Private Sub Lancar()
          ElseIf Sequencia_da_Agencia = 21 Then
             ![Seqüência Do Geral] = 29064 'Caixinha
          ElseIf Sequencia_da_Agencia = 19 Then
-            ![Seqüência Do Geral] = 28013 'sicob
+            ![Seqüência Do Geral] = 28013
+         ElseIf Sequencia_da_Agencia = 24 Then
+            ![Seqüência Do Geral] = 39672 'Inter
         End If
         ![Data de Entrada] = Data_do_Movimento
         !Histórico = Historico
@@ -773,7 +775,7 @@ Private Sub Lancar()
          ![Valor Total] = Valor_Total
          ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
          !Conta = "R"
-         ![Seqüência Do Histórico] = 105
+         ![Seqüência do Histórico] = 105
           If Sequencia_da_Agencia1 = 341 Then
              ![Codigo Do Debito] = 5
              ![Codigo Do Credito] = 4
@@ -809,6 +811,8 @@ Private Sub Lancar()
             ![Seqüência Do Geral] = 29064 'Caixinha
          ElseIf Sequencia_da_Agencia1 = 19 Then
             ![Seqüência Do Geral] = 28013 'sicob
+         ElseIf Sequencia_da_Agencia = 24 Then
+            ![Seqüência Do Geral] = 39672 'Inter
         End If
         ![Data de Entrada] = Data_do_Movimento
         !Histórico = Historico
@@ -868,7 +872,7 @@ Private Sub Lancar()
 End Sub
 
 
-Private Sub LancamentoContabil(Codigo_do_Debito As Long, Codigo_do_Credito As Long, SeqMvto As Long)
+Private Sub LancamentoContabil(Codigo_do_Debito As Long, Codigo_do_Credito As Long, seqMvto As Long)
  Dim Lancamento As New GRecordSet
  Dim Tb As New GRecordSet
 
@@ -891,7 +895,7 @@ Private Sub LancamentoContabil(Codigo_do_Debito As Long, Codigo_do_Credito As Lo
        End If
       ![Complemento Do Hist] = "Transferencia"
       ![Data da Baixa] = Data_do_Movimento
-      ![Seqüência da Movimentação CC] = SeqMvto
+      ![Seqüência da Movimentação CC] = seqMvto
       .Update
       .BookMark = .LastModified
    End With
