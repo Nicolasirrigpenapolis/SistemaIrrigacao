@@ -14,6 +14,7 @@ Object={C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0; MSMASK32.OCX
 Module=modIRRIG; IRRIG.BAS
 Module=modIRRIG2; IRRIG2.BAS
 Module=modResources; GRES.BAS
+Module=modReprocessa; MODREPROCESSA.BAS
 Class=GCommonDialog; GCOMMDLG.CLS
 Class=cCommonDialog; CCOMMDLG.CLS
 Class=FormataCampos; GMASK.CLS
@@ -423,6 +424,7 @@ Form=FPMONT.FRM
 Form=INOVE\INOVE2.frm
 Form=DNSE\frmDNFSe.frm
 Object={EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0; ieframe.dll
+
 IconForm="mdiIRRIG"
 Startup="Sub Main"
 HelpFile="Help\IRRIG.CHM"

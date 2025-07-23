@@ -1979,6 +1979,24 @@ DeuErro:
    
 End Function
 
+
+
+
+'-----------------------------------------------------------------------
+'Rotina simples para registrar mensagens de depuração em arquivo texto.
+'Utilizada para acompanhar o fluxo de execução e detectar travamentos.
+Public Sub LogDebug(vgMsg As String)
+   Dim vgArq As String, vgH As Integer
+   On Error Resume Next
+   vgArq = Left$(vgConsultaINI$, Rat(vgConsultaINI$, "\\")) & "debug_salva.log"
+   vgH = FreeFile
+   Open vgArq For Append As vgH
+   Print #vgH, Format(Now, "yyyy/mm/dd hh:mm:ss") & " - " & vgMsg
+   Close vgH
+End Sub
+
+
+
 Public Function Capitaliza(ByVal texto As String) As String
    Dim Exceções As Variant, Ind As Long, Pos As Long
    texto = " " & LCase(texto) & " "
@@ -5009,14 +5027,14 @@ End Sub
 
 'verifica se a mascara da data tem "99" e substitui pelo correto (dd/mm/yy)
 Public Function TrataMaskData(St As String) As String
-   Dim k As String, RetVal As String, Dt As Date, i As Integer
+   Dim k As String, RetVal As String, dt As Date, i As Integer
    RetVal$ = St$
    If InStr(RetVal$, "9") > 0 Then                'se a data for 99/99/999 vamos substituir por dd/mm/yy
       If InStr(RetVal$, ":") > 0 Then
          k$ = "hms"
       Else
-         Dt = Format$("25/12/98", "Short date")
-         k$ = CStr(Dt)
+         dt = Format$("25/12/98", "Short date")
+         k$ = CStr(dt)
          If Left$(k$, 2) = "25" Then k$ = "dmy" Else k$ = "mdy"
       End If
       For i = 1 To Len(RetVal$)

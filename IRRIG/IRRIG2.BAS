@@ -68,16 +68,16 @@ Private Crc32Table(255) As Long                   'Vetor para CRC
 Public Function GDVChaveNFe(vgSt As String) As String
     'A NF-e exige o calculo do digito verificador com pesos que
     'variam de 2 a 9, repetindo a sequencia da direita para a esquerda.
-    Dim peso As Integer, soma As Long, i As Integer, dv As Integer
-    peso = 2
+    Dim Peso As Integer, Soma As Long, i As Integer, DV As Integer
+    Peso = 2
     For i = Len(vgSt) To 1 Step -1
-        soma = soma + Val(Mid$(vgSt, i, 1)) * peso
-        peso = peso + 1
-        If peso > 9 Then peso = 2
+        Soma = Soma + Val(Mid$(vgSt, i, 1)) * Peso
+        Peso = Peso + 1
+        If Peso > 9 Then Peso = 2
     Next i
-    dv = 11 - (soma Mod 11)
-    If dv >= 10 Then dv = 0
-    GDVChaveNFe = CStr(dv)
+    DV = 11 - (Soma Mod 11)
+    If DV >= 10 Then DV = 0
+    GDVChaveNFe = CStr(DV)
 End Function
 
 
@@ -555,20 +555,20 @@ End Function
 
 'gera DV de 1 digito modulo 11
 Public Function GDV1(vgSt As String) As String
-   Dim Qu As Integer, soma As Integer, Posi As Integer, Resto As Integer, _
+   Dim Qu As Integer, Soma As Integer, Posi As Integer, Resto As Integer, _
          dvc As Integer, Num As String                             'dimensiona
    Num$ = RTrim$(Retira$(vgSt$, "./-,:", UM_A_UM))                 'remove separadores
    Qu = Len(Num$)                                                  'pega tamanho
    If Qu = 0 Then                                                  'se 0
       GDV1$ = ""                                  'retorna nulo
    Else                                           'senão
-      soma = 0                                    'inicializa
+      Soma = 0                                    'inicializa
       Posi = 0                                    'variáveis
       While Posi < Qu                             'vamos acumular
          Posi = Posi + 1                          'o valor do dígito
-         soma = soma + Val(Mid$(Num$, Qu + 1 - Posi, 1)) * (Posi + 1) 'com sua posição
+         Soma = Soma + Val(Mid$(Num$, Qu + 1 - Posi, 1)) * (Posi + 1) 'com sua posição
       Wend
-      Resto = soma Mod 11                                             'divide por 11 e pega o resto
+      Resto = Soma Mod 11                                             'divide por 11 e pega o resto
       If Resto < 2 Then                                               'se resto < 2
          dvc = 0                                  'o dv é 0
       Else                                        'senão,
@@ -689,7 +689,7 @@ End Function
 Public Function VCGC(St As String) As Integer
    Dim RetVal As Integer, x As String, Posi As Integer, _
          dv1c As Integer, dv2c As Integer, dv1f As Integer, dv2f As Integer, _
-         Num As String, Mu As String, Resto As Integer, dv As String
+         Num As String, Mu As String, Resto As Integer, DV As String
    x$ = RTrim$(Retira$(St$, "./-,:", UM_A_UM))
    If Len(x$) = 0 Then                            'se vazio...
       RetVal = True                               'preparamos retorno true
@@ -713,8 +713,8 @@ Public Function VCGC(St As String) As Integer
       Else                                        'senão,
          dv1c = 11 - Resto                        'este dv é a diferença 11 - resto
       End If
-      dv$ = Right$(Str$(dv1c), 1)                 'salva o dv calculado como string
-      Num$ = Num$ + dv$                           'incorpora dv1
+      DV$ = Right$(Str$(dv1c), 1)                 'salva o dv calculado como string
+      Num$ = Num$ + DV$                           'incorpora dv1
       dv2c = 0                                    'inicializa dv2
       Mu$ = "6" + Mu$                             'poe mais um dígito nos multiplicadores
       Posi = 13                                   'posição agora inicia em 13
@@ -843,7 +843,7 @@ End Function
 
 'retorna o nome do mês de uma data String
 Public Function NMes(St As Variant) As String
-   Dim Dt As String, Nomes As String, RetVal As String, i As Integer
+   Dim dt As String, Nomes As String, RetVal As String, i As Integer
    If VarType(St) = vbDate Then                   'se veio uma data
       i = Month(St)                               'pega o número do mês
    Else                                           'se veio string
@@ -3572,6 +3572,11 @@ Public Sub LigaFocos(F As Form)
       End If
    End If
 End Sub
+
+
+
+
+
 
 'desabilita botão/menu de reparar o banco de dados
 Public Sub DesligaRepara()
