@@ -1,12 +1,6 @@
 [History]
-1=#P0#=mb	#P1#=picSel_DblClick	#P2#=IRRIG/GListV/picSel_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250729074505	#P7#=0	#P8#=-1	.
-2=#P0#=mb	#P1#=ProssegueExecucao	#P2#=IRRIG/frmRelfxhid/ProssegueExecucao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728170536	#P7#=0	#P8#=453	.
-3=#P0#=mb	#P1#=ExcluiRegistro	#P2#=IRRIG/mdiIRRIG/ExcluiRegistro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728164112	#P7#=0	#P8#=96	.
-4=#P0#=mb	#P1#=Cancelamento	#P2#=IRRIG/frmF_CanNF/Cancelamento	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728162303	#P7#=0	#P8#=146	.
-5=#P0#=mb	#P1#=PcbAtualizaOrc_Click	#P2#=IRRIG/frmConpedi/PcbAtualizaOrc_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250728160648	#P7#=0	#P8#=56	.
-6=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmPComprN/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728160110	#P7#=0	#P8#=4	.
-7=#P0#=mb	#P1#=ExecutaVisivel	#P2#=IRRIG/frmPComprN/ExecutaVisivel	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728160017	#P7#=0	#P8#=1	.
-8=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmBxContas/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728155830	#P7#=0	#P8#=51	.
-9=#P0#=mb	#P1#=ExecutaVisivel	#P2#=IRRIG/frmBxContas/ExecutaVisivel	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728155453	#P7#=0	#P8#=-4	.
-10=#P0#=mb	#P1#=Lancar	#P2#=IRRIG/frmtransfer/Lancar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728155408	#P7#=0	#P8#=19	.
-11=#P0#=mb	#P1#=LancamentoContabil	#P2#=IRRIG/frmtransfer/LancamentoContabil	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250728155300	#P7#=0	#P8#=-2	.
+1=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmBxContas/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250729134338	#P7#=0	#P8#=15	.
+2=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmBxContas/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729134258	#P7#=0	#P8#=69	.
+3=#P0#=mb	#P1#=Lancar	#P2#=IRRIG/frmtransfer/Lancar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729132901	#P7#=0	#P8#=74	.
+4=#P0#=mb	#P1#=LancamentoContabil	#P2#=IRRIG/frmtransfer/LancamentoContabil	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729131421	#P7#=0	#P8#=-3	.
+5=#P0#=mb	#P1#=Filtro	#P2#=IRRIG/frmtransfer/Filtro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729132120	#P7#=0	#P8#=24	.

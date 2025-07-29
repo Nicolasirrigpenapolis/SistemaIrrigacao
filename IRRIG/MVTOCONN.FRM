@@ -28,6 +28,28 @@ Begin VB.Form frmMvtoConN
       BorderWidth     =   2
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
+         Height          =   330
+         Index           =   0
+         Left            =   15330
+         TabIndex        =   8
+         TabStop         =   0   'False
+         Top             =   1320
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
          Height          =   435
          Index           =   9
          Left            =   13815
@@ -49,28 +71,6 @@ Begin VB.Form frmMvtoConN
          EndProperty
          Caption         =   "Imprimir"
          CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   330
-         Index           =   0
-         Left            =   15330
-         TabIndex        =   8
-         TabStop         =   0   'False
-         Top             =   1320
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          CaptionOffset   =   50
       End
       Begin VB.PictureBox picBox 
@@ -286,152 +286,270 @@ Begin VB.Form frmMvtoConN
          Tab(0).ControlCount=   2
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Botao(8)"
-         Tab(1).Control(1)=   "txtCp(24)"
-         Tab(1).Control(2)=   "txtCp(23)"
-         Tab(1).Control(3)=   "bottxtCampo23(2)"
+         Tab(1).Control(0)=   "Grid(0)"
+         Tab(1).Control(1)=   "Label(7)"
+         Tab(1).Control(2)=   "labFdo14"
+         Tab(1).Control(3)=   "bottxtCampo14(1)"
          Tab(1).Control(3).Enabled=   0   'False
-         Tab(1).Control(4)=   "bottxtCampo23(1)"
+         Tab(1).Control(4)=   "bottxtCampo14(2)"
          Tab(1).Control(4).Enabled=   0   'False
-         Tab(1).Control(5)=   "labFdo23"
-         Tab(1).Control(6)=   "Botao(7)"
-         Tab(1).Control(7)=   "txtCp(22)"
-         Tab(1).Control(7).Enabled=   0   'False
-         Tab(1).Control(8)=   "bottxtCampo22(2)"
-         Tab(1).Control(8).Enabled=   0   'False
-         Tab(1).Control(9)=   "labFdo22"
-         Tab(1).Control(10)=   "Botao(6)"
-         Tab(1).Control(11)=   "txtCp(21)"
-         Tab(1).Control(12)=   "txtCp(20)"
-         Tab(1).Control(13)=   "bottxtCampo20(2)"
-         Tab(1).Control(13).Enabled=   0   'False
-         Tab(1).Control(14)=   "bottxtCampo20(1)"
-         Tab(1).Control(14).Enabled=   0   'False
+         Tab(1).Control(5)=   "txtCp(14)"
+         Tab(1).Control(6)=   "Label(26)"
+         Tab(1).Control(7)=   "txtCp(15)"
+         Tab(1).Control(8)=   "Label(27)"
+         Tab(1).Control(9)=   "Botao(2)"
+         Tab(1).Control(10)=   "labFdo16"
+         Tab(1).Control(11)=   "bottxtCampo16(2)"
+         Tab(1).Control(11).Enabled=   0   'False
+         Tab(1).Control(12)=   "txtCp(16)"
+         Tab(1).Control(12).Enabled=   0   'False
+         Tab(1).Control(13)=   "Label(28)"
+         Tab(1).Control(14)=   "Botao(3)"
          Tab(1).Control(15)=   "labFdo20"
-         Tab(1).Control(16)=   "Botao(3)"
-         Tab(1).Control(17)=   "Label(28)"
-         Tab(1).Control(18)=   "txtCp(16)"
-         Tab(1).Control(18).Enabled=   0   'False
-         Tab(1).Control(19)=   "bottxtCampo16(2)"
-         Tab(1).Control(19).Enabled=   0   'False
-         Tab(1).Control(20)=   "labFdo16"
-         Tab(1).Control(21)=   "Botao(2)"
-         Tab(1).Control(22)=   "Label(27)"
-         Tab(1).Control(23)=   "txtCp(15)"
-         Tab(1).Control(24)=   "Label(26)"
-         Tab(1).Control(25)=   "txtCp(14)"
-         Tab(1).Control(26)=   "bottxtCampo14(2)"
+         Tab(1).Control(16)=   "bottxtCampo20(1)"
+         Tab(1).Control(16).Enabled=   0   'False
+         Tab(1).Control(17)=   "bottxtCampo20(2)"
+         Tab(1).Control(17).Enabled=   0   'False
+         Tab(1).Control(18)=   "txtCp(20)"
+         Tab(1).Control(19)=   "txtCp(21)"
+         Tab(1).Control(20)=   "Botao(6)"
+         Tab(1).Control(21)=   "labFdo22"
+         Tab(1).Control(22)=   "bottxtCampo22(2)"
+         Tab(1).Control(22).Enabled=   0   'False
+         Tab(1).Control(23)=   "txtCp(22)"
+         Tab(1).Control(23).Enabled=   0   'False
+         Tab(1).Control(24)=   "Botao(7)"
+         Tab(1).Control(25)=   "labFdo23"
+         Tab(1).Control(26)=   "bottxtCampo23(1)"
          Tab(1).Control(26).Enabled=   0   'False
-         Tab(1).Control(27)=   "bottxtCampo14(1)"
+         Tab(1).Control(27)=   "bottxtCampo23(2)"
          Tab(1).Control(27).Enabled=   0   'False
-         Tab(1).Control(28)=   "labFdo14"
-         Tab(1).Control(29)=   "Label(7)"
-         Tab(1).Control(30)=   "Grid(0)"
+         Tab(1).Control(28)=   "txtCp(23)"
+         Tab(1).Control(29)=   "txtCp(24)"
+         Tab(1).Control(30)=   "Botao(8)"
          Tab(1).ControlCount=   31
          TabCaption(2)   =   "&3 - Conjuntos"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Botao(5)"
-         Tab(2).Control(1)=   "txtCp(19)"
-         Tab(2).Control(1).Enabled=   0   'False
-         Tab(2).Control(2)=   "bottxtCampo19(2)"
-         Tab(2).Control(2).Enabled=   0   'False
-         Tab(2).Control(3)=   "labFdo19"
-         Tab(2).Control(4)=   "Label(31)"
-         Tab(2).Control(5)=   "Botao(4)"
-         Tab(2).Control(6)=   "Label(30)"
+         Tab(2).Control(0)=   "Grid(1)"
+         Tab(2).Control(1)=   "Label(8)"
+         Tab(2).Control(2)=   "Label(29)"
+         Tab(2).Control(3)=   "labFdo17"
+         Tab(2).Control(4)=   "bottxtCampo17(1)"
+         Tab(2).Control(4).Enabled=   0   'False
+         Tab(2).Control(5)=   "bottxtCampo17(2)"
+         Tab(2).Control(5).Enabled=   0   'False
+         Tab(2).Control(6)=   "txtCp(17)"
          Tab(2).Control(7)=   "txtCp(18)"
-         Tab(2).Control(8)=   "txtCp(17)"
-         Tab(2).Control(9)=   "bottxtCampo17(2)"
-         Tab(2).Control(9).Enabled=   0   'False
-         Tab(2).Control(10)=   "bottxtCampo17(1)"
-         Tab(2).Control(10).Enabled=   0   'False
-         Tab(2).Control(11)=   "labFdo17"
-         Tab(2).Control(12)=   "Label(29)"
-         Tab(2).Control(13)=   "Label(8)"
-         Tab(2).Control(14)=   "Grid(1)"
+         Tab(2).Control(8)=   "Label(30)"
+         Tab(2).Control(9)=   "Botao(4)"
+         Tab(2).Control(10)=   "Label(31)"
+         Tab(2).Control(11)=   "labFdo19"
+         Tab(2).Control(12)=   "bottxtCampo19(2)"
+         Tab(2).Control(12).Enabled=   0   'False
+         Tab(2).Control(13)=   "txtCp(19)"
+         Tab(2).Control(13).Enabled=   0   'False
+         Tab(2).Control(14)=   "Botao(5)"
          Tab(2).ControlCount=   15
          TabCaption(3)   =   "&4 - Despesas"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Label(9)"
-         Tab(3).Control(1)=   "Grid(2)"
+         Tab(3).Control(0)=   "Grid(2)"
+         Tab(3).Control(1)=   "Label(9)"
          Tab(3).ControlCount=   2
          TabCaption(4)   =   "5 - Financeiro"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "txtCp(25)"
-         Tab(4).Control(0).Enabled=   0   'False
-         Tab(4).Control(1)=   "bottxtCampo25(2)"
-         Tab(4).Control(1).Enabled=   0   'False
-         Tab(4).Control(2)=   "bottxtCampo25(1)"
-         Tab(4).Control(2).Enabled=   0   'False
-         Tab(4).Control(3)=   "labFdo25"
-         Tab(4).Control(4)=   "Label(34)"
-         Tab(4).Control(5)=   "Label(33)"
-         Tab(4).Control(6)=   "Label(32)"
-         Tab(4).Control(7)=   "Grid(3)"
-         Tab(4).Control(8)=   "Label(25)"
-         Tab(4).Control(9)=   "Formato(2)"
-         Tab(4).Control(10)=   "Label(24)"
-         Tab(4).Control(11)=   "Formato(1)"
-         Tab(4).Control(12)=   "Label(23)"
-         Tab(4).Control(13)=   "Formato(0)"
-         Tab(4).Control(14)=   "Label(22)"
-         Tab(4).Control(15)=   "Label(21)"
-         Tab(4).Control(16)=   "txtCp(13)"
+         Tab(4).Control(0)=   "Label(10)"
+         Tab(4).Control(1)=   "Label(11)"
+         Tab(4).Control(2)=   "labFdo4"
+         Tab(4).Control(3)=   "bottxtCampo4(1)"
+         Tab(4).Control(3).Enabled=   0   'False
+         Tab(4).Control(4)=   "bottxtCampo4(2)"
+         Tab(4).Control(4).Enabled=   0   'False
+         Tab(4).Control(5)=   "txtCp(4)"
+         Tab(4).Control(6)=   "Botao(1)"
+         Tab(4).Control(7)=   "Label(12)"
+         Tab(4).Control(8)=   "labFdo5"
+         Tab(4).Control(9)=   "bottxtCampo5(1)"
+         Tab(4).Control(9).Enabled=   0   'False
+         Tab(4).Control(10)=   "bottxtCampo5(2)"
+         Tab(4).Control(10).Enabled=   0   'False
+         Tab(4).Control(11)=   "txtCp(5)"
+         Tab(4).Control(12)=   "Label(13)"
+         Tab(4).Control(13)=   "Label(14)"
+         Tab(4).Control(14)=   "labFdo6"
+         Tab(4).Control(15)=   "bottxtCampo6(1)"
+         Tab(4).Control(15).Enabled=   0   'False
+         Tab(4).Control(16)=   "bottxtCampo6(2)"
          Tab(4).Control(16).Enabled=   0   'False
-         Tab(4).Control(17)=   "Label(20)"
-         Tab(4).Control(18)=   "txtCp(12)"
-         Tab(4).Control(18).Enabled=   0   'False
-         Tab(4).Control(19)=   "txtCp(11)"
-         Tab(4).Control(19).Enabled=   0   'False
-         Tab(4).Control(20)=   "Label(19)"
-         Tab(4).Control(21)=   "Label(18)"
-         Tab(4).Control(22)=   "txtCp(10)"
-         Tab(4).Control(22).Enabled=   0   'False
-         Tab(4).Control(23)=   "Label(17)"
-         Tab(4).Control(24)=   "txtCp(9)"
-         Tab(4).Control(25)=   "bottxtCampo9(0)"
-         Tab(4).Control(25).Enabled=   0   'False
+         Tab(4).Control(17)=   "txtCp(6)"
+         Tab(4).Control(18)=   "Label(15)"
+         Tab(4).Control(19)=   "Label(16)"
+         Tab(4).Control(20)=   "labFdo7"
+         Tab(4).Control(21)=   "bottxtCampo7(2)"
+         Tab(4).Control(21).Enabled=   0   'False
+         Tab(4).Control(22)=   "txtCp(7)"
+         Tab(4).Control(23)=   "labFdo8"
+         Tab(4).Control(24)=   "bottxtCampo8(0)"
+         Tab(4).Control(24).Enabled=   0   'False
+         Tab(4).Control(25)=   "txtCp(8)"
          Tab(4).Control(26)=   "labFdo9"
-         Tab(4).Control(27)=   "txtCp(8)"
-         Tab(4).Control(28)=   "bottxtCampo8(0)"
-         Tab(4).Control(28).Enabled=   0   'False
-         Tab(4).Control(29)=   "labFdo8"
-         Tab(4).Control(30)=   "txtCp(7)"
-         Tab(4).Control(31)=   "bottxtCampo7(2)"
-         Tab(4).Control(31).Enabled=   0   'False
-         Tab(4).Control(32)=   "labFdo7"
-         Tab(4).Control(33)=   "Label(16)"
-         Tab(4).Control(34)=   "Label(15)"
-         Tab(4).Control(35)=   "txtCp(6)"
-         Tab(4).Control(36)=   "bottxtCampo6(2)"
+         Tab(4).Control(27)=   "bottxtCampo9(0)"
+         Tab(4).Control(27).Enabled=   0   'False
+         Tab(4).Control(28)=   "txtCp(9)"
+         Tab(4).Control(29)=   "Label(17)"
+         Tab(4).Control(30)=   "txtCp(10)"
+         Tab(4).Control(30).Enabled=   0   'False
+         Tab(4).Control(31)=   "Label(18)"
+         Tab(4).Control(32)=   "Label(19)"
+         Tab(4).Control(33)=   "txtCp(11)"
+         Tab(4).Control(33).Enabled=   0   'False
+         Tab(4).Control(34)=   "txtCp(12)"
+         Tab(4).Control(34).Enabled=   0   'False
+         Tab(4).Control(35)=   "Label(20)"
+         Tab(4).Control(36)=   "txtCp(13)"
          Tab(4).Control(36).Enabled=   0   'False
-         Tab(4).Control(37)=   "bottxtCampo6(1)"
-         Tab(4).Control(37).Enabled=   0   'False
-         Tab(4).Control(38)=   "labFdo6"
-         Tab(4).Control(39)=   "Label(14)"
-         Tab(4).Control(40)=   "Label(13)"
-         Tab(4).Control(41)=   "txtCp(5)"
-         Tab(4).Control(42)=   "bottxtCampo5(2)"
-         Tab(4).Control(42).Enabled=   0   'False
-         Tab(4).Control(43)=   "bottxtCampo5(1)"
-         Tab(4).Control(43).Enabled=   0   'False
-         Tab(4).Control(44)=   "labFdo5"
-         Tab(4).Control(45)=   "Label(12)"
-         Tab(4).Control(46)=   "Botao(1)"
-         Tab(4).Control(47)=   "txtCp(4)"
-         Tab(4).Control(48)=   "bottxtCampo4(2)"
-         Tab(4).Control(48).Enabled=   0   'False
-         Tab(4).Control(49)=   "bottxtCampo4(1)"
-         Tab(4).Control(49).Enabled=   0   'False
-         Tab(4).Control(50)=   "labFdo4"
-         Tab(4).Control(51)=   "Label(11)"
-         Tab(4).Control(52)=   "Label(10)"
+         Tab(4).Control(37)=   "Label(21)"
+         Tab(4).Control(38)=   "Label(22)"
+         Tab(4).Control(39)=   "Formato(0)"
+         Tab(4).Control(40)=   "Label(23)"
+         Tab(4).Control(41)=   "Formato(1)"
+         Tab(4).Control(42)=   "Label(24)"
+         Tab(4).Control(43)=   "Formato(2)"
+         Tab(4).Control(44)=   "Label(25)"
+         Tab(4).Control(45)=   "Grid(3)"
+         Tab(4).Control(46)=   "Label(32)"
+         Tab(4).Control(47)=   "Label(33)"
+         Tab(4).Control(48)=   "Label(34)"
+         Tab(4).Control(49)=   "labFdo25"
+         Tab(4).Control(50)=   "bottxtCampo25(1)"
+         Tab(4).Control(50).Enabled=   0   'False
+         Tab(4).Control(51)=   "bottxtCampo25(2)"
+         Tab(4).Control(51).Enabled=   0   'False
+         Tab(4).Control(52)=   "txtCp(25)"
+         Tab(4).Control(52).Enabled=   0   'False
          Tab(4).ControlCount=   53
          Begin IRRIG.GBotao Botao 
             Height          =   330
-            Index           =   8
+            Index           =   1
+            Left            =   -67155
+            TabIndex        =   16
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   2
+            Left            =   -64710
+            TabIndex        =   29
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   3
+            Left            =   -61635
+            TabIndex        =   31
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   4
+            Left            =   -64920
+            TabIndex        =   34
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   5
+            Left            =   -61665
+            TabIndex        =   36
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   6
             Left            =   -64770
-            TabIndex        =   44
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   735
             Width           =   1455
@@ -477,9 +595,9 @@ Begin VB.Form frmMvtoConN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   330
-            Index           =   6
+            Index           =   8
             Left            =   -64770
-            TabIndex        =   39
+            TabIndex        =   44
             TabStop         =   0   'False
             Top             =   735
             Width           =   1455
@@ -497,124 +615,6 @@ Begin VB.Form frmMvtoConN
             EndProperty
             Caption         =   "Incluir"
             CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   5
-            Left            =   -61665
-            TabIndex        =   36
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1650
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   4
-            Left            =   -64920
-            TabIndex        =   34
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   3
-            Left            =   -61635
-            TabIndex        =   31
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   1635
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   2
-            Left            =   -64710
-            TabIndex        =   29
-            TabStop         =   0   'False
-            Top             =   735
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   1
-            Left            =   -67155
-            TabIndex        =   16
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -645,25 +645,16 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   11
             Top             =   1260
             Width           =   14955
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   360
-            SaveGridStripes =   0   'False
-            Caption         =   "Produtos"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1
+            stripesbackcolor=   14737632
+            rowheight       =   360
+            caption         =   "Produtos"
+            font            =   "MVTOCONN.frx":0000
          End
          Begin IRRIG.GListV Grid 
             Height          =   3870
@@ -672,25 +663,16 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   12
             Top             =   915
             Width           =   14895
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   360
-            SaveGridStripes =   0   'False
-            Caption         =   "Conjuntos"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1
+            stripesbackcolor=   14737632
+            rowheight       =   360
+            caption         =   "Conjuntos"
+            font            =   "MVTOCONN.frx":0024
          End
          Begin IRRIG.GListV Grid 
             Height          =   4305
@@ -699,25 +681,16 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   13
             Top             =   420
             Width           =   15015
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditBackColor   =   16777152
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            Stripes         =   -1  'True
-            StripesBackColor=   14737632
-            RowHeight       =   360
-            SaveGridStripes =   0   'False
-            Caption         =   "Despesas"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Arial"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            editbackcolor   =   16777152
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripes         =   -1
+            stripesbackcolor=   14737632
+            rowheight       =   360
+            caption         =   "Despesas"
+            font            =   "MVTOCONN.frx":0048
          End
          Begin VB.CommandButton bottxtCampo4 
             Height          =   300
@@ -1036,24 +1009,15 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   26
             Top             =   1335
             Width           =   6690
-            _ExtentX        =   0
-            _ExtentY        =   0
-            EditTextColor   =   -2147483640
-            CellTextColor   =   -2147483640
-            StripesBackColor=   14737632
-            RowHeight       =   390
-            ShowGridCaption =   0   'False
-            SaveGridStripes =   0   'False
-            Caption         =   ""
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
+            _extentx        =   0
+            _extenty        =   0
+            edittextcolor   =   -2147483640
+            celltextcolor   =   -2147483640
+            stripesbackcolor=   14737632
+            rowheight       =   390
+            showgridcaption =   0
+            caption         =   ""
+            font            =   "MVTOCONN.frx":006C
          End
          Begin VB.CommandButton bottxtCampo14 
             Height          =   300
@@ -2562,31 +2526,22 @@ Begin VB.Form frmMvtoConN
       TabIndex        =   137
       Top             =   330
       Width           =   1575
-      _ExtentX        =   2778
-      _ExtentY        =   1402
-      FullRowSelect   =   0   'False
-      StripesBackColor=   14737632
-      RowHeight       =   285
-      AllowEdit       =   -1  'True
-      AllowInsert     =   -1  'True
-      AllowDelete     =   -1  'True
-      ManualUpdate    =   -1  'True
-      ManualDelete    =   -1  'True
-      NavigationAddMode=   1
-      ShowFilterBar   =   -1  'True
-      ShowGridCaption =   0   'False
-      SaveGridStripes =   0   'False
-      Caption         =   ""
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      CacheSize       =   100
+      _extentx        =   2778
+      _extenty        =   1402
+      fullrowselect   =   0
+      stripesbackcolor=   14737632
+      rowheight       =   285
+      allowedit       =   -1
+      allowinsert     =   -1
+      allowdelete     =   -1
+      manualupdate    =   -1
+      manualdelete    =   -1
+      navigationaddmode=   1
+      showfilterbar   =   -1
+      showgridcaption =   0
+      caption         =   ""
+      font            =   "MVTOCONN.frx":00A0
+      cachesize       =   100
    End
    Begin VB.Timer timUnLoad 
       Enabled         =   0   'False
@@ -5938,12 +5893,12 @@ Public Sub ContaEstoque(Produto As Long)
       Set Saidas = vgDb.OpenRecordSet("SELECT SUM(Quantidade) Qtd, [Seqüência da Matéria Prima] From [Receita Primaria] Left Join Orçamento On [Receita Primaria].[Seqüência do Orçamento] = Orçamento.[Seqüência do Orçamento] Where [Seqüência da Matéria Prima] = " & Produtos![Seqüência do Produto] & Filtro1() & " Group by [Seqüência da Matéria Prima]") 'Separado p/ Montar
       
       If Saidas2.RecordCount > 0 Then
-         Estoque = Estoque - Saidas2!qtd
-         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
+         Estoque = Estoque - Saidas2!Qtd
+         vgDb.Execute "Update Produtos Set [Qtde Inicial] = " & Substitui(Saidas2!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Saidas.RecordCount > 0 Then
-         Estoque = Estoque - Saidas!qtd
-         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
+         Estoque = Estoque - Saidas!Qtd
+         vgDb.Execute "Update Produtos Set [Separado Montar] = " & Substitui(Saidas!Qtd, ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Produtos![Seqüência do Produto]
       End If
       If Produtos![Material Adquirido de Terceiro] Then
          Comprados = QtdeRecebida(Produtos![Seqüência do Produto])
@@ -7784,9 +7739,13 @@ Private Sub Form_Unload(Cancel As Integer)
    Set frmMvtoConN = Nothing                      'libera o segmento de código do form
 End Sub
 
-'trata a exclusão dentro dos grid filhos
+'trata a excluso dentro dos grid filhos
 Private Sub ExcluiGrid(vgNumGrid As Integer)
-   Grid(vgNumGrid).DeleteRecords True, False
+   'Evita erro "Subscript out of range" quando a grade esperada
+   'nao est carregada. So executa a exclusao caso o indice seja valido.
+   If vgNumGrid >= 0 And vgNumGrid < Grid.Count Then
+      Grid(vgNumGrid).DeleteRecords True, False
+   End If
 End Sub
 
 Private Sub vgTb_BeforeBeginTrans()

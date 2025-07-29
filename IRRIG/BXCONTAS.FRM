@@ -24,28 +24,6 @@ Begin VB.Form frmBxContas
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   0
-         Left            =   4440
-         TabIndex        =   18
-         TabStop         =   0   'False
-         Top             =   4245
-         Width           =   260
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
          Height          =   480
          Index           =   1
          Left            =   780
@@ -65,6 +43,28 @@ Begin VB.Form frmBxContas
             Strikethrough   =   0   'False
          EndProperty
          Caption         =   "Lan Contabil"
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   0
+         Left            =   4440
+         TabIndex        =   18
+         TabStop         =   0   'False
+         Top             =   4245
+         Width           =   260
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          CaptionOffset   =   50
       End
       Begin IRRIG.GCpMM mmCampo 
@@ -3673,12 +3673,12 @@ Private Sub ExecutaPreValidacao()
 
    Ok = (Conta = "P" And vgSituacao = ACAO_INCLUINDO)
    ' Campos Débito e Crédito bloqueados para edição
-   txtCampo(26).Locked = True
-   txtCampo(26).Enabled = False
+   txtCampo(26).Locked = False
+   txtCampo(26).Enabled = True
 
    Ok = (Conta = "R" And vgSituacao = ACAO_INCLUINDO)
-   txtCampo(27).Locked = True
-   txtCampo(27).Enabled = False
+   txtCampo(27).Locked = False
+   txtCampo(27).Enabled = True
 
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(28).Locked = Not (vgAlterar And txtCampo(28).Editable)
