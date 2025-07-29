@@ -1,317 +1,257 @@
 VERSION 5.00
-Begin VB.Form frmF_CanNF
-   ForeColor                =   &H80000008
-   BorderStyle              =   3
-   Height                   =   3855
-   Left                     =   0
-   LinkTopic                =   "F_CanNF"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   3420
-   ScaleWidth               =   6780
-   Top                      =   1000
-   Width                    =   6870
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   0
-      BevelInner               =   0
-      BorderWidth              =   1
-      BevelWidth               =   1
-      BorderStyle              =   3
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   3255
-      Left                     =   15
-      Width                    =   6600
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   11635
-      _extenty                 =   5738
-      Index                    =   0 
-      Begin VB.PictureBox picBox
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+Begin VB.Form frmF_CanNF 
+   BorderStyle     =   3  'Fixed Dialog
+   ClientHeight    =   3420
+   ClientLeft      =   45
+   ClientTop       =   1395
+   ClientWidth     =   6780
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "F_CanNF"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   3420
+   ScaleWidth      =   6780
+   Begin IRRIG.GPainel Painel 
+      Height          =   3255
+      Index           =   0
+      Left            =   15
+      TabIndex        =   5
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   6600
+      _ExtentX        =   11642
+      _ExtentY        =   5741
+      BevelOuter      =   0
+      Stretch         =   -1  'True
+      Begin IRRIG.GBotao botCancela 
+         Height          =   360
+         Left            =   4950
+         TabIndex        =   4
+         Top             =   1605
+         Width           =   1500
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Height                   =   1395
-         Left                     =   75
-         Width                    =   1455
-         Top                      =   75
-         Index                    =   0 
+         Caption         =   "Cancela"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   465
-         Left                     =   1695
-         Width                    =   3975
-         Top                      =   540
-         Alignment                =   2
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   20.25
-            Underline                =   -1
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao botOk 
+         Height          =   360
+         Left            =   3450
+         TabIndex        =   3
+         Top             =   1605
+         Width           =   1500
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H0
-         Caption                  =   "Cancela Nota Fiscal"
-         Index                    =   0 
+         Caption         =   "Prossegue"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
       End
-      Begin VB.Label labFdo0
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   1230
-         Top                      =   1635
-         Width                    =   1905
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo0
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   2865
-         Top                      =   1650
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo0
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   2610
-         Top                      =   1650
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   0
+         Left            =   3135
+         TabIndex        =   1
+         TabStop         =   0   'False
+         Top             =   1635
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   0
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   1245
-         Width                    =   1350
-         Top                      =   1650
-         Index                    =   0 
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   135
-         Width                    =   1020
-         Top                      =   1665
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Seqüência:"
-         Index                    =   1 
+      Begin VB.PictureBox picBox 
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   1395
+         Index           =   0
+         Left            =   75
+         ScaleHeight     =   1395
+         ScaleWidth      =   1455
+         TabIndex        =   6
+         Top             =   75
+         Width           =   1455
       End
-      Begin IRRIG.GBotao Botao
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   1
-         TabStop                  =   0
-         ButtonType               =   0
-         Height                   =   300
-         Left                     =   3135
-         Width                    =   240
-         Top                      =   1635
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   ""
-         Index                    =   0 
+      Begin VB.CommandButton bottxtCampo0 
+         Height          =   270
+         Index           =   1
+         Left            =   2865
+         Style           =   1  'Graphical
+         TabIndex        =   9
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   255
       End
-      Begin IRRIG.GBotao botOk
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   3
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   360
-         Left                     =   3450
-         Width                    =   1500
-         Top                      =   1605
-         CaptionAlign             =   4
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Prossegue"
+      Begin VB.CommandButton bottxtCampo0 
+         Height          =   270
+         Index           =   2
+         Left            =   2610
+         Style           =   1  'Graphical
+         TabIndex        =   10
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   255
       End
-      Begin IRRIG.GBotao botCancela
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   4
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   360
-         Left                     =   4950
-         Width                    =   1500
-         Top                      =   1605
-         CaptionAlign             =   4
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Cancela"
+         Height          =   270
+         Index           =   0
+         Left            =   1245
+         TabIndex        =   0
+         Top             =   1650
+         Width           =   1350
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   75
-         Width                    =   1080
-         Top                      =   2100
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Justificativa:"
-         Index                    =   2 
+         Height          =   990
+         Index           =   1
+         Left            =   1230
+         MultiLine       =   -1  'True
+         ScrollBars      =   2  'Vertical
+         TabIndex        =   2
+         Top             =   2100
+         Width           =   5205
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Alignment       =   2  'Center
+         AutoSize        =   -1  'True
+         Caption         =   "Cancela Nota Fiscal"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         TabIndex                 =   2
-         TabStop                  =   -1
-         Height                   =   990
-         Left                     =   1230
-         Width                    =   5205
-         Top                      =   2100
-         Index                    =   1 
-         MultiLine                =   -1
-         ScrollBars               =   2
-         MaxLength                =   0
+         ForeColor       =   &H00000000&
+         Height          =   465
+         Index           =   0
+         Left            =   1695
+         TabIndex        =   7
+         Top             =   540
+         Width           =   3975
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   6510
-         Width                    =   45
-         Top                      =   3090
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label labFdo0 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   1230
+         TabIndex        =   8
+         Top             =   1635
+         Width           =   1905
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Seqüência:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "-"
-         Index                    =   3 
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   1
+         Left            =   135
+         TabIndex        =   11
+         Top             =   1665
+         Width           =   1020
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Justificativa:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   2
+         Left            =   75
+         TabIndex        =   12
+         Top             =   2100
+         Width           =   1080
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "-"
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   3
+         Left            =   6510
+         TabIndex        =   13
+         Top             =   3090
+         Width           =   45
       End
    End
-         Begin VB.Timer timUnLoad
-                  Enabled         =   0
-                  Interval        =   5
-                  left            =   30
-                  top             =   950
-         End
+   Begin VB.Timer timUnLoad 
+      Enabled         =   0   'False
+      Interval        =   5
+      Left            =   30
+      Top             =   950
+   End
 End
-Attribute VB_name = "frmF_CanNF"
+Attribute VB_Name = "frmF_CanNF"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -328,20 +268,20 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgPriVez As Integer                        'flag de carregamento do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo  
-Public vgQueryAtual As String                     'expressão SQL definada para o módulo 
+Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo
+Public vgQueryAtual As String                     'expressão SQL definada para o módulo
 
-Public vgFP As New frmPreview                     'formuário de preview do relatório 
+Public vgFP As New frmPreview                     'formuário de preview do relatório
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
-Public vgFG As frmGauge                           'formulário do gauge 
-Public vgQReg As Long                             'quantidade de já feira para o gauge  
+Public vgFG As frmGauge                           'formulário do gauge
+Public vgQReg As Long                             'quantidade de já feira para o gauge
 
-Dim txtCampo(1) As New FormataCampos              'classe dos compos tipo texto do módulo  
+Dim txtCampo(1) As New FormataCampos              'classe dos compos tipo texto do módulo
 Dim vgPodeFazerUnLoad As Boolean                  'flag se o módulo pode ou nao ser removido da memória
 Dim Nota As Double, Justificativa As String, Ajuste As String
 Public txtNota As Object, lblAjuste As Object
@@ -349,10 +289,10 @@ Public txtNota As Object, lblAjuste As Object
 Private Sub Cancelamento()
    Dim Tb As New GRecordSet, Cancelou As Boolean
    Dim BxEstoque As New GRecordSet
-   Dim Mvto As New GRecordSet, ProdutosMvto As New GRecordSet  
-   Dim ConjuntosMvto As New GRecordSet 
+   Dim Mvto As New GRecordSet, ProdutosMvto As New GRecordSet
+   Dim ConjuntosMvto As New GRecordSet
    Dim OrcAux As Long
-   Dim DeletaAux As New GRecordSet 
+   Dim DeletaAux As New GRecordSet
       
    On Error GoTo DeuErro
       
@@ -398,10 +338,10 @@ Private Sub Cancelamento()
       vgDb.Execute "Update [Nota Fiscal] Set [Nota Cancelada] = 1, [Número da NFe] = 0, [Número da NFSe] = 0 Where [Seqüência da Nota Fiscal] = " & Nota
    End If
    If Tb![Seqüência Do Pedido] > 0 Then vgDb.Execute "Update Pedido Set [Pedido Cancelado] = 1 Where [Seqüência do Pedido] = " & Tb![Seqüência Do Pedido] 'Pedido
-   If Tb![Seqüência Do Orçamento] > 0 Then vgDb.Execute "Update Orçamento Set Cancelado = 1 Where [Seqüência do Orçamento] = " & Tb![Seqüência Do Orçamento] 'Orçamento
+   If Tb![Seqüência do Orçamento] > 0 Then vgDb.Execute "Update Orçamento Set Cancelado = 1 Where [Seqüência do Orçamento] = " & Tb![Seqüência do Orçamento] 'Orçamento
    If Tb![Seqüência da Ordem de Serviço] > 0 Then vgDb.Execute "Update [Ordem de Serviço] Set Cancelado = 1 Where [Seqüência da Ordem de Serviço] = " & Tb![Seqüência da Ordem de Serviço] 'Ordem de Serviço
-   If Tb![Seqüência Do Movimento] > 0 Then vgDb.Execute "Update [Movimento do Estoque] Set [Movimento Cancelado] = 1 WHERE [Seqüência do Movimento] = " & Tb![Seqüência Do Movimento] 'Movimento do Estoque
-   If Tb!Conta > 0 AND Not Vazio(Tb!Conta) Then
+   If Tb![Seqüência do Movimento] > 0 Then vgDb.Execute "Update [Movimento do Estoque] Set [Movimento Cancelado] = 1 WHERE [Seqüência do Movimento] = " & Tb![Seqüência do Movimento] 'Movimento do Estoque
+   If Tb!Conta > 0 And Not Vazio(Tb!Conta) Then
       Do While Not Tb.EOF 'Excluindo o Contas se houver
          vgDb.Execute "DELETE FROM [Baixa Contas] WHERE [Seqüência da Manutenção] = " & Tb!Conta 'Baixa
          vgDb.Execute "DELETE FROM [Movimentação da Conta Corrente] WHERE [Seqüência do Lançamento] = " & Tb!Conta 'Conta Corrente
@@ -409,77 +349,81 @@ Private Sub Cancelamento()
          Tb.MoveNext
       Loop
       Tb.MoveFirst 'Vamos Voltar no Começo
-   End If   
+   End If
    If Tb![Seqüência Do Pedido] > 0 Then vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Seqüência do Pedido] = " & Tb![Seqüência Do Pedido] 'Deleta a Conta gerado pelo pedido
-   If Tb![Seqüência Do Movimento] > 0 Then vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Seqüência do Estoque] = " & Tb![Seqüência Do Movimento] 'Deleta a Conta gerado pelo estoque
+   If Tb![Seqüência do Movimento] > 0 Then vgDb.Execute "DELETE FROM [Manutenção Contas] WHERE [Seqüência do Estoque] = " & Tb![Seqüência do Movimento] 'Deleta a Conta gerado pelo estoque
    
-   If Tb![Seqüência Do Pedido] = 0 And Tb![Seqüência Do Movimento] = 0 Then GoTo NotaAvulsa
+   If Tb![Seqüência Do Pedido] = 0 And Tb![Seqüência do Movimento] = 0 Then GoTo NotaAvulsa
     
    'Cancelar Mvto e Baixa Contabil
    'Saidas
-    If Tb![Seqüência Do Movimento] = 0 Then 'veio do Orc
-       Set Mvto = vgDb.OpenRecordSet("SELECT * FROM [Movimento Contábil Novo] WHERE [Tipo do Movimento] = 1 And [Seqüência Do Orçamento] = " & Tb![Seqüência Do Orçamento] & " And Documento = '" & Tb![Número da NFe] & "'")
-           If Mvto.RecordCount > 0 Then 
-              Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])
+    If Tb![Seqüência do Movimento] = 0 Then 'veio do Orc
+       Set Mvto = vgDb.OpenRecordSet("SELECT * FROM [Movimento Contábil Novo] WHERE [Tipo do Movimento] = 1 And [Seqüência Do Orçamento] = " & Tb![Seqüência do Orçamento] & " And Documento = '" & Tb![Número da NFe] & "'")
+           If Mvto.RecordCount > 0 Then
+              Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                   If DeletaAux.RecordCount > 0 Then
-                     vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
+                     vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
                      Set DeletaAux = Nothing
-                  End If 
-              Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])  
+                  End If
+              Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                   If DeletaAux.RecordCount > 0 Then
-                     vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                  End If     
+                     vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                  End If
               Set DeletaAux = Nothing
-            vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-            vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-           End If    
-      End If 
+            vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+            vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+           End If
+      End If
      'Mvto
       If Tb![Nota de Venda] > 0 Then
          OrcAux = PegaValor("Pedido", "Seqüência do Orçamento", "[Seqüência da Nota Fiscal] = " & Tb![Nota de Venda])
            If OrcAux > 0 Then
               Set Mvto = vgDb.OpenRecordSet("SELECT * FROM [Movimento Contábil Novo] WHERE [Tipo do Movimento] = 1 And [Seqüência Do Orçamento] = " & OrcAux & " And Documento = '" & Tb![Número da NFe] & "'")
-                  If Mvto.RecordCount > 0 Then 
-                      Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])
+                  If Mvto.RecordCount > 0 Then
+                      Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                       If DeletaAux.RecordCount > 0 Then
-                        vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
+                        vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
                         Set DeletaAux = Nothing
-                      End If 
-              Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])  
+                      End If
+              Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                       If DeletaAux.RecordCount > 0 Then
-                         vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                      End If     
+                         vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                      End If
               Set DeletaAux = Nothing
-                      vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                      vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                  End If  
-           End If    
-      End If 
+                      vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                      vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                  End If
+           End If
+      End If
       
-      NotaAvulsa:
+NotaAvulsa:
       'Nota Avulsa
-      If Tb![Seqüência Do Pedido] = 0 And Tb![Seqüência Do Movimento] = 0 Then
+      If Tb![Seqüência Do Pedido] = 0 And Tb![Seqüência do Movimento] = 0 Then
          Set Mvto = vgDb.OpenRecordSet("SELECT * FROM [Movimento Contábil Novo] WHERE [Tipo do Movimento] = 1 And Documento = '" & Tb![Número da NFe] & "'")
              If Mvto.RecordCount > 0 Then
-                Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])
+                Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                     If DeletaAux.RecordCount > 0 Then
-                        vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
+                        vgDb.Execute "DELETE FROM [Produtos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
                         Set DeletaAux = Nothing
-                    End If 
-                Set DeletaAux = VgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento])  
+                    End If
+                Set DeletaAux = vgDb.OpenRecordSet("SELECT * FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento])
                     If DeletaAux.RecordCount > 0 Then
-                       vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                    End If     
+                       vgDb.Execute "DELETE FROM [Conjuntos Mvto Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                    End If
               Set DeletaAux = Nothing
-                vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-                vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência Do Movimento]
-             End If 
-     End If 
+                vgDb.Execute "DELETE FROM [Baixa do Estoque Contábil] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+                vgDb.Execute "DELETE FROM [Movimento Contábil Novo] WHERE [Seqüência Do Movimento] = " & Mvto![Seqüência do Movimento]
+             End If
+     End If
       
    'Atualizando o Estoque
    AtualizaEstoque 1, 0 'Produtos e Peças
    AtualizaEstoque 2, 0 'Conjuntos
    AtualizaEstoque 3, 0 'Despesas
+   'Atualizando o Estoque Contabil
+    MegaEstoqueContabil 0, 0 'Produtos
+    MegaEstoqueContabil 1, 0 'Conjuntos
+    MegaEstoqueContabil 2, 0 'Despesas
    
    'Cancelamento Nota Fiscal
    vgDb.Execute "Insert Into [Cancelamento NFe] Values(" & Nota & ", '" & Justificativa & "', " & 0 & ", " & D(Date) & ")"
@@ -504,13 +448,13 @@ End Sub
 
 'Cancelamento da NFSe
 Private Sub CancelaNFSe(Nota As Long, ByRef Cancelou As Boolean)
-   Dim Resultado As String, Situacao As String, objNFSe As Object, Arq As Long
-   Dim NotaFiscal As New GRecordSet, CStat As Byte, Recibo As String
+   Dim resultado As String, Situacao As String, objNFSe As Object, Arq As Long
+   Dim NotaFiscal As New GRecordSet, cStat As Byte, Recibo As String
    
    On Error GoTo DeuErro
    
    Screen.MousePointer = vbHourglass    ' ampulheta
-   Set objNFSe = CreateObject("NFSe.ISSOnline")   
+   Set objNFSe = CreateObject("NFSe.ISSOnline")
    Set NotaFiscal = vgDb.OpenRecordSet("SELECT * FROM [Nota Fiscal] WHERE [Seqüência da Nota Fiscal] = " & Nota)
    lblProgresso.Caption = "Cancelando NFSe..."
    Cancelou = False
@@ -520,8 +464,8 @@ Private Sub CancelaNFSe(Nota As Long, ByRef Cancelou As Boolean)
       GoTo SaiDaSub
    End If
    
-   'Antes   
-   'Justificativa = InputBox("Informe a Justificativa do Cancelamento", "Cancelamento de NFSe")   
+   'Antes
+   'Justificativa = InputBox("Informe a Justificativa do Cancelamento", "Cancelamento de NFSe")
    'Hoje Lançamos a Justificativa na tabela de Cancelamento
 
    If Len(Justificativa) < 15 Then
@@ -531,14 +475,14 @@ Private Sub CancelaNFSe(Nota As Long, ByRef Cancelou As Boolean)
    
    'Vamos Consultar se nota fiscal existe no ws antes de cancelar
    If Parametros_da_NFe!ambiente = 0 Then 'Produção
-      Resultado = objNFSe.ConsultaNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, NotaFiscal![Número da NFSe], Situacao, CStat, Recibo)
+      resultado = objNFSe.ConsultaNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, NotaFiscal![Número da NFSe], Situacao, cStat, Recibo)
    Else 'Homologação
-      Resultado = objNFSe.ConsultaNFSe(0, "02781892000130", "irrigplis", 32873, 1, NotaFiscal![Número da NFSe], Situacao, CStat, Recibo)
+      resultado = objNFSe.ConsultaNFSe(0, "02781892000130", "irrigplis", 32873, 1, NotaFiscal![Número da NFSe], Situacao, cStat, Recibo)
    End If
    
    'CStat = 2: NFSe Autorizado
    'CStat = 1: NFSe Não Enviada
-   If CStat <> 2 Then
+   If cStat <> 2 Then
       MsgBox "Erro ao Cancelar:" & vbCrLf & "Nota Fiscal Inexistente na Base de Dados.", vbCritical + vbOKOnly, vaTitulo
         
       'Historico
@@ -558,9 +502,9 @@ Private Sub CancelaNFSe(Nota As Long, ByRef Cancelou As Boolean)
    
    'Cancelando...
    If Parametros_da_NFe!ambiente = 0 Then 'Produção
-      Resultado = objNFSe.CancelamentoNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, NotaFiscal![Número da NFSe], Situacao)
+      resultado = objNFSe.CancelamentoNFSe(1, "02781892000130", "irrigpenapolis", 32873, 1, NotaFiscal![Número da NFSe], Situacao)
    Else 'Homologação
-      Resultado = objNFSe.CancelamentoNFSe(0, "02781892000130", "irrigplis", 32873, 1, NotaFiscal![Número da NFSe], Situacao)
+      resultado = objNFSe.CancelamentoNFSe(0, "02781892000130", "irrigplis", 32873, 1, NotaFiscal![Número da NFSe], Situacao)
    End If
    
    With NotaFiscal
@@ -594,11 +538,11 @@ Private Sub CancelaNFSe(Nota As Long, ByRef Cancelou As Boolean)
       Arq = FreeFile
       If Parametros_da_NFe!ambiente = 0 Then 'Produção
          Open Parametros_da_NFe![Diretório 1 NFSe Produção] & Format(NotaFiscal![Número da NFSe], "000000") & "_CANCELADO.xml" For Append As #Arq
-            Print #Arq, Resultado
+            Print #Arq, resultado
          Close #Arq
       Else 'Homologação
          Open Parametros_da_NFe![Diretório 1 NFSe Homologação] & Format(NotaFiscal![Número da NFSe], "000000") & "_CANCELADO.xml" For Append As #Arq
-            Print #Arq, Resultado
+            Print #Arq, resultado
          Close #Arq
       End If
       GoTo SaiDaSub
@@ -638,25 +582,25 @@ End Sub
 '   Dim licenca As String, ambiente As Integer, Justificativa As String, procCancNFe As String, nProtocoloCanc As String
 '   Dim dProtocoloCanc As String, versao As String, CStat As Long, objNFeUtil As Object, Arq As Long
 '   Dim proxy As String, usuario As String, senha As String, NotaFiscal As New GRecordSet
-'   
+'
 '   On Error GoTo DeuErro
-'   
+'
 '   Screen.MousePointer = vbHourglass    ' ampulheta
-'   Set objNFeUtil = CreateObject("NFe_util_2G.util")   
+'   Set objNFeUtil = CreateObject("NFe_util_2G.util")
 '   Set NotaFiscal = vgDb.OpenRecordSet("SELECT * FROM [Nota Fiscal] WHERE [Seqüência da Nota Fiscal] = " & Nota)
 '   lblProgresso.Caption = "Cancelando NFe..."
 '   Cancelou = False
-'   
+'
 '   licenca = "69a62a9dd3e3820fd3860f50a6000bba315dd692180856e2e2a441ad4cc22948798b1c96951a9d01b450bb92744a1755d1cee10e8d588b51396aef5087871a2a"
 '   certificado = Parametros_da_NFe![Certificado Digital]
 '   siglaWS = "SP"
 '   versao = "2.00"
-'   
+'
 '   If ChaveNFe = "" Then
 '      MsgBox "Necessário informar a chave de acesso da NFe para cancelamento da NFe.", vbCritical + vbOKOnly, vaTitulo
 '      GoTo SaiDaSub
 '   End If
-'   
+'
 '   If Protocolo = "" Then
 '      MsgBox "Necessário informar o número do protocolo da autorização de uso da NFe para cancelamento da NFe.", vbCritical + vbOKOnly, vaTitulo
 '      GoTo SaiDaSub
@@ -679,7 +623,7 @@ End Sub
 '
 '   'Cancelando...
 '   procCancNFe = objNFeUtil.CancelaNF2G(siglaWS, ambiente, certificado, versao, msgDados, msgRetWS, CStat, msgResultado, ChaveNFe, Protocolo, Justificativa, nProtocoloCanc, dProtocoloCanc, proxy, usuario, senha, licenca)
-'   
+'
 '   With NotaFiscal
 '      .Edit
 '      If Vazio(!Observação) Then
@@ -693,19 +637,19 @@ End Sub
 '
 '   'Verificando Status
 '   If CStat = 101 Then
-'                  
+'
 '      With NotaFiscal
 '         .Edit
 '         !Observação = !Observação & vbCrLf & "NFe Cancelada com Sucesso!!!"
 '         .Update
 '         .BookMark = .LastModified
 '      End With
-'   
+'
 '      'MsgBox "NFe Cancelada com Sucesso!!!", vbInformation + vbOKOnly, vaTitulo
 '      'Vamos Informar que a nota foi cancelada somente no final
 '      'pois existes varios processos antes de concluir o cancelamento
 '      Cancelou = True
-'      
+'
 '      'Salvando o xml...
 '      Arq = FreeFile
 '      If Parametros_da_NFe!ambiente = 0 Then 'Produção
@@ -720,7 +664,7 @@ End Sub
 '      GoTo SaiDaSub
 '   Else
 '      MsgBox msgResultado, vbCritical + vbOKOnly, "Atenção: Cancelamento da NFe Falhou"
-'      
+'
 '      'Historico
 '      With NotaFiscal
 '         .Edit
@@ -735,12 +679,12 @@ End Sub
 '   If Err <> 0 Then
 '      MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
 '   End If
-'   
+'
 'SaiDaSub:
 '   Set objNFeUtil = Nothing
 '   Screen.MousePointer = vbDefault ' normal
 '   lblProgresso.Caption = ""
-'         
+'
 'End Sub
 
 'Cancelamento da NFe como Evento (A Partir de 01/12/2012)
@@ -886,7 +830,7 @@ End Sub
 'executa processos/validacoes nos campos do formuário
 Public Function Executar(vgOq As String) As String
    Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
-   On Error Goto DeuErro                          'fica na espera de um erro...
+   On Error GoTo DeuErro                          'fica na espera de um erro...
    vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
    vgOk = True                                    'se a validação esta OK
    vgNVez = 0                                     'porque não fez o processo/validacoes
@@ -909,7 +853,7 @@ DeuErro:
             Resume                                'antes de tentar
          End If
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
 End Function
 
 'coloca os campos visíveis segundo a condição
@@ -1026,7 +970,7 @@ Public Sub DefineControles()
    Set bottxtCampo0(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(0).DataType = 1
    txtCampo(0).Mask = ""
-   txtCampo(0).PesqModoAbertura =  2 
+   txtCampo(0).PesqModoAbertura = 2
    txtCampo(0).PesqFieldCapture = "[Nota Fiscal].[Seqüência da Nota Fiscal]"
    txtCampo(0).BoundColumn = "Seqüência da Nota Fiscal"
    txtCampo(0).ListFields = "Seqüência da Nota Fiscal"
@@ -1046,10 +990,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -1060,7 +1004,7 @@ Private Sub botOk_Click()
    vgPriVez = True
    k$ = Executar(VALIDACOES)                      'faz validaçao dos campos
    If Len(k$) > 0 Then                            'EPA!... tem campo errado
-      If Instr(k$, "|") > 0 Then
+      If InStr(k$, "|") > 0 Then
          Err.Source = Parse$(k$, "|")
          Err.Number = Val(Parse$(k$, "|"))        'deu erro
          Err.Description = Parse$(k$, "|")
@@ -1074,7 +1018,7 @@ Private Sub botOk_Click()
       vgPriVez = False
       Exit Sub                                    'e sai para continuar a ediçao ou inclusao
    End If                                         'OK. os campos estao certos
-   Cancelamento  
+   Cancelamento
    vgPriVez = False
 End Sub
 
@@ -1089,7 +1033,7 @@ Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
       timUnLoad.Enabled = True
       Cancel = True
    End If
-   Cancel = Cancel Or(Not vgFG Is Nothing)
+   Cancel = Cancel Or (Not vgFG Is Nothing)
 End Sub
 
 'evento - descarregando o formulário da memória
@@ -1115,7 +1059,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
    End If
 End Sub
 
-'evento - quando o tempo esgotar  
+'evento - quando o tempo esgotar
 Private Sub timUnLoad_Timer()
    timUnLoad.Enabled = False
    vgPodeFazerUnLoad = True
@@ -1128,7 +1072,7 @@ Private Sub Botao_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    Select Case Index
       Case 0
-         seqRegistro = Nota  
+         seqRegistro = Nota
          mdiIRRIG.MNotaFisc
    End Select
 End Sub
@@ -1138,11 +1082,11 @@ End Sub
 Private Sub bottxtCampo0_Click(Index As Integer)
    txtCampo(0).SetFocus
    DoEvents
-   txtCampo(0).botClick Index
+   txtCampo(0).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 

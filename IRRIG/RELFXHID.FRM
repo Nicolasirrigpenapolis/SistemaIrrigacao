@@ -1,673 +1,526 @@
 VERSION 5.00
-Begin VB.Form frmRelfxhid
-   ForeColor                =   &H80000008
-   BorderStyle              =   2
-   Height                   =   4000
-   Left                     =   1575
-   LinkTopic                =   "Relfxhid"
-   LockControls             =   -1
-   KeyPreview               =   -1
-   MDIChild                 =   -1
-   ScaleHeight              =   3565
-   ScaleWidth               =   12270
-   Top                      =   2800
-   Width                    =   12360
-   Begin IRRIG.GPainel Painel
-      BackColor                =   &H8000000F
-      BevelOuter               =   0
-      BevelInner               =   0
-      BorderWidth              =   1
-      BevelWidth               =   1
-      BorderStyle              =   2
-      Stretch                  =   -1
-      Stripes                  =   0
-      SaveGridBars             =   0
-      Height                   =   3390
-      Left                     =   15
-      Width                    =   12090
-      Top                      =   15
-      TabStop                  =  0
-      _extentx                 =   21314
-      _extenty                 =   5976
-      Index                    =   0 
-      Begin IRRIG.GBotao botOk
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   0
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   360
-         Left                     =   2985
-         Width                    =   1485
-         Top                      =   1605
-         CaptionAlign             =   4
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+Begin VB.Form frmRelfxhid 
+   ClientHeight    =   3405
+   ClientLeft      =   1695
+   ClientTop       =   3270
+   ClientWidth     =   12120
+   ForeColor       =   &H80000008&
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Relfxhid"
+   LockControls    =   -1  'True
+   MDIChild        =   -1  'True
+   ScaleHeight     =   3405
+   ScaleWidth      =   12120
+   Begin IRRIG.GPainel Painel 
+      Height          =   3390
+      Index           =   0
+      Left            =   15
+      TabIndex        =   10
+      TabStop         =   0   'False
+      Top             =   15
+      Width           =   12090
+      _ExtentX        =   21325
+      _ExtentY        =   5980
+      BevelOuter      =   0
+      Stretch         =   -1  'True
+      Begin IRRIG.GBotao botCancela 
+         Height          =   360
+         Left            =   4485
+         TabIndex        =   8
+         Top             =   1605
+         Width           =   1485
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Prossegue"
+         Caption         =   "Cancela"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
       End
-      Begin VB.PictureBox picBox
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao botConfImp 
+         Height          =   360
+         Left            =   11205
+         TabIndex        =   7
+         Top             =   2565
+         Width           =   360
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Height                   =   1395
-         Left                     =   75
-         Width                    =   1455
-         Top                      =   75
-         Index                    =   0 
+         CaptionOffset   =   50
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   3630
-         Width                    =   735
-         Top                      =   2640
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin IRRIG.GBotao botOk 
+         Height          =   360
+         Left            =   2985
+         TabIndex        =   0
+         Top             =   1605
+         Width           =   1485
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H800000
-         Caption                  =   "Destino:"
-         Index                    =   0 
+         Caption         =   "Prossegue"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
       End
-      Begin IRRIG.GPainel Painel
-         BackColor                =   &H8000000F
-         BevelOuter               =   0
-         BevelInner               =   0
-         BorderWidth              =   1
-         BevelWidth               =   1
-         BorderStyle              =   0
-         Stretch                  =   -1
-         Stripes                  =   0
-         SaveGridBars             =   0
-         Height                   =   240
-         Left                     =   4440
-         Width                    =   2280
-         Top                      =   2640
-         TabStop                  =  0
-         _extentx                 =   4019
-         _extenty                 =   423
-         Index                    =   1 
-         Begin             VB.Label labopcPainel1
-            BorderStyle              =   1
-            Height                   =   120
-            Left                     =   675
-            Top                      =   180
-            Visible                  =   0
-            Width                    =   240
-            End
-         Begin VB.OptionButton opcPainel1Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+      Begin VB.PictureBox picBox 
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   1395
+         Index           =   0
+         Left            =   75
+         ScaleHeight     =   1395
+         ScaleWidth      =   1455
+         TabIndex        =   11
+         Top             =   75
+         Width           =   1455
+      End
+      Begin IRRIG.GPainel Painel 
+         Height          =   240
+         Index           =   1
+         Left            =   4440
+         TabIndex        =   13
+         TabStop         =   0   'False
+         Top             =   2640
+         Width           =   2280
+         _ExtentX        =   4022
+         _ExtentY        =   423
+         BevelOuter      =   0
+         Stretch         =   -1  'True
+         Begin VB.OptionButton opcPainel1Cp 
+            Caption         =   "Janela"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   1
-            TabStop                  =   0
-            Height                   =   240
-            Left                     =   0
-            Width                    =   915
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Janela"
-            Index                    =   0 
+            ForeColor       =   &H00800000&
+            Height          =   240
+            Index           =   0
+            Left            =   0
+            TabIndex        =   1
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   915
          End
-         Begin VB.OptionButton opcPainel1Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+         Begin VB.OptionButton opcPainel1Cp 
+            Caption         =   "Impressora"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   2
-            TabStop                  =   0
-            Height                   =   240
-            Left                     =   990
-            Width                    =   1320
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Impressora"
-            Index                    =   1 
+            ForeColor       =   &H00800000&
+            Height          =   240
+            Index           =   1
+            Left            =   990
+            TabIndex        =   2
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   1320
+         End
+         Begin VB.Label labopcPainel1 
+            BorderStyle     =   1  'Fixed Single
+            Height          =   120
+            Left            =   675
+            TabIndex        =   14
+            Top             =   180
+            Visible         =   0   'False
+            Width           =   240
          End
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   120
-         Width                    =   810
-         Top                      =   2610
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H800000
-         Caption                  =   "Intervalo:"
-         Index                    =   1 
-      End
-      Begin IRRIG.GPainel Painel
-         BackColor                =   &H8000000F
-         BevelOuter               =   0
-         BevelInner               =   0
-         BorderWidth              =   1
-         BevelWidth               =   1
-         BorderStyle              =   0
-         Stretch                  =   -1
-         Stripes                  =   0
-         SaveGridBars             =   0
-         Height                   =   240
-         Left                     =   1005
-         Width                    =   2010
-         Top                      =   2610
-         TabStop                  =  0
-         _extentx                 =   3543
-         _extenty                 =   423
-         Index                    =   2 
-         Begin             VB.Label labopcPainel2
-            BorderStyle              =   1
-            Height                   =   120
-            Left                     =   665
-            Top                      =   180
-            Visible                  =   0
-            Width                    =   240
-            End
-         Begin VB.OptionButton opcPainel2Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+      Begin IRRIG.GPainel Painel 
+         Height          =   240
+         Index           =   2
+         Left            =   1005
+         TabIndex        =   16
+         TabStop         =   0   'False
+         Top             =   2610
+         Width           =   2010
+         _ExtentX        =   3545
+         _ExtentY        =   423
+         BevelOuter      =   0
+         Stretch         =   -1  'True
+         Begin VB.OptionButton opcPainel2Cp 
+            Caption         =   "Todas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   3
-            TabStop                  =   0
-            Height                   =   240
-            Left                     =   0
-            Width                    =   905
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Todas"
-            Index                    =   0 
+            ForeColor       =   &H00800000&
+            Height          =   240
+            Index           =   0
+            Left            =   0
+            TabIndex        =   3
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   905
          End
-         Begin VB.OptionButton opcPainel2Cp
-            Appearance               =   1
-            BackColor                =   &H8000000F
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
+         Begin VB.OptionButton opcPainel2Cp 
+            Caption         =   "Páginas"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
             EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   2
-            TabIndex                 =   4
-            TabStop                  =   0
-            Height                   =   240
-            Left                     =   975
-            Width                    =   1050
-            Top                      =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-               Name                     =   "Microsoft Sans Serif"
-               CharSet                  =   0
-               Weight                   =   400
-               Size                     =   9.75
-               Underline                =   0
-               Italic                   =   0
-               StrikeThrough            =   0
-            EndProperty
-            ForeColor                =   &H800000
-            Alignment                =   0
-            Caption                  =   "Páginas"
-            Index                    =   1 
+            ForeColor       =   &H00800000&
+            Height          =   240
+            Index           =   1
+            Left            =   975
+            TabIndex        =   4
+            TabStop         =   0   'False
+            Top             =   0
+            Width           =   1050
+         End
+         Begin VB.Label labopcPainel2 
+            BorderStyle     =   1  'Fixed Single
+            Height          =   120
+            Left            =   665
+            TabIndex        =   17
+            Top             =   180
+            Visible         =   0   'False
+            Width           =   240
          End
       End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   1
-         Alignment                =   0
-         TabIndex                 =   5
-         TabStop                  =   0
-         Height                   =   315
-         Left                     =   3090
-         Width                    =   465
-         Top                      =   2610
-         Index                    =   0 
+         Height          =   315
+         Index           =   0
+         Left            =   3090
+         MaxLength       =   254
+         TabIndex        =   5
+         TabStop         =   0   'False
+         Top             =   2610
+         Width           =   465
       End
-      Begin VB.Label labFdo1
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   7830
-         Top                      =   2610
-         Width                    =   570
-         Height                   =   315
+      Begin VB.VScrollBar scrVtxtCampo1 
+         Height          =   285
+         LargeChange     =   10
+         Left            =   8190
+         Max             =   0
+         Min             =   32767
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   2625
+         Width           =   195
       End
-      Begin VB.VScrollBar scrVtxtCampo1
-         Max                      =   0
-         Min                      =   32767
-         LargeChange              =   10
-         SmallChange              =   1
-         Value                    =   0
-         TabStop                  =   0
-         Left                     =   8190
-         Top                      =   2625
-         Width                    =   195
-         Height                   =   285
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.TextBox txtCp 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         MaxLength                =   254
-         BorderStyle              =   0
-         Alignment                =   0
-         TabIndex                 =   6
-         TabStop                  =   0
-         Height                   =   285
-         Left                     =   7845
-         Width                    =   330
-         Top                      =   2625
-         Index                    =   1 
-         MultiLine                =   -1
+         Height          =   285
+         Index           =   1
+         Left            =   7845
+         MaxLength       =   254
+         MultiLine       =   -1  'True
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   2625
+         Width           =   330
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   6795
-         Width                    =   960
-         Top                      =   2640
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.CommandButton bottxtCampo2 
+         Height          =   270
+         Index           =   1
+         Left            =   2640
+         Style           =   1  'Graphical
+         TabIndex        =   25
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   255
+      End
+      Begin VB.CommandButton bottxtCampo2 
+         Height          =   270
+         Index           =   2
+         Left            =   2385
+         Style           =   1  'Graphical
+         TabIndex        =   26
+         TabStop         =   0   'False
+         Top             =   1650
+         Width           =   255
+      End
+      Begin VB.TextBox txtCp 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Nº Copias:"
-         Index                    =   2 
+         Height          =   270
+         Index           =   2
+         Left            =   1320
+         TabIndex        =   9
+         Top             =   1650
+         Width           =   1050
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   8475
-         Width                    =   705
-         Top                      =   2640
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Destino:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Impres.:"
-         Index                    =   3 
+         ForeColor       =   &H00800000&
+         Height          =   240
+         Index           =   0
+         Left            =   3630
+         TabIndex        =   12
+         Top             =   2640
+         Width           =   735
       End
-      Begin VB.Label Label
-         Appearance               =   0
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   1
-         AutoSize                 =   0
-         Height                   =   300
-         Left                     =   9255
-         Width                    =   1920
-         Top                      =   2610
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Intervalo:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &HFF0000
-         Caption                  =   ""
-         Index                    =   4 
+         ForeColor       =   &H00800000&
+         Height          =   240
+         Index           =   1
+         Left            =   120
+         TabIndex        =   15
+         Top             =   2610
+         Width           =   810
       End
-      Begin IRRIG.GBotao botConfImp
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   7
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   360
-         Left                     =   11205
-         Width                    =   360
-         Top                      =   2565
-         CaptionAlign             =   0
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label labFdo1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   315
+         Left            =   7830
+         TabIndex        =   18
+         Top             =   2610
+         Width           =   570
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Nº Copias:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   ""
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   2
+         Left            =   6795
+         TabIndex        =   20
+         Top             =   2640
+         Width           =   960
       End
-      Begin IRRIG.GBotao botCancela
-         ButtonStyle              =   0
-         JoinSeparators           =   0
-         LeftSeparator            =   0
-         TopSeparator             =   0
-         TabIndex                 =   8
-         TabStop                  =   -1
-         ButtonType               =   0
-         Height                   =   360
-         Left                     =   4485
-         Width                    =   1485
-         Top                      =   1605
-         CaptionAlign             =   4
-         CaptionOffset            =   50
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Impres.:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000012
-         Caption                  =   "Cancela"
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   3
+         Left            =   8475
+         TabIndex        =   21
+         Top             =   2640
+         Width           =   705
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   75
-         Width                    =   1305
-         Top                      =   2100
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         Appearance      =   0  'Flat
+         BorderStyle     =   1  'Fixed Single
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Configurações"
-         Index                    =   5 
+         ForeColor       =   &H00FF0000&
+         Height          =   300
+         Index           =   4
+         Left            =   9255
+         TabIndex        =   22
+         Top             =   2610
+         Width           =   1920
       End
-      Begin VB.Line Linha
-         BorderColor              =   -2147483640
-         BorderStyle              =   1
-         BorderWidth              =   1
-         X1                       =   75
-         Y1                       =   2430
-         X2                       =   11550
-         Y2                       =   2430
-         Index                    =   0 
-      End
-      Begin VB.Label labFdo2
-         Appearance               =  0
-         BorderStyle              =  1
-         BackColor                =  &H80000005
-         Left                     =   1305
-         Top                      =   1635
-         Width                    =   1605
-         Height                   =   300
-      End
-      Begin VB.CommandButton bottxtCampo2
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   1
-         Left                     =   2640
-         Top                      =   1650
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.CommandButton bottxtCampo2
-         Style                    =   1
-         TabStop                  =   0
-         Index                    =   2
-         Left                     =   2385
-         Top                      =   1650
-         Width                    =   255
-         Height                   =   270
-      End
-      Begin VB.TextBox txtCp
-         Appearance               =   0
-         BackColor                =   &H80000005
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851}
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Configurações"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H80000008
-         BorderStyle              =   0
-         Alignment                =   1
-         TabIndex                 =   9
-         TabStop                  =   -1
-         Height                   =   270
-         Left                     =   1320
-         Width                    =   1050
-         Top                      =   1650
-         Index                    =   2 
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   5
+         Left            =   75
+         TabIndex        =   23
+         Top             =   2100
+         Width           =   1305
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   240
-         Left                     =   195
-         Width                    =   1035
-         Top                      =   1665
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   9.75
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "Orçamento:"
-         Index                    =   6 
+      Begin VB.Line Linha 
+         Index           =   0
+         X1              =   75
+         X2              =   11550
+         Y1              =   2430
+         Y2              =   2430
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   195
-         Left                     =   11640
-         Width                    =   45
-         Top                      =   2925
-         Alignment                =   0
-         BeginProperty Font
-            Name                     =   "MS Sans Serif"
-            CharSet                  =   0
-            Weight                   =   400
-            Size                     =   8.25
-            Underline                =   0
-            Italic                   =   0
-            StrikeThrough            =   0
-         EndProperty
-         ForeColor                =   &H80000008
-         Caption                  =   "-"
-         Index                    =   7 
+      Begin VB.Label labFdo2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   1305
+         TabIndex        =   24
+         Top             =   1635
+         Width           =   1605
       End
-      Begin VB.Label Label
-         Appearance               =   1
-         BackColor                =   &H8000000F
-         BackStyle                =   1
-         BorderStyle              =   0
-         AutoSize                 =   -1
-         Height                   =   465
-         Left                     =   1515
-         Width                    =   5235
-         Top                      =   495
-         Alignment                =   2
-         BeginProperty Font
-            Name                     =   "Microsoft Sans Serif"
-            CharSet                  =   0
-            Weight                   =   700
-            Size                     =   20.25
-            Underline                =   -1
-            Italic                   =   0
-            StrikeThrough            =   0
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "Orçamento:"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         ForeColor                =   &H0
-         Caption                  =   "Ficha Técnica (Hidroturbo)"
-         Index                    =   8 
+         ForeColor       =   &H80000008&
+         Height          =   240
+         Index           =   6
+         Left            =   195
+         TabIndex        =   27
+         Top             =   1665
+         Width           =   1035
+      End
+      Begin VB.Label Label 
+         AutoSize        =   -1  'True
+         Caption         =   "-"
+         ForeColor       =   &H80000008&
+         Height          =   195
+         Index           =   7
+         Left            =   11640
+         TabIndex        =   28
+         Top             =   2925
+         Width           =   45
+      End
+      Begin VB.Label Label 
+         Alignment       =   2  'Center
+         AutoSize        =   -1  'True
+         Caption         =   "Ficha Técnica (Hidroturbo)"
+         BeginProperty Font 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   20.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   465
+         Index           =   8
+         Left            =   1515
+         TabIndex        =   29
+         Top             =   495
+         Width           =   5235
       End
    End
 End
-Attribute VB_name = "frmRelfxhid"
+Attribute VB_Name = "frmRelfxhid"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '* Sistema...: SISTEMA IRRIGAÇÃO PENÁPOLIS
 '* Empresa...: IRRIGAÇÃO PENÁPOLIS
@@ -684,38 +537,38 @@ DefInt A-Z
 Public vgSituacao As Integer                      'situação de edição que do módulo
 Public vgCaracteristica As Integer                'caracteristica do módulo
 Public vgTipo As Integer                          'tipo do módulo
-Public vgPriVez As Integer                        'flag de carregamento do módulo  
-Public vgFormID As Long                           'identificador único para o módulo 
-Public vgIdentTab As String                       'nome da tabela principal do módulo 
-Public vgEmBrowse As Integer                      'flag se o módulo esta em grade 
+Public vgPriVez As Integer                        'flag de carregamento do módulo
+Public vgFormID As Long                           'identificador único para o módulo
+Public vgIdentTab As String                       'nome da tabela principal do módulo
+Public vgEmBrowse As Integer                      'flag se o módulo esta em grade
 Public vgTemFiltro As Integer                     'flag se tem ou não filtro no módulo
-Public vgFiltraSoUm As String                     'flag para filtrar só um registro 
-Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo  
-Public vgQueryAtual As String                     'expressão SQL definada para o módulo 
-Public vgUltimoTabIndex As Integer                'último campo com foco do módulo 
+Public vgFiltraSoUm As String                     'flag para filtrar só um registro
+Public vgCancelou As Integer                      'flag cancela ou nao o processo do módulo
+Public vgQueryAtual As String                     'expressão SQL definada para o módulo
+Public vgUltimoTabIndex As Integer                'último campo com foco do módulo
 
 Public vgUltimoFiltro As String                   'último filtro definido no módulo
 Public vgUltimaOrdem As String                    'última ordenação feita no módulo
 Public vgUltimoFiltroComTit As String             'titulo do último filtro definido no módulo
-Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo 
+Public vgUltimaOrdemComTit As String              'titulo da última ordenação feita no módulo
 Public vgSQL As String                            'expressão SQL que define o módulo
-Public vgFP As New frmPreview                     'formuário de preview do relatório 
-Public vgVisivel As Boolean                       'se a tela de parâmetros do relatório esta visível 
-Public vgPosLin As Single                         'posição atual de impressão 
+Public vgFP As New frmPreview                     'formuário de preview do relatório
+Public vgVisivel As Boolean                       'se a tela de parâmetros do relatório esta visível
+Public vgPosLin As Single                         'posição atual de impressão
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
-Public vgFG As frmGauge                           'formulário do gauge 
-Public vgQReg As Long                             'quantidade de já feira para o gauge  
+Public vgFG As frmGauge                           'formulário do gauge
+Public vgQReg As Long                             'quantidade de já feira para o gauge
 
-Dim vgBookPg() As Variant                         'marcador do registro do inicio da página 
-Dim vgPodeVoltar() As Boolean                     'se pode ou não retroceder para esta página   
-Dim vgDataInicial As Variant                      'data que iniciou o relatório  
+Dim vgBookPg() As Variant                         'marcador do registro do inicio da página
+Dim vgPodeVoltar() As Boolean                     'se pode ou não retroceder para esta página
+Dim vgDataInicial As Variant                      'data que iniciou o relatório
 Dim vgPrimeiroCab As Integer                      'flag se ja foi impresso o primeiro cabeçlho do relatório
 Dim vgFiltroInicial As String                     'filtro inicial do relatório
-Dim vgOrdemInicial As String                      'ordem incial do relatório 
-Dim txtCampo(2) As New FormataCampos              'classe dos compos tipo texto do módulo  
-Dim vgWidthRel As Single                          'lagura do relatório 
+Dim vgOrdemInicial As String                      'ordem incial do relatório
+Dim txtCampo(2) As New FormataCampos              'classe dos compos tipo texto do módulo
+Dim vgWidthRel As Single                          'lagura do relatório
 Dim vgHeightRel As Single                         'altura do relatório
-Dim vgPagRef() As Integer                         'Ordem da página dentro do intervalo 
+Dim vgPagRef() As Integer                         'Ordem da página dentro do intervalo
 Dim opcPainel1(1) As New FormataCampos
 Dim opcPainel2(1) As New FormataCampos
 Dim vgDestRel As Integer, vgModoInt As Integer, vgIntPag As String
@@ -723,7 +576,7 @@ Dim vgCopias As Integer, OrcamentoTela As Double, Ajuste As String
 Public txtvgDestRel As Object, txtOrcamento As Object, lblAjuste As Object
 Dim Orcamento As New GRecordSet
 
-Private Function Filtro() as String
+Private Function Filtro() As String
   Filtro = " O.[Seqüência do Orçamento] = " & OrcamentoTela
 End Function
 
@@ -731,11 +584,11 @@ Private Function Propriedade() As String
  Dim PropOrc As New GRecordSet
  Dim Prop As New GRecordSet
  
- Set PropOrc = VgDb.OpenRecordSet("SELECT [Seqüência Da Propriedade] Seq, [Nome da Propriedade] From Orçamento Where [Seqüência do Orçamento] = " & OrcamentoTela)
+ Set PropOrc = vgDb.OpenRecordSet("SELECT [Seqüência Da Propriedade] Seq, [Nome da Propriedade] From Orçamento Where [Seqüência do Orçamento] = " & OrcamentoTela)
  
      If PropOrc!Seq > 0 Then
-        Set Prop = VgDb.OpenRecordSet("SELECT [Nome da Propriedade] Nome From Propriedades WHERE [Seqüência Da Propriedade] = " & PropOrc!Seq) 
-        Propriedade = Prop!Nome  
+        Set Prop = vgDb.OpenRecordSet("SELECT [Nome da Propriedade] Nome From Propriedades WHERE [Seqüência Da Propriedade] = " & PropOrc!Seq)
+        Propriedade = Prop!Nome
      Else
         Propriedade = PropOrc![Nome da Propriedade]
      End If
@@ -765,43 +618,43 @@ End Function
 
 Private Function VazaoAux() As Double
   VazaoAux = ((Orcamento![Area irrigada] * Orcamento![Precipitação bruta] * 10) / (Orcamento![Horas irrigada] * Orcamento![Area tot irrigada em]))
-End Function 
+End Function
 
 
 Private Function VelocidadeDesloca() As Double
- VelocidadeDesloca = Orcamento![Faixa irrigada]  / TempoFx1
-End Function 
+ VelocidadeDesloca = Orcamento![Faixa irrigada] / TempoFx1
+End Function
 
 Private Function TempoFx1() As Double
   TempoFx1 = (Orcamento![Espaço entre carreadores] * Orcamento![Faixa irrigada] / 10000) * (Orcamento![Precipitação bruta] * 10 / VazaoAux)
-End Function  
+End Function
 
 Private Function PrecipLiq() As Double
  PrecipLiq = Orcamento![Precipitação bruta] * 85 / 100
 End Function
 
 Private Function VazaoTurno() As Double
-  VazaoTurno = Orcamento![Area irrigada]  * Orcamento![Precipitação bruta] * 10
+  VazaoTurno = Orcamento![Area irrigada] * Orcamento![Precipitação bruta] * 10
 End Function
 
 
 Private Function HF1() As Double
   If Orcamento![Com 1] > 0 Then
-     HF1 = (((VazaoAux/Coef1)^1.85)/((Diam1/25.4)/0.98)^4.87)* 181 * Orcamento![Com 1] 
+     HF1 = (((VazaoAux / Coef1) ^ 1.85) / ((Diam1 / 25.4) / 0.98) ^ 4.87) * 181 * Orcamento![Com 1]
   Else
      HF1 = 0
-  End If    
+  End If
 End Function
 
-Private Function Coef1() As Double 
+Private Function Coef1() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho A])
  Coef1 = Tb!Coeficiente
 
-End Function 
+End Function
 
-Private Function Diam1() As Double 
+Private Function Diam1() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho A])
@@ -810,22 +663,22 @@ Private Function Diam1() As Double
 End Function
 
 Private Function HF2() As Double
-  If Orcamento![Com 2]  > 0 Then
-     HF2 = (((VazaoAux/Coef2)^1.85)/((Diam2/25.4)/0.98)^4.87)* 181 * Orcamento![Com 2] 
+  If Orcamento![Com 2] > 0 Then
+     HF2 = (((VazaoAux / Coef2) ^ 1.85) / ((Diam2 / 25.4) / 0.98) ^ 4.87) * 181 * Orcamento![Com 2]
   Else
      HF2 = 0
-  End If   
+  End If
 End Function
 
-Private Function Coef2() As Double 
+Private Function Coef2() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho B])
  Coef2 = Tb!Coeficiente
 
-End Function 
+End Function
 
-Private Function Diam2() As Double 
+Private Function Diam2() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho B])
@@ -834,15 +687,15 @@ Private Function Diam2() As Double
 End Function
 
 Private Function HF3() As Double
-  If Orcamento![Com 3]  > 0 Then
-     HF3 = (((VazaoAux/Coef3)^1.85)/((Diam3/25.4)/0.98)^4.87)* 181 * Orcamento![Com 3]
+  If Orcamento![Com 3] > 0 Then
+     HF3 = (((VazaoAux / Coef3) ^ 1.85) / ((Diam3 / 25.4) / 0.98) ^ 4.87) * 181 * Orcamento![Com 3]
   Else
      HF3 = 0
-  End If   
+  End If
 End Function
 
 
-Private Function Coef3() As Double 
+Private Function Coef3() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho C])
@@ -851,21 +704,21 @@ Private Function Coef3() As Double
 End Function
 
   
-Private Function Diam3() As Double 
+Private Function Diam3() As Double
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho C])
  Diam3 = Tb![DN mm] - (Tb![E mm] * 2)
 
-End Function 
+End Function
 
 Private Function AlturaManometrica() As Double
- AlturaManometrica = Orcamento![Desnivel maximo na area] + Orcamento![Altura de sucção] + Orcamento![Altura Do aspersor] + HF1 + HF2 + HF3 + 0.9 + Orcamento![Pressão de serviço]
-End Function  
+ AlturaManometrica = Orcamento![Desnivel maximo na area] + Orcamento![Altura de sucção] + Orcamento![Altura do aspersor] + HF1 + HF2 + HF3 + 0.9 + Orcamento![Pressão de serviço]
+End Function
 
 Private Function AreaporFx() As Double
   AreaporFx = (Orcamento![Espaço entre carreadores] * Orcamento![Faixa irrigada]) / 10000
-End Function  
+End Function
 
 
 Private Function FaixasIrrigadas() As Double
@@ -874,7 +727,7 @@ End Function
 
 Private Function areapordia() As Double
  areapordia = FaixasIrrigadas * AreaporFx
-End Function 
+End Function
 
 Private Function Material1() As String
  Dim Tb As New GRecordSet
@@ -882,7 +735,7 @@ Private Function Material1() As String
  Set Tb = vgDb.OpenRecordSet("SELECT [Modelo da Adutora] From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho A])
  Material1 = Tb![Modelo da Adutora]
 
-End Function 
+End Function
 
 Private Function Material2() As String
  Dim Tb As New GRecordSet
@@ -890,7 +743,7 @@ Private Function Material2() As String
  Set Tb = vgDb.OpenRecordSet("SELECT [Modelo da Adutora] From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho B])
  Material2 = Tb![Modelo da Adutora]
 
-End Function 
+End Function
 
 Private Function Material3() As String
  Dim Tb As New GRecordSet
@@ -898,18 +751,18 @@ Private Function Material3() As String
  Set Tb = vgDb.OpenRecordSet("SELECT [Modelo da Adutora] From Adutoras Where [Sequencia da Adutora] = " & Orcamento![Modelo Trecho C])
  Material3 = Tb![Modelo da Adutora]
 
-End Function 
+End Function
 
 Private Function Velo1() As Double
- Velo1 = (VazaoAux / 3600) / (((Diam1/2000)^2) * 3.1416)
+ Velo1 = (VazaoAux / 3600) / (((Diam1 / 2000) ^ 2) * 3.1416)
 End Function
 
 Private Function Velo2() As Double
- Velo2 = (VazaoAux / 3600) / (((Diam2/2000)^2) * 3.1416)
+ Velo2 = (VazaoAux / 3600) / (((Diam2 / 2000) ^ 2) * 3.1416)
 End Function
 
 Private Function Velo3() As Double
- Velo3 = (VazaoAux / 3600) / (((Diam3/2000)^2) * 3.1416)
+ Velo3 = (VazaoAux / 3600) / (((Diam3 / 2000) ^ 2) * 3.1416)
 End Function
 
 Private Function ConsumoEstimado()
@@ -972,7 +825,7 @@ End Sub
 'executa processos/validacoes nos campos do formuário
 Public Function Executar(vgOq As String) As String
    Dim vgMsg As String, vgOk As Integer, vgNVez As Integer
-   On Error Goto DeuErro                          'fica na espera de um erro...
+   On Error GoTo DeuErro                          'fica na espera de um erro...
    vgMsg$ = ""                                    'retorna uma msg dizendo o motivo
    vgOk = True                                    'se a validação esta OK
    vgNVez = 0                                     'porque não fez o processo/validacoes
@@ -1004,7 +857,7 @@ Public Function Executar(vgOq As String) As String
       opcPainel1(0).CtPri.TabStop = False
       opcPainel2(0).Value = True
       opcPainel2(0).CtPri.TabStop = False
-      txtCampo(2).Value = frmOrcament.vgtb![Seqüência do Orçamento]
+      txtCampo(2).Value = frmOrcament.vgTb![Seqüência do Orçamento]
    ElseIf vgOq = INI_APELIDOS Then
       InicializaApelidos COM_REGISTRO
       ExecutaVisivel
@@ -1024,7 +877,7 @@ DeuErro:
             Resume                                'antes de tentar
          End If
    End Select
-   Executar = Err.Source + "|" + Trim$(str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
+   Executar = Err.Source + "|" + Trim$(Str$(Err)) + "|" + Error$ 'não teve jeito o erro não pode ser evitado...
 End Function
 
 'executa a pré-validação dos campos
@@ -1071,7 +924,7 @@ Private Sub txtCp_GotFocus(Index As Integer)
          Case 2
             PoeRelEFiltroCbo 2
             If Len(txtCp(2).Text) = 0 Then
-               txtCampo(2).Value = frmOrcament.vgtb![Seqüência do Orçamento]
+               txtCampo(2).Value = frmOrcament.vgTb![Seqüência do Orçamento]
                txtCp_Change Index
                InicializaApelidos COM_TEXTBOX
                ExecutaVisivel
@@ -1331,7 +1184,7 @@ Public Sub DefineControles()
 
    Set txtCampo(1).CtPri = txtCp(1)
    Set txtCampo(1).CtFdo = labFdo1
-   Set txtCampo(1).CtScr = ScrVtxtCampo1
+   Set txtCampo(1).CtScr = scrVtxtCampo1
    txtCampo(1).LargeChange = 10
    txtCampo(1).SmallChange = 1
    txtCampo(1).DataType = 3
@@ -1351,7 +1204,7 @@ Public Sub DefineControles()
    Set bottxtCampo2(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(3))
    txtCampo(2).DataType = 1
    txtCampo(2).Mask = ""
-   txtCampo(2).PesqModoAbertura =  2 
+   txtCampo(2).PesqModoAbertura = 2
    txtCampo(2).PesqFieldCapture = "Orçamento.[Seqüência do Orçamento]"
    txtCampo(2).BoundColumn = "Seqüência do Orçamento"
    txtCampo(2).ListFields = "Seqüência do Orçamento"
@@ -1362,10 +1215,10 @@ Public Sub DefineControles()
 
  Exit Sub
 
- DeuErro:
+DeuErro:
   CErr.NumErro = Err
   CErr.FunctionName = "DefineControles0"
-  CErr.Origem = CStr(vgFormID) +" - "+ Me.Caption
+  CErr.Origem = CStr(vgFormID) + " - " + Me.Caption
  CErr.Show
 End Sub
 
@@ -1382,7 +1235,7 @@ Public Sub ProssegueExecucao(vgObSaida As Object, Optional ByVal vgNumPg As IMPR
    vgSemBookMark = 0
    If TypeOf vgObSaida Is Printer Then            'estamos em preview ou impressora?
       vgEmPapel = True                            'imprimindo na impressora, confirma
-      GeraLogAcao LoadGasString(296) + " Ficha Técnica" 
+      GeraLogAcao LoadGasString(296) + " Ficha Técnica"
    Else
       vgEmPapel = False
       vgObSaida.Cls
@@ -1405,7 +1258,7 @@ OutraCopia:
 
    'abre os recordsets
    vgPV = (vgNumPg = 0 Or (vgEmPapel And vgFP.vgContaPg > 0)) 'veio do botao de prosseguir?
-   If vgPV And Not (vgEmPapel And vgFP.vgContaPg > 0)Then
+   If vgPV And Not (vgEmPapel And vgFP.vgContaPg > 0) Then
       If TypeOf vgObSaida Is PictureBox Then                  'estamos em preview ou impressora?
          GeraLogAcao LoadGasString(297) + " Ficha Técnica"
       End If
@@ -1415,14 +1268,14 @@ OutraCopia:
          vgFiltroInicial = vgFiltroInicial + "(" + vgFiltraSoUm + ")"
       End If
       x$ = vgQueryAtual
-      If Len(vgUltimoFiltro) > 0 and Len(vgFiltroInicial) > 0 Then
-         x$ = InsereSQL(x$, EXP_WHERE, "(" +  vgFiltroInicial + ") And (" + vgUltimoFiltro + ")")
+      If Len(vgUltimoFiltro) > 0 And Len(vgFiltroInicial) > 0 Then
+         x$ = InsereSQL(x$, EXP_WHERE, "(" + vgFiltroInicial + ") And (" + vgUltimoFiltro + ")")
       ElseIf Len(vgUltimoFiltro + vgFiltroInicial) > 0 Then
-         x$ = InsereSQL(x$, EXP_WHERE,  +  vgFiltroInicial + vgUltimoFiltro)
+         x$ = InsereSQL(x$, EXP_WHERE, vgFiltroInicial + vgUltimoFiltro)
       End If
       vgOrdemInicial = ExtraiSQL(x$, EXP_ORDERBY)
       If Len(vgUltimaOrdem) > 0 Or Len(vgOrdemInicial) > 0 Then
-         x$ = InsereSQL(x$, EXP_ORDERBY, vgOrdemInicial + IIf(Len(vgOrdemInicial) > 0 And Len(vgUltimaOrdem) > 0, ", ","") + vgUltimaOrdem)
+         x$ = InsereSQL(x$, EXP_ORDERBY, vgOrdemInicial + IIf(Len(vgOrdemInicial) > 0 And Len(vgUltimaOrdem) > 0, ", ", "") + vgUltimaOrdem)
       End If
       Set Orcamento = vgDb.OpenRecordSet(x$)
       If Orcamento.RecordCount = 0 Then
@@ -1560,7 +1413,7 @@ Volta:
       On Error Resume Next
       Do While Not Orcamento.EOF Or vgSemBookMark = 1
          vgFP.vgFimDoArq = False
-         If vgPrimeiroCab Or vgPosLin > vgLimiteInf - 51.25  Then
+         If vgPrimeiroCab Or vgPosLin > vgLimiteInf - 51.25 Then
             vgPosLin = vgPosLin - vgDifProxReg
             vgDifProxReg = 0
             vgPagOk = True
@@ -1569,8 +1422,8 @@ Volta:
             GoSub OutraFolha
             On Error Resume Next
          End If
-         Imprime Orcamento![Faixa irrigada], 90.25, vgPosLin, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-         Imprime Orcamento![Com 3], 26.19, vgPosLin +46.49, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
+         Imprime Orcamento![Faixa irrigada], 90.25, vgPosLin, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+         Imprime Orcamento![Com 3], 26.19, vgPosLin + 46.49, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
          vgPosLin = vgPosLin + 51.25
          vgDifProxReg = 0
          vgDifProxReg = 1
@@ -1579,7 +1432,7 @@ Volta:
          If vgEmPapel And vgNumPg = 0 Then
             vgQReg = vgQReg + 1
             If vgModoInt = 1 Then
-               If Not vgFp.vgProcuraPg Then
+               If Not vgFP.vgProcuraPg Then
                   vgFG.pgb1.Value = vgFP.vgPagRef * 100 / UBound(vgPagRef())
                End If
             Else
@@ -1616,7 +1469,7 @@ Volta:
                   vgFP.vgContaPg = vgPagRef(vgFP.vgPagRef - 1 - j) - 1
                Loop
                If vgFP.vgContaPg > 0 Then
-                  Orcamento.Bookmark = vgBookPg(vgFP.vgContaPg + 1)
+                  Orcamento.BookMark = vgBookPg(vgFP.vgContaPg + 1)
                Else
                   vgFP.vgContaPg = 0
                   Orcamento.MoveFirst
@@ -1678,7 +1531,7 @@ CancelouRel:
    GoTo SaiDaSub
 
 VerificaFimPg:
-   If Not vgEmPapel And (Not vgTestaPriCab Or vgPrimeiroCab = False)  Then
+   If Not vgEmPapel And (Not vgTestaPriCab Or vgPrimeiroCab = False) Then
       GoSub SalvaPagina
       If Not vgFP.vgProcuraPg Then                      'se não está procurando por uma página
          If vgFP.vgContaPg <> vgFP.vgNovaPag Then                   'opa... parece que o usuário precionou o STOP
@@ -1713,7 +1566,7 @@ OutraFolha:
          vgFP.txtPag.Text = Trim$(Str$(vgFP.vgContaPg + 1))
          vgFP.txtPag.Refresh
       End If
-   ElseIf Not vgSemControlePg  Then
+   ElseIf Not vgSemControlePg Then
       If Not vgPrimeiroCab And Not vgFP.vgProcuraPg Then vgObSaida.NewPage
    End If
    vgFP.vgContaPg = vgFP.vgContaPg + 1
@@ -1768,7 +1621,7 @@ OutraFolha:
         vgFP.vgContaPg = vgFP.vgContaPg - 1
        Loop
        vgFP.vgProcuraPg = (vgFP.vgContaPg <> vgFP.vgNovaPag)
-       Orcamento.Bookmark = vgBookPg(vgFP.vgContaPg)      'seta o bookmark correto
+       Orcamento.BookMark = vgBookPg(vgFP.vgContaPg)      'seta o bookmark correto
        If Not vgEmPapel Then
         vgFP.picAux.Cls                                    'limpa a área
         vgFP.picAux.Picture = LoadPicture("")              'para imprimir a página
@@ -1793,252 +1646,253 @@ OutraFolha:
     vgNumPag = vgFP.vgNovaPag                             'então pela o número da nova página
    End If
    vgPosLin = 26.71
-   Imprime "Ficha Técnica - Nº.: " & Format(Orcamento![Seqüência do Orçamento] , "000000"), 35.18, 1.32, "F=Courier New|W=700|S=15.75|JC=137.3", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -17.82, 27.24, "LIN=B0/" + Trim(Str( -17.82)) + "/" + Trim$(Str$(27.24)) + "/" + Trim(Str(197)) + "/" + Trim$(Str$(27.24)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime vgFP.picFixa(1),  5.5, 2.38, "FIG=FigFixa1.jpg/23.28/22.22", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Empresa..:", 35.5, 8.2, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Irrigação Penápolis Ind. e Com. Ltda", 60.1, 7.67, "F=Courier New|W=700|S=12", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "CNPJ.....:", 35.5, 11.9, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "02.781.892/0001-30", 60.1, 11.9, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Inscrição Estadual:", 106.13, 11.9, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "521.043.219.118", 153.88, 11.9, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Endereço.:", 35.5, 15.6, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Rd.Sg.Luciano Arnaldo Covolan, Km 0,315", 60.1, 15.6, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Fone:", 138.14, 19.84, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "(18)3654-2248", 151.23, 19.84, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Município:", 35.5, 20.1, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "CEP.:", 98.99, 20.1, "F=Courier New|W=700|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "16309-899", 112.8, 20.1, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Ilmo. Sr.............:", 0, 26.71, "F=Verdana|W=700|S=11.25|L=36", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Penápolis - SP", 59.78, 20.1, "F=Courier New|S=11.25", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 44.04, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(44.04)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(44.04)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Propriedade......:", 0, 32.01, "F=Verdana|W=700|S=11.25|L=38", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Município...........:", 0, 37.3, "F=Verdana|W=700|S=11.25|L=37", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Ficha Técnica", 139.15, 29.89, "F=Verdana|W=700|S=11.25|L=61|JC=60.84", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Irrigação Penapolis", 138.88, 35.18, "F=Verdana|W=700|S=11.25|L=61|JC=60.84", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 49.33, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(49.33)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(49.33)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime Orcamento!Hidroturbo, 0, 44.7, "F=Verdana|S=11.25|L=196", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Dados Técnicos Gerais", 0, 50.52, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Área aproximada a ser irrigada", 0, 57.14, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Horas Irrigada por dia", 0, 65.87, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Área Total Irrigada em", 0, 70.1, "F=Verdana|S=12|C=&H80000008&|L=49", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 0, 143.51, "LIN=B0/" + Trim(Str( 0)) + "/" + Trim$(Str$(143.51)) + "/" + Trim(Str(197)) + "/" + Trim$(Str$(143.51)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Dados do Aspersor Canhão", 0, 79.62, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Marca/Modelo", 0, 90.47, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.11, 55.68, "LIN=B0/" + Trim(Str( -.11)) + "/" + Trim$(Str$(55.68)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(55.68)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Diametro do Bocal", 0, 95.76, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vazão Total", 0, 101.05, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Pressão de Serviço", 0, 106.34, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 101.05, 56.34, "LIN=B0/" + Trim(Str( 101.05)) + "/" + Trim$(Str$(56.34)) + "/" + Trim(Str(101.05)) + "/" + Trim$(Str$(142.85)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "ha", 96.32, 57.14, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mm", 98.32, 61.64, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "h", 94.32, 65.87, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Dias", 99.32, 70.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m³/h", 100.32, 74.33, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mm", 98.32, 95.76, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m³/h", 100.32, 101.05, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 99.32, 106.34, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Precipitação Bruta", 0, 61.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vazão Necessaria", 0, 74.33, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Tipo", 0, 85.71, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Alcance do Jato / Raio", .26, 111.37, "F=Verdana|S=12|C=&H80000008&|L=48", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 95.32, 111.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Espaçamento entre Carreadores", .26, 116.66, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 95.32, 116.66, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Comprimento da Faixa Irrigada", .26, 121.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 95.32, 121.95, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Velocidade de Deslocamento", .26, 127.24, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Precipitação Liquida", .26, 132.53, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vazão Total por Turno de Rega", .26, 137.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m/h", 98.32, 127.24, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mm", 98.32, 132.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m³.", 98.32, 137.83, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Alturas Manométricas", 102.91, 50.52, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Desnível Maximo na área", 101.85, 57.14, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 193.47, 57.4, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Altura de Sucção", 101.85, 61.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 193.47, 61.64, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Altura do Aspersor", 101.85, 65.87, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 193.47, 65.87, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Perda de Carga (Adutora 1)", 101.85, 70.1, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Perda de Carga (Adutora 2)", 101.85, 74.33, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Perda de Carga (Tubo PE)", 101.85, 78.57, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 70.1, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 74.33, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 78.57, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Perdas no Hidroturbo", 101.85, 82.8, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 82.8, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Pressão no Bocal do Aspersor", 101.85, 87.03, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 87.03, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Altura Manométrica Total", 101.85, 92.32, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 197.47, 92.32, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 100.95, 97.75, "LIN=B0/" + Trim(Str( 100.95)) + "/" + Trim$(Str$(97.75)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(97.75)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Funcionamento do Sistema", 101.85, 98.67, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Tempo parado antes de Iniciar", 101.85, 106.08, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "h", 192.47, 106.08, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vel. de Deslocamento(Canhão)", 101.85, 111.37, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m/h", 196.47, 111.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Tempo para Irrigar 01 Faixa", 101.85, 116.66, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "h", 192.47, 116.66, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Área Irrigada por Faixa", 101.85, 121.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "ha", 194.47, 121.95, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Nº de Faixas Irrigada /dia", 101.85, 127.24, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "un", 194.47, 128.04, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Área Irrigada por dia", 101.85, 132.53, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "ha", 194.47, 132.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Área Irrigada por Turno", 101.85, 137.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "ha", 194.47, 137.83, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Composição da Adutora e Tubo de Polietileno", .26, 143.93, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 173.95, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(173.95)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(173.95)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Trecho", 3.43, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "1", 8.73, 157.86, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "2", 8.73, 163.15, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "3", 8.73, 168.44, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 19.7, 148.94, "LIN=B0/" + Trim(Str( 19.7)) + "/" + Trim$(Str$(148.94)) + "/" + Trim(Str(19.7)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Comprimento", 22.48, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 53.57, 148.41, "LIN=B0/" + Trim(Str( 53.57)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(53.57)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 87.43, 148.41, "LIN=B0/" + Trim(Str( 87.43)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(87.43)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Material", 61.64, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 110.71, 148.41, "LIN=B0/" + Trim(Str( 110.71)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(110.71)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Diametro", 89.15, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mm", 101.5, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Coef.", 116.66, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 132.93, 148.41, "LIN=B0/" + Trim(Str( 132.93)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(132.93)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 148.7, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(148.7)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(148.7)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vazão", 138.88, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m³/h", 149, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 157.27, 148.41, "LIN=B0/" + Trim(Str( 157.27)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(157.27)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Hf Total", 158.73, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 178.43, 148.41, "LIN=B0/" + Trim(Str( 178.43)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(178.43)) + "/" + Trim$(Str$(173.54)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Veloc.", 182.01, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "(m/s)", 193.12, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m", 38.18, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Ponto de Funcionamento da Bomba", .26, 174.85, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Marca", .26, 179.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Modelo", .26, 183.88, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Número de Rotores", .26, 188.11, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Diametro do(s) Rotor(es)", .26, 192.23, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Vazão Prevista", .26, 196.4, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Pressão Prevista", .26, 200.59, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Rendimento", .26, 204.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Rotação", .26, 209.06, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Potência absorvida no Eixo", .26, 213.29, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 218.95, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(218.95)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(218.95)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mm", 90.92, 192.23, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "m³/h", 92.92, 196.4, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "mca", 91.92, 200.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "%", 88.97, 205.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "rpm", 90.92, 209.06, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "cv", 87.92, 212.94, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", 98.14, 174.86, "LIN=B0/" + Trim(Str( 98.14)) + "/" + Trim$(Str$(174.86)) + "/" + Trim(Str(98.14)) + "/" + Trim$(Str$(219.31)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Marca", 99.73, 183.49, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Modelo", 99.73, 187.72, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Potencia Nominal", 99.73, 191.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Dados do Motor", 99.73, 174.85, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Tipo", 99.73, 196.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   If Mid(Orcamento![Marca do Motor],1,3) = "Weg" Then
-      Imprime "Fator", 99.73, 200.42, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
+   Imprime "Ficha Técnica - Nº.: " & Format(Orcamento![Seqüência do Orçamento], "000000"), 35.18, 1.32, "F=Courier New|W=700|S=15.75|JC=137.3", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -17.82, 27.24, "LIN=B0/" + Trim(Str(-17.82)) + "/" + Trim$(Str$(27.24)) + "/" + Trim(Str(197)) + "/" + Trim$(Str$(27.24)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime vgFP.picFixa(1), 5.5, 2.38, "FIG=FigFixa1.jpg/23.28/22.22", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Empresa..:", 35.5, 8.2, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Irrigação Penápolis Ind. e Com. Ltda", 60.1, 7.67, "F=Courier New|W=700|S=12", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "CNPJ.....:", 35.5, 11.9, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "02.781.892/0001-30", 60.1, 11.9, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Inscrição Estadual:", 106.13, 11.9, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "521.043.219.118", 153.88, 11.9, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Endereço.:", 35.5, 15.6, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Rd.Sg.Luciano Arnaldo Covolan, Km 0,315", 60.1, 15.6, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Fone:", 138.14, 19.84, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "(18)3654-2248", 151.23, 19.84, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Município:", 35.5, 20.1, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "CEP.:", 98.99, 20.1, "F=Courier New|W=700|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "16309-899", 112.8, 20.1, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Ilmo. Sr.............:", 0, 26.71, "F=Verdana|W=700|S=11.25|L=36", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Penápolis - SP", 59.78, 20.1, "F=Courier New|S=11.25", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 44.04, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(44.04)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(44.04)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Propriedade......:", 0, 32.01, "F=Verdana|W=700|S=11.25|L=38", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Município...........:", 0, 37.3, "F=Verdana|W=700|S=11.25|L=37", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Ficha Técnica", 139.15, 29.89, "F=Verdana|W=700|S=11.25|L=61|JC=60.84", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Irrigação Penapolis", 138.88, 35.18, "F=Verdana|W=700|S=11.25|L=61|JC=60.84", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 49.33, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(49.33)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(49.33)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime Orcamento!Hidroturbo, 0, 44.7, "F=Verdana|S=11.25|L=196", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Dados Técnicos Gerais", 0, 50.52, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Área aproximada a ser irrigada", 0, 57.14, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Horas Irrigada por dia", 0, 65.87, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Área Total Irrigada em", 0, 70.1, "F=Verdana|S=12|C=&H80000008&|L=49", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 0, 143.51, "LIN=B0/" + Trim(Str(0)) + "/" + Trim$(Str$(143.51)) + "/" + Trim(Str(197)) + "/" + Trim$(Str$(143.51)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Dados do Aspersor Canhão", 0, 79.62, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Marca/Modelo", 0, 90.47, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.11, 55.68, "LIN=B0/" + Trim(Str(-0.11)) + "/" + Trim$(Str$(55.68)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(55.68)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Diametro do Bocal", 0, 95.76, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vazão Total", 0, 101.05, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Pressão de Serviço", 0, 106.34, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 101.05, 56.34, "LIN=B0/" + Trim(Str(101.05)) + "/" + Trim$(Str$(56.34)) + "/" + Trim(Str(101.05)) + "/" + Trim$(Str$(142.85)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "ha", 96.32, 57.14, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mm", 98.32, 61.64, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "h", 94.32, 65.87, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Dias", 99.32, 70.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m³/h", 100.32, 74.33, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mm", 98.32, 95.76, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m³/h", 100.32, 101.05, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 99.32, 106.34, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Precipitação Bruta", 0, 61.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vazão Necessaria", 0, 74.33, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Tipo", 0, 85.71, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Alcance do Jato / Raio", 0.26, 111.37, "F=Verdana|S=12|C=&H80000008&|L=48", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 95.32, 111.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Espaçamento entre Carreadores", 0.26, 116.66, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 95.32, 116.66, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Comprimento da Faixa Irrigada", 0.26, 121.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 95.32, 121.95, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Velocidade de Deslocamento", 0.26, 127.24, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Precipitação Liquida", 0.26, 132.53, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vazão Total por Turno de Rega", 0.26, 137.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m/h", 98.32, 127.24, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mm", 98.32, 132.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m³.", 98.32, 137.83, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Alturas Manométricas", 102.91, 50.52, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Desnível Maximo na área", 101.85, 57.14, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 193.47, 57.4, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Altura de Sucção", 101.85, 61.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 193.47, 61.64, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Altura do Aspersor", 101.85, 65.87, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 193.47, 65.87, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Perda de Carga (Adutora 1)", 101.85, 70.1, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Perda de Carga (Adutora 2)", 101.85, 74.33, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Perda de Carga (Tubo PE)", 101.85, 78.57, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 70.1, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 74.33, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 78.57, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Perdas no Hidroturbo", 101.85, 82.8, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 82.8, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Pressão no Bocal do Aspersor", 101.85, 87.03, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 87.03, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Altura Manométrica Total", 101.85, 92.32, "F=Verdana|W=700|S=11.25|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 197.47, 92.32, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 100.95, 97.75, "LIN=B0/" + Trim(Str(100.95)) + "/" + Trim$(Str$(97.75)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(97.75)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Funcionamento do Sistema", 101.85, 98.67, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Tempo parado antes de Iniciar", 101.85, 106.08, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "h", 192.47, 106.08, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vel. de Deslocamento(Canhão)", 101.85, 111.37, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m/h", 196.47, 111.37, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Tempo para Irrigar 01 Faixa", 101.85, 116.66, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "h", 192.47, 116.66, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Área Irrigada por Faixa", 101.85, 121.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "ha", 194.47, 121.95, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Nº de Faixas Irrigada /dia", 101.85, 127.24, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "un", 194.47, 128.04, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Área Irrigada por dia", 101.85, 132.53, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "ha", 194.47, 132.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Área Irrigada por Turno", 101.85, 137.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "ha", 194.47, 137.83, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Composição da Adutora e Tubo de Polietileno", 0.26, 143.93, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 173.95, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(173.95)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(173.95)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Trecho", 3.43, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "1", 8.73, 157.86, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "2", 8.73, 163.15, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "3", 8.73, 168.44, "F=Verdana|S=12|C=&H80000008&|JC=2.91", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 19.7, 148.94, "LIN=B0/" + Trim(Str(19.7)) + "/" + Trim$(Str$(148.94)) + "/" + Trim(Str(19.7)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Comprimento", 22.48, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 53.57, 148.41, "LIN=B0/" + Trim(Str(53.57)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(53.57)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 87.43, 148.41, "LIN=B0/" + Trim(Str(87.43)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(87.43)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Material", 61.64, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 110.71, 148.41, "LIN=B0/" + Trim(Str(110.71)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(110.71)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Diametro", 89.15, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mm", 101.5, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Coef.", 116.66, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 132.93, 148.41, "LIN=B0/" + Trim(Str(132.93)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(132.93)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 148.7, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(148.7)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(148.7)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vazão", 138.88, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m³/h", 149, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 157.27, 148.41, "LIN=B0/" + Trim(Str(157.27)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(157.27)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Hf Total", 158.73, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 178.43, 148.41, "LIN=B0/" + Trim(Str(178.43)) + "/" + Trim$(Str$(148.41)) + "/" + Trim(Str(178.43)) + "/" + Trim$(Str$(173.54)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Veloc.", 182.01, 149.22, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "(m/s)", 193.12, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m", 38.18, 153.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Ponto de Funcionamento da Bomba", 0.26, 174.85, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Marca", 0.26, 179.64, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Modelo", 0.26, 183.88, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Número de Rotores", 0.26, 188.11, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Diametro do(s) Rotor(es)", 0.26, 192.23, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Vazão Prevista", 0.26, 196.4, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Pressão Prevista", 0.26, 200.59, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Rendimento", 0.26, 204.83, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Rotação", 0.26, 209.06, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Potência absorvida no Eixo", 0.26, 213.29, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 218.95, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(218.95)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(218.95)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mm", 90.92, 192.23, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "m³/h", 92.92, 196.4, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "mca", 91.92, 200.59, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "%", 88.97, 205.53, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "rpm", 90.92, 209.06, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "cv", 87.92, 212.94, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", 98.14, 174.86, "LIN=B0/" + Trim(Str(98.14)) + "/" + Trim$(Str$(174.86)) + "/" + Trim(Str(98.14)) + "/" + Trim$(Str$(219.31)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Marca", 99.73, 183.49, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Modelo", 99.73, 187.72, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Potencia Nominal", 99.73, 191.95, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Dados do Motor", 99.73, 174.85, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Tipo", 99.73, 196.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   If Mid(Orcamento![Marca Do Motor], 1, 3) = "Weg" Then
+      Imprime "Fator", 99.73, 200.42, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
    End If
-   Imprime "Rotação", 99.73, 204.65, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Motor", 99.73, 179.08, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Estacionário", 142.48, 196.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   If Mid(Orcamento![Marca do Motor],1,3) = "Weg" Then
-      Imprime "1.25", 142.48, 200.42, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
+   Imprime "Rotação", 99.73, 204.65, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Motor", 99.73, 179.08, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Estacionário", 142.48, 196.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   If Mid(Orcamento![Marca Do Motor], 1, 3) = "Weg" Then
+      Imprime "1.25", 142.48, 200.42, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
    End If
-   Imprime "rpm", 173.19, 204.88, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "", -.02, 253.04, "LIN=B0/" + Trim(Str( -.02)) + "/" + Trim$(Str$(253.04)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(253.04)), vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Caracteristicas do Carretel", .26, 219.84, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Modelo", .26, 226.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Eixos", .26, 231.48, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Rodas", .26, 236.77, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Pneus", .26, 242.06, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime "Tubo PE", .26, 247.35, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-   Imprime vgFP.picFixa(2),  141.79, 224.33, "FIG=FigFixa2.jpg/45.5/22.22", vgObSaida, , ,, vgFP.vgProcuraPg
-   If Mid(Orcamento![Marca do Motor],1,3) = "Weg" Then
-      Imprime "Consumo Estimado", 99.73, 209.52, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
+   Imprime "rpm", 173.19, 204.88, "F=Verdana|S=9|C=&H80000008&|JD", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "", -0.02, 253.04, "LIN=B0/" + Trim(Str(-0.02)) + "/" + Trim$(Str$(253.04)) + "/" + Trim(Str(196.98)) + "/" + Trim$(Str$(253.04)), vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Caracteristicas do Carretel", 0.26, 219.84, "F=Verdana|W=700|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Modelo", 0.26, 226.19, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Eixos", 0.26, 231.48, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Rodas", 0.26, 236.77, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Pneus", 0.26, 242.06, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime "Tubo PE", 0.26, 247.35, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+   Imprime vgFP.picFixa(2), 141.79, 224.33, "FIG=FigFixa2.jpg/45.5/22.22", vgObSaida, , , , vgFP.vgProcuraPg
+   If Mid(Orcamento![Marca Do Motor], 1, 3) = "Weg" Then
+      Imprime "Consumo Estimado", 99.73, 209.52, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
    End If
    If vgFP.vgContaPg = 1 Then
-      Imprime IIf(Orcamento![Seqüência do Geral] > 0, Orcamento![Razão Social] , Orcamento![Nome Cliente]), 38.62, vgPosLin, "F=Verdana|S=11.25|L=103", vgObSaida, "@x", ,, vgFP.vgProcuraPg
-      Imprime Propriedade(), 38.62, vgPosLin +5.29, "F=Verdana|S=11.25|L=104", vgObSaida, "@x", ,, vgFP.vgProcuraPg
-      Imprime MunProp(), 38.62, vgPosLin +10.58, "F=Verdana|S=11.25|L=104", vgObSaida, "@x", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Area irrigada], 90.07, vgPosLin +30.42, "F=Verdana|S=12|L=25|JD", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Precipitação bruta], 90.13, vgPosLin +34.92, "F=Verdana|S=12|L=24|JD", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Horas irrigada], 90.25, vgPosLin +39.15, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Area tot irrigada em], 89.89, vgPosLin +43.38, "F=Verdana|S=12|L=19|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime VazaoAux(), 90.19, vgPosLin +47.61, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento!Aspersor, 89.62, vgPosLin +58.99, "F=Verdana|S=12|L=51|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Modelo do aspersor], 89.74, vgPosLin +63.75, "F=Verdana|S=12|L=49|JD", vgObSaida, , ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Bocal Diametro], 90.19, vgPosLin +69.04, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime VazaoAux(), 90.19, vgPosLin +74.33, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Pressão de serviço], 90.19, vgPosLin +79.62, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Alcance do jato], 90.37, vgPosLin +84.65, "F=Verdana|S=12|L=20|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Espaço entre carreadores], 90.37, vgPosLin +89.94, "F=Verdana|S=12|L=20|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime VelocidadeDesloca(), 89.25, vgPosLin +100.52, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime PrecipLiq(), 89.81, vgPosLin +105.82, "F=Verdana|S=12|L=25|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime VazaoTurno(), 89.19, vgPosLin +111.11, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Desnivel maximo na area], 187.96, vgPosLin +30.42, "F=Verdana|S=12|L=25|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Altura de sucção], 188.07, vgPosLin +34.92, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Altura do aspersor], 187.48, vgPosLin +39.15, "F=Verdana|S=12|L=15|JD", vgObSaida, "99,99", ,, vgFP.vgProcuraPg
-      Imprime HF1(), 187.4, vgPosLin +43.38, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime HF2(), 187.4, vgPosLin +47.61, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime HF3(), 187.4, vgPosLin +51.85, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime 0.9, 187.4, vgPosLin +56.08, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Pressão de serviço], 187.4, vgPosLin +60.31, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime AlturaManometrica(), 187.4, vgPosLin +65.6, "F=Verdana|W=700|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Tempo parado antes percurso], 187.54, vgPosLin +79.36, "F=Verdana|S=12|L=14|JD", vgObSaida, "99,99", ,, vgFP.vgProcuraPg
-      Imprime VelocidadeDesloca(), 187.4, vgPosLin +84.65, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime TempoFx1(), 187.4, vgPosLin +89.94, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime AreaporFx(), 187.4, vgPosLin +95.23, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime FaixasIrrigadas(), 187.4, vgPosLin +100.52, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime areapordia(), 187.4, vgPosLin +105.82, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Area irrigada], 187.4, vgPosLin +111.11, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Com 1], 26.19, vgPosLin +131.14, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Com 2], 26.19, vgPosLin +136.5, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Material1(), 55.29, vgPosLin +131.14, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Material2(), 55.29, vgPosLin +136.5, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Material3(), 55.29, vgPosLin +141.72, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Diam1(), 89.41, vgPosLin +131.21, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Diam2(), 89.41, vgPosLin +136.5, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Diam3(), 89.41, vgPosLin +141.79, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Coef1(), 112.43, vgPosLin +131.14, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Coef2(), 112.43, vgPosLin +136.43, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Coef3(), 112.43, vgPosLin +141.72, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
+      Imprime IIf(Orcamento![Seqüência Do Geral] > 0, Orcamento![Razão Social], Orcamento![Nome Cliente]), 38.62, vgPosLin, "F=Verdana|S=11.25|L=103", vgObSaida, "@x", , , vgFP.vgProcuraPg
+      Imprime Propriedade(), 38.62, vgPosLin + 5.29, "F=Verdana|S=11.25|L=104", vgObSaida, "@x", , , vgFP.vgProcuraPg
+      Imprime MunProp(), 38.62, vgPosLin + 10.58, "F=Verdana|S=11.25|L=104", vgObSaida, "@x", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Area irrigada], 90.07, vgPosLin + 30.42, "F=Verdana|S=12|L=25|JD", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Precipitação bruta], 90.13, vgPosLin + 34.92, "F=Verdana|S=12|L=24|JD", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Horas irrigada], 90.25, vgPosLin + 39.15, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Area tot irrigada em], 89.89, vgPosLin + 43.38, "F=Verdana|S=12|L=19|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime VazaoAux(), 90.19, vgPosLin + 47.61, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento!Aspersor, 89.62, vgPosLin + 58.99, "F=Verdana|S=12|L=51|JD", vgObSaida, , , , vgFP.vgProcuraPg
+      Imprime Orcamento![Modelo do aspersor], 89.74, vgPosLin + 63.75, "F=Verdana|S=12|L=49|JD", vgObSaida, , , , vgFP.vgProcuraPg
+      Imprime Orcamento![Bocal Diametro], 90.19, vgPosLin + 69.04, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime VazaoAux(), 90.19, vgPosLin + 74.33, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Pressão de serviço], 90.19, vgPosLin + 79.62, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Alcance do jato], 90.37, vgPosLin + 84.65, "F=Verdana|S=12|L=20|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Espaço entre carreadores], 90.37, vgPosLin + 89.94, "F=Verdana|S=12|L=20|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime VelocidadeDesloca(), 89.25, vgPosLin + 100.52, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime PrecipLiq(), 89.81, vgPosLin + 105.82, "F=Verdana|S=12|L=25|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      'Imprime VazaoTurno(), 89.19, vgPosLin + 111.11, "F=Verdana|S=12|L=22|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime VazaoTurno(), 89.19, vgPosLin + 111.11, "F=Verdana|S=12|L=22|JD", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Desnivel maximo na area], 187.96, vgPosLin + 30.42, "F=Verdana|S=12|L=25|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Altura de sucção], 188.07, vgPosLin + 34.92, "F=Verdana|S=12|L=23|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Altura do aspersor], 187.48, vgPosLin + 39.15, "F=Verdana|S=12|L=15|JD", vgObSaida, "99,99", , , vgFP.vgProcuraPg
+      Imprime HF1(), 187.4, vgPosLin + 43.38, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime HF2(), 187.4, vgPosLin + 47.61, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime HF3(), 187.4, vgPosLin + 51.85, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime 0.9, 187.4, vgPosLin + 56.08, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Pressão de serviço], 187.4, vgPosLin + 60.31, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime AlturaManometrica(), 187.4, vgPosLin + 65.6, "F=Verdana|W=700|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Tempo parado antes percurso], 187.54, vgPosLin + 79.36, "F=Verdana|S=12|L=14|JD", vgObSaida, "99,99", , , vgFP.vgProcuraPg
+      Imprime VelocidadeDesloca(), 187.4, vgPosLin + 84.65, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime TempoFx1(), 187.4, vgPosLin + 89.94, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime AreaporFx(), 187.4, vgPosLin + 95.23, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime FaixasIrrigadas(), 187.4, vgPosLin + 100.52, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime areapordia(), 187.4, vgPosLin + 105.82, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Area irrigada], 187.4, vgPosLin + 111.11, "F=Verdana|S=12|L=21|JD", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Com 1], 26.19, vgPosLin + 131.14, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Com 2], 26.19, vgPosLin + 136.5, "F=Verdana|S=12|L=23|JC=22.75", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Material1(), 55.29, vgPosLin + 131.14, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Material2(), 55.29, vgPosLin + 136.5, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Material3(), 55.29, vgPosLin + 141.72, "F=Verdana|S=12|L=30|JC=30.42", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Diam1(), 89.41, vgPosLin + 131.21, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Diam2(), 89.41, vgPosLin + 136.5, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Diam3(), 89.41, vgPosLin + 141.79, "F=Verdana|S=12|L=20|JC=19.57", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Coef1(), 112.43, vgPosLin + 131.14, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Coef2(), 112.43, vgPosLin + 136.43, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Coef3(), 112.43, vgPosLin + 141.72, "F=Verdana|S=12|L=20|JC=19.84", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
       If Orcamento![Com 1] > 0 Then
-         Imprime VazaoAux(), 134.92, vgPosLin +131.21, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
+         Imprime VazaoAux(), 134.92, vgPosLin + 131.21, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
       End If
       If Orcamento![Com 2] > 0 Then
-         Imprime VazaoAux(), 134.92, vgPosLin +136.5, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
+         Imprime VazaoAux(), 134.92, vgPosLin + 136.5, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
       End If
       If Orcamento![Com 3] > 0 Then
-         Imprime VazaoAux(), 134.92, vgPosLin +141.79, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
+         Imprime VazaoAux(), 134.92, vgPosLin + 141.79, "F=Verdana|S=12|L=21|JC=20.63", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
       End If
-      Imprime HF1(), 158.73, vgPosLin +131.21, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime HF2(), 158.73, vgPosLin +136.5, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime HF3(), 158.73, vgPosLin +141.53, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Velo1(), 179.25, vgPosLin +131.21, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Velo2(), 179.25, vgPosLin +136.5, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Velo3(), 179.25, vgPosLin +141.53, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Marca bomba], 60.58, vgPosLin +152.64, "F=Verdana|S=12|L=35", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Modelo bomba], 60.58, vgPosLin +156.87, "F=Verdana|S=12|L=35", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![N estagios], 60.58, vgPosLin +161.39, "F=Verdana|S=12|L=10", vgObSaida, "99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Diametro bomba], 60.58, vgPosLin +165.52, "F=Verdana|S=12|L=23", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime VazaoAux(), 60.58, vgPosLin +169.68, "F=Verdana|S=12|L=23", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime AlturaManometrica(), 60.58, vgPosLin +173.88, "F=Verdana|S=12|L=21", vgObSaida, "9.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Rendimento bomba], 60.58, vgPosLin +178.11, "F=Verdana|S=12|L=21", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Rotação bomba], 60.84, vgPosLin +182.34, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime VazaoAux * AlturaManometrica / 2.7 / Orcamento![Rendimento bomba], 60.58, vgPosLin +186.57, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Marca do Motor], 142.48, vgPosLin +156.77, "F=Verdana|S=12|L=54", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Modelo Motor], 142.48, vgPosLin +161.11, "F=Verdana|S=12|L=54", vgObSaida, "@!", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Potencia Nominal], 142.48, vgPosLin +165.23, "F=Verdana|S=12|L=23", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime IIf(Mid(Orcamento![Marca do Motor],1,3) = "Weg","ELÉTRICO","DIESEL"), 142.48, vgPosLin +152.36, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Rotação bomba], 142.48, vgPosLin +178.16, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento![Modelo hidroturbo], 21.16, vgPosLin +199.47, "F=Verdana|S=12|L=94", vgObSaida, , ,, vgFP.vgProcuraPg
-      Imprime Orcamento!Eixos, 21.16, vgPosLin +205.02, "F=Verdana|S=12|L=6", vgObSaida, "99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento!Rodas, 21.16, vgPosLin +210.05, "F=Verdana|S=12|L=6", vgObSaida, "99", ,, vgFP.vgProcuraPg
-      Imprime Orcamento!Pneus, 21.16, vgPosLin +215.6, "F=Verdana|S=12|L=66", vgObSaida, , ,, vgFP.vgProcuraPg
-      Imprime Orcamento!Tubos, 21.16, vgPosLin +220.63, "F=Verdana|S=12|L=54", vgObSaida, , ,, vgFP.vgProcuraPg
-      If Mid(Orcamento![Marca do Motor],1,3) = "Weg" Then
-         Imprime Orcamento![Potencia Nominal] * 0.736, 142.48, vgPosLin +182.8, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", ,, vgFP.vgProcuraPg
+      Imprime HF1(), 158.73, vgPosLin + 131.21, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime HF2(), 158.73, vgPosLin + 136.5, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime HF3(), 158.73, vgPosLin + 141.53, "F=Verdana|S=12|L=19|JC=19.04", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Velo1(), 179.25, vgPosLin + 131.21, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Velo2(), 179.25, vgPosLin + 136.5, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Velo3(), 179.25, vgPosLin + 141.53, "F=Verdana|S=12|L=17|JC=16.66", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Marca bomba], 60.58, vgPosLin + 152.64, "F=Verdana|S=12|L=35", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Modelo bomba], 60.58, vgPosLin + 156.87, "F=Verdana|S=12|L=35", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Orcamento![N estagios], 60.58, vgPosLin + 161.39, "F=Verdana|S=12|L=10", vgObSaida, "99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Diametro bomba], 60.58, vgPosLin + 165.52, "F=Verdana|S=12|L=23", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime VazaoAux(), 60.58, vgPosLin + 169.68, "F=Verdana|S=12|L=23", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime AlturaManometrica(), 60.58, vgPosLin + 173.88, "F=Verdana|S=12|L=21", vgObSaida, "9.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Rendimento bomba], 60.58, vgPosLin + 178.11, "F=Verdana|S=12|L=21", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Rotação bomba], 60.84, vgPosLin + 182.34, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime VazaoAux * AlturaManometrica / 2.7 / Orcamento![Rendimento bomba], 60.58, vgPosLin + 186.57, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Marca Do Motor], 142.48, vgPosLin + 156.77, "F=Verdana|S=12|L=54", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Modelo Motor], 142.48, vgPosLin + 161.11, "F=Verdana|S=12|L=54", vgObSaida, "@!", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Potencia Nominal], 142.48, vgPosLin + 165.23, "F=Verdana|S=12|L=23", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime IIf(Mid(Orcamento![Marca Do Motor], 1, 3) = "Weg", "ELÉTRICO", "DIESEL"), 142.48, vgPosLin + 152.36, "F=Verdana|S=12|C=&H80000008&", vgObSaida, , , , vgFP.vgProcuraPg
+      Imprime Orcamento![Rotação bomba], 142.48, vgPosLin + 178.16, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
+      Imprime Orcamento![Modelo hidroturbo], 21.16, vgPosLin + 199.47, "F=Verdana|S=12|L=94", vgObSaida, , , , vgFP.vgProcuraPg
+      Imprime Orcamento!Eixos, 21.16, vgPosLin + 205.02, "F=Verdana|S=12|L=6", vgObSaida, "99", , , vgFP.vgProcuraPg
+      Imprime Orcamento!Rodas, 21.16, vgPosLin + 210.05, "F=Verdana|S=12|L=6", vgObSaida, "99", , , vgFP.vgProcuraPg
+      Imprime Orcamento!Pneus, 21.16, vgPosLin + 215.6, "F=Verdana|S=12|L=66", vgObSaida, , , , vgFP.vgProcuraPg
+      Imprime Orcamento!Tubos, 21.16, vgPosLin + 220.63, "F=Verdana|S=12|L=54", vgObSaida, , , , vgFP.vgProcuraPg
+      If Mid(Orcamento![Marca Do Motor], 1, 3) = "Weg" Then
+         Imprime Orcamento![Potencia Nominal] * 0.736, 142.48, vgPosLin + 182.8, "F=Verdana|S=12|L=20", vgObSaida, "99.999,99", , , vgFP.vgProcuraPg
       End If
       vgPosLin = vgPosLin + 95.23
       vgDifProxReg = 0
@@ -2166,12 +2020,12 @@ IniciaImpressao:
    With vgObSaida.Font
       'ajusta para nós...
       .Name = "MS Sans Serif"
-      .CharSet = 0
+      .Charset = 0
       .Weight = 400
       .Size = 8.25
       .Underline = 0
       .Italic = 0
-      .StrikeThrough = 0
+      .Strikethrough = 0
       vgObSaida.ForeColor = &H0
       vgObSaida.ScaleMode = vbMillimeters         'vamos trabalhar em mm
    End With
@@ -2191,7 +2045,7 @@ DeuErro:                                          'deu um erro
       Case 3046, 3158, 3186, 3187, 3188, 3189, 3218, 3260
          vgNVez = vgNVez + 1                      'outro usuário acessando
          If vgNVez <= 10 Then                     'vamos tentar 10 vezes
-            Delay .5                              'mais antes espera 1/2 segundo
+            Delay 0.5                             'mais antes espera 1/2 segundo
             Resume                                'antes de tentar
          End If
    End Select
@@ -2205,7 +2059,7 @@ SaiDaSub:                                         'saída comum da sub...
 
 FimDaSub:
    If Not vgFG Is Nothing Then
-      UnLoad vgFG
+      Unload vgFG
       Set vgFG = Nothing
    End If
    Err.Clear
@@ -2227,7 +2081,7 @@ Private Sub botOk_Click()
    vgPriVez = True
    k$ = Executar(VALIDACOES)                      'faz validaçao dos campos
    If Len(k$) > 0 Then                            'EPA!... tem campo errado
-      If Instr(k$, "|") > 0 Then
+      If InStr(k$, "|") > 0 Then
          Err.Source = Parse$(k$, "|")
          Err.Number = Val(Parse$(k$, "|"))        'deu erro
          Err.Description = Parse$(k$, "|")
@@ -2273,7 +2127,7 @@ End Sub
 
 'evento - antes de descarregar o formulário
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
-   Cancel = Cancel Or(Not vgFG Is Nothing)
+   Cancel = Cancel Or (Not vgFG Is Nothing)
 End Sub
 
 'evento - descarregando o formulário da memória
@@ -2291,13 +2145,13 @@ Private Sub Form_Unload(Cancel As Integer)
       Set txtCampo(i) = Nothing
    Next
    If Not Orcamento Is Nothing Then
-      Orcamento.CloseRecordSet
+      Orcamento.CloseRecordset
       Set Orcamento = Nothing
    End If
    Set vgFG = Nothing
    Set vgTooltips = Nothing
-   SET vgFP.vgFormRel = Nothing                   'variável associada a este form
-   UnLoad vgFP                                    'descarrega o form de preview
+   Set vgFP.vgFormRel = Nothing                   'variável associada a este form
+   Unload vgFP                                    'descarrega o form de preview
    Set vgFP = Nothing                             'tira o form de preview da memória
    Set frmRelfxhid = Nothing                      'libera o segmento de código do form
    If vgRelAtivo = vgFormID Then vgRelAtivo = 0
@@ -2313,18 +2167,18 @@ End Sub
 
 'evento - quando o valor da rolagem modificar
 Private Sub scrVtxtCampo1_Change()
-   txtCampo(1).scrChange
+   txtCampo(1).ScrChange
 End Sub
 
 'evento - quando o botão for apertado
 Private Sub bottxtCampo2_Click(Index As Integer)
    txtCampo(2).SetFocus
    DoEvents
-   txtCampo(2).botClick Index
+   txtCampo(2).BotClick Index
 End Sub
 
 'evento - quando o mouse for pressionado sobre o campo
-Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x as Single, y as Single)
+Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
 

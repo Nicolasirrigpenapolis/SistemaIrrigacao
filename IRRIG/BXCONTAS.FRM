@@ -3104,7 +3104,7 @@ End Sub
 
 Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
-End Sub
+End Property
 
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
@@ -3601,80 +3601,105 @@ Private Sub MostraFormulas()
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
-'executa a pré-validação dos campos
+
 Private Sub ExecutaPreValidacao()
    Dim Ok As Boolean, vgPV As Integer
-   On Error Resume Next                           'prepara para possiveis erros
+   On Error Resume Next                           'prepara para possíveis erros
    vgPV = vgPriVez
    vgPriVez = True
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(4).Locked = Not (vgAlterar And txtCampo(4).Editable)
    txtCampo(4).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(5).Locked = Not (vgAlterar And txtCampo(5).Editable)
    txtCampo(5).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(6).Locked = Not (vgAlterar And txtCampo(6).Editable)
    txtCampo(6).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(7).Locked = Not (vgAlterar And txtCampo(7).Editable)
    txtCampo(7).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(8).Locked = Not (vgAlterar And txtCampo(8).Editable)
    txtCampo(8).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(15).Locked = Not (vgAlterar And txtCampo(15).Editable)
    txtCampo(15).Enabled = Ok Or Not vgAlterar
+
    Ok = (Me.Caption = "Baixa do Contas a Pagar")
    txtCampo(16).Locked = Not (vgAlterar And txtCampo(16).Editable)
    txtCampo(16).Enabled = Ok Or Not vgAlterar
+
    Ok = (Sequencia_da_Agencia > 0 And vgSituacao = ACAO_INCLUINDO)
    txtCampo(18).Locked = Not (vgAlterar And txtCampo(18).Editable)
    txtCampo(18).Enabled = Ok Or Not vgAlterar
+
    Ok = (Me.Caption = "Baixa do Contas a Pagar")
    Label(9).Enabled = Ok And vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(19).Locked = Not (vgAlterar And txtCampo(19).Editable)
    txtCampo(19).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(20).Locked = Not (vgAlterar And txtCampo(20).Editable)
    txtCampo(20).Enabled = Ok Or Not vgAlterar
+
    Ok = (Carteira = "Carteira Desconto" And vgSituacao = ACAO_INCLUINDO)
    txtCampo(21).Locked = Not (vgAlterar And txtCampo(21).Editable)
    txtCampo(21).Enabled = Ok Or Not vgAlterar
+
    Ok = (False)
    txtCampo(22).Locked = Not (vgAlterar And txtCampo(22).Editable)
    txtCampo(22).Enabled = Ok Or Not vgAlterar
+
    Ok = (Not Vazio(Sequencia_da_Baixa))
    txtCampo(23).Locked = Not (vgAlterar And txtCampo(23).Editable)
    txtCampo(23).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgPWUsuario = "YGOR")
    chkCampo(1).Locked = Not (vgAlterar And chkCampo(1).Editable)
    chkCampo(1).Enabled = Ok Or Not vgAlterar
+
    Ok = (Not Vazio(Data_Recebimento) And vgSituacao = ACAO_INCLUINDO)
    txtCampo(24).Locked = Not (vgAlterar And txtCampo(24).Editable)
    txtCampo(24).Enabled = Ok Or Not vgAlterar
+
    Ok = (Conta = "P" And vgSituacao = ACAO_INCLUINDO)
-    ' Campos Debito e Credito liberados para edicao
-   txtCampo(26).Locked = False
-   txtCampo(26).Enabled = True
+   ' Campos Débito e Crédito bloqueados para edição
+   txtCampo(26).Locked = True
+   txtCampo(26).Enabled = False
+
    Ok = (Conta = "R" And vgSituacao = ACAO_INCLUINDO)
-   txtCampo(27).Locked = False
-   txtCampo(27).Enabled = True
+   txtCampo(27).Locked = True
+   txtCampo(27).Enabled = False
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(28).Locked = Not (vgAlterar And txtCampo(28).Editable)
    txtCampo(28).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgPWUsuario = "YGOR")
    Botao(1).Enabled = Ok
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(30).Locked = Not (vgAlterar And txtCampo(30).Editable)
    txtCampo(30).Enabled = Ok Or Not vgAlterar
+
    Ok = (vgSituacao = ACAO_INCLUINDO)
    txtCampo(31).Locked = Not (vgAlterar And txtCampo(31).Editable)
    txtCampo(31).Enabled = Ok Or Not vgAlterar
+
    If Err Then Err.Clear                          'se houve erro, limpa...
    vgPriVez = vgPV
 End Sub
+
+
 
 'coloca os campos visíveis segundo a condição
 Private Sub ExecutaVisivel()
@@ -4671,5 +4696,6 @@ End Sub
 Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
+
 
 

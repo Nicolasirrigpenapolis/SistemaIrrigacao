@@ -627,250 +627,280 @@ End Function
 
 
 Private Sub Lancar()
- Dim Mvto As New GRecordSet
- Dim Manutencao As New GRecordSet
- Dim Sequencia_da_Movimentacao_CC As Long
- Dim Baixa As New GRecordSet
-  
- ' If Data_do_Movimento > (Date + 3) Or Data_do_Movimento < (Date + 3) Then
- '     MsgBox("Data do Movimento Invalida!")
- '     Exit Sub
- ' End If
-  
-  If MsgBox("ATENÇÃO! " & vgPWUsuario & " " & vbCrLf & "Você tem Ciência que a Origem é a Conta de onde sai o Dinheiro?", vbExclamation + vbYesNo, vaTitulo) = vbNo Then Exit Sub
-  If MsgBox("ATENÇÃO! " & vgPWUsuario & " " & vbCrLf & "Você tem Ciência que o Destino é a Conta que vai Receber o Dinheiro$?", vbExclamation + vbYesNo, vaTitulo) = vbNo Then Exit Sub
-  If MsgBox("Posso Prosseguir", vbExclamation + vbYesNo, "ATENÇÃO!") = vbNo Then Exit Sub
-   
-  If Sequencia_da_Agencia = Sequencia_da_Agencia1 Then
-     If Sequencia_da_CC_da_Agencia = Sequencia_da_CC_da_Agencia1 Then
-        MsgBox ("Qui Lokuraaaa... O Banco de Origem e de Destino não podem ser o mesmo Impossivel Prosseguir!")
-     End If
-     Exit Sub
-  End If
-  
-  Set Manutencao = vgDb.OpenRecordSet("Manutenção Contas")
-  Set Mvto = vgDb.OpenRecordSet("Movimentação da Conta Corrente")
-  
-  With Mvto
-   .AddNew
-         ![Seqüência da Agência] = Sequencia_da_Agencia 'Origem
-          If Sequencia_da_Agencia = 1 Then
-             ![Codigo Do Historico] = 249
-          Else
-             ![Codigo Do Historico] = 250
-          End If
-         ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia
-         ![Seqüência Grupo Despesa] = 34
-         ![Seqüência SubGrupo Despesa] = 246
-         ![Data do Movimento] = Data_do_Movimento
-         ![Valor Total] = Valor_Total
-         ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
-         !Conta = "P"
-         ![Seqüência do Histórico] = 105
-          If Sequencia_da_Agencia = 341 Then
-             ![Codigo Do Debito] = 4
-             ![Codigo Do Credito] = 5
-          Else
-             ![Codigo Do Debito] = 5
-             ![Codigo Do Credito] = 4
-          End If
-          If Sequencia_da_Agencia = 1 Then
-             !Histórico = Historico
-          Else
-             !Histórico = Historico
-          End If
-         ![Tipo de Movimento da CC] = "Saída"
-         ![Data da Alteração] = Date
-         ![Hora da Alteração] = Time
-         ![Usuário da Alteração] = vgPWUsuario
-    .Update
-    .BookMark = .LastModified
-     Sequencia_da_Movimentacao_CC = ![Seqüência da Movimentação CC]
-     LancamentoContabil ![Codigo Do Debito], ![Codigo Do Credito], Sequencia_da_Movimentacao_CC
-  End With
-  With Manutencao 'conta Origen
-    .AddNew
-       !Conta = "P"
-       !Documento = "Transferencia"
-       ![Sequencia Lan CC] = Sequencia_da_Movimentacao_CC
-       ![Parcela] = 1
-        If Sequencia_da_Agencia = 1 Then 'BB
-            ![Seqüência Do Geral] = 5017
-         ElseIf Sequencia_da_Agencia = 8 Then 'Itau
-            ![Seqüência Do Geral] = 5388
-         ElseIf Sequencia_da_Agencia = 21 Then
-            ![Seqüência Do Geral] = 29064 'Caixinha
-         ElseIf Sequencia_da_Agencia = 19 Then
-            ![Seqüência Do Geral] = 28013
-         ElseIf Sequencia_da_Agencia = 24 Then
-            ![Seqüência Do Geral] = 39672 'Inter
-        End If
-        ![Data de Entrada] = Data_do_Movimento
-        !Histórico = Historico
-        ![Forma de Pagamento] = "Prazo"
-        ![Valor Total] = Valor_Total
-        ![Data de Vencimento] = Data_do_Movimento
-        ![Vencimento Original] = Data_do_Movimento
-        ![Valor da Parcela] = Valor_Total
-        ![Valor Pago] = Valor_Total
-        ![Data da Baixa] = Data_do_Movimento
-        ![Valor Restante] = 0
-        ![Seqüência Grupo Despesa] = 34
-        ![Seqüência SubGrupo Despesa] = 246
-    .Update
-    .BookMark = .LastModified
-  End With
-  'Baixa Origem
-  Set Baixa = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas]")
-  TbAuxiliar "Baixa Contas", "[Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC, Baixa
-      Manutencao.MoveFirst: Manutencao.MoveLast
-      With Baixa
-       If Baixa.RecordCount = 0 Then .AddNew
-          ![Seqüência da Manutenção] = Manutencao![Seqüência da Manutenção]
-          ![Data da Baixa] = Data_do_Movimento
-          ![Valor Pago] = Valor_Total
-          !Conta = "P"
-          ![Seqüência da Movimentação CC] = Sequencia_da_Movimentacao_CC
-          ![Seqüência da Agência] = Sequencia_da_Agencia
-          ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia
-           If Sequencia_da_Agencia = 1 Then
-              ![Codigo Do Historico] = 249
-           Else
-              ![Codigo Do Historico] = 250
-           End If
-           If Sequencia_da_Agencia = 341 Then
-              ![Codigo Do Debito] = 4
-              ![Codigo Do Credito] = 5
-           Else
-              ![Codigo Do Debito] = 5
-              ![Codigo Do Credito] = 4
-           End If
-          !Histórico = Historico
-          ![Seqüência Grupo Despesa] = 34
-          ![Seqüência SubGrupo Despesa] = 246
-      .Update
-      .BookMark = .LastModified
-      Baixa.MoveLast
-      End With
-      With Manutencao
-         .Edit
-         ![Seqüência da Baixa] = Baixa![Seqüência da Baixa]
-         .Update
-         .BookMark = .LastModified
-      End With
-      SaldoContas CLng(Sequencia_da_Agencia), CLng(Sequencia_da_CC_da_Agencia)
-'Fim Origem
-  With Mvto 'Inicio Destino
-   .AddNew
-        ![Seqüência da Agência] = Sequencia_da_Agencia1 'Destino
-         ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia1
-          If Sequencia_da_Agencia1 = 1 Then
-             ![Codigo Do Historico] = 249
-          Else
-             ![Codigo Do Historico] = 250
-          End If
-         ![Seqüência Grupo Despesa] = 34
-         ![Seqüência SubGrupo Despesa] = 246
-         ![Data do Movimento] = Data_do_Movimento
-         ![Valor Total] = Valor_Total
-         ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
-         !Conta = "R"
-         ![Seqüência do Histórico] = 105
-          If Sequencia_da_Agencia1 = 341 Then
-             ![Codigo Do Debito] = 5
-             ![Codigo Do Credito] = 4
-          Else
-             ![Codigo Do Debito] = 4
-             ![Codigo Do Credito] = 5
-          End If
-          If Sequencia_da_Agencia1 = 1 Then
-             !Histórico = Historico
-          Else
-             !Histórico = Historico
-          End If
-         ![Tipo de Movimento da CC] = "Entrada"
-         ![Data da Alteração] = Date
-         ![Hora da Alteração] = Time
-         ![Usuário da Alteração] = vgPWUsuario
-    .Update
-    .BookMark = .LastModified
-     Sequencia_da_Movimentacao_CC = ![Seqüência da Movimentação CC]
-     LancamentoContabil ![Codigo Do Debito], ![Codigo Do Credito], Sequencia_da_Movimentacao_CC
-  End With
-  With Manutencao 'conta Destino
-    .AddNew
-       !Conta = "R"
-       !Documento = "Transferencia"
-       ![Sequencia Lan CC] = Sequencia_da_Movimentacao_CC
-       ![Parcela] = 1
-        If Sequencia_da_Agencia1 = 1 Then 'BB
-            ![Seqüência Do Geral] = 5017
-         ElseIf Sequencia_da_Agencia1 = 8 Then 'Itau
-            ![Seqüência Do Geral] = 5388
-         ElseIf Sequencia_da_Agencia1 = 21 Then
-            ![Seqüência Do Geral] = 29064 'Caixinha
-         ElseIf Sequencia_da_Agencia1 = 19 Then
-            ![Seqüência Do Geral] = 28013 'sicob
-         ElseIf Sequencia_da_Agencia = 24 Then
-            ![Seqüência Do Geral] = 39672 'Inter
-        End If
-        ![Data de Entrada] = Data_do_Movimento
-        !Histórico = Historico
-        ![Forma de Pagamento] = "Prazo"
-        ![Valor Total] = Valor_Total
-        ![Data de Vencimento] = Data_do_Movimento
-        ![Vencimento Original] = Data_do_Movimento
-        ![Valor da Parcela] = Valor_Total
-        ![Valor Pago] = Valor_Total
-        ![Data da Baixa] = Data_do_Movimento
-        ![Valor Restante] = 0
-        ![Seqüência Grupo Despesa] = 34
-        ![Seqüência SubGrupo Despesa] = 246
-    .Update
-    .BookMark = .LastModified
-  End With
-  Set Baixa = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas]") 'Destino
-  TbAuxiliar "Baixa Contas", "[Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC, Baixa
-      Manutencao.MoveFirst: Manutencao.MoveLast
-      With Baixa
+    Dim Mvto As New GRecordSet
+    Dim Manutencao As New GRecordSet
+    Dim Sequencia_da_Movimentacao_CC As Long
+    Dim Baixa As New GRecordSet
+
+    ' If Data_do_Movimento > (Date + 3) Or Data_do_Movimento < (Date + 3) Then
+    '     MsgBox("Data do Movimento Invalida!")
+    '     Exit Sub
+    ' End If
+
+    ' === Confirmação única para Usuário ===
+    Dim resp As VbMsgBoxResult
+    resp = MsgBox( _
+        "ATENÇÃO! " & vgPWUsuario & vbCrLf & _
+        "Confirme os dados antes de continuar." & vbCrLf & _
+        "Deseja continuar?", _
+        vbExclamation + vbYesNo, vaTitulo _
+    )
+    If resp = vbNo Then Exit Sub
+
+    ' =======================================
+
+    ' === Validação: mesma conta de origem e destino ===
+    If Sequencia_da_Agencia = Sequencia_da_Agencia1 _
+       And Sequencia_da_CC_da_Agencia = Sequencia_da_CC_da_Agencia1 Then
+        MsgBox "Erro: Origem e Destino não podem ser a mesma conta.", _
+               vbCritical + vbOKOnly, vaTitulo
+        Exit Sub
+    End If
+    ' ==================================================
+
+    Set Manutencao = vgDb.OpenRecordSet("Manutenção Contas")
+    Set Mvto = vgDb.OpenRecordSet("Movimentação da Conta Corrente")
+
+    With Mvto
         .AddNew
-          ![Seqüência da Manutenção] = Manutencao![Seqüência da Manutenção]
-          ![Data da Baixa] = Data_do_Movimento
-          ![Valor Pago] = Valor_Total
-          !Conta = "R"
-          ![Seqüência da Movimentação CC] = Sequencia_da_Movimentacao_CC
-          ![Seqüência da Agência] = Sequencia_da_Agencia1
-          ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia1
-           If Sequencia_da_Agencia1 = 1 Then
-              ![Codigo Do Historico] = 249
-           Else
-              ![Codigo Do Historico] = 250
-           End If
-           If Sequencia_da_Agencia1 = 341 Then
-              ![Codigo Do Debito] = 4
-              ![Codigo Do Credito] = 5
-           Else
-              ![Codigo Do Debito] = 5
-              ![Codigo Do Credito] = 4
-           End If
-          !Histórico = Historico
-          ![Seqüência Grupo Despesa] = 34
-          ![Seqüência SubGrupo Despesa] = 246
-      .Update
-      .BookMark = .LastModified
-      Baixa.MoveLast
-      End With
-      With Manutencao
-         .Edit
-         ![Seqüência da Baixa] = Baixa![Seqüência da Baixa]
-         .Update
-         .BookMark = .LastModified
-      End With
- SaldoContas CLng(Sequencia_da_Agencia1), CLng(Sequencia_da_CC_da_Agencia1)
- MsgBox ("Transferencia Concluida com Sucesso!")
+            ![Seqüência da Agência] = Sequencia_da_Agencia       ' Origem
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Historico] = 249
+                Case 8:  ![Codigo Do Historico] = 250
+                Case 24: ![Codigo Do Historico] = 255
+                Case Else: ![Codigo Do Historico] = 252
+            End Select
+            ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+            ![Data do Movimento] = Data_do_Movimento
+            ![Valor Total] = Valor_Total
+            ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
+            !Conta = "P"
+            ![Seqüência do Histórico] = 105
+            ' ORIGEM (Débito) - Define código do banco origem
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Debito] = 4      ' Banco do Brasil
+                Case 8:  ![Codigo Do Debito] = 5      ' Itaú
+                Case 24: ![Codigo Do Debito] = 11212  ' Inter
+                Case Else: ![Codigo Do Debito] = 0    ' Valor padrão
+            End Select
+            ' DESTINO (Crédito) - Define código do banco destino
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Credito] = 4      ' Banco do Brasil
+                Case 8:  ![Codigo Do Credito] = 5      ' Itaú
+                Case 24: ![Codigo Do Credito] = 11212  ' Inter
+                Case Else: ![Codigo Do Credito] = 0    ' Valor padrão
+            End Select
+            !Histórico = Historico
+            ![Tipo de Movimento da CC] = "Saída"
+            ![Data da Alteração] = Date
+            ![Hora da Alteração] = Time
+            ![Usuário da Alteração] = vgPWUsuario
+        .Update
+        .BookMark = .LastModified
+        Sequencia_da_Movimentacao_CC = ![Seqüência da Movimentação CC]
+        LancamentoContabil ![Codigo Do Debito], ![Codigo Do Credito], Sequencia_da_Movimentacao_CC
+    End With
 
+    With Manutencao ' conta Origem
+        .AddNew
+            !Conta = "P"
+            !Documento = "Transferencia"
+            ![Sequencia Lan CC] = Sequencia_da_Movimentacao_CC
+            ![Parcela] = 1
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Seqüência Do Geral] = 5017   ' BB
+                Case 8:  ![Seqüência Do Geral] = 5388   ' Itau
+                Case 21: ![Seqüência Do Geral] = 29064  ' Caixinha
+                Case 19: ![Seqüência Do Geral] = 28013
+                Case 24: ![Seqüência Do Geral] = 39672  ' Inter
+            End Select
+            ![Data de Entrada] = Data_do_Movimento
+            !Histórico = Historico
+            ![Forma de Pagamento] = "Prazo"
+            ![Valor Total] = Valor_Total
+            ![Data de Vencimento] = Data_do_Movimento
+            ![Vencimento Original] = Data_do_Movimento
+            ![Valor da Parcela] = Valor_Total
+            ![Valor Pago] = Valor_Total
+            ![Data da Baixa] = Data_do_Movimento
+            ![Valor Restante] = 0
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+        .Update
+        .BookMark = .LastModified
+    End With
+
+    ' Baixa Origem
+    Set Baixa = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas]")
+    TbAuxiliar "Baixa Contas", "[Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC, Baixa
+    Manutencao.MoveFirst: Manutencao.MoveLast
+    With Baixa
+        If Baixa.RecordCount = 0 Then .AddNew
+            ![Seqüência da Manutenção] = Manutencao![Seqüência da Manutenção]
+            ![Data da Baixa] = Data_do_Movimento
+            ![Valor Pago] = Valor_Total
+            !Conta = "P"
+            ![Seqüência da Movimentação CC] = Sequencia_da_Movimentacao_CC
+            ![Seqüência da Agência] = Sequencia_da_Agencia
+            ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Historico] = 249
+                Case 8:  ![Codigo Do Historico] = 250
+                Case 24: ![Codigo Do Historico] = 255
+                Case Else: ![Codigo Do Historico] = 252
+            End Select
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Debito] = 4
+                Case 8:  ![Codigo Do Debito] = 5
+                Case 24: ![Codigo Do Debito] = 11212
+                Case Else: ![Codigo Do Debito] = 0
+            End Select
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Credito] = 4
+                Case 8:  ![Codigo Do Credito] = 5
+                Case 24: ![Codigo Do Credito] = 11212
+                Case Else: ![Codigo Do Credito] = 0
+            End Select
+            !Histórico = Historico
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+        .Update
+        .BookMark = .LastModified
+        Baixa.MoveLast
+    End With
+
+    With Manutencao
+        .Edit
+            ![Seqüência da Baixa] = Baixa![Seqüência da Baixa]
+        .Update
+        .BookMark = .LastModified
+    End With
+
+    SaldoContas CLng(Sequencia_da_Agencia), CLng(Sequencia_da_CC_da_Agencia)
+
+    ' Fim Origem
+
+    With Mvto ' Início Destino
+        .AddNew
+            ![Seqüência da Agência] = Sequencia_da_Agencia1      ' Destino
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Historico] = 249
+                Case 8:  ![Codigo Do Historico] = 250
+                Case 24: ![Codigo Do Historico] = 255
+                Case Else: ![Codigo Do Historico] = 252
+            End Select
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+            ![Data do Movimento] = Data_do_Movimento
+            ![Valor Total] = Valor_Total
+            ![Data Do Último Dia] = DateAdd("M", 1, Data_do_Movimento) - Day(DateAdd("M", 1, Data_do_Movimento))
+            !Conta = "R"
+            ![Seqüência do Histórico] = 105
+            ' DESTINO (Débito)
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Debito] = 4
+                Case 8:  ![Codigo Do Debito] = 5
+                Case 24: ![Codigo Do Debito] = 11212
+                Case Else: ![Codigo Do Debito] = 0
+            End Select
+            ' ORIGEM (Crédito)
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Credito] = 4
+                Case 8:  ![Codigo Do Credito] = 5
+                Case 24: ![Codigo Do Credito] = 11212
+                Case Else: ![Codigo Do Credito] = 0
+            End Select
+            !Histórico = Historico
+            ![Tipo de Movimento da CC] = "Entrada"
+            ![Data da Alteração] = Date
+            ![Hora da Alteração] = Time
+            ![Usuário da Alteração] = vgPWUsuario
+        .Update
+        .BookMark = .LastModified
+        Sequencia_da_Movimentacao_CC = ![Seqüência da Movimentação CC]
+        LancamentoContabil ![Codigo Do Debito], ![Codigo Do Credito], Sequencia_da_Movimentacao_CC
+    End With
+
+    With Manutencao ' conta Destino
+        .AddNew
+            !Conta = "R"
+            !Documento = "Transferencia"
+            ![Sequencia Lan CC] = Sequencia_da_Movimentacao_CC
+            ![Parcela] = 1
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Seqüência Do Geral] = 5017
+                Case 8:  ![Seqüência Do Geral] = 5388
+                Case 21: ![Seqüência Do Geral] = 29064
+                Case 19: ![Seqüência Do Geral] = 28013
+                Case 24: ![Seqüência Do Geral] = 39672
+            End Select
+            ![Data de Entrada] = Data_do_Movimento
+            !Histórico = Historico
+            ![Forma de Pagamento] = "Prazo"
+            ![Valor Total] = Valor_Total
+            ![Data de Vencimento] = Data_do_Movimento
+            ![Vencimento Original] = Data_do_Movimento
+            ![Valor da Parcela] = Valor_Total
+            ![Valor Pago] = Valor_Total
+            ![Data da Baixa] = Data_do_Movimento
+            ![Valor Restante] = 0
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+        .Update
+        .BookMark = .LastModified
+    End With
+
+    Set Baixa = vgDb.OpenRecordSet("SELECT * FROM [Baixa Contas]") ' Destino
+    TbAuxiliar "Baixa Contas", "[Seqüência da Movimentação CC] = " & Sequencia_da_Movimentacao_CC, Baixa
+    Manutencao.MoveFirst: Manutencao.MoveLast
+    With Baixa
+        .AddNew
+            ![Seqüência da Manutenção] = Manutencao![Seqüência da Manutenção]
+            ![Data da Baixa] = Data_do_Movimento
+            ![Valor Pago] = Valor_Total
+            !Conta = "R"
+            ![Seqüência da Movimentação CC] = Sequencia_da_Movimentacao_CC
+            ![Seqüência da Agência] = Sequencia_da_Agencia1
+            ![Seqüência da CC da Agência] = Sequencia_da_CC_da_Agencia1
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Historico] = 249
+                Case 8:  ![Codigo Do Historico] = 250
+                Case 24: ![Codigo Do Historico] = 255
+                Case Else: ![Codigo Do Historico] = 252
+            End Select
+            Select Case Sequencia_da_Agencia1
+                Case 1:  ![Codigo Do Debito] = 4
+                Case 8:  ![Codigo Do Debito] = 5
+                Case 24: ![Codigo Do Debito] = 11212
+                Case Else: ![Codigo Do Debito] = 0
+            End Select
+            Select Case Sequencia_da_Agencia
+                Case 1:  ![Codigo Do Credito] = 4
+                Case 8:  ![Codigo Do Credito] = 5
+                Case 24: ![Codigo Do Credito] = 11212
+                Case Else: ![Codigo Do Credito] = 0
+            End Select
+            !Histórico = Historico
+            ![Seqüência Grupo Despesa] = 34
+            ![Seqüência SubGrupo Despesa] = 246
+        .Update
+        .BookMark = .LastModified
+        Baixa.MoveLast
+    End With
+
+    With Manutencao
+        .Edit
+            ![Seqüência da Baixa] = Baixa![Seqüência da Baixa]
+        .Update
+        .BookMark = .LastModified
+    End With
+
+    SaldoContas CLng(Sequencia_da_Agencia1), CLng(Sequencia_da_CC_da_Agencia1)
+
+    MsgBox "Transferencia Concluida com Sucesso!", vbInformation + vbOKOnly, vaTitulo
 End Sub
-
 
 Private Sub LancamentoContabil(Codigo_do_Debito As Long, Codigo_do_Credito As Long, seqMvto As Long)
  Dim Lancamento As New GRecordSet
@@ -1453,4 +1483,6 @@ End Sub
 Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
    txtCampo(Index).MouseDown
 End Sub
+
+
 

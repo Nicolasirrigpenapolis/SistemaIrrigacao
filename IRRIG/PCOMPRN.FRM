@@ -34,6 +34,7 @@ Begin VB.Form frmPComprN
          Width           =   1515
          _ExtentX        =   0
          _ExtentY        =   0
+         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Microsoft Sans Serif"
             Size            =   11.25
@@ -311,6 +312,7 @@ Begin VB.Form frmPComprN
          Tab(1).Control(0)=   "Grid(1)"
          Tab(1).ControlCount=   1
          TabCaption(2)   =   "Endereço de Entrega"
+         TabPicture(2)   =   "PCOMPRN.frx":0000
          Tab(2).ControlEnabled=   -1  'True
          Tab(2).Control(0)=   "Label(24)"
          Tab(2).Control(0).Enabled=   0   'False
@@ -351,66 +353,66 @@ Begin VB.Form frmPComprN
          Tab(2).ControlCount=   18
          TabCaption(3)   =   "Financeiro"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Botao(7)"
-         Tab(3).Control(1)=   "txtCp(29)"
-         Tab(3).Control(2)=   "bottxtCampo29(2)"
-         Tab(3).Control(3)=   "bottxtCampo29(1)"
-         Tab(3).Control(4)=   "labFdo29"
-         Tab(3).Control(5)=   "Label(33)"
-         Tab(3).Control(6)=   "txtCp(28)"
-         Tab(3).Control(7)=   "bottxtCampo28(2)"
-         Tab(3).Control(8)=   "bottxtCampo28(1)"
-         Tab(3).Control(9)=   "labFdo28"
-         Tab(3).Control(10)=   "Label(32)"
-         Tab(3).Control(11)=   "Grid(7)"
-         Tab(3).Control(12)=   "Botao(6)"
-         Tab(3).Control(13)=   "txtCp(27)"
-         Tab(3).Control(14)=   "bottxtCampo27(2)"
-         Tab(3).Control(15)=   "labFdo27"
-         Tab(3).Control(16)=   "Label(31)"
-         Tab(3).Control(17)=   "Grid(6)"
-         Tab(3).Control(18)=   "Label(30)"
-         Tab(3).Control(19)=   "Formato(2)"
-         Tab(3).Control(20)=   "Label(29)"
-         Tab(3).Control(21)=   "Formato(1)"
-         Tab(3).Control(22)=   "Label(28)"
-         Tab(3).Control(23)=   "Formato(0)"
-         Tab(3).Control(24)=   "Label(27)"
-         Tab(3).Control(25)=   "Label(26)"
-         Tab(3).Control(26)=   "txtCp(15)"
-         Tab(3).Control(27)=   "Label(16)"
-         Tab(3).Control(28)=   "txtCp(14)"
-         Tab(3).Control(29)=   "Label(15)"
-         Tab(3).Control(30)=   "txtCp(13)"
-         Tab(3).Control(31)=   "Label(14)"
-         Tab(3).Control(32)=   "txtCp(12)"
-         Tab(3).Control(33)=   "Label(13)"
-         Tab(3).Control(34)=   "txtCp(11)"
-         Tab(3).Control(35)=   "Label(12)"
-         Tab(3).Control(36)=   "txtCp(10)"
-         Tab(3).Control(37)=   "Label(11)"
-         Tab(3).Control(38)=   "txtCp(9)"
-         Tab(3).Control(39)=   "Label(10)"
+         Tab(3).Control(0)=   "Label(10)"
+         Tab(3).Control(1)=   "txtCp(9)"
+         Tab(3).Control(2)=   "Label(11)"
+         Tab(3).Control(3)=   "txtCp(10)"
+         Tab(3).Control(4)=   "Label(12)"
+         Tab(3).Control(5)=   "txtCp(11)"
+         Tab(3).Control(6)=   "Label(13)"
+         Tab(3).Control(7)=   "txtCp(12)"
+         Tab(3).Control(8)=   "Label(14)"
+         Tab(3).Control(9)=   "txtCp(13)"
+         Tab(3).Control(10)=   "Label(15)"
+         Tab(3).Control(11)=   "txtCp(14)"
+         Tab(3).Control(12)=   "Label(16)"
+         Tab(3).Control(13)=   "txtCp(15)"
+         Tab(3).Control(14)=   "Label(26)"
+         Tab(3).Control(15)=   "Label(27)"
+         Tab(3).Control(16)=   "Formato(0)"
+         Tab(3).Control(17)=   "Label(28)"
+         Tab(3).Control(18)=   "Formato(1)"
+         Tab(3).Control(19)=   "Label(29)"
+         Tab(3).Control(20)=   "Formato(2)"
+         Tab(3).Control(21)=   "Label(30)"
+         Tab(3).Control(22)=   "Grid(6)"
+         Tab(3).Control(23)=   "Label(31)"
+         Tab(3).Control(24)=   "labFdo27"
+         Tab(3).Control(25)=   "bottxtCampo27(2)"
+         Tab(3).Control(26)=   "txtCp(27)"
+         Tab(3).Control(27)=   "Botao(6)"
+         Tab(3).Control(28)=   "Grid(7)"
+         Tab(3).Control(29)=   "Label(32)"
+         Tab(3).Control(30)=   "labFdo28"
+         Tab(3).Control(31)=   "bottxtCampo28(1)"
+         Tab(3).Control(32)=   "bottxtCampo28(2)"
+         Tab(3).Control(33)=   "txtCp(28)"
+         Tab(3).Control(34)=   "Label(33)"
+         Tab(3).Control(35)=   "labFdo29"
+         Tab(3).Control(36)=   "bottxtCampo29(1)"
+         Tab(3).Control(37)=   "bottxtCampo29(2)"
+         Tab(3).Control(38)=   "txtCp(29)"
+         Tab(3).Control(39)=   "Botao(7)"
          Tab(3).ControlCount=   40
          TabCaption(4)   =   "Baixa Produtos"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "txtCp(24)"
-         Tab(4).Control(1)=   "bottxtCampo24(0)"
-         Tab(4).Control(2)=   "labtxtCampo24"
+         Tab(4).Control(0)=   "Grid(2)"
+         Tab(4).Control(1)=   "Botao(0)"
+         Tab(4).Control(2)=   "Botao(1)"
          Tab(4).Control(3)=   "labFdo24"
-         Tab(4).Control(4)=   "Botao(1)"
-         Tab(4).Control(5)=   "Botao(0)"
-         Tab(4).Control(6)=   "Grid(2)"
+         Tab(4).Control(4)=   "labtxtCampo24"
+         Tab(4).Control(5)=   "bottxtCampo24(0)"
+         Tab(4).Control(6)=   "txtCp(24)"
          Tab(4).ControlCount=   7
          TabCaption(5)   =   "Baixa Despesas"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "txtCp(25)"
-         Tab(5).Control(1)=   "bottxtCampo25(0)"
-         Tab(5).Control(2)=   "labtxtCampo25"
+         Tab(5).Control(0)=   "Grid(3)"
+         Tab(5).Control(1)=   "Botao(2)"
+         Tab(5).Control(2)=   "Botao(3)"
          Tab(5).Control(3)=   "labFdo25"
-         Tab(5).Control(4)=   "Botao(3)"
-         Tab(5).Control(5)=   "Botao(2)"
-         Tab(5).Control(6)=   "Grid(3)"
+         Tab(5).Control(4)=   "labtxtCampo25"
+         Tab(5).Control(5)=   "bottxtCampo25(0)"
+         Tab(5).Control(6)=   "txtCp(25)"
          Tab(5).ControlCount=   7
          TabCaption(6)   =   "Mat. Consumo"
          Tab(6).ControlEnabled=   0   'False
@@ -418,129 +420,24 @@ Begin VB.Form frmPComprN
          Tab(6).ControlCount=   1
          TabCaption(7)   =   "Baixa Consumo"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(26)"
-         Tab(7).Control(1)=   "bottxtCampo26(0)"
-         Tab(7).Control(2)=   "labFdo26"
+         Tab(7).Control(0)=   "Grid(5)"
+         Tab(7).Control(1)=   "Botao(4)"
+         Tab(7).Control(2)=   "Botao(5)"
          Tab(7).Control(3)=   "Label(25)"
-         Tab(7).Control(4)=   "Botao(5)"
-         Tab(7).Control(5)=   "Botao(4)"
-         Tab(7).Control(6)=   "Grid(5)"
+         Tab(7).Control(4)=   "labFdo26"
+         Tab(7).Control(5)=   "bottxtCampo26(0)"
+         Tab(7).Control(6)=   "txtCp(26)"
          Tab(7).ControlCount=   7
          Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   7
-            Left            =   -61995
-            TabIndex        =   59
-            TabStop         =   0   'False
-            Top             =   3135
-            Width           =   990
-            _ExtentX        =   0
-            _ExtentY        =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Estornar"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   6
-            Left            =   -63405
-            TabIndex        =   51
-            Top             =   3135
-            Width           =   1350
-            _ExtentX        =   0
-            _ExtentY        =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Gerar Conta"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   5
-            Left            =   -73080
-            TabIndex        =   47
-            Top             =   3300
-            Width           =   1650
-            _ExtentX        =   0
-            _ExtentY        =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Baixa Total"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   480
-            Index           =   4
+            Index           =   0
             Left            =   -74820
-            TabIndex        =   46
-            Top             =   3300
-            Width           =   1620
-            _ExtentX        =   0
-            _ExtentY        =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Baixa Parcial"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   480
-            Index           =   3
-            Left            =   -73140
-            TabIndex        =   42
-            Top             =   3300
+            TabIndex        =   37
+            Top             =   3360
             Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Baixa Total"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   480
-            Index           =   2
-            Left            =   -74820
-            TabIndex        =   41
-            Top             =   3300
-            Width           =   1605
-            _ExtentX        =   0
-            _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Microsoft Sans Serif"
                Size            =   9
@@ -562,6 +459,7 @@ Begin VB.Form frmPComprN
             Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Microsoft Sans Serif"
                Size            =   9
@@ -576,13 +474,14 @@ Begin VB.Form frmPComprN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   0
+            Index           =   2
             Left            =   -74820
-            TabIndex        =   37
-            Top             =   3360
+            TabIndex        =   41
+            Top             =   3300
             Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
+            ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Microsoft Sans Serif"
                Size            =   9
@@ -593,6 +492,117 @@ Begin VB.Form frmPComprN
                Strikethrough   =   0   'False
             EndProperty
             Caption         =   "Baixa Parcial"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   480
+            Index           =   3
+            Left            =   -73140
+            TabIndex        =   42
+            Top             =   3300
+            Width           =   1605
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Baixa Total"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   480
+            Index           =   4
+            Left            =   -74820
+            TabIndex        =   46
+            Top             =   3300
+            Width           =   1620
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Baixa Parcial"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   480
+            Index           =   5
+            Left            =   -73080
+            TabIndex        =   47
+            Top             =   3300
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Baixa Total"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   6
+            Left            =   -63405
+            TabIndex        =   51
+            Top             =   3135
+            Width           =   1350
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Gerar Conta"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   7
+            Left            =   -61995
+            TabIndex        =   59
+            TabStop         =   0   'False
+            Top             =   3135
+            Width           =   990
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Estornar"
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -934,6 +944,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -959,6 +970,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -984,6 +996,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -1040,6 +1053,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -1096,6 +1110,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -1121,6 +1136,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -1177,6 +1193,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   285
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -1232,6 +1249,7 @@ Begin VB.Form frmPComprN
             _ExtentY        =   0
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
             RowHeight       =   315
             ShowGridCaption =   0   'False
             SaveGridStripes =   0   'False
@@ -4608,7 +4626,7 @@ Private Sub ExecutaPreValidacao()
    On Error Resume Next                           'prepara para possiveis erros
    vgPV = vgPriVez
    vgPriVez = True
-   Ok = (vgPWUsuario = "KALINE" Or vgPWUsuario = "GISELE" Or vgPWUsuario = "KENNEDY")
+   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" Or vgPWUsuario = "KENNEDY")
    txtCampo(7).Locked = Not (vgAlterar And txtCampo(7).Editable)
    txtCampo(7).Enabled = Ok Or Not vgAlterar
    Ok = (Pedido_Fechado = False And Produtos_do_Pedido_Compra.RecordCount > 0)
