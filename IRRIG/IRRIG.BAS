@@ -794,15 +794,15 @@ End Sub
 'ROTINA PARA PEGAR A SEQUENCIA DA TABELA
 'PQ O PEGASEQUENCIA DO GAS NW PRESTA
 Public Function SuperPegaSequencial(Tabela As String, Campo As String, Optional Filtro As String) As Long
-   Dim sql As String, Tb As GRecordSet
+   Dim SQL As String, Tb As GRecordSet
    
    On Error Resume Next
    
-   sql = "SELECT MAX([" & Campo & "]) Seq " & _
+   SQL = "SELECT MAX([" & Campo & "]) Seq " & _
          "FROM [" & Tabela & "] " & _
          "WHERE " & IIf(Not Vazio(Filtro), Filtro, "1 = 1")
          
-   Set Tb = vgDb.OpenRecordSet(sql)
+   Set Tb = vgDb.OpenRecordSet(SQL)
          
    If Tb.RecordCount > 0 Then
       SuperPegaSequencial = Tb!Seq + 1
@@ -814,14 +814,14 @@ End Function
 
 'ROTINA PARA PEGAR UMA TABELA AUXILIAR
 Public Sub TbAuxiliar(Tabela As String, Optional Filtro As String, Optional ByRef TabAuxiliar As GRecordSet)
-   Dim sql As String
+   Dim SQL As String
    
    On Error Resume Next
      
-   sql = "SELECT * FROM [" & Tabela & "] " & _
+   SQL = "SELECT * FROM [" & Tabela & "] " & _
          "WHERE " & IIf(Not Vazio(Filtro), Filtro, "1 = 1")
    
-   Set TabAuxiliar = vgDb.OpenRecordSet(sql)
+   Set TabAuxiliar = vgDb.OpenRecordSet(SQL)
    
 End Sub
 
@@ -3011,7 +3011,7 @@ End Function
 'Tabela: 1 = Produtos e Peças; 2 = Conjuntos; 3 = Despesas
 'Reformulado Data 22/02/2013
 Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
-   Dim sql As String
+   Dim SQL As String
 
    On Error Resume Next
          
@@ -3019,11 +3019,11 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
       Case 1 'PRODUTOS E PEÇAS
          'Bom agora que vem a MasterMegaSuperQuery
          'Ela ainda está longe de ser uma BlasterHyperMasterMegaSuperQuery
-         sql = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
+         SQL = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
                   "SELECT B.[Seqüência Do Produto], B.Quantidade, [Quantidade no Estoque] FROM( " & _
                      "SELECT [Seqüência Do Produto], SUM(Qtde) Quantidade FROM( "
                         '--Produtos e Peças do Movimento do Estoque (Entrada e Saída)
-            sql = sql & "SELECT (Case When PME.[Seqüência do Produto] IS NULL Then PME2.[Seqüência do Produto] Else PME.[Seqüência do Produto] END) [Seqüência Do Produto], (Case When MVTO.[Tipo do Movimento] = 0 Then (Case When PME.[Seqüência do Produto] IS NULL Then PME2.Quantidade Else PME.Quantidade END) Else (Case When PME.[Seqüência do Produto] IS NULL Then -PME2.Quantidade Else -PME.Quantidade END) END) Qtde " & _
+            SQL = SQL & "SELECT (Case When PME.[Seqüência do Produto] IS NULL Then PME2.[Seqüência do Produto] Else PME.[Seqüência do Produto] END) [Seqüência Do Produto], (Case When MVTO.[Tipo do Movimento] = 0 Then (Case When PME.[Seqüência do Produto] IS NULL Then PME2.Quantidade Else PME.Quantidade END) Else (Case When PME.[Seqüência do Produto] IS NULL Then -PME2.Quantidade Else -PME.Quantidade END) END) Qtde " & _
                         "FROM [Movimento do Estoque] MVTO LEFT JOIN [Produtos do Movimento Estoque] PME ON MVTO.[Seqüência do Movimento] = PME.[Seqüência do Movimento] " & _
                         "LEFT JOIN [Peças do Movimento Estoque] PME2 ON MVTO.[Seqüência do Movimento] = PME2.[Seqüência do Movimento] " & _
                         "LEFT JOIN Produtos P ON PME.[Seqüência do Produto] = P.[Seqüência do Produto] " & _
@@ -3031,7 +3031,7 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                         "WHERE (P.Industrialização = 0 Or P2.Industrialização = 0) AND MVTO.[Movimento Cancelado] = 0 AND MVTO.Industrialização = 0 " & _
                         "UNION ALL "
                         '--Produtos e Peças do Pedido (Saída)
-            sql = sql & "SELECT (Case When PP.[Seqüência do Produto] IS NULL Then PP2.[Seqüência do Produto] Else PP.[Seqüência do Produto] END) [Seqüência Do Produto], (Case When PP.[Seqüência do Produto] IS NULL Then -PP2.Quantidade Else -PP.Quantidade END) Qtde " & _
+            SQL = SQL & "SELECT (Case When PP.[Seqüência do Produto] IS NULL Then PP2.[Seqüência do Produto] Else PP.[Seqüência do Produto] END) [Seqüência Do Produto], (Case When PP.[Seqüência do Produto] IS NULL Then -PP2.Quantidade Else -PP.Quantidade END) Qtde " & _
                         "FROM Pedido PED LEFT JOIN [Produtos Do Pedido] PP ON PED.[Seqüência do Pedido] = PP.[Seqüência do Pedido] " & _
                         "LEFT JOIN [Peças Do Pedido] PP2 ON PED.[Seqüência do Pedido] = PP2.[Seqüência do Pedido] " & _
                         "LEFT JOIN Produtos P ON PP.[Seqüência do Produto] = P.[Seqüência do Produto] " & _
@@ -3039,24 +3039,24 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                         "WHERE (P.Industrialização = 0 Or P2.Industrialização = 0) AND PED.[Nao Movimentar Estoque] = 0 AND PED.[Pedido Cancelado] = 0 AND PED.[Entrega Futura] = 0 " & _
                         "UNION ALL "
                         '--Baixa Matéria Prima (Apartir dos Produtos) (Saída)
-            sql = sql & "SELECT BxMP.[Seqüência da Matéria Prima], -BxMP.[Quantidade da Matéria Prima] Qtde " & _
+            SQL = SQL & "SELECT BxMP.[Seqüência da Matéria Prima], -BxMP.[Quantidade da Matéria Prima] Qtde " & _
                         "FROM [Baixa MP Produto] BxMP INNER JOIN Produtos P ON BxMP.[Seqüência da Matéria Prima] = P.[Seqüência do Produto] " & _
                         "WHERE P.Industrialização = 0 AND BxMP.[Calcular Estoque] = 1 " & _
                         "UNION ALL "
                         '--Baixa Matéria Prima (Apartir dos Conjuntos) (Saída)
-            sql = sql & "SELECT BxMP.[Seqüência da Matéria Prima], -BxMP.[Quantidade da Matéria Prima] Qtde " & _
+            SQL = SQL & "SELECT BxMP.[Seqüência da Matéria Prima], -BxMP.[Quantidade da Matéria Prima] Qtde " & _
                         "FROM [Baixa MP Conjunto] BxMP INNER JOIN Produtos P ON BxMP.[Seqüência da Matéria Prima] = P.[Seqüência do Produto] " & _
                         "WHERE P.Industrialização = 0 AND BxMP.[Calcular Estoque] = 1 " & _
                         "UNION ALL "
                         '--Baixa Industrialização (Entrada)
                         'Nessa Query colocamos o Produto como sendo a tabela base, pois se no sistema não tiver movimento desse produto
                         'ele nw consegue atualizar, entao basta colocar somente em uma das query, escolhi essa porque eu quis rsrs
-            sql = sql & "SELECT P.[Seqüência do Produto], ISNULL(Bx.Quantidade, 0) Qtde " & _
+            SQL = SQL & "SELECT P.[Seqüência do Produto], ISNULL(Bx.Quantidade, 0) Qtde " & _
                         "FROM Produtos P LEFT JOIN [Baixa Industrialização] Bx ON P.[Seqüência do Produto] = Bx.[Seqüência do Produto] " & _
                         "WHERE P.Industrialização = 0 " & _
                         "UNION ALL "
                         '--Importação Sistema Antigo "
-            sql = sql & "SELECT IPE.[Seqüência do Produto], IPE.Quantidade Qtde " & _
+            SQL = SQL & "SELECT IPE.[Seqüência do Produto], IPE.Quantidade Qtde " & _
                         "FROM [Importação Produtos Estoque] IPE INNER JOIN Produtos P ON IPE.[Seqüência do Produto] = P.[Seqüência do Produto] " & _
                         "WHERE P.Industrialização = 0 " & _
                      ") A " & _
@@ -3066,35 +3066,35 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                   "WHERE Quantidade <> [Quantidade no Estoque] " & _
                ") TabelaA"
    
-         vgDb.Execute sql 'Executa Query
+         vgDb.Execute SQL 'Executa Query
                            
       Case 2 'CONJUNTOS
          'Bom agora que vem a MasterMegaSuperQuery
          'Ela ainda está longe de ser uma BlasterHyperMasterMegaSuperQuery
-         sql = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
+         SQL = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
                   "SELECT B.[Seqüência Do Conjunto], B.Quantidade, [Quantidade no Estoque] FROM( " & _
                      "SELECT [Seqüência Do Conjunto], SUM(Qtde) Quantidade FROM( "
                         '--Conjuntos do Pedido (Saída)
-            sql = sql & "SELECT C.[Seqüência Do Conjunto], -CP.Quantidade Qtde " & _
+            SQL = SQL & "SELECT C.[Seqüência Do Conjunto], -CP.Quantidade Qtde " & _
                         "FROM Conjuntos C LEFT JOIN [Conjuntos Do Pedido] CP ON C.[Seqüência Do Conjunto] = CP.[Seqüência Do Conjunto] " & _
                         "LEFT JOIN Pedido Ped ON CP.[Seqüência Do Pedido] = Ped.[Seqüência Do Pedido] " & _
                         "LEFT JOIN [Nota Fiscal] NF ON Ped.[Seqüência do Pedido] = NF.[Seqüência do Pedido] " & _
                         "WHERE Ped.[Pedido Cancelado] = 0 And [Entrega Futura] = 0 And Ped.[Nao Movimentar Estoque] = 0 " & _
                         "UNION ALL "
                         '--Conjuntos do Movimento do Estoque (Entrada e Saída)
-            sql = sql & "SELECT C.[Seqüência Do Conjunto], (Case When Mvto.[Tipo do Movimento] = 0 Then CM.Quantidade Else -CM.Quantidade END) Qtde " & _
+            SQL = SQL & "SELECT C.[Seqüência Do Conjunto], (Case When Mvto.[Tipo do Movimento] = 0 Then CM.Quantidade Else -CM.Quantidade END) Qtde " & _
                         "FROM Conjuntos C INNER JOIN [Conjuntos Do Movimento Estoque] CM ON C.[Seqüência Do Conjunto] = CM.[Seqüência Do Conjunto] " & _
                         "INNER JOIN [Movimento Do Estoque] Mvto ON CM.[Seqüência Do Movimento] = Mvto.[Seqüência Do Movimento] " & _
                         "WHERE Mvto.[Movimento Cancelado] = 0 And Mvto.[Tipo Movimento] = 0 " & _
                         "UNION ALL "
                         '--Conjuntos do Movimento do Estoque (Entrada de Produção Própria)
-            sql = sql & "SELECT C.[Seqüência Do Conjunto], CM.Quantidade " & _
+            SQL = SQL & "SELECT C.[Seqüência Do Conjunto], CM.Quantidade " & _
                         "FROM Conjuntos C INNER JOIN [Conjuntos Do Movimento Estoque] CM ON C.[Seqüência Do Conjunto] = CM.[Seqüência Do Conjunto] " & _
                         "INNER JOIN [Movimento Do Estoque] Mvto ON CM.[Seqüência Do Movimento] = Mvto.[Seqüência Do Movimento] " & _
                         "WHERE Mvto.[Movimento Cancelado] = 0 And Mvto.[Tipo Movimento] = 1 " & _
                         "UNION ALL "
                         '--Importação Sistema Antigo
-            sql = sql & "SELECT C.[Seqüência Do Conjunto], ICE.Quantidade " & _
+            SQL = SQL & "SELECT C.[Seqüência Do Conjunto], ICE.Quantidade " & _
                         "FROM Conjuntos C INNER JOIN [Importação Conjuntos Estoque] ICE ON C.[Seqüência Do Conjunto] = ICE.[Seqüência Do Conjunto] " & _
                      ") A " & _
                      "WHERE " & IIf(SeqItem > 0, "[Seqüência do Conjunto] = " & SeqItem, "1 = 1") & _
@@ -3103,16 +3103,16 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                   "WHERE Quantidade <> [Quantidade no Estoque] " & _
                ") TabelaA"
                
-         vgDb.Execute sql 'Executa Query
+         vgDb.Execute SQL 'Executa Query
     
       Case 3 'DESPESAS
          'Bom agora que vem a MasterMegaSuperQuery
          'Ela ainda está longe de ser uma BlasterHyperMasterMegaSuperQuery
-         sql = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
+         SQL = "UPDATE TabelaA Set [Quantidade no Estoque] = Quantidade FROM( " & _
                   "SELECT B.[Seqüência da Despesa], B.Quantidade, [Quantidade no Estoque] FROM( " & _
                      "SELECT [Seqüência da Despesa], SUM(Qtde) Quantidade FROM( "
                         '--Despesas do Movimento do Estoque (Entrada e Saída)
-            sql = sql & "SELECT D.[Seqüência da Despesa], (Case When [Movimento Cancelado] = 0 THEN (Case When MVTO.[Tipo do Movimento] = 0 Then Quantidade Else -Quantidade End) Else 0 End) Qtde " & _
+            SQL = SQL & "SELECT D.[Seqüência da Despesa], (Case When [Movimento Cancelado] = 0 THEN (Case When MVTO.[Tipo do Movimento] = 0 Then Quantidade Else -Quantidade End) Else 0 End) Qtde " & _
                         "FROM Despesas D LEFT JOIN [Despesas do Movimento Estoque] DME ON D.[Seqüência da Despesa] = DME.[Seqüência da Despesa] " & _
                         "LEFT JOIN [Movimento do Estoque] MVTO ON DME.[Seqüência do Movimento] = MVTO.[Seqüência do Movimento] " & _
                      ") A " & _
@@ -3121,7 +3121,7 @@ Public Function AtualizaEstoque(Tabela As Byte, SeqItem As Long) As Boolean
                   "WHERE Quantidade <> [Quantidade no Estoque] " & _
                ") TabelaA"
                
-         vgDb.Execute sql 'Executa Query
+         vgDb.Execute SQL 'Executa Query
          
    End Select 'Ufa fim dos Cases ainda bem
 
@@ -3709,7 +3709,7 @@ End Function
 'ESSA ROTINA DEVE SER USADA NO LUGAR DA QtdeEstoqueContabil e AtualizaEstoqueContabil
 'Tipo: 0 - Produto; 1 - Conjunto; 2 - Despesa
 Public Function MegaEstoqueContabil(Tipo As Byte, Item As Long) As Boolean
-   Dim sql As String, Registros As Long
+   Dim SQL As String, Registros As Long
    
    On Error GoTo DeuErro
    
@@ -3717,54 +3717,54 @@ Public Function MegaEstoqueContabil(Tipo As Byte, Item As Long) As Boolean
    Select Case Tipo
       Case 0 'Produto
    
-         sql = "Update Produtos Set [Quantidade Contábil] = Estoque " & _
+         SQL = "Update Produtos Set [Quantidade Contábil] = Estoque " & _
                "FROM Produtos P JOIN ( " & _
                "SELECT [Seqüência Do Produto] Produto, SUM(Estoque) Estoque, EstoqueAnterior " & _
                "FROM(SELECT P.[Seqüência Do Produto], ISNULL(Quantidade, 0) * (CASE [Tipo do Movimento] WHEN 0 THEN 1 ELSE -1 END) AS Estoque, [Quantidade Contábil] EstoqueAnterior " & _
                "FROM Produtos P LEFT JOIN [Baixa Do Estoque Contábil] BX ON P.[Seqüência Do Produto] = BX.[Seqüência Do Produto] "
                If Item > 0 Then 'Atualizar Todos?
-                  sql = sql & "WHERE P.[Seqüência Do Produto] = " & Item 'Atualiza Somente um Item
+                  SQL = SQL & "WHERE P.[Seqüência Do Produto] = " & Item 'Atualiza Somente um Item
                Else
-                  sql = sql & "WHERE P.[Seqüência Do Produto] > " & Item 'Atualiza Todos os Itens
+                  SQL = SQL & "WHERE P.[Seqüência Do Produto] > " & Item 'Atualiza Todos os Itens
                End If
-               sql = sql & " ) A " & _
+               SQL = SQL & " ) A " & _
                            "GROUP BY [Seqüência do Produto], EstoqueAnterior) TabelaA ON P.[Seqüência do Produto] = TabelaA.Produto"
                
-         vgDb(1).Execute sql, False, Registros 'Vamos Atualizar, mas sem comitar
+         vgDb(1).Execute SQL, False, Registros 'Vamos Atualizar, mas sem comitar
          If Registros > 1 And Item > 0 Then GoTo SaiDaSub 'Opa tem coisa errada aí
             
       Case 1 'Conjunto
    
-         sql = "Update Conjuntos Set [Quantidade Contábil] = Estoque " & _
+         SQL = "Update Conjuntos Set [Quantidade Contábil] = Estoque " & _
                "FROM Conjuntos C JOIN (SELECT [Seqüência do Conjunto] Conjunto, SUM(Estoque) Estoque, EstoqueAnterior " & _
                "FROM(SELECT C.[Seqüência do Conjunto], ISNULL(Quantidade, 0) * (CASE [Tipo do Movimento] WHEN 0 THEN 1 ELSE -1 END) AS Estoque, [Quantidade Contábil] EstoqueAnterior " & _
                "FROM Conjuntos C LEFT JOIN [Baixa do Estoque Contábil] BX ON C.[Seqüência do Conjunto] = BX.[Seqüência do Conjunto] "
                If Item > 0 Then 'Atualizar Todos?
-                  sql = sql & "WHERE C.[Seqüência Do Conjunto] = " & Item 'Atualiza Somente um Item
+                  SQL = SQL & "WHERE C.[Seqüência Do Conjunto] = " & Item 'Atualiza Somente um Item
                Else
-                  sql = sql & "WHERE C.[Seqüência Do Conjunto] > " & Item 'Atualiza Todos os Itens
+                  SQL = SQL & "WHERE C.[Seqüência Do Conjunto] > " & Item 'Atualiza Todos os Itens
                End If
-               sql = sql & " ) A " & _
+               SQL = SQL & " ) A " & _
                            "GROUP BY [Seqüência do Conjunto], EstoqueAnterior) TabelaA ON C.[Seqüência do Conjunto] = TabelaA.Conjunto"
          
-         vgDb(1).Execute sql, False, Registros 'Vamos Atualizar, mas sem comitar
+         vgDb(1).Execute SQL, False, Registros 'Vamos Atualizar, mas sem comitar
          If Registros > 1 And Item > 0 Then GoTo SaiDaSub 'Opa tem coisa errada aí
       
       Case 2 'Despesa
    
-         sql = "Update Despesas Set [Quantidade Contábil] = Estoque " & _
+         SQL = "Update Despesas Set [Quantidade Contábil] = Estoque " & _
                "FROM Despesas D JOIN (SELECT [Seqüência da Despesa] Despesa, SUM(Estoque) Estoque, EstoqueAnterior " & _
                "FROM(SELECT D.[Seqüência da Despesa], ISNULL(Quantidade, 0) * (CASE [Tipo do Movimento] WHEN 0 THEN 1 ELSE -1 END) AS Estoque, [Quantidade Contábil] EstoqueAnterior " & _
                "FROM Despesas D LEFT JOIN [Baixa Do Estoque Contábil] BX ON D.[Seqüência da Despesa] = BX.[Seqüência da Despesa] "
                If Item > 0 Then 'Atualizar Todos?
-                  sql = sql & "WHERE D.[Seqüência da Despesa] = " & Item 'Atualiza Somente um Item
+                  SQL = SQL & "WHERE D.[Seqüência da Despesa] = " & Item 'Atualiza Somente um Item
                Else
-                  sql = sql & "WHERE D.[Seqüência da Despesa] > " & Item 'Atualiza Todos os Itens
+                  SQL = SQL & "WHERE D.[Seqüência da Despesa] > " & Item 'Atualiza Todos os Itens
                End If
-               sql = sql & " ) A " & _
+               SQL = SQL & " ) A " & _
                            "GROUP BY [Seqüência da Despesa], EstoqueAnterior) TabelaA ON D.[Seqüência da Despesa] = TabelaA.Despesa"
                            
-         vgDb(1).Execute sql, False, Registros 'Vamos Atualizar, mas sem comitar
+         vgDb(1).Execute SQL, False, Registros 'Vamos Atualizar, mas sem comitar
          If Registros > 1 And Item > 0 Then GoTo SaiDaSub 'Opa tem coisa errada aí
    
    End Select
@@ -4343,7 +4343,7 @@ Public Function ValorCusto(SeqProd As Long, Optional Processar As Boolean = True
    frmInove.AtualizaTodosCustos ' Inove Tecnologia
    Exit Function
 
-   Dim sql As String, MateriaPrima As New GRecordSet, TemReceita As Boolean
+   Dim SQL As String, MateriaPrima As New GRecordSet, TemReceita As Boolean
    Dim Galvanizado As New GRecordSet
 
    On Error Resume Next
@@ -4363,7 +4363,7 @@ Public Function ValorCusto(SeqProd As Long, Optional Processar As Boolean = True
    'Tenha Respeito com essa Query por favor rsrs
    'Essa Query vai atualizar o custo das matéria prima (adquiridas de terceiros) - Movimento do Estoque
    '1ª Parte
-   sql = "UPDATE TabelaA Set [Valor de Custo] = Custo, [Valor Total] = Round(Custo * [Margem de Lucro], 2) " & _
+   SQL = "UPDATE TabelaA Set [Valor de Custo] = Custo, [Valor Total] = Round(Custo * [Margem de Lucro], 2) " & _
          "FROM( " & _
                 "SELECT P2.[Seqüência do Produto], P2.[Valor de Custo], P2.[Valor Total], P2.[Margem de Lucro], SeqMvto, CAST(ISNULL(Custo, 0) AS decimal(12, 4)) Custo " & _
                 "FROM( " & _
@@ -4373,7 +4373,7 @@ Public Function ValorCusto(SeqProd As Long, Optional Processar As Boolean = True
                               "WHERE PME2.[Id do Pedido] = seqMvto AND PME2.[Id do Produto] = Produto " & _
                               "ORDER BY PME2.[Id do Pedido] Desc " & _
                               ") Custo "
-           sql = sql & "FROM( " & _
+           SQL = SQL & "FROM( " & _
                               "SELECT P.[Seqüência do Produto] Produto, P.[Valor de Custo], MAX(ME.[Id do Pedido]) SeqMvto " & _
                               "FROM Produtos P LEFT JOIN [Produtos do Pedido Compra] PME ON P.[Seqüência do Produto] = PME.[Id do Produto] " & _
                               "INNER JOIN [Pedido de Compra Novo] ME ON PME.[Id do Pedido] = ME.[Id do Pedido] " & _
@@ -4386,7 +4386,7 @@ Public Function ValorCusto(SeqProd As Long, Optional Processar As Boolean = True
                 "WHERE P2.[Valor de Custo] <> ISNULL(Custo, 0) AND MP.[Seqüência do Produto] IS NULL AND " & IIf(SeqProd > 0, "P2.[Seqüência do Produto] = " & SeqProd, "1 = 1") & _
              ") TabelaA"
              
-   vgDb(1).Execute sql, True 'Atualizando
+   vgDb(1).Execute SQL, True 'Atualizando
                 
 AtualizaProdutoComReceita:
 
@@ -4394,13 +4394,13 @@ AtualizaProdutoComReceita:
    'Essa Query vai atualizar os produtos que tem receita, ou seja, os de fabricação própria
    'Essa Query leva em consideração o valor de custo das matéria prima (adquiridos de terceiros)
    '2ª Parte
-      sql = ";WITH ProdutosHierarquicos(id, idPai, Nivel) AS " & _
+      SQL = ";WITH ProdutosHierarquicos(id, idPai, Nivel) AS " & _
             "( " & _
                "SELECT [Seqüência da Matéria Prima] As id, [Seqüência do Produto] As idPai, 1 As 'Nivel' " & _
                "FROM [Matéria Prima] " & _
                "WHERE " & IIf(SeqProd > 0, "[Seqüência da Matéria Prima] = " & SeqProd, "1 = 1") & _
                "UNION ALL "
-   sql = sql & "SELECT M.[Seqüência da Matéria Prima] As id, M.[Seqüência do Produto] As idPai, c.Nivel + 1 As 'Nivel' " & _
+   SQL = SQL & "SELECT M.[Seqüência da Matéria Prima] As id, M.[Seqüência do Produto] As idPai, c.Nivel + 1 As 'Nivel' " & _
                "FROM [Matéria Prima] M INNER JOIN ProdutosHierarquicos C ON M.[Seqüência da Matéria Prima] = C.idPai " & _
             "), " & _
             "SuperCusto(Produto, ValorCusto, MateriaPrima, QtdeUsada) AS " & _
@@ -4412,7 +4412,7 @@ AtualizaProdutoComReceita:
                "SELECT S.Produto, CAST(0 As decimal(12, 4)), M.[Seqüência da Matéria Prima], CAST(M.[Quantidade de Matéria Prima] * S.QtdeUsada As decimal(9, 3)) " & _
                "FROM [Matéria Prima] AS M INNER JOIN SuperCusto AS S ON M.[Seqüência Do Produto] = S.MateriaPrima " & _
             ") "
-sql = sql & "UPDATE Produtos SET [Valor de Custo] = Custo, [Valor Total] = Round(Custo * [Margem de Lucro], 2) " & _
+SQL = SQL & "UPDATE Produtos SET [Valor de Custo] = Custo, [Valor Total] = Round(Custo * [Margem de Lucro], 2) " & _
             "FROM Produtos P JOIN ( " & _
                                     "SELECT Produto, ROUND(Custo * (CASE WHEN Grupo Like 'Semi' THEN 1 ELSE 1 + ([Parâmetros do Produto].[Percentual Acréscimo Produto] / 100) END), 4) Custo, [Valor de Custo], Grupo " & _
                                     "FROM " & _
@@ -4427,7 +4427,7 @@ sql = sql & "UPDATE Produtos SET [Valor de Custo] = Custo, [Valor Total] = Round
                                           ") TabelaA CROSS JOIN [Parâmetros do Produto] " & _
                                  ") TabelaA ON P.[Seqüência do Produto] = TabelaA.Produto"
                                  
-   vgDb(1).Execute sql, True 'Atualizando
+   vgDb(1).Execute SQL, True 'Atualizando
                                      
 End Function
 
@@ -5012,14 +5012,14 @@ End Sub
 
 'verifica se a mascara da data tem "99" e substitui pelo correto (dd/mm/yy)
 Public Function TrataMaskData(St As String) As String
-   Dim k As String, RetVal As String, dt As Date, i As Integer
+   Dim k As String, RetVal As String, Dt As Date, i As Integer
    RetVal$ = St$
    If InStr(RetVal$, "9") > 0 Then                'se a data for 99/99/999 vamos substituir por dd/mm/yy
       If InStr(RetVal$, ":") > 0 Then
          k$ = "hms"
       Else
-         dt = Format$("25/12/98", "Short date")
-         k$ = CStr(dt)
+         Dt = Format$("25/12/98", "Short date")
+         k$ = CStr(Dt)
          If Left$(k$, 2) = "25" Then k$ = "dmy" Else k$ = "mdy"
       End If
       For i = 1 To Len(RetVal$)
@@ -6136,15 +6136,15 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       .Menu_Cancela.Enabled = i
       If F.vgTipo = TP_TABELA Then                'só na tabela pode ter inclusão e exclusão
          i = (F.vgTemExclusao And vgHaRegNaoInc)
-         .BotExclui.Enabled = i
+         .botExclui.Enabled = i
          .Menu_Exclui.Enabled = i
          i = (F.vgEmBrowse = False And F.vgTemInclusao And vgAcao = ACAO_NAVEGANDO)
-         .BotInclui.Enabled = i
+         .botInclui.Enabled = i
          .Menu_Inclui.Enabled = i
       Else                                        'o form não é tabela
-         .BotInclui.Enabled = False               'desativa botões de inclui
+         .botInclui.Enabled = False               'desativa botões de inclui
          .Menu_Inclui.Enabled = False             'desativa opção de menu inclui
-         .BotExclui.Enabled = False               'e exclui
+         .botExclui.Enabled = False               'e exclui
          .Menu_Exclui.Enabled = False
          .Menu_Repeticao.Enabled = False
       End If
@@ -6310,7 +6310,7 @@ Public Sub PrepBotoes(F As Form, vgAcao As Integer)
       .Menu_677(5).Visible = (vgPWUsuario = "RUBENS" Or vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_677(5).Tag)))
       .Menu_1351(4).Visible = (False And (Permitido("Materia prima orçamento", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(4).Tag)))
       .Menu_1351(6).Visible = (False And (Permitido("Check list maquina", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(6).Tag)))
-      .Menu_1088(6).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ALEXANDRE" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "LUANA" And (Permitido("Projeto de Irrigação", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1088(6).Tag)))
+      .Menu_1088(6).Visible = (vgPWUsuario = "YGOR" Or vgPWUsuario = "FABIO WEGENER" Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ALEXANDRE" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "LUANA" And (Permitido("Projeto de Irrigação", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1088(6).Tag)))
       .Menu_1095(7).Visible = (vgPWUsuario = "YGOR" And (PermitidoMenu(.Menu_1095(7).Tag)))
       .Menu_1351(7).Visible = (False And (PermitidoMenu(.Menu_1351(7).Tag)))
       .Menu_1351(8).Visible = (False And (Permitido("Simula estoque", ACAO_NAVEGANDO) And PermitidoMenu(.Menu_1351(8).Tag)))
