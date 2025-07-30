@@ -1,6 +1,0 @@
-[History]
-1=#P0#=mb	#P1#=txtCp_Change	#P2#=IRRIG/frmBxContas/txtCp_Change	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250729134338	#P7#=0	#P8#=15	.
-2=#P0#=mb	#P1#=ExecutaPreValidacao	#P2#=IRRIG/frmBxContas/ExecutaPreValidacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729134258	#P7#=0	#P8#=69	.
-3=#P0#=mb	#P1#=Lancar	#P2#=IRRIG/frmtransfer/Lancar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729132901	#P7#=0	#P8#=74	.
-4=#P0#=mb	#P1#=LancamentoContabil	#P2#=IRRIG/frmtransfer/LancamentoContabil	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729131421	#P7#=0	#P8#=-3	.
-5=#P0#=mb	#P1#=Filtro	#P2#=IRRIG/frmtransfer/Filtro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250729132120	#P7#=0	#P8#=24	.
