@@ -79,6 +79,7 @@ Begin VB.Form frmFinanc
          Width           =   3630
          _ExtentX        =   0
          _ExtentY        =   0
+         ForeColor       =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Verdana"
             Size            =   12
@@ -461,6 +462,7 @@ Begin VB.Form frmFinanc
          _ExtentY        =   0
          EditTextColor   =   -2147483640
          CellTextColor   =   -2147483640
+         StripesBackColor=   14737632
          RowHeight       =   330
          ShowGridCaption =   0   'False
          SaveGridStripes =   0   'False
@@ -1552,7 +1554,7 @@ Private Function ValidaDesconto()
  If Valor_do_Desconto = 0 Then
     Exit Function
  End If
- If (Valor_Total_do_Projeto = 0) Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "LUANA" Or vgPWUsuario = "YGOR" Then
+ If (Valor_Total_do_Projeto = 0) Or vgPWUsuario = "FABIO WEGENER" Or vgPWUsuario = "WAGNER" Or vgPWUsuario = "ISABELA MONTEIRO" Or vgPWUsuario = "LUANA" Or vgPWUsuario = "YGOR" Then
     Exit Function
  End If
  
