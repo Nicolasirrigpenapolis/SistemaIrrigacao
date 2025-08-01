@@ -25,12 +25,147 @@ Begin VB.Form frmNotaFisc
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   14
-         Left            =   9705
-         TabIndex        =   94
+         Height          =   435
+         Index           =   0
+         Left            =   11430
+         TabIndex        =   85
          TabStop         =   0   'False
-         Top             =   375
+         Top             =   525
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "DANFE"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   1
+         Left            =   10020
+         TabIndex        =   90
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   2
+         Left            =   11430
+         TabIndex        =   75
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   9
+         Left            =   9825
+         TabIndex        =   76
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   10
+         Left            =   15180
+         TabIndex        =   82
+         Top             =   60
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   75
+         TabIndex        =   83
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14475
+         TabIndex        =   84
+         TabStop         =   0   'False
+         Top             =   1560
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -70,11 +205,11 @@ Begin VB.Form frmNotaFisc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   12
-         Left            =   14475
-         TabIndex        =   84
+         Index           =   14
+         Left            =   9705
+         TabIndex        =   94
          TabStop         =   0   'False
-         Top             =   1560
+         Top             =   375
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -88,141 +223,6 @@ Begin VB.Form frmNotaFisc
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   75
-         TabIndex        =   83
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   10
-         Left            =   15180
-         TabIndex        =   82
-         Top             =   60
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   9
-         Left            =   9825
-         TabIndex        =   76
-         TabStop         =   0   'False
-         Top             =   1560
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   2
-         Left            =   11430
-         TabIndex        =   75
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   1
-         Left            =   10020
-         TabIndex        =   90
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   0
-         Left            =   11430
-         TabIndex        =   85
-         TabStop         =   0   'False
-         Top             =   525
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "DANFE"
-         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin TabDlg.SSTab Tabs 
@@ -423,13 +423,13 @@ Begin VB.Form frmNotaFisc
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "txtCp(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(3)"
+         Tab(0).Control(86)=   "Botao(8)"
          Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "Botao(4)"
+         Tab(0).Control(87)=   "Botao(5)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "Botao(5)"
+         Tab(0).Control(88)=   "Botao(4)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "Botao(8)"
+         Tab(0).Control(89)=   "Botao(3)"
          Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
@@ -603,11 +603,11 @@ Begin VB.Form frmNotaFisc
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   8
-            Left            =   5505
-            TabIndex        =   86
+            Index           =   3
+            Left            =   11175
+            TabIndex        =   22
             TabStop         =   0   'False
-            Top             =   2835
+            Top             =   1905
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -625,9 +625,31 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   7
-            Left            =   -71670
-            TabIndex        =   39
+            Index           =   4
+            Left            =   5205
+            TabIndex        =   14
+            TabStop         =   0   'False
+            Top             =   1440
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   5
+            Left            =   5100
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -669,9 +691,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   5100
-            TabIndex        =   5
+            Index           =   7
+            Left            =   -71670
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -691,33 +713,11 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   5205
-            TabIndex        =   14
+            Index           =   8
+            Left            =   5505
+            TabIndex        =   86
             TabStop         =   0   'False
-            Top             =   1440
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   3
-            Left            =   11175
-            TabIndex        =   22
-            TabStop         =   0   'False
-            Top             =   1905
+            Top             =   2835
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -10076,9 +10076,14 @@ OcultaValor:
           Prod_qCom = Item!Quantidade                 ' quantidade de comercialização
           Prod_vUnCom = 0                             ' valor unitário de comercialização, campo de mera demonstração deve ser o resultado da divisão do vProd / qCom
           Prod_vProd = 0                              ' valor do total do item
-          'Bom Depois de muito tempo mandaram fazer a coisa certa então vamos consertar essas NFe de Conjuntos
-          If Not LayoutAntigo Then
-          infCpl = infCpl & " " & Item!Quantidade & "  " & Prod_xProd & ":" & "-"
+          'CAMPO QUE FAZ O PREENCHIMENTO DAS PEÇAS NA OBSERVAÇÃO
+           If Not LayoutAntigo Then
+             'Para alguns cdigos gerais no devemos incluir o nome da pea na observao
+             If Sequencia_do_Geral <> 39499 And _
+                Sequencia_do_Geral <> 39519 And _
+                Sequencia_do_Geral <> 39520 Then
+                infCpl = infCpl & " " & Item!Quantidade & "  " & Prod_xProd & ":" & "-"
+             End If
           End If
           'Não Usam esse Campo usam Apenas no Sistema para Consulta
           'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes

@@ -575,6 +575,8 @@ Public Sub mdiLoad()
   frmAtaGeral.Show
 End Sub
 
+
+
 'Precisa Atualizar?
 Private Sub VerificaAtualizacao()
    Dim Origem As String
@@ -588,12 +590,18 @@ Private Sub VerificaAtualizacao()
   If Parametros![Nome do Servidor] & " - " = UCase(vgNomeEstacao) Then
      'If UCase(vgNomeEstacao) = "SRV01 - " Then
         Origem = Parametros![Caminho Atualização] 'Origem da Atualização, Terminal Service
+       '  MsgBox "Caminho de atualização (servidor): " & Origem
      Else
         Origem = Parametros![Caminho Atualização 2] 'Origem da Atualização, Máquina Local
+       ' MsgBox "Caminho de atualização (local): " & Origem
      End If
     'Rotina Alterada pq todas vez que trocava nome do servidor tinha que muda no vb
-    
+   ' If Dir(Origem & "IRRIG.EXE") = "" Then
+  '    MsgBox "Arquivo IRRIG.EXE não encontrado em: " & Origem
+  ' End If
+   
    If FileDateTime(Origem & "IRRIG.EXE") <> FileDateTime(App.path & "\IRRIG.EXE") Then
+ '    MsgBox "Chamando o Atualizador", vbInformation
       Shell App.path & "\Atualizador.exe", vbNormalFocus 'Chama Atualizador
    End If
    
