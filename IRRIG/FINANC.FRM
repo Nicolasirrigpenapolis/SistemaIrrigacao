@@ -25,11 +25,11 @@ Begin VB.Form frmFinanc
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   405
-         Index           =   2
+         Index           =   0
          Left            =   180
-         TabIndex        =   17
+         TabIndex        =   15
          TabStop         =   0   'False
-         Top             =   3495
+         Top             =   4440
          Width           =   3630
          _ExtentX        =   0
          _ExtentY        =   0
@@ -38,12 +38,12 @@ Begin VB.Form frmFinanc
             Name            =   "Verdana"
             Size            =   12
             Charset         =   0
-            Weight          =   400
+            Weight          =   700
             Underline       =   0   'False
-            Italic          =   0   'False
+            Italic          =   -1  'True
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Atualizar Produtos"
+         Caption         =   "Salvar Dados"
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
@@ -71,11 +71,11 @@ Begin VB.Form frmFinanc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   405
-         Index           =   0
+         Index           =   2
          Left            =   180
-         TabIndex        =   15
+         TabIndex        =   17
          TabStop         =   0   'False
-         Top             =   4440
+         Top             =   3495
          Width           =   3630
          _ExtentX        =   0
          _ExtentY        =   0
@@ -84,12 +84,12 @@ Begin VB.Form frmFinanc
             Name            =   "Verdana"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
-            Italic          =   -1  'True
+            Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Salvar Dados"
+         Caption         =   "Atualizar Produtos"
          CaptionOffset   =   50
       End
       Begin VB.TextBox txtCp 
@@ -1072,47 +1072,39 @@ Public txtVendedor_Intermediario As Object, txtRebiut As Object, txtPercentual_d
 Public txtPercentual_Rebiut As Object, lblParcelamento As Object, gridParcelas As Object
 Public txtObs As Object, txtMemoAuxiliar As Object
 
-Private Sub AjustaValores()
-   Dim TotalPecas As New GRecordSet, TotalConjuntos As New GRecordSet
-   Dim ValorMvto As Currency, TotalServicos As New GRecordSet
-  
-   On Error GoTo DeuErro
-   
- 
-   Set TotalPecas = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Peças do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-   Set TotalConjuntos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Conjuntos do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-   Set TotalServicos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Serviços do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-                                                                                              
-   ValorMvto = TotalPecas!Total + TotalConjuntos!Total + TotalServicos!Total + Valor_do_Frete - Abs(Valor_do_Desconto)
-   ValorMvto = Format(ValorMvto, "##,###,##0.00")
-   
-   'Atualizando
-   vgDb.BeginTrans
-   'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total das Peças] = " & Substitui(TotalPecas!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total dos Conjuntos] = " & Substitui(TotalConjuntos!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   'vgDb.Execute "Update [Projeto de Irrigação] Set [Total dos Serviços] = " & Substitui(TotalServicos!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total do Projeto] = " & Substitui(CStr(ValorMvto), ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Local de Entrega] = '" & Local_de_Entrega & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Prazo de Entrega Previsto] = '" & Prazo_de_Entrega_Previsto & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Entrega Tecnica] = '" & Entrega_Tecnica & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Vendedor Intermediario] = '" & Vendedor_Intermediario & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Percentual do Vendedor] = " & Substitui(txtPercentual_do_Vendedor.Value, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set Rebiut = '" & Rebiut & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Percentual Rebiut] = " & Substitui(txtPercentual_Rebiut.Value, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Valor do Frete] = " & Substitui(txtValor_do_Frete.Value, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Valor do Desconto] = " & Substitui(txtValor_do_Desconto.Value, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Forma de Pagamento] = '" & Forma_de_Pagamento & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set Obs = '" & Obs & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.CommitTrans
-     
-   AjustaValores2
-      
-DeuErro:
-   If Err Then
-      MsgBox Err.Descption, vbCritical + vbOKOnly, vaTitulo
-      vgDb.RollBackTrans
-   End If
 
+Private Sub AjustaValores()
+Dim TotalPecas As New GRecordSet, TotalConjuntos As New GRecordSet
+Dim ValorMvto As Currency, TotalServicos As New GRecordSet
+On Error GoTo DeuErro
+Set TotalPecas = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Peças do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+Set TotalConjuntos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Conjuntos do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+Set TotalServicos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Serviços do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+ValorMvto = TotalPecas!Total + TotalConjuntos!Total + TotalServicos!Total + Valor_do_Frete - Abs(Valor_do_Desconto)
+'Atualizando
+vgDb.BeginTrans
+'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total das Peças] = " & FormatForSQL(TotalPecas!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total dos Conjuntos] = " & FormatForSQL(TotalConjuntos!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+'vgDb.Execute "Update [Projeto de Irrigação] Set [Total dos Serviços] = " & FormatForSQL(TotalServicos!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+'vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total do Projeto] = " & FormatForSQL(ValorMvto) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Local de Entrega] = '" & Local_de_Entrega & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Prazo de Entrega Previsto] = '" & Prazo_de_Entrega_Previsto & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Entrega Tecnica] = '" & Entrega_Tecnica & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Vendedor Intermediario] = '" & Vendedor_Intermediario & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Percentual do Vendedor] = " & FormatForSQL(txtPercentual_do_Vendedor.Value) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set Rebiut = '" & Rebiut & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Percentual Rebiut] = " & FormatForSQL(txtPercentual_Rebiut.Value) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Valor do Frete] = " & FormatForSQL(txtValor_do_Frete.Value) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Valor do Desconto] = " & FormatForSQL(txtValor_do_Desconto.Value) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Forma de Pagamento] = '" & Forma_de_Pagamento & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set Obs = '" & Obs & "' WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.CommitTrans
+AjustaValores2
+DeuErro:
+If Err Then
+MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+vgDb.RollBackTrans
+End If
 End Sub
 
 
@@ -1144,6 +1136,12 @@ Private Sub CarregaGrids()
   ' MostraFormulas
 End Sub
 
+Private Function FormatForSQL(ByVal val As Variant) As String
+    Dim strVal As String
+    strVal = CStr(val)
+    strVal = Replace(Replace(Replace(Replace(Replace(strVal, "R$", ""), "$", ""), " ", ""), ".", ""), ",", ".")
+    FormatForSQL = strVal
+End Function
 
 Private Sub Parcelar()
  Dim Parcelas As New GRecordSet
@@ -1394,36 +1392,29 @@ Private Sub ValorOriginal()
 End Sub
 
 
+
 Private Sub AjustaValores2()
-   Dim TotalPecas As New GRecordSet, TotalConjuntos As New GRecordSet
-   Dim ValorMvto As Currency, TotalServicos As New GRecordSet
-  
-   On Error GoTo DeuErro
-   
- 
-   Set TotalPecas = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Peças do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-   Set TotalConjuntos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Conjuntos do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-   Set TotalServicos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Serviços do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
-   
-                                                                                              
-   ValorMvto = TotalPecas!Total + TotalConjuntos!Total + TotalServicos!Total + Valor_do_Frete - Abs(Valor_do_Desconto)
-   ValorMvto = Format(ValorMvto, "##,###,##0.00")
-   
-   'Atualizando
-   vgDb.BeginTrans
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total das Peças] = " & Substitui(TotalPecas!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total dos Conjuntos] = " & Substitui(TotalConjuntos!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Total dos Serviços] = " & Substitui(TotalServicos!Total, ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total do Projeto] = " & Substitui(CStr(ValorMvto), ",", ".", SO_UM) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
-   vgDb.CommitTrans
-       
+Dim TotalPecas As New GRecordSet, TotalConjuntos As New GRecordSet
+Dim ValorMvto As Currency, TotalServicos As New GRecordSet
+On Error GoTo DeuErro
+Set TotalPecas = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Peças do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+Set TotalConjuntos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Conjuntos do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+Set TotalServicos = vgDb.OpenRecordSet("SELECT ROUND(SUM([Valor Total]), 2) Total FROM [Serviços do Projeto] WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value)
+ValorMvto = TotalPecas!Total + TotalConjuntos!Total + TotalServicos!Total + Valor_do_Frete - Abs(Valor_do_Desconto)
+'Atualizando
+vgDb.BeginTrans
+vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total das Peças] = " & FormatForSQL(TotalPecas!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total dos Conjuntos] = " & FormatForSQL(TotalConjuntos!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Total dos Serviços] = " & FormatForSQL(TotalServicos!Total) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.Execute "Update [Projeto de Irrigação] Set [Valor Total do Projeto] = " & FormatForSQL(ValorMvto) & " WHERE [Sequencia do Projeto] = " & txtSeq_Projeto.Value
+vgDb.CommitTrans
 DeuErro:
-   If Err Then
-      MsgBox Err.Descption, vbCritical + vbOKOnly, vaTitulo
-      vgDb.RollBackTrans
-   End If
-   Financeiro
-   MostraFormulas
+If Err Then
+MsgBox Err.Description, vbCritical + vbOKOnly, vaTitulo
+vgDb.RollBackTrans
+End If
+Financeiro
+MostraFormulas
 End Sub
 
 
@@ -1695,16 +1686,19 @@ Private Sub ExecutaVisivel()
    If Err Then Err.Clear                          'se houve erro, limpa...
 End Sub
 
-'evento - quando o conteúdo do campo for alterado
+
 Private Sub txtCp_Change(Index As Integer)
-   If vgPriVez Or txtCampo(Index).PriVez Then Exit Sub
-   InicializaApelidos COM_TEXTBOX                         'inicializa apelidos com o que esta sendo digitado
-   txtCampo(Index).Change
-   If Index = 1 Or Index = 10 Or Index = 11 Or Index = 12 Then
-      ExecutaVisivel
-      ExecutaPreValidacao
-      MostraFormulas
-   End If
+If vgPriVez Or txtCampo(Index).PriVez Then Exit Sub
+InicializaApelidos COM_TEXTBOX 'inicializa apelidos com o que esta sendo digitado
+txtCampo(Index).Change
+If Index = 6 Then
+If Len(txtCampo(6).Value) > 13 Then txtCampo(6).Value = Left(txtCampo(6).Value, 13)  ' Inclui sinal e 12 dígitos
+End If
+If Index = 1 Or Index = 10 Or Index = 11 Or Index = 12 Then
+ExecutaVisivel
+ExecutaPreValidacao
+MostraFormulas
+End If
 End Sub
 
 'evento - quando o campo receber o foco
@@ -1907,7 +1901,7 @@ Public Sub DefineControles()
 
    Set txtCampo(6).CtPri = txtCp(6)
    txtCampo(6).DataType = 1
-   txtCampo(6).Mask = "99.999.999,99"
+   txtCampo(6).Mask = " -999.999.999,99"
    txtCampo(6).BoundColumn = ""
    txtCampo(6).ListFields = ""
    txtCampo(6).OrderFields = ""

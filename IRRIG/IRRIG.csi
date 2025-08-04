@@ -1,5 +1,7 @@
 [History]
-1=#P0#=mb	#P1#=Status	#P2#=IRRIG/modIRRIG/Status	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250801085747	#P7#=0	#P8#=0	.
-2=#P0#=mb	#P1#=mdiLoad	#P2#=IRRIG/modIRRIG/mdiLoad	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250801085746	#P7#=0	#P8#=15	.
-3=#P0#=mb	#P1#=VerificaAtualizacao	#P2#=IRRIG/modIRRIG/VerificaAtualizacao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250801085758	#P7#=0	#P8#=16	.
-4=#P0#=mb	#P1#=BlasterNFe400	#P2#=IRRIG/frmNotaFisc/BlasterNFe400	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250801091747	#P7#=0	#P8#=1175	.
+1=#P0#=mb	#P1#=Form_KeyPress	#P2#=IRRIG/frmFinanc/Form_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250804093307	#P7#=0	#P8#=4	.
+2=#P0#=mb	#P1#=Parcelar	#P2#=IRRIG/frmFinanc/Parcelar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091014	#P7#=0	#P8#=0	.
+3=#P0#=mb	#P1#=CarregaContas	#P2#=IRRIG/frmFinanc/CarregaContas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091204	#P7#=0	#P8#=-3	.
+4=#P0#=mb	#P1#=ValorOriginal	#P2#=IRRIG/frmFinanc/ValorOriginal	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804085246	#P7#=0	#P8#=61	.
+5=#P0#=mb	#P1#=CarregaGrids	#P2#=IRRIG/frmFinanc/CarregaGrids	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091108	#P7#=0	#P8#=-3	.
+6=#P0#=mb	#P1#=AjustaValores	#P2#=IRRIG/frmFinanc/AjustaValores	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804083751	#P7#=0	#P8#=32	.

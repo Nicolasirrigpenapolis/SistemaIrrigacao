@@ -25,147 +25,12 @@ Begin VB.Form frmNotaFisc
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   0
-         Left            =   11430
-         TabIndex        =   85
-         TabStop         =   0   'False
-         Top             =   525
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "DANFE"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   1
-         Left            =   10020
-         TabIndex        =   90
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Imprimir"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   2
-         Left            =   11430
-         TabIndex        =   75
-         TabStop         =   0   'False
-         Top             =   75
-         Width           =   1395
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Cancelar"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   9
-         Left            =   9825
-         TabIndex        =   76
+         Index           =   14
+         Left            =   9705
+         TabIndex        =   94
          TabStop         =   0   'False
-         Top             =   1560
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   10
-         Left            =   15180
-         TabIndex        =   82
-         Top             =   60
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   75
-         TabIndex        =   83
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14475
-         TabIndex        =   84
-         TabStop         =   0   'False
-         Top             =   1560
+         Top             =   375
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -205,11 +70,11 @@ Begin VB.Form frmNotaFisc
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   14
-         Left            =   9705
-         TabIndex        =   94
+         Index           =   12
+         Left            =   14475
+         TabIndex        =   84
          TabStop         =   0   'False
-         Top             =   375
+         Top             =   1560
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -223,6 +88,141 @@ Begin VB.Form frmNotaFisc
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   75
+         TabIndex        =   83
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   10
+         Left            =   15180
+         TabIndex        =   82
+         Top             =   60
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   9
+         Left            =   9825
+         TabIndex        =   76
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   2
+         Left            =   11430
+         TabIndex        =   75
+         TabStop         =   0   'False
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Cancelar"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   1
+         Left            =   10020
+         TabIndex        =   90
+         Top             =   75
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   0
+         Left            =   11430
+         TabIndex        =   85
+         TabStop         =   0   'False
+         Top             =   525
+         Width           =   1395
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "DANFE"
+         CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin TabDlg.SSTab Tabs 
@@ -423,13 +423,13 @@ Begin VB.Form frmNotaFisc
          Tab(0).Control(84).Enabled=   0   'False
          Tab(0).Control(85)=   "txtCp(2)"
          Tab(0).Control(85).Enabled=   0   'False
-         Tab(0).Control(86)=   "Botao(8)"
+         Tab(0).Control(86)=   "Botao(3)"
          Tab(0).Control(86).Enabled=   0   'False
-         Tab(0).Control(87)=   "Botao(5)"
+         Tab(0).Control(87)=   "Botao(4)"
          Tab(0).Control(87).Enabled=   0   'False
-         Tab(0).Control(88)=   "Botao(4)"
+         Tab(0).Control(88)=   "Botao(5)"
          Tab(0).Control(88).Enabled=   0   'False
-         Tab(0).Control(89)=   "Botao(3)"
+         Tab(0).Control(89)=   "Botao(8)"
          Tab(0).Control(89).Enabled=   0   'False
          Tab(0).ControlCount=   90
          TabCaption(1)   =   "&2 - Produtos"
@@ -603,11 +603,11 @@ Begin VB.Form frmNotaFisc
          Tab(6).ControlCount=   25
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   3
-            Left            =   11175
-            TabIndex        =   22
+            Index           =   8
+            Left            =   5505
+            TabIndex        =   86
             TabStop         =   0   'False
-            Top             =   1905
+            Top             =   2835
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -625,31 +625,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   5205
-            TabIndex        =   14
-            TabStop         =   0   'False
-            Top             =   1440
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   5
-            Left            =   5100
-            TabIndex        =   5
+            Index           =   7
+            Left            =   -71670
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -691,9 +669,9 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   7
-            Left            =   -71670
-            TabIndex        =   39
+            Index           =   5
+            Left            =   5100
+            TabIndex        =   5
             TabStop         =   0   'False
             Top             =   450
             Width           =   240
@@ -713,11 +691,33 @@ Begin VB.Form frmNotaFisc
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   8
-            Left            =   5505
-            TabIndex        =   86
+            Index           =   4
+            Left            =   5205
+            TabIndex        =   14
             TabStop         =   0   'False
-            Top             =   2835
+            Top             =   1440
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   3
+            Left            =   11175
+            TabIndex        =   22
+            TabStop         =   0   'False
+            Top             =   1905
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -9805,59 +9805,72 @@ End If
        'fim Serviços
        GoTo Continua
     
+
 OcultaValor:
-       'Vamos Esconder os Valores. Frescura na Bunda, Acho que isso nw pode mas tudo bem o fumo depois nw vai pra mim mesmo rsrs
-       det_nItem = 1
-       
-       '================Grupo de Detalhe do Produto (Grupo I01 do Manual de Integração - páginas 95)=======================
-       Prod_cProd = "99999"                           ' código do produto
-       'Não Usam esse Campo usam Apenas no Sistema para Consulta
-       'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
-       Prod_cEAN = "SEM GTIN"                                 ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
-       If Not Nota_Fiscal![Conjunto Avulso] Then
-          Prod_xProd = "CONJUNTO DE IRRIGACAO COMPOSTO DE:" ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
-       Else
-          Prod_xProd = Nota_Fiscal![Descrição Conjunto Avulso] ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
-       End If
-       Prod_NCM = PegaValor("Classificação Fiscal", "NCM", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)                          ' código NCM, pode informar somente a posição do capítulo se a operação não for sujeito ao IPI.
-       Prod_Cest = PegaValor("Classificação Fiscal", "CEST", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)
-       Prod_NVE_Opc = ""                              ' Campo Opcional Novo Layout 3.10 não sei pra que serve e nem quero saber
-       Prod_ExTIPI = ""                               ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
-       Prod_CFOP = NatOpe![Código da Natureza de Operação] ' CFOP do operação, causa erro de XML se informado um código inexistente
-       Prod_uCOM = "UN"                               ' unidade de comercialização
-       Prod_qCom = "1"                                ' quantidade de comercialização
-       Prod_vUnCom = SemValores![Valor Unitario]      ' valor unitário de comercialização, campo de mera demonstração deve ser o resultado da divisão do vProd / qCom
-       Prod_vProd = SemValores![Valor Total]          ' valor do total do item
-       'Não Usam esse Campo usam Apenas no Sistema para Consulta
-       'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
-       Prod_cEANTrib = "SEM GTIN"                     ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN, em geral é o mesmo código do EAN de comercialização
-       Prod_uTrib = "UN"                              ' unidade de tributação, na maioria dos casos é idêntico  ao vUnCom
-       Prod_qTrib = 1                                 ' quantidade de comercialização
-       Prod_vUnTrib = SemValores![Valor Unitario]     ' valor unitário de tributação, campo de mera demonstração deve ser o resultado da divisão do vProd / qTrib
-       Prod_vFrete = Nota_Fiscal![Valor Do Frete]     ' valor do frete, se cobrado do cliente deve ser rateado entre os itens de produto
-       Prod_vSeguro = Nota_Fiscal![Valor Do Seguro]   ' valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
-       If Nota_Fiscal![Valor Do Fechamento] < 0 Then
-          Prod_vDesc = Abs(Nota_Fiscal![Valor Do Fechamento]) ' valor do desconto concedido
-       End If
-       If Nota_Fiscal![Outras Despesas] > 0 Then
-          Prod_vOutro = Nota_Fiscal![Outras Despesas]     ' valor de outras despesas
-       End If
-       Prod_indTot = 1                             ' indicador se o valor do item será totalizado no valor total dos produtos
-       Prod_DI = ""                                ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
-       Prod_detExport_Opc = ""                     ' Campo novo sei la pra que serve o importante é que pode informa Vazio ""
-       Prod_DetEspecifico = ""                     ' dados específicos, informar para medicamento, veículos novos, armamentos e combustíveis, para montar o grupo utilizar a funcionalidade correspondente
-       Prod_xPed = ""                              ' número do pedido, uso exclusivo do usuário
-       Prod_nItemPed = 0                           ' número do item do pedido, uso exclusivo do usuário
-       Prod_nFCI_Opc = ""                          ' Campo Novo Layout 3.10 Opcional
-       'Layout 4.00
-       IndEscala_Opc = ""
-       CNPJFab_Opc = ""
-       cBenef_Opc = ""
-       Rastro_Opc = ""
-       
-       'Gera Grupo do Produto
-        det_produto = objNFeUtil.produto400(Prod_cProd, Prod_cEAN, Prod_xProd, Prod_NCM, Prod_NVE_Opc, Prod_Cest, IndEscala_Opc, CNPJFab_Opc, cBenef_Opc, Prod_ExTIPI, Prod_CFOP, Prod_uCOM, Prod_qCom, Prod_vUnCom, Prod_vProd, Prod_cEANTrib, Prod_uTrib, Prod_qTrib, Prod_vUnTrib, Prod_vFrete, Prod_vSeguro, Prod_vDesc, Prod_vOutro, Prod_indTot, Prod_DI, Prod_detExport_Opc, Prod_DetEspecifico, Prod_xPed, Prod_nItemPed, Prod_nFCI_Opc, Rastro_Opc)
-       
+    'Vamos Esconder os Valores. Frescura na Bunda, Acho que isso nw pode mas tudo bem o fumo depois nw vai pra mim mesmo rsrs
+    det_nItem = 1
+    
+    '================Grupo de Detalhe do Produto (Grupo I01 do Manual de Integração - páginas 95)=======================
+    Prod_cProd = "99999" ' código do produto
+    'Não Usam esse Campo usam Apenas no Sistema para Consulta
+    'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+    Prod_cEAN = "SEM GTIN" ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN
+    If Not Nota_Fiscal![Conjunto Avulso] Then
+       Prod_xProd = "CONJUNTO DE IRRIGACAO COMPOSTO DE:" ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+    Else
+       Prod_xProd = Nota_Fiscal![Descrição Conjunto Avulso] ' código do produto, espaços em branco consecutivos ou no início ou fim do campo podem gerar erro de Schema XML, além de caracteres reservados do XML <>&"'
+    End If
+    Prod_NCM = PegaValor("Classificação Fiscal", "NCM", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao) ' código NCM, pode informar somente a posição do capítulo se a operação não for sujeito ao IPI.
+    Prod_Cest = PegaValor("Classificação Fiscal", "CEST", "[Seqüência da Classificação] = " & Sequencia_da_Classificacao)
+    Prod_NVE_Opc = "" ' Campo Opcional Novo Layout 3.10 não sei pra que serve e nem quero saber
+    Prod_ExTIPI = "" ' ExTipi, informar de acordo com o código EX da TIPI se houver para o NCM do produto.
+    Prod_CFOP = NatOpe![Código da Natureza de Operação] ' CFOP do operação, causa erro de XML se informado um código inexistente
+    Prod_uCOM = "UN" ' unidade de comercialização
+    
+    Prod_qCom = "2" ' quantidade de comercialização (agora definida como 2)
+    
+    ' Calcule vUnCom como total / qCom (dividido pela quantidade definida)
+    If Prod_qCom > 0 And SemValores![Valor Total] > 0 Then  ' Evite divisão por zero ou total zero
+       Prod_vUnCom = Round(SemValores![Valor Total] / Prod_qCom, 2) ' Dividido pela qCom (ex: /2), com arredondamento para 2 decimais (padrão NF-e)
+    Else
+       Prod_vUnCom = 0 ' Valor padrão se inválido
+    End If
+    
+    Prod_vProd = SemValores![Valor Total] ' valor do total do item (mantém o total real)
+    'Não Usam esse Campo usam Apenas no Sistema para Consulta
+    'LEMBRANDO: Se for colocar esse campo na NFe, alguns Código de Barras está incorreto arrumar antes
+    Prod_cEANTrib = "SEM GTIN" ' código EAN (0, 8,12, 13 ou 14 caracteres), o conteúdo pode ser omitido se não tiver EAN, em geral é o mesmo código do EAN de comercialização
+    Prod_uTrib = "UN" ' unidade de tributação, na maioria dos casos é idêntico ao uCom
+    
+    Prod_qTrib = Prod_qCom ' Sincronize com qCom (agora 2, para consistência)
+    
+    Prod_vUnTrib = Prod_vUnCom ' Sincronize com vUnCom (dividido pela quantidade)
+    
+    Prod_vFrete = Nota_Fiscal![Valor Do Frete] ' valor do frete, se cobrado do cliente deve ser rateado entre os itens de produto
+    Prod_vSeguro = Nota_Fiscal![Valor Do Seguro] ' valor do seguro, se cobrado do cliente deve ser rateado entre os itens de produto
+    If Nota_Fiscal![Valor Do Fechamento] < 0 Then
+       Prod_vDesc = Abs(Nota_Fiscal![Valor Do Fechamento]) ' valor do desconto concedido
+    End If
+    If Nota_Fiscal![Outras Despesas] > 0 Then
+       Prod_vOutro = Nota_Fiscal![Outras Despesas] ' valor de outras despesas
+    End If
+    Prod_indTot = 1 ' indicador se o valor do item será totalizado no valor total dos produtos
+    Prod_DI = "" ' dados da importação, informar apenas no caso de NF de entrada (importação), para montar o grupo utilize a funcionalidade DI
+    Prod_detExport_Opc = "" ' Campo novo sei la pra que serve o importante é que pode informa Vazio ""
+    Prod_DetEspecifico = "" ' dados específicos, informar para medicamento, veículos novos, armamentos e combustíveis, para montar o grupo utilizar a funcionalidade correspondente
+    Prod_xPed = "" ' número do pedido, uso exclusivo do usuário
+    Prod_nItemPed = 0 ' número do item do pedido, uso exclusivo do usuário
+    Prod_nFCI_Opc = "" ' Campo Novo Layout 3.10 Opcional
+    'Layout 4.00
+    IndEscala_Opc = ""
+    CNPJFab_Opc = ""
+    cBenef_Opc = ""
+    Rastro_Opc = ""
+    
+    'Gera Grupo do Produto
+     det_produto = objNFeUtil.produto400(Prod_cProd, Prod_cEAN, Prod_xProd, Prod_NCM, Prod_NVE_Opc, Prod_Cest, IndEscala_Opc, CNPJFab_Opc, cBenef_Opc, Prod_ExTIPI, Prod_CFOP, Prod_uCOM, Prod_qCom, Prod_vUnCom, Prod_vProd, Prod_cEANTrib, Prod_uTrib, Prod_qTrib, Prod_vUnTrib, Prod_vFrete, Prod_vSeguro, Prod_vDesc, Prod_vOutro, Prod_indTot, Prod_DI, Prod_detExport_Opc, Prod_DetEspecifico, Prod_xPed, Prod_nItemPed, Prod_nFCI_Opc, Rastro_Opc)
+
+
        '========Grupo de Informações do Imposto do Item=========
           
        '=========Dados do ICMS (Grupo N01 do Manual de Integração - Páginas 128-)=====================
