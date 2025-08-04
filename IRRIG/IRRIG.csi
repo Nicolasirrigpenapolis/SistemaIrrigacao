@@ -1,7 +1,5 @@
 [History]
-1=#P0#=mb	#P1#=Form_KeyPress	#P2#=IRRIG/frmFinanc/Form_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250804093307	#P7#=0	#P8#=4	.
-2=#P0#=mb	#P1#=Parcelar	#P2#=IRRIG/frmFinanc/Parcelar	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091014	#P7#=0	#P8#=0	.
-3=#P0#=mb	#P1#=CarregaContas	#P2#=IRRIG/frmFinanc/CarregaContas	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091204	#P7#=0	#P8#=-3	.
-4=#P0#=mb	#P1#=ValorOriginal	#P2#=IRRIG/frmFinanc/ValorOriginal	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804085246	#P7#=0	#P8#=61	.
-5=#P0#=mb	#P1#=CarregaGrids	#P2#=IRRIG/frmFinanc/CarregaGrids	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804091108	#P7#=0	#P8#=-3	.
-6=#P0#=mb	#P1#=AjustaValores	#P2#=IRRIG/frmFinanc/AjustaValores	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804083751	#P7#=0	#P8#=32	.
+1=#P0#=mb	#P1#=Filtro	#P2#=IRRIG/frmR_Conjun/Filtro	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804152806	#P7#=0	#P8#=4	.
+2=#P0#=mb	#P1#=bottxtCampo2_Click	#P2#=IRRIG/frmR_Conjun/bottxtCampo2_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250804151701	#P7#=0	#P8#=0	.
+3=#P0#=mb	#P1#=ProssegueExecucao	#P2#=IRRIG/frmR_Conjun/ProssegueExecucao	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20250804153543	#P7#=0	#P8#=179	.
+4=#P0#=mb	#P1#=Form_Load	#P2#=IRRIG/frmR_Produt/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20250804151329	#P7#=0	#P8#=56	.

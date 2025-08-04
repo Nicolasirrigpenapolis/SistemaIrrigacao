@@ -2898,7 +2898,7 @@ Dim Sequencia_do_Produto As Long, Descricao As String, Sequencia_do_Grupo_Produt
 Dim Sequencia_do_SubGrupo_Produto As Integer, ultima_Compra As Variant, Quantidade_no_Estoque As Double
 Dim Quantidade_Minima As Double, ultimo_Movimento As Variant, Valor_de_Custo As Double
 Dim Margem_de_Lucro As Double, Sequencia_da_Unidade As Integer, Codigo_de_Barras As String
-Dim Sequencia_da_Classificacao As Integer, e_Materia_Prima As Boolean, peso As Double
+Dim Sequencia_da_Classificacao As Integer, e_Materia_Prima As Boolean, Peso As Double
 Dim Custo_Medio As Double, Usado As Boolean, ultimo_Fornecedor As Long
 Dim Tipo_do_Produto As Integer, Inativo As Boolean, Localizacao As String
 Dim Quantidade_Contabil As Double, Valor_Contabil_Atual As Double, Material_Adquirido_de_Terceiro As Boolean
@@ -2929,7 +2929,7 @@ Public TpProduto As Byte
 Private Sub opcPainel1Cp_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    If opcPainel1(Index).Locked Then
-      opcPainel1(Val(labopcPainel1.Caption)).Value = True
+      opcPainel1(val(labopcPainel1.Caption)).Value = True
    Else
       'If Val(labopcPainel1.Caption) <> opcPainel1(Index).BookMark Then 'Manual
          labopcPainel1.Caption = Str$(opcPainel1(Index).BookMark)
@@ -2980,7 +2980,7 @@ Private Sub RepositionProduto()
   
 End Sub
 
-Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double, Oq As String) As Variant
+Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double, Oq As String) As Variant
    Dim Materia As GRecordSet, Unidades As GRecordSet
 
    On Error Resume Next
@@ -3001,7 +3001,7 @@ Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia
             InfoProdutos = 0
          End If
       Case "Peso"
-         InfoProdutos = Materia!peso
+         InfoProdutos = Materia!Peso
    End Select
    
     'Alteração
@@ -3077,7 +3077,7 @@ Private Sub CarregaTotalizador()
    TxtDtaAtual.Value = Date
 End Sub
 
-Private Sub Comandos(KeyAscii As Integer, Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double)
+Private Sub Comandos(KeyAscii As Integer, Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double)
    On Error Resume Next
    
    If vgPWUsuario <> "JERONIMO" Then: Exit Sub
@@ -3112,7 +3112,7 @@ Private Function MegaPeso() As Double
             "INNER JOIN Unidades On P.[Seqüência da Unidade] = Unidades.[Seqüência da Unidade] " & _
             "WHERE [Sigla da Unidade] = 'KG'", , , , , , , , , , True)
             
-   If Tb.RecordCount > 0 Then MegaPeso = Tb!peso
+   If Tb.RecordCount > 0 Then MegaPeso = Tb!Peso
 
 End Function
 
@@ -3126,7 +3126,7 @@ Private Function UpDatePeso()
 Dim Tb As New GRecordSet
 Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
 If Tb.RecordCount > 0 Then
-vgDb.Execute "Update [Itens do Conjunto] Set [Peso do Item] = " & Substitui(CStr(peso), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Sequencia_do_Produto
+vgDb.Execute "Update [Itens do Conjunto] Set [Peso do Item] = " & Substitui(CStr(Peso), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Sequencia_do_Produto
 End If
 End Function
 
@@ -3141,7 +3141,7 @@ End If
 End Function
 
 
-Private Function ValidaProduto2(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double) As Boolean 'produto
+Private Function ValidaProduto2(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double) As Boolean 'produto
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Produtos Where [Seqüência do Produto] = " & Sequencia_da_Materia_Prima)
@@ -3341,11 +3341,11 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_de_Barras = txtCampo(9).Value
          Sequencia_da_Classificacao = txtCampo(10).Value
          e_Materia_Prima = chkCampo(8).Value
-         peso = txtCampo(0).Value
+         Peso = txtCampo(0).Value
          Custo_Medio = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Custo Médio])
          Usado = chkCampo(7).Value
          ultimo_Fornecedor = txtCampo(15).Value
-         Tipo_do_Produto = Val(labopcPainel1.Caption)
+         Tipo_do_Produto = val(labopcPainel1.Caption)
          Inativo = chkCampo(9).Value
          Localizacao = txtCampo(11).Value
          Quantidade_Contabil = txtCampo(14).Value
@@ -3402,7 +3402,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_de_Barras = IIf(IsNull(vgTb![Código de Barras]), "", vgTb![Código de Barras])
          Sequencia_da_Classificacao = IIf(IsNull(vgTb![Seqüência da Classificação]), 0, vgTb![Seqüência da Classificação])
          e_Materia_Prima = IIf(IsNull(vgTb![É Matéria Prima]), 0, vgTb![É Matéria Prima])
-         peso = IIf(IsNull(vgTb!peso), 0, vgTb!peso)
+         Peso = IIf(IsNull(vgTb!Peso), 0, vgTb!Peso)
          Custo_Medio = IIf(IsNull(vgTb![Custo Médio]), 0, vgTb![Custo Médio])
          Usado = IIf(IsNull(vgTb!Usado), 0, vgTb!Usado)
          ultimo_Fornecedor = IIf(IsNull(vgTb![Último Fornecedor]), 0, vgTb![Último Fornecedor])
@@ -3779,7 +3779,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -4514,17 +4514,18 @@ Public Sub DefineControles()
    txtCampo(8).Source = "Unidades"
    txtCampo(8).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(8).DataField), txtCampo(8)
-
-   Set txtCampo(4).CtPri = txtCp(4)
-   txtCampo(4).DataType = 1
-   txtCampo(4).Mask = "999.999,9999"
-   txtCampo(4).Editable = False
-   txtCampo(4).BoundColumn = ""
-   txtCampo(4).ListFields = ""
-   txtCampo(4).OrderFields = ""
-   txtCampo(4).Relation = ""
-   txtCampo(4).Source = ""
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(4).DataField), txtCampo(4)
+   
+   
+   'Set txtCampo(4).CtPri = txtCp(4)
+  ' txtCampo(4).DataType = 1
+  ' txtCampo(4).Mask = "999.999,9999"
+  ' txtCampo(4).Editable = False
+  ' txtCampo(4).BoundColumn = ""
+  ' txtCampo(4).ListFields = ""
+   'txtCampo(4).OrderFields = ""
+  ' txtCampo(4).Relation = ""
+  ' txtCampo(4).Source = ""
+  ' grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(4).DataField), txtCampo(4)
 
    Set txtCampo(5).CtPri = txtCp(5)
    Set txtCampo(5).CtFdo = labFdo5
@@ -5222,7 +5223,7 @@ End Function
 Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double
-   Dim peso As Double, Custo As Double
+   Dim Peso As Double, Custo As Double
    vgPriVez = True
    If vgOq = PREVALIDACOES Then
       vgRetVal = False
@@ -5240,10 +5241,10 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
       Select Case vgCol
          Case 3
-            vgRetVal = (InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Sigla"))
+            vgRetVal = (InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Sigla"))
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 4
-            vgRetVal = peso
+            vgRetVal = Peso
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 5
             vgRetVal = Custo
@@ -5252,13 +5253,13 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = (Quantidade_de_Materia_Prima * Custo)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 7
-            vgRetVal = (Quantidade_de_Materia_Prima * peso)
+            vgRetVal = (Quantidade_de_Materia_Prima * Peso)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
       If Err Then Err.Clear
    ElseIf vgOq = KEYPRESS_NO_GRID Then
       GoSub IniApDaCol
-      Comandos KeyCodeAscii, Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo
+      Comandos KeyCodeAscii, Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
@@ -5306,7 +5307,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          End If
          If vgIsValid And vgCol = -1 Then
             If Sequencia_da_Materia_Prima > 0 Then
-               vgIsValid = (ValidaProduto2(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo))
+               vgIsValid = (ValidaProduto2(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo))
                If Not vgIsValid Then vgColumn = 1
                vgErrorMessage$ = "Materia Prima INATIVA!"
             End If
@@ -5329,12 +5330,12 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_da_Materia_Prima = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_da_Materia_Prima = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Quantidade_de_Materia_Prima = ColumnValue(2)
-   peso = ColumnValue(4)
+   Peso = ColumnValue(4)
    Custo = ColumnValue(5)
-   peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Peso")
-   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Custo")
+   Peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Peso")
+   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Custo")
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -5345,8 +5346,8 @@ IniApDaTb:
       Sequencia_da_Materia_Prima = Materia_Prima![Seqüência da Matéria Prima]
       Quantidade_de_Materia_Prima = Materia_Prima![Quantidade de Matéria Prima]
    End If
-   peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Peso")
-   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Custo")
+   Peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Peso")
+   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Custo")
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
