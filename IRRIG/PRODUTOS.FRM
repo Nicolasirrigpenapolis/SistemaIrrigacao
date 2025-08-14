@@ -48,6 +48,7 @@ Begin VB.Form frmProdutos
          _Version        =   393216
          Style           =   1
          Tabs            =   5
+         Tab             =   2
          TabsPerRow      =   5
          TabHeight       =   519
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -60,86 +61,49 @@ Begin VB.Form frmProdutos
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "&1 - Dados Principais"
-         TabPicture(0)   =   "PRODUTOS.frx":0000
-         Tab(0).ControlEnabled=   -1  'True
+         Tab(0).ControlEnabled=   0   'False
          Tab(0).Control(0)=   "Label(32)"
-         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).Control(1)=   "Label(29)"
-         Tab(0).Control(1).Enabled=   0   'False
          Tab(0).Control(2)=   "Label(28)"
-         Tab(0).Control(2).Enabled=   0   'False
          Tab(0).Control(3)=   "Linha(1)"
-         Tab(0).Control(3).Enabled=   0   'False
          Tab(0).Control(4)=   "labFdo19"
-         Tab(0).Control(4).Enabled=   0   'False
          Tab(0).Control(5)=   "Label(21)"
-         Tab(0).Control(5).Enabled=   0   'False
          Tab(0).Control(6)=   "labFdo18"
-         Tab(0).Control(6).Enabled=   0   'False
          Tab(0).Control(7)=   "Label(20)"
-         Tab(0).Control(7).Enabled=   0   'False
          Tab(0).Control(8)=   "Label(19)"
-         Tab(0).Control(8).Enabled=   0   'False
          Tab(0).Control(9)=   "Label(18)"
-         Tab(0).Control(9).Enabled=   0   'False
          Tab(0).Control(10)=   "Label(15)"
-         Tab(0).Control(10).Enabled=   0   'False
          Tab(0).Control(11)=   "Label(14)"
-         Tab(0).Control(11).Enabled=   0   'False
          Tab(0).Control(12)=   "Label(13)"
-         Tab(0).Control(12).Enabled=   0   'False
          Tab(0).Control(13)=   "Label(12)"
-         Tab(0).Control(13).Enabled=   0   'False
          Tab(0).Control(14)=   "Label(11)"
-         Tab(0).Control(14).Enabled=   0   'False
          Tab(0).Control(15)=   "Label(10)"
-         Tab(0).Control(15).Enabled=   0   'False
          Tab(0).Control(16)=   "Label(9)"
-         Tab(0).Control(16).Enabled=   0   'False
          Tab(0).Control(17)=   "Label(8)"
-         Tab(0).Control(17).Enabled=   0   'False
          Tab(0).Control(18)=   "Label(7)"
-         Tab(0).Control(18).Enabled=   0   'False
          Tab(0).Control(19)=   "Label(6)"
-         Tab(0).Control(19).Enabled=   0   'False
          Tab(0).Control(20)=   "Label(5)"
-         Tab(0).Control(20).Enabled=   0   'False
          Tab(0).Control(21)=   "Label(4)"
-         Tab(0).Control(21).Enabled=   0   'False
          Tab(0).Control(22)=   "Label(3)"
-         Tab(0).Control(22).Enabled=   0   'False
          Tab(0).Control(23)=   "Label(2)"
-         Tab(0).Control(23).Enabled=   0   'False
          Tab(0).Control(24)=   "Label(1)"
-         Tab(0).Control(24).Enabled=   0   'False
          Tab(0).Control(25)=   "labFdo12"
-         Tab(0).Control(25).Enabled=   0   'False
          Tab(0).Control(26)=   "Linha(0)"
-         Tab(0).Control(26).Enabled=   0   'False
          Tab(0).Control(27)=   "labFdo10"
-         Tab(0).Control(27).Enabled=   0   'False
          Tab(0).Control(28)=   "labFdo8"
-         Tab(0).Control(28).Enabled=   0   'False
          Tab(0).Control(29)=   "labFdo7"
-         Tab(0).Control(29).Enabled=   0   'False
          Tab(0).Control(30)=   "labFdo5"
-         Tab(0).Control(30).Enabled=   0   'False
          Tab(0).Control(31)=   "labFdo2"
-         Tab(0).Control(31).Enabled=   0   'False
          Tab(0).Control(32)=   "txtCp(31)"
          Tab(0).Control(32).Enabled=   0   'False
          Tab(0).Control(33)=   "txtCp(30)"
          Tab(0).Control(33).Enabled=   0   'False
          Tab(0).Control(34)=   "ChkCp(6)"
-         Tab(0).Control(34).Enabled=   0   'False
          Tab(0).Control(35)=   "txtCp(27)"
-         Tab(0).Control(35).Enabled=   0   'False
          Tab(0).Control(36)=   "txtCp(26)"
          Tab(0).Control(36).Enabled=   0   'False
          Tab(0).Control(37)=   "ChkCp(5)"
-         Tab(0).Control(37).Enabled=   0   'False
          Tab(0).Control(38)=   "ChkCp(4)"
-         Tab(0).Control(38).Enabled=   0   'False
          Tab(0).Control(39)=   "ChkCp(3)"
          Tab(0).Control(39).Enabled=   0   'False
          Tab(0).Control(40)=   "ChkCp(2)"
@@ -147,19 +111,16 @@ Begin VB.Form frmProdutos
          Tab(0).Control(41)=   "ChkCp(1)"
          Tab(0).Control(41).Enabled=   0   'False
          Tab(0).Control(42)=   "txtCp(19)"
-         Tab(0).Control(42).Enabled=   0   'False
          Tab(0).Control(43)=   "bottxtCampo19(2)"
          Tab(0).Control(43).Enabled=   0   'False
          Tab(0).Control(44)=   "ChkCp(0)"
          Tab(0).Control(44).Enabled=   0   'False
          Tab(0).Control(45)=   "txtCp(18)"
-         Tab(0).Control(45).Enabled=   0   'False
          Tab(0).Control(46)=   "bottxtCampo18(2)"
          Tab(0).Control(46).Enabled=   0   'False
          Tab(0).Control(47)=   "bottxtCampo18(1)"
          Tab(0).Control(47).Enabled=   0   'False
          Tab(0).Control(48)=   "txtCp(17)"
-         Tab(0).Control(48).Enabled=   0   'False
          Tab(0).Control(49)=   "txtCp(16)"
          Tab(0).Control(49).Enabled=   0   'False
          Tab(0).Control(50)=   "txtCp(15)"
@@ -167,23 +128,18 @@ Begin VB.Form frmProdutos
          Tab(0).Control(51)=   "txtCp(14)"
          Tab(0).Control(51).Enabled=   0   'False
          Tab(0).Control(52)=   "txtCp(12)"
-         Tab(0).Control(52).Enabled=   0   'False
          Tab(0).Control(53)=   "bottxtCampo12(2)"
          Tab(0).Control(53).Enabled=   0   'False
          Tab(0).Control(54)=   "bottxtCampo12(1)"
          Tab(0).Control(54).Enabled=   0   'False
          Tab(0).Control(55)=   "txtCp(11)"
-         Tab(0).Control(55).Enabled=   0   'False
          Tab(0).Control(56)=   "txtCp(10)"
-         Tab(0).Control(56).Enabled=   0   'False
          Tab(0).Control(57)=   "bottxtCampo10(2)"
          Tab(0).Control(57).Enabled=   0   'False
          Tab(0).Control(58)=   "bottxtCampo10(1)"
          Tab(0).Control(58).Enabled=   0   'False
          Tab(0).Control(59)=   "txtCp(9)"
-         Tab(0).Control(59).Enabled=   0   'False
          Tab(0).Control(60)=   "txtCp(8)"
-         Tab(0).Control(60).Enabled=   0   'False
          Tab(0).Control(61)=   "bottxtCampo8(2)"
          Tab(0).Control(61).Enabled=   0   'False
          Tab(0).Control(62)=   "bottxtCampo8(1)"
@@ -195,7 +151,6 @@ Begin VB.Form frmProdutos
          Tab(0).Control(65)=   "txtCp(6)"
          Tab(0).Control(65).Enabled=   0   'False
          Tab(0).Control(66)=   "txtCp(5)"
-         Tab(0).Control(66).Enabled=   0   'False
          Tab(0).Control(67)=   "bottxtCampo5(0)"
          Tab(0).Control(67).Enabled=   0   'False
          Tab(0).Control(68)=   "txtCp(4)"
@@ -203,44 +158,51 @@ Begin VB.Form frmProdutos
          Tab(0).Control(69)=   "txtCp(3)"
          Tab(0).Control(69).Enabled=   0   'False
          Tab(0).Control(70)=   "txtCp(2)"
-         Tab(0).Control(70).Enabled=   0   'False
          Tab(0).Control(71)=   "bottxtCampo2(2)"
          Tab(0).Control(71).Enabled=   0   'False
          Tab(0).Control(72)=   "bottxtCampo2(1)"
          Tab(0).Control(72).Enabled=   0   'False
          Tab(0).Control(73)=   "txtCp(1)"
-         Tab(0).Control(73).Enabled=   0   'False
          Tab(0).Control(74)=   "txtCp(0)"
-         Tab(0).Control(74).Enabled=   0   'False
          Tab(0).Control(75)=   "Botao(0)"
-         Tab(0).Control(75).Enabled=   0   'False
          Tab(0).Control(76)=   "Botao(1)"
-         Tab(0).Control(76).Enabled=   0   'False
          Tab(0).Control(77)=   "Botao(2)"
-         Tab(0).Control(77).Enabled=   0   'False
          Tab(0).ControlCount=   78
          TabCaption(1)   =   "&2 - Receita"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Grid(0)"
-         Tab(1).Control(1)=   "Label(17)"
+         Tab(1).Control(0)=   "Label(17)"
+         Tab(1).Control(1)=   "Grid(0)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Contabilidade"
-         TabPicture(2)   =   "PRODUTOS.frx":001C
-         Tab(2).ControlEnabled=   0   'False
+         Tab(2).ControlEnabled=   -1  'True
          Tab(2).Control(0)=   "Linha(3)"
+         Tab(2).Control(0).Enabled=   0   'False
          Tab(2).Control(1)=   "Label(31)"
+         Tab(2).Control(1).Enabled=   0   'False
          Tab(2).Control(2)=   "Linha(2)"
+         Tab(2).Control(2).Enabled=   0   'False
          Tab(2).Control(3)=   "Label(30)"
+         Tab(2).Control(3).Enabled=   0   'False
          Tab(2).Control(4)=   "Label(27)"
+         Tab(2).Control(4).Enabled=   0   'False
          Tab(2).Control(5)=   "Label(26)"
+         Tab(2).Control(5).Enabled=   0   'False
          Tab(2).Control(6)=   "Label(25)"
+         Tab(2).Control(6).Enabled=   0   'False
          Tab(2).Control(7)=   "Label(24)"
+         Tab(2).Control(7).Enabled=   0   'False
          Tab(2).Control(8)=   "labFdo21"
+         Tab(2).Control(8).Enabled=   0   'False
          Tab(2).Control(9)=   "Label(23)"
+         Tab(2).Control(9).Enabled=   0   'False
          Tab(2).Control(10)=   "Label(22)"
+         Tab(2).Control(10).Enabled=   0   'False
          Tab(2).Control(11)=   "Label(16)"
+         Tab(2).Control(11).Enabled=   0   'False
          Tab(2).Control(12)=   "Label(0)"
+         Tab(2).Control(12).Enabled=   0   'False
          Tab(2).Control(13)=   "labFdo13"
+         Tab(2).Control(13).Enabled=   0   'False
          Tab(2).Control(14)=   "txtCp(29)"
          Tab(2).Control(14).Enabled=   0   'False
          Tab(2).Control(15)=   "txtCp(25)"
@@ -258,6 +220,7 @@ Begin VB.Form frmProdutos
          Tab(2).Control(21)=   "txtCp(20)"
          Tab(2).Control(21).Enabled=   0   'False
          Tab(2).Control(22)=   "Painel(1)"
+         Tab(2).Control(22).Enabled=   0   'False
          Tab(2).Control(23)=   "txtCp(13)"
          Tab(2).Control(23).Enabled=   0   'False
          Tab(2).Control(24)=   "bottxtCampo13(0)"
@@ -273,11 +236,11 @@ Begin VB.Form frmProdutos
          Tab(4).ControlCount=   1
          Begin IRRIG.GBotao Botao 
             Height          =   340
-            Index           =   2
-            Left            =   6030
-            TabIndex        =   18
+            Index           =   0
+            Left            =   -67890
+            TabIndex        =   3
             TabStop         =   0   'False
-            Top             =   3360
+            Top             =   570
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -296,7 +259,7 @@ Begin VB.Form frmProdutos
          Begin IRRIG.GBotao Botao 
             Height          =   340
             Index           =   1
-            Left            =   7110
+            Left            =   -67890
             TabIndex        =   6
             TabStop         =   0   'False
             Top             =   1095
@@ -317,11 +280,11 @@ Begin VB.Form frmProdutos
          End
          Begin IRRIG.GBotao Botao 
             Height          =   340
-            Index           =   0
-            Left            =   7110
-            TabIndex        =   3
+            Index           =   2
+            Left            =   -68970
+            TabIndex        =   18
             TabStop         =   0   'False
-            Top             =   570
+            Top             =   3360
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -352,7 +315,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   420
             Index           =   0
-            Left            =   10200
+            Left            =   -64800
             MultiLine       =   -1  'True
             TabIndex        =   16
             Top             =   3390
@@ -374,7 +337,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   420
             Index           =   1
-            Left            =   7815
+            Left            =   -67185
             MultiLine       =   -1  'True
             TabIndex        =   14
             Top             =   2910
@@ -383,7 +346,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo2 
             Height          =   315
             Index           =   1
-            Left            =   6825
+            Left            =   -68175
             Style           =   1  'Graphical
             TabIndex        =   74
             TabStop         =   0   'False
@@ -393,7 +356,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo2 
             Height          =   315
             Index           =   2
-            Left            =   6570
+            Left            =   -68430
             Style           =   1  'Graphical
             TabIndex        =   75
             TabStop         =   0   'False
@@ -415,7 +378,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   315
             Index           =   2
-            Left            =   1545
+            Left            =   -73455
             TabIndex        =   2
             Top             =   585
             Width           =   5010
@@ -435,7 +398,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   3
-            Left            =   1530
+            Left            =   -73470
             Locked          =   -1  'True
             TabIndex        =   12
             TabStop         =   0   'False
@@ -458,7 +421,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   420
             Index           =   4
-            Left            =   9495
+            Left            =   -65505
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   7
@@ -469,7 +432,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo5 
             Height          =   310
             Index           =   0
-            Left            =   14580
+            Left            =   -60420
             Style           =   1  'Graphical
             TabIndex        =   77
             TabStop         =   0   'False
@@ -492,7 +455,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   310
             Index           =   5
-            Left            =   13380
+            Left            =   -61620
             MultiLine       =   -1  'True
             TabIndex        =   8
             Top             =   1170
@@ -513,7 +476,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   6
-            Left            =   4905
+            Left            =   -70095
             Locked          =   -1  'True
             TabIndex        =   13
             TabStop         =   0   'False
@@ -523,7 +486,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo7 
             Height          =   315
             Index           =   0
-            Left            =   11490
+            Left            =   -63510
             Style           =   1  'Graphical
             TabIndex        =   79
             TabStop         =   0   'False
@@ -546,7 +509,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   315
             Index           =   7
-            Left            =   10425
+            Left            =   -64575
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   9
@@ -557,7 +520,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo8 
             Height          =   315
             Index           =   1
-            Left            =   6825
+            Left            =   -68175
             Style           =   1  'Graphical
             TabIndex        =   81
             TabStop         =   0   'False
@@ -567,7 +530,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo8 
             Height          =   315
             Index           =   2
-            Left            =   6570
+            Left            =   -68430
             Style           =   1  'Graphical
             TabIndex        =   82
             TabStop         =   0   'False
@@ -589,7 +552,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   315
             Index           =   8
-            Left            =   1545
+            Left            =   -73455
             TabIndex        =   5
             Top             =   1110
             Width           =   5010
@@ -608,7 +571,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   9
-            Left            =   5220
+            Left            =   -69780
             TabIndex        =   10
             Top             =   1590
             Width           =   2130
@@ -616,7 +579,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo10 
             Height          =   315
             Index           =   1
-            Left            =   5730
+            Left            =   -69270
             Style           =   1  'Graphical
             TabIndex        =   84
             TabStop         =   0   'False
@@ -626,7 +589,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo10 
             Height          =   315
             Index           =   2
-            Left            =   5475
+            Left            =   -69525
             Style           =   1  'Graphical
             TabIndex        =   85
             TabStop         =   0   'False
@@ -648,7 +611,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   315
             Index           =   10
-            Left            =   1545
+            Left            =   -73455
             TabIndex        =   17
             Top             =   3375
             Width           =   3915
@@ -667,7 +630,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   11
-            Left            =   9480
+            Left            =   -65520
             MaxLength       =   50
             TabIndex        =   11
             Top             =   1590
@@ -705,7 +668,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo12 
             Height          =   300
             Index           =   1
-            Left            =   14565
+            Left            =   -60435
             Style           =   1  'Graphical
             TabIndex        =   87
             TabStop         =   0   'False
@@ -715,7 +678,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo12 
             Height          =   300
             Index           =   2
-            Left            =   14310
+            Left            =   -60690
             Style           =   1  'Graphical
             TabIndex        =   88
             TabStop         =   0   'False
@@ -737,7 +700,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   300
             Index           =   12
-            Left            =   9495
+            Left            =   -65505
             TabIndex        =   4
             Top             =   645
             Width           =   4800
@@ -745,7 +708,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo13 
             Height          =   270
             Index           =   0
-            Left            =   -67800
+            Left            =   7200
             Style           =   1  'Graphical
             TabIndex        =   90
             TabStop         =   0   'False
@@ -768,7 +731,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   270
             Index           =   13
-            Left            =   -69315
+            Left            =   5685
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   26
@@ -792,7 +755,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   14
-            Left            =   9495
+            Left            =   -65505
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   51
@@ -815,7 +778,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   15
-            Left            =   1530
+            Left            =   -73470
             Locked          =   -1  'True
             TabIndex        =   15
             TabStop         =   0   'False
@@ -825,7 +788,7 @@ Begin VB.Form frmProdutos
          Begin IRRIG.GPainel Painel 
             Height          =   765
             Index           =   1
-            Left            =   -74340
+            Left            =   660
             TabIndex        =   109
             TabStop         =   0   'False
             Top             =   630
@@ -1071,7 +1034,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   420
             Index           =   16
-            Left            =   8445
+            Left            =   -66555
             Locked          =   -1  'True
             MaxLength       =   254
             MultiLine       =   -1  'True
@@ -1094,7 +1057,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   17
-            Left            =   10200
+            Left            =   -64800
             MaxLength       =   100
             TabIndex        =   41
             Top             =   3840
@@ -1103,7 +1066,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo18 
             Height          =   310
             Index           =   1
-            Left            =   10725
+            Left            =   -64275
             Style           =   1  'Graphical
             TabIndex        =   115
             TabStop         =   0   'False
@@ -1113,7 +1076,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo18 
             Height          =   310
             Index           =   2
-            Left            =   10470
+            Left            =   -64530
             Style           =   1  'Graphical
             TabIndex        =   116
             TabStop         =   0   'False
@@ -1136,7 +1099,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   310
             Index           =   18
-            Left            =   9360
+            Left            =   -65640
             TabIndex        =   43
             Top             =   4395
             Width           =   1095
@@ -1156,7 +1119,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   270
             Index           =   0
-            Left            =   11100
+            Left            =   -63900
             TabIndex        =   44
             TabStop         =   0   'False
             Top             =   4395
@@ -1165,7 +1128,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo19 
             Height          =   310
             Index           =   2
-            Left            =   14520
+            Left            =   -60480
             Style           =   1  'Graphical
             TabIndex        =   119
             TabStop         =   0   'False
@@ -1187,7 +1150,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   310
             Index           =   19
-            Left            =   9360
+            Left            =   -65640
             TabIndex        =   45
             Top             =   4815
             Width           =   5145
@@ -1207,7 +1170,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   20
-            Left            =   -63990
+            Left            =   11010
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   30
@@ -1218,7 +1181,7 @@ Begin VB.Form frmProdutos
          Begin VB.CommandButton bottxtCampo21 
             Height          =   270
             Index           =   2
-            Left            =   -70680
+            Left            =   4320
             Style           =   1  'Graphical
             TabIndex        =   123
             TabStop         =   0   'False
@@ -1240,7 +1203,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   270
             Index           =   21
-            Left            =   -72195
+            Left            =   2805
             TabIndex        =   31
             TabStop         =   0   'False
             Top             =   4410
@@ -1261,7 +1224,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   22
-            Left            =   -63990
+            Left            =   11010
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   27
@@ -1284,7 +1247,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   23
-            Left            =   -69330
+            Left            =   5670
             Locked          =   -1  'True
             MaxLength       =   11
             MultiLine       =   -1  'True
@@ -1308,7 +1271,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   24
-            Left            =   -63990
+            Left            =   11010
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   28
@@ -1331,7 +1294,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   25
-            Left            =   -63990
+            Left            =   11010
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   29
@@ -1378,7 +1341,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   1
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   57
             TabStop         =   0   'False
             Top             =   4275
@@ -1399,7 +1362,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   2
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   58
             TabStop         =   0   'False
             Top             =   4545
@@ -1420,7 +1383,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   3
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   59
             TabStop         =   0   'False
             Top             =   4815
@@ -1441,7 +1404,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   4
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   60
             Top             =   5085
             Width           =   3330
@@ -1461,7 +1424,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H00000000&
             Height          =   300
             Index           =   5
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   62
             Top             =   3915
             Width           =   4350
@@ -1480,7 +1443,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   390
             Index           =   26
-            Left            =   7815
+            Left            =   -67185
             Locked          =   -1  'True
             MaxLength       =   10
             TabIndex        =   64
@@ -1502,7 +1465,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   27
-            Left            =   13335
+            Left            =   -61665
             MaxLength       =   20
             TabIndex        =   42
             Top             =   3840
@@ -1533,7 +1496,7 @@ Begin VB.Form frmProdutos
             EndProperty
             Height          =   360
             Index           =   29
-            Left            =   -72210
+            Left            =   2790
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             TabIndex        =   32
@@ -1556,7 +1519,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   255
             Index           =   6
-            Left            =   11775
+            Left            =   -63225
             TabIndex        =   68
             Top             =   3480
             Width           =   1785
@@ -1577,7 +1540,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H00000000&
             Height          =   360
             Index           =   30
-            Left            =   13335
+            Left            =   -61665
             Locked          =   -1  'True
             MaxLength       =   12
             MultiLine       =   -1  'True
@@ -1602,7 +1565,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H00000000&
             Height          =   360
             Index           =   31
-            Left            =   13335
+            Left            =   -61665
             Locked          =   -1  'True
             MaxLength       =   12
             MultiLine       =   -1  'True
@@ -1616,7 +1579,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   345
-            Left            =   1530
+            Left            =   -73470
             TabIndex        =   73
             Top             =   570
             Width           =   5565
@@ -1626,7 +1589,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   340
-            Left            =   13365
+            Left            =   -61635
             TabIndex        =   76
             Top             =   1155
             Width           =   1485
@@ -1636,7 +1599,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   345
-            Left            =   10410
+            Left            =   -64590
             TabIndex        =   78
             Top             =   2355
             Width           =   1350
@@ -1646,7 +1609,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   345
-            Left            =   1530
+            Left            =   -73470
             TabIndex        =   80
             Top             =   1095
             Width           =   5565
@@ -1656,7 +1619,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   345
-            Left            =   1530
+            Left            =   -73470
             TabIndex        =   83
             Top             =   3360
             Width           =   4470
@@ -1664,8 +1627,8 @@ Begin VB.Form frmProdutos
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   0
-            X1              =   120
-            X2              =   14895
+            X1              =   -74880
+            X2              =   -60105
             Y1              =   4245
             Y2              =   4245
          End
@@ -1674,7 +1637,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   330
-            Left            =   9480
+            Left            =   -65520
             TabIndex        =   86
             Top             =   630
             Width           =   5355
@@ -1684,7 +1647,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -69330
+            Left            =   5670
             TabIndex        =   89
             Top             =   4395
             Width           =   1800
@@ -1704,7 +1667,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H00800000&
             Height          =   240
             Index           =   0
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   91
             Top             =   570
             Width           =   465
@@ -1724,7 +1687,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   1
-            Left            =   675
+            Left            =   -74325
             TabIndex        =   92
             Top             =   570
             Width           =   735
@@ -1744,7 +1707,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   2
-            Left            =   8115
+            Left            =   -66885
             TabIndex        =   93
             Top             =   600
             Width           =   1230
@@ -1764,7 +1727,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   3
-            Left            =   450
+            Left            =   -74550
             TabIndex        =   94
             Top             =   1095
             Width           =   960
@@ -1784,7 +1747,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   4
-            Left            =   8385
+            Left            =   -66615
             TabIndex        =   95
             Top             =   1095
             Width           =   960
@@ -1804,7 +1767,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   5
-            Left            =   12165
+            Left            =   -62835
             TabIndex        =   96
             Top             =   1095
             Width           =   1080
@@ -1824,7 +1787,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   6
-            Left            =   9420
+            Left            =   -65580
             TabIndex        =   97
             Top             =   2355
             Width           =   930
@@ -1844,7 +1807,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   7
-            Left            =   3840
+            Left            =   -71160
             TabIndex        =   98
             Top             =   1590
             Width           =   1320
@@ -1864,7 +1827,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   8
-            Left            =   8040
+            Left            =   -66960
             TabIndex        =   99
             Top             =   1590
             Width           =   1320
@@ -1884,7 +1847,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   9
-            Left            =   135
+            Left            =   -74865
             TabIndex        =   100
             Top             =   2355
             Width           =   1320
@@ -1904,7 +1867,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   10
-            Left            =   3165
+            Left            =   -71835
             TabIndex        =   101
             Top             =   2355
             Width           =   1635
@@ -1924,7 +1887,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   11
-            Left            =   6690
+            Left            =   -68310
             TabIndex        =   102
             Top             =   2910
             Width           =   1050
@@ -1944,7 +1907,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   12
-            Left            =   11895
+            Left            =   -63105
             TabIndex        =   103
             Top             =   2355
             Width           =   1380
@@ -1964,7 +1927,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   13
-            Left            =   165
+            Left            =   -74835
             TabIndex        =   104
             Top             =   2910
             Width           =   1290
@@ -1984,7 +1947,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   14
-            Left            =   960
+            Left            =   -74040
             TabIndex        =   105
             Top             =   3420
             Width           =   495
@@ -2004,7 +1967,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   15
-            Left            =   7740
+            Left            =   -67260
             TabIndex        =   106
             Top             =   3420
             Width           =   585
@@ -2024,7 +1987,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   16
-            Left            =   -69915
+            Left            =   5085
             TabIndex        =   107
             Top             =   4395
             Width           =   525
@@ -2065,7 +2028,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   18
-            Left            =   9555
+            Left            =   -65445
             TabIndex        =   111
             Top             =   3360
             Width           =   600
@@ -2084,7 +2047,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   19
-            Left            =   9285
+            Left            =   -65715
             TabIndex        =   112
             Top             =   3840
             Width           =   870
@@ -2104,7 +2067,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   20
-            Left            =   7755
+            Left            =   -67245
             TabIndex        =   113
             Top             =   4395
             Width           =   1500
@@ -2114,7 +2077,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   340
-            Left            =   9345
+            Left            =   -65655
             TabIndex        =   114
             Top             =   4380
             Width           =   1650
@@ -2134,7 +2097,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   21
-            Left            =   7800
+            Left            =   -67200
             TabIndex        =   117
             Top             =   4800
             Width           =   1455
@@ -2144,7 +2107,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   340
-            Left            =   9345
+            Left            =   -65655
             TabIndex        =   118
             Top             =   4800
             Width           =   5445
@@ -2163,7 +2126,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   22
-            Left            =   -65655
+            Left            =   9345
             TabIndex        =   120
             Top             =   5025
             Width           =   1605
@@ -2182,7 +2145,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   23
-            Left            =   -74160
+            Left            =   840
             TabIndex        =   121
             Top             =   4395
             Width           =   1830
@@ -2192,7 +2155,7 @@ Begin VB.Form frmProdutos
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   -72210
+            Left            =   2790
             TabIndex        =   122
             Top             =   4395
             Width           =   1800
@@ -2211,7 +2174,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   24
-            Left            =   -66075
+            Left            =   8925
             TabIndex        =   124
             Top             =   3900
             Width           =   2025
@@ -2231,7 +2194,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   25
-            Left            =   -70185
+            Left            =   4815
             TabIndex        =   125
             Top             =   4755
             Width           =   795
@@ -2251,7 +2214,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   26
-            Left            =   -65955
+            Left            =   9045
             TabIndex        =   126
             Top             =   4275
             Width           =   1845
@@ -2271,7 +2234,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   27
-            Left            =   -66105
+            Left            =   8895
             TabIndex        =   127
             Top             =   4620
             Width           =   1920
@@ -2279,8 +2242,8 @@ Begin VB.Form frmProdutos
          Begin VB.Line Linha 
             BorderColor     =   &H00808080&
             Index           =   1
-            X1              =   75
-            X2              =   14895
+            X1              =   -74925
+            X2              =   -60105
             Y1              =   2250
             Y2              =   2250
          End
@@ -2299,7 +2262,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   28
-            Left            =   6360
+            Left            =   -68640
             TabIndex        =   129
             Top             =   2355
             Width           =   1380
@@ -2318,7 +2281,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   29
-            Left            =   11805
+            Left            =   -63195
             TabIndex        =   130
             Top             =   3840
             Width           =   1470
@@ -2338,15 +2301,15 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   30
-            Left            =   -74325
+            Left            =   675
             TabIndex        =   131
             Top             =   4740
             Width           =   1890
          End
          Begin VB.Line Linha 
             Index           =   2
-            X1              =   -74895
-            X2              =   -66840
+            X1              =   105
+            X2              =   8160
             Y1              =   3930
             Y2              =   3930
          End
@@ -2365,15 +2328,15 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   270
             Index           =   31
-            Left            =   -74340
+            Left            =   660
             TabIndex        =   132
             Top             =   4020
             Width           =   1935
          End
          Begin VB.Line Linha 
             Index           =   3
-            X1              =   -74925
-            X2              =   -66840
+            X1              =   75
+            X2              =   8160
             Y1              =   5145
             Y2              =   5145
          End
@@ -2392,7 +2355,7 @@ Begin VB.Form frmProdutos
             ForeColor       =   &H80000008&
             Height          =   300
             Index           =   32
-            Left            =   9345
+            Left            =   -65655
             TabIndex        =   133
             Top             =   2910
             Width           =   3930
@@ -2935,7 +2898,7 @@ Dim Sequencia_do_Produto As Long, Descricao As String, Sequencia_do_Grupo_Produt
 Dim Sequencia_do_SubGrupo_Produto As Integer, ultima_Compra As Variant, Quantidade_no_Estoque As Double
 Dim Quantidade_Minima As Double, ultimo_Movimento As Variant, Valor_de_Custo As Double
 Dim Margem_de_Lucro As Double, Sequencia_da_Unidade As Integer, Codigo_de_Barras As String
-Dim Sequencia_da_Classificacao As Integer, e_Materia_Prima As Boolean, Peso As Double
+Dim Sequencia_da_Classificacao As Integer, e_Materia_Prima As Boolean, peso As Double
 Dim Custo_Medio As Double, Usado As Boolean, ultimo_Fornecedor As Long
 Dim Tipo_do_Produto As Integer, Inativo As Boolean, Localizacao As String
 Dim Quantidade_Contabil As Double, Valor_Contabil_Atual As Double, Material_Adquirido_de_Terceiro As Boolean
@@ -2966,7 +2929,7 @@ Public TpProduto As Byte
 Private Sub opcPainel1Cp_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    If opcPainel1(Index).Locked Then
-      opcPainel1(val(labopcPainel1.Caption)).Value = True
+      opcPainel1(Val(labopcPainel1.Caption)).Value = True
    Else
       'If Val(labopcPainel1.Caption) <> opcPainel1(Index).BookMark Then 'Manual
          labopcPainel1.Caption = Str$(opcPainel1(Index).BookMark)
@@ -3017,7 +2980,7 @@ Private Sub RepositionProduto()
   
 End Sub
 
-Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double, Oq As String) As Variant
+Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double, Oq As String) As Variant
    Dim Materia As GRecordSet, Unidades As GRecordSet
 
    On Error Resume Next
@@ -3038,7 +3001,7 @@ Private Function InfoProdutos(Sequencia_do_Produto As Long, Sequencia_da_Materia
             InfoProdutos = 0
          End If
       Case "Peso"
-         InfoProdutos = Materia!Peso
+         InfoProdutos = Materia!peso
    End Select
    
     'Alteração
@@ -3114,7 +3077,7 @@ Private Sub CarregaTotalizador()
    TxtDtaAtual.Value = Date
 End Sub
 
-Private Sub Comandos(KeyAscii As Integer, Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double)
+Private Sub Comandos(KeyAscii As Integer, Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double)
    On Error Resume Next
    
    If vgPWUsuario <> "JERONIMO" Then: Exit Sub
@@ -3149,7 +3112,7 @@ Private Function MegaPeso() As Double
             "INNER JOIN Unidades On P.[Seqüência da Unidade] = Unidades.[Seqüência da Unidade] " & _
             "WHERE [Sigla da Unidade] = 'KG'", , , , , , , , , , True)
             
-   If Tb.RecordCount > 0 Then MegaPeso = Tb!Peso
+   If Tb.RecordCount > 0 Then MegaPeso = Tb!peso
 
 End Function
 
@@ -3163,7 +3126,7 @@ Private Function UpDatePeso()
 Dim Tb As New GRecordSet
 Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Itens do Conjunto] WHERE [Seqüência do Produto] = " & Sequencia_do_Produto)
 If Tb.RecordCount > 0 Then
-vgDb.Execute "Update [Itens do Conjunto] Set [Peso do Item] = " & Substitui(CStr(Peso), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Sequencia_do_Produto
+vgDb.Execute "Update [Itens do Conjunto] Set [Peso do Item] = " & Substitui(CStr(peso), ",", ".", SO_UM) & " WHERE [Seqüência do Produto] = " & Sequencia_do_Produto
 End If
 End Function
 
@@ -3178,7 +3141,7 @@ End If
 End Function
 
 
-Private Function ValidaProduto2(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, Peso As Double, Custo As Double) As Boolean 'produto
+Private Function ValidaProduto2(Sequencia_do_Produto As Long, Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double, peso As Double, Custo As Double) As Boolean 'produto
  Dim Tb As New GRecordSet
  
  Set Tb = vgDb.OpenRecordSet("SELECT * From Produtos Where [Seqüência do Produto] = " & Sequencia_da_Materia_Prima)
@@ -3378,11 +3341,11 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_de_Barras = txtCampo(9).Value
          Sequencia_da_Classificacao = txtCampo(10).Value
          e_Materia_Prima = chkCampo(8).Value
-         Peso = txtCampo(0).Value
+         peso = txtCampo(0).Value
          Custo_Medio = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Custo Médio])
          Usado = chkCampo(7).Value
          ultimo_Fornecedor = txtCampo(15).Value
-         Tipo_do_Produto = val(labopcPainel1.Caption)
+         Tipo_do_Produto = Val(labopcPainel1.Caption)
          Inativo = chkCampo(9).Value
          Localizacao = txtCampo(11).Value
          Quantidade_Contabil = txtCampo(14).Value
@@ -3439,7 +3402,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_de_Barras = IIf(IsNull(vgTb![Código de Barras]), "", vgTb![Código de Barras])
          Sequencia_da_Classificacao = IIf(IsNull(vgTb![Seqüência da Classificação]), 0, vgTb![Seqüência da Classificação])
          e_Materia_Prima = IIf(IsNull(vgTb![É Matéria Prima]), 0, vgTb![É Matéria Prima])
-         Peso = IIf(IsNull(vgTb!Peso), 0, vgTb!Peso)
+         peso = IIf(IsNull(vgTb!peso), 0, vgTb!peso)
          Custo_Medio = IIf(IsNull(vgTb![Custo Médio]), 0, vgTb![Custo Médio])
          Usado = IIf(IsNull(vgTb!Usado), 0, vgTb!Usado)
          ultimo_Fornecedor = IIf(IsNull(vgTb![Último Fornecedor]), 0, vgTb![Último Fornecedor])
@@ -3816,7 +3779,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And val(grdBrowse.RecordSet.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -4551,18 +4514,17 @@ Public Sub DefineControles()
    txtCampo(8).Source = "Unidades"
    txtCampo(8).vgfrmGMCale.grdListaG.AutoRebind = True
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(8).DataField), txtCampo(8)
-   
-   
+
    Set txtCampo(4).CtPri = txtCp(4)
-  ' txtCampo(4).DataType = 1
-  ' txtCampo(4).Mask = "999.999,9999"
-  ' txtCampo(4).Editable = False
-  ' txtCampo(4).BoundColumn = ""
-  ' txtCampo(4).ListFields = ""
-   'txtCampo(4).OrderFields = ""
-  ' txtCampo(4).Relation = ""
-  ' txtCampo(4).Source = ""
-  ' grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(4).DataField), txtCampo(4)
+   txtCampo(4).DataType = 1
+   txtCampo(4).Mask = "999.999,9999"
+   txtCampo(4).Editable = False
+   txtCampo(4).BoundColumn = ""
+   txtCampo(4).ListFields = ""
+   txtCampo(4).OrderFields = ""
+   txtCampo(4).Relation = ""
+   txtCampo(4).Source = ""
+   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(4).DataField), txtCampo(4)
 
    Set txtCampo(5).CtPri = txtCp(5)
    Set txtCampo(5).CtFdo = labFdo5
@@ -5260,7 +5222,7 @@ End Function
 Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_da_Materia_Prima As Long, Quantidade_de_Materia_Prima As Double
-   Dim Peso As Double, Custo As Double
+   Dim peso As Double, Custo As Double
    vgPriVez = True
    If vgOq = PREVALIDACOES Then
       vgRetVal = False
@@ -5278,10 +5240,10 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
       Select Case vgCol
          Case 3
-            vgRetVal = (InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Sigla"))
+            vgRetVal = (InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Sigla"))
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 4
-            vgRetVal = Peso
+            vgRetVal = peso
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 5
             vgRetVal = Custo
@@ -5290,13 +5252,13 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = (Quantidade_de_Materia_Prima * Custo)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 7
-            vgRetVal = (Quantidade_de_Materia_Prima * Peso)
+            vgRetVal = (Quantidade_de_Materia_Prima * peso)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
       If Err Then Err.Clear
    ElseIf vgOq = KEYPRESS_NO_GRID Then
       GoSub IniApDaCol
-      Comandos KeyCodeAscii, Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo
+      Comandos KeyCodeAscii, Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
       If vgSituacao <> ACAO_INCLUINDO Then
          GoSub IniApDaTb
@@ -5344,7 +5306,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          End If
          If vgIsValid And vgCol = -1 Then
             If Sequencia_da_Materia_Prima > 0 Then
-               vgIsValid = (ValidaProduto2(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo))
+               vgIsValid = (ValidaProduto2(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo))
                If Not vgIsValid Then vgColumn = 1
                vgErrorMessage$ = "Materia Prima INATIVA!"
             End If
@@ -5367,12 +5329,12 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_da_Materia_Prima = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_da_Materia_Prima = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Quantidade_de_Materia_Prima = ColumnValue(2)
-   Peso = ColumnValue(4)
+   peso = ColumnValue(4)
    Custo = ColumnValue(5)
-   Peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Peso")
-   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Custo")
+   peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Peso")
+   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Custo")
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -5383,8 +5345,8 @@ IniApDaTb:
       Sequencia_da_Materia_Prima = Materia_Prima![Seqüência da Matéria Prima]
       Quantidade_de_Materia_Prima = Materia_Prima![Quantidade de Matéria Prima]
    End If
-   Peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Peso")
-   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, Peso, Custo, "Custo")
+   peso = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Peso")
+   Custo = InfoProdutos(Sequencia_do_Produto, Sequencia_da_Materia_Prima, Quantidade_de_Materia_Prima, peso, Custo, "Custo")
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return

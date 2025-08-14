@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
 Begin VB.Form frmOrcament 
    ClientHeight    =   9615
    ClientLeft      =   2475
@@ -604,373 +604,373 @@ Begin VB.Form frmOrcament
          Tab(0).ControlCount=   149
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Label(50)"
-         Tab(1).Control(1)=   "Grid(3)"
+         Tab(1).Control(0)=   "Grid(3)"
+         Tab(1).Control(1)=   "Label(50)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(49)"
-         Tab(2).Control(1)=   "Grid(4)"
+         Tab(2).Control(0)=   "Grid(4)"
+         Tab(2).Control(1)=   "Label(49)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "txtCp(61)"
-         Tab(3).Control(1)=   "ChkCp(3)"
-         Tab(3).Control(2)=   "Label(47)"
-         Tab(3).Control(3)=   "Label(39)"
-         Tab(3).Control(4)=   "Botao(2)"
-         Tab(3).Control(5)=   "txtCp(34)"
-         Tab(3).Control(6)=   "bottxtCampo34(2)"
-         Tab(3).Control(6).Enabled=   0   'False
-         Tab(3).Control(7)=   "bottxtCampo34(1)"
-         Tab(3).Control(7).Enabled=   0   'False
-         Tab(3).Control(8)=   "labFdo34"
-         Tab(3).Control(9)=   "Grid(0)"
+         Tab(3).Control(0)=   "Grid(0)"
+         Tab(3).Control(1)=   "labFdo34"
+         Tab(3).Control(2)=   "bottxtCampo34(1)"
+         Tab(3).Control(2).Enabled=   0   'False
+         Tab(3).Control(3)=   "bottxtCampo34(2)"
+         Tab(3).Control(3).Enabled=   0   'False
+         Tab(3).Control(4)=   "txtCp(34)"
+         Tab(3).Control(5)=   "Botao(2)"
+         Tab(3).Control(6)=   "Label(39)"
+         Tab(3).Control(7)=   "Label(47)"
+         Tab(3).Control(8)=   "ChkCp(3)"
+         Tab(3).Control(9)=   "txtCp(61)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Label(48)"
-         Tab(4).Control(1)=   "Grid(1)"
+         Tab(4).Control(0)=   "Grid(1)"
+         Tab(4).Control(1)=   "Label(48)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "ORCAMENT.frx":001C
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Botao(6)"
-         Tab(5).Control(1)=   "Botao(7)"
-         Tab(5).Control(2)=   "txtCp(9)"
-         Tab(5).Control(2).Enabled=   0   'False
-         Tab(5).Control(3)=   "txtCp(31)"
-         Tab(5).Control(3).Enabled=   0   'False
-         Tab(5).Control(4)=   "bottxtCampo32(0)"
-         Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "txtCp(32)"
-         Tab(5).Control(6)=   "Grid(2)"
-         Tab(5).Control(7)=   "bottxtCampo35(2)"
-         Tab(5).Control(7).Enabled=   0   'False
-         Tab(5).Control(8)=   "txtCp(35)"
-         Tab(5).Control(9)=   "txtCp(36)"
-         Tab(5).Control(9).Enabled=   0   'False
-         Tab(5).Control(10)=   "txtCp(37)"
-         Tab(5).Control(10).Enabled=   0   'False
-         Tab(5).Control(11)=   "txtCp(38)"
-         Tab(5).Control(11).Enabled=   0   'False
-         Tab(5).Control(12)=   "txtCp(39)"
-         Tab(5).Control(12).Enabled=   0   'False
-         Tab(5).Control(13)=   "txtCp(40)"
-         Tab(5).Control(13).Enabled=   0   'False
-         Tab(5).Control(14)=   "txtCp(41)"
-         Tab(5).Control(14).Enabled=   0   'False
-         Tab(5).Control(15)=   "txtCp(42)"
-         Tab(5).Control(15).Enabled=   0   'False
-         Tab(5).Control(16)=   "txtCp(43)"
-         Tab(5).Control(16).Enabled=   0   'False
-         Tab(5).Control(17)=   "txtCp(44)"
-         Tab(5).Control(17).Enabled=   0   'False
-         Tab(5).Control(18)=   "bottxtCampo45(0)"
-         Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "txtCp(45)"
-         Tab(5).Control(20)=   "txtCp(46)"
-         Tab(5).Control(20).Enabled=   0   'False
-         Tab(5).Control(21)=   "bottxtCampo47(0)"
-         Tab(5).Control(21).Enabled=   0   'False
-         Tab(5).Control(22)=   "txtCp(47)"
-         Tab(5).Control(23)=   "txtCp(49)"
-         Tab(5).Control(23).Enabled=   0   'False
-         Tab(5).Control(24)=   "Painel(2)"
-         Tab(5).Control(25)=   "txtCp(52)"
-         Tab(5).Control(25).Enabled=   0   'False
-         Tab(5).Control(26)=   "txtCp(53)"
-         Tab(5).Control(26).Enabled=   0   'False
-         Tab(5).Control(27)=   "txtCp(56)"
-         Tab(5).Control(27).Enabled=   0   'False
-         Tab(5).Control(28)=   "bottxtCampo57(0)"
-         Tab(5).Control(28).Enabled=   0   'False
-         Tab(5).Control(29)=   "txtCp(57)"
-         Tab(5).Control(30)=   "txtCp(148)"
-         Tab(5).Control(31)=   "Label(5)"
-         Tab(5).Control(32)=   "labFdo32"
-         Tab(5).Control(33)=   "labFdo35"
-         Tab(5).Control(34)=   "Label(7)"
-         Tab(5).Control(35)=   "Label(8)"
-         Tab(5).Control(36)=   "Formato(0)"
-         Tab(5).Control(37)=   "Label(9)"
-         Tab(5).Control(38)=   "Formato(1)"
-         Tab(5).Control(39)=   "Label(10)"
-         Tab(5).Control(40)=   "Formato(2)"
-         Tab(5).Control(41)=   "Label(11)"
-         Tab(5).Control(42)=   "Label(12)"
-         Tab(5).Control(43)=   "Label(13)"
-         Tab(5).Control(44)=   "Linha(0)"
-         Tab(5).Control(45)=   "Label(17)"
-         Tab(5).Control(46)=   "Label(18)"
-         Tab(5).Control(47)=   "Label(19)"
-         Tab(5).Control(48)=   "Label(20)"
-         Tab(5).Control(49)=   "Label(21)"
-         Tab(5).Control(50)=   "Label(22)"
-         Tab(5).Control(51)=   "Label(23)"
-         Tab(5).Control(52)=   "Label(24)"
-         Tab(5).Control(53)=   "Label(25)"
-         Tab(5).Control(54)=   "Label(26)"
-         Tab(5).Control(55)=   "Label(27)"
-         Tab(5).Control(56)=   "labFdo45"
-         Tab(5).Control(57)=   "Label(28)"
-         Tab(5).Control(58)=   "Label(29)"
-         Tab(5).Control(59)=   "labFdo47"
-         Tab(5).Control(60)=   "Label(30)"
-         Tab(5).Control(61)=   "Label(38)"
-         Tab(5).Control(62)=   "Label(54)"
-         Tab(5).Control(63)=   "Label(55)"
-         Tab(5).Control(64)=   "Label(58)"
-         Tab(5).Control(65)=   "Label(59)"
-         Tab(5).Control(66)=   "labFdo57"
-         Tab(5).Control(67)=   "Label(173)"
+         Tab(5).Control(0)=   "Label(173)"
+         Tab(5).Control(1)=   "labFdo57"
+         Tab(5).Control(2)=   "Label(59)"
+         Tab(5).Control(3)=   "Label(58)"
+         Tab(5).Control(4)=   "Label(55)"
+         Tab(5).Control(5)=   "Label(54)"
+         Tab(5).Control(6)=   "Label(38)"
+         Tab(5).Control(7)=   "Label(30)"
+         Tab(5).Control(8)=   "labFdo47"
+         Tab(5).Control(9)=   "Label(29)"
+         Tab(5).Control(10)=   "Label(28)"
+         Tab(5).Control(11)=   "labFdo45"
+         Tab(5).Control(12)=   "Label(27)"
+         Tab(5).Control(13)=   "Label(26)"
+         Tab(5).Control(14)=   "Label(25)"
+         Tab(5).Control(15)=   "Label(24)"
+         Tab(5).Control(16)=   "Label(23)"
+         Tab(5).Control(17)=   "Label(22)"
+         Tab(5).Control(18)=   "Label(21)"
+         Tab(5).Control(19)=   "Label(20)"
+         Tab(5).Control(20)=   "Label(19)"
+         Tab(5).Control(21)=   "Label(18)"
+         Tab(5).Control(22)=   "Label(17)"
+         Tab(5).Control(23)=   "Linha(0)"
+         Tab(5).Control(24)=   "Label(13)"
+         Tab(5).Control(25)=   "Label(12)"
+         Tab(5).Control(26)=   "Label(11)"
+         Tab(5).Control(27)=   "Formato(2)"
+         Tab(5).Control(28)=   "Label(10)"
+         Tab(5).Control(29)=   "Formato(1)"
+         Tab(5).Control(30)=   "Label(9)"
+         Tab(5).Control(31)=   "Formato(0)"
+         Tab(5).Control(32)=   "Label(8)"
+         Tab(5).Control(33)=   "Label(7)"
+         Tab(5).Control(34)=   "labFdo35"
+         Tab(5).Control(35)=   "labFdo32"
+         Tab(5).Control(36)=   "Label(5)"
+         Tab(5).Control(37)=   "txtCp(148)"
+         Tab(5).Control(38)=   "txtCp(57)"
+         Tab(5).Control(39)=   "bottxtCampo57(0)"
+         Tab(5).Control(39).Enabled=   0   'False
+         Tab(5).Control(40)=   "txtCp(56)"
+         Tab(5).Control(40).Enabled=   0   'False
+         Tab(5).Control(41)=   "txtCp(53)"
+         Tab(5).Control(41).Enabled=   0   'False
+         Tab(5).Control(42)=   "txtCp(52)"
+         Tab(5).Control(42).Enabled=   0   'False
+         Tab(5).Control(43)=   "Painel(2)"
+         Tab(5).Control(44)=   "txtCp(49)"
+         Tab(5).Control(44).Enabled=   0   'False
+         Tab(5).Control(45)=   "txtCp(47)"
+         Tab(5).Control(46)=   "bottxtCampo47(0)"
+         Tab(5).Control(46).Enabled=   0   'False
+         Tab(5).Control(47)=   "txtCp(46)"
+         Tab(5).Control(47).Enabled=   0   'False
+         Tab(5).Control(48)=   "txtCp(45)"
+         Tab(5).Control(49)=   "bottxtCampo45(0)"
+         Tab(5).Control(49).Enabled=   0   'False
+         Tab(5).Control(50)=   "txtCp(44)"
+         Tab(5).Control(50).Enabled=   0   'False
+         Tab(5).Control(51)=   "txtCp(43)"
+         Tab(5).Control(51).Enabled=   0   'False
+         Tab(5).Control(52)=   "txtCp(42)"
+         Tab(5).Control(52).Enabled=   0   'False
+         Tab(5).Control(53)=   "txtCp(41)"
+         Tab(5).Control(53).Enabled=   0   'False
+         Tab(5).Control(54)=   "txtCp(40)"
+         Tab(5).Control(54).Enabled=   0   'False
+         Tab(5).Control(55)=   "txtCp(39)"
+         Tab(5).Control(55).Enabled=   0   'False
+         Tab(5).Control(56)=   "txtCp(38)"
+         Tab(5).Control(56).Enabled=   0   'False
+         Tab(5).Control(57)=   "txtCp(37)"
+         Tab(5).Control(57).Enabled=   0   'False
+         Tab(5).Control(58)=   "txtCp(36)"
+         Tab(5).Control(58).Enabled=   0   'False
+         Tab(5).Control(59)=   "txtCp(35)"
+         Tab(5).Control(60)=   "bottxtCampo35(2)"
+         Tab(5).Control(60).Enabled=   0   'False
+         Tab(5).Control(61)=   "Grid(2)"
+         Tab(5).Control(62)=   "txtCp(32)"
+         Tab(5).Control(63)=   "bottxtCampo32(0)"
+         Tab(5).Control(63).Enabled=   0   'False
+         Tab(5).Control(64)=   "txtCp(31)"
+         Tab(5).Control(64).Enabled=   0   'False
+         Tab(5).Control(65)=   "txtCp(9)"
+         Tab(5).Control(65).Enabled=   0   'False
+         Tab(5).Control(66)=   "Botao(7)"
+         Tab(5).Control(67)=   "Botao(6)"
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "Linha(15)"
-         Tab(6).Control(1)=   "Label(166)"
-         Tab(6).Control(2)=   "Label(165)"
-         Tab(6).Control(3)=   "Label(164)"
-         Tab(6).Control(4)=   "Label(163)"
-         Tab(6).Control(5)=   "Label(162)"
-         Tab(6).Control(6)=   "Label(161)"
-         Tab(6).Control(7)=   "Label(160)"
-         Tab(6).Control(8)=   "Linha(14)"
-         Tab(6).Control(9)=   "Label(159)"
-         Tab(6).Control(10)=   "Label(158)"
-         Tab(6).Control(11)=   "Label(157)"
-         Tab(6).Control(12)=   "Label(156)"
-         Tab(6).Control(13)=   "Label(155)"
-         Tab(6).Control(14)=   "Label(154)"
-         Tab(6).Control(15)=   "Label(153)"
-         Tab(6).Control(16)=   "txtCp(114)"
-         Tab(6).Control(16).Enabled=   0   'False
-         Tab(6).Control(17)=   "txtCp(113)"
-         Tab(6).Control(17).Enabled=   0   'False
-         Tab(6).Control(18)=   "txtCp(112)"
-         Tab(6).Control(18).Enabled=   0   'False
-         Tab(6).Control(19)=   "txtCp(111)"
-         Tab(6).Control(19).Enabled=   0   'False
-         Tab(6).Control(20)=   "Label(113)"
-         Tab(6).Control(21)=   "txtCp(110)"
-         Tab(6).Control(21).Enabled=   0   'False
-         Tab(6).Control(22)=   "txtCp(109)"
-         Tab(6).Control(22).Enabled=   0   'False
-         Tab(6).Control(23)=   "txtCp(108)"
-         Tab(6).Control(23).Enabled=   0   'False
-         Tab(6).Control(24)=   "Label(112)"
-         Tab(6).Control(25)=   "Label(111)"
-         Tab(6).Control(26)=   "txtCp(107)"
-         Tab(6).Control(26).Enabled=   0   'False
-         Tab(6).Control(27)=   "txtCp(106)"
+         Tab(6).Control(0)=   "Label(69)"
+         Tab(6).Control(1)=   "txtCp(66)"
+         Tab(6).Control(2)=   "Label(70)"
+         Tab(6).Control(3)=   "Linha(2)"
+         Tab(6).Control(4)=   "Label(71)"
+         Tab(6).Control(5)=   "txtCp(67)"
+         Tab(6).Control(6)=   "Label(72)"
+         Tab(6).Control(7)=   "txtCp(68)"
+         Tab(6).Control(8)=   "Label(73)"
+         Tab(6).Control(9)=   "Label(74)"
+         Tab(6).Control(10)=   "txtCp(69)"
+         Tab(6).Control(11)=   "Label(75)"
+         Tab(6).Control(12)=   "txtCp(70)"
+         Tab(6).Control(12).Enabled=   0   'False
+         Tab(6).Control(13)=   "Label(76)"
+         Tab(6).Control(14)=   "txtCp(71)"
+         Tab(6).Control(14).Enabled=   0   'False
+         Tab(6).Control(15)=   "Label(77)"
+         Tab(6).Control(16)=   "txtCp(72)"
+         Tab(6).Control(17)=   "Linha(3)"
+         Tab(6).Control(18)=   "Linha(4)"
+         Tab(6).Control(19)=   "Label(78)"
+         Tab(6).Control(20)=   "Label(79)"
+         Tab(6).Control(21)=   "Label(80)"
+         Tab(6).Control(22)=   "txtCp(73)"
+         Tab(6).Control(23)=   "Label(81)"
+         Tab(6).Control(24)=   "txtCp(74)"
+         Tab(6).Control(25)=   "Label(82)"
+         Tab(6).Control(26)=   "txtCp(75)"
+         Tab(6).Control(27)=   "txtCp(76)"
          Tab(6).Control(27).Enabled=   0   'False
-         Tab(6).Control(28)=   "txtCp(105)"
-         Tab(6).Control(28).Enabled=   0   'False
-         Tab(6).Control(29)=   "Label(110)"
-         Tab(6).Control(30)=   "Label(109)"
-         Tab(6).Control(31)=   "txtCp(104)"
-         Tab(6).Control(31).Enabled=   0   'False
-         Tab(6).Control(32)=   "txtCp(103)"
-         Tab(6).Control(32).Enabled=   0   'False
-         Tab(6).Control(33)=   "txtCp(102)"
+         Tab(6).Control(28)=   "Label(83)"
+         Tab(6).Control(29)=   "Label(84)"
+         Tab(6).Control(30)=   "txtCp(77)"
+         Tab(6).Control(31)=   "txtCp(78)"
+         Tab(6).Control(32)=   "Label(85)"
+         Tab(6).Control(33)=   "txtCp(79)"
          Tab(6).Control(33).Enabled=   0   'False
-         Tab(6).Control(34)=   "txtCp(101)"
-         Tab(6).Control(35)=   "bottxtCampo101(2)"
-         Tab(6).Control(35).Enabled=   0   'False
-         Tab(6).Control(36)=   "bottxtCampo101(1)"
-         Tab(6).Control(36).Enabled=   0   'False
-         Tab(6).Control(37)=   "labFdo101"
-         Tab(6).Control(38)=   "txtCp(100)"
-         Tab(6).Control(39)=   "bottxtCampo100(2)"
-         Tab(6).Control(39).Enabled=   0   'False
-         Tab(6).Control(40)=   "bottxtCampo100(1)"
+         Tab(6).Control(34)=   "txtCp(80)"
+         Tab(6).Control(34).Enabled=   0   'False
+         Tab(6).Control(35)=   "txtCp(81)"
+         Tab(6).Control(36)=   "Label(86)"
+         Tab(6).Control(37)=   "Label(87)"
+         Tab(6).Control(38)=   "txtCp(82)"
+         Tab(6).Control(39)=   "Label(88)"
+         Tab(6).Control(40)=   "txtCp(83)"
          Tab(6).Control(40).Enabled=   0   'False
-         Tab(6).Control(41)=   "labFdo100"
-         Tab(6).Control(42)=   "Linha(9)"
-         Tab(6).Control(43)=   "txtCp(99)"
-         Tab(6).Control(44)=   "bottxtCampo99(2)"
+         Tab(6).Control(41)=   "Label(89)"
+         Tab(6).Control(42)=   "txtCp(84)"
+         Tab(6).Control(42).Enabled=   0   'False
+         Tab(6).Control(43)=   "Label(90)"
+         Tab(6).Control(44)=   "txtCp(85)"
          Tab(6).Control(44).Enabled=   0   'False
-         Tab(6).Control(45)=   "bottxtCampo99(1)"
+         Tab(6).Control(45)=   "txtCp(86)"
          Tab(6).Control(45).Enabled=   0   'False
-         Tab(6).Control(46)=   "labFdo99"
-         Tab(6).Control(47)=   "Label(108)"
-         Tab(6).Control(48)=   "txtCp(98)"
-         Tab(6).Control(49)=   "txtCp(97)"
-         Tab(6).Control(50)=   "Label(107)"
-         Tab(6).Control(51)=   "txtCp(96)"
-         Tab(6).Control(52)=   "Label(106)"
-         Tab(6).Control(53)=   "Label(105)"
-         Tab(6).Control(54)=   "Linha(8)"
-         Tab(6).Control(55)=   "Label(104)"
-         Tab(6).Control(56)=   "Label(103)"
-         Tab(6).Control(57)=   "Label(102)"
-         Tab(6).Control(58)=   "Label(101)"
-         Tab(6).Control(59)=   "Label(100)"
-         Tab(6).Control(60)=   "Label(99)"
-         Tab(6).Control(61)=   "txtCp(95)"
-         Tab(6).Control(62)=   "Label(98)"
+         Tab(6).Control(46)=   "txtCp(87)"
+         Tab(6).Control(46).Enabled=   0   'False
+         Tab(6).Control(47)=   "Label(91)"
+         Tab(6).Control(48)=   "Label(92)"
+         Tab(6).Control(49)=   "txtCp(88)"
+         Tab(6).Control(50)=   "Label(93)"
+         Tab(6).Control(51)=   "txtCp(89)"
+         Tab(6).Control(52)=   "Linha(5)"
+         Tab(6).Control(53)=   "Label(94)"
+         Tab(6).Control(54)=   "Label(95)"
+         Tab(6).Control(55)=   "txtCp(90)"
+         Tab(6).Control(56)=   "txtCp(91)"
+         Tab(6).Control(56).Enabled=   0   'False
+         Tab(6).Control(57)=   "txtCp(92)"
+         Tab(6).Control(57).Enabled=   0   'False
+         Tab(6).Control(58)=   "txtCp(93)"
+         Tab(6).Control(58).Enabled=   0   'False
+         Tab(6).Control(59)=   "txtCp(94)"
+         Tab(6).Control(59).Enabled=   0   'False
+         Tab(6).Control(60)=   "Label(96)"
+         Tab(6).Control(61)=   "Linha(6)"
+         Tab(6).Control(62)=   "Linha(7)"
          Tab(6).Control(63)=   "Label(97)"
-         Tab(6).Control(64)=   "Linha(7)"
-         Tab(6).Control(65)=   "Linha(6)"
-         Tab(6).Control(66)=   "Label(96)"
-         Tab(6).Control(67)=   "txtCp(94)"
-         Tab(6).Control(67).Enabled=   0   'False
-         Tab(6).Control(68)=   "txtCp(93)"
-         Tab(6).Control(68).Enabled=   0   'False
-         Tab(6).Control(69)=   "txtCp(92)"
-         Tab(6).Control(69).Enabled=   0   'False
-         Tab(6).Control(70)=   "txtCp(91)"
-         Tab(6).Control(70).Enabled=   0   'False
-         Tab(6).Control(71)=   "txtCp(90)"
-         Tab(6).Control(72)=   "Label(95)"
-         Tab(6).Control(73)=   "Label(94)"
-         Tab(6).Control(74)=   "Linha(5)"
-         Tab(6).Control(75)=   "txtCp(89)"
-         Tab(6).Control(76)=   "Label(93)"
-         Tab(6).Control(77)=   "txtCp(88)"
-         Tab(6).Control(78)=   "Label(92)"
-         Tab(6).Control(79)=   "Label(91)"
-         Tab(6).Control(80)=   "txtCp(87)"
-         Tab(6).Control(80).Enabled=   0   'False
-         Tab(6).Control(81)=   "txtCp(86)"
+         Tab(6).Control(64)=   "Label(98)"
+         Tab(6).Control(65)=   "txtCp(95)"
+         Tab(6).Control(66)=   "Label(99)"
+         Tab(6).Control(67)=   "Label(100)"
+         Tab(6).Control(68)=   "Label(101)"
+         Tab(6).Control(69)=   "Label(102)"
+         Tab(6).Control(70)=   "Label(103)"
+         Tab(6).Control(71)=   "Label(104)"
+         Tab(6).Control(72)=   "Linha(8)"
+         Tab(6).Control(73)=   "Label(105)"
+         Tab(6).Control(74)=   "Label(106)"
+         Tab(6).Control(75)=   "txtCp(96)"
+         Tab(6).Control(76)=   "Label(107)"
+         Tab(6).Control(77)=   "txtCp(97)"
+         Tab(6).Control(78)=   "txtCp(98)"
+         Tab(6).Control(79)=   "Label(108)"
+         Tab(6).Control(80)=   "labFdo99"
+         Tab(6).Control(81)=   "bottxtCampo99(1)"
          Tab(6).Control(81).Enabled=   0   'False
-         Tab(6).Control(82)=   "txtCp(85)"
+         Tab(6).Control(82)=   "bottxtCampo99(2)"
          Tab(6).Control(82).Enabled=   0   'False
-         Tab(6).Control(83)=   "Label(90)"
-         Tab(6).Control(84)=   "txtCp(84)"
-         Tab(6).Control(84).Enabled=   0   'False
-         Tab(6).Control(85)=   "Label(89)"
-         Tab(6).Control(86)=   "txtCp(83)"
+         Tab(6).Control(83)=   "txtCp(99)"
+         Tab(6).Control(84)=   "Linha(9)"
+         Tab(6).Control(85)=   "labFdo100"
+         Tab(6).Control(86)=   "bottxtCampo100(1)"
          Tab(6).Control(86).Enabled=   0   'False
-         Tab(6).Control(87)=   "Label(88)"
-         Tab(6).Control(88)=   "txtCp(82)"
-         Tab(6).Control(89)=   "Label(87)"
-         Tab(6).Control(90)=   "Label(86)"
-         Tab(6).Control(91)=   "txtCp(81)"
-         Tab(6).Control(92)=   "txtCp(80)"
-         Tab(6).Control(92).Enabled=   0   'False
-         Tab(6).Control(93)=   "txtCp(79)"
+         Tab(6).Control(87)=   "bottxtCampo100(2)"
+         Tab(6).Control(87).Enabled=   0   'False
+         Tab(6).Control(88)=   "txtCp(100)"
+         Tab(6).Control(89)=   "labFdo101"
+         Tab(6).Control(90)=   "bottxtCampo101(1)"
+         Tab(6).Control(90).Enabled=   0   'False
+         Tab(6).Control(91)=   "bottxtCampo101(2)"
+         Tab(6).Control(91).Enabled=   0   'False
+         Tab(6).Control(92)=   "txtCp(101)"
+         Tab(6).Control(93)=   "txtCp(102)"
          Tab(6).Control(93).Enabled=   0   'False
-         Tab(6).Control(94)=   "Label(85)"
-         Tab(6).Control(95)=   "txtCp(78)"
-         Tab(6).Control(96)=   "txtCp(77)"
-         Tab(6).Control(97)=   "Label(84)"
-         Tab(6).Control(98)=   "Label(83)"
-         Tab(6).Control(99)=   "txtCp(76)"
+         Tab(6).Control(94)=   "txtCp(103)"
+         Tab(6).Control(94).Enabled=   0   'False
+         Tab(6).Control(95)=   "txtCp(104)"
+         Tab(6).Control(95).Enabled=   0   'False
+         Tab(6).Control(96)=   "Label(109)"
+         Tab(6).Control(97)=   "Label(110)"
+         Tab(6).Control(98)=   "txtCp(105)"
+         Tab(6).Control(98).Enabled=   0   'False
+         Tab(6).Control(99)=   "txtCp(106)"
          Tab(6).Control(99).Enabled=   0   'False
-         Tab(6).Control(100)=   "txtCp(75)"
-         Tab(6).Control(101)=   "Label(82)"
-         Tab(6).Control(102)=   "txtCp(74)"
-         Tab(6).Control(103)=   "Label(81)"
-         Tab(6).Control(104)=   "txtCp(73)"
-         Tab(6).Control(105)=   "Label(80)"
-         Tab(6).Control(106)=   "Label(79)"
-         Tab(6).Control(107)=   "Label(78)"
-         Tab(6).Control(108)=   "Linha(4)"
-         Tab(6).Control(109)=   "Linha(3)"
-         Tab(6).Control(110)=   "txtCp(72)"
-         Tab(6).Control(111)=   "Label(77)"
-         Tab(6).Control(112)=   "txtCp(71)"
-         Tab(6).Control(112).Enabled=   0   'False
-         Tab(6).Control(113)=   "Label(76)"
-         Tab(6).Control(114)=   "txtCp(70)"
-         Tab(6).Control(114).Enabled=   0   'False
-         Tab(6).Control(115)=   "Label(75)"
-         Tab(6).Control(116)=   "txtCp(69)"
-         Tab(6).Control(117)=   "Label(74)"
-         Tab(6).Control(118)=   "Label(73)"
-         Tab(6).Control(119)=   "txtCp(68)"
-         Tab(6).Control(120)=   "Label(72)"
-         Tab(6).Control(121)=   "txtCp(67)"
-         Tab(6).Control(122)=   "Label(71)"
-         Tab(6).Control(123)=   "Linha(2)"
-         Tab(6).Control(124)=   "Label(70)"
-         Tab(6).Control(125)=   "txtCp(66)"
-         Tab(6).Control(126)=   "Label(69)"
+         Tab(6).Control(100)=   "txtCp(107)"
+         Tab(6).Control(100).Enabled=   0   'False
+         Tab(6).Control(101)=   "Label(111)"
+         Tab(6).Control(102)=   "Label(112)"
+         Tab(6).Control(103)=   "txtCp(108)"
+         Tab(6).Control(103).Enabled=   0   'False
+         Tab(6).Control(104)=   "txtCp(109)"
+         Tab(6).Control(104).Enabled=   0   'False
+         Tab(6).Control(105)=   "txtCp(110)"
+         Tab(6).Control(105).Enabled=   0   'False
+         Tab(6).Control(106)=   "Label(113)"
+         Tab(6).Control(107)=   "txtCp(111)"
+         Tab(6).Control(107).Enabled=   0   'False
+         Tab(6).Control(108)=   "txtCp(112)"
+         Tab(6).Control(108).Enabled=   0   'False
+         Tab(6).Control(109)=   "txtCp(113)"
+         Tab(6).Control(109).Enabled=   0   'False
+         Tab(6).Control(110)=   "txtCp(114)"
+         Tab(6).Control(110).Enabled=   0   'False
+         Tab(6).Control(111)=   "Label(153)"
+         Tab(6).Control(112)=   "Label(154)"
+         Tab(6).Control(113)=   "Label(155)"
+         Tab(6).Control(114)=   "Label(156)"
+         Tab(6).Control(115)=   "Label(157)"
+         Tab(6).Control(116)=   "Label(158)"
+         Tab(6).Control(117)=   "Label(159)"
+         Tab(6).Control(118)=   "Linha(14)"
+         Tab(6).Control(119)=   "Label(160)"
+         Tab(6).Control(120)=   "Label(161)"
+         Tab(6).Control(121)=   "Label(162)"
+         Tab(6).Control(122)=   "Label(163)"
+         Tab(6).Control(123)=   "Label(164)"
+         Tab(6).Control(124)=   "Label(165)"
+         Tab(6).Control(125)=   "Label(166)"
+         Tab(6).Control(126)=   "Linha(15)"
          Tab(6).ControlCount=   127
          TabCaption(7)   =   "Bomba / Motor"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(142)"
-         Tab(7).Control(1)=   "txtCp(141)"
-         Tab(7).Control(2)=   "txtCp(140)"
-         Tab(7).Control(3)=   "txtCp(139)"
-         Tab(7).Control(4)=   "txtCp(138)"
-         Tab(7).Control(5)=   "Label(152)"
-         Tab(7).Control(6)=   "Label(151)"
-         Tab(7).Control(7)=   "Label(150)"
-         Tab(7).Control(8)=   "Label(149)"
-         Tab(7).Control(9)=   "Label(148)"
-         Tab(7).Control(10)=   "Label(147)"
-         Tab(7).Control(11)=   "txtCp(136)"
-         Tab(7).Control(11).Enabled=   0   'False
-         Tab(7).Control(12)=   "Label(145)"
-         Tab(7).Control(13)=   "txtCp(135)"
-         Tab(7).Control(13).Enabled=   0   'False
-         Tab(7).Control(14)=   "Label(144)"
-         Tab(7).Control(15)=   "txtCp(134)"
-         Tab(7).Control(16)=   "Linha(13)"
-         Tab(7).Control(17)=   "Label(143)"
-         Tab(7).Control(18)=   "txtCp(133)"
-         Tab(7).Control(18).Enabled=   0   'False
-         Tab(7).Control(19)=   "Label(142)"
-         Tab(7).Control(20)=   "Label(141)"
-         Tab(7).Control(21)=   "Label(140)"
-         Tab(7).Control(22)=   "txtCp(132)"
-         Tab(7).Control(22).Enabled=   0   'False
-         Tab(7).Control(23)=   "txtCp(131)"
-         Tab(7).Control(24)=   "Label(139)"
-         Tab(7).Control(25)=   "Label(138)"
-         Tab(7).Control(26)=   "txtCp(130)"
-         Tab(7).Control(27)=   "txtCp(129)"
-         Tab(7).Control(28)=   "Label(137)"
-         Tab(7).Control(29)=   "Label(136)"
-         Tab(7).Control(30)=   "txtCp(128)"
-         Tab(7).Control(31)=   "txtCp(127)"
-         Tab(7).Control(32)=   "Label(135)"
-         Tab(7).Control(33)=   "Label(134)"
+         Tab(7).Control(0)=   "Label(114)"
+         Tab(7).Control(1)=   "Linha(10)"
+         Tab(7).Control(2)=   "Label(115)"
+         Tab(7).Control(3)=   "txtCp(115)"
+         Tab(7).Control(4)=   "Label(116)"
+         Tab(7).Control(5)=   "txtCp(116)"
+         Tab(7).Control(6)=   "Label(117)"
+         Tab(7).Control(7)=   "Label(118)"
+         Tab(7).Control(8)=   "txtCp(117)"
+         Tab(7).Control(9)=   "txtCp(118)"
+         Tab(7).Control(10)=   "Label(119)"
+         Tab(7).Control(11)=   "Label(120)"
+         Tab(7).Control(12)=   "txtCp(119)"
+         Tab(7).Control(13)=   "Label(121)"
+         Tab(7).Control(14)=   "txtCp(120)"
+         Tab(7).Control(15)=   "txtCp(121)"
+         Tab(7).Control(15).Enabled=   0   'False
+         Tab(7).Control(16)=   "Label(122)"
+         Tab(7).Control(17)=   "txtCp(122)"
+         Tab(7).Control(17).Enabled=   0   'False
+         Tab(7).Control(18)=   "Label(123)"
+         Tab(7).Control(19)=   "Label(124)"
+         Tab(7).Control(20)=   "txtCp(123)"
+         Tab(7).Control(21)=   "Label(125)"
+         Tab(7).Control(22)=   "txtCp(124)"
+         Tab(7).Control(23)=   "Label(126)"
+         Tab(7).Control(24)=   "Label(127)"
+         Tab(7).Control(25)=   "Label(128)"
+         Tab(7).Control(26)=   "Label(129)"
+         Tab(7).Control(27)=   "Label(130)"
+         Tab(7).Control(28)=   "txtCp(125)"
+         Tab(7).Control(28).Enabled=   0   'False
+         Tab(7).Control(29)=   "Label(131)"
+         Tab(7).Control(30)=   "Linha(11)"
+         Tab(7).Control(31)=   "Linha(12)"
+         Tab(7).Control(32)=   "Label(132)"
+         Tab(7).Control(33)=   "Label(133)"
          Tab(7).Control(34)=   "txtCp(126)"
-         Tab(7).Control(35)=   "Label(133)"
-         Tab(7).Control(36)=   "Label(132)"
-         Tab(7).Control(37)=   "Linha(12)"
-         Tab(7).Control(38)=   "Linha(11)"
-         Tab(7).Control(39)=   "Label(131)"
-         Tab(7).Control(40)=   "txtCp(125)"
-         Tab(7).Control(40).Enabled=   0   'False
-         Tab(7).Control(41)=   "Label(130)"
-         Tab(7).Control(42)=   "Label(129)"
-         Tab(7).Control(43)=   "Label(128)"
-         Tab(7).Control(44)=   "Label(127)"
-         Tab(7).Control(45)=   "Label(126)"
-         Tab(7).Control(46)=   "txtCp(124)"
-         Tab(7).Control(47)=   "Label(125)"
-         Tab(7).Control(48)=   "txtCp(123)"
-         Tab(7).Control(49)=   "Label(124)"
-         Tab(7).Control(50)=   "Label(123)"
-         Tab(7).Control(51)=   "txtCp(122)"
-         Tab(7).Control(51).Enabled=   0   'False
-         Tab(7).Control(52)=   "Label(122)"
-         Tab(7).Control(53)=   "txtCp(121)"
-         Tab(7).Control(53).Enabled=   0   'False
-         Tab(7).Control(54)=   "txtCp(120)"
-         Tab(7).Control(55)=   "Label(121)"
-         Tab(7).Control(56)=   "txtCp(119)"
-         Tab(7).Control(57)=   "Label(120)"
-         Tab(7).Control(58)=   "Label(119)"
-         Tab(7).Control(59)=   "txtCp(118)"
-         Tab(7).Control(60)=   "txtCp(117)"
-         Tab(7).Control(61)=   "Label(118)"
-         Tab(7).Control(62)=   "Label(117)"
-         Tab(7).Control(63)=   "txtCp(116)"
-         Tab(7).Control(64)=   "Label(116)"
-         Tab(7).Control(65)=   "txtCp(115)"
-         Tab(7).Control(66)=   "Label(115)"
-         Tab(7).Control(67)=   "Linha(10)"
-         Tab(7).Control(68)=   "Label(114)"
+         Tab(7).Control(35)=   "Label(134)"
+         Tab(7).Control(36)=   "Label(135)"
+         Tab(7).Control(37)=   "txtCp(127)"
+         Tab(7).Control(38)=   "txtCp(128)"
+         Tab(7).Control(39)=   "Label(136)"
+         Tab(7).Control(40)=   "Label(137)"
+         Tab(7).Control(41)=   "txtCp(129)"
+         Tab(7).Control(42)=   "txtCp(130)"
+         Tab(7).Control(43)=   "Label(138)"
+         Tab(7).Control(44)=   "Label(139)"
+         Tab(7).Control(45)=   "txtCp(131)"
+         Tab(7).Control(46)=   "txtCp(132)"
+         Tab(7).Control(46).Enabled=   0   'False
+         Tab(7).Control(47)=   "Label(140)"
+         Tab(7).Control(48)=   "Label(141)"
+         Tab(7).Control(49)=   "Label(142)"
+         Tab(7).Control(50)=   "txtCp(133)"
+         Tab(7).Control(50).Enabled=   0   'False
+         Tab(7).Control(51)=   "Label(143)"
+         Tab(7).Control(52)=   "Linha(13)"
+         Tab(7).Control(53)=   "txtCp(134)"
+         Tab(7).Control(54)=   "Label(144)"
+         Tab(7).Control(55)=   "txtCp(135)"
+         Tab(7).Control(55).Enabled=   0   'False
+         Tab(7).Control(56)=   "Label(145)"
+         Tab(7).Control(57)=   "txtCp(136)"
+         Tab(7).Control(57).Enabled=   0   'False
+         Tab(7).Control(58)=   "Label(147)"
+         Tab(7).Control(59)=   "Label(148)"
+         Tab(7).Control(60)=   "Label(149)"
+         Tab(7).Control(61)=   "Label(150)"
+         Tab(7).Control(62)=   "Label(151)"
+         Tab(7).Control(63)=   "Label(152)"
+         Tab(7).Control(64)=   "txtCp(138)"
+         Tab(7).Control(65)=   "txtCp(139)"
+         Tab(7).Control(66)=   "txtCp(140)"
+         Tab(7).Control(67)=   "txtCp(141)"
+         Tab(7).Control(68)=   "txtCp(142)"
          Tab(7).ControlCount=   69
          TabCaption(8)   =   "Mapa da Propriedade"
          Tab(8).ControlEnabled=   0   'False
-         Tab(8).Control(0)=   "mmCampo(0)"
-         Tab(8).Control(1)=   "Label(171)"
+         Tab(8).Control(0)=   "Label(171)"
+         Tab(8).Control(1)=   "mmCampo(0)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
             Height          =   300
@@ -10157,7 +10157,7 @@ Public Tipo2 As Byte, Fechamento2 As Byte
 Private Sub opcPainel1Cp_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    If opcPainel1(Index).Locked Then
-      opcPainel1(Val(labopcPainel1.Caption)).Value = True
+      opcPainel1(val(labopcPainel1.Caption)).Value = True
    Else
       'If Val(labopcPainel1.Caption) <> opcPainel1(Index).BookMark Then 'Manual
       labopcPainel1.Caption = Str$(opcPainel1(Index).BookMark)
@@ -10183,7 +10183,7 @@ End Sub
 Private Sub opcPainel2Cp_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    If opcPainel2(Index).Locked Then
-      opcPainel2(Val(labopcPainel2.Caption)).Value = True
+      opcPainel2(val(labopcPainel2.Caption)).Value = True
    Else
       'If Val(labopcPainel2.Caption) <> opcPainel2(Index).BookMark Then 'Manual
       labopcPainel2.Caption = Str$(opcPainel2(Index).BookMark)
@@ -10932,13 +10932,56 @@ Private Function ProcessaPecas(Valor_do_Tributo As Double, Sequencia_do_Orcament
       End If
       vgDb.Execute "Update [Peças do Orçamento] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 9, 3, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Diferido
       
-      vgDb.Execute "Update [Peças do Orçamento] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 10, 3, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'PIS
-      
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 10, 3, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-      
-      vgDb.Execute "Update [Peças do Orçamento] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 11, 3, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'COFINS
-      
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 11, 3, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+      ' PIS/COFINS para entrega futura são calculados na AtualizaValoresPecas com reduções regionais corretas
+      If Not Entrega_Futura Then
+         ' Calcular PIS/COFINS igual à AtualizaValoresPecas - considerando desconto e frete
+         Dim BasePisCofinsProcessa As Double, PisRedProcessa As Double, CofinsRedProcessa As Double
+         
+         ' Verificar se tem desconto ou frete (igual AtualizaValoresPecas)
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+            ' COM desconto/frete: Base = (Valor + Frete - Desconto - ICMS) - 48.1%
+            BasePisCofinsProcessa = (Quantidade * Valor_Unitario) + Valor_do_Frete - Valor_do_Desconto - ICMSAuxiliar
+         Else
+            ' SEM desconto/frete: Base = (Valor - ICMS) - 48.1%
+            BasePisCofinsProcessa = (Quantidade * Valor_Unitario) - ICMSAuxiliar
+         End If
+         
+         PisRedProcessa = BasePisCofinsProcessa * 48.1 / 100
+         CofinsRedProcessa = BasePisCofinsProcessa * 48.1 / 100
+         
+         ' Calcula e salva Base PIS com redução de 48.1%
+         vgDb.Execute "Update [Peças do Orçamento] Set [Bc Pis] = " & Substitui(CStr(BasePisCofinsProcessa - PisRedProcessa), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Base PIS
+         
+         ' Usar mesma lógica da AtualizaValoresPecas - alíquotas fixas para PEÇAS
+         Dim AliqPisProcessa As Double, AliqCofinsProcessa As Double
+         AliqPisProcessa = 2      ' Alíquota PIS para peças (conforme AtualizaValoresPecas)
+         AliqCofinsProcessa = 9.6 ' Alíquota COFINS para peças (conforme AtualizaValoresPecas)
+         
+         ' Salva Alíquota PIS
+         vgDb.Execute "Update [Peças do Orçamento] Set [Aliq Do Pis] = " & Substitui(CStr(AliqPisProcessa), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Alíquota PIS
+         
+         ' Calcula Valor PIS baseado na base corrigida
+         vgDb.Execute "Update [Peças do Orçamento] Set [Valor do PIS] = " & Substitui(CStr((BasePisCofinsProcessa - PisRedProcessa) * AliqPisProcessa / 100), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'PIS
+         
+         Tributos = Tributos + (BasePisCofinsProcessa - PisRedProcessa) * AliqPisProcessa / 100
+         
+         ' Calcula e salva Base COFINS com redução de 48.1%
+         vgDb.Execute "Update [Peças do Orçamento] Set [Bc Cofins] = " & Substitui(CStr(BasePisCofinsProcessa - CofinsRedProcessa), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Base COFINS
+         
+         ' Salva Alíquota COFINS
+         vgDb.Execute "Update [Peças do Orçamento] Set [Aliq Do Cofins] = " & Substitui(CStr(AliqCofinsProcessa), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Alíquota COFINS
+         
+         ' Calcula Valor COFINS baseado na base corrigida
+         vgDb.Execute "Update [Peças do Orçamento] Set [Valor do Cofins] = " & Substitui(CStr((BasePisCofinsProcessa - CofinsRedProcessa) * AliqCofinsProcessa / 100), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'COFINS
+         
+         Tributos = Tributos + (BasePisCofinsProcessa - CofinsRedProcessa) * AliqCofinsProcessa / 100
+      Else
+         ' Para entrega futura, PIS/COFINS serão calculados pela AtualizaValoresPecas
+         ' DEBUG - Indicar que ProcessaPecas não calculou PIS/COFINS para entrega futura
+         If vgPWUsuario = "YGOR" Or vgPWUsuario = "ADMIN" Then
+            MsgBox "DEBUG ProcessaPecas - Entrega Futura: PIS/COFINS não calculados aqui. Serão calculados pela AtualizaValoresPecas."
+         End If
+      End If
       Tributos = Tributos + CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 14, 3, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
       vgDb.Execute "Update [Peças do Orçamento] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento 'Tributos
    End If 'Caso Contrario Vamos deixar o Usuario Digitar os Valores
@@ -12025,7 +12068,7 @@ Public Sub SuperAtualizaConjuntos()
                ![Base de Cálculo ST] = 0
                ![Valor ICMS ST] = 0
                ![Alíquota Do ICMS ST] = 0
-                ICMSAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               
             Else
                !CFOP = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 1, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
@@ -12045,10 +12088,24 @@ Public Sub SuperAtualizaConjuntos()
             Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                !Diferido = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 9, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-               ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               
+               ' PIS/COFINS - só calcular se NÃO for entrega futura
+               If Not Entrega_Futura Then
+                  ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Else
+                  ' Para entrega futura, calcular PIS/COFINS com base corrigida e redução de 48.1%
+                  Dim BasePisCofinsConjunto As Double, PisRedConjunto As Double, CofinsRedConjunto As Double
+                  BasePisCofinsConjunto = (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar
+                  PisRedConjunto = BasePisCofinsConjunto * 48.1 / 100
+                  CofinsRedConjunto = BasePisCofinsConjunto * 48.1 / 100
+                  
+                  ![Valor Do PIS] = Round((BasePisCofinsConjunto - PisRedConjunto) * 2 / 100, 4)
+                  ![Valor Do Cofins] = Round((BasePisCofinsConjunto - CofinsRedConjunto) * 9.6 / 100, 4)
+                  Tributos = Tributos + ![Valor Do PIS] + ![Valor Do Cofins]
+               End If
             ![Valor Do Tributo] = Tributos 'Tributos
             .Update
             .BookMark = .LastModified
@@ -13647,11 +13704,65 @@ Private Sub AtualizaValoresConjuntos()
                ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             End If
                If Entrega_Futura Then
-                  BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                  BCAuxiliar = BC + ValorFrete
-                  ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+                  ' DEBUG - Cálculos para entrega futura - CONJUNTOS
+                  Dim ValorTotalCalcConjunto As Double, BaseICMSCalcConjunto As Double, ReducaoRegionalConjunto As Double
+                  ValorTotalCalcConjunto = (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete)
+                  
+                  ' Calcular redução regional - DEBUG: forçar cálculo correto para entrega futura - CONJUNTOS
+                  ReducaoRegionalConjunto = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  
+                  ' DEBUG: Se ReducaoRegionalConjunto = 0, tentar calcular baseado no anexo e região
+                  If ReducaoRegionalConjunto = 0 Then
+                     ' Buscar dados do NCM e anexo para forçar cálculo correto
+                     Dim TempNCMConjunto As New GRecordSet, UFConjunto As String
+                     Set TempNCMConjunto = vgDb.OpenRecordSet("SELECT * FROM [Classificação Fiscal] WHERE [Seqüência da Classificação] = " & Orcamento![Seqüência da Classificação])
+                     UFConjunto = MunicipioAux!UF
+                     
+                     If TempNCMConjunto.RecordCount > 0 Then
+                        If TempNCMConjunto![Redução de Base de Cálculo] Then
+                           ' Definir regiões conforme função CalculaImposto
+                           Dim NorteConjunto As String, NordesteConjunto As String, SulConjunto As String, SudesteConjunto As String, CentroOesteConjunto As String
+                           NorteConjunto = "AC AP AM PA RO RR TO"
+                           NordesteConjunto = "AL BA CE MA PB PE PI RN SE"
+                           CentroOesteConjunto = "DF GO MT MS"
+                           SudesteConjunto = "MG RJ SP"
+                           SulConjunto = "PR RS SC"
+                           
+                           If TempNCMConjunto![Anexo da Redução] = 0 Then ' Anexo I
+                              If InStr(NorteConjunto, UFConjunto) > 0 Or InStr(NordesteConjunto, UFConjunto) > 0 Or InStr(CentroOesteConjunto, UFConjunto) > 0 Or UFConjunto = "ES" Then
+                                 ReducaoRegionalConjunto = 26.57
+                              ElseIf InStr(SulConjunto, UFConjunto) > 0 Or InStr(SudesteConjunto, UFConjunto) > 0 Then
+                                 ReducaoRegionalConjunto = 26.67
+                              End If
+                           Else ' Anexo II
+                              If InStr(NorteConjunto, UFConjunto) > 0 Or InStr(NordesteConjunto, UFConjunto) > 0 Or InStr(CentroOesteConjunto, UFConjunto) > 0 Or UFConjunto = "ES" Then
+                                 ReducaoRegionalConjunto = 41.43
+                              ElseIf InStr(SulConjunto, UFConjunto) > 0 Or InStr(SudesteConjunto, UFConjunto) > 0 Then
+                                 ReducaoRegionalConjunto = 41.67
+                              End If
+                           End If
+                        End If
+                     End If
+                  End If
+                  
+                  ' Aplicar redução regional na base ICMS
+                  If ReducaoRegionalConjunto > 0 Then
+                     BaseICMSCalcConjunto = Round(ValorTotalCalcConjunto - (ValorTotalCalcConjunto * ReducaoRegionalConjunto / 100), 2)
+                  Else
+                     BaseICMSCalcConjunto = ValorTotalCalcConjunto
+                  End If
+                  
+                  ' DEBUG consolidado com todas as informações
+                  If vgPWUsuario = "YGOR" Or vgPWUsuario = "ADMIN" Then
+                     MsgBox "DEBUG ENTREGA FUTURA - CONJUNTOS (AtualizaValoresConjuntos):" & vbCrLf & _
+                           "Valor Total: R$ " & Format(ValorTotalCalcConjunto, "#,##0.00") & vbCrLf & _
+                           "Redução Regional: " & Format(ReducaoRegionalConjunto, "#,##0.00") & "%" & vbCrLf & _
+                           "Base ICMS c/ redução: R$ " & Format(BaseICMSCalcConjunto, "#,##0.00") & vbCrLf & _
+                           "UF: " & MunicipioAux!UF
+                  End If
+                  
                   AliqAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                  ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
+                  ICMSAuxiliar = Round((BaseICMSCalcConjunto * AliqAuxiliar / 100), 2)
                End If
             ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
@@ -13789,8 +13900,7 @@ Private Sub AtualizaValoresPecas()
         If Orcamento![Valor Do Fechamento] <> (descontoCj + descontoPecas) Then
           If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
           divergDesc = Abs(Orcamento![Valor Do Fechamento]) - (descontoCj + descontoPecas)
-          If vgPWUsuario = "YGOR" Then MsgBox (divergDesc)
-            If divergDesc = 0 Then Exit Sub
+          If divergDesc = 0 Then Exit Sub
         End If
       Else 'Para orçamentos apenas com peças faz o mesmo procedimento, mas apenas com o somatório
            'do desconto rateado entre as peças
@@ -13805,14 +13915,7 @@ Private Sub AtualizaValoresPecas()
          If (Orcamento![Valor Do Fechamento] - descPecas!descontoPecas) > 0 Then Exit Sub
           divergDesc = Abs(Orcamento![Valor Do Fechamento]) - descPecas!descontoPecas
           
-          If vgPWUsuario = "YGOR" Then
-            If divergDesc <> 0 Then
-              MsgBox ("Erro de: " & divergDesc)
-            Else
-              MsgBox ("Corrigido.")
-              Exit Sub
-            End If
-          End If
+          If divergDesc = 0 Then Exit Sub
         End If
      End If 'sem desconto é pra cair aqui!
     End If
@@ -13889,10 +13992,58 @@ Private Sub AtualizaValoresPecas()
             End If
             'Auxiliar ICMS
              If Entrega_Futura Then
-                BC = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 6, 3, (!Quantidade * ![Valor Unitário] + ValorAcresDesc), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                BCAuxiliar = BC + ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
+                ' DEBUG - Cálculos para entrega futura
+                Dim ValorTotalCalc As Double, BaseICMSCalc As Double, ReducaoRegional As Double
+                ValorTotalCalc = (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete)
+                
+                ' Calcular redução regional - DEBUG: forçar cálculo correto para entrega futura
+                ReducaoRegional = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 2, 3, ValorTotalCalc, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                
+                ' DEBUG: Se ReducaoRegional = 0, tentar calcular baseado no anexo e região
+                If ReducaoRegional = 0 Then
+                   ' Buscar dados do NCM e anexo para forçar cálculo correto
+                   Dim TempNCM As New GRecordSet, UF As String
+                   Set TempNCM = vgDb.OpenRecordSet("SELECT * FROM [Classificação Fiscal] WHERE [Seqüência da Classificação] = " & Orcamento![Seqüência da Classificação])
+                   UF = MunicipioAux!UF
+                   
+                   If TempNCM.RecordCount > 0 Then
+                      If TempNCM![Redução de Base de Cálculo] Then
+                         ' Definir regiões conforme função CalculaImposto
+                         Dim Norte As String, Nordeste As String, Sul As String, Sudeste As String, CentroOeste As String
+                         Norte = "AC AP AM PA RO RR TO"
+                         Nordeste = "AL BA CE MA PB PE PI RN SE"
+                         CentroOeste = "DF GO MT MS"
+                         Sudeste = "MG RJ SP"
+                         Sul = "PR RS SC"
+                         
+                         If TempNCM![Anexo da Redução] = 0 Then ' Anexo I
+                            If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
+                               ReducaoRegional = 26.57 ' Norte/Nordeste/Centro-Oeste/ES
+                            ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
+                               ReducaoRegional = 26.67 ' Sul/Sudeste
+                            End If
+                         Else ' Anexo II
+                            If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
+                               ReducaoRegional = 41.43 ' Norte/Nordeste/Centro-Oeste/ES
+                            ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
+                               ReducaoRegional = 41.67 ' Sul/Sudeste
+                            End If
+                         End If
+                      End If
+                   End If
+                End If
                 AliqAuxiliar = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 3, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-                ICMSAuxiliar = Round((BCAuxiliar * AliqAuxiliar / 100), 2)
+                
+                ' Aplicar redução regional manualmente: Base = Valor - (Valor * %Redução/100)
+                If ReducaoRegional > 0 Then
+                   BC = Round(ValorTotalCalc - (ValorTotalCalc * ReducaoRegional / 100), 2)
+                Else
+                   BC = ValorTotalCalc
+                End If
+                
+                ICMSAuxiliar = Round((BC * AliqAuxiliar / 100), 2)
+                
+                ' DEBUG será consolidado no final
              End If
             ![Valor do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             Tributos = Tributos + ![Valor do IPI]
@@ -13908,10 +14059,15 @@ Private Sub AtualizaValoresPecas()
                   ![Aliq Do Pis] = 2
                   ![Valor Do PIS] = Round((![Bc Pis] * ![Aliq Do Pis] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
-                  PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                  ![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - PisRed
+                  ' DEBUG - Entrega futura com desconto/frete
+                  Dim BasePisCofinsCompleta As Double
+                  BasePisCofinsCompleta = ((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar
+                  PisRed = BasePisCofinsCompleta * 48.1 / 100
+                  ![Bc Pis] = BasePisCofinsCompleta - PisRed
                   ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - PisRed), 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, 0)
+                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
+                  
+                  ' DEBUG será consolidado no final
                End If
              Else ' sem rateio
                If Not Entrega_Futura Then
@@ -13920,10 +14076,15 @@ Private Sub AtualizaValoresPecas()
                   ![Aliq Do Pis] = 2
                   ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
-                  PisRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                  ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - PisRed
+                  ' DEBUG - Entrega futura sem desconto/frete
+                  Dim BasePisCofinsSimples As Double
+                  BasePisCofinsSimples = (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar
+                  PisRed = BasePisCofinsSimples * 48.1 / 100
+                  ![Bc Pis] = BasePisCofinsSimples - PisRed
                   ![Aliq Do Pis] = 2
-                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 10, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                  ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
+                  
+                  ' DEBUG será consolidado no final
                End If
                 'Pis Novo Conforme contabilidade (Andreza) Subtari icms da base do pis
              End If
@@ -13937,10 +14098,15 @@ Private Sub AtualizaValoresPecas()
                    ![Aliq Do Cofins] = 9.6
                    ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
                Else
-                   CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar) - CofinsRed
+                   ' DEBUG - COFINS entrega futura com desconto/frete
+                   Dim BaseCofinsCompleta As Double
+                   BaseCofinsCompleta = ((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar
+                   CofinsRed = BaseCofinsCompleta * 48.1 / 100
+                   ![Bc Cofins] = BaseCofinsCompleta - CofinsRed
                    ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4) 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                   ![Valor Do Cofins] = Round((![Bc Cofins] * ![Aliq Do Cofins] / 100), 4)
+                   
+                   ' DEBUG será consolidado no final
                End If
              Else ' sem rateio
                If Not Entrega_Futura Then
@@ -13949,15 +14115,54 @@ Private Sub AtualizaValoresPecas()
                    ![Aliq Do Cofins] = 9.6
                    ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
                Else
-                   CofinsRed = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) * 48.1 / 100
-                   ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar) - CofinsRed
+                   ' DEBUG - COFINS entrega futura sem desconto/frete
+                   Dim BaseCofinsSimples As Double
+                   BaseCofinsSimples = (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar
+                   CofinsRed = BaseCofinsSimples * 48.1 / 100
+                   ![Bc Cofins] = BaseCofinsSimples - CofinsRed
                    ![Aliq Do Cofins] = 9.6
-                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100 '((!Quantidade * ![Valor Unitário]) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Produto], Orcamento![Seqüência Do Geral], 11, 3, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+                   ![Valor Do Cofins] = ![Bc Cofins] * ![Aliq Do Cofins] / 100
+                   
+                   ' DEBUG será consolidado no final
                End If
              End If
             Tributos = Tributos + ![Valor Do Cofins]
             Tributos = Tributos + ![Valor ICMS ST]
             ![Valor Do Tributo] = Round(Tributos, 2) 'Tributos
+            
+            ' DEBUG CONSOLIDADO - ENTREGA FUTURA
+            If Entrega_Futura And (vgPWUsuario = "YGOR" Or vgPWUsuario = "ADMIN") Then
+               Dim DebugMsg As String
+               DebugMsg = "=== DEBUG ENTREGA FUTURA - PEÇA " & ![Seqüência do Produto] & " ===" & vbCrLf & vbCrLf
+               DebugMsg = DebugMsg & "1. CÁLCULO BASE ICMS:" & vbCrLf
+               DebugMsg = DebugMsg & "   • Valor Total: " & ValorTotalCalc & vbCrLf
+               DebugMsg = DebugMsg & "   • % Redução Regional: " & ReducaoRegional & "%" & vbCrLf
+               DebugMsg = DebugMsg & "   • Base ICMS (com redução): " & BC & vbCrLf
+               DebugMsg = DebugMsg & "   • % ICMS: " & AliqAuxiliar & "%" & vbCrLf
+               DebugMsg = DebugMsg & "   • ICMS Auxiliar: " & ICMSAuxiliar & vbCrLf & vbCrLf
+               
+               If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+                  DebugMsg = DebugMsg & "2. CÁLCULO PIS/COFINS (com desc/frete):" & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base PIS/COFINS: " & BasePisCofinsCompleta & vbCrLf
+                  DebugMsg = DebugMsg & "   • Redução 48.1%: " & PisRed & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base PIS Final: " & ![Bc Pis] & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base COFINS Final: " & ![Bc Cofins] & vbCrLf
+               Else
+                  DebugMsg = DebugMsg & "2. CÁLCULO PIS/COFINS (sem desc/frete):" & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base PIS/COFINS: " & BasePisCofinsSimples & vbCrLf
+                  DebugMsg = DebugMsg & "   • Redução 48.1%: " & PisRed & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base PIS Final: " & ![Bc Pis] & vbCrLf
+                  DebugMsg = DebugMsg & "   • Base COFINS Final: " & ![Bc Cofins] & vbCrLf
+               End If
+               
+               DebugMsg = DebugMsg & vbCrLf & "3. VALORES FINAIS:" & vbCrLf
+               DebugMsg = DebugMsg & "   • Valor PIS: " & ![Valor Do PIS] & vbCrLf
+               DebugMsg = DebugMsg & "   • Valor COFINS: " & ![Valor Do Cofins] & vbCrLf
+               DebugMsg = DebugMsg & "   • Total Tributos: " & ![Valor Do Tributo] & vbCrLf
+               
+               MsgBox DebugMsg, vbInformation, "Debug Entrega Futura - Peça " & ![Seqüência do Produto]
+            End If
+            
             .Update
             .BookMark = .LastModified
             .MoveNext
@@ -14025,10 +14230,19 @@ Public Sub SuperAtualizaPecas()
             Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 8, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 4, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
             !Diferido = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 9, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do PIS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            ![Valor Do Cofins] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            ' PIS/COFINS para entrega futura são calculados na AtualizaValoresPecas com reduções regionais corretas
+            If Not Entrega_Futura Then
+               ![Valor Do PIS] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 10, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               ![Valor Do Cofins] = CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+               Tributos = Tributos + CalculaImposto(![Seqüência do Produto], Orcamento![Seqüência Do Geral], 11, 3, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF)
+            Else
+               ' Para entrega futura, deixar PIS/COFINS serem calculados pela AtualizaValoresPecas
+               ' DEBUG - Indicar que SuperAtualizaPecas não calculou PIS/COFINS para entrega futura
+               If vgPWUsuario = "YGOR" Or vgPWUsuario = "ADMIN" Then
+                  MsgBox "DEBUG SuperAtualizaPecas - Entrega Futura: PIS/COFINS não calculados aqui. Serão calculados pela AtualizaValoresPecas."
+               End If
+            End If
             ![Valor Do Tributo] = Tributos 'Tributos
             .Update
             .BookMark = .LastModified
@@ -14716,9 +14930,9 @@ Private Sub PreValidaNFE()
     On Error GoTo DeuErro
 
     ' 1) Peso Bruto / Líquido / Volumes – aviso com opção de corrigir
-    If Val(txtCampo(143).Text) = 0 _
-       Or Val(txtCampo(144).Text) = 0 _
-       Or Val(txtCampo(145).Text) = 0 Then
+    If val(txtCampo(143).Text) = 0 _
+       Or val(txtCampo(144).Text) = 0 _
+       Or val(txtCampo(145).Text) = 0 Then
 
         If MsgBox( _
                 "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos!" & vbCrLf & _
@@ -14946,7 +15160,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Sequencia_do_Orcamento = txtCampo(0).Value
          Sequencia_do_Geral = txtCampo(156).Value
          Observacao = txtCampo(4).Value
-         Fechamento = Val(labopcPainel2.Caption)
+         Fechamento = val(labopcPainel2.Caption)
          Valor_do_Fechamento = txtCampo(32).Value
          Valor_Total_IPI_dos_Produtos = txtCampo(37).Value
          Valor_Total_IPI_dos_Conjuntos = txtCampo(40).Value
@@ -14965,7 +15179,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Email = txtCampo(16).Value
          Sequencia_do_Vendedor = txtCampo(33).Value
          Sequencia_do_Pedido = IIf(vgSituacao = ACAO_INCLUINDO, 0, vgTb![Seqüência Do Pedido])
-         Tipo = Val(labopcPainel1.Caption)
+         Tipo = val(labopcPainel1.Caption)
          CPF_e_CNPJ = txtCampo(13).Value
          RG_e_IE = txtCampo(14).Value
          Forma_de_Pagamento = txtCampo(35).Value
@@ -15770,7 +15984,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -16487,6 +16701,16 @@ Private Sub chkCp_Click(Index As Integer)
             SuperAtualizaProdutos
             SuperAtualizaConjuntos
             SuperAtualizaPecas
+            
+              ' Salva automaticamente para que o usuário não precise salvar manualmente
+            If Abs(vgSituacao) = ACAO_EDITANDO Or Abs(vgSituacao) = ACAO_INCLUINDO Then
+                On Error Resume Next
+                Orcamento.Update
+                If Err.Number = 0 Then
+                    Reposition True  ' Atualiza o formulário apenas se salvou com sucesso
+                End If
+                On Error GoTo 0
+            End If
         End If
     End If
 
@@ -20018,7 +20242,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Conjunto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Conjunto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(2)
    CFOP = ColumnValue(3)
    Quantidade = ColumnValue(5)
@@ -20344,7 +20568,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(2)
    CFOP = ColumnValue(3)
    Peso = ColumnValue(5)
@@ -20814,7 +21038,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(3)
    CFOP = ColumnValue(4)
    Peso = ColumnValue(6)
@@ -21049,7 +21273,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Servico = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Servico = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Quantidade = ColumnValue(2)
    Valor_Unitario = ColumnValue(3)
    If Grid(4).Status <> ACAO_INCLUINDO Then
@@ -21117,7 +21341,7 @@ Private Sub PegaCoresGrid0(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(0).GetColumnValues(vgItem)
 
-   Sequencia_do_Conjunto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Conjunto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(2)
    CFOP = ColumnValue(3)
    Quantidade = ColumnValue(5)
@@ -21190,7 +21414,7 @@ Private Sub PegaCoresGrid1(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(1).GetColumnValues(vgItem)
 
-   Sequencia_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(2)
    CFOP = ColumnValue(3)
    Peso = ColumnValue(5)
@@ -21269,7 +21493,7 @@ Private Sub PegaCoresGrid3(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(3).GetColumnValues(vgItem)
 
-   Sequencia_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    CST = ColumnValue(3)
    CFOP = ColumnValue(4)
    Peso = ColumnValue(6)
@@ -21620,4 +21844,4 @@ Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Intege
    txtCampo(Index).MouseDown
 End Sub
 
-'teste
+'teste5
