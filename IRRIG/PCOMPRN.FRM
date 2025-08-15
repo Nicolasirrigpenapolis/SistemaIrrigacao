@@ -1,7 +1,7 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
 Begin VB.Form frmPComprN 
-   ClientHeight    =   8025
+   ClientHeight    =   8325
    ClientLeft      =   2835
    ClientTop       =   1560
    ClientWidth     =   14595
@@ -10,13 +10,13 @@ Begin VB.Form frmPComprN
    LinkTopic       =   "PComprN"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   8025
+   ScaleHeight     =   8325
    ScaleWidth      =   14595
    Begin IRRIG.GPainel Painel 
       Height          =   7995
       Index           =   0
       Left            =   15
-      TabIndex        =   60
+      TabIndex        =   61
       TabStop         =   0   'False
       Top             =   15
       Width           =   14565
@@ -28,7 +28,7 @@ Begin VB.Form frmPComprN
          Height          =   480
          Index           =   8
          Left            =   12840
-         TabIndex        =   34
+         TabIndex        =   35
          TabStop         =   0   'False
          Top             =   780
          Width           =   1515
@@ -56,7 +56,7 @@ Begin VB.Form frmPComprN
          Left            =   75
          ScaleHeight     =   1170
          ScaleWidth      =   1455
-         TabIndex        =   61
+         TabIndex        =   62
          Top             =   75
          Width           =   1455
       End
@@ -188,7 +188,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   1950
          Style           =   1  'Graphical
-         TabIndex        =   71
+         TabIndex        =   72
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -218,7 +218,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   8535
          Style           =   1  'Graphical
-         TabIndex        =   74
+         TabIndex        =   75
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -250,7 +250,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   14115
          Style           =   1  'Graphical
-         TabIndex        =   77
+         TabIndex        =   78
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -278,18 +278,17 @@ Begin VB.Form frmPComprN
          Width           =   3750
       End
       Begin TabDlg.SSTab Tabs 
-         Height          =   3930
+         Height          =   4180
          Index           =   0
          Left            =   120
          TabIndex        =   13
          Top             =   2820
          Width           =   14265
          _ExtentX        =   25162
-         _ExtentY        =   6932
+         _ExtentY        =   7382
          _Version        =   393216
          Style           =   1
          Tabs            =   8
-         Tab             =   2
          TabsPerRow      =   8
          TabHeight       =   519
          ForeColor       =   8388608
@@ -303,116 +302,117 @@ Begin VB.Form frmPComprN
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "Produtos"
-         Tab(0).ControlEnabled=   0   'False
+         TabPicture(0)   =   "PCOMPRN.frx":0000
+         Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Grid(0)"
          Tab(0).Control(0).Enabled=   0   'False
-         Tab(0).ControlCount=   1
+         Tab(0).Control(1)=   "GridVinculaOrcamento"
+         Tab(0).Control(1).Enabled=   0   'False
+         Tab(0).ControlCount=   2
          TabCaption(1)   =   "Despesas"
          Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "Grid(1)"
          Tab(1).ControlCount=   1
          TabCaption(2)   =   "Endereço de Entrega"
-         TabPicture(2)   =   "PCOMPRN.frx":0000
-         Tab(2).ControlEnabled=   -1  'True
+         TabPicture(2)   =   "PCOMPRN.frx":001C
+         Tab(2).ControlEnabled=   0   'False
          Tab(2).Control(0)=   "Label(24)"
-         Tab(2).Control(0).Enabled=   0   'False
          Tab(2).Control(1)=   "Label(23)"
-         Tab(2).Control(1).Enabled=   0   'False
          Tab(2).Control(2)=   "Label(22)"
-         Tab(2).Control(2).Enabled=   0   'False
          Tab(2).Control(3)=   "labFdo20"
-         Tab(2).Control(3).Enabled=   0   'False
          Tab(2).Control(4)=   "Label(21)"
-         Tab(2).Control(4).Enabled=   0   'False
          Tab(2).Control(5)=   "Label(20)"
-         Tab(2).Control(5).Enabled=   0   'False
          Tab(2).Control(6)=   "Label(19)"
-         Tab(2).Control(6).Enabled=   0   'False
          Tab(2).Control(7)=   "Label(18)"
-         Tab(2).Control(7).Enabled=   0   'False
          Tab(2).Control(8)=   "Label(17)"
-         Tab(2).Control(8).Enabled=   0   'False
          Tab(2).Control(9)=   "txtCp(23)"
-         Tab(2).Control(9).Enabled=   0   'False
          Tab(2).Control(10)=   "txtCp(22)"
-         Tab(2).Control(10).Enabled=   0   'False
          Tab(2).Control(11)=   "txtCp(21)"
-         Tab(2).Control(11).Enabled=   0   'False
          Tab(2).Control(12)=   "txtCp(20)"
-         Tab(2).Control(12).Enabled=   0   'False
          Tab(2).Control(13)=   "bottxtCampo20(2)"
          Tab(2).Control(13).Enabled=   0   'False
          Tab(2).Control(14)=   "txtCp(19)"
-         Tab(2).Control(14).Enabled=   0   'False
          Tab(2).Control(15)=   "txtCp(18)"
-         Tab(2).Control(15).Enabled=   0   'False
          Tab(2).Control(16)=   "txtCp(17)"
-         Tab(2).Control(16).Enabled=   0   'False
          Tab(2).Control(17)=   "txtCp(16)"
-         Tab(2).Control(17).Enabled=   0   'False
          Tab(2).ControlCount=   18
          TabCaption(3)   =   "Financeiro"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Label(10)"
-         Tab(3).Control(1)=   "txtCp(9)"
-         Tab(3).Control(2)=   "Label(11)"
-         Tab(3).Control(3)=   "txtCp(10)"
-         Tab(3).Control(4)=   "Label(12)"
-         Tab(3).Control(5)=   "txtCp(11)"
-         Tab(3).Control(6)=   "Label(13)"
-         Tab(3).Control(7)=   "txtCp(12)"
-         Tab(3).Control(8)=   "Label(14)"
-         Tab(3).Control(9)=   "txtCp(13)"
-         Tab(3).Control(10)=   "Label(15)"
-         Tab(3).Control(11)=   "txtCp(14)"
-         Tab(3).Control(12)=   "Label(16)"
-         Tab(3).Control(13)=   "txtCp(15)"
-         Tab(3).Control(14)=   "Label(26)"
-         Tab(3).Control(15)=   "Label(27)"
-         Tab(3).Control(16)=   "Formato(0)"
-         Tab(3).Control(17)=   "Label(28)"
-         Tab(3).Control(18)=   "Formato(1)"
-         Tab(3).Control(19)=   "Label(29)"
-         Tab(3).Control(20)=   "Formato(2)"
-         Tab(3).Control(21)=   "Label(30)"
-         Tab(3).Control(22)=   "Grid(6)"
-         Tab(3).Control(23)=   "Label(31)"
-         Tab(3).Control(24)=   "labFdo27"
-         Tab(3).Control(25)=   "bottxtCampo27(2)"
-         Tab(3).Control(26)=   "txtCp(27)"
-         Tab(3).Control(27)=   "Botao(6)"
-         Tab(3).Control(28)=   "Grid(7)"
-         Tab(3).Control(29)=   "Label(32)"
-         Tab(3).Control(30)=   "labFdo28"
-         Tab(3).Control(31)=   "bottxtCampo28(1)"
-         Tab(3).Control(32)=   "bottxtCampo28(2)"
-         Tab(3).Control(33)=   "txtCp(28)"
-         Tab(3).Control(34)=   "Label(33)"
-         Tab(3).Control(35)=   "labFdo29"
-         Tab(3).Control(36)=   "bottxtCampo29(1)"
-         Tab(3).Control(37)=   "bottxtCampo29(2)"
-         Tab(3).Control(38)=   "txtCp(29)"
-         Tab(3).Control(39)=   "Botao(7)"
+         Tab(3).Control(0)=   "Botao(7)"
+         Tab(3).Control(1)=   "txtCp(29)"
+         Tab(3).Control(1).Enabled=   0   'False
+         Tab(3).Control(2)=   "bottxtCampo29(2)"
+         Tab(3).Control(2).Enabled=   0   'False
+         Tab(3).Control(3)=   "bottxtCampo29(1)"
+         Tab(3).Control(3).Enabled=   0   'False
+         Tab(3).Control(4)=   "labFdo29"
+         Tab(3).Control(5)=   "Label(33)"
+         Tab(3).Control(6)=   "txtCp(28)"
+         Tab(3).Control(6).Enabled=   0   'False
+         Tab(3).Control(7)=   "bottxtCampo28(2)"
+         Tab(3).Control(7).Enabled=   0   'False
+         Tab(3).Control(8)=   "bottxtCampo28(1)"
+         Tab(3).Control(8).Enabled=   0   'False
+         Tab(3).Control(9)=   "labFdo28"
+         Tab(3).Control(10)=   "Label(32)"
+         Tab(3).Control(11)=   "Grid(7)"
+         Tab(3).Control(12)=   "Botao(6)"
+         Tab(3).Control(13)=   "txtCp(27)"
+         Tab(3).Control(13).Enabled=   0   'False
+         Tab(3).Control(14)=   "bottxtCampo27(2)"
+         Tab(3).Control(14).Enabled=   0   'False
+         Tab(3).Control(15)=   "labFdo27"
+         Tab(3).Control(16)=   "Label(31)"
+         Tab(3).Control(17)=   "Grid(6)"
+         Tab(3).Control(18)=   "Label(30)"
+         Tab(3).Control(19)=   "Formato(2)"
+         Tab(3).Control(20)=   "Label(29)"
+         Tab(3).Control(21)=   "Formato(1)"
+         Tab(3).Control(22)=   "Label(28)"
+         Tab(3).Control(23)=   "Formato(0)"
+         Tab(3).Control(24)=   "Label(27)"
+         Tab(3).Control(25)=   "Label(26)"
+         Tab(3).Control(26)=   "txtCp(15)"
+         Tab(3).Control(26).Enabled=   0   'False
+         Tab(3).Control(27)=   "Label(16)"
+         Tab(3).Control(28)=   "txtCp(14)"
+         Tab(3).Control(28).Enabled=   0   'False
+         Tab(3).Control(29)=   "Label(15)"
+         Tab(3).Control(30)=   "txtCp(13)"
+         Tab(3).Control(30).Enabled=   0   'False
+         Tab(3).Control(31)=   "Label(14)"
+         Tab(3).Control(32)=   "txtCp(12)"
+         Tab(3).Control(32).Enabled=   0   'False
+         Tab(3).Control(33)=   "Label(13)"
+         Tab(3).Control(34)=   "txtCp(11)"
+         Tab(3).Control(34).Enabled=   0   'False
+         Tab(3).Control(35)=   "Label(12)"
+         Tab(3).Control(36)=   "txtCp(10)"
+         Tab(3).Control(37)=   "Label(11)"
+         Tab(3).Control(38)=   "txtCp(9)"
+         Tab(3).Control(39)=   "Label(10)"
          Tab(3).ControlCount=   40
          TabCaption(4)   =   "Baixa Produtos"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Grid(2)"
-         Tab(4).Control(1)=   "Botao(0)"
-         Tab(4).Control(2)=   "Botao(1)"
+         Tab(4).Control(0)=   "txtCp(24)"
+         Tab(4).Control(1)=   "bottxtCampo24(0)"
+         Tab(4).Control(1).Enabled=   0   'False
+         Tab(4).Control(2)=   "labtxtCampo24"
          Tab(4).Control(3)=   "labFdo24"
-         Tab(4).Control(4)=   "labtxtCampo24"
-         Tab(4).Control(5)=   "bottxtCampo24(0)"
-         Tab(4).Control(6)=   "txtCp(24)"
+         Tab(4).Control(4)=   "Botao(1)"
+         Tab(4).Control(5)=   "Botao(0)"
+         Tab(4).Control(6)=   "Grid(2)"
          Tab(4).ControlCount=   7
          TabCaption(5)   =   "Baixa Despesas"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Grid(3)"
-         Tab(5).Control(1)=   "Botao(2)"
-         Tab(5).Control(2)=   "Botao(3)"
+         Tab(5).Control(0)=   "txtCp(25)"
+         Tab(5).Control(1)=   "bottxtCampo25(0)"
+         Tab(5).Control(1).Enabled=   0   'False
+         Tab(5).Control(2)=   "labtxtCampo25"
          Tab(5).Control(3)=   "labFdo25"
-         Tab(5).Control(4)=   "labtxtCampo25"
-         Tab(5).Control(5)=   "bottxtCampo25(0)"
-         Tab(5).Control(6)=   "txtCp(25)"
+         Tab(5).Control(4)=   "Botao(3)"
+         Tab(5).Control(5)=   "Botao(2)"
+         Tab(5).Control(6)=   "Grid(3)"
          Tab(5).ControlCount=   7
          TabCaption(6)   =   "Mat. Consumo"
          Tab(6).ControlEnabled=   0   'False
@@ -420,19 +420,20 @@ Begin VB.Form frmPComprN
          Tab(6).ControlCount=   1
          TabCaption(7)   =   "Baixa Consumo"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "Grid(5)"
-         Tab(7).Control(1)=   "Botao(4)"
-         Tab(7).Control(2)=   "Botao(5)"
+         Tab(7).Control(0)=   "txtCp(26)"
+         Tab(7).Control(1)=   "bottxtCampo26(0)"
+         Tab(7).Control(1).Enabled=   0   'False
+         Tab(7).Control(2)=   "labFdo26"
          Tab(7).Control(3)=   "Label(25)"
-         Tab(7).Control(4)=   "labFdo26"
-         Tab(7).Control(5)=   "bottxtCampo26(0)"
-         Tab(7).Control(6)=   "txtCp(26)"
+         Tab(7).Control(4)=   "Botao(5)"
+         Tab(7).Control(5)=   "Botao(4)"
+         Tab(7).Control(6)=   "Grid(5)"
          Tab(7).ControlCount=   7
          Begin IRRIG.GBotao Botao 
             Height          =   480
             Index           =   0
             Left            =   -74820
-            TabIndex        =   37
+            TabIndex        =   38
             Top             =   3360
             Width           =   1605
             _ExtentX        =   0
@@ -454,7 +455,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   1
             Left            =   -73140
-            TabIndex        =   38
+            TabIndex        =   39
             Top             =   3360
             Width           =   1605
             _ExtentX        =   0
@@ -476,7 +477,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   2
             Left            =   -74820
-            TabIndex        =   41
+            TabIndex        =   42
             Top             =   3300
             Width           =   1605
             _ExtentX        =   0
@@ -498,7 +499,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   3
             Left            =   -73140
-            TabIndex        =   42
+            TabIndex        =   43
             Top             =   3300
             Width           =   1605
             _ExtentX        =   0
@@ -520,7 +521,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   4
             Left            =   -74820
-            TabIndex        =   46
+            TabIndex        =   47
             Top             =   3300
             Width           =   1620
             _ExtentX        =   0
@@ -542,7 +543,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   5
             Left            =   -73080
-            TabIndex        =   47
+            TabIndex        =   48
             Top             =   3300
             Width           =   1650
             _ExtentX        =   0
@@ -564,7 +565,7 @@ Begin VB.Form frmPComprN
             Height          =   300
             Index           =   6
             Left            =   -63405
-            TabIndex        =   51
+            TabIndex        =   52
             Top             =   3135
             Width           =   1350
             _ExtentX        =   0
@@ -586,7 +587,7 @@ Begin VB.Form frmPComprN
             Height          =   300
             Index           =   7
             Left            =   -61995
-            TabIndex        =   59
+            TabIndex        =   60
             TabStop         =   0   'False
             Top             =   3135
             Width           =   990
@@ -604,6 +605,29 @@ Begin VB.Form frmPComprN
             EndProperty
             Caption         =   "Estornar"
             CaptionOffset   =   50
+         End
+         Begin IRRIG.GListV GridVinculaOrcamento 
+            Height          =   1350
+            Left            =   120
+            TabIndex        =   32
+            Top             =   2660
+            Width           =   14085
+            _ExtentX        =   24844
+            _ExtentY        =   2381
+            StripesBackColor=   14737632
+            HeaderHeight    =   50
+            RowHeight       =   285
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -778,7 +802,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   16
-            Left            =   1200
+            Left            =   -73800
             MaxLength       =   50
             TabIndex        =   22
             Top             =   960
@@ -798,7 +822,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   17
-            Left            =   7140
+            Left            =   -67860
             MaxLength       =   9
             TabIndex        =   23
             Top             =   960
@@ -818,7 +842,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   18
-            Left            =   9060
+            Left            =   -65940
             MaxLength       =   50
             TabIndex        =   24
             Top             =   960
@@ -838,7 +862,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   19
-            Left            =   1200
+            Left            =   -73800
             MaxLength       =   50
             TabIndex        =   25
             Top             =   1740
@@ -847,9 +871,9 @@ Begin VB.Form frmPComprN
          Begin VB.CommandButton bottxtCampo20 
             Height          =   270
             Index           =   2
-            Left            =   5730
+            Left            =   -69270
             Style           =   1  'Graphical
-            TabIndex        =   91
+            TabIndex        =   92
             TabStop         =   0   'False
             Top             =   1755
             Width           =   255
@@ -869,7 +893,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   270
             Index           =   20
-            Left            =   5355
+            Left            =   -69645
             TabIndex        =   28
             Top             =   1755
             Width           =   375
@@ -888,7 +912,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   21
-            Left            =   7140
+            Left            =   -67860
             TabIndex        =   29
             Top             =   1740
             Width           =   1125
@@ -907,7 +931,7 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   22
-            Left            =   1200
+            Left            =   -73800
             MaxLength       =   20
             TabIndex        =   30
             Top             =   2580
@@ -927,17 +951,17 @@ Begin VB.Form frmPComprN
             EndProperty
             Height          =   330
             Index           =   23
-            Left            =   3780
+            Left            =   -71220
             MaxLength       =   45
             TabIndex        =   31
             Top             =   2580
             Width           =   4485
          End
          Begin IRRIG.GListV Grid 
-            Height          =   2985
+            Height          =   1700
             Index           =   0
-            Left            =   -74880
-            TabIndex        =   32
+            Left            =   120
+            TabIndex        =   33
             Top             =   720
             Width           =   14085
             _ExtentX        =   0
@@ -963,7 +987,7 @@ Begin VB.Form frmPComprN
             Height          =   2970
             Index           =   1
             Left            =   -74880
-            TabIndex        =   33
+            TabIndex        =   34
             Top             =   720
             Width           =   13995
             _ExtentX        =   0
@@ -989,7 +1013,7 @@ Begin VB.Form frmPComprN
             Height          =   2895
             Index           =   2
             Left            =   -74865
-            TabIndex        =   36
+            TabIndex        =   37
             Top             =   405
             Width           =   14010
             _ExtentX        =   0
@@ -1016,7 +1040,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69630
             Style           =   1  'Graphical
-            TabIndex        =   97
+            TabIndex        =   98
             TabStop         =   0   'False
             Top             =   3495
             Width           =   255
@@ -1038,7 +1062,7 @@ Begin VB.Form frmPComprN
             Index           =   24
             Left            =   -70615
             MaxLength       =   254
-            TabIndex        =   39
+            TabIndex        =   40
             Top             =   3495
             Width           =   985
          End
@@ -1046,7 +1070,7 @@ Begin VB.Form frmPComprN
             Height          =   2490
             Index           =   3
             Left            =   -74880
-            TabIndex        =   40
+            TabIndex        =   41
             Top             =   720
             Width           =   14010
             _ExtentX        =   0
@@ -1073,7 +1097,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69570
             Style           =   1  'Graphical
-            TabIndex        =   100
+            TabIndex        =   101
             TabStop         =   0   'False
             Top             =   3435
             Width           =   255
@@ -1095,7 +1119,7 @@ Begin VB.Form frmPComprN
             Index           =   25
             Left            =   -70615
             MaxLength       =   254
-            TabIndex        =   43
+            TabIndex        =   44
             Top             =   3435
             Width           =   1045
          End
@@ -1103,7 +1127,7 @@ Begin VB.Form frmPComprN
             Height          =   2760
             Index           =   4
             Left            =   -74880
-            TabIndex        =   44
+            TabIndex        =   45
             Top             =   720
             Width           =   13980
             _ExtentX        =   0
@@ -1129,7 +1153,7 @@ Begin VB.Form frmPComprN
             Height          =   2475
             Index           =   5
             Left            =   -74880
-            TabIndex        =   45
+            TabIndex        =   46
             Top             =   720
             Width           =   13995
             _ExtentX        =   0
@@ -1156,7 +1180,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69420
             Style           =   1  'Graphical
-            TabIndex        =   103
+            TabIndex        =   104
             TabStop         =   0   'False
             Top             =   3435
             Width           =   255
@@ -1178,7 +1202,7 @@ Begin VB.Form frmPComprN
             Index           =   26
             Left            =   -70365
             MaxLength       =   254
-            TabIndex        =   48
+            TabIndex        =   49
             Top             =   3435
             Width           =   945
          End
@@ -1186,7 +1210,7 @@ Begin VB.Form frmPComprN
             Height          =   1560
             Index           =   6
             Left            =   -65805
-            TabIndex        =   49
+            TabIndex        =   50
             Top             =   720
             Width           =   4800
             _ExtentX        =   0
@@ -1213,7 +1237,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -63765
             Style           =   1  'Graphical
-            TabIndex        =   111
+            TabIndex        =   112
             TabStop         =   0   'False
             Top             =   3150
             Width           =   255
@@ -1233,7 +1257,7 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   27
             Left            =   -65100
-            TabIndex        =   50
+            TabIndex        =   51
             TabStop         =   0   'False
             Top             =   3150
             Width           =   1335
@@ -1242,7 +1266,7 @@ Begin VB.Form frmPComprN
             Height          =   1800
             Index           =   7
             Left            =   -74880
-            TabIndex        =   53
+            TabIndex        =   54
             Top             =   2025
             Width           =   8760
             _ExtentX        =   0
@@ -1269,7 +1293,7 @@ Begin VB.Form frmPComprN
             Index           =   1
             Left            =   -61260
             Style           =   1  'Graphical
-            TabIndex        =   114
+            TabIndex        =   115
             TabStop         =   0   'False
             Top             =   2430
             Width           =   255
@@ -1279,7 +1303,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -61515
             Style           =   1  'Graphical
-            TabIndex        =   115
+            TabIndex        =   116
             TabStop         =   0   'False
             Top             =   2430
             Width           =   255
@@ -1300,7 +1324,7 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   28
             Left            =   -65100
-            TabIndex        =   55
+            TabIndex        =   56
             TabStop         =   0   'False
             Top             =   2430
             Width           =   3840
@@ -1310,7 +1334,7 @@ Begin VB.Form frmPComprN
             Index           =   1
             Left            =   -61275
             Style           =   1  'Graphical
-            TabIndex        =   118
+            TabIndex        =   119
             TabStop         =   0   'False
             Top             =   2790
             Width           =   255
@@ -1320,7 +1344,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -61530
             Style           =   1  'Graphical
-            TabIndex        =   119
+            TabIndex        =   120
             TabStop         =   0   'False
             Top             =   2790
             Width           =   255
@@ -1341,7 +1365,7 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   29
             Left            =   -65100
-            TabIndex        =   56
+            TabIndex        =   57
             TabStop         =   0   'False
             Top             =   2790
             Width           =   3825
@@ -1361,7 +1385,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   10
             Left            =   -74865
-            TabIndex        =   78
+            TabIndex        =   79
             Top             =   480
             Width           =   1830
          End
@@ -1380,7 +1404,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   11
             Left            =   -74865
-            TabIndex        =   79
+            TabIndex        =   80
             Top             =   840
             Width           =   1845
          End
@@ -1399,7 +1423,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   12
             Left            =   -74865
-            TabIndex        =   80
+            TabIndex        =   81
             Top             =   1200
             Width           =   1830
          End
@@ -1419,7 +1443,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   13
             Left            =   -74940
-            TabIndex        =   81
+            TabIndex        =   82
             Top             =   1560
             Width           =   1905
          End
@@ -1438,7 +1462,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   14
             Left            =   -71220
-            TabIndex        =   82
+            TabIndex        =   83
             Top             =   480
             Width           =   2445
          End
@@ -1457,7 +1481,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   15
             Left            =   -71220
-            TabIndex        =   83
+            TabIndex        =   84
             Top             =   840
             Width           =   2445
          End
@@ -1476,7 +1500,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   16
             Left            =   -71220
-            TabIndex        =   84
+            TabIndex        =   85
             Top             =   1200
             Width           =   2445
          End
@@ -1494,8 +1518,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   17
-            Left            =   120
-            TabIndex        =   85
+            Left            =   -74880
+            TabIndex        =   86
             Top             =   960
             Width           =   960
          End
@@ -1513,8 +1537,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   18
-            Left            =   6840
-            TabIndex        =   86
+            Left            =   -68160
+            TabIndex        =   87
             Top             =   960
             Width           =   270
          End
@@ -1532,8 +1556,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   19
-            Left            =   8400
-            TabIndex        =   87
+            Left            =   -66600
+            TabIndex        =   88
             Top             =   960
             Width           =   630
          End
@@ -1551,8 +1575,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   20
-            Left            =   120
-            TabIndex        =   88
+            Left            =   -74880
+            TabIndex        =   89
             Top             =   1740
             Width           =   990
          End
@@ -1570,8 +1594,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   21
-            Left            =   4920
-            TabIndex        =   89
+            Left            =   -70080
+            TabIndex        =   90
             Top             =   1740
             Width           =   390
          End
@@ -1580,8 +1604,8 @@ Begin VB.Form frmPComprN
             BackColor       =   &H80000005&
             BorderStyle     =   1  'Fixed Single
             Height          =   300
-            Left            =   5340
-            TabIndex        =   90
+            Left            =   -69660
+            TabIndex        =   91
             Top             =   1740
             Width           =   660
          End
@@ -1599,8 +1623,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   22
-            Left            =   6120
-            TabIndex        =   92
+            Left            =   -68880
+            TabIndex        =   93
             Top             =   1740
             Width           =   945
          End
@@ -1618,8 +1642,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   23
-            Left            =   120
-            TabIndex        =   93
+            Left            =   -74880
+            TabIndex        =   94
             Top             =   2580
             Width           =   1065
          End
@@ -1637,8 +1661,8 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Index           =   24
-            Left            =   2940
-            TabIndex        =   94
+            Left            =   -72060
+            TabIndex        =   95
             Top             =   2580
             Width           =   825
          End
@@ -1648,7 +1672,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70630
-            TabIndex        =   95
+            TabIndex        =   96
             Top             =   3480
             Width           =   1270
          End
@@ -1667,7 +1691,7 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Left            =   -71385
-            TabIndex        =   96
+            TabIndex        =   97
             Top             =   3480
             Width           =   705
          End
@@ -1677,7 +1701,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70630
-            TabIndex        =   98
+            TabIndex        =   99
             Top             =   3420
             Width           =   1330
          End
@@ -1696,7 +1720,7 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Left            =   -71385
-            TabIndex        =   99
+            TabIndex        =   100
             Top             =   3420
             Width           =   705
          End
@@ -1716,7 +1740,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   25
             Left            =   -71220
-            TabIndex        =   101
+            TabIndex        =   102
             Top             =   3420
             Width           =   705
          End
@@ -1726,7 +1750,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70380
-            TabIndex        =   102
+            TabIndex        =   103
             Top             =   3420
             Width           =   1230
          End
@@ -1749,7 +1773,7 @@ Begin VB.Form frmPComprN
             Height          =   255
             Index           =   26
             Left            =   -65805
-            TabIndex        =   104
+            TabIndex        =   105
             Top             =   435
             Width           =   4830
          End
@@ -1769,7 +1793,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   27
             Left            =   -65685
-            TabIndex        =   105
+            TabIndex        =   106
             Top             =   3600
             Width           =   600
          End
@@ -1800,7 +1824,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   28
             Left            =   -64785
-            TabIndex        =   106
+            TabIndex        =   107
             Top             =   3600
             Width           =   990
          End
@@ -1831,7 +1855,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   29
             Left            =   -63390
-            TabIndex        =   107
+            TabIndex        =   108
             Top             =   3600
             Width           =   1050
          End
@@ -1862,7 +1886,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   30
             Left            =   -61950
-            TabIndex        =   108
+            TabIndex        =   109
             Top             =   3600
             Width           =   300
          End
@@ -1882,7 +1906,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   31
             Left            =   -65745
-            TabIndex        =   109
+            TabIndex        =   110
             Top             =   3135
             Width           =   540
          End
@@ -1892,7 +1916,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   110
+            TabIndex        =   111
             Top             =   3135
             Width           =   1620
          End
@@ -1912,7 +1936,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   32
             Left            =   -65805
-            TabIndex        =   112
+            TabIndex        =   113
             Top             =   2445
             Width           =   600
          End
@@ -1922,7 +1946,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   113
+            TabIndex        =   114
             Top             =   2415
             Width           =   4125
          End
@@ -1942,7 +1966,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   33
             Left            =   -65610
-            TabIndex        =   116
+            TabIndex        =   117
             Top             =   2805
             Width           =   405
          End
@@ -1952,7 +1976,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   117
+            TabIndex        =   118
             Top             =   2775
             Width           =   4110
          End
@@ -1974,7 +1998,7 @@ Begin VB.Form frmPComprN
          MultiLine       =   -1  'True
          ScrollBars      =   2  'Vertical
          TabIndex        =   14
-         Top             =   7035
+         Top             =   7335
          Width           =   14280
       End
       Begin VB.TextBox txtCp 
@@ -2013,7 +2037,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   0
          Left            =   3540
-         TabIndex        =   35
+         TabIndex        =   36
          Top             =   120
          Width           =   1470
       End
@@ -2033,7 +2057,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   1
          Left            =   1920
-         TabIndex        =   52
+         TabIndex        =   53
          Top             =   120
          Width           =   1440
       End
@@ -2133,7 +2157,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   2
          Left            =   5040
-         TabIndex        =   54
+         TabIndex        =   55
          Top             =   120
          Width           =   1530
       End
@@ -2174,7 +2198,7 @@ Begin VB.Form frmPComprN
          Index           =   37
          Left            =   7785
          MaxLength       =   150
-         TabIndex        =   57
+         TabIndex        =   58
          Top             =   420
          Width           =   6585
       End
@@ -2193,7 +2217,7 @@ Begin VB.Form frmPComprN
          Height          =   300
          Index           =   38
          Left            =   13185
-         TabIndex        =   58
+         TabIndex        =   59
          Top             =   60
          Width           =   1185
       End
@@ -2213,7 +2237,7 @@ Begin VB.Form frmPComprN
          Height          =   465
          Index           =   0
          Left            =   1875
-         TabIndex        =   62
+         TabIndex        =   63
          Top             =   360
          Width           =   3600
       End
@@ -2233,7 +2257,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   1
          Left            =   135
-         TabIndex        =   63
+         TabIndex        =   64
          Top             =   1440
          Width           =   1170
       End
@@ -2253,7 +2277,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   2
          Left            =   2295
-         TabIndex        =   64
+         TabIndex        =   65
          Top             =   1440
          Width           =   465
       End
@@ -2273,7 +2297,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   3
          Left            =   4035
-         TabIndex        =   65
+         TabIndex        =   66
          Top             =   1440
          Width           =   870
       End
@@ -2293,7 +2317,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   4
          Left            =   5895
-         TabIndex        =   66
+         TabIndex        =   67
          Top             =   1440
          Width           =   1110
       End
@@ -2313,7 +2337,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   5
          Left            =   8895
-         TabIndex        =   67
+         TabIndex        =   68
          Top             =   1440
          Width           =   990
       End
@@ -2333,7 +2357,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   6
          Left            =   11655
-         TabIndex        =   68
+         TabIndex        =   69
          Top             =   1440
          Width           =   645
       End
@@ -2353,7 +2377,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   7
          Left            =   75
-         TabIndex        =   69
+         TabIndex        =   70
          Top             =   1860
          Width           =   1230
       End
@@ -2363,7 +2387,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   1380
-         TabIndex        =   70
+         TabIndex        =   71
          Top             =   1860
          Width           =   840
       End
@@ -2383,7 +2407,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   8
          Left            =   2280
-         TabIndex        =   72
+         TabIndex        =   73
          Top             =   1860
          Width           =   1185
       End
@@ -2393,7 +2417,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   3555
-         TabIndex        =   73
+         TabIndex        =   74
          Top             =   1860
          Width           =   5250
       End
@@ -2413,7 +2437,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   9
          Left            =   8835
-         TabIndex        =   75
+         TabIndex        =   76
          Top             =   1860
          Width           =   1425
       End
@@ -2423,7 +2447,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   10335
-         TabIndex        =   76
+         TabIndex        =   77
          Top             =   1860
          Width           =   4050
       End
@@ -2443,8 +2467,8 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   34
          Left            =   120
-         TabIndex        =   120
-         Top             =   6735
+         TabIndex        =   121
+         Top             =   7035
          Width           =   420
       End
       Begin VB.Label Label 
@@ -2462,7 +2486,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   35
          Left            =   7740
-         TabIndex        =   121
+         TabIndex        =   122
          Top             =   60
          Width           =   2745
       End
@@ -2482,7 +2506,7 @@ Begin VB.Form frmPComprN
          Height          =   270
          Index           =   36
          Left            =   1920
-         TabIndex        =   122
+         TabIndex        =   123
          Top             =   900
          Width           =   2250
       End
@@ -2504,8 +2528,8 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   37
          Left            =   600
-         TabIndex        =   123
-         Top             =   6735
+         TabIndex        =   124
+         Top             =   7035
          Width           =   13380
       End
       Begin VB.Label Label 
@@ -2523,7 +2547,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   38
          Left            =   2295
-         TabIndex        =   124
+         TabIndex        =   125
          Top             =   2310
          Width           =   1230
       End
@@ -2542,7 +2566,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   39
          Left            =   5175
-         TabIndex        =   125
+         TabIndex        =   126
          Top             =   2310
          Width           =   945
       End
@@ -2561,7 +2585,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   40
          Left            =   7095
-         TabIndex        =   126
+         TabIndex        =   127
          Top             =   2310
          Width           =   420
       End
@@ -2580,7 +2604,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   41
          Left            =   8940
-         TabIndex        =   127
+         TabIndex        =   128
          Top             =   2310
          Width           =   1320
       End
@@ -2600,7 +2624,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   42
          Left            =   10635
-         TabIndex        =   128
+         TabIndex        =   129
          Top             =   75
          Width           =   465
       End
@@ -2611,7 +2635,7 @@ Begin VB.Form frmPComprN
          Height          =   195
          Index           =   43
          Left            =   14520
-         TabIndex        =   129
+         TabIndex        =   130
          Top             =   7920
          Width           =   45
       End
@@ -2619,7 +2643,7 @@ Begin VB.Form frmPComprN
    Begin IRRIG.GListV grdBrowse 
       Height          =   795
       Left            =   60
-      TabIndex        =   130
+      TabIndex        =   131
       Top             =   330
       Width           =   1575
       _ExtentX        =   2778
@@ -4411,7 +4435,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -6259,7 +6283,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Sequencia_do_Item = ColumnValue(2)
    Qtde = ColumnValue(3)
    Vr_Unitario = ColumnValue(5)
@@ -6267,7 +6291,7 @@ IniApDaCol:
    Aliquota_do_ICMS = ColumnValue(8)
    Vr_do_IPI = ColumnValue(9)
    Vr_do_Icms = ColumnValue(10)
-   Sequencia_do_Orcamento = Val(Parse$(CStr(ColumnValue(11)), Chr$(1), 1))
+   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(11)), Chr$(1), 1))
    If Grid(0).Status <> ACAO_INCLUINDO Then
       If Produtos_do_Pedido_Compra.EOF = False And Produtos_do_Pedido_Compra.BOF = False And Produtos_do_Pedido_Compra.RecordCount > 0 Then
          Vr_Total = Produtos_do_Pedido_Compra![Vr Total]
@@ -6420,7 +6444,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde = ColumnValue(2)
    Vr_Unitario = ColumnValue(4)
    Aliquota_do_IPI = ColumnValue(6)
@@ -6560,7 +6584,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde_Total = ColumnValue(2)
    Vr_Unitario = ColumnValue(3)
    Qtde_Recebida = ColumnValue(5)
@@ -6698,7 +6722,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde_Total = ColumnValue(2)
    Vr_Unitario = ColumnValue(3)
    Vr_Total_do_Pedido = ColumnValue(4)
@@ -6850,7 +6874,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde = ColumnValue(2)
    Vr_Unitario = ColumnValue(4)
    Aliquota_do_IPI = ColumnValue(6)
@@ -6985,7 +7009,7 @@ Private Function ExecutaGrid5(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde_Total = ColumnValue(2)
    Vr_Unitario = ColumnValue(3)
    Vr_Total_do_Pedido = ColumnValue(4)
@@ -7151,7 +7175,7 @@ IniApDaCol:
    Dias = ColumnValue(2)
    Data_de_Vencimento = ColumnValue(3)
    Valor_da_Parcela = ColumnValue(4)
-   Sequencia_da_Cobranca = Val(Parse$(CStr(ColumnValue(5)), Chr$(1), 1))
+   Sequencia_da_Cobranca = val(Parse$(CStr(ColumnValue(5)), Chr$(1), 1))
    Nota_ = ColumnValue(6)
    If Err Then Err.Clear
    On Error GoTo DeuErro
@@ -7268,7 +7292,7 @@ Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, O
 IniApDaCol:
    On Error Resume Next
    Sequencia_do_Item = ColumnValue(1)
-   Sequencia_do_Orcamento = Val(Parse$(CStr(ColumnValue(2)), Chr$(1), 1))
+   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(2)), Chr$(1), 1))
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -7317,7 +7341,7 @@ Private Sub PegaCoresGrid0(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(0).GetColumnValues(vgItem)
 
-   Id_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Sequencia_do_Item = ColumnValue(2)
    Qtde = ColumnValue(3)
    Vr_Unitario = ColumnValue(5)
@@ -7325,7 +7349,7 @@ Private Sub PegaCoresGrid0(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
    Aliquota_do_ICMS = ColumnValue(8)
    Vr_do_IPI = ColumnValue(9)
    Vr_do_Icms = ColumnValue(10)
-   Sequencia_do_Orcamento = Val(Parse$(CStr(ColumnValue(11)), Chr$(1), 1))
+   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(11)), Chr$(1), 1))
    If Grid(0).Status <> ACAO_INCLUINDO Then
       If Produtos_do_Pedido_Compra.EOF = False And Produtos_do_Pedido_Compra.BOF = False And Produtos_do_Pedido_Compra.RecordCount > 0 Then
          Vr_Total = Produtos_do_Pedido_Compra![Vr Total]
@@ -7364,7 +7388,7 @@ Private Sub PegaCoresGrid1(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(1).GetColumnValues(vgItem)
 
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde = ColumnValue(2)
    Vr_Unitario = ColumnValue(4)
    Aliquota_do_IPI = ColumnValue(6)
@@ -7409,7 +7433,7 @@ Private Sub PegaCoresGrid4(ByVal vgItem As Long, ByVal vgSubItem As Long, vgText
 
    ColumnValue = Grid(4).GetColumnValues(vgItem)
 
-   Id_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Id_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Qtde = ColumnValue(2)
    Vr_Unitario = ColumnValue(4)
    Aliquota_do_IPI = ColumnValue(6)
