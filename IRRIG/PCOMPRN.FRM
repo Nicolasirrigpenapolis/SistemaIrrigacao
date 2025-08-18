@@ -305,10 +305,8 @@ Begin VB.Form frmPComprN
          TabPicture(0)   =   "PCOMPRN.frx":0000
          Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Grid(0)"
-         Tab(0).Control(0).Enabled=   0   'False
-         Tab(0).Control(1)=   "GridVinculaOrcamento"
-         Tab(0).Control(1).Enabled=   0   'False
-         Tab(0).ControlCount=   2
+         Tab(0).Control(0).Enabled=   -1   'True
+         Tab(0).ControlCount=   1
          TabCaption(1)   =   "Despesas"
          Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "Grid(1)"
@@ -316,103 +314,103 @@ Begin VB.Form frmPComprN
          TabCaption(2)   =   "Endereço de Entrega"
          TabPicture(2)   =   "PCOMPRN.frx":001C
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(24)"
-         Tab(2).Control(1)=   "Label(23)"
-         Tab(2).Control(2)=   "Label(22)"
-         Tab(2).Control(3)=   "labFdo20"
-         Tab(2).Control(4)=   "Label(21)"
-         Tab(2).Control(5)=   "Label(20)"
-         Tab(2).Control(6)=   "Label(19)"
-         Tab(2).Control(7)=   "Label(18)"
-         Tab(2).Control(8)=   "Label(17)"
-         Tab(2).Control(9)=   "txtCp(23)"
-         Tab(2).Control(10)=   "txtCp(22)"
-         Tab(2).Control(11)=   "txtCp(21)"
-         Tab(2).Control(12)=   "txtCp(20)"
-         Tab(2).Control(13)=   "bottxtCampo20(2)"
-         Tab(2).Control(13).Enabled=   0   'False
-         Tab(2).Control(14)=   "txtCp(19)"
-         Tab(2).Control(15)=   "txtCp(18)"
-         Tab(2).Control(16)=   "txtCp(17)"
-         Tab(2).Control(17)=   "txtCp(16)"
+         Tab(2).Control(0)=   "txtCp(16)"
+         Tab(2).Control(1)=   "txtCp(17)"
+         Tab(2).Control(2)=   "txtCp(18)"
+         Tab(2).Control(3)=   "txtCp(19)"
+         Tab(2).Control(4)=   "bottxtCampo20(2)"
+         Tab(2).Control(4).Enabled=   0   'False
+         Tab(2).Control(5)=   "txtCp(20)"
+         Tab(2).Control(6)=   "txtCp(21)"
+         Tab(2).Control(7)=   "txtCp(22)"
+         Tab(2).Control(8)=   "txtCp(23)"
+         Tab(2).Control(9)=   "Label(17)"
+         Tab(2).Control(10)=   "Label(18)"
+         Tab(2).Control(11)=   "Label(19)"
+         Tab(2).Control(12)=   "Label(20)"
+         Tab(2).Control(13)=   "Label(21)"
+         Tab(2).Control(14)=   "labFdo20"
+         Tab(2).Control(15)=   "Label(22)"
+         Tab(2).Control(16)=   "Label(23)"
+         Tab(2).Control(17)=   "Label(24)"
          Tab(2).ControlCount=   18
          TabCaption(3)   =   "Financeiro"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Botao(7)"
-         Tab(3).Control(1)=   "txtCp(29)"
-         Tab(3).Control(1).Enabled=   0   'False
-         Tab(3).Control(2)=   "bottxtCampo29(2)"
-         Tab(3).Control(2).Enabled=   0   'False
-         Tab(3).Control(3)=   "bottxtCampo29(1)"
-         Tab(3).Control(3).Enabled=   0   'False
-         Tab(3).Control(4)=   "labFdo29"
-         Tab(3).Control(5)=   "Label(33)"
-         Tab(3).Control(6)=   "txtCp(28)"
-         Tab(3).Control(6).Enabled=   0   'False
-         Tab(3).Control(7)=   "bottxtCampo28(2)"
+         Tab(3).Control(0)=   "Label(10)"
+         Tab(3).Control(1)=   "txtCp(9)"
+         Tab(3).Control(2)=   "Label(11)"
+         Tab(3).Control(3)=   "txtCp(10)"
+         Tab(3).Control(4)=   "Label(12)"
+         Tab(3).Control(5)=   "txtCp(11)"
+         Tab(3).Control(5).Enabled=   0   'False
+         Tab(3).Control(6)=   "Label(13)"
+         Tab(3).Control(7)=   "txtCp(12)"
          Tab(3).Control(7).Enabled=   0   'False
-         Tab(3).Control(8)=   "bottxtCampo28(1)"
-         Tab(3).Control(8).Enabled=   0   'False
-         Tab(3).Control(9)=   "labFdo28"
-         Tab(3).Control(10)=   "Label(32)"
-         Tab(3).Control(11)=   "Grid(7)"
-         Tab(3).Control(12)=   "Botao(6)"
-         Tab(3).Control(13)=   "txtCp(27)"
+         Tab(3).Control(8)=   "Label(14)"
+         Tab(3).Control(9)=   "txtCp(13)"
+         Tab(3).Control(9).Enabled=   0   'False
+         Tab(3).Control(10)=   "Label(15)"
+         Tab(3).Control(11)=   "txtCp(14)"
+         Tab(3).Control(11).Enabled=   0   'False
+         Tab(3).Control(12)=   "Label(16)"
+         Tab(3).Control(13)=   "txtCp(15)"
          Tab(3).Control(13).Enabled=   0   'False
-         Tab(3).Control(14)=   "bottxtCampo27(2)"
-         Tab(3).Control(14).Enabled=   0   'False
-         Tab(3).Control(15)=   "labFdo27"
-         Tab(3).Control(16)=   "Label(31)"
-         Tab(3).Control(17)=   "Grid(6)"
-         Tab(3).Control(18)=   "Label(30)"
-         Tab(3).Control(19)=   "Formato(2)"
-         Tab(3).Control(20)=   "Label(29)"
-         Tab(3).Control(21)=   "Formato(1)"
-         Tab(3).Control(22)=   "Label(28)"
-         Tab(3).Control(23)=   "Formato(0)"
-         Tab(3).Control(24)=   "Label(27)"
-         Tab(3).Control(25)=   "Label(26)"
-         Tab(3).Control(26)=   "txtCp(15)"
+         Tab(3).Control(14)=   "Label(26)"
+         Tab(3).Control(15)=   "Label(27)"
+         Tab(3).Control(16)=   "Formato(0)"
+         Tab(3).Control(17)=   "Label(28)"
+         Tab(3).Control(18)=   "Formato(1)"
+         Tab(3).Control(19)=   "Label(29)"
+         Tab(3).Control(20)=   "Formato(2)"
+         Tab(3).Control(21)=   "Label(30)"
+         Tab(3).Control(22)=   "Grid(6)"
+         Tab(3).Control(23)=   "Label(31)"
+         Tab(3).Control(24)=   "labFdo27"
+         Tab(3).Control(25)=   "bottxtCampo27(2)"
+         Tab(3).Control(25).Enabled=   0   'False
+         Tab(3).Control(26)=   "txtCp(27)"
          Tab(3).Control(26).Enabled=   0   'False
-         Tab(3).Control(27)=   "Label(16)"
-         Tab(3).Control(28)=   "txtCp(14)"
-         Tab(3).Control(28).Enabled=   0   'False
-         Tab(3).Control(29)=   "Label(15)"
-         Tab(3).Control(30)=   "txtCp(13)"
-         Tab(3).Control(30).Enabled=   0   'False
-         Tab(3).Control(31)=   "Label(14)"
-         Tab(3).Control(32)=   "txtCp(12)"
+         Tab(3).Control(27)=   "Botao(6)"
+         Tab(3).Control(28)=   "Grid(7)"
+         Tab(3).Control(29)=   "Label(32)"
+         Tab(3).Control(30)=   "labFdo28"
+         Tab(3).Control(31)=   "bottxtCampo28(1)"
+         Tab(3).Control(31).Enabled=   0   'False
+         Tab(3).Control(32)=   "bottxtCampo28(2)"
          Tab(3).Control(32).Enabled=   0   'False
-         Tab(3).Control(33)=   "Label(13)"
-         Tab(3).Control(34)=   "txtCp(11)"
-         Tab(3).Control(34).Enabled=   0   'False
-         Tab(3).Control(35)=   "Label(12)"
-         Tab(3).Control(36)=   "txtCp(10)"
-         Tab(3).Control(37)=   "Label(11)"
-         Tab(3).Control(38)=   "txtCp(9)"
-         Tab(3).Control(39)=   "Label(10)"
+         Tab(3).Control(33)=   "txtCp(28)"
+         Tab(3).Control(33).Enabled=   0   'False
+         Tab(3).Control(34)=   "Label(33)"
+         Tab(3).Control(35)=   "labFdo29"
+         Tab(3).Control(36)=   "bottxtCampo29(1)"
+         Tab(3).Control(36).Enabled=   0   'False
+         Tab(3).Control(37)=   "bottxtCampo29(2)"
+         Tab(3).Control(37).Enabled=   0   'False
+         Tab(3).Control(38)=   "txtCp(29)"
+         Tab(3).Control(38).Enabled=   0   'False
+         Tab(3).Control(39)=   "Botao(7)"
          Tab(3).ControlCount=   40
          TabCaption(4)   =   "Baixa Produtos"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "txtCp(24)"
-         Tab(4).Control(1)=   "bottxtCampo24(0)"
-         Tab(4).Control(1).Enabled=   0   'False
-         Tab(4).Control(2)=   "labtxtCampo24"
+         Tab(4).Control(0)=   "Grid(2)"
+         Tab(4).Control(1)=   "Botao(0)"
+         Tab(4).Control(2)=   "Botao(1)"
          Tab(4).Control(3)=   "labFdo24"
-         Tab(4).Control(4)=   "Botao(1)"
-         Tab(4).Control(5)=   "Botao(0)"
-         Tab(4).Control(6)=   "Grid(2)"
+         Tab(4).Control(4)=   "labtxtCampo24"
+         Tab(4).Control(5)=   "bottxtCampo24(0)"
+         Tab(4).Control(5).Enabled=   0   'False
+         Tab(4).Control(6)=   "txtCp(24)"
          Tab(4).ControlCount=   7
          TabCaption(5)   =   "Baixa Despesas"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "txtCp(25)"
-         Tab(5).Control(1)=   "bottxtCampo25(0)"
-         Tab(5).Control(1).Enabled=   0   'False
-         Tab(5).Control(2)=   "labtxtCampo25"
+         Tab(5).Control(0)=   "Grid(3)"
+         Tab(5).Control(1)=   "Botao(2)"
+         Tab(5).Control(2)=   "Botao(3)"
          Tab(5).Control(3)=   "labFdo25"
-         Tab(5).Control(4)=   "Botao(3)"
-         Tab(5).Control(5)=   "Botao(2)"
-         Tab(5).Control(6)=   "Grid(3)"
+         Tab(5).Control(4)=   "labtxtCampo25"
+         Tab(5).Control(5)=   "bottxtCampo25(0)"
+         Tab(5).Control(5).Enabled=   0   'False
+         Tab(5).Control(6)=   "txtCp(25)"
          Tab(5).ControlCount=   7
          TabCaption(6)   =   "Mat. Consumo"
          Tab(6).ControlEnabled=   0   'False
@@ -420,22 +418,89 @@ Begin VB.Form frmPComprN
          Tab(6).ControlCount=   1
          TabCaption(7)   =   "Baixa Consumo"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(26)"
-         Tab(7).Control(1)=   "bottxtCampo26(0)"
-         Tab(7).Control(1).Enabled=   0   'False
-         Tab(7).Control(2)=   "labFdo26"
+         Tab(7).Control(0)=   "Grid(5)"
+         Tab(7).Control(1)=   "Botao(4)"
+         Tab(7).Control(2)=   "Botao(5)"
          Tab(7).Control(3)=   "Label(25)"
-         Tab(7).Control(4)=   "Botao(5)"
-         Tab(7).Control(5)=   "Botao(4)"
-         Tab(7).Control(6)=   "Grid(5)"
+         Tab(7).Control(4)=   "labFdo26"
+         Tab(7).Control(5)=   "bottxtCampo26(0)"
+         Tab(7).Control(5).Enabled=   0   'False
+         Tab(7).Control(6)=   "txtCp(26)"
          Tab(7).ControlCount=   7
          Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   7
+            Left            =   -61995
+            TabIndex        =   60
+            TabStop         =   0   'False
+            Top             =   3135
+            Width           =   990
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Estornar"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   6
+            Left            =   -63405
+            TabIndex        =   52
+            Top             =   3135
+            Width           =   1350
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Gerar Conta"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   0
+            Index           =   5
+            Left            =   -73080
+            TabIndex        =   48
+            Top             =   3300
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Baixa Total"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   480
+            Index           =   4
             Left            =   -74820
-            TabIndex        =   38
-            Top             =   3360
-            Width           =   1605
+            TabIndex        =   47
+            Top             =   3300
+            Width           =   1620
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
@@ -453,10 +518,10 @@ Begin VB.Form frmPComprN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   1
+            Index           =   3
             Left            =   -73140
-            TabIndex        =   39
-            Top             =   3360
+            TabIndex        =   43
+            Top             =   3300
             Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
@@ -497,10 +562,10 @@ Begin VB.Form frmPComprN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   3
+            Index           =   1
             Left            =   -73140
-            TabIndex        =   43
-            Top             =   3300
+            TabIndex        =   39
+            Top             =   3360
             Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
@@ -519,11 +584,11 @@ Begin VB.Form frmPComprN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
-            Index           =   4
+            Index           =   0
             Left            =   -74820
-            TabIndex        =   47
-            Top             =   3300
-            Width           =   1620
+            TabIndex        =   38
+            Top             =   3360
+            Width           =   1605
             _ExtentX        =   0
             _ExtentY        =   0
             ForeColor       =   0
@@ -538,96 +603,6 @@ Begin VB.Form frmPComprN
             EndProperty
             Caption         =   "Baixa Parcial"
             CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   480
-            Index           =   5
-            Left            =   -73080
-            TabIndex        =   48
-            Top             =   3300
-            Width           =   1650
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Baixa Total"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   6
-            Left            =   -63405
-            TabIndex        =   52
-            Top             =   3135
-            Width           =   1350
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Gerar Conta"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   7
-            Left            =   -61995
-            TabIndex        =   60
-            TabStop         =   0   'False
-            Top             =   3135
-            Width           =   990
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Estornar"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GListV GridVinculaOrcamento 
-            Height          =   1350
-            Left            =   120
-            TabIndex        =   32
-            Top             =   2660
-            Width           =   14085
-            _ExtentX        =   24844
-            _ExtentY        =   2381
-            StripesBackColor=   14737632
-            HeaderHeight    =   50
-            RowHeight       =   285
-            SaveGridStripes =   0   'False
-            Caption         =   ""
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -976,6 +951,29 @@ Begin VB.Form frmPComprN
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Microsoft Sans Serif"
                Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin IRRIG.GListV Grid 
+            Height          =   1700
+            Index           =   8
+            Left            =   120
+            TabIndex        =   199
+            Top             =   2460
+            Width           =   14085
+            _ExtentX        =   24844
+            _ExtentY        =   2116
+            StripesBackColor=   14737632
+            RowHeight       =   285
+            SaveGridStripes =   0   'False
+            Caption         =   "Orçamentos Vinculados"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
                Charset         =   0
                Weight          =   400
                Underline       =   0   'False
@@ -3724,6 +3722,12 @@ Private Function InfoOrc(Id_do_Pedido As Long, Sequencia_do_Orcamento As Long, S
    
    On Error Resume Next
    
+   'Validação crítica - evita erros quando Barra de Filtro está ativa
+   If Sequencia_do_Orcamento <= 0 Then
+      InfoOrc = ""
+      Exit Function
+   End If
+   
    TbAuxiliar "Orçamento", "[Seqüência do Orçamento] = " & Sequencia_do_Orcamento, OrcAux
       
    If OrcAux.RecordCount = 0 Then Exit Function
@@ -3734,6 +3738,8 @@ Private Function InfoOrc(Id_do_Pedido As Long, Sequencia_do_Orcamento As Long, S
          InfoOrc = ClienteAux![Razão Social]
       Case "Emissao"
          InfoOrc = OrcAux![Data de Emissão]
+      Case "Data"
+         InfoOrc = Format(OrcAux![Data de Emissão], "dd/mm/yyyy")
    End Select
 
 End Function
@@ -4466,6 +4472,7 @@ Public Sub LigaDesligaAlterar()
    PrepBotoes Me, vgSituacao                           'acerta icones dos botoes
 End Sub
 
+
 'evento - quando qq tecla for digitada no formulário
 Private Sub Form_KeyPress(KeyAscii As Integer)
    Dim Ok As Boolean
@@ -4517,122 +4524,138 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
       AnalisaCondicoes
    End If
    On Error Resume Next
-   For i = 0 To 7
+   For i = 0 To 8
       Select Case i
          Case 0
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(0).CloseRecordset
             Else
-               x$ = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(0).SQLSource)
+               x = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(0).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(0).CloseRecordset
                   End If
-                  Grid(0).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(0).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
          Case 1
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(1).CloseRecordset
             Else
-               x$ = ExecutaGrid(1, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(1).SQLSource)
+               x = ExecutaGrid(1, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(1).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(1).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(1).CloseRecordset
                   End If
-                  Grid(1).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(1).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(1, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(1, vgCols(), CONDICOES_ESPECIAIS)
          Case 2
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(2).CloseRecordset
             Else
-               x$ = ExecutaGrid(2, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(2).SQLSource)
+               x = ExecutaGrid(2, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(2).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(2).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(2).CloseRecordset
                   End If
-                  Grid(2).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(2).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(2, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(2, vgCols(), CONDICOES_ESPECIAIS)
          Case 3
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(3).CloseRecordset
             Else
-               x$ = ExecutaGrid(3, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(3).SQLSource)
+               x = ExecutaGrid(3, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(3).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(3).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(3).CloseRecordset
                   End If
-                  Grid(3).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(3).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(3, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(3, vgCols(), CONDICOES_ESPECIAIS)
          Case 4
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(4).CloseRecordset
             Else
-               x$ = ExecutaGrid(4, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(4).SQLSource)
+               x = ExecutaGrid(4, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(4).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(4).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(4).CloseRecordset
                   End If
-                  Grid(4).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(4).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(4, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(4, vgCols(), CONDICOES_ESPECIAIS)
          Case 5
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(5).CloseRecordset
             Else
-               x$ = ExecutaGrid(5, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(5).SQLSource)
+               x = ExecutaGrid(5, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(5).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(5).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(5).CloseRecordset
                   End If
-                  Grid(5).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(5).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(5, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(5, vgCols(), CONDICOES_ESPECIAIS)
          Case 6
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(6).CloseRecordset
             Else
-               x$ = ExecutaGrid(6, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(6).SQLSource)
+               x = ExecutaGrid(6, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(6).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(6).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(6).CloseRecordset
                   End If
-                  Grid(6).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(6).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(6, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(6, vgCols(), CONDICOES_ESPECIAIS)
          Case 7
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(7).CloseRecordset
             Else
-               x$ = ExecutaGrid(7, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x$ <> Grid(7).SQLSource)
+               x = ExecutaGrid(7, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(7).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(7).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(7).CloseRecordset
                   End If
-                  Grid(7).OpenRecordSet x$, CURSOR_TABLE
+                  Grid(7).OpenRecordSet x, CURSOR_TABLE
                End If
             End If
-               x$ = ExecutaGrid(7, vgCols(), CONDICOES_ESPECIAIS)
+               x = ExecutaGrid(7, vgCols(), CONDICOES_ESPECIAIS)
+         Case 8
+            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
+               Grid(8).CloseRecordset
+            Else
+               x = ExecutaGrid(8, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x <> Grid(8).SQLSource)
+               If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(8).Status = ACAO_NAVEGANDO Then
+                  If Len(Grid(8).RecordSet.RsSource) > 0 Then
+                     Grid(8).CloseRecordset
+                  End If
+                  Grid(8).OpenRecordSet x, CURSOR_TABLE
+               End If
+            End If
+               x = ExecutaGrid(8, vgCols(), CONDICOES_ESPECIAIS)
       End Select
    Next
+   
+   
    RepositionPedido
    ExecutaVisivel
    ExecutaPreValidacao
@@ -4984,72 +5007,72 @@ Private Sub Form_Load()
    Label(12).Caption = LoadGasString(45736)
    vgTooltips.AddTool txtCampo(11).CtPri, 0, LoadGasString(45737)
    Label(13).Caption = LoadGasString(45738)
-   vgTooltips.AddTool txtCampo(12).CtPri, 0, LoadGasString(45739)
-   Label(14).Caption = LoadGasString(45740)
-   vgTooltips.AddTool txtCampo(13).CtPri, 0, LoadGasString(45741)
-   Label(15).Caption = LoadGasString(45742)
-   vgTooltips.AddTool txtCampo(14).CtPri, 0, LoadGasString(45743)
-   Label(16).Caption = LoadGasString(45744)
-   vgTooltips.AddTool txtCampo(15).CtPri, 0, LoadGasString(45745)
-   Label(17).Caption = LoadGasString(45746)
-   vgTooltips.AddTool txtCampo(16).CtPri, 0, LoadGasString(45747)
-   Label(18).Caption = LoadGasString(45748)
-   vgTooltips.AddTool txtCampo(17).CtPri, 0, LoadGasString(45749)
-   Label(19).Caption = LoadGasString(45750)
-   vgTooltips.AddTool txtCampo(18).CtPri, 0, LoadGasString(45751)
-   Label(20).Caption = LoadGasString(45752)
-   vgTooltips.AddTool txtCampo(19).CtPri, 0, LoadGasString(45753)
-   Label(21).Caption = LoadGasString(45754)
-   vgTooltips.AddTool txtCampo(20).CtPri, 0, LoadGasString(45755)
-   Label(22).Caption = LoadGasString(45756)
-   vgTooltips.AddTool txtCampo(21).CtPri, 0, LoadGasString(45757)
-   Label(23).Caption = LoadGasString(45758)
-   vgTooltips.AddTool txtCampo(22).CtPri, 0, LoadGasString(45759)
-   Label(24).Caption = LoadGasString(45760)
-   vgTooltips.AddTool txtCampo(23).CtPri, 0, LoadGasString(45761)
-   Botao(0).Caption = LoadGasString(45762)
-   Botao(1).Caption = LoadGasString(45763)
-   labtxtCampo24.Caption = LoadGasString(45764)
-   Botao(2).Caption = LoadGasString(45765)
-   Botao(3).Caption = LoadGasString(45766)
-   labtxtCampo25.Caption = LoadGasString(45767)
-   Botao(4).Caption = LoadGasString(45768)
-   Botao(5).Caption = LoadGasString(45769)
-   Label(25).Caption = LoadGasString(45770)
-   Label(27).Caption = LoadGasString(45771)
-   Label(28).Caption = LoadGasString(45772)
-   Label(29).Caption = LoadGasString(45773)
-   Label(30).Caption = LoadGasString(45774)
-   Label(31).Caption = LoadGasString(45775)
-   vgTooltips.AddTool txtCampo(27).CtPri, 0, LoadGasString(45776)
-   Botao(6).Caption = LoadGasString(45777)
-   Label(32).Caption = LoadGasString(45778)
-   Label(33).Caption = LoadGasString(45779)
-   Botao(7).Caption = LoadGasString(45780)
-   Label(34).Caption = LoadGasString(45781)
-   vgTooltips.AddTool txtCampo(30).CtPri, 0, LoadGasString(45782)
-   Label(35).Caption = LoadGasString(45783)
-   vgTooltips.AddTool txtCampo(31).CtPri, 0, LoadGasString(45784)
-   Botao(8).Caption = LoadGasString(45785)
-   vgTooltips.AddTool chkCampo(0).CtPri, 0, LoadGasString(45786)
-   chkCampo(0).Caption = LoadGasString(45787)
-   Label(36).Caption = LoadGasString(45788)
-   vgTooltips.AddTool chkCampo(1).CtPri, 0, LoadGasString(45789)
-   chkCampo(1).Caption = LoadGasString(45790)
-   Label(38).Caption = LoadGasString(45791)
-   vgTooltips.AddTool txtCampo(32).CtPri, 0, LoadGasString(45792)
-   Label(39).Caption = LoadGasString(45793)
-   vgTooltips.AddTool txtCampo(33).CtPri, 0, LoadGasString(45794)
-   Label(40).Caption = LoadGasString(45795)
-   vgTooltips.AddTool txtCampo(34).CtPri, 0, LoadGasString(45796)
-   Label(41).Caption = LoadGasString(45797)
-   vgTooltips.AddTool txtCampo(35).CtPri, 0, LoadGasString(45798)
-   vgTooltips.AddTool chkCampo(2).CtPri, 0, LoadGasString(45799)
-   chkCampo(2).Caption = LoadGasString(45800)
-   Label(42).Caption = LoadGasString(45801)
-   vgTooltips.AddTool txtCampo(37).CtPri, 0, LoadGasString(45802)
-   vgTooltips.AddTool txtCampo(38).CtPri, 0, LoadGasString(45803)
-   Label(43).Caption = LoadGasString(45804)
+   vgTooltips.AddTool txtCampo(12).CtPri, 0, LoadGasString(45740)
+   Label(14).Caption = LoadGasString(45741)
+   vgTooltips.AddTool txtCampo(13).CtPri, 0, LoadGasString(45742)
+   Label(15).Caption = LoadGasString(45743)
+   vgTooltips.AddTool txtCampo(14).CtPri, 0, LoadGasString(45744)
+   Label(16).Caption = LoadGasString(45745)
+   vgTooltips.AddTool txtCampo(15).CtPri, 0, LoadGasString(45746)
+   Label(17).Caption = LoadGasString(45747)
+   vgTooltips.AddTool txtCampo(16).CtPri, 0, LoadGasString(45748)
+   Label(18).Caption = LoadGasString(45749)
+   vgTooltips.AddTool txtCampo(17).CtPri, 0, LoadGasString(45750)
+   Label(19).Caption = LoadGasString(45751)
+   vgTooltips.AddTool txtCampo(18).CtPri, 0, LoadGasString(45752)
+   Label(20).Caption = LoadGasString(45753)
+   vgTooltips.AddTool txtCampo(19).CtPri, 0, LoadGasString(45754)
+   Label(21).Caption = LoadGasString(45755)
+   vgTooltips.AddTool txtCampo(20).CtPri, 0, LoadGasString(45756)
+   Label(22).Caption = LoadGasString(45757)
+   vgTooltips.AddTool txtCampo(21).CtPri, 0, LoadGasString(45758)
+   Label(23).Caption = LoadGasString(45759)
+   vgTooltips.AddTool txtCampo(22).CtPri, 0, LoadGasString(45760)
+   Label(24).Caption = LoadGasString(45761)
+   vgTooltips.AddTool txtCampo(23).CtPri, 0, LoadGasString(45762)
+   Botao(0).Caption = LoadGasString(45763)
+   Botao(1).Caption = LoadGasString(45764)
+   labtxtCampo24.Caption = LoadGasString(45765)
+   Botao(2).Caption = LoadGasString(45766)
+   Botao(3).Caption = LoadGasString(45767)
+   labtxtCampo25.Caption = LoadGasString(45768)
+   Botao(4).Caption = LoadGasString(45769)
+   Botao(5).Caption = LoadGasString(45770)
+   Label(25).Caption = LoadGasString(45771)
+   Label(27).Caption = LoadGasString(45772)
+   Label(28).Caption = LoadGasString(45773)
+   Label(29).Caption = LoadGasString(45774)
+   Label(30).Caption = LoadGasString(45775)
+   Label(31).Caption = LoadGasString(45776)
+   vgTooltips.AddTool txtCampo(27).CtPri, 0, LoadGasString(45777)
+   Botao(6).Caption = LoadGasString(45778)
+   Label(32).Caption = LoadGasString(45779)
+   Label(33).Caption = LoadGasString(45780)
+   Botao(7).Caption = LoadGasString(45781)
+   Label(34).Caption = LoadGasString(45782)
+   vgTooltips.AddTool txtCampo(30).CtPri, 0, LoadGasString(45783)
+   Label(35).Caption = LoadGasString(45784)
+   vgTooltips.AddTool txtCampo(31).CtPri, 0, LoadGasString(45785)
+   Botao(8).Caption = LoadGasString(45786)
+   vgTooltips.AddTool chkCampo(0).CtPri, 0, LoadGasString(45787)
+   chkCampo(0).Caption = LoadGasString(45788)
+   Label(36).Caption = LoadGasString(45789)
+   vgTooltips.AddTool chkCampo(1).CtPri, 0, LoadGasString(45790)
+   chkCampo(1).Caption = LoadGasString(45791)
+   Label(38).Caption = LoadGasString(45792)
+   vgTooltips.AddTool txtCampo(32).CtPri, 0, LoadGasString(45793)
+   Label(39).Caption = LoadGasString(45794)
+   vgTooltips.AddTool txtCampo(33).CtPri, 0, LoadGasString(45795)
+   Label(40).Caption = LoadGasString(45796)
+   vgTooltips.AddTool txtCampo(34).CtPri, 0, LoadGasString(45797)
+   Label(41).Caption = LoadGasString(45798)
+   vgTooltips.AddTool txtCampo(35).CtPri, 0, LoadGasString(45799)
+   vgTooltips.AddTool chkCampo(2).CtPri, 0, LoadGasString(45800)
+   chkCampo(2).Caption = LoadGasString(45801)
+   Label(42).Caption = LoadGasString(45802)
+   vgTooltips.AddTool txtCampo(37).CtPri, 0, LoadGasString(45803)
+   vgTooltips.AddTool txtCampo(38).CtPri, 0, LoadGasString(45804)
+   Label(43).Caption = LoadGasString(45805)
    With Grid(0)
       .RowHeight = 285
       .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
@@ -5072,8 +5095,26 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "% ICMS", "Aliquota do Icms", TP_NUMERICO, "99,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 960
       .AddColumn Nothing, , "Vr do Ipi", "Vr do IPI", TP_NUMERICO, "9.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 930
       .AddColumn Nothing, , "Vr do Icms", "Vr do Icms", TP_NUMERICO, "9.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1260
-      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1230
+      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_CARACTER, "999999, 888888, 777777", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1800
       .AddColumn Nothing, , "Cliente", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 3270
+   End With
+   With Grid(8)
+      .RowHeight = 285
+      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
+      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
+      .FullRowSelect = False
+      .BorderStyle = 1
+      .NavigationAddMode = 1
+      .CacheSize = 100
+      .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS Or POP_GRID_STRIPES
+      .AllowInsert = Permitido("Orçamentos da compra", ACAO_INCLUINDO)
+      .AllowEdit = Permitido("Orçamentos da compra", ACAO_EDITANDO)
+      .AllowDelete = Permitido("Orçamentos da compra", ACAO_EXCLUINDO)
+      .Visible = True
+      .Enabled = True
+      .AddColumn Nothing, , "Sequencia do Item", "Sequencia do Item", TP_NUMERICO, "999999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1200
+      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1200
+      .AddColumn Nothing, , "Nome Cliente", "Nome Cliente", TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 4000
    End With
    With Grid(1)
       .RowHeight = 285
@@ -5201,23 +5242,6 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "Cobrança", "Seqüência da Cobrança", TP_CARACTER, "@x", , False, , "IRRIGACAO", "Tipo de Cobrança", "Seqüência da Cobrança", "Descrição", "Descrição", "Descrição", "", , "1", , , , "0", 1, "0", 1365
       .AddColumn Nothing, , "Nota", "Nota", TP_NUMERICO, "999999999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 960
    End With
-   With Grid(7)
-      .RowHeight = 315
-      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
-      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
-      .FullRowSelect = False
-      .BorderStyle = 1
-      .NavigationAddMode = 1
-      .CacheSize = 100
-      .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS Or POP_GRID_STRIPES
-      .AllowInsert = Permitido("Orçamentos da compra", ACAO_INCLUINDO)
-      .AllowEdit = Permitido("Orçamentos da compra", ACAO_EDITANDO)
-      .AllowDelete = Permitido("Orçamentos da compra", ACAO_EXCLUINDO)
-      .AddColumn Nothing, , "Nº", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 420
-      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento-", "", , "1", , , , "0", 1, "0", 930
-      .AddColumn Nothing, , "Emissão", , TP_DATA_HORA, "99/99/9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1170
-      .AddColumn Nothing, , "Cliente", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 5625
-   End With
    AjustaTamanho Me
    IniciaFormDados Me
    If vgTb.RecordCount > 0 Then vgTb.MoveLast
@@ -5225,6 +5249,12 @@ Private Sub Form_Load()
    vgPriVez = False
    Reposition
    CarregaTotalizador
+   
+   'Inicializar Grid(8) explicitamente
+   On Error Resume Next
+   Grid(8).RestoreListView True
+   
+   
    Screen.MousePointer = vbDefault
    Exit Sub
 
@@ -5806,6 +5836,9 @@ Private Sub Form_Unload(Cancel As Integer)
    For i = 0 To Grid.Count - 1
       Grid(i).Finalize
    Next
+   'Incluir Grid(8) que tem índice fora do range
+   On Error Resume Next
+   Grid(8).Finalize
 
    grdBrowse.Finalize                             'descarrega o grid
    Set frmPComprN = Nothing                       'libera o segmento de código do form
@@ -5849,6 +5882,9 @@ Private Sub vgTb_AfterCommitTrans()
       For i = 0 To Grid.Count - 1
          Grid(i).RestoreListView True
       Next
+      'Incluir Grid(8) que tem índice fora do range
+      On Error Resume Next
+      Grid(8).RestoreListView True
    End If
 End Sub
 
@@ -5867,6 +5903,9 @@ Private Sub vgTb_AfterRollBackTrans()
       For i = 0 To Grid.Count - 1
          Grid(i).RestoreListView True                    'restaura a imagem
       Next
+      'Incluir Grid(8) que tem índice fora do range
+      On Error Resume Next
+      Grid(8).RestoreListView True
    End If
 End Sub
 
@@ -5889,8 +5928,8 @@ Private Sub Grid_SkipRecord(Index As Integer, vgColumns() As Variant, ByVal vgBo
          vgSqlGrd = ExecutaGrid5(vgColumns(), REPOSITION_NO_GRID)
       Case 6
          vgSqlGrd = ExecutaGrid6(vgColumns(), REPOSITION_NO_GRID)
-      Case 7
-         vgSqlGrd = ExecutaGrid7(vgColumns(), REPOSITION_NO_GRID)
+      Case 8
+         vgSqlGrd = ExecutaGrid8(vgColumns(), REPOSITION_NO_GRID)
    End Select
 End Sub
 
@@ -5918,7 +5957,8 @@ Private Sub Grid_AfterUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCol
    GeraLog Me, Grid(Index).Status, Index, False
       Case 6
    GeraLog Me, Grid(Index).Status, Index, False
-      Case 7
+      Case 8
+         ExecutaGrid Index, vgColumns(), APOS_EDICAO, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
    GeraLog Me, Grid(Index).Status, Index, False
    End Select
 End Sub
@@ -5941,7 +5981,7 @@ Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColu
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 6
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
-      Case 7
+      Case 8
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
    End Select
 End Sub
@@ -5966,7 +6006,7 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
          Bx_Consumo_Pedido_Compra![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
       Case 6
          Parcelas_Ped_Compra_Novo![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
-      Case 7
+      Case 8
          Orcamentos_da_compra![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
    End Select
 End Sub
@@ -5983,7 +6023,7 @@ Private Sub Grid_BeforeDeleteRecord(Index As Integer, ByVal vgItem As Long, vgCo
       Case 4
       Case 5
       Case 6
-      Case 7
+      Case 8
    End Select
 End Sub
 
@@ -6013,7 +6053,7 @@ Private Sub Grid_RecordSetChanged(Index As Integer, ByVal vgNewRecordSet As GRec
          Set Bx_Consumo_Pedido_Compra = vgNewRecordSet
       Case 6
          Set Parcelas_Ped_Compra_Novo = vgNewRecordSet
-      Case 7
+      Case 8
          Set Orcamentos_da_compra = vgNewRecordSet
    End Select
 End Sub
@@ -6063,12 +6103,22 @@ Private Sub Grid_GotFocus(Index As Integer)
          FocoNoPriControle Me                                               'vamos colocar foco no primeiro controle do pai
       End If
    End If
+   
+   ' Funcionalidade de alternância removida - ambos grids sempre ativos
+End Sub
+
+Private Sub Grid_Click(Index As Integer)
+   ' Funcionalidade de alternância removida - ambos grids sempre ativos
 End Sub
 
 Private Sub Grid_StatusChanged(Index As Integer, ByVal vgNewStatus As Integer)
    Dim vgTemAltGrdOld As Boolean
    If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = -vgNewStatus
    PrepBotoes Me, vgNewStatus                                     'acerta icones dos botoes
+   'Sincroniza Grid(8) quando Grid(0) muda para navegação
+   If Index = 0 And vgNewStatus = ACAO_NAVEGANDO Then
+      SincronizaGridOrcamentos
+   End If
    vgTemAltGrdOld = vgTemAlteracaoGrids
    mdiIRRIG.RemontaForm                                           'remonta dos os form da tela
    If vgSituacao = ACAO_NAVEGANDO Then
@@ -6103,8 +6153,8 @@ Private Function ExecutaGrid(Index As Integer, ColumnValue() As Variant, ByVal v
          ExecutaGrid = ExecutaGrid5(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
       Case 6
          ExecutaGrid = ExecutaGrid6(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
-      Case 7
-         ExecutaGrid = ExecutaGrid7(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
+      Case 8
+         ExecutaGrid = ExecutaGrid8(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
    End Select
 End Function
 
@@ -6138,6 +6188,16 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 6
             vgRetVal = (Round((Qtde * Vr_Unitario), 2))
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
+         Case 11
+            'Mostra múltiplos orçamentos se existirem, senão mostra o único
+            Dim textoOrcamentos As String
+            textoOrcamentos = ObtemOrcamentosTexto(Id_do_Pedido, Sequencia_do_Item)
+            If Len(textoOrcamentos) > 0 Then
+               vgRetVal = textoOrcamentos
+            Else
+               vgRetVal = IIf(Sequencia_do_Orcamento > 0, CStr(Sequencia_do_Orcamento), "")
+            End If
+            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 12
             vgRetVal = (MGeral(Id_do_Pedido, Id_do_Produto, Qtde, Vr_Unitario, Vr_Total, Aliquota_do_IPI, _
    Aliquota_do_ICMS, Vr_do_IPI, Vr_do_Icms, Sequencia_do_Item, Sequencia_do_Orcamento))
@@ -6168,8 +6228,8 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Produtos do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
       GoSub IniApDaCol
@@ -6232,9 +6292,18 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            vgIsValid = (Sequencia_do_Orcamento >= 0)
-            If Not vgIsValid Then vgColumn = 11
-            vgErrorMessage$ = "Seqüência do Orçamento inválido!"
+            'Nova validação para múltiplos orçamentos
+            If InStr(CStr(Sequencia_do_Orcamento), ",") > 0 Then
+               'Múltiplos orçamentos separados por vírgula
+               vgIsValid = ProcessaOrcamentosMultiplos(Id_do_Pedido, Sequencia_do_Item, CStr(Sequencia_do_Orcamento))
+               If Not vgIsValid Then vgColumn = 11
+               vgErrorMessage$ = "Um ou mais orçamentos são inválidos!"
+            Else
+               'Orçamento único (validação original)
+               vgIsValid = (Sequencia_do_Orcamento >= 0)
+               If Not vgIsValid Then vgColumn = 11
+               vgErrorMessage$ = "Seqüência do Orçamento inválido!"
+            End If
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = APOS_EDICAO Then
@@ -6377,7 +6446,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 8
             vgRetVal = (((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 9
+         Case 8
             vgRetVal = (((Vr_Unitario * Qtde + ((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100) * Aliquota_do_ICMS) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
@@ -6398,8 +6467,8 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Despesas do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6551,8 +6620,8 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Produtos Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6691,8 +6760,8 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Despesas Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6809,7 +6878,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 8
             vgRetVal = (((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 9
+         Case 8
             vgRetVal = (((Vr_Unitario * Qtde + ((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100) * Aliquota_do_ICMS) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
@@ -6830,8 +6899,8 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Consumo do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6979,8 +7048,8 @@ Private Function ExecutaGrid5(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Consumo Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -7107,8 +7176,8 @@ Private Function ExecutaGrid6(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Parcelas Ped Compra Novo]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
       GoSub IniApDaCol
@@ -7219,7 +7288,7 @@ End Function
 
 
 'inicializações, validações e processos do grid filho
-Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
+Private Function ExecutaGrid8(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Sequencia_do_Orcamento As Long, Sequencia_do_Item As Long
    vgPriVez = True
@@ -7231,19 +7300,17 @@ Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, O
    vgNVez = 0
    On Error GoTo DeuErro
    If vgOq = CONTEUDODACOLUNA Then
-      If Grid(7).Status <> ACAO_NAVEGANDO And vgItem = Grid(7).SelectedItem Then
+      If Grid(8).Status <> ACAO_NAVEGANDO And vgItem = Grid(8).SelectedItem Then
          GoSub IniApDaCol
       Else
          GoSub IniApDaTb
       End If
       On Error Resume Next
       Select Case vgCol
-         Case 3
-            vgRetVal = (InfoOrc(Id_do_Pedido, Sequencia_do_Orcamento, Sequencia_do_Item, "Emissao"))
-            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 4
-            vgRetVal = (InfoOrc(Id_do_Pedido, Sequencia_do_Orcamento, Sequencia_do_Item, "Cliente"))
-            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
+         Case 2
+            'Nome Cliente vem direto do campo da tabela [Orçamentos da compra]
+            'Não precisa de consulta - o valor já está salvo na tabela
+            vgColumn = -1
       End Select
       If Err Then Err.Clear
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
@@ -7256,14 +7323,19 @@ Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Orçamentos da compra]"
 
       'definindo a expressão de ligação com o pai
-      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+      If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF Then
+         x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+         vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      Else
+         'Se não tem pedido válido, mostra estrutura vazia
+         vgRetVal = "SELECT * FROM [Orçamentos da compra] WHERE 1=0"
+      End If
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
       GoSub IniApDaCol
       vgRetVal = Null
       Select Case vgCol
-         Case 1
+         Case 0
             Sequencia_do_Item = SeqItem()
             vgRetVal = Sequencia_do_Item
       End Select
@@ -7271,19 +7343,76 @@ Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, O
       On Error Resume Next
       GoSub IniApDaCol
       Select Case vgCol
-         Case 2
+         Case 1
             vgRetVal = "" + FiltroOrc() + ""
       End Select
    Else
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (Sequencia_do_Orcamento > 0)
-         If Not vgIsValid Then vgColumn = 2
+         If Not vgIsValid Then vgColumn = 1
          vgErrorMessage$ = "Seqüência do orçamento inválido!"
+         
+         'Validação para evitar vínculos duplicados
+         If vgIsValid And Grid(8).Status = ACAO_INCLUINDO Then
+            Dim TbVerifica As New GRecordSet
+            Set TbVerifica = vgDb.OpenRecordSet("SELECT COUNT(*) AS Total FROM [Orçamentos da compra] WHERE [Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido] & " AND [Sequencia do Item] = " & Sequencia_do_Item & " AND [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+            If TbVerifica!Total > 0 Then
+               vgIsValid = False
+               vgColumn = 1
+               vgErrorMessage$ = "Este produto já está vinculado a este orçamento!"
+            End If
+            TbVerifica.CloseRecordset
+            Set TbVerifica = Nothing
+         End If
+         
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = INICIALIZACOES Then
          GoSub IniApDaCol
-         ColumnValue(1) = SeqItem()
+         ColumnValue(0) = SeqItem()
+      ElseIf vgOq = APOS_EDICAO Then
+         'Preenche automaticamente o Nome Cliente quando Orçamento é editado
+         If vgCol = 1 Then 'Coluna Orçamento foi editada
+            On Error Resume Next
+            GoSub IniApDaCol
+            
+            'Debug: verificar valor da variável
+            If Len(Trim(CStr(ColumnValue(1)))) > 0 Then
+               Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+               
+               If Sequencia_do_Orcamento > 0 Then
+                  'Busca nome do cliente na tabela Orçamento
+                  Dim TbClienteApos As GRecordSet
+                  Dim sqlQuery As String
+                  
+                  sqlQuery = "SELECT [Nome da Pessoa] FROM Orçamento WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
+                  Set TbClienteApos = Nothing
+                  Set TbClienteApos = vgDb.OpenRecordSet(sqlQuery)
+                  
+                  If Not TbClienteApos Is Nothing Then
+                     If TbClienteApos.RecordCount > 0 And Not TbClienteApos.EOF Then
+                        If Not IsNull(TbClienteApos![Nome da Pessoa]) Then
+                           'Preenche a coluna Nome Cliente (coluna 2)
+                           ColumnValue(2) = Trim(CStr(TbClienteApos![Nome da Pessoa]))
+                        Else
+                           ColumnValue(2) = ""
+                        End If
+                     Else
+                        ColumnValue(2) = ""
+                     End If
+                     TbClienteApos.CloseRecordset
+                     Set TbClienteApos = Nothing
+                  Else
+                     ColumnValue(2) = ""
+                  End If
+               Else
+                  ColumnValue(2) = ""
+               End If
+            Else
+               ColumnValue(2) = ""
+            End If
+            On Error GoTo DeuErro
+         End If
       End If
    End If
    GoTo FimDaSub
@@ -7291,8 +7420,8 @@ Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Item = ColumnValue(1)
-   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(2)), Chr$(1), 1))
+   Sequencia_do_Item = ColumnValue(0)
+   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -7325,7 +7454,7 @@ ResumeErro:
    On Error Resume Next
 
 FimDaSub:
-   ExecutaGrid7 = vgRetVal
+   ExecutaGrid8 = vgRetVal
    vgPriVez = False
 End Function
 
@@ -7490,7 +7619,7 @@ Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vg
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
       Case 6
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
-      Case 7
+      Case 8
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
    End Select
 End Sub
@@ -7598,4 +7727,134 @@ Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Intege
    txtCampo(Index).MouseDown
 End Sub
 
+'Função unificada para buscar orçamentos vinculados a um produto
+'Prioriza a tabela [Orçamentos da compra] (múltiplos vínculos)
+'Se não encontrar, usa o campo direto [Produtos do Pedido Compra].[Seqüência do Orçamento]
+Public Function BuscaOrcamentosProduto(IdPedido As Long, SeqItem As Long) As GRecordSet
+   Dim Tb As New GRecordSet
+   
+   On Error GoTo DeuErro
+   
+   'Primeiro tenta buscar na tabela de vínculos múltiplos
+   Set Tb = vgDb.OpenRecordSet("SELECT DISTINCT OC.[Seqüência do Orçamento], O.[Data de Emissão], O.[Nome Cliente] " & _
+                               "FROM [Orçamentos da compra] OC " & _
+                               "INNER JOIN Orçamento O ON OC.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
+                               "WHERE OC.[Id do Pedido] = " & IdPedido & " AND OC.[Sequencia do Item] = " & SeqItem)
+   
+   'Se não encontrou vínculos múltiplos, busca no campo direto
+   If Tb.RecordCount = 0 Then
+      Tb.CloseRecordset
+      Set Tb = vgDb.OpenRecordSet("SELECT DISTINCT PPC.[Seqüência do Orçamento], O.[Data de Emissão], O.[Nome Cliente] " & _
+                                  "FROM [Produtos do Pedido Compra] PPC " & _
+                                  "INNER JOIN Orçamento O ON PPC.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
+                                  "WHERE PPC.[Id do Pedido] = " & IdPedido & " AND PPC.[Sequencia do Item] = " & SeqItem & " AND PPC.[Seqüência do Orçamento] > 0")
+   End If
+   
+   Set BuscaOrcamentosProduto = Tb
+   Exit Function
 
+DeuErro:
+   Set BuscaOrcamentosProduto = Nothing
+End Function
+
+'Processa múltiplos orçamentos separados por vírgula
+'Formato: "12345, 67890, 11111" 
+'Retorna True se todos são válidos
+Private Function ProcessaOrcamentosMultiplos(IdPedido As Long, SeqItem As Long, TextoOrcamentos As String) As Boolean
+   Dim orcamentos() As String
+   Dim i As Integer
+   Dim SeqOrc As Long
+   Dim Tb As GRecordSet
+   
+   On Error GoTo DeuErro
+   
+   ProcessaOrcamentosMultiplos = True
+   
+   If Len(Trim(TextoOrcamentos)) = 0 Then Exit Function
+   
+   'Remove vínculos existentes
+   vgDb.Execute "DELETE FROM [Orçamentos da compra] WHERE [Id do Pedido] = " & IdPedido & " AND [Sequencia do Item] = " & SeqItem
+   
+   'Split por vírgula
+   orcamentos = Split(TextoOrcamentos, ",")
+   
+   For i = 0 To UBound(orcamentos)
+      SeqOrc = CLng(Trim(orcamentos(i)))
+      
+      If SeqOrc > 0 Then
+         'Verifica se orçamento existe
+         Set Tb = vgDb.OpenRecordSet("SELECT COUNT(*) AS Total FROM Orçamento WHERE [Seqüência do Orçamento] = " & SeqOrc)
+         If Tb!Total > 0 Then
+            'Adiciona vínculo
+            Tb.CloseRecordset
+            Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Orçamentos da compra] WHERE 1=0")
+            Tb.AddNew
+            Tb![Id do Pedido] = IdPedido
+            Tb![Sequencia do Item] = SeqItem
+            Tb![Seqüência do Orçamento] = SeqOrc
+            Tb.Update
+         Else
+            ProcessaOrcamentosMultiplos = False
+         End If
+         If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
+      End If
+   Next i
+   
+   Exit Function
+DeuErro:
+   ProcessaOrcamentosMultiplos = False
+   If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
+End Function
+
+'Retorna lista de orçamentos vinculados como texto separado por vírgula
+Private Function ObtemOrcamentosTexto(IdPedido As Long, SeqItem As Long) As String
+   Dim Tb As GRecordSet
+   Dim resultado As String
+   
+   On Error GoTo DeuErro
+   
+   'Primeiro tenta buscar na tabela de vínculos múltiplos
+   Set Tb = vgDb.OpenRecordSet("SELECT [Seqüência do Orçamento] FROM [Orçamentos da compra] WHERE [Id do Pedido] = " & IdPedido & " AND [Sequencia do Item] = " & SeqItem & " ORDER BY [Seqüência do Orçamento]")
+   
+   Do While Not Tb.EOF
+      If Len(resultado) > 0 Then resultado = resultado & ", "
+      resultado = resultado & Tb![Seqüência do Orçamento]
+      Tb.MoveNext
+   Loop
+   
+   Tb.CloseRecordset
+   Set Tb = Nothing
+   
+   ObtemOrcamentosTexto = resultado
+   Exit Function
+   
+DeuErro:
+   ObtemOrcamentosTexto = ""
+   If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
+End Function
+
+'Sincroniza Grid(8) com o produto selecionado no Grid(0)
+Private Sub SincronizaGridOrcamentos()
+   On Error Resume Next
+   
+   'Força recarregamento completo do Grid(8) para o pedido atual
+   If Grid(8).Status = ACAO_NAVEGANDO Then
+      Dim sqlGrid8 As String, vgCols() As Variant
+      
+      'Fecha recordset atual
+      Grid(8).CloseRecordset
+      
+      'Obtem nova consulta para o pedido atual
+      sqlGrid8 = ExecutaGrid(8, vgCols(), ABRE_TABELA_GRID)
+      
+      'Reabre com dados do pedido atual
+      If Len(sqlGrid8) > 0 Then
+         Grid(8).OpenRecordSet sqlGrid8, CURSOR_TABLE
+      End If
+   End If
+   
+   'Força restauração visual
+   Grid(8).RestoreListView True
+End Sub
+
+'teste 16

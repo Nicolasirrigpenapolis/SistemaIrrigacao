@@ -1088,14 +1088,17 @@ Private Sub Form_Load()
    Set lblAjuste = Label(8)
    vgFP.picFixa(0).AutoSize = True
    vgFP.picFixa(0).ScaleMode = vbMillimeters
-   vgQueryAtual = "SELECT [Pedido de Compra Novo].[Id do Pedido], [Razão Social], [Pedido de Compra Novo].[Data do Pedido], " + _
-                     "[Previsao de Entrega], [Produtos do Pedido Compra].[Id do Produto], [Produtos do Pedido Compra].[Seqüência do Orçamento], " + _
-                     "Descrição, Qtde " + _
-                     "FROM [Pedido de Compra Novo] LEFT JOIN Geral On [Pedido de Compra Novo].[Codigo do Fornecedor] = Geral.[Seqüência do Geral] LEFT JOIN [Produtos do Pedido Compra] On [Pedido de Compra Novo].[Id do Pedido] = " + _
-                     "[Produtos do Pedido Compra].[Id do Pedido] LEFT JOIN Produtos oN [Produtos do Pedido Compra].[Id do Produto] = " + _
-                     "Produtos.[Seqüência do Produto] left Join Orçamento On [Produtos do Pedido Compra].[Seqüência do Orçamento] = " + _
-                     "Orçamento.[Seqüência do Orçamento] " + _
-                     "ORDER BY [Pedido de Compra Novo].[Id do Pedido]"
+   vgQueryAtual = "SELECT PCN.[Id do Pedido], G.[Razão Social], PCN.[Data do Pedido], " + _
+                     "PCN.[Previsao de Entrega], PPC.[Id do Produto], " + _
+                     "COALESCE(OC.[Seqüência do Orçamento], PPC.[Seqüência do Orçamento]) AS [Seqüência do Orçamento], " + _
+                     "P.Descrição, PPC.Qtde " + _
+                     "FROM [Pedido de Compra Novo] PCN " + _
+                     "LEFT JOIN Geral G ON PCN.[Codigo do Fornecedor] = G.[Seqüência do Geral] " + _
+                     "LEFT JOIN [Produtos do Pedido Compra] PPC ON PCN.[Id do Pedido] = PPC.[Id do Pedido] " + _
+                     "LEFT JOIN Produtos P ON PPC.[Id do Produto] = P.[Seqüência do Produto] " + _
+                     "LEFT JOIN [Orçamentos da compra] OC ON PPC.[Id do Pedido] = OC.[Id do Pedido] AND PPC.[Sequencia do Item] = OC.[Sequencia do Item] " + _
+                     "LEFT JOIN Orçamento O ON COALESCE(OC.[Seqüência do Orçamento], PPC.[Seqüência do Orçamento]) = O.[Seqüência do Orçamento] " + _
+                     "ORDER BY PCN.[Id do Pedido], PPC.[Sequencia do Item]"
    Set Pedido_de_compra_novo = vgDb.OpenRecordSet("SELECT TOP 1" + Mid$(vgQueryAtual, 7))
    DefineControles
    vgTooltips.Create
