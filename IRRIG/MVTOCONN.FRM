@@ -28,28 +28,6 @@ Begin VB.Form frmMvtoConN
       BorderWidth     =   2
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
-         Height          =   330
-         Index           =   0
-         Left            =   15330
-         TabIndex        =   8
-         TabStop         =   0   'False
-         Top             =   1320
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
          Height          =   435
          Index           =   9
          Left            =   13815
@@ -71,6 +49,28 @@ Begin VB.Form frmMvtoConN
          EndProperty
          Caption         =   "Imprimir"
          CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   330
+         Index           =   0
+         Left            =   15330
+         TabIndex        =   8
+         TabStop         =   0   'False
+         Top             =   1320
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          CaptionOffset   =   50
       End
       Begin VB.PictureBox picBox 
@@ -429,127 +429,9 @@ Begin VB.Form frmMvtoConN
          Tab(4).ControlCount=   53
          Begin IRRIG.GBotao Botao 
             Height          =   330
-            Index           =   1
-            Left            =   -67155
-            TabIndex        =   16
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   2
-            Left            =   -64710
-            TabIndex        =   29
-            TabStop         =   0   'False
-            Top             =   735
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   3
-            Left            =   -61635
-            TabIndex        =   31
-            TabStop         =   0   'False
-            Top             =   675
-            Width           =   1635
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   4
-            Left            =   -64920
-            TabIndex        =   34
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1425
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Incluir"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   5
-            Left            =   -61665
-            TabIndex        =   36
-            TabStop         =   0   'False
-            Top             =   435
-            Width           =   1650
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Verdana"
-               Size            =   12
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Extornar"
-            CaptionAlign    =   4
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   330
-            Index           =   6
+            Index           =   8
             Left            =   -64770
-            TabIndex        =   39
+            TabIndex        =   44
             TabStop         =   0   'False
             Top             =   735
             Width           =   1455
@@ -595,9 +477,9 @@ Begin VB.Form frmMvtoConN
          End
          Begin IRRIG.GBotao Botao 
             Height          =   330
-            Index           =   8
+            Index           =   6
             Left            =   -64770
-            TabIndex        =   44
+            TabIndex        =   39
             TabStop         =   0   'False
             Top             =   735
             Width           =   1455
@@ -615,6 +497,124 @@ Begin VB.Form frmMvtoConN
             EndProperty
             Caption         =   "Incluir"
             CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   5
+            Left            =   -61665
+            TabIndex        =   36
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1650
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   4
+            Left            =   -64920
+            TabIndex        =   34
+            TabStop         =   0   'False
+            Top             =   435
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   3
+            Left            =   -61635
+            TabIndex        =   31
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   1635
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Extornar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   2
+            Left            =   -64710
+            TabIndex        =   29
+            TabStop         =   0   'False
+            Top             =   735
+            Width           =   1425
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   12
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Incluir"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   330
+            Index           =   1
+            Left            =   -67155
+            TabIndex        =   16
+            TabStop         =   0   'False
+            Top             =   675
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -645,16 +645,25 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   11
             Top             =   1260
             Width           =   14955
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   360
-            caption         =   "Produtos"
-            font            =   "MVTOCONN.frx":0000
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Produtos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin IRRIG.GListV Grid 
             Height          =   3870
@@ -663,16 +672,25 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   12
             Top             =   915
             Width           =   14895
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   360
-            caption         =   "Conjuntos"
-            font            =   "MVTOCONN.frx":0024
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Conjuntos"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin IRRIG.GListV Grid 
             Height          =   4305
@@ -681,16 +699,25 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   13
             Top             =   420
             Width           =   15015
-            _extentx        =   0
-            _extenty        =   0
-            editbackcolor   =   16777152
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripes         =   -1
-            stripesbackcolor=   14737632
-            rowheight       =   360
-            caption         =   "Despesas"
-            font            =   "MVTOCONN.frx":0048
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditBackColor   =   16777152
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            Stripes         =   -1  'True
+            StripesBackColor=   14737632
+            RowHeight       =   360
+            SaveGridStripes =   0   'False
+            Caption         =   "Despesas"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.CommandButton bottxtCampo4 
             Height          =   300
@@ -1009,15 +1036,24 @@ Begin VB.Form frmMvtoConN
             TabIndex        =   26
             Top             =   1335
             Width           =   6690
-            _extentx        =   0
-            _extenty        =   0
-            edittextcolor   =   -2147483640
-            celltextcolor   =   -2147483640
-            stripesbackcolor=   14737632
-            rowheight       =   390
-            showgridcaption =   0
-            caption         =   ""
-            font            =   "MVTOCONN.frx":006C
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            StripesBackColor=   14737632
+            RowHeight       =   390
+            ShowGridCaption =   0   'False
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.CommandButton bottxtCampo14 
             Height          =   300
@@ -2526,22 +2562,31 @@ Begin VB.Form frmMvtoConN
       TabIndex        =   137
       Top             =   330
       Width           =   1575
-      _extentx        =   2778
-      _extenty        =   1402
-      fullrowselect   =   0
-      stripesbackcolor=   14737632
-      rowheight       =   285
-      allowedit       =   -1
-      allowinsert     =   -1
-      allowdelete     =   -1
-      manualupdate    =   -1
-      manualdelete    =   -1
-      navigationaddmode=   1
-      showfilterbar   =   -1
-      showgridcaption =   0
-      caption         =   ""
-      font            =   "MVTOCONN.frx":00A0
-      cachesize       =   100
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
    End
    Begin VB.Timer timUnLoad 
       Enabled         =   0   'False
@@ -2638,7 +2683,7 @@ Public TpProduto As Byte, Tipo As Byte
 Private Sub opcPainel1Cp_Click(Index As Integer)
    If vgPriVez Then Exit Sub
    If opcPainel1(Index).Locked Then
-      opcPainel1(Val(labopcPainel1.Caption)).Value = True
+      opcPainel1(val(labopcPainel1.Caption)).Value = True
    Else
       'If Val(labopcPainel1.Caption) <> opcPainel1(Index).BookMark Then 'Manual
          labopcPainel1.Caption = Str$(opcPainel1(Index).BookMark)
@@ -5989,7 +6034,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
       If vgComOQue = COM_TEXTBOX Then
          Sequencia_do_Movimento = txtCampo(0).Value
          Data_do_Movimento = txtCampo(26).Value
-         Tipo_do_Movimento = Val(labopcPainel1.Caption)
+         Tipo_do_Movimento = val(labopcPainel1.Caption)
          Documento = txtCampo(1).Value
          Sequencia_do_Geral = txtCampo(2).Value
          Observacao = txtCampo(3).Value
@@ -6427,7 +6472,7 @@ Private Sub grdBrowse_SaveData(ByVal vgItem As Long, vgColumns() As Variant, vgD
 End Sub
    
 Private Sub grdBrowse_StatusChanged(ByVal vgNewStatus As Integer)
-   If (vgNewStatus = ACAO_EXCLUINDO And Val(grdBrowse.RecordSet.BookMark) >= 0) Then
+   If (vgNewStatus = ACAO_EXCLUINDO And val(grdBrowse.RecordSet.BookMark) >= 0) Then
       Reposition
    End If
    PrepBotoes Me, vgNewStatus                          'acerta icones dos botoes
@@ -6590,9 +6635,19 @@ Private Sub ExecutaPreValidacao()
    chkCampo(0).Locked = Not (vgAlterar And chkCampo(0).Editable)
    chkCampo(0).Enabled = Ok Or Not vgAlterar
    Ok = (vgSituacao = ACAO_INCLUINDO)
-   txtCampo(1).Locked = Not (vgAlterar And txtCampo(1).Editable)
-   txtCampo(1).Enabled = Ok Or Not vgAlterar
-   Ok = (Sequencia_da_Compra = 0 And Documento <> "Produção")
+   
+   
+  'Liberação YGOR e JUCELI para alteração do campo Documento em Movimento contábil Novo'
+   
+Dim isAdmin As Boolean
+isAdmin = (UCase(vgPWUsuario) = "YGOR" Or UCase(vgPWUsuario) = "JUCELI")
+txtCampo(1).Locked = Not (vgAlterar And txtCampo(1).Editable) And Not isAdmin
+txtCampo(1).Enabled = Ok Or Not vgAlterar Or isAdmin
+Ok = (Sequencia_da_Compra = 0 And Documento <> "Produção")
+   
+   
+   
+   
    txtCampo(2).Locked = Not (vgAlterar And txtCampo(2).Editable)
    txtCampo(2).Enabled = Ok Or Not vgAlterar
    Ok = (Sequencia_do_Geral > 0)
@@ -8243,9 +8298,9 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Produto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Produto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Sequencia_do_Produto_Mvto_Novo = ColumnValue(2)
-   Sequencia_Unidade_Speed = Val(Parse$(CStr(ColumnValue(4)), Chr$(1), 1))
+   Sequencia_Unidade_Speed = val(Parse$(CStr(ColumnValue(4)), Chr$(1), 1))
    Quantidade = ColumnValue(5)
    Valor_do_PIS = ColumnValue(6)
    Valor_do_Cofins = ColumnValue(7)
@@ -8496,7 +8551,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_do_Conjunto = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_do_Conjunto = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Sequencia_Conjunto_Mvto_Novo = ColumnValue(2)
    Quantidade = ColumnValue(3)
    Valor_do_PIS = ColumnValue(4)
@@ -8754,7 +8809,7 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Sequencia_da_Despesa = Val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   Sequencia_da_Despesa = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    Quantidade = ColumnValue(3)
    Valor_do_PIS = ColumnValue(4)
    Valor_do_Cofins = ColumnValue(5)
@@ -8934,7 +8989,7 @@ IniApDaCol:
    Dias = ColumnValue(2)
    Data_de_Vencimento = ColumnValue(3)
    Valor_da_Parcela = ColumnValue(4)
-   Sequencia_da_Cobranca = Val(Parse$(CStr(ColumnValue(5)), Chr$(1), 1))
+   Sequencia_da_Cobranca = val(Parse$(CStr(ColumnValue(5)), Chr$(1), 1))
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
