@@ -204,28 +204,6 @@ Begin VB.Form frmHidrotur
          _ExtentY        =   1191
          BevelOuter      =   1
          Stretch         =   -1  'True
-         Begin IRRIG.GBotao Botao 
-            Height          =   300
-            Index           =   0
-            Left            =   6540
-            TabIndex        =   8
-            Top             =   240
-            Width           =   1110
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Courier New"
-               Size            =   11.25
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Gerar"
-            CaptionOffset   =   50
-         End
          Begin VB.CommandButton bottxtCampo6 
             Height          =   270
             Index           =   2
@@ -278,6 +256,28 @@ Begin VB.Form frmHidrotur
             TabStop         =   0   'False
             Top             =   240
             Width           =   2370
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   300
+            Index           =   0
+            Left            =   6540
+            TabIndex        =   8
+            Top             =   240
+            Width           =   1110
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Courier New"
+               Size            =   11.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Gerar"
+            CaptionOffset   =   50
          End
          Begin VB.Label Label 
             Caption         =   "Carretel de:"
@@ -461,7 +461,7 @@ Begin VB.Form frmHidrotur
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   650
+         Height          =   1230
          Index           =   12
          Left            =   960
          MultiLine       =   -1  'True
@@ -470,47 +470,6 @@ Begin VB.Form frmHidrotur
          Top             =   3900
          Width           =   11190
       End
-      '==== Novo Campo Obs2 ====
-      Begin VB.TextBox txtCp 
-         DataField       =   "Obs2"
-         BeginProperty Font 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   650
-         Index           =   17
-         Left            =   960
-         MultiLine       =   -1  'True
-         ScrollBars      =   2  'Vertical
-         TabIndex        =   22
-         Top             =   4590
-         Width           =   11190
-      End
-      Begin VB.Label Label 
-         Caption         =   "Obs 2:"
-         BeginProperty Font 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H80000008&
-         Height          =   240
-         Index           =   21
-         Left            =   300
-         TabIndex        =   52
-         Top             =   4650
-         Width           =   630
-      End
-      '==== Fim Campo Obs2 ====
       Begin VB.CommandButton bottxtCampo13 
          Height          =   300
          Index           =   1
@@ -688,14 +647,14 @@ Begin VB.Form frmHidrotur
          Width           =   1110
       End
       Begin IRRIG.GListV Grid 
-         Height          =   2100
+         Height          =   2370
          Index           =   0
          Left            =   960
          TabIndex        =   20
-         Top             =   5755
+         Top             =   5505
          Width           =   11190
-         _ExtentX        =   19738
-         _ExtentY        =   3704
+         _ExtentX        =   0
+         _ExtentY        =   0
          EditTextColor   =   -2147483640
          CellTextColor   =   -2147483640
          StripesBackColor=   14737632
@@ -1194,7 +1153,7 @@ Begin VB.Form frmHidrotur
          Index           =   19
          Left            =   1035
          TabIndex        =   67
-         Top             =   5325
+         Top             =   5175
          Width           =   11085
       End
       Begin VB.Label Label 
@@ -1303,12 +1262,12 @@ Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
 Dim vgPegouSeq As Boolean                         'flag se a sequencia do campo foi incrementada
-Dim txtCampo(17) As New FormataCampos             'classe dos campos tipo texto do módulo (adic Obs2 em 17)
+Dim txtCampo(16) As New FormataCampos             'classe dos campos tipo texto do módulo
 Dim chkCampo(2) As New FormataCampos              'classe dos campos tipo lógico do módulo
 Dim Seq_do_Hidroturbo As Long, Modelo_do_Hidroturbo As String, Serie_do_Hidroturbo As Long
 Dim MesAno As String, Letra_do_Hidroturbo As String, Carretel_de As String
 Dim Data_de_Criacao As Variant, Nro_de_Serie_Hidroturbo As String, Codigo_do_Geral As Long
-Dim Codigo_do_Vendedor As Long, Entregue As Boolean, Obs As String, Obs2 As String
+Dim Codigo_do_Vendedor As Long, Entregue As Boolean, Obs As String
 Dim NF As String, Dta_da_Entrega As Variant, Entrega_Tecnica As String
 Dim Entrega_Tec As Boolean, Sequencia_do_Orcamento As Long, Codigo_do_solicitante As Integer
 Dim Data_Tecnica As Variant, Aparecer_no_Filtro As Boolean
@@ -1394,21 +1353,6 @@ Public Property Get txtCampoTab(Index As Integer) As FormataCampos
    Set txtCampoTab = txtCampo(Index)
 End Sub
 
-' Verifica se campo existe no RecordSet/Table
-Private Function ExisteCampo(Rs As GRecordSet, NomeCampo As String) As Boolean
-   On Error GoTo Fim
-   Dim i As Integer
-   If Rs Is Nothing Then Exit Function
-   For i = 0 To Rs.Fields.Count - 1
-      If StrComp(Rs.Fields(i).Name, NomeCampo, vbTextCompare) = 0 Then
-         ExisteCampo = True
-         Exit Function
-      End If
-   Next
-Fim:
-   If Err.Number <> 0 Then Err.Clear
-End Function
-
 'inicializa variaveis (apelidos) coms os campos correspondentes
 Private Sub InicializaApelidos(vgComOQue As Integer)
    On Error Resume Next                           'prepara para possíveis erros
@@ -1426,13 +1370,6 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_do_Vendedor = txtCampo(9).Value
          Entregue = chkCampo(1).Value
          Obs = txtCampo(12).Value
-         On Error Resume Next
-         Obs2 = txtCampo(17).Value
-         If Err.Number <> 0 Then
-            Obs2 = ""
-            Err.Clear
-         End If
-         On Error GoTo 0
          NF = txtCampo(10).Value
          Dta_da_Entrega = txtCampo(11).Value
          Entrega_Tecnica = txtCampo(14).Value
@@ -1454,13 +1391,6 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
          Codigo_do_Vendedor = IIf(IsNull(vgTb![Codigo do Vendedor]), 0, vgTb![Codigo do Vendedor])
          Entregue = IIf(IsNull(vgTb!Entregue), 0, vgTb!Entregue)
          Obs = IIf(IsNull(vgTb!Obs), "", vgTb!Obs)
-         On Error Resume Next
-         If ExisteCampo(vgTb, "Obs2") Then
-            Obs2 = IIf(IsNull(vgTb!Obs2), "", vgTb!Obs2)
-         Else
-            Obs2 = ""
-         End If
-         On Error GoTo 0
          NF = IIf(IsNull(vgTb!NF), "", vgTb!NF)
          Dta_da_Entrega = vgTb![Dta da Entrega]
          Entrega_Tecnica = IIf(IsNull(vgTb![Entrega Tecnica]), "", vgTb![Entrega Tecnica])
@@ -1495,7 +1425,7 @@ Private Sub AnalisaCondicoes()
       grdBrowse.AllowDelete = i
       .botExclui.Enabled = i
       .Menu_Exclui.Enabled = i
-      i = ((Entrega_Tec = 0) Or vgPWUsuario = "JERONIMO" Or vgPWUsuario = "YGOR" Or vgPWUsuario = "GABRIEL COSTA") And Permitido(vgIdentTab, ACAO_EDITANDO)
+      i = ((Entrega_Tec = 0) Or vgPWUsuario = "JERONIMO" Or vgPWUsuario = "YGOR" Or vgPWUsuario = "GABRIEL") And Permitido(vgIdentTab, ACAO_EDITANDO)
       If Err Then Err.Clear: i = False
       vgTemAlteracao = i
       grdBrowse.AllowEdit = i And vgAlterar
@@ -1656,40 +1586,16 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
    ElseIf vgOq = POE_NO_ARQUIVO Then
       For i = 0 To UBound(txtCampo)
          If Len(txtCampo(i).DataField) > 0 Then
-            ' Verifica se a coluna realmente existe no recordset (campo pode ter sido adicionado no banco mas metadado de vgDb ainda não atualizado)
-            If ExisteCampo(vgTb, txtCampo(i).DataField) Then
-               Dim pColSeqInterno As Boolean
-               Dim temMeta As Boolean
-               On Error Resume Next
-               temMeta = Not (vgDb.Tables(vgIdentTab).Columns(txtCampo(i).DataField) Is Nothing)
-               If temMeta Then pColSeqInterno = vgDb.Tables(vgIdentTab).Columns(txtCampo(i).DataField).SeqInterno Else pColSeqInterno = False
-               If Err.Number <> 0 Then
-                  'Se houve erro acessando metadado, ignora e tenta salvar mesmo assim
-                  Err.Clear
+            If Not vgTb.Table.Columns(txtCampo(i).DataField).SeqInterno Then
+               If (txtCampo(i).Value & "" <> vgTb.Fields(txtCampo(i).DataField).Value & "") Or _
+                        (IsNull(txtCampo(i).Value) Xor IsNull(vgTb.Fields(txtCampo(i).DataField).Value)) Then    'se for diferente do conteúdo atual do RS
+                  vgTb.Fields(txtCampo(i).DataField).Value = txtCampo(i).Value
                End If
-               On Error GoTo 0
-               If Not pColSeqInterno Then
-                  On Error Resume Next
-                  If (txtCampo(i).Value & "" <> vgTb.Fields(txtCampo(i).DataField).Value & "") Or _
-                           (IsNull(txtCampo(i).Value) Xor IsNull(vgTb.Fields(txtCampo(i).DataField).Value)) Then
-                     vgTb.Fields(txtCampo(i).DataField).Value = txtCampo(i).Value
-                  End If
-                  ' Se der erro especificamente neste campo (ex: Obs2 ainda sem field no RS), apenas limpa e segue
-                  If Err.Number <> 0 Then
-                     If i = 17 Then 'debug temporario
-                        'MsgBox "Falha ao salvar Obs2: " & Err.Description
-                     End If
-                     Err.Clear
-                  End If
-                  On Error GoTo 0
-               End If
-            ElseIf i = 17 Then
-               ' Campo Obs2 não presente no recordset ainda; ignora sem erro
             End If
          End If
       Next
       InicializaApelidos COM_TEXTBOX
-   vgTb!Entregue = Entregue
+      vgTb!Entregue = Entregue
       vgTb![Entrega Tec] = Entrega_Tec
       vgTb![Aparecer no Filtro] = Aparecer_no_Filtro
    ElseIf vgOq = INI_APELIDOS Then
@@ -2040,7 +1946,7 @@ Private Sub Form_Load()
    vgAlterar = False
    vgUltAlterar = False
    vgCaracteristica = F_DADOS
-   vgUltimoTabIndex = 22 'ajustado para incluir Obs2
+   vgUltimoTabIndex = 21
    vgSituacao = ACAO_NAVEGANDO
    Set mmCampo(0).Picture = LoadPicture(LoadGasPicture(69135))
    Set NroSerie = txtCampo(7)
@@ -2096,9 +2002,6 @@ Private Sub Form_Load()
    chkCampo(2).Caption = LoadGasString(77677)
    Label(19).Caption = LoadGasString(77678)
    Label(20).Caption = LoadGasString(77679)
-   On Error Resume Next 'caso ainda não exista resource para Obs2
-   vgTooltips.AddTool txtCampo(17).CtPri, 0, "Observação complementar (Obs 2)"
-   On Error GoTo 0
    With Grid(0)
       .RowHeight = 300
       .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
@@ -2349,20 +2252,6 @@ Public Sub DefineControles()
    Set chkCampo(2).CtPri = ChkCp(2)
    chkCampo(2).DataType = 5
    grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(chkCampo(2).DataField), chkCampo(2)
-
-   Set txtCampo(17).CtPri = txtCp(17)
-   txtCampo(17).DataType = 4
-   txtCampo(17).Mask = ""
-   txtCampo(17).BoundColumn = ""
-   txtCampo(17).ListFields = ""
-   txtCampo(17).OrderFields = ""
-   txtCampo(17).Relation = ""
-   txtCampo(17).Source = ""
-   ' Debug: verificar se DataField está correto
-   If Len(txtCampo(17).DataField) = 0 Then
-      MsgBox "ERRO: txtCampo(17).DataField está vazio! Controle txtCp(17) não tem DataField definido.", vbCritical
-   End If
-   grdBrowse.AddColumn vgDb.Tables(vgIdentTab).Columns(txtCampo(17).DataField), txtCampo(17)
 
  Exit Sub
 
