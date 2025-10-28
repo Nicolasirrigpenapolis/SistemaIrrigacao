@@ -848,6 +848,123 @@ Dim vgPgTotalizar22() As Double
 Public txtvgDestRel As Object, lblAjuste As Object
 Dim Nova_Licitacao As New GRecordSet
 
+Dim vgCodigoObsAtual As Double
+Dim vgCodigoPedidoObsAtual As Double
+Dim vgObservacaoOriginal As String
+Dim vgCarregandoObs As Boolean
+
+Private Function ObservacaoDoFormulario() As String
+   On Error Resume Next
+   ObservacaoDoFormulario = Trim$(IIf(IsNull(txtCampo(5).Value), "", CStr(txtCampo(5).Value)))
+   If Err Then
+      ObservacaoDoFormulario = ""
+      Err.Clear
+   End If
+End Function
+
+Private Function ValorCampoLicitacao(ByVal Index As Integer) As Double
+   On Error Resume Next
+   ValorCampoLicitacao = Val(Trim$(CStr(IIf(IsNull(txtCampo(Index).Value), 0, txtCampo(Index).Value))))
+   If Err Then
+      ValorCampoLicitacao = 0
+      Err.Clear
+   End If
+End Function
+
+Private Function CodigoLicitacaoPrincipal() As Double
+   CodigoLicitacaoPrincipal = ValorCampoLicitacao(2)
+   If CodigoLicitacaoPrincipal = 0 Then CodigoLicitacaoPrincipal = ValorCampoLicitacao(3)
+   If CodigoLicitacaoPrincipal = 0 Then CodigoLicitacaoPrincipal = ValorCampoLicitacao(4)
+End Function
+
+Private Function ObterCodigoPedidoDaLicitacao(ByVal CodigoLicitacao As Double) As Double
+   On Error GoTo TrataErro
+   Dim TbPedido As New GRecordSet
+   Set TbPedido = vgDb.OpenRecordSet("SELECT TOP 1 [Codigo do Pedido] FROM [Pedido de Compra Novo] WHERE [Codigo da Licitação] = " & CodigoLicitacao & " ORDER BY [Codigo do Pedido] DESC")
+   If Not TbPedido Is Nothing Then
+      If TbPedido.RecordCount > 0 Then
+         ObterCodigoPedidoDaLicitacao = IIf(IsNull(TbPedido![Codigo do Pedido]), 0, TbPedido![Codigo do Pedido])
+      End If
+   End If
+   Exit Function
+
+TrataErro:
+   Err.Clear
+   ObterCodigoPedidoDaLicitacao = 0
+End Function
+
+Private Sub ObterDadosDaLicitacao(ByVal CodigoLicitacao As Double, ByRef ObservacaoLic As String, ByRef CodigoPedido As Double)
+   On Error GoTo TrataErro
+   Dim Tb As New GRecordSet
+   ObservacaoLic = ""
+   CodigoPedido = 0
+   Set Tb = vgDb.OpenRecordSet("SELECT [Observações], [Codigo do Pedido] FROM [Nova Licitação] WHERE [Codigo da Licitação] = " & CodigoLicitacao)
+   If Not Tb Is Nothing Then
+      If Tb.RecordCount > 0 Then
+         ObservacaoLic = Trim$(IIf(IsNull(Tb![Observações]), "", CStr(Tb![Observações])))
+         CodigoPedido = IIf(IsNull(Tb![Codigo do Pedido]), 0, Tb![Codigo do Pedido])
+      End If
+   End If
+   If CodigoPedido = 0 Then
+      CodigoPedido = ObterCodigoPedidoDaLicitacao(CodigoLicitacao)
+   End If
+   Exit Sub
+
+TrataErro:
+   ObservacaoLic = ""
+   CodigoPedido = 0
+   Err.Clear
+End Sub
+
+Private Sub SincronizaObservacaoDaLicitacao(ByVal AtualizarOrigem As Boolean, Optional ByVal ForcarCarregamento As Boolean = False)
+   On Error GoTo TrataErro
+   Dim CodigoLicitacao As Double
+   CodigoLicitacao = CodigoLicitacaoPrincipal()
+   If CodigoLicitacao = 0 Then Exit Sub
+
+   If AtualizarOrigem Then
+      Dim TextoAtual As String
+      TextoAtual = ObservacaoDoFormulario()
+      vgObservacaoOriginal = TextoAtual
+      vgCodigoObsAtual = CodigoLicitacao
+      Dim ObservacaoSql As String
+      ObservacaoSql = Substitui(TextoAtual, "'", "''", UM_A_UM)
+      vgDb.Execute "UPDATE [Nova Licitação] SET [Observações] = '" & ObservacaoSql & "' WHERE [Codigo da Licitação] = " & CodigoLicitacao
+      vgDb.Execute "UPDATE [Pedido de Compra Novo] SET Obs = '" & ObservacaoSql & "' WHERE [Codigo da Licitação] = " & CodigoLicitacao
+      If vgCodigoPedidoObsAtual = 0 Then
+         vgCodigoPedidoObsAtual = ObterCodigoPedidoDaLicitacao(CodigoLicitacao)
+      End If
+      If vgCodigoPedidoObsAtual > 0 Then
+         vgDb.Execute "UPDATE [Pedido de Compra Novo] SET Obs = '" & ObservacaoSql & "' WHERE [Codigo do Pedido] = " & CLng(vgCodigoPedidoObsAtual)
+      End If
+   Else
+      Dim CodigoAnterior As Double
+      Dim ObservacaoBanco As String
+      Dim CodigoPedido As Double
+      CodigoAnterior = vgCodigoObsAtual
+      ObterDadosDaLicitacao CodigoLicitacao, ObservacaoBanco, CodigoPedido
+      vgCodigoObsAtual = CodigoLicitacao
+      vgCodigoPedidoObsAtual = CodigoPedido
+      vgObservacaoOriginal = ObservacaoBanco
+      Dim CampoAtual As String
+      CampoAtual = ObservacaoDoFormulario()
+      If ForcarCarregamento Or CodigoAnterior <> CodigoLicitacao Or (LenB(CampoAtual) = 0 And LenB(ObservacaoBanco) > 0) Then
+         vgCarregandoObs = True
+         txtCampo(5).Value = ObservacaoBanco
+         On Error Resume Next
+         txtCp(5).Text = ObservacaoBanco
+         On Error GoTo TrataErro
+         vgCarregandoObs = False
+      End If
+      Observacao = ObservacaoBanco
+   End If
+   Exit Sub
+
+TrataErro:
+   vgCarregandoObs = False
+   Err.Clear
+End Sub
+
 Private Function Fornecedor1() As String
  Dim Tb As New GRecordSet, Fornecedor As New GRecordSet
  Set Tb = VgDb.OpenRecordSet("SELECT * From [Nova Licitação] Where [Codigo da Licitação] = " & Lic1)
@@ -1509,6 +1626,7 @@ End Sub
 
 'evento - quando o conteúdo do campo for alterado
 Private Sub txtCp_Change(Index As Integer)
+   If vgCarregandoObs And Index = 5 Then Exit Sub
    If vgPriVez Or txtCampo(Index).PriVez Then Exit Sub
    InicializaApelidos COM_TEXTBOX                         'inicializa apelidos com o que esta sendo digitado
    txtCampo(Index).Change
@@ -1556,6 +1674,15 @@ Private Sub txtCp_LostFocus(Index As Integer)
    txtCampo(Index).LostFocus                      'executa LostFocus na classe
    ExecutaVisivel                                 'torna camos visiveis
    ExecutaPreValidacao                            'habilita/desabilita campos
+   Select Case Index
+      Case 2, 3, 4
+         SincronizaObservacaoDaLicitacao False
+      Case 5
+         If Not vgCarregandoObs Then
+            SincronizaObservacaoDaLicitacao True
+            Observacao = ObservacaoDoFormulario()
+         End If
+   End Select
 End Sub
 
 
@@ -1796,6 +1923,7 @@ Private Sub Form_Load()
    ExecutaVisivel
    ExecutaPreValidacao
    txtCampo(1).Value = 1
+   SincronizaObservacaoDaLicitacao False, True
    Screen.MousePointer = vbDefault
    vgUltimoTabIndex = -1                          'controla lost focus de campos optativos
    vgPriVez = False
@@ -2937,6 +3065,8 @@ Private Sub botOk_Click()
       vgPriVez = False
       Exit Sub                                    'e sai para continuar a ediçao ou inclusao
    End If                                         'OK. os campos estao certos
+   SincronizaObservacaoDaLicitacao True
+   Observacao = ObservacaoDoFormulario()
    vgFP.vgFimDoArq = False                        'é fim do arquivo
    vgFP.vgContaPg = 0                             'contador de paginas
    vgFP.vgNovaPag = 0                             'número da página real dentro do intervalo (Ex: 3;5;1;2 - se estiver na página real 5, a página atual será 2)

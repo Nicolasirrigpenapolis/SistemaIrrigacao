@@ -262,7 +262,11 @@ Begin VB.Form frmLicNova
          Tab(0).Control(25).Enabled=   0   'False
          Tab(0).Control(26)=   "bottxtCampo5(1)"
          Tab(0).Control(26).Enabled=   0   'False
-         Tab(0).ControlCount=   27
+         Tab(0).Control(27)=   "Label(43)"
+         Tab(0).Control(27).Enabled=   0   'False
+         Tab(0).Control(28)=   "txtCp(35)"
+         Tab(0).Control(28).Enabled=   0   'False
+         Tab(0).ControlCount=   29
          TabCaption(1)   =   "2 - Transporte"
          Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "ChkCp(0)"
@@ -577,6 +581,48 @@ Begin VB.Form frmLicNova
             TabIndex        =   18
             Top             =   2715
             Width           =   3735
+         End
+         Begin VB.Label Label 
+            AutoSize        =   -1  'True
+            Caption         =   "Observações:"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H80000008&
+            Height          =   240
+            Index           =   43
+            Left            =   1575
+            TabIndex        =   104
+            Top             =   3360
+            Width           =   1290
+         End
+         Begin VB.TextBox txtCp 
+            Appearance      =   0  'Flat
+            DataField       =   "Observações"
+            BeginProperty Font 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   660
+            Index           =   35
+            Left            =   3000
+            MultiLine       =   -1  'True
+            ScrollBars      =   2  'Vertical
+            TabIndex        =   19
+            TabStop         =   -1  'True
+            Top             =   3150
+            Width           =   5670
          End
          Begin VB.CommandButton bottxtCampo16 
             Height          =   270
@@ -1787,28 +1833,6 @@ Begin VB.Form frmLicNova
             Top             =   315
             Width           =   1800
          End
-      End
-      Begin VB.TextBox txtCp 
-         Appearance      =   0  'Flat
-         DataField       =   "Observações"
-         BeginProperty Font 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   300
-         Index           =   35
-         Left            =   2340
-         MultiLine       =   -1  'True
-         ScrollBars      =   2  'Vertical
-         TabIndex        =   19
-         TabStop         =   0   'False
-         Top             =   6660
-         Width           =   13950
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -4514,8 +4538,8 @@ Private Sub ExecutaPreValidacao()
    vgPV = vgPriVez
    vgPriVez = True
    Ok = (Sequencia_do_Fornecedor = 0)
-   txtCampo(35).Locked = Not (vgAlterar And txtCampo(35).Editable)
-   txtCampo(35).Enabled = Ok Or Not vgAlterar
+   txtCampo(35).Locked = False
+   txtCampo(35).Enabled = True
    Ok = (vgSituacao = ACAO_NAVEGANDO And Not TemPedido And PermitidoMenu(mnuNF.Tag))
    Botao(1).Enabled = Ok
    Ok = (vgSituacao = ACAO_NAVEGANDO And Not TemPedido And PermitidoMenu(mnuNF.Tag))
@@ -4530,6 +4554,38 @@ Private Sub ExecutaVisivel()
    Label(39).Visible = (Codigo_do_Pedido > 0)
    txtCampo(36).Visible = (Codigo_do_Pedido > 0)
    If Err Then Err.Clear                          'se houve erro, limpa...
+End Sub
+
+Private Sub SincronizaObservacaoComPedidoDeCompra()
+   On Error GoTo TrataErro
+   If vgSituacao = ACAO_NAVEGANDO Then Exit Sub
+   If Codigo_da_Licitacao = 0 And Codigo_do_Pedido = 0 Then Exit Sub
+
+   Dim ObservacaoAtual As String
+   Dim ObservacaoSql As String
+   Dim FiltroPedido As String
+
+   ObservacaoAtual = Trim$(IIf(IsNull(txtCampo(35).Value), "", CStr(txtCampo(35).Value)))
+   ObservacaoSql = Substitui(ObservacaoAtual, "'", "''", UM_A_UM)
+
+   If Codigo_da_Licitacao > 0 Then
+      vgDb.Execute "UPDATE [Nova Licitação] SET [Observações] = '" & ObservacaoSql & "' WHERE [Codigo da Licitação] = " & Codigo_da_Licitacao
+   End If
+
+   If Codigo_do_Pedido > 0 Then
+      FiltroPedido = "[Codigo do Pedido] = " & Codigo_do_Pedido
+   ElseIf Codigo_da_Licitacao > 0 Then
+      FiltroPedido = "[Codigo da Licitação] = " & Codigo_da_Licitacao
+   End If
+
+   If LenB(FiltroPedido) > 0 Then
+      vgDb.Execute "UPDATE [Pedido de Compra Novo] SET Obs = '" & ObservacaoSql & "' WHERE " & FiltroPedido
+   End If
+
+   Exit Sub
+
+TrataErro:
+   Err.Clear
 End Sub
 
 'evento - quando o botão for pressionado o Botão do PopupMenu
@@ -4644,6 +4700,8 @@ Private Sub txtCp_LostFocus(Index As Integer)
    Select Case Index
       Case 5
          LimpaFornecedor
+      Case 35
+         SincronizaObservacaoComPedidoDeCompra
    End Select
 End Sub
 

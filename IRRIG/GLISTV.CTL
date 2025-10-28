@@ -861,51 +861,51 @@ Private Declare Function ImageList_Destroy Lib "comctl32" (ByVal hImageList As L
 'apis do windows
 Private Declare Sub CopyMemory Lib "kernel32" Alias "RtlMoveMemory" (hpvDest As Any, hpvSource As Any, ByVal cbCopy As Long)
 Private Declare Function InitCommonControlsEx Lib "comctl32" (Init As InitCommonControlsExType) As Boolean
-Private Declare Function SendMessageAPI Lib "User32.dll" Alias "SendMessageA" (ByVal hwnd As Long, ByVal Msg As Long, wParam As Any, lParam As Any) As Long
+Private Declare Function SendMessageAPI Lib "User32.dll" Alias "SendMessageA" (ByVal hWnd As Long, ByVal Msg As Long, wParam As Any, lParam As Any) As Long
 Private Declare Function GetSystemMetrics Lib "user32" (ByVal nIndex As Long) As Long
-Private Declare Function SetWindowPos Lib "user32" (ByVal hwnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
-Private Declare Function RedrawWindow Lib "user32" (ByVal hwnd As Long, lprcUpdate As Any, ByVal hrgnUpdate As Long, ByVal fuRedraw As Long) As Long
+Private Declare Function SetWindowPos Lib "user32" (ByVal hWnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
+Private Declare Function RedrawWindow Lib "user32" (ByVal hWnd As Long, lprcUpdate As Any, ByVal hrgnUpdate As Long, ByVal fuRedraw As Long) As Long
 Private Declare Function CreateWindowEx Lib "user32" Alias "CreateWindowExA" (ByVal dwExStyle As Long, ByVal lpClassName As String, ByVal lpWindowName As String, ByVal dwStyle As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hWndParent As Long, ByVal hMenu As Long, ByVal hInstance As Long, lpParam As Any) As Long
-Private Declare Function DestroyWindow Lib "user32" (ByVal hwnd As Long) As Long
-Private Declare Function InvalidateRect Lib "user32" (ByVal hwnd As Long, lpRect As RECT, ByVal bErase As Long) As Long
-Private Declare Function GetDC Lib "user32" (ByVal hwnd As Long) As Long
-Private Declare Function GetDeviceCaps Lib "gdi32" (ByVal hdc As Long, ByVal nIndex As Long) As Long
-Private Declare Function ReleaseDC Lib "user32" (ByVal hwnd As Long, ByVal hdc As Long) As Long
-Private Declare Function SetFocus Lib "user32" (ByVal hwnd As Long) As Long
-Private Declare Function SendMessageLong Lib "user32" Alias "SendMessageA" (ByVal hwnd As Long, ByVal wMsg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long
-Private Declare Sub GetClientRect Lib "user32" (ByVal hwnd As Long, lpRect As RECT)
-Private Declare Function CreateCompatibleDC Lib "gdi32" (ByVal hdc As Long) As Long
-Private Declare Function CreateCompatibleBitmap Lib "gdi32" (ByVal hdc As Long, ByVal nWidth As Long, ByVal nHeight As Long) As Long
-Private Declare Function DeleteDC Lib "gdi32" (ByVal hdc As Long) As Long
-Private Declare Function GetWindowRect Lib "user32" (ByVal hwnd As Long, lpRect As RECT) As Long
-Private Declare Function SetTextColor Lib "gdi32" (ByVal hdc As Long, ByVal crColor As Long) As Long
+Private Declare Function DestroyWindow Lib "user32" (ByVal hWnd As Long) As Long
+Private Declare Function InvalidateRect Lib "user32" (ByVal hWnd As Long, lpRect As RECT, ByVal bErase As Long) As Long
+Private Declare Function GetDC Lib "user32" (ByVal hWnd As Long) As Long
+Private Declare Function GetDeviceCaps Lib "GDI32" (ByVal hdc As Long, ByVal nIndex As Long) As Long
+Private Declare Function ReleaseDC Lib "user32" (ByVal hWnd As Long, ByVal hdc As Long) As Long
+Private Declare Function SetFocus Lib "user32" (ByVal hWnd As Long) As Long
+Private Declare Function SendMessageLong Lib "user32" Alias "SendMessageA" (ByVal hWnd As Long, ByVal wMsg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long
+Private Declare Sub GetClientRect Lib "user32" (ByVal hWnd As Long, lpRect As RECT)
+Private Declare Function CreateCompatibleDC Lib "GDI32" (ByVal hdc As Long) As Long
+Private Declare Function CreateCompatibleBitmap Lib "GDI32" (ByVal hdc As Long, ByVal nWidth As Long, ByVal nHeight As Long) As Long
+Private Declare Function DeleteDC Lib "GDI32" (ByVal hdc As Long) As Long
+Private Declare Function GetWindowRect Lib "user32" (ByVal hWnd As Long, lpRect As RECT) As Long
+Private Declare Function SetTextColor Lib "GDI32" (ByVal hdc As Long, ByVal crColor As Long) As Long
 Private Declare Function DrawText Lib "user32" Alias "DrawTextA" (ByVal hdc As Long, ByVal lpStr As String, ByVal nCount As Long, lpRect As RECT, ByVal wFormat As Long) As Long
 Private Declare Function DrawFrameControl Lib "user32" (ByVal hdc As Long, lpRect As RECT, ByVal un1 As Long, ByVal un2 As Long) As Long
 Private Declare Function DrawEdge Lib "user32" (ByVal hdc As Long, qrc As RECT, ByVal edge As Long, ByVal grfFlags As Long) As Long
-Private Declare Function CreateSolidBrush Lib "gdi32" (ByVal crColor As Long) As Long
+Private Declare Function CreateSolidBrush Lib "GDI32" (ByVal crColor As Long) As Long
 Private Declare Function FillRect Lib "user32" (ByVal hdc As Long, lpRect As RECT, ByVal hBrush As Long) As Long
 Private Declare Function InflateRect Lib "user32" (lpRect As RECT, ByVal x As Long, ByVal y As Long) As Long
 Private Declare Function GetCursorPos Lib "user32" (lpPoint As POINTAPI) As Long
 Private Declare Function PtInRect Lib "user32" (lpRect As RECT, ByVal x As Long, ByVal y As Long) As Long
-Private Declare Function ScreenToClient Lib "user32" (ByVal hwnd As Long, lpPoint As POINTAPI) As Long
+Private Declare Function ScreenToClient Lib "user32" (ByVal hWnd As Long, lpPoint As POINTAPI) As Long
 Private Declare Function GetAsyncKeyState Lib "user32" (ByVal vKey As Long) As Integer
 Private Declare Function GetSysColor Lib "user32" (ByVal nIndex As Long) As Long
 Private Declare Function DrawFocusRect Lib "user32" (ByVal hdc As Long, lpRect As RECT) As Long
-Private Declare Function CreateFont Lib "gdi32" Alias "CreateFontA" (ByVal nHeight As Long, ByVal nWidth As Long, ByVal nEscapement As Long, ByVal nOrientation As Long, ByVal fnWeight As Long, ByVal fdwItalic As Long, ByVal fdwUnderline As Long, ByVal fdwStrikeOut As Long, ByVal fdwCharSet As Long, ByVal fdwOutputPrecision As Long, ByVal fdwClipPrecision As Long, ByVal fdwQuality As Long, ByVal fdwPitchAndFamily As Long, ByVal lpszFace As String) As Long
+Private Declare Function CreateFont Lib "GDI32" Alias "CreateFontA" (ByVal nHeight As Long, ByVal nWidth As Long, ByVal nEscapement As Long, ByVal nOrientation As Long, ByVal fnWeight As Long, ByVal fdwItalic As Long, ByVal fdwUnderline As Long, ByVal fdwStrikeOut As Long, ByVal fdwCharSet As Long, ByVal fdwOutputPrecision As Long, ByVal fdwClipPrecision As Long, ByVal fdwQuality As Long, ByVal fdwPitchAndFamily As Long, ByVal lpszFace As String) As Long
 Private Declare Function MulDiv Lib "kernel32" (ByVal nNumber As Long, ByVal nNumerator As Long, ByVal nDenominator As Long) As Long
-Private Declare Function BitBlt Lib "gdi32" (ByVal hDestDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
+Private Declare Function BitBlt Lib "GDI32" (ByVal hDestDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
 Private Declare Function DrawState Lib "user32" Alias "DrawStateA" (ByVal hdc As Long, ByVal hBrush As Long, ByVal lpDrawStateProc As Long, ByVal lParam As Long, ByVal wParam As Long, ByVal n1 As Long, ByVal n2 As Long, ByVal n3 As Long, ByVal n4 As Long, ByVal un As Long) As Long
-Private Declare Function MoveToEx Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, lpPoint As POINTAPI) As Long
-Private Declare Function LineTo Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long) As Long
-Private Declare Function CreatePen Lib "gdi32" (ByVal nPenStyle As Long, ByVal nWidth As Long, ByVal crColor As Long) As Long
+Private Declare Function MoveToEx Lib "GDI32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, lpPoint As POINTAPI) As Long
+Private Declare Function LineTo Lib "GDI32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long) As Long
+Private Declare Function CreatePen Lib "GDI32" (ByVal nPenStyle As Long, ByVal nWidth As Long, ByVal crColor As Long) As Long
 Private Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Long)
 Private Declare Sub ClipCursor Lib "user32" (lpRect As Any)
 Private Declare Function SetCursorPos Lib "user32" (ByVal x As Long, ByVal y As Long) As Long
 Private Declare Function GetActiveWindow Lib "user32" () As Long
-Private Declare Function GetScrollInfo Lib "user32" (ByVal hwnd As Long, ByVal n As Long, lpScrollInfo As SCROLLINFO) As Long
-Private Declare Function EnableWindow Lib "user32" (ByVal hwnd As Long, ByVal fEnable As Long) As Long
+Private Declare Function GetScrollInfo Lib "user32" (ByVal hWnd As Long, ByVal n As Long, lpScrollInfo As SCROLLINFO) As Long
+Private Declare Function EnableWindow Lib "user32" (ByVal hWnd As Long, ByVal fEnable As Long) As Long
 Private Declare Function GetFocus Lib "user32" () As Long
-Private Declare Function SetBkMode Lib "gdi32" (ByVal hdc As Long, ByVal nBkMode As Long) As Long
+Private Declare Function SetBkMode Lib "GDI32" (ByVal hdc As Long, ByVal nBkMode As Long) As Long
 
 'constantes para inicialização da commoncontrol
 Private Const ICC_LISTVIEW_CLASSES = &H1                   ' listview, header
@@ -984,7 +984,7 @@ Private Const SCALAR_ALL = SCALAR_SUM Or SCALAR_MAX Or SCALAR_MIN Or SCALAR_AVG
 Private Const ITEM_CACHE_MAX = 3                    'deve ser o último (igual ao último item) sempre
 
 Private Type WINDOWPOS
-   hwnd As Long
+   hWnd As Long
    hWndInsertAfter As Long
    x As Long
    y As Long
@@ -1218,7 +1218,7 @@ Public Property Get RecordSet() As GRecordSet
    On Error GoTo DeuErro
    
    'vamos reposicionar recordset no registro selecionado
-   If Val(vgUltBkSelect) <> -1 And Val(vgUltBkSelect) <> -2 And Val(vgUltBkSelect) <> -3 And Len(vgUltBkSelect) > 0 And vgTabela.Status = ACAO_NAVEGANDO Then
+   If val(vgUltBkSelect) <> -1 And val(vgUltBkSelect) <> -2 And val(vgUltBkSelect) <> -3 And Len(vgUltBkSelect) > 0 And vgTabela.Status = ACAO_NAVEGANDO Then
       vgTabela.BookMark = vgBkSelect
    End If
    
@@ -1252,7 +1252,7 @@ Public Property Set RecordSet(NewRecordSet As GRecordSet)
       x$ = Substitui$(x$, vbCrLf, "", UM_A_UM)
       If UCase$(Left$(x$, 4)) = "TOP " Then
          x$ = Mid$(x$, 4)
-         vgTopOrig = Val(x$)
+         vgTopOrig = val(x$)
          txtTop.Text = CStr(vgTopOrig)
       End If
    End If
@@ -1348,7 +1348,7 @@ End Property
 Public Property Let ColumnValue(ByVal vgRow As Long, ByVal vgColumn As Variant, ByVal vgNewValue As Variant)
    Dim vgChanged As Boolean, vgCol As Integer
    If vgRow = -1 Then vgRow = SelectedItem + 1
-   vgCol = Val(vgColumns(vgColumn).Index)
+   vgCol = val(vgColumns(vgColumn).Index)
    
    If vgColDefinitions(vgCol).NewValue = vgNewValue Then Exit Property
    
@@ -1378,15 +1378,15 @@ Public Property Get SelectedItem() As Long
 End Property
 
 Public Property Get ColumnWidth(ByVal vgColumn As Variant) As Long
-   If Val(vgColumns(vgColumn).Index) > 0 Then
-      ColumnWidth = vgColDefinitions(Val(vgColumns(vgColumn).Index)).Width
+   If val(vgColumns(vgColumn).Index) > 0 Then
+      ColumnWidth = vgColDefinitions(val(vgColumns(vgColumn).Index)).Width
    End If
 End Property
 
 Public Property Let ColumnWidth(ByVal vgColumn As Variant, ByVal NewColumnWidth As Long)
    Dim vgInd As Integer, vgWidth As Single, w As Single, x As String, i As Long
    vgWidth = NewColumnWidth
-   vgInd = Val(vgColumns(vgColumn).Index)
+   vgInd = val(vgColumns(vgColumn).Index)
    If vgWidth = -1 Then
       If Not vgColumns(vgInd).Hidden Then
          vgWidth = Me.TextWidth(vgColumns(vgInd).Title) + Screen.TwipsPerPixelX * 8
@@ -2745,13 +2745,13 @@ Public Sub SetAllColumnsScalar(vgOq As Integer)
       If Len(vgCol.NameFilter) > 0 And Len(vgColDefinitions(vgCol.Index).ComboTable) = 0 And Len(vgColDefinitions(vgCol.Index).ComboFieldsList) = 0 Then                    'não vamos dar sugestão de sum para colunas tipo fórmula
          Select Case vgOq
             Case 0
-               vgColDefinitions(Val(vgCol.Index)).ShowSum = True
+               vgColDefinitions(val(vgCol.Index)).ShowSum = True
             Case 1
-               vgColDefinitions(Val(vgCol.Index)).ShowMax = True
+               vgColDefinitions(val(vgCol.Index)).ShowMax = True
             Case 2
-               vgColDefinitions(Val(vgCol.Index)).ShowMin = True
+               vgColDefinitions(val(vgCol.Index)).ShowMin = True
             Case 3
-               vgColDefinitions(Val(vgCol.Index)).ShowAvg = True
+               vgColDefinitions(val(vgCol.Index)).ShowAvg = True
          End Select
       End If
    Next
@@ -2860,7 +2860,7 @@ Private Function PegaTamaRealBMP(ByVal vgColumn As String) As Long
    For i = 0 To 3
       x$ = x$ + Chr$(Chk(i))
    Next
-   PegaTamaRealBMP = Cvl(x$)
+   PegaTamaRealBMP = CVL(x$)
 End Function
 
 'pega nome real do BMP/WMF/DIB e enche a pública ArqMidia$
@@ -2996,7 +2996,7 @@ Public Sub SelecionaItem(ByVal vgRow As Long)
    If Len(vgRowsSelected) > 0 Then
       vgRowsSelected = Mid(vgRowsSelected, 2)
       Do While Len(vgRowsSelected)
-         i = Val(Parse$(vgRowsSelected, "|"))
+         i = val(Parse$(vgRowsSelected, "|"))
          Repaint i
       Loop
    End If
@@ -3167,7 +3167,7 @@ Public Sub AddColumn(ByVal vgCol As GColumn, Optional ByVal txtCampo As FormataC
    vgColDefinitions(vgQtCols).Locked = vgColumnLocked
 
    'instancia campo para definições se tem "Ação do clique", "Lista (pesquisa)" ou "Lista (combo-box)" ou lista interna
-   If Val(vgActionButtonExtensor) > 0 Or Len(vgPesqSQLExpression) > 0 Or Len(vgComboTable) > 0 Or Len(vgComboFieldsList) > 0 Then
+   If val(vgActionButtonExtensor) > 0 Or Len(vgPesqSQLExpression) > 0 Or Len(vgComboTable) > 0 Or Len(vgComboFieldsList) > 0 Then
       If vgColDefinitions(vgQtCols).txtCampoGrd Is Nothing Then
          Set vgColDefinitions(vgQtCols).txtCampoGrd = New FormataCampos
       End If
@@ -3374,7 +3374,7 @@ Public Sub OpenRecordSet(ByVal vgSQL As String, vgCursorType As EnumCursorType, 
       x$ = Substitui$(x$, vbCrLf, "", UM_A_UM)
       If UCase$(Left$(x$, 4)) = "TOP " Then
          x$ = Mid$(x$, 4)
-         vgTopOrig = Val(x$)
+         vgTopOrig = val(x$)
          txtTop.Text = CStr(vgTopOrig)
       End If
    End If
@@ -3520,7 +3520,7 @@ Public Sub RefreshRecordSet()
    'vamos zerar controle de bookmark
    Call ResetBookMark
 
-   If Val(vgBk) <> -1 And Val(vgBk) <> -2 And Val(vgBk) <> -3 And Len(vgBk) > 0 Then
+   If val(vgBk) <> -1 And val(vgBk) <> -2 And val(vgBk) <> -3 And Len(vgBk) > 0 Then
       vgTabela.BookMark = vgBk
       ItemSelect vgTabela.AbsolutePosition - 1, False
    End If
@@ -3716,12 +3716,12 @@ Public Function SearchItem(ByVal vgColumn As String, vgSearch As String) As Bool
          Else
             i = 1
             Do While i < (vgTabela.Table.Columns(vgColumn).Size - vgTabela.Table.Columns(vgColumn).QDecimal)
-               RecordSet.Find PoeColchetes(vgColumn) + " >= " + vgNumSearch + " And " + PoeColchetes(vgColumn) + " < " + CStr(Int(Val(vgNumSearch)) + (10 ^ (i - 1)))
+               RecordSet.Find PoeColchetes(vgColumn) + " >= " + vgNumSearch + " And " + PoeColchetes(vgColumn) + " < " + CStr(Int(val(vgNumSearch)) + (10 ^ (i - 1)))
                If Not RecordSet.NoMatch Then
                   Pos = RecordSet.AbsolutePosition - 1
                   Exit Do
                End If
-               vgNumSearch = Val(vgNumSearch) * 10
+               vgNumSearch = val(vgNumSearch) * 10
                i = i + 1
             Loop
          End If
@@ -3899,7 +3899,7 @@ Private Sub SetStyle()
 
    'envia uma WM_WINDOWPOSCHANGED para que a WM_MEASUREITEM seja chamada
    GetWindowRect hWndLst, Rc
-   WP.hwnd = hWndLst
+   WP.hWnd = hWndLst
    WP.cx = Rc.Right - Rc.Left
    WP.cy = Rc.Bottom - Rc.Top
    WP.Flags = SWP_NOACTIVATE Or SWP_NOMOVE Or SWP_NOOWNERZORDER Or SWP_NOZORDER
@@ -3935,7 +3935,7 @@ Private Sub Create()
    vgNVez = 0
    
 OutraVez:
-   hWndLst = CreateWindowEx(dwStyleEx, "SysListView32", "GVirtListView", dwStyle, 0, 0, 100, 100, hwnd, 5, App.hInstance, 0)
+   hWndLst = CreateWindowEx(dwStyleEx, "SysListView32", "GVirtListView", dwStyle, 0, 0, 100, 100, hWnd, 5, App.hInstance, 0)
    
    'se o VB não inicializou a COMCTL ainda, vamos iniciar...
    If hWndLst = 0 And vgNVez = 0 Then
@@ -4079,12 +4079,12 @@ Private Sub OrdenaVetor(ByRef Vetor As Variant, vgPriIndice As Long, vgUltIndice
    Dim vgPriTemp As Long, vgUltTemp As Long, vgParamTemp As Long, vgNovoParam As String
    vgPriTemp = vgPriIndice
    vgUltTemp = vgUltIndice
-   vgParamTemp = Val(Vetor((vgPriIndice + vgUltIndice) / 2))
+   vgParamTemp = val(Vetor((vgPriIndice + vgUltIndice) / 2))
    While (vgPriTemp <= vgUltTemp)
-      While (Val(Vetor(vgPriTemp)) < vgParamTemp And vgPriTemp < vgUltIndice)
+      While (val(Vetor(vgPriTemp)) < vgParamTemp And vgPriTemp < vgUltIndice)
          vgPriTemp = vgPriTemp + 1
       Wend
-      While (vgParamTemp < Val(Vetor(vgUltTemp)) And vgUltTemp > vgPriIndice)
+      While (vgParamTemp < val(Vetor(vgUltTemp)) And vgUltTemp > vgPriIndice)
          vgUltTemp = vgUltTemp - 1
       Wend
       If (vgPriTemp <= vgUltTemp) Then
@@ -4108,12 +4108,12 @@ Private Sub OrdenaVetorDesc(ByRef Vetor As Variant, vgPriIndice As Long, vgUltIn
    Dim vgPriTemp As Long, vgUltTemp As Long, vgParamTemp As Long, vgNovoParam As String
    vgPriTemp = vgPriIndice
    vgUltTemp = vgUltIndice
-   vgParamTemp = Val(Vetor((vgPriIndice + vgUltIndice) / 2))
+   vgParamTemp = val(Vetor((vgPriIndice + vgUltIndice) / 2))
    While (vgPriTemp <= vgUltTemp)
-      While (Val(Vetor(vgPriTemp)) > vgParamTemp And vgPriTemp < vgUltIndice)
+      While (val(Vetor(vgPriTemp)) > vgParamTemp And vgPriTemp < vgUltIndice)
          vgPriTemp = vgPriTemp + 1
       Wend
-      While (vgParamTemp > Val(Vetor(vgUltTemp)) And vgUltTemp > vgPriIndice)
+      While (vgParamTemp > val(Vetor(vgUltTemp)) And vgUltTemp > vgPriIndice)
          vgUltTemp = vgUltTemp - 1
       Wend
       If (vgPriTemp <= vgUltTemp) Then
@@ -4180,8 +4180,12 @@ Private Sub DeleteRows(Optional ByVal vgDeleteAllRecords As Boolean = False, Opt
             ReDim Preserve vgDeleteList(i) As String
             vgDeleteList(i) = vgRow
          Loop
-         OrdenaVetor vgDeleteList, 1, CLng(i)
-         vgTot = UBound(vgDeleteList)
+         If i > 0 Then
+            OrdenaVetor vgDeleteList, 1, CLng(i)
+            vgTot = UBound(vgDeleteList)
+         Else
+            vgTot = 0
+         End If
       End If
       
       'força retirar seleção e forçca skiprecord obrigando os grids "netos" terem seus recordsets fechados antes do inídio dessa transação
@@ -4212,7 +4216,7 @@ Private Sub DeleteRows(Optional ByVal vgDeleteAllRecords As Boolean = False, Opt
          If vgDeleteAllRecords Then
             vgRow = i - 1
          Else
-            vgRow = Val(vgDeleteList(i))
+            vgRow = val(vgDeleteList(i))
          End If
          vgDeleted = False
          
@@ -4290,7 +4294,7 @@ DeuErro:
       If InStr(vgMessage$, "|") > 0 Then
          CErr.Mensagem = LoadGasString(3801)
          CErr.Origem = Parse$(vgMessage$, "|")
-         CErr.NumErro = Val(vgMessage$)                  'deu erro
+         CErr.NumErro = val(vgMessage$)                  'deu erro
          CErr.Description = Trim$(Mid$(vgMessage$, InStr(vgMessage$, "-") + 1))
       Else
          CErr.NumErro = 3801
@@ -4348,7 +4352,7 @@ Public Sub DeleteCols()
       FreezeListView True
       vgColsSelected$ = Mid$(vgColsSelected$, 2)
       Do While Len(vgColsSelected$) > 0
-         j = Val(Parse$(vgColsSelected$, "|"))
+         j = val(Parse$(vgColsSelected$, "|"))
          ColumnWidth(j) = 0
       Loop
       RestoreListView True
@@ -4519,7 +4523,7 @@ End Function
 Private Function GetColumnRs(ByVal vgRow As Long, ByVal vgColumn As Variant, Optional ByVal GetDefault As Boolean = True) As Variant
    Dim RetVal As Variant, vgCol As Integer, ItemStatus As Integer, NewItem As Boolean, vgItemCache As Long, vgHasCache As Boolean
    
-   vgCol = Val(vgColumns(vgColumn).Index)
+   vgCol = val(vgColumns(vgColumn).Index)
    vgInternalLst = UBound(vgItens)                'se tem itens, é lista interna
    
    If Not vgInternalLst Then
@@ -4637,7 +4641,7 @@ Private Function GetColumnText(ByVal vgRow As Long, ByVal vgColumn As Variant) A
    Dim RetVal As Variant, vgField As String, i As Integer, vgCol As Integer, vgFilter As String, _
        ItemStatus As Integer, NewItem As Boolean, vgHasCache As Boolean, vgItemCache As Long
    
-   vgCol = Val(vgColumns(vgColumn).Index)
+   vgCol = val(vgColumns(vgColumn).Index)
    
    'usuário quer Cache... vamos preparar a tabela
    If Not vgInternalLst And vgCacheSize <> 0 Then
@@ -4755,8 +4759,8 @@ Private Sub LocateRecordset(ByVal vgRow As Long, ByVal vgSkipRecord As Boolean)
    
    If Not vgUboundMode Then
       If Not vgInternalLst Then
-         If Val(vgBkVirtual) <> -1 And Val(vgBkVirtual) <> -2 And Val(vgBkVirtual) <> -3 And Len(vgBkVirtual) > 0 Then vgTabela.BookMark = vgBkVirtual 'vamos restaurar o bookmark no último posicionamento feito pelo locate
-         If vgRow = vgUltBkSelect And Val(vgBkSelect) <> -1 And Val(vgBkSelect) <> -2 And Val(vgBkSelect) <> -3 And Len(vgBkSelect) > 0 Then           'se já tem esse bookmark
+         If val(vgBkVirtual) <> -1 And val(vgBkVirtual) <> -2 And val(vgBkVirtual) <> -3 And Len(vgBkVirtual) > 0 Then vgTabela.BookMark = vgBkVirtual 'vamos restaurar o bookmark no último posicionamento feito pelo locate
+         If vgRow = vgUltBkSelect And val(vgBkSelect) <> -1 And val(vgBkSelect) <> -2 And val(vgBkSelect) <> -3 And Len(vgBkSelect) > 0 Then           'se já tem esse bookmark
             vgTabela.BookMark = vgBkSelect
          Else
             If vgTabela.EOF Or vgTabela.BOF Or vgRecPosAtual = -1 Then
@@ -4928,12 +4932,12 @@ Private Function GetColorInfo(ByVal vgRow As Long, ByVal vgColumn As Long) As Gr
    'se tem cache
    If vgHasCache Then
       Colors = vgCacheTable(vgItemCache, ITEM_CACHE_COLOR, vgColumn)         'pega as cores para esse item que estão em cache
-      ColorDef.TextColor = Val(Parse$(Colors, "|"))
-      ColorDef.BackColor = Val(Parse$(Colors, "|"))
-      ColorDef.SelectTextColor = Val(Parse$(Colors, "|"))
-      ColorDef.SelectBackColor = Val(Parse$(Colors, "|"))
-      ColorDef.ColumnTextColor = Val(Parse$(Colors, "|"))
-      ColorDef.ColumnBackColor = Val(Parse$(Colors, "|"))
+      ColorDef.TextColor = val(Parse$(Colors, "|"))
+      ColorDef.BackColor = val(Parse$(Colors, "|"))
+      ColorDef.SelectTextColor = val(Parse$(Colors, "|"))
+      ColorDef.SelectBackColor = val(Parse$(Colors, "|"))
+      ColorDef.ColumnTextColor = val(Parse$(Colors, "|"))
+      ColorDef.ColumnBackColor = val(Parse$(Colors, "|"))
    Else
       
       'vamos pegar valores default para cores de texto e fundo
@@ -5148,7 +5152,7 @@ Private Sub GSubClassInterface_WndProc(ByVal lHwnd As Long, ByVal message As GSC
                End If
             End If
             
-            ReleaseDC hwnd, hDcTemp
+            ReleaseDC hWnd, hDcTemp
             
             'se não tiver nenhum item na lista, vamos repintar o header para corrigir desenha da parte inferior do mesmo
             If vgNumItemsTot = 0 Then DrawHeaderBar
@@ -5327,7 +5331,7 @@ Private Sub GSubClassInterface_WndProc(ByVal lHwnd As Long, ByVal message As GSC
       '==============================================
       'tratamento para o user control
       '==============================================
-      Case UserControl.hwnd
+      Case UserControl.hWnd
          
          If message = WM_NOTIFY Then
             CopyMemory udtNMHDR, ByVal lParam, LenB(udtNMHDR)
@@ -5816,16 +5820,16 @@ Private Sub PrepareTop()
          Else
             vgTTop = 0
          End If
-         vgExtTTop = Val(txtTop.Text)
+         vgExtTTop = val(txtTop.Text)
       Else
-         vgTTop = Val(txtTop.Text)
+         vgTTop = val(txtTop.Text)
          vgExtTTop = 0
       End If
    Else
       vgTTop = vgTopOrig
-      If Val(txtTop.Text) <> vgTopOrig Then
+      If val(txtTop.Text) <> vgTopOrig Then
          If vgTopOrig > 0 Then
-            vgExtTTop = Val(txtTop.Text)
+            vgExtTTop = val(txtTop.Text)
          Else
             txtTop.Text = "0"
          End If
@@ -5953,10 +5957,10 @@ Private Sub FillScalarValues(Optional ByVal vgValues As Integer)
       
       For Each vgCol In vgColumns
          If vgCol.ColumnType = TP_NUMERICO And Not vgCol.Hidden And Len(vgCol.NameFilter) = 0 And _
-            (vgColDefinitions(Val(vgCol.Index)).ShowSum Or _
-            vgColDefinitions(Val(vgCol.Index)).ShowMax Or _
-            vgColDefinitions(Val(vgCol.Index)).ShowMin Or _
-            vgColDefinitions(Val(vgCol.Index)).ShowAvg) Then
+            (vgColDefinitions(val(vgCol.Index)).ShowSum Or _
+            vgColDefinitions(val(vgCol.Index)).ShowMax Or _
+            vgColDefinitions(val(vgCol.Index)).ShowMin Or _
+            vgColDefinitions(val(vgCol.Index)).ShowAvg) Then
             GetValuesStatus True                                                'pega sum, max, min e avg para todos os registro (em fórmulas)
             Exit For
          End If
@@ -6038,7 +6042,7 @@ Private Function ValidateColumnGrid() As Boolean
       If Len(vgMsg$) > 0 Then
          If InStr(vgMsg$, "|") > 0 Then
             CErr.Origem = Parse$(vgMsg$, "|")
-            CErr.NumErro = Val(vgMsg$)                              'deu erro
+            CErr.NumErro = val(vgMsg$)                              'deu erro
             CErr.Description = Trim$(Mid$(vgMsg$, InStr(vgMsg$, "-") + 1))
          Else
             CErr.NumErro = 3800
@@ -6092,7 +6096,7 @@ Private Function EndEditGrid(ByVal Save As Boolean, ByVal Terminate As Boolean) 
          If Len(vgMsg$) > 0 Then
             If InStr(vgMsg$, "|") > 0 Then
                CErr.Origem = Parse$(vgMsg$, "|")
-               CErr.NumErro = Val(vgMsg$)                         'deu erro
+               CErr.NumErro = val(vgMsg$)                         'deu erro
                CErr.Description = Trim$(Mid$(vgMsg$, InStr(vgMsg$, "-") + 1))
             Else
                CErr.NumErro = 3800
@@ -6371,14 +6375,14 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
 
          'definição do extensor de "Ação do clique"
          vgHasBut = False
-         If Val(vgColDefinitions(vgIndCol).ActionButtonExtensor) = 0 Then 'se tem extensor de ação no clique
+         If val(vgColDefinitions(vgIndCol).ActionButtonExtensor) = 0 Then 'se tem extensor de ação no clique
             If Not vgColDefinitions(vgIndCol).txtCampo Is Nothing Then
                If Not vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_ACAO) Is Nothing Then
                   vgHasBut = True
                End If
             End If
          End If
-         If Val(vgColDefinitions(vgIndCol).ActionButtonExtensor) > 0 Or vgHasBut Then 'se tem extensor de ação no clique
+         If val(vgColDefinitions(vgIndCol).ActionButtonExtensor) > 0 Or vgHasBut Then 'se tem extensor de ação no clique
             If Not HasBotCp(BOT_ACAO) Then Call GetBotCp(BOT_ACAO)                    'se não tem botão ainda, define o botão
             bottxtCampo(BOT_ACAO).Visible = True                                      'mostrar o botão
             Set txtCampo.CtBot(BOT_ACAO) = bottxtCampo(BOT_ACAO)                      'vincula o botão ao campo
@@ -6386,12 +6390,12 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
                Set bottxtCampo(BOT_ACAO).Picture = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_ACAO).Picture
                bottxtCampo(BOT_ACAO).Caption = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_ACAO).Caption
             Else
-               If Val(vgColDefinitions(vgIndCol).ActionButtonExtensor) <= 2 Then      'se o extensor é dropdown ou reticências, define imagem correspondente
-                  Set bottxtCampo(BOT_ACAO).Picture = LoadPicture(LoadGasPicture(2 + Val(vgColDefinitions(vgIndCol).ActionButtonExtensor)))
+               If val(vgColDefinitions(vgIndCol).ActionButtonExtensor) <= 2 Then      'se o extensor é dropdown ou reticências, define imagem correspondente
+                  Set bottxtCampo(BOT_ACAO).Picture = LoadPicture(LoadGasPicture(2 + val(vgColDefinitions(vgIndCol).ActionButtonExtensor)))
                   bottxtCampo(BOT_ACAO).Caption = ""
                Else                               'se letras, coloca a letra no caption do botão
                   Set bottxtCampo(BOT_ACAO).Picture = LoadPicture("")
-                  bottxtCampo(BOT_ACAO).Caption = Chr$(62 + Val(vgColDefinitions(vgIndCol).ActionButtonExtensor))
+                  bottxtCampo(BOT_ACAO).Caption = Chr$(62 + val(vgColDefinitions(vgIndCol).ActionButtonExtensor))
                End If
             End If
          ElseIf HasBotCp(BOT_ACAO) Then
@@ -6401,14 +6405,14 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
 
          'definição do extensor de "Lista (pesquisa)"
          vgHasBut = False
-         If Val(vgColDefinitions(vgIndCol).PesqExtensor) = 0 Then 'se tem extensor de ação no clique
+         If val(vgColDefinitions(vgIndCol).PesqExtensor) = 0 Then 'se tem extensor de ação no clique
             If Not vgColDefinitions(vgIndCol).txtCampo Is Nothing Then
                If Not vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_LISTA) Is Nothing Then
                   vgHasBut = True
                End If
             End If
          End If
-         If Val(vgColDefinitions(vgIndCol).PesqExtensor) > 0 Or vgHasBut Then 'se tem pesquisa
+         If val(vgColDefinitions(vgIndCol).PesqExtensor) > 0 Or vgHasBut Then 'se tem pesquisa
             vgColDefinitions(vgIndCol).PesqSQLExpression = ""
             RaiseEvent GetColumnSQLSearch(vgIndCol, GetNewCols(), vgColDefinitions(vgIndCol).PesqSQLExpression)
             If Len(vgColDefinitions(vgIndCol).PesqSQLExpression) > 0 Then
@@ -6419,13 +6423,13 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
                   Set bottxtCampo(BOT_LISTA).Picture = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_LISTA).Picture
                   bottxtCampo(BOT_LISTA).Caption = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_LISTA).Caption
                Else
-                  If Val(vgColDefinitions(vgIndCol).PesqExtensor) > 0 Then    'se tem extensor de pesquisa
-                     If Val(vgColDefinitions(vgIndCol).PesqExtensor) <= 2 Then 'se o extensor é dropdown ou reticências, define imagem correspondente
-                        Set bottxtCampo(BOT_LISTA).Picture = LoadPicture(LoadGasPicture(2 + Val(vgColDefinitions(vgIndCol).PesqExtensor)))
+                  If val(vgColDefinitions(vgIndCol).PesqExtensor) > 0 Then    'se tem extensor de pesquisa
+                     If val(vgColDefinitions(vgIndCol).PesqExtensor) <= 2 Then 'se o extensor é dropdown ou reticências, define imagem correspondente
+                        Set bottxtCampo(BOT_LISTA).Picture = LoadPicture(LoadGasPicture(2 + val(vgColDefinitions(vgIndCol).PesqExtensor)))
                         bottxtCampo(BOT_LISTA).Caption = ""
                      Else                         'se letras, coloca a letra no caption do botão
                         Set bottxtCampo(BOT_LISTA).Picture = LoadPicture("")
-                        bottxtCampo(BOT_LISTA).Caption = Chr$(62 + Val(vgColDefinitions(vgIndCol).PesqExtensor))
+                        bottxtCampo(BOT_LISTA).Caption = Chr$(62 + val(vgColDefinitions(vgIndCol).PesqExtensor))
                      End If
                   End If
                End If
@@ -6437,14 +6441,14 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
          
          'definição do extensor de "Lista (combo-box)"
          vgHasBut = False
-         If Val(vgColDefinitions(vgIndCol).ComboExtensor) = 0 Then 'se tem extensor de ação no clique
+         If val(vgColDefinitions(vgIndCol).ComboExtensor) = 0 Then 'se tem extensor de ação no clique
             If Not vgColDefinitions(vgIndCol).txtCampo Is Nothing Then
                If Not vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_COMBO) Is Nothing Then
                   vgHasBut = True
                End If
             End If
          End If
-         If (Val(vgColDefinitions(vgIndCol).ComboExtensor) > 0 And ((Len(vgColDefinitions(vgIndCol).ComboTable) > 0 Or Len(vgColDefinitions(vgIndCol).ComboFieldsList) > 0))) Or vgHasBut Then
+         If (val(vgColDefinitions(vgIndCol).ComboExtensor) > 0 And ((Len(vgColDefinitions(vgIndCol).ComboTable) > 0 Or Len(vgColDefinitions(vgIndCol).ComboFieldsList) > 0))) Or vgHasBut Then
             If Not HasBotCp(BOT_COMBO) Then Call GetBotCp(BOT_COMBO) 'se não tem botão ainda, define o botão
             bottxtCampo(BOT_COMBO).Visible = True                    'mostrar o botão
             Set txtCampo.CtBot(BOT_COMBO) = bottxtCampo(BOT_COMBO)   'vincula o botão ao campo
@@ -6452,13 +6456,13 @@ Private Sub DefineCampo(Optional ByVal vgIndFilter As Integer = -1)
                Set bottxtCampo(BOT_COMBO).Picture = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_COMBO).Picture
                bottxtCampo(BOT_COMBO).Caption = vgColDefinitions(vgIndCol).txtCampo.CtBot(BOT_COMBO).Caption
             Else
-               If Val(vgColDefinitions(vgIndCol).ComboExtensor) > 0 Then 'se tem extensor de combo-box
-                  If Val(vgColDefinitions(vgIndCol).ComboExtensor) <= 2 Then 'se o extensor é dropdown ou reticências, define imagem correspondente
-                     Set bottxtCampo(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(2 + Val(vgColDefinitions(vgIndCol).ComboExtensor)))
+               If val(vgColDefinitions(vgIndCol).ComboExtensor) > 0 Then 'se tem extensor de combo-box
+                  If val(vgColDefinitions(vgIndCol).ComboExtensor) <= 2 Then 'se o extensor é dropdown ou reticências, define imagem correspondente
+                     Set bottxtCampo(BOT_COMBO).Picture = LoadPicture(LoadGasPicture(2 + val(vgColDefinitions(vgIndCol).ComboExtensor)))
                      bottxtCampo(BOT_COMBO).Caption = ""
                   Else                            'se letras, coloca a letra no caption do botão
                      Set bottxtCampo(BOT_COMBO).Picture = LoadPicture("")
-                     bottxtCampo(BOT_COMBO).Caption = Chr$(62 + Val(vgColDefinitions(vgIndCol).ComboExtensor))
+                     bottxtCampo(BOT_COMBO).Caption = Chr$(62 + val(vgColDefinitions(vgIndCol).ComboExtensor))
                   End If
                End If
             End If
@@ -6624,11 +6628,11 @@ DeuErro:
 End Sub
 
 Private Function GetEditCurrentLine() As Long
-   GetEditCurrentLine = SendMessage(txtEditMult.hwnd, EM_LINEFROMCHAR, -1, ByVal 0&) + 1
+   GetEditCurrentLine = SendMessage(txtEditMult.hWnd, EM_LINEFROMCHAR, -1, ByVal 0&) + 1
 End Function
 
 Private Function GetEditCountLine() As Long
-   GetEditCountLine = SendMessage(txtEditMult.hwnd, EM_GETLINECOUNT, 0, ByVal 0&)
+   GetEditCountLine = SendMessage(txtEditMult.hWnd, EM_GETLINECOUNT, 0, ByVal 0&)
 End Function
 
 Public Function GetVisibleCol(ByVal vgCol As gVisibleCols, Optional ByVal vgColRef As Integer, Optional ByVal vgSkipLocked As Boolean) As Integer
@@ -6839,7 +6843,7 @@ Private Function TrataTeclaGrid(ByRef KeyCode As Long, ByVal Shift As Long) As B
             Else
                Cancel = (GetEditCurrentLine < GetEditCountLine)
             End If
-         ElseIf Val(vgColDefinitions(vgColAtual).ComboExtensor) > 0 And Not vgColumns(vgColAtual).HasChange And vgChanged And Shift = 0 Then
+         ElseIf val(vgColDefinitions(vgColAtual).ComboExtensor) > 0 And Not vgColumns(vgColAtual).HasChange And vgChanged And Shift = 0 Then
             txtCampo.KeyDown (KeyCode), 0
             Cancel = True
          End If
@@ -6862,7 +6866,7 @@ Private Function TrataTeclaGrid(ByRef KeyCode As Long, ByVal Shift As Long) As B
             Else
                Cancel = (GetEditCurrentLine > 1)
             End If
-         ElseIf Val(vgColDefinitions(vgColAtual).ComboExtensor) > 0 And Not vgColumns(vgColAtual).HasChange And vgChanged And Shift = 0 Then
+         ElseIf val(vgColDefinitions(vgColAtual).ComboExtensor) > 0 And Not vgColumns(vgColAtual).HasChange And vgChanged And Shift = 0 Then
             txtCampo.KeyDown (KeyCode), 0
             Cancel = True
          End If
@@ -7003,12 +7007,12 @@ End Function
 Private Sub ChangeCallBackControl()
    
    'subclasse para o user control
-   vgSubClass.SubClass UserControl.hwnd, Me
-   vgSubClass.AddMessage UserControl.hwnd, WM_NOTIFY, MSG_BEFORE
-   vgSubClass.AddMessage UserControl.hwnd, WM_MOUSEMOVE, MSG_AFTER
-   vgSubClass.AddMessage UserControl.hwnd, WM_DRAWITEM, MSG_AFTER
-   vgSubClass.AddMessage UserControl.hwnd, WM_MEASUREITEM, MSG_BEFORE_AND_AFTER
-   vgSubClass.AddMessage UserControl.hwnd, WM_MOUSEWHEEL, MSG_AFTER
+   vgSubClass.SubClass UserControl.hWnd, Me
+   vgSubClass.AddMessage UserControl.hWnd, WM_NOTIFY, MSG_BEFORE
+   vgSubClass.AddMessage UserControl.hWnd, WM_MOUSEMOVE, MSG_AFTER
+   vgSubClass.AddMessage UserControl.hWnd, WM_DRAWITEM, MSG_AFTER
+   vgSubClass.AddMessage UserControl.hWnd, WM_MEASUREITEM, MSG_BEFORE_AND_AFTER
+   vgSubClass.AddMessage UserControl.hWnd, WM_MOUSEWHEEL, MSG_AFTER
 
 End Sub
 
@@ -7042,17 +7046,17 @@ Private Sub M_ColOption_Click(Index As Integer)
    If Index <> 4 Then M_ColOption(Index).Checked = Not M_ColOption(Index).Checked
    Select Case Index
       Case 0
-         vgColDefinitions(Val(M_MenuCol.Tag)).ShowSum = M_ColOption(Index).Checked
+         vgColDefinitions(val(M_MenuCol.Tag)).ShowSum = M_ColOption(Index).Checked
       Case 1
-         vgColDefinitions(Val(M_MenuCol.Tag)).ShowMax = M_ColOption(Index).Checked
+         vgColDefinitions(val(M_MenuCol.Tag)).ShowMax = M_ColOption(Index).Checked
       Case 2
-         vgColDefinitions(Val(M_MenuCol.Tag)).ShowMin = M_ColOption(Index).Checked
+         vgColDefinitions(val(M_MenuCol.Tag)).ShowMin = M_ColOption(Index).Checked
       Case 3
-         vgColDefinitions(Val(M_MenuCol.Tag)).ShowAvg = M_ColOption(Index).Checked
+         vgColDefinitions(val(M_MenuCol.Tag)).ShowAvg = M_ColOption(Index).Checked
       Case 5                                               'asc
-         DefineOrderColumn Val(M_MenuCol.Tag), IIf(M_ColOption(Index).Checked, 1, 0)
+         DefineOrderColumn val(M_MenuCol.Tag), IIf(M_ColOption(Index).Checked, 1, 0)
       Case 6                                               'desc
-         DefineOrderColumn Val(M_MenuCol.Tag), IIf(M_ColOption(Index).Checked, -1, 0)
+         DefineOrderColumn val(M_MenuCol.Tag), IIf(M_ColOption(Index).Checked, -1, 0)
    End Select
    If Index = 0 Or Index = 1 Or Index = 2 Or Index = 3 Then
       GetValuesStatus
@@ -7093,7 +7097,7 @@ Private Sub picBarra_Click()
    Dim pt As POINTAPI
    If vgShowFilterBar Then
       GetCursorPos pt
-      ScreenToClient picBarra.hwnd, pt
+      ScreenToClient picBarra.hWnd, pt
       If pt.y < vgFilterBarHeight / vgTpY Then
          ApplyFilterAndOrder
       End If
@@ -7146,16 +7150,16 @@ Private Sub picBarra_MouseDown(Button As Integer, Shift As Integer, x As Single,
       If vgShowFilterBar Then
          pt.y = pt.y + vgFilterBarHeight / vgTpY
       End If
-      ClientToScreen picBarra.hwnd, pt
+      ClientToScreen picBarra.hWnd, pt
       SetCursorPos pt.x, pt.y
       pt.x = picBarra.Width / 2 / vgTpX
       pt.y = 0
-      ClientToScreen picBarra.hwnd, pt
+      ClientToScreen picBarra.hWnd, pt
       Rc.Top = pt.y
       Rc.Left = pt.x
       pt.x = picBarra.Width / 2 / vgTpX
       pt.y = picBarra.Height / vgTpY
-      ClientToScreen picBarra.hwnd, pt
+      ClientToScreen picBarra.hWnd, pt
       Rc.Bottom = pt.y
       Rc.Right = pt.x
       pt.x = 0
@@ -7173,7 +7177,7 @@ Private Sub picBarra_MouseDown(Button As Integer, Shift As Integer, x As Single,
             z = Mid$(vgRowsSelected, 2)
             j = -1
             Do While Len(z)
-               i = Val(Parse$(z$, "|"))
+               i = val(Parse$(z$, "|"))
                If i < vgRow And i > j Then
                   j = i
                End If
@@ -7243,7 +7247,7 @@ Private Sub GetValuesStatus(Optional ByVal vgAllRows As Boolean = False)
       For i = 1 To vgMax
          For Each vgCol In vgColumns
             If vgCol.ColumnType = TP_NUMERICO And Not vgCol.Hidden And (Not vgAllRows Or Len(vgCol.NameFilter) = 0) Then
-               vgInd = Val(vgCol.Index)
+               vgInd = val(vgCol.Index)
                If Not vgAllRows Then
                   vgRow = vgRows(i)
                Else
@@ -7502,7 +7506,7 @@ Private Sub picHeader_Click()
    Dim pt As POINTAPI, vgCancel As Boolean
    If Not vgHideLeftBar And Not vgHideHeader And vgShowGridControl And (vgShowGridCaption Or Not vgFullRowSelect) Then
       GetCursorPos pt
-      ScreenToClient picHeader.hwnd, pt
+      ScreenToClient picHeader.hWnd, pt
       If pt.y > HeaderTop / vgTpY And pt.x < vgLeftBarWidth / vgTpX Then
          RaiseEvent MenuButtonClick(vgCancel)
          If Not vgCancel Then
@@ -7633,7 +7637,7 @@ Private Sub picHeader_MouseDown(Button As Integer, Shift As Integer, x As Single
          vgColResizing = vgCol
          pt.x = ColumnRight(vgCol) / vgTpX
          pt.y = HeaderTop / vgTpY + (HeaderHeightFull - HeaderTop) / 2 / vgTpY + 1
-         ClientToScreen picHeader.hwnd, pt
+         ClientToScreen picHeader.hWnd, pt
          SetCursorPos pt.x, pt.y
          Rc.Top = pt.y
          Rc.Left = pt.x - ColumnWidth(vgCol) / vgTpX
@@ -7642,7 +7646,7 @@ Private Sub picHeader_MouseDown(Button As Integer, Shift As Integer, x As Single
          End If
          pt.x = picHeader.ScaleWidth / vgTpX
          pt.y = HeaderTop / vgTpY + (HeaderHeightFull - HeaderTop) / 2 / vgTpY + 1
-         ClientToScreen picHeader.hwnd, pt
+         ClientToScreen picHeader.hWnd, pt
          Rc.Bottom = pt.y
          Rc.Right = pt.x
          ClipCursor Rc
@@ -7692,7 +7696,7 @@ Private Sub picHeader_MouseDown(Button As Integer, Shift As Integer, x As Single
       ElseIf y < HeaderTop And (vgShowGridCaption Or Not vgFullRowSelect) Then
          If Not DrawButtonsControl(Button) Then
             Call ReleaseCapture
-            SendMessageLong vgFormParent.hwnd, WM_NCLBUTTONDOWN, 2, 0
+            SendMessageLong vgFormParent.hWnd, WM_NCLBUTTONDOWN, 2, 0
          End If
       End If
    End If
@@ -7713,12 +7717,12 @@ Private Sub picHeader_MouseMove(Button As Integer, Shift As Integer, x As Single
          
             pt.x = 0
             pt.y = HeaderTop / vgTpY
-            ClientToScreen picHeader.hwnd, pt
+            ClientToScreen picHeader.hWnd, pt
             Rc.Left = pt.x
             Rc.Top = pt.y
             pt.x = picHeader.ScaleWidth / vgTpX
             pt.y = picHeader.ScaleHeight / vgTpY
-            ClientToScreen picHeader.hwnd, pt
+            ClientToScreen picHeader.hWnd, pt
             Rc.Right = pt.x - 4
             Rc.Bottom = pt.y
                
@@ -8071,7 +8075,7 @@ End Sub
 Private Sub picStatus_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
    If Button = 1 Then
       Call ReleaseCapture
-      SendMessageLong vgFormParent.hwnd, WM_NCLBUTTONDOWN, 2, 0
+      SendMessageLong vgFormParent.hWnd, WM_NCLBUTTONDOWN, 2, 0
    End If
 End Sub
 
@@ -8355,13 +8359,13 @@ End Sub
 Private Function ParentIsFocused() As Boolean
    Dim vghWndParent As Long
    If Not VBDesignMode Then
-      If GetActiveWindow <> mdiIRRIG.hwnd Then
+      If GetActiveWindow <> mdiIRRIG.hWnd Then
          vghWndParent = GetActiveWindow
       ElseIf Not mdiIRRIG.ActiveForm Is Nothing Then
-         vghWndParent = mdiIRRIG.ActiveForm.hwnd
+         vghWndParent = mdiIRRIG.ActiveForm.hWnd
       End If
       If vghWndParent And Not vgFormParent Is Nothing Then
-         ParentIsFocused = (vghWndParent = vgFormParent.hwnd)                'se a janela ativa for a janela que contém o usercontrol
+         ParentIsFocused = (vghWndParent = vgFormParent.hWnd)                'se a janela ativa for a janela que contém o usercontrol
       Else
          ParentIsFocused = False
       End If
@@ -8391,7 +8395,7 @@ Private Sub UserControl_ExitFocus()
    If Not mdiIRRIG.ActiveForm Is Nothing Then
       If Not mdiIRRIG.ActiveForm.ActiveControl Is Nothing And Ok Then
          If TypeOf mdiIRRIG.ActiveForm.ActiveControl Is GBotao Then
-            vgHandle = mdiIRRIG.ActiveForm.ActiveControl.hwnd
+            vgHandle = mdiIRRIG.ActiveForm.ActiveControl.hWnd
             For i = 1 To UBound(vgIgnoredFocusControls)
                If vgIgnoredFocusControls(i) = vgHandle Then
                   Ok = False
@@ -8408,7 +8412,7 @@ Private Sub UserControl_ExitFocus()
       If Not mdiIRRIG.ActiveForm Is Nothing Then
          If Not mdiIRRIG.ActiveForm.ActiveControl Is Nothing Then
             If TypeOf mdiIRRIG.ActiveForm.ActiveControl Is GListV Then
-               vgHandle = mdiIRRIG.ActiveControl.hwnd
+               vgHandle = mdiIRRIG.ActiveControl.hWnd
                For i = 1 To UBound(vgIgnoredFocusControls)
                   If vgIgnoredFocusControls(i) = vgHandle Then
                      Ok = False
@@ -8570,7 +8574,7 @@ End Sub
 Private Sub UserControl_KeyDown(KeyCode As Integer, Shift As Integer)
    Dim vgHwnd As Long
    vgHwnd = GetFocus
-   If vgHwnd = picHeader.hwnd Or vgHwnd = picBarra.hwnd Or vgHwnd = picStatus.hwnd Or vgHwnd = picFundo.hwnd Or vgHwnd = picEdit.hwnd Or vgHwnd = txtEdit.hwnd Or vgHwnd = txtEditMult.hwnd Or vgHwnd = picSel.hwnd Or vgHwnd = UserControl.hwnd Then
+   If vgHwnd = picHeader.hWnd Or vgHwnd = picBarra.hWnd Or vgHwnd = picStatus.hWnd Or vgHwnd = picFundo.hWnd Or vgHwnd = picEdit.hWnd Or vgHwnd = txtEdit.hWnd Or vgHwnd = txtEditMult.hWnd Or vgHwnd = picSel.hWnd Or vgHwnd = UserControl.hWnd Then
       vgLastKey = KeyCode                                'armazena a última tecla digitada
       SendMessage hWndLst, WM_KEYDOWN, KeyCode, 0
       Sleep 0
@@ -9116,7 +9120,7 @@ Private Function DrawButtonsControl(ByVal Button As Integer) As Boolean
       Rc.Bottom = 3 + 14
       
       GetCursorPos pt
-      ScreenToClient picHeader.hwnd, pt
+      ScreenToClient picHeader.hWnd, pt
       
       picHeader.Line (Rc.Left * vgTpX, Rc.Top * vgTpY)-(Rc.Right * vgTpX, Rc.Bottom * vgTpY), vgCaptionBackColor, BF
       
@@ -9207,7 +9211,7 @@ Private Sub UserControl_Resize()
    If vgPriVez > 0 Then Exit Sub
    vgPriVez = vgPriVez + 1
    vgOrigHeight = 0
-   GetClientRect hwnd, tR
+   GetClientRect hWnd, tR
    If vgHideHScroll And WithHScroll Then
       tR.Bottom = tR.Bottom - GetSystemMetrics(SM_CYHSCROLL)
    End If
@@ -9355,7 +9359,13 @@ Private Sub UserControl_ReadProperties(PropBag As PropertyBag)
    SaveGridBars = PropBag.ReadProperty("SaveGridBars", False)
    SaveGridCols = PropBag.ReadProperty("SaveGridCols", False)
    Caption = PropBag.ReadProperty("Caption", "GRID")
+   On Error Resume Next
    Set Font = PropBag.ReadProperty("Font", Ambient.Font)
+   If Err.Number <> 0 Then
+      Err.Clear
+      Set Font = UserControl.Font
+   End If
+   On Error GoTo 0
    ColumnCount = PropBag.ReadProperty("ColumnCount", 0)
    CacheSize = PropBag.ReadProperty("CacheSize", 0)
    UserControl_Resize
@@ -9475,3 +9485,5 @@ Private Sub vgTabela_Opened()
    FillScalarValues
    DrawBars True
 End Sub
+
+

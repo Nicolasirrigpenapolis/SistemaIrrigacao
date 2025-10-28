@@ -18,7 +18,7 @@ Enum EnumCursorType
    CURSOR_TABLE = 1
    CURSOR_DYNAMIC = 2
    CURSOR_FORWARD = 3
-   CURSOR_ASYNC = 4                                         'na verdade isso não é tipo de cursor, apenas para facilitar desenvolvimento, esse tipo será sempre DYNAMIC no momento da abertura
+   CURSOR_ASYNC = 4                                         'na verdade isso nï¿½o ï¿½ tipo de cursor, apenas para facilitar desenvolvimento, esse tipo serï¿½ sempre DYNAMIC no momento da abertura
 End Enum
 
 Private vgTable As GTable                                 'tabela correspondente a tabela base do recordset
@@ -34,8 +34,8 @@ Dim vgDataBase As GDataBase, vgCursorType As EnumCursorType, vgLockType As Long,
 
 Dim vgSeekType As Integer, vgUltOperSeek() As String, vgExpSeek() As String, vgQtCpsUltSeek() As Integer, vgIsPendingUpdate As Boolean, vgExpFilterPending As String
 Dim vgExpInsert As String, vgExpUpdate As String, vgExpDelete As String, vgExtraFields As String, vgExpFilter As String, vgIndexKey As String, vgExpFilterReady As String, vgExpPureFilterReady As String
-Dim vgExpSeekFilter As String                     'expressão de filtro a ser aplicada na propriedade filter do vgRecordSet
-Dim vgPrepExpSeekFilter As String                 'expressão temporária para montagem do filtro da seekrecord a ser aplicado na propriedade filter do vgRecordSet
+Dim vgExpSeekFilter As String                     'expressï¿½o de filtro a ser aplicada na propriedade filter do vgRecordSet
+Dim vgPrepExpSeekFilter As String                 'expressï¿½o temporï¿½ria para montagem do filtro da seekrecord a ser aplicado na propriedade filter do vgRecordSet
 Dim vgTransactionBookmark As Variant, vgTransactionPosiction As Variant
 Dim vgForm As Object
 Dim vgRecCount As Long, vgAsyncComplete As Boolean
@@ -53,9 +53,9 @@ Event AfterCommitTrans()
 Event AfterRollBackTrans()
 Event Opened()
 
-'retorna o valor do campo formatado conforme máscara do banco de campos
-'Index - o nome ou o índice da coluna do recordset atual.
-'vgFormatter - vamos receber uma instância da FormataCampos
+'retorna o valor do campo formatado conforme mï¿½scara do banco de campos
+'Index - o nome ou o ï¿½ndice da coluna do recordset atual.
+'vgFormatter - vamos receber uma instï¿½ncia da FormataCampos
 Public Property Get FormattedFieldValue(ByVal Index As Variant, ByRef vgFormatter As Object) As Variant
    Dim vgPV As Boolean
    If CStr(Val(Index)) <> CStr(Index) Then
@@ -592,11 +592,11 @@ Public Property Get Index() As String
 End Property
 
 Public Property Let Index(New_Index As String)
-   Dim vgIndIndex As Integer                      'armazena o número do índice aplicado
-   Dim i As Integer                               'propósito geral
-   vgIndex = New_Index                            'define o índice atual da GRecordSet
+   Dim vgIndIndex As Integer                      'armazena o nï¿½mero do ï¿½ndice aplicado
+   Dim i As Integer                               'propï¿½sito geral
+   vgIndex = New_Index                            'define o ï¿½ndice atual da GRecordSet
    
-   'vamos obter o número do índice na estrutura da tabela
+   'vamos obter o nï¿½mero do ï¿½ndice na estrutura da tabela
    On Error Resume Next
    vgIndIndex = vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Index
    If Err Then
@@ -604,17 +604,17 @@ Public Property Let Index(New_Index As String)
       Err.Clear
    End If
 
-   'vamos usar a propriedade Sort para ordenar o recordset conforme o índice definido para o recordset
+   'vamos usar a propriedade Sort para ordenar o recordset conforme o ï¿½ndice definido para o recordset
    vgSort = ""
-   If vgIndIndex > 0 Then                         'se tem um índice válido
+   If vgIndIndex > 0 Then                         'se tem um ï¿½ndice vï¿½lido
       For i = 1 To vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns.Count
-         If vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).ColumnType <> TP_MEMO Then 'não vamos usar campo memo para evitar erro com a propriedade Sort do recordset.
+         If vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).ColumnType <> TP_MEMO Then 'nï¿½o vamos usar campo memo para evitar erro com a propriedade Sort do recordset.
             If Len(vgSort) > 0 Then vgSort = vgSort & ", "
             vgSort = vgSort & PoeColchetes(vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).Name)
          End If
       Next
    End If
-   vgRecordSet.Sort = vgSort                      'aplicando a ordem conforme campos do índice atual do recordset
+   vgRecordSet.Sort = vgSort                      'aplicando a ordem conforme campos do ï¿½ndice atual do recordset
    
    vgPriVez = False
 End Property
@@ -684,7 +684,7 @@ DeuErro:
 
 End Sub
 
-'Monta expressão de filtro conforme registro atual
+'Monta expressï¿½o de filtro conforme registro atual
 Private Sub DefineFilter(Optional ByVal vgToInsert As Boolean)
    Dim vgCol As GColumn, x As String, z As String, vgVal As Variant
    vgExpFilterReady$ = vgExpFilter$
@@ -756,29 +756,29 @@ Public Sub Edit()
       vgTransactionPosiction = AbsolutePosition
    End If
    
-   'recordset não é editável, vamos guardar as chaves (já monta o filtro)
+   'recordset nï¿½o ï¿½ editï¿½vel, vamos guardar as chaves (jï¿½ monta o filtro)
    If Len(vgExpUpdate$) > 0 And Len(vgExpFilter$) > 0 Then
       For Each vgCol In vgTable.Columns
          vgCol.Value = vgRecordSet.Fields(vgCol.Name).Value
          vgCol.HasChange = False
       Next
-      Call DefineFilter                                'monta expressão de filtro
+      Call DefineFilter                                'monta expressï¿½o de filtro
    Else
-      Resync 1                                         ' se editar um registro, fizer um update e logo após dar um rollback, se tentar editar novamente dá erro (MDB ADO), vamos sincronizar esse reg novamente
+      Resync 1                                         ' se editar um registro, fizer um update e logo apï¿½s dar um rollback, se tentar editar novamente dï¿½ erro (MDB ADO), vamos sincronizar esse reg novamente
       vgRecordSet.Edit
    End If
    vgStatus = ACAO_EDITANDO
    Exit Sub
 
 DeuErro:
-   If Err.Number = 91 And vgPV Then                    'objeto não setado, vamos abrir
+   If Err.Number = 91 And vgPV Then                    'objeto nï¿½o setado, vamos abrir
       vgPV = False
       OpenRecordSet
       If vgDataBase.vgInTransaction Then
          vgTransactionBookmark = BookMark
          vgTransactionPosiction = AbsolutePosition
       End If
-   ElseIf Err.Number = 438 Then                        'propriedade não existe... ignora
+   ElseIf Err.Number = 438 Then                        'propriedade nï¿½o existe... ignora
       Resume Next
    Else
       If vgDataBase.vgInTransaction Then
@@ -798,17 +798,17 @@ Public Sub Update()
       vgBook = vgRecordSet.BookMark
    End If
 
-   'se recordset não é editável... vamos fazer via query
+   'se recordset nï¿½o ï¿½ editï¿½vel... vamos fazer via query
    If Len(vgExpUpdate$) > 0 Then
       If vgStatus = ACAO_EDITANDO Then
          vgExecute$ = vgExpUpdate$
       ElseIf vgStatus = ACAO_INCLUINDO Then
          vgExecute$ = vgExpInsert$
       End If
-      vgQt = 0                                         'número de colunas que serão atualizadas
+      vgQt = 0                                         'nï¿½mero de colunas que serï¿½o atualizadas
       For Each vgCol In vgTable.Columns
          If vgCol.UpdatableColumn Then
-            If Not vgCol.HasChange Then                'se coluna não foi alterada
+            If Not vgCol.HasChange Then                'se coluna nï¿½o foi alterada
                Do
                   i = InStr(vgExecute$, "$" + CStr(vgCol.Index) + "{")
                   If i > 0 Then
@@ -821,7 +821,7 @@ Public Sub Update()
                'coloca separador de campos
                If vgQt > 1 Then vgExecute$ = Substitui$(vgExecute$, "$" + CStr(vgCol.Index) + "{", ", ", SO_UM)
                
-               'vamos remover marcações de campo
+               'vamos remover marcaï¿½ï¿½es de campo
                vgExecute$ = Retira$(vgExecute$, "$" + CStr(vgCol.Index) + "{", SO_UM)
                vgExecute$ = Retira$(vgExecute$, "}" + CStr(vgCol.Index) + "$", SO_UM)
                x$ = ""
@@ -866,7 +866,7 @@ Public Sub Update()
       End If
 
       If vgQt > 0 Then
-         Call DefineFilter(True)                       'monta expressão de filtro para pegar novo bookmark
+         Call DefineFilter(True)                       'monta expressï¿½o de filtro para pegar novo bookmark
          Requery
          If vgStatus = ACAO_INCLUINDO Then
             vgRecordSet.MoveLast
@@ -885,19 +885,19 @@ Public Sub Update()
    Else
       vgQt = vgRecordSet.RecordCount
       vgRecordSet.Update
-      Call DefineFilter(False)                         'monta expressão de filtro para pegar novo bookmark
+      Call DefineFilter(False)                         'monta expressï¿½o de filtro para pegar novo bookmark
       If Not vgDataBase.vgInTransaction Or vgStatus = ACAO_INCLUINDO Then Resync 1 'vamos atualizar registro corrente
       If vgRecordSet.RecordCount < vgQt Then                                       'ops, o ADO retirou o registro do recordset
          Dim vgRsTemp As GRecordSet
-         Set vgRsTemp = vgDataBase.OpenRecordSet("SELECT COUNT(*) AS TOT FROM (" + NewSource + ") AS T") 'vamos contar número de registros que deveria ter
+         Set vgRsTemp = vgDataBase.OpenRecordSet("SELECT COUNT(*) AS TOT FROM (" + NewSource + ") AS T") 'vamos contar nï¿½mero de registros que deveria ter
          If vgRsTemp!TOT <> vgRecordSet.RecordCount Then                                                 'compara com o que temos
-            Requery                               'força atualização do recordset inteiro
+            Requery                               'forï¿½a atualizaï¿½ï¿½o do recordset inteiro
             vgBook = vgRecordSet.BookMark         'pega bookmark atual
             If vgStatus = ACAO_INCLUINDO Then     'estamos incluindo
                   vgRecordSet.MoveLast            'posiciona no fim
                   vgBook = vgRecordSet.BookMark   'guarda esse bookmark
             End If
-            vgRecordSet.Filter = vgExpPureFilterReady$ 'tenta localizar o registro que foi incluído
+            vgRecordSet.Filter = vgExpPureFilterReady$ 'tenta localizar o registro que foi incluï¿½do
             If vgRecordSet.RecordCount > 0 Then        'achou?
                   vgBook = vgRecordSet.BookMark        'grava bookmark
             End If
@@ -906,7 +906,7 @@ Public Sub Update()
                vgRecordSet.BookMark = vgBook           'posiciona no bookmark encontrado
             End If
          End If
-         vgRsTemp.CloseRecordset                       'destroi tabela temporária
+         vgRsTemp.CloseRecordset                       'destroi tabela temporï¿½ria
          Set vgRsTemp = Nothing
       End If
    End If
@@ -964,10 +964,10 @@ Public Sub Delete()
    On Error GoTo DeuErro
    vgPV = True
 
-   'recordset não é editável, vamos guardar as chaves (já monta o filtro)
+   'recordset nï¿½o ï¿½ editï¿½vel, vamos guardar as chaves (jï¿½ monta o filtro)
    If Len(vgExpDelete$) > 0 And Len(vgExpFilter$) > 0 Then
       vgExecute$ = vgExpDelete$
-      Call DefineFilter                                  'monta expressão de filtro
+      Call DefineFilter                                  'monta expressï¿½o de filtro
       vgExecute$ = Replace$(vgExecute$, "{FILTER}", vgExpFilterReady$) 'faz a filtragem
       vgDataBase.Execute vgExecute$, , vgRecAfect                      'execute
       If vgRecAfect > 1 Then
@@ -1074,7 +1074,7 @@ Public Sub MoveLast()
    vgPV = True
    If CursorType = CURSOR_ASYNC And vgAsyncComplete = False Then
       vgRecordSet.MoveFirst                            'move para o primeiro
-      Move vgRecCount                                  'e posiciona no último registro lido
+      Move vgRecCount                                  'e posiciona no ï¿½ltimo registro lido
    Else
       vgRecordSet.MoveLast
       Call UpdateNoMatch
@@ -1137,7 +1137,7 @@ End Sub
 
 Public Function PTab(ByVal vgInd As String, ParamArray vgParams() As Variant) As Boolean
    If Len(vgInd) > 0 Then
-      Index = vgInd                                     'estamos setando diretamente para vgIndex para que o Let de Index não monta temporariamente o recordset, evitando assim a abertura desnecessária de um rs
+      Index = vgInd                                     'estamos setando diretamente para vgIndex para que o Let de Index nï¿½o monta temporariamente o recordset, evitando assim a abertura desnecessï¿½ria de um rs
    End If
    vgSelectRecords = True
    Select Case UBound(vgParams)                         'pela qtde de chave pesquisa...
@@ -1169,9 +1169,9 @@ Public Function PTab(ByVal vgInd As String, ParamArray vgParams() As Variant) As
 End Function
 
 'ROTINA MANUAL
-'PROPÓSITO: Quando se tem um campo que lista externa com dois indices
+'PROPï¿½SITO: Quando se tem um campo que lista externa com dois indices
 'ex. subgrupo do produto, ele nw esta atribuindo corretamente a montagem do vgsort
-'ele esta colocando o campo da tabela pai e ao executar a sql("X$") fala que não
+'ele esta colocando o campo da tabela pai e ao executar a sql("X$") fala que nï¿½o
 'Existe o campo, pois nw tem a tabela pai nesse sql, entao vamos alterar o vgSort
 Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray vgParams() As Variant)
    Dim vgSQL As String, i As Integer, vgRegAtual As Variant, vgSortAtual As String, vgNomeCp As String, _
@@ -1194,7 +1194,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
       Index = vgInd
    End If
    
-   If vgSource <> vgOpenSource And vgSeekType = 1 Then   'ainda não abriu o recordset
+   If vgSource <> vgOpenSource And vgSeekType = 1 Then   'ainda nï¿½o abriu o recordset
       If Len(vgWhere) = 0 And Len(vgOrderBy) = 0 And vgTop = -1 Then 'realmente vai abrir em modo table
          OpenRecordSet                                               'abre o recordset
       Else
@@ -1227,7 +1227,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
    'Antes
    'If vgIndIndex > 0 Then
    '   For i = 1 To vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns.Count
-   '      If vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).ColumnType <> TP_MEMO Then 'não podemos atribuir campo memo à propriedade Sort do Recordset (evitar erro)
+   '      If vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).ColumnType <> TP_MEMO Then 'nï¿½o podemos atribuir campo memo ï¿½ propriedade Sort do Recordset (evitar erro)
    '         If Len(vgSort) > 0 Then vgSort = vgSort & ", "
    '         vgSort = vgSort & PoeColchetes(vgDataBase.Tables(vgTable.Name).Indexes(vgIndex).Columns(i).Name)
    '      End If
@@ -1248,7 +1248,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
 
    On Error GoTo DeuErro
    
-   'remonta expressão para seek quando necesário
+   'remonta expressï¿½o para seek quando necesï¿½rio
    vgClearExpSeek = False
    If vgQtCpsUltSeek(vgIndIndex) <> UBound(vgParams()) Or vgUltOperSeek$(vgIndIndex) <> vgOper$ Or vgIndIndex = 0 Then
       vgPrepExpSeekFilter$ = ""
@@ -1264,7 +1264,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                   vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & " AND "
                   vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + " AND "
                End If
-               If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(i - 1) & "")) > 0 And InStr(vgParams(i - 1) & "", ":") = 0 And Not vgSelectRecords Then 'se tem data válida e não tem hora especificada...
+               If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(i - 1) & "")) > 0 And InStr(vgParams(i - 1) & "", ":") = 0 And Not vgSelectRecords Then 'se tem data vï¿½lida e nï¿½o tem hora especificada...
                   Select Case vgUltOperSeek$(vgIndIndex)
                      Case "="                     'Data >=  XX/XX/XX 00:00:00 AND Data <= XX/XX/XX 23:59:59
                         vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & vgNomeCp$ + " >= " + "|" + CStr(i) + ".HI| AND " + vgNomeCp$ + " <= " + "|" + CStr(i) + ".HF|"
@@ -1282,7 +1282,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                         vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & vgNomeCp$ + " <= " + "|" + CStr(i) + ".HF|"
                         vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + vgNomeCp$ + " <= " + "|" + CStr(i) + ".HF|"
                   End Select
-               Else                               'qualquer tipo exceto data válida
+               Else                               'qualquer tipo exceto data vï¿½lida
                   If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(i - 1) & "")) > 0 Then
                      vgEDtHora = ((InStr(CStr(vgParams(i - 1) & ""), "/") > 0 Or InStr(CStr(vgParams(i - 1) & ""), "-") > 0) And InStr(CStr(vgParams(i - 1) & ""), ":") > 0)
                   Else
@@ -1296,7 +1296,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                      End If
                   End If
                   
-                  'se o parâmetro está preenchido ou o operador é "=", adicionamos o nome do campo à expressão
+                  'se o parï¿½metro estï¿½ preenchido ou o operador ï¿½ "=", adicionamos o nome do campo ï¿½ expressï¿½o
                   If Len(vgParams(i - 1) & "") > 0 Or vgOper$ = "=" Then
                      vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & vgNomeCp$
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + vgNomeCp$
@@ -1313,7 +1313,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + ", '" + x + "')"
                   End If
                   
-                  'se o parâmetro está preenchido ou o operador é "=", vamos adicionar o operador à expressão
+                  'se o parï¿½metro estï¿½ preenchido ou o operador ï¿½ "=", vamos adicionar o operador ï¿½ expressï¿½o
                   If Len(vgParams(i - 1) & "") Or vgOper$ = "=" Then
                      vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & " " + vgUltOperSeek$(vgIndIndex) + " "
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + " " + vgUltOperSeek$(vgIndIndex) + " "
@@ -1322,19 +1322,19 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + "CDate("
                   End If
                   
-                  'se é um campo que requer pipe e o parâmetro foi preenchido ou o operador é "=", vamos adicionar o pipe à expressão
+                  'se ï¿½ um campo que requer pipe e o parï¿½metro foi preenchido ou o operador ï¿½ "=", vamos adicionar o pipe ï¿½ expressï¿½o
                   If (vgTipo = TP_CARACTER Or vgTipo = TP_MEMO) And (Len(vgParams(i - 1) & "") > 0 Or vgOper$ = "=") Then
                      vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & "'"
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + "'"
                   End If
                   
-                  'se o parâmetro está preenchido, vamos adicionar o valor a ser substituído na expressão
+                  'se o parï¿½metro estï¿½ preenchido, vamos adicionar o valor a ser substituï¿½do na expressï¿½o
                   If Len(vgParams(i - 1) & "") > 0 Or vgOper$ = "=" Then
                      vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & "|" + CStr(i) + "|"
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + "|" + CStr(i) + "|"
                   End If
                   
-                  'se é um campo que requer pipe e o parâmetro foi preenchido ou o operador é "=", vamos adicionar o pipe à expressão
+                  'se ï¿½ um campo que requer pipe e o parï¿½metro foi preenchido ou o operador ï¿½ "=", vamos adicionar o pipe ï¿½ expressï¿½o
                   If (vgTipo = TP_CARACTER Or vgTipo = TP_MEMO) And (Len(vgParams(i - 1) & "") > 0 Or vgOper$ = "=") Then
                      vgPrepExpSeekFilter$ = vgPrepExpSeekFilter$ & "'"
                      vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + "'"
@@ -1346,7 +1346,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                End If
             End If
          Next
-      Else                                        'não tem esse índice na tabela, vamos utilizar como nome de campo
+      Else                                        'nï¿½o tem esse ï¿½ndice na tabela, vamos utilizar como nome de campo
          vgTipo = vgDataBase.Tables(vgTable.Name).Columns(vgIndex).ColumnType
          If vgSelectRecords And Len(Where) > 0 Then
             vgExpSeek$(vgIndIndex) = "(" + Where + ")"
@@ -1355,7 +1355,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
          End If
          If Len(vgExpSeek$(vgIndIndex)) > 0 Then vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + " AND "
          vgNomeCp$ = PoeColchetes(vgDataBase.Tables(vgTable.Name).Columns(vgIndex$).Name)
-         If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(0) & "")) > 0 And InStr(vgParams(0) & "", ":") = 0 And Not vgSelectRecords Then 'se tem data válida e não tem hora especificada...
+         If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(0) & "")) > 0 And InStr(vgParams(0) & "", ":") = 0 And Not vgSelectRecords Then 'se tem data vï¿½lida e nï¿½o tem hora especificada...
             Select Case vgUltOperSeek$(vgIndIndex)
                Case "="                           'Data >=  XX/XX/XX 00:00:00 AND Data <= XX/XX/XX 23:59:59
                   vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + vgNomeCp$ + " >= " + "|1.HI| AND " + vgNomeCp$ + " <= " + "|0.HF|"
@@ -1368,7 +1368,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                Case "<="                          'Data <=  XX/XX/XX 23:59:59
                   vgExpSeek$(vgIndIndex) = vgExpSeek$(vgIndIndex) + vgNomeCp$ + " <= " + "|1.HF|"
             End Select
-         Else                                     'qualquer tipo exceto data válida
+         Else                                     'qualquer tipo exceto data vï¿½lida
             If vgTipo = TP_DATA_HORA And Len(CStr(vgParams(0) & "")) > 0 Then
                vgEDtHora = ((InStr(CStr(vgParams(0) & ""), "/") > 0 Or InStr(CStr(vgParams(0) & ""), "-") > 0) And InStr(CStr(vgParams(0) & ""), ":") > 0)
             Else
@@ -1417,7 +1417,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
    End If
    
    'substitui os valores passados para o seek na string para seek desse recordset
-   vgExpSeekFilter$ = vgPrepExpSeekFilter$        'vamos usar a expressão template montada para substituir os valores dos campos
+   vgExpSeekFilter$ = vgPrepExpSeekFilter$        'vamos usar a expressï¿½o template montada para substituir os valores dos campos
    vgSQL$ = vgExpSeek$(vgIndIndex)
    For i = 0 To UBound(vgParams)
       x$ = "|" + CStr(i + 1) + "|"
@@ -1433,7 +1433,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                vgOk = (Len(vgParams(i) & "") > 0)
             Case TP_DATA_HORA
                vgOk = IsDate(vgParams(i))
-               vgClearExpSeek = True              'sempre que for campo data vamos remontar a expressão para evitar erro
+               vgClearExpSeek = True              'sempre que for campo data vamos remontar a expressï¿½o para evitar erro
          End Select
       End If
       If Not vgOk Then
@@ -1459,7 +1459,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
                vgExpSeekFilter$ = Substitui(vgExpSeekFilter$, x, "'" + Format(vgParams(i), z) + "'", SO_UM)
                vgSQL$ = Substitui(vgSQL$, x, "'" + Format(vgParams(i), z) + "'", SO_UM)
                
-               'faz subsituições para data em formatos especiais (dd/mm/yyyy 00:00:00 e dd/mm/yyyy 23:59:59 fixados)
+               'faz subsituiï¿½ï¿½es para data em formatos especiais (dd/mm/yyyy 00:00:00 e dd/mm/yyyy 23:59:59 fixados)
                z$ = Left$(x$, Len(x$) - 1)
                vgExpSeekFilter$ = Substitui(vgExpSeekFilter$, z$ + ".HI|", "'" + Format(vgParams(i), "yyyy-mm-dd") + " 00:00:00'", SO_UM)
                vgSQL$ = Substitui(vgSQL$, z$ + ".HI|", "'" + Format(vgParams(i), "yyyy-mm-dd") + " 00:00:00'", SO_UM)
@@ -1469,7 +1469,7 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
          Else
             z$ = Substitui(CStr(vgParams(i)), "'", "''", SO_UM)
             If vgCp.ColumnType = TP_NUMERICO Then
-               z$ = Substitui(z$, ",", ".", SO_UM) 'vamos trocar a , (vírgula) por . (ponto) para inserir na query
+               z$ = Substitui(z$, ",", ".", SO_UM) 'vamos trocar a , (vï¿½rgula) por . (ponto) para inserir na query
                If UCase$(vgOper) = "LIKE" Then
                   z$ = Retira$(z$, "*", UM_A_UM)
                End If
@@ -1518,11 +1518,11 @@ Public Sub SeekRecord(ByVal vgInd As String, ByVal vgOper As String, ParamArray 
       'Fim Manual
    End If
    vgIndex = vgIndAtual
-   If vgSeekType = 3 And Not vgSelectRecords Then  'vamos SEMPRE retirar o filter pois não quer selecionar só esse registro do Seek
+   If vgSeekType = 3 And Not vgSelectRecords Then  'vamos SEMPRE retirar o filter pois nï¿½o quer selecionar sï¿½ esse registro do Seek
       vgRecordSet.Filter = ""
       'Inicio Manual
       'Antes
-      'vgRecordSet.Sort = vgSortAtual               'volta a ordenação para antes do sort da procura
+      'vgRecordSet.Sort = vgSortAtual               'volta a ordenaï¿½ï¿½o para antes do sort da procura
       'Agora
       vgRecordSet.Sort = vgSort
       'Fim Manual
@@ -1578,9 +1578,9 @@ End Sub
 Private Sub PrepareResync()
    Dim vgCol As GColumn, vgResyncWHERE As String
    
-   'se for SQL-Server e houver relacionamentos na tabela então vamos montar o "Resync Command" e determinar a "Unique Table"
+   'se for SQL-Server e houver relacionamentos na tabela entï¿½o vamos montar o "Resync Command" e determinar a "Unique Table"
    If DataBase.DataBaseType = DB_SQL And UBound(vgRelations) > 0 Then
-      If Len(vgIndexKey) > 0 Then                                            'se há indice único então podemos continuar
+      If Len(vgIndexKey) > 0 Then                                            'se hï¿½ indice ï¿½nico entï¿½o podemos continuar
          vgRecordSet.Properties("Unique Table") = vgTable.Name               'atribui o nome da tabela principal
          For Each vgCol In vgDataBase.Tables(vgTable.Name).Indexes(vgIndexKey$).Columns
             vgResyncWHERE = vgResyncWHERE & IIf(Len(vgResyncWHERE) > 0, " AND ", "") & PoeColchetes(vgCol.Name) & " = ? " 'prepara a WHERE da consulta
@@ -1612,10 +1612,10 @@ DeuErro:
       OpenRecordSet
       Resume
    ElseIf Err.Number = 438 Then
-      Resume Next                                 'propriedade não existe, vamos ignorar
+      Resume Next                                 'propriedade nï¿½o existe, vamos ignorar
    Else
       If vgRecordSet.Status = 262144 Then
-         Resume Next                              'registro foi excluído através do método execute e não existe para sincronizar. Mesmo com o erro o registro é removido do recordset.
+         Resume Next                              'registro foi excluï¿½do atravï¿½s do mï¿½todo execute e nï¿½o existe para sincronizar. Mesmo com o erro o registro ï¿½ removido do recordset.
       End If
    End If
 End Sub
@@ -1678,13 +1678,13 @@ Public Sub SetForm(Form As Object)
    Set vgForm = Form
 End Sub
 
-'Retorna expressão que determina o campo no SELECT
+'Retorna expressï¿½o que determina o campo no SELECT
 'Ex:
 '    SELECT Count(*) As Total FROM ...                 Retorno = Count(*)
-'    SELECT Código As Produto FROM ...                 Retorno = Código
-'    SELECT 'Código: ' + Código As Produto FROM ...    Retorno = 'Código: ' + Código
-'    SELECT Código FROM ...                            Retorno = Código
-'    SELECT * FROM ...                                 Retorno = Código
+'    SELECT Cï¿½digo As Produto FROM ...                 Retorno = Cï¿½digo
+'    SELECT 'Cï¿½digo: ' + Cï¿½digo As Produto FROM ...    Retorno = 'Cï¿½digo: ' + Cï¿½digo
+'    SELECT Cï¿½digo FROM ...                            Retorno = Cï¿½digo
+'    SELECT * FROM ...                                 Retorno = Cï¿½digo
 Public Function GetExpressionSelect(ByVal vgCp As Integer) As String
    Dim x As String, i As Long, j As Long, RetVal As String, vgSQL As String, vgCps As String
    RetVal$ = ""
@@ -1692,7 +1692,7 @@ Public Function GetExpressionSelect(ByVal vgCp As Integer) As String
       vgSQL = Substitui(RsSource, vbCrLf, Chr(32) + Chr(32), UM_A_UM)
       i = InStr(UCase(vgSQL), "SELECT ")
       j = InStr(i + 1, UCase(vgSQL$), " FROM ")
-      If j = 0 Then j = Len(vgSQL$) + 1           'se a query não tem cláusula FROM vamos pegar o Mid até o final da query
+      If j = 0 Then j = Len(vgSQL$) + 1           'se a query nï¿½o tem clï¿½usula FROM vamos pegar o Mid atï¿½ o final da query
       Do While i > 0
          If Tally(Left(vgSQL, j - 1), Chr(39)) Mod 2 = 0 And Tally(Mid(vgSQL, j + 4), Chr(39)) Mod 2 = 0 Then
             vgCps = Trim$(Mid$(vgSQL$, i + 6, j - i - 6))
@@ -1712,7 +1712,7 @@ Public Function GetExpressionSelect(ByVal vgCp As Integer) As String
             RetVal$ = vgRecordSet.Fields(vgCp).Name
          Else
             If InStr(vgCps$, "*") Then
-               vgCps$ = CorrectSelect(vgCps$)     'vamos montar expressão para o select
+               vgCps$ = CorrectSelect(vgCps$)     'vamos montar expressï¿½o para o select
             End If
             x = Parse(vgCps, ",", vgCp + 1)
             i = InStr(UCase(x), " AS ")
@@ -1726,15 +1726,15 @@ Public Function GetExpressionSelect(ByVal vgCp As Integer) As String
    GetExpressionSelect = RetVal$
 End Function
 
-'Remonta expressão SELECT corrigindo os * pelos nomes reais dos campos
+'Remonta expressï¿½o SELECT corrigindo os * pelos nomes reais dos campos
 Private Function CorrectSelect(ByVal vgSelect As String) As String
    Dim vgRetVal As String, i As Integer, j As Integer, k As Integer, x As String, z As String
    vgRetVal = ""
    For i = 1 To Tally(vgSelect$, ",") + 1
       x$ = Trim$(Parse(vgSelect$, ",", i))
       If x$ = "*" Or Right(x$, 1) = "*" Then             'tem asterisco...
-         If i < Tally(vgSelect$, ",") + 1 Then           'se não for o último
-            For j = i + 1 To Tally(vgSelect$, ",") + 1   'vamos procurar o próximo campo na query
+         If i < Tally(vgSelect$, ",") + 1 Then           'se nï¿½o for o ï¿½ltimo
+            For j = i + 1 To Tally(vgSelect$, ",") + 1   'vamos procurar o prï¿½ximo campo na query
                z$ = Trim$(Parse(vgSelect$, ",", j))
                If z$ <> "*" And Right(z$, 1) <> "*" Then 'tem asterisco...
                   j = 0
@@ -1793,11 +1793,11 @@ Private Function MakeExpressionSelect(ByVal vgBaseSelect As String, ByVal vgTab 
 End Function
 
 'Transforma campos do select em uma string separada por "|"
-'Ex:  vgSelect = Codigo, Descrição As Desc
-'     RetVal   = Codigo|Descrição
+'Ex:  vgSelect = Codigo, Descriï¿½ï¿½o As Desc
+'     RetVal   = Codigo|Descriï¿½ï¿½o
 'Caso passada vgBaseTable retorna apenas campos do select
 'que possam ser campos dessa tabela
-'se vgRemoveFunc = True as funções agregadas serão retiradas
+'se vgRemoveFunc = True as funï¿½ï¿½es agregadas serï¿½o retiradas
 Private Function ParseSelect(ByVal vgSelect As String, vgRemoveFunc As Boolean, vgInsertPosition As Boolean, vgBaseTable As String) As String
    Dim vgRetVal As String, i As Integer, x As String, k As String, vgPos As Integer, vgTableTmp As GTable, vgTab As String, z As String, P As Integer
    vgPos = 0
@@ -1813,7 +1813,7 @@ Private Function ParseSelect(ByVal vgSelect As String, vgRemoveFunc As Boolean, 
    vgRetVal$ = ""
    Do While Len(vgSelect$)
       x$ = Parse$(vgSelect$, ",")
-      Do While Tally(x$, "(") <> Tally(x$, ")")        'vamos pegar todos os parâmetros se função ou se somatório de campos entre ()
+      Do While Tally(x$, "(") <> Tally(x$, ")")        'vamos pegar todos os parï¿½metros se funï¿½ï¿½o ou se somatï¿½rio de campos entre ()
          x$ = x$ + "," + Parse$(vgSelect$, ",")
       Loop
       x$ = Trim$(x$)
@@ -1876,8 +1876,8 @@ Private Function ParseSelect(ByVal vgSelect As String, vgRemoveFunc As Boolean, 
    ParseSelect = vgRetVal$
 End Function
 
-'Separa campos válidos (que não são fórmulas) de um SELECT
-'Esses serão os campos que são atualizáveis
+'Separa campos vï¿½lidos (que nï¿½o sï¿½o fï¿½rmulas) de um SELECT
+'Esses serï¿½o os campos que sï¿½o atualizï¿½veis
 Private Function GetValidColumnsSelect(ByVal vgSQL As String) As String
    Dim vgTableName As String, vgTableTmp As GTable, vgSelect As String, vgRetVal As String, vgCol As GColumn
    
@@ -1894,7 +1894,7 @@ Private Function GetValidColumnsSelect(ByVal vgSQL As String) As String
    On Error GoTo 0
    If vgTableTmp Is Nothing Then vgTableName$ = ""
    
-   'vamos verificar se é necessário inserir as colunas chave
+   'vamos verificar se ï¿½ necessï¿½rio inserir as colunas chave
    If Len(vgTableName$) > 0 Then
       vgSelect$ = Trim$(ExtraiSQL(vgSQL$, EXP_SELECT))
       If UCase$(Left$(vgSelect$, 4)) = "TOP " Then
@@ -1913,7 +1913,7 @@ Private Function GetValidColumnsSelect(ByVal vgSQL As String) As String
    GetValidColumnsSelect = vgRetVal$
 End Function
 
-'insere campos chave na expressão SELECT e monta expressão de filtragem pela chave
+'insere campos chave na expressï¿½o SELECT e monta expressï¿½o de filtragem pela chave
 Private Sub InsertKeys(ByRef vgSQL As String, ByRef vgIndKey As String, ByRef vgFilter As String)
    Dim vgTableName As String, vgTableTmp As GTable, vgSelect As String, vgCp As GColumn, vgCps As String, _
        vgQtCps As Integer, vgKeys As String, vgKeysTemp As String, vgFilterTemp As String, vgIndOk As Boolean, _
@@ -1940,7 +1940,7 @@ Private Sub InsertKeys(ByRef vgSQL As String, ByRef vgIndKey As String, ByRef vg
    
    vgFilter$ = ""
    
-   'vamos verificar se é necessário inserir as colunas chave
+   'vamos verificar se ï¿½ necessï¿½rio inserir as colunas chave
    If Len(vgTableName$) > 0 Then
       vgSelect$ = Trim$(ExtraiSQL(vgSQL$, EXP_SELECT))
       If UCase$(Left$(vgSelect$, 4)) = "TOP " Then
@@ -1957,7 +1957,7 @@ Private Sub InsertKeys(ByRef vgSQL As String, ByRef vgIndKey As String, ByRef vg
             For Each vgCp In vgTableTmp.Indexes(i).Columns
                vgIndOk = True
                If Not vgSoFiltro Then
-                  If InStr(vgCps$, "|" + UCase$(vgCp.Name) + "|") = 0 And InStr(vgCps$, "|" + UCase$(vgTableTmp.Name) + "." + UCase$(vgCp.Name) + "|") = 0 Then   'campo não está no select...
+                  If InStr(vgCps$, "|" + UCase$(vgCp.Name) + "|") = 0 And InStr(vgCps$, "|" + UCase$(vgTableTmp.Name) + "." + UCase$(vgCp.Name) + "|") = 0 Then   'campo nï¿½o estï¿½ no select...
                      vgIndOk = False
                   End If
                End If
@@ -1969,7 +1969,7 @@ Private Sub InsertKeys(ByRef vgSQL As String, ByRef vgIndKey As String, ByRef vg
                   vgKeysTemp$ = vgKeysTemp$ + PoeColchetes(vgTableName$) + "." + x$
                End If
             Next
-            If vgTableTmp.Indexes(i).Columns.Count < vgQtCps And Not vgIndOk Then   'se índice não está no select
+            If vgTableTmp.Indexes(i).Columns.Count < vgQtCps And Not vgIndOk Then   'se ï¿½ndice nï¿½o estï¿½ no select
                vgIndKey$ = vgTableTmp.Indexes(i).Name
                vgFilter$ = vgFilterTemp$
                If Not vgSoFiltro Then vgKeys$ = vgKeysTemp$
@@ -1992,7 +1992,7 @@ Private Sub InsertKeys(ByRef vgSQL As String, ByRef vgIndKey As String, ByRef vg
    
 End Sub
 
-'corrige o select colocando todas as relações com left join...
+'corrige o select colocando todas as relaï¿½ï¿½es com left join...
 Private Sub PrepareRelation(ByRef vgSQL As String)
    Dim Ct As Integer, i As Integer, j As Integer, vgExtFields As String, x As String, z As String, _
        vgTableName As String, vgFieldCapture As String, vgListFields As String, vgTabFrom As String, _
@@ -2066,21 +2066,21 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
    If Not vgDatBas Is Nothing Then
       Set DataBase = vgDatBas
    End If
-   If vgFromDataBase = False Then                                 'se não vem da classe Database, SQL ainda não tratado...
-      If Len(vgSQL) = 0 Then                                      'se não passou SQL,
-         vgSQL$ = NewSource                                       'vamos tentar montar um segundos parâmetros WHERE, ORDERBY, TOP, etc...
+   If vgFromDataBase = False Then                                 'se nï¿½o vem da classe Database, SQL ainda nï¿½o tratado...
+      If Len(vgSQL) = 0 Then                                      'se nï¿½o passou SQL,
+         vgSQL$ = NewSource                                       'vamos tentar montar um segundos parï¿½metros WHERE, ORDERBY, TOP, etc...
          vgNewSQL = False
       Else                                        'passou SQL
-         vgSQL$ = vgDataBase.TrataSQL(vgSQL$, vgSelectColumns, vgTop, vgWhere, vgOrderBy) 'então vamos apenas tratá-lo para esse banco
+         vgSQL$ = vgDataBase.TrataSQL(vgSQL$, vgSelectColumns, vgTop, vgWhere, vgOrderBy) 'entï¿½o vamos apenas tratï¿½-lo para esse banco
          vgNewSQL = True
       End If
    ElseIf Not vgSelectRecords Then                'se for setado pelo openrecordset do database diretamente
       vgNewSQL = True                             'tem que inicializa o source
    End If
 
-   vgTableName$ = ExtraiSQL(vgSQL$, EXP_FROM, True) 'vamos guardar o nome retirado do from antes das transformações
+   vgTableName$ = ExtraiSQL(vgSQL$, EXP_FROM, True) 'vamos guardar o nome retirado do from antes das transformaï¿½ï¿½es
    
-   'vamos verificar se pode construir cláusulas de update, delete e insert
+   'vamos verificar se pode construir clï¿½usulas de update, delete e insert
    If Len(vgTableName$) > 0 And UBound(vgRelations) > 0 Then
       vgHasExecute = True
    Else
@@ -2089,26 +2089,26 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
    
    vgExtraFields$ = "|"                             'campos extras inseridos no select
    
-   If vgInsertKey And Not vgFromDataBase And Len(ExtraiSQL(vgSQL$, EXP_GROUPBY)) = 0 Then 'se não tem agrupamento (funções agregadas), insere chaves
-      Call InsertKeys(vgSQL$, vgIndKey$, vgFilter$)                                       'insere os campos que compoem a chave no select e retorna expressão de filtro assim como da chave que será utilizada
+   If vgInsertKey And Not vgFromDataBase And Len(ExtraiSQL(vgSQL$, EXP_GROUPBY)) = 0 Then 'se nï¿½o tem agrupamento (funï¿½ï¿½es agregadas), insere chaves
+      Call InsertKeys(vgSQL$, vgIndKey$, vgFilter$)                                       'insere os campos que compoem a chave no select e retorna expressï¿½o de filtro assim como da chave que serï¿½ utilizada
    End If
 
-   vgValidCols$ = GetValidColumnsSelect(vgSQL$)                                           'pega colunas que estão no SELECT que são campos da tabela base do SELECT
+   vgValidCols$ = GetValidColumnsSelect(vgSQL$)                                           'pega colunas que estï¿½o no SELECT que sï¿½o campos da tabela base do SELECT
 
-   Call PrepareRelation(vgSQL$)                   'vamos fazer as relações necessárias
+   Call PrepareRelation(vgSQL$)                   'vamos fazer as relaï¿½ï¿½es necessï¿½rias
 
-   'vamos colocar cláusulas em select externo
+   'vamos colocar clï¿½usulas em select externo
    If Len(vgExternalWhere) > 0 Or Len(vgExternalOrderBy) > 0 Or vgExternalTop > 0 Then
-      If UBound(vgRelations) = 0 Then             'se não tem relação (se tem relação já foram montadas sub-querys)
+      If UBound(vgRelations) = 0 Then             'se nï¿½o tem relaï¿½ï¿½o (se tem relaï¿½ï¿½o jï¿½ foram montadas sub-querys)
          x$ = UCase$(Left$(Substitui(vgSQL$, vbCrLf, Chr$(32) + Chr$(32), UM_A_UM), 7)) 'vamos montar um sub-select
-         If x$ = "SELECT " Then                   'só se já tem SELECT, se não tem (ia abrir como table) deixa que a trata faz a query
+         If x$ = "SELECT " Then                   'sï¿½ se jï¿½ tem SELECT, se nï¿½o tem (ia abrir como table) deixa que a trata faz a query
             If vgDataBase.DataBaseType = DB_SQL And Val(vgDataBase.Connection.Properties("DBMS Version")) > 8 Then
                vgSQL$ = InsereSQL(vgSQL$, EXP_SELECT, IIf(InStr(ExtraiSQL(vgSQL$, EXP_SELECT), "TOP "), "", " TOP 1000000000 ") & ExtraiSQL(vgSQL$, EXP_SELECT))
             End If
             vgSQL$ = "SELECT * FROM (" + vgSQL$ + ") AS TGR"
          End If
       End If
-      vgSQL$ = vgDataBase.TrataSQL(vgSQL$, "", vgExternalTop, vgExternalWhere, vgExternalOrderBy) 'vamos colocar as cláusulas externas
+      vgSQL$ = vgDataBase.TrataSQL(vgSQL$, "", vgExternalTop, vgExternalWhere, vgExternalOrderBy) 'vamos colocar as clï¿½usulas externas
    End If
 
    'abre o recordset
@@ -2169,12 +2169,12 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
       On Error GoTo 0
       If vgTable Is Nothing Then vgTableName$ = ""
       
-      'verifica se há expressões de insert, delete e update
+      'verifica se hï¿½ expressï¿½es de insert, delete e update
       If vgHasExecute Then
          vgHasExecute = (Len(vgTableName$) > 0)
       End If
 
-      'vamos montar a estrutura padrão para essa tabela
+      'vamos montar a estrutura padrï¿½o para essa tabela
       vgTabName$ = vgTableName$
       vgFName$ = ""
       vgFValue$ = ""
@@ -2204,8 +2204,8 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
          vgCreate = False
       End If
 
-      'corre todos os campos do recordset para montar estrutura padrão e também expressões
-      'só caso seja necessário montar nova estrutura ou se pode montar expressão de insert, update e delete
+      'corre todos os campos do recordset para montar estrutura padrï¿½o e tambï¿½m expressï¿½es
+      'sï¿½ caso seja necessï¿½rio montar nova estrutura ou se pode montar expressï¿½o de insert, update e delete
       If vgCreate Or vgHasExecute Then
          For i = 0 To vgRecordSet.Fields.Count - 1
             Set vgColumn = New GColumn                   'instancia a coluna
@@ -2213,26 +2213,26 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
             'pega tipo correspondente para GCOLUMNTYPE
             Select Case vgRecordSet.Fields(i).Type
                Case 129, 200, 130, 202, 201, 203         'se for caracter/memo(adChar, adVarChar, adWChar, adVarWChar, adLongVarChar, adLongVarWChar)
-                  If (vgRecordSet.Fields(i).DefinedSize > 300) Then 'força tipo memo
+                  If (vgRecordSet.Fields(i).DefinedSize > 300) Then 'forï¿½a tipo memo
                      vgTp = TP_MEMO
                   Else
                      vgTp = TP_CARACTER
                   End If
                Case 7, 135                                          'se for data (adDate, adDBTimeStamp)
                   vgTp = TP_DATA_HORA
-               Case 11                                              'se for lógico (adBoolean)
+               Case 11                                              'se for lï¿½gico (adBoolean)
                   vgTp = TP_LOGICO
-               Case 205                                             'se for imagem/multimídia (adLongVarBinary)
+               Case 205                                             'se for imagem/multimï¿½dia (adLongVarBinary)
                   vgTp = TP_BINARIO
-               Case Else                                            'se for númerico
+               Case Else                                            'se for nï¿½merico
                   vgTp = TP_NUMERICO
             End Select
             
-            'pega algumas outras definições da coluna
+            'pega algumas outras definiï¿½ï¿½es da coluna
             vgTableName$ = vgRecordSet.Fields(i).Properties("BASETABLENAME").Value & ""
             vgFieldName = vgRecordSet.Fields(i).Properties("BASECOLUMNNAME").Value & ""
             
-            'se ADO não conseguiu pegar o nome do campo... vamos tentar na mão...
+            'se ADO nï¿½o conseguiu pegar o nome do campo... vamos tentar na mï¿½o...
             If (Len(vgTableName$) = 0 Or UCase$(vgTableName$) = UCase$(vgTabName$)) And Len(vgFieldName$) = 0 Then
                If InStr(vgValidCols$, "|" + CStr(i + 1) + "-" + UCase$(vgRecordSet.Fields(i).Name) + "|") > 0 Then
                   vgTableName$ = vgTabName$
@@ -2244,7 +2244,7 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
             vgSize = vgRecordSet.Fields(i).DefinedSize
             vgDecimal = vgRecordSet.Fields(i).Precision
 
-            'ok, podemos colocar esse campo na expressão de update, insert e delete
+            'ok, podemos colocar esse campo na expressï¿½o de update, insert e delete
             If Len(vgFieldName$) > 0 And UCase$(vgTableName$) = UCase$(vgTabName$) And Len(vgTabName$) > 0 And vgTp <> TP_BINARIO And vgNotUpdateCol = False Then
                x$ = PoeColchetes(vgFieldName$)
                z$ = "@{" + vgFieldName$ + "}"
@@ -2261,23 +2261,23 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
             'se vamos criar estrutura para tabela
             If vgCreate Then
                
-               'pega título para a coluna
+               'pega tï¿½tulo para a coluna
                On Error Resume Next
                If vgRecordSet.Fields(i).Name <> vgFieldName$ Or Len(vgTableName$) = 0 Then 'se tem alias
-                  vgTitle$ = vgRecordSet.Fields(i).Name                                    'vamos usar o alias como título
-               Else                               'caso contrário
-                  vgTitle$ = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).Title 'pega o título de acordo com a definição do xml
+                  vgTitle$ = vgRecordSet.Fields(i).Name                                    'vamos usar o alias como tï¿½tulo
+               Else                               'caso contrï¿½rio
+                  vgTitle$ = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).Title 'pega o tï¿½tulo de acordo com a definiï¿½ï¿½o do xml
                End If
                On Error GoTo 0
                
-               'se a coluna é válida, atribui propriedade System
+               'se a coluna ï¿½ vï¿½lida, atribui propriedade System
                If Len(vgTableName$) > 0 And Len(vgFieldName$) > 0 Then
                   On Error Resume Next
                      vgSystem = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).System
                   On Error GoTo 0
                End If
                
-               'pega campo de acordo com a expressão SELECT
+               'pega campo de acordo com a expressï¿½o SELECT
                vgNameFilter$ = GetExpressionSelect(i)
                
                vgHidden = InStr(vgExtraFields$, "|" + UCase$(vgRecordSet.Fields(i).Name) + "|")
@@ -2285,7 +2285,7 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
                'inicializa coluna
                vgColumn.Init vgTable, vgRecordSet.Fields(i).Name, vgTitle$, vgTp, "", vgSize, vgDecimal, vgHidden, False, vgSystem, False, 0, False, "", i, vgUpdatableColumn, vgNameFilter$
                
-               'coloca propriedades se coluna válida
+               'coloca propriedades se coluna vï¿½lida
                If Len(vgTableName$) > 0 And Len(vgFieldName$) > 0 Then
                   On Error Resume Next
                   vgColumn.Mask = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).Mask
@@ -2293,38 +2293,38 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
                   vgColumn.QDecimal = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).QDecimal
                   vgColumn.ColumnType = vgDataBase.Tables(vgTableName$).Columns(vgFieldName$).ColumnType
                   On Error GoTo 0
-               ElseIf Len(vgTitle$) > 0 Then                                             'se não é uma coluna válida, vamos usar o alias definido na consulta SQL, conforme o banco de campos
-                  On Error Resume Next            'dessa forma, poderemos formatar uma expressão conforme definição de um campo da estrutura do banco de dados da solução
+               ElseIf Len(vgTitle$) > 0 Then                                             'se nï¿½o ï¿½ uma coluna vï¿½lida, vamos usar o alias definido na consulta SQL, conforme o banco de campos
+                  On Error Resume Next            'dessa forma, poderemos formatar uma expressï¿½o conforme definiï¿½ï¿½o de um campo da estrutura do banco de dados da soluï¿½ï¿½o
                   If Not BancoDeCampos(vgTitle$) Is Nothing Then
                      Set vgColumn = BancoDeCampos(vgTitle$)
                   End If
                   On Error GoTo 0
                End If
                
-               'adiciona coluna à coleção
+               'adiciona coluna ï¿½ coleï¿½ï¿½o
                vgTable.Columns.Add vgColumn.Name, vgColumn.Title, vgColumn.ColumnType, vgColumn.Mask, vgColumn.Size, vgColumn.QDecimal, vgColumn.Hidden, vgColumn.Nullable, vgColumn.System, vgColumn.SeqInterno, vgColumn.Sequencia, vgColumn.Descending, vgColumn.Default, vgColumn.UpdatableColumn, vgColumn.NameFilter
             End If
          Next
       End If
       
-      'se é preciso montar expressão para insert, update ou delete
+      'se ï¿½ preciso montar expressï¿½o para insert, update ou delete
       If vgHasExecute Then
 
-         'expressão INSERT
+         'expressï¿½o INSERT
          vgExpInsert$ = Replace$(vgExpInsert$, "{FIELDNAME}", vgFName$)
          vgExpInsert$ = Replace$(vgExpInsert$, "{FIELDVALUE}", vgFValue$)
          vgExpInsert$ = Trim$(vgExpInsert$)
 
-         'expressão UPDATE
+         'expressï¿½o UPDATE
          vgExpUpdate$ = Replace$(vgExpUpdate$, "{FIELDNAME+FIELDVALUE}", vgFNameValue$)
          vgExpUpdate$ = Trim$(vgExpUpdate$)
 
-         'expressão DELETE
+         'expressï¿½o DELETE
          vgExpDelete$ = Trim$(vgExpDelete$)
 
       End If
 
-      'vamos guardar o nome do índice utilizado para base do WHERE
+      'vamos guardar o nome do ï¿½ndice utilizado para base do WHERE
       vgIndexKey$ = vgIndKey$
 
       'vamos guardar o filtro
@@ -2334,7 +2334,7 @@ Public Sub OpenRecordSet(Optional vgSQL As String, Optional vgDatBas As GDataBas
       
       Call UpdateNoMatch
       RaiseEvent Opened
-   ElseIf vgRecordSet.RecordCount > 0 Then        'é o mesmo recordset que está sendo solicitado para abertura
+   ElseIf vgRecordSet.RecordCount > 0 Then        'ï¿½ o mesmo recordset que estï¿½ sendo solicitado para abertura
       vgRecordSet.MoveFirst                       'reposicona no primeiro registro
    End If
 
@@ -2370,7 +2370,7 @@ Private Sub BdTrans_AfterBeginTrans()
    RaiseEvent AfterBeginTrans
 End Sub
 
-'Está sendo feito commit na GDataBase
+'Estï¿½ sendo feito commit na GDataBase
 Private Sub BdTrans_AfterCommitTrans()
    If vgIsPendingUpdate Then
       On Error Resume Next
@@ -2385,7 +2385,7 @@ Private Sub BdTrans_AfterCommitTrans()
    RaiseEvent AfterCommitTrans
 End Sub
 
-'Está sendo feito rollback na GDataBase
+'Estï¿½ sendo feito rollback na GDataBase
 Private Sub BdTrans_AfterRollBackTrans()
    If vgIsPendingUpdate Then
       Resync 1                                           'adAffectCurrent
@@ -2401,7 +2401,7 @@ Private Sub RestoreTransaction()
       Err.Clear
       On Error Resume Next
       BookMark = vgTransactionBookmark
-      If Err And vgCursorType = CURSOR_TABLE Then         'em alguns recordsets o bookmark não pode ser atualizado após um roolback!!!
+      If Err And vgCursorType = CURSOR_TABLE Then         'em alguns recordsets o bookmark nï¿½o pode ser atualizado apï¿½s um roolback!!!
          CloseRecordset                                   'vamos tentar recuperar... fecha e
          OpenRecordSet                                    'abre novamente
          Move vgTransactionPosiction - 1                  'reposiciona recordset no registro (segundo AbsolutePosition)
@@ -2413,7 +2413,7 @@ Private Sub RestoreTransaction()
    vgTransactionPosiction = 0
 End Sub
 
-'inicialização de propriedades
+'inicializaï¿½ï¿½o de propriedades
 Private Sub Class_Initialize()
    On Error Resume Next
    vgDataBase.vgInTransaction = False

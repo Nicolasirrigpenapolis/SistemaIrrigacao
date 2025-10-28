@@ -1,34 +1,35 @@
 VERSION 5.00
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "mscomctl.ocx"
 Begin VB.Form frmPComprN 
-   ClientHeight    =   8325
-   ClientLeft      =   2835
-   ClientTop       =   1560
-   ClientWidth     =   14595
+   ClientHeight    =   8535
+   ClientLeft      =   2775
+   ClientTop       =   1500
+   ClientWidth     =   14715
    ForeColor       =   &H80000008&
    KeyPreview      =   -1  'True
    LinkTopic       =   "PComprN"
    LockControls    =   -1  'True
    MDIChild        =   -1  'True
-   ScaleHeight     =   8325
-   ScaleWidth      =   14595
+   ScaleHeight     =   8535
+   ScaleWidth      =   14715
    Begin IRRIG.GPainel Painel 
-      Height          =   7995
+      Height          =   9000
       Index           =   0
       Left            =   15
-      TabIndex        =   61
+      TabIndex        =   60
       TabStop         =   0   'False
       Top             =   15
       Width           =   14565
       _ExtentX        =   25691
-      _ExtentY        =   14102
+      _ExtentY        =   15875
       BevelOuter      =   0
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   480
          Index           =   8
          Left            =   12840
-         TabIndex        =   35
+         TabIndex        =   34
          TabStop         =   0   'False
          Top             =   780
          Width           =   1515
@@ -56,7 +57,7 @@ Begin VB.Form frmPComprN
          Left            =   75
          ScaleHeight     =   1170
          ScaleWidth      =   1455
-         TabIndex        =   62
+         TabIndex        =   61
          Top             =   75
          Width           =   1455
       End
@@ -188,7 +189,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   1950
          Style           =   1  'Graphical
-         TabIndex        =   72
+         TabIndex        =   71
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -218,7 +219,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   8535
          Style           =   1  'Graphical
-         TabIndex        =   75
+         TabIndex        =   74
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -250,7 +251,7 @@ Begin VB.Form frmPComprN
          Index           =   2
          Left            =   14115
          Style           =   1  'Graphical
-         TabIndex        =   78
+         TabIndex        =   77
          TabStop         =   0   'False
          Top             =   1875
          Width           =   255
@@ -278,14 +279,14 @@ Begin VB.Form frmPComprN
          Width           =   3750
       End
       Begin TabDlg.SSTab Tabs 
-         Height          =   4180
+         Height          =   4400
          Index           =   0
          Left            =   120
          TabIndex        =   13
          Top             =   2820
          Width           =   14265
          _ExtentX        =   25162
-         _ExtentY        =   7382
+         _ExtentY        =   7752
          _Version        =   393216
          Style           =   1
          Tabs            =   8
@@ -304,17 +305,24 @@ Begin VB.Form frmPComprN
          TabCaption(0)   =   "Produtos"
          TabPicture(0)   =   "PCOMPRN.frx":0000
          Tab(0).ControlEnabled=   -1  'True
-         Tab(0).Control(0)=   "Grid(8)"
+         Tab(0).Control(0)=   "lblOrcamentos"
          Tab(0).Control(0).Enabled=   0   'False
          Tab(0).Control(1)=   "Grid(0)"
          Tab(0).Control(1).Enabled=   0   'False
-         Tab(0).ControlCount=   2
+         Tab(0).Control(2)=   "lvwOrcamentos"
+         Tab(0).Control(2).Enabled=   0   'False
+         Tab(0).Control(3)=   "cmdInserirVinculo"
+         Tab(0).Control(3).Enabled=   0   'False
+         Tab(0).Control(4)=   "cmdEditarVinculo"
+         Tab(0).Control(4).Enabled=   0   'False
+         Tab(0).ControlCount=   5
          TabCaption(1)   =   "Despesas"
+         TabPicture(1)   =   "PCOMPRN.frx":001C
          Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "Grid(1)"
          Tab(1).ControlCount=   1
          TabCaption(2)   =   "Endereço de Entrega"
-         TabPicture(2)   =   "PCOMPRN.frx":001C
+         TabPicture(2)   =   "PCOMPRN.frx":0038
          Tab(2).ControlEnabled=   0   'False
          Tab(2).Control(0)=   "Label(24)"
          Tab(2).Control(1)=   "Label(23)"
@@ -337,82 +345,83 @@ Begin VB.Form frmPComprN
          Tab(2).Control(17)=   "txtCp(16)"
          Tab(2).ControlCount=   18
          TabCaption(3)   =   "Financeiro"
+         TabPicture(3)   =   "PCOMPRN.frx":0054
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "Botao(7)"
-         Tab(3).Control(1)=   "txtCp(29)"
-         Tab(3).Control(1).Enabled=   0   'False
-         Tab(3).Control(2)=   "bottxtCampo29(2)"
-         Tab(3).Control(2).Enabled=   0   'False
-         Tab(3).Control(3)=   "bottxtCampo29(1)"
-         Tab(3).Control(3).Enabled=   0   'False
-         Tab(3).Control(4)=   "labFdo29"
-         Tab(3).Control(5)=   "Label(33)"
-         Tab(3).Control(6)=   "txtCp(28)"
+         Tab(3).Control(0)=   "Botao(6)"
+         Tab(3).Control(1)=   "Botao(7)"
+         Tab(3).Control(2)=   "txtCp(9)"
+         Tab(3).Control(3)=   "txtCp(10)"
+         Tab(3).Control(4)=   "txtCp(11)"
+         Tab(3).Control(4).Enabled=   0   'False
+         Tab(3).Control(5)=   "txtCp(12)"
+         Tab(3).Control(5).Enabled=   0   'False
+         Tab(3).Control(6)=   "txtCp(13)"
          Tab(3).Control(6).Enabled=   0   'False
-         Tab(3).Control(7)=   "bottxtCampo28(2)"
+         Tab(3).Control(7)=   "txtCp(14)"
          Tab(3).Control(7).Enabled=   0   'False
-         Tab(3).Control(8)=   "bottxtCampo28(1)"
+         Tab(3).Control(8)=   "txtCp(15)"
          Tab(3).Control(8).Enabled=   0   'False
-         Tab(3).Control(9)=   "labFdo28"
-         Tab(3).Control(10)=   "Label(32)"
-         Tab(3).Control(11)=   "Grid(7)"
-         Tab(3).Control(12)=   "Botao(6)"
-         Tab(3).Control(13)=   "txtCp(27)"
+         Tab(3).Control(9)=   "Grid(6)"
+         Tab(3).Control(10)=   "bottxtCampo27(2)"
+         Tab(3).Control(10).Enabled=   0   'False
+         Tab(3).Control(11)=   "txtCp(27)"
+         Tab(3).Control(11).Enabled=   0   'False
+         Tab(3).Control(12)=   "Grid(7)"
+         Tab(3).Control(13)=   "bottxtCampo28(1)"
          Tab(3).Control(13).Enabled=   0   'False
-         Tab(3).Control(14)=   "bottxtCampo27(2)"
+         Tab(3).Control(14)=   "bottxtCampo28(2)"
          Tab(3).Control(14).Enabled=   0   'False
-         Tab(3).Control(15)=   "labFdo27"
-         Tab(3).Control(16)=   "Label(31)"
-         Tab(3).Control(17)=   "Grid(6)"
-         Tab(3).Control(18)=   "Label(30)"
-         Tab(3).Control(19)=   "Formato(2)"
-         Tab(3).Control(20)=   "Label(29)"
-         Tab(3).Control(21)=   "Formato(1)"
-         Tab(3).Control(22)=   "Label(28)"
-         Tab(3).Control(23)=   "Formato(0)"
-         Tab(3).Control(24)=   "Label(27)"
-         Tab(3).Control(25)=   "Label(26)"
-         Tab(3).Control(26)=   "txtCp(15)"
-         Tab(3).Control(26).Enabled=   0   'False
-         Tab(3).Control(27)=   "Label(16)"
-         Tab(3).Control(28)=   "txtCp(14)"
-         Tab(3).Control(28).Enabled=   0   'False
-         Tab(3).Control(29)=   "Label(15)"
-         Tab(3).Control(30)=   "txtCp(13)"
-         Tab(3).Control(30).Enabled=   0   'False
-         Tab(3).Control(31)=   "Label(14)"
-         Tab(3).Control(32)=   "txtCp(12)"
-         Tab(3).Control(32).Enabled=   0   'False
-         Tab(3).Control(33)=   "Label(13)"
-         Tab(3).Control(34)=   "txtCp(11)"
-         Tab(3).Control(34).Enabled=   0   'False
-         Tab(3).Control(35)=   "Label(12)"
-         Tab(3).Control(36)=   "txtCp(10)"
-         Tab(3).Control(37)=   "Label(11)"
-         Tab(3).Control(38)=   "txtCp(9)"
-         Tab(3).Control(39)=   "Label(10)"
+         Tab(3).Control(15)=   "txtCp(28)"
+         Tab(3).Control(15).Enabled=   0   'False
+         Tab(3).Control(16)=   "bottxtCampo29(1)"
+         Tab(3).Control(16).Enabled=   0   'False
+         Tab(3).Control(17)=   "bottxtCampo29(2)"
+         Tab(3).Control(17).Enabled=   0   'False
+         Tab(3).Control(18)=   "txtCp(29)"
+         Tab(3).Control(18).Enabled=   0   'False
+         Tab(3).Control(19)=   "Label(10)"
+         Tab(3).Control(20)=   "Label(11)"
+         Tab(3).Control(21)=   "Label(12)"
+         Tab(3).Control(22)=   "Label(13)"
+         Tab(3).Control(23)=   "Label(14)"
+         Tab(3).Control(24)=   "Label(15)"
+         Tab(3).Control(25)=   "Label(16)"
+         Tab(3).Control(26)=   "Label(26)"
+         Tab(3).Control(27)=   "Label(27)"
+         Tab(3).Control(28)=   "Formato(0)"
+         Tab(3).Control(29)=   "Label(28)"
+         Tab(3).Control(30)=   "Formato(1)"
+         Tab(3).Control(31)=   "Label(29)"
+         Tab(3).Control(32)=   "Formato(2)"
+         Tab(3).Control(33)=   "Label(30)"
+         Tab(3).Control(34)=   "Label(31)"
+         Tab(3).Control(35)=   "labFdo27"
+         Tab(3).Control(36)=   "Label(32)"
+         Tab(3).Control(37)=   "labFdo28"
+         Tab(3).Control(38)=   "Label(33)"
+         Tab(3).Control(39)=   "labFdo29"
          Tab(3).ControlCount=   40
          TabCaption(4)   =   "Baixa Produtos"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "txtCp(24)"
-         Tab(4).Control(1)=   "bottxtCampo24(0)"
-         Tab(4).Control(1).Enabled=   0   'False
-         Tab(4).Control(2)=   "labtxtCampo24"
+         Tab(4).Control(0)=   "Grid(2)"
+         Tab(4).Control(1)=   "Botao(0)"
+         Tab(4).Control(2)=   "Botao(1)"
          Tab(4).Control(3)=   "labFdo24"
-         Tab(4).Control(4)=   "Botao(1)"
-         Tab(4).Control(5)=   "Botao(0)"
-         Tab(4).Control(6)=   "Grid(2)"
+         Tab(4).Control(4)=   "labtxtCampo24"
+         Tab(4).Control(5)=   "bottxtCampo24(0)"
+         Tab(4).Control(5).Enabled=   0   'False
+         Tab(4).Control(6)=   "txtCp(24)"
          Tab(4).ControlCount=   7
          TabCaption(5)   =   "Baixa Despesas"
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "txtCp(25)"
-         Tab(5).Control(1)=   "bottxtCampo25(0)"
-         Tab(5).Control(1).Enabled=   0   'False
-         Tab(5).Control(2)=   "labtxtCampo25"
+         Tab(5).Control(0)=   "Grid(3)"
+         Tab(5).Control(1)=   "Botao(2)"
+         Tab(5).Control(2)=   "Botao(3)"
          Tab(5).Control(3)=   "labFdo25"
-         Tab(5).Control(4)=   "Botao(3)"
-         Tab(5).Control(5)=   "Botao(2)"
-         Tab(5).Control(6)=   "Grid(3)"
+         Tab(5).Control(4)=   "labtxtCampo25"
+         Tab(5).Control(5)=   "bottxtCampo25(0)"
+         Tab(5).Control(5).Enabled=   0   'False
+         Tab(5).Control(6)=   "txtCp(25)"
          Tab(5).ControlCount=   7
          TabCaption(6)   =   "Mat. Consumo"
          Tab(6).ControlEnabled=   0   'False
@@ -420,20 +429,20 @@ Begin VB.Form frmPComprN
          Tab(6).ControlCount=   1
          TabCaption(7)   =   "Baixa Consumo"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(26)"
-         Tab(7).Control(1)=   "bottxtCampo26(0)"
-         Tab(7).Control(1).Enabled=   0   'False
-         Tab(7).Control(2)=   "labFdo26"
+         Tab(7).Control(0)=   "Grid(5)"
+         Tab(7).Control(1)=   "Botao(4)"
+         Tab(7).Control(2)=   "Botao(5)"
          Tab(7).Control(3)=   "Label(25)"
-         Tab(7).Control(4)=   "Botao(5)"
-         Tab(7).Control(5)=   "Botao(4)"
-         Tab(7).Control(6)=   "Grid(5)"
+         Tab(7).Control(4)=   "labFdo26"
+         Tab(7).Control(5)=   "bottxtCampo26(0)"
+         Tab(7).Control(5).Enabled=   0   'False
+         Tab(7).Control(6)=   "txtCp(26)"
          Tab(7).ControlCount=   7
          Begin IRRIG.GBotao Botao 
             Height          =   480
             Index           =   0
             Left            =   -74820
-            TabIndex        =   38
+            TabIndex        =   37
             Top             =   3360
             Width           =   1605
             _ExtentX        =   0
@@ -455,7 +464,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   1
             Left            =   -73140
-            TabIndex        =   39
+            TabIndex        =   38
             Top             =   3360
             Width           =   1605
             _ExtentX        =   0
@@ -477,7 +486,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   2
             Left            =   -74820
-            TabIndex        =   42
+            TabIndex        =   41
             Top             =   3300
             Width           =   1605
             _ExtentX        =   0
@@ -499,7 +508,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   3
             Left            =   -73140
-            TabIndex        =   43
+            TabIndex        =   42
             Top             =   3300
             Width           =   1605
             _ExtentX        =   0
@@ -521,7 +530,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   4
             Left            =   -74820
-            TabIndex        =   47
+            TabIndex        =   46
             Top             =   3300
             Width           =   1620
             _ExtentX        =   0
@@ -543,7 +552,7 @@ Begin VB.Form frmPComprN
             Height          =   480
             Index           =   5
             Left            =   -73080
-            TabIndex        =   48
+            TabIndex        =   47
             Top             =   3300
             Width           =   1650
             _ExtentX        =   0
@@ -565,7 +574,7 @@ Begin VB.Form frmPComprN
             Height          =   300
             Index           =   6
             Left            =   -63405
-            TabIndex        =   52
+            TabIndex        =   51
             Top             =   3135
             Width           =   1350
             _ExtentX        =   0
@@ -587,7 +596,7 @@ Begin VB.Form frmPComprN
             Height          =   300
             Index           =   7
             Left            =   -61995
-            TabIndex        =   60
+            TabIndex        =   59
             TabStop         =   0   'False
             Top             =   3135
             Width           =   990
@@ -606,6 +615,69 @@ Begin VB.Form frmPComprN
             Caption         =   "Estornar"
             CaptionOffset   =   50
          End
+         Begin VB.CommandButton cmdEditarVinculo 
+            Caption         =   "Editar Vínculo"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   12500
+            TabIndex        =   133
+            Top             =   3400
+            Width           =   1335
+         End
+         Begin VB.CommandButton cmdInserirVinculo 
+            Caption         =   "Inserir Vínculo"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   12500
+            TabIndex        =   132
+            Top             =   2800
+            Width           =   1335
+         End
+         Begin MSComctlLib.ListView lvwOrcamentos 
+            Height          =   1400
+            Left            =   120
+            TabIndex        =   131
+            Top             =   2800
+            Width           =   12000
+            _ExtentX        =   21167
+            _ExtentY        =   2461
+            View            =   3
+            LabelEdit       =   1
+            LabelWrap       =   -1  'True
+            HideSelection   =   0   'False
+            FullRowSelect   =   -1  'True
+            GridLines       =   -1  'True
+            _Version        =   393217
+            ForeColor       =   0
+            BackColor       =   16777215
+            Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Segoe UI"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            NumItems        =   0
+         End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
             Appearance      =   0  'Flat
@@ -619,7 +691,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   9
             Left            =   -72900
             MultiLine       =   -1  'True
@@ -640,7 +712,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   10
             Left            =   -72900
             MultiLine       =   -1  'True
@@ -661,7 +733,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   11
             Left            =   -72900
             Locked          =   -1  'True
@@ -684,7 +756,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   12
             Left            =   -72900
             Locked          =   -1  'True
@@ -708,7 +780,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   13
             Left            =   -68640
             Locked          =   -1  'True
@@ -732,7 +804,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   14
             Left            =   -68640
             Locked          =   -1  'True
@@ -755,7 +827,7 @@ Begin VB.Form frmPComprN
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   300
+            Height          =   330
             Index           =   15
             Left            =   -68640
             Locked          =   -1  'True
@@ -850,7 +922,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -69270
             Style           =   1  'Graphical
-            TabIndex        =   92
+            TabIndex        =   91
             TabStop         =   0   'False
             Top             =   1755
             Width           =   255
@@ -938,11 +1010,11 @@ Begin VB.Form frmPComprN
             Height          =   1700
             Index           =   0
             Left            =   120
-            TabIndex        =   33
+            TabIndex        =   32
             Top             =   720
             Width           =   14085
-            _ExtentX        =   0
-            _ExtentY        =   0
+            _ExtentX        =   24844
+            _ExtentY        =   2990
             EditTextColor   =   -2147483640
             CellTextColor   =   -2147483640
             StripesBackColor=   14737632
@@ -961,33 +1033,10 @@ Begin VB.Form frmPComprN
             EndProperty
          End
          Begin IRRIG.GListV Grid 
-            Height          =   1700
-            Index           =   8
-            Left            =   120
-            TabIndex        =   32
-            Top             =   2460
-            Width           =   14085
-            _ExtentX        =   24844
-            _ExtentY        =   2117
-            StripesBackColor=   14737632
-            RowHeight       =   285
-            SaveGridStripes =   0   'False
-            Caption         =   "Orçamentos Vinculados"
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-         End
-         Begin IRRIG.GListV Grid 
             Height          =   2970
             Index           =   1
             Left            =   -74880
-            TabIndex        =   34
+            TabIndex        =   33
             Top             =   720
             Width           =   13995
             _ExtentX        =   0
@@ -1013,7 +1062,7 @@ Begin VB.Form frmPComprN
             Height          =   2895
             Index           =   2
             Left            =   -74865
-            TabIndex        =   37
+            TabIndex        =   36
             Top             =   405
             Width           =   14010
             _ExtentX        =   0
@@ -1040,7 +1089,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69630
             Style           =   1  'Graphical
-            TabIndex        =   98
+            TabIndex        =   97
             TabStop         =   0   'False
             Top             =   3495
             Width           =   255
@@ -1062,7 +1111,7 @@ Begin VB.Form frmPComprN
             Index           =   24
             Left            =   -70615
             MaxLength       =   254
-            TabIndex        =   40
+            TabIndex        =   39
             Top             =   3495
             Width           =   985
          End
@@ -1070,7 +1119,7 @@ Begin VB.Form frmPComprN
             Height          =   2490
             Index           =   3
             Left            =   -74880
-            TabIndex        =   41
+            TabIndex        =   40
             Top             =   720
             Width           =   14010
             _ExtentX        =   0
@@ -1097,7 +1146,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69570
             Style           =   1  'Graphical
-            TabIndex        =   101
+            TabIndex        =   100
             TabStop         =   0   'False
             Top             =   3435
             Width           =   255
@@ -1119,7 +1168,7 @@ Begin VB.Form frmPComprN
             Index           =   25
             Left            =   -70615
             MaxLength       =   254
-            TabIndex        =   44
+            TabIndex        =   43
             Top             =   3435
             Width           =   1045
          End
@@ -1127,7 +1176,7 @@ Begin VB.Form frmPComprN
             Height          =   2760
             Index           =   4
             Left            =   -74880
-            TabIndex        =   45
+            TabIndex        =   44
             Top             =   720
             Width           =   13980
             _ExtentX        =   0
@@ -1153,7 +1202,7 @@ Begin VB.Form frmPComprN
             Height          =   2475
             Index           =   5
             Left            =   -74880
-            TabIndex        =   46
+            TabIndex        =   45
             Top             =   720
             Width           =   13995
             _ExtentX        =   0
@@ -1180,7 +1229,7 @@ Begin VB.Form frmPComprN
             Index           =   0
             Left            =   -69420
             Style           =   1  'Graphical
-            TabIndex        =   104
+            TabIndex        =   103
             TabStop         =   0   'False
             Top             =   3435
             Width           =   255
@@ -1202,7 +1251,7 @@ Begin VB.Form frmPComprN
             Index           =   26
             Left            =   -70365
             MaxLength       =   254
-            TabIndex        =   49
+            TabIndex        =   48
             Top             =   3435
             Width           =   945
          End
@@ -1210,7 +1259,7 @@ Begin VB.Form frmPComprN
             Height          =   1560
             Index           =   6
             Left            =   -65805
-            TabIndex        =   50
+            TabIndex        =   49
             Top             =   720
             Width           =   4800
             _ExtentX        =   0
@@ -1237,7 +1286,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -63765
             Style           =   1  'Graphical
-            TabIndex        =   112
+            TabIndex        =   111
             TabStop         =   0   'False
             Top             =   3150
             Width           =   255
@@ -1257,7 +1306,7 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   27
             Left            =   -65100
-            TabIndex        =   51
+            TabIndex        =   50
             TabStop         =   0   'False
             Top             =   3150
             Width           =   1335
@@ -1266,7 +1315,7 @@ Begin VB.Form frmPComprN
             Height          =   1800
             Index           =   7
             Left            =   -74880
-            TabIndex        =   54
+            TabIndex        =   53
             Top             =   2025
             Width           =   8760
             _ExtentX        =   0
@@ -1293,7 +1342,7 @@ Begin VB.Form frmPComprN
             Index           =   1
             Left            =   -61260
             Style           =   1  'Graphical
-            TabIndex        =   115
+            TabIndex        =   114
             TabStop         =   0   'False
             Top             =   2430
             Width           =   255
@@ -1303,7 +1352,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -61515
             Style           =   1  'Graphical
-            TabIndex        =   116
+            TabIndex        =   115
             TabStop         =   0   'False
             Top             =   2430
             Width           =   255
@@ -1324,7 +1373,7 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   28
             Left            =   -65100
-            TabIndex        =   56
+            TabIndex        =   55
             TabStop         =   0   'False
             Top             =   2430
             Width           =   3840
@@ -1334,7 +1383,7 @@ Begin VB.Form frmPComprN
             Index           =   1
             Left            =   -61275
             Style           =   1  'Graphical
-            TabIndex        =   119
+            TabIndex        =   118
             TabStop         =   0   'False
             Top             =   2790
             Width           =   255
@@ -1344,7 +1393,7 @@ Begin VB.Form frmPComprN
             Index           =   2
             Left            =   -61530
             Style           =   1  'Graphical
-            TabIndex        =   120
+            TabIndex        =   119
             TabStop         =   0   'False
             Top             =   2790
             Width           =   255
@@ -1365,10 +1414,29 @@ Begin VB.Form frmPComprN
             Height          =   270
             Index           =   29
             Left            =   -65100
-            TabIndex        =   57
+            TabIndex        =   56
             TabStop         =   0   'False
             Top             =   2790
             Width           =   3825
+         End
+         Begin VB.Label lblOrcamentos 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Orçamentos Vinculados ao Pedido"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   11.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   120
+            TabIndex        =   134
+            Top             =   2500
+            Width           =   4500
          End
          Begin VB.Label Label 
             Caption         =   "Valor do Frete...........:"
@@ -1385,7 +1453,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   10
             Left            =   -74865
-            TabIndex        =   79
+            TabIndex        =   78
             Top             =   480
             Width           =   1830
          End
@@ -1404,7 +1472,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   11
             Left            =   -74865
-            TabIndex        =   80
+            TabIndex        =   79
             Top             =   840
             Width           =   1845
          End
@@ -1423,7 +1491,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   12
             Left            =   -74865
-            TabIndex        =   81
+            TabIndex        =   80
             Top             =   1200
             Width           =   1830
          End
@@ -1443,7 +1511,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   13
             Left            =   -74940
-            TabIndex        =   82
+            TabIndex        =   81
             Top             =   1560
             Width           =   1905
          End
@@ -1462,7 +1530,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   14
             Left            =   -71220
-            TabIndex        =   83
+            TabIndex        =   82
             Top             =   480
             Width           =   2445
          End
@@ -1481,7 +1549,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   15
             Left            =   -71220
-            TabIndex        =   84
+            TabIndex        =   83
             Top             =   840
             Width           =   2445
          End
@@ -1500,7 +1568,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   16
             Left            =   -71220
-            TabIndex        =   85
+            TabIndex        =   84
             Top             =   1200
             Width           =   2445
          End
@@ -1519,7 +1587,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   17
             Left            =   -74880
-            TabIndex        =   86
+            TabIndex        =   85
             Top             =   960
             Width           =   960
          End
@@ -1538,7 +1606,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   18
             Left            =   -68160
-            TabIndex        =   87
+            TabIndex        =   86
             Top             =   960
             Width           =   270
          End
@@ -1557,7 +1625,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   19
             Left            =   -66600
-            TabIndex        =   88
+            TabIndex        =   87
             Top             =   960
             Width           =   630
          End
@@ -1576,7 +1644,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   20
             Left            =   -74880
-            TabIndex        =   89
+            TabIndex        =   88
             Top             =   1740
             Width           =   990
          End
@@ -1595,7 +1663,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   21
             Left            =   -70080
-            TabIndex        =   90
+            TabIndex        =   89
             Top             =   1740
             Width           =   390
          End
@@ -1605,7 +1673,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -69660
-            TabIndex        =   91
+            TabIndex        =   90
             Top             =   1740
             Width           =   660
          End
@@ -1624,7 +1692,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   22
             Left            =   -68880
-            TabIndex        =   93
+            TabIndex        =   92
             Top             =   1740
             Width           =   945
          End
@@ -1643,7 +1711,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   23
             Left            =   -74880
-            TabIndex        =   94
+            TabIndex        =   93
             Top             =   2580
             Width           =   1065
          End
@@ -1662,7 +1730,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   24
             Left            =   -72060
-            TabIndex        =   95
+            TabIndex        =   94
             Top             =   2580
             Width           =   825
          End
@@ -1672,7 +1740,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70630
-            TabIndex        =   96
+            TabIndex        =   95
             Top             =   3480
             Width           =   1270
          End
@@ -1691,7 +1759,7 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Left            =   -71385
-            TabIndex        =   97
+            TabIndex        =   96
             Top             =   3480
             Width           =   705
          End
@@ -1701,7 +1769,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70630
-            TabIndex        =   99
+            TabIndex        =   98
             Top             =   3420
             Width           =   1330
          End
@@ -1720,7 +1788,7 @@ Begin VB.Form frmPComprN
             ForeColor       =   &H80000008&
             Height          =   240
             Left            =   -71385
-            TabIndex        =   100
+            TabIndex        =   99
             Top             =   3420
             Width           =   705
          End
@@ -1740,7 +1808,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   25
             Left            =   -71220
-            TabIndex        =   102
+            TabIndex        =   101
             Top             =   3420
             Width           =   705
          End
@@ -1750,7 +1818,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   270
             Left            =   -70380
-            TabIndex        =   103
+            TabIndex        =   102
             Top             =   3420
             Width           =   1230
          End
@@ -1773,7 +1841,7 @@ Begin VB.Form frmPComprN
             Height          =   255
             Index           =   26
             Left            =   -65805
-            TabIndex        =   105
+            TabIndex        =   104
             Top             =   435
             Width           =   4830
          End
@@ -1793,7 +1861,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   27
             Left            =   -65685
-            TabIndex        =   106
+            TabIndex        =   105
             Top             =   3600
             Width           =   600
          End
@@ -1824,7 +1892,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   28
             Left            =   -64785
-            TabIndex        =   107
+            TabIndex        =   106
             Top             =   3600
             Width           =   990
          End
@@ -1855,7 +1923,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   29
             Left            =   -63390
-            TabIndex        =   108
+            TabIndex        =   107
             Top             =   3600
             Width           =   1050
          End
@@ -1886,7 +1954,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   30
             Left            =   -61950
-            TabIndex        =   109
+            TabIndex        =   108
             Top             =   3600
             Width           =   300
          End
@@ -1906,7 +1974,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   31
             Left            =   -65745
-            TabIndex        =   110
+            TabIndex        =   109
             Top             =   3135
             Width           =   540
          End
@@ -1916,7 +1984,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   111
+            TabIndex        =   110
             Top             =   3135
             Width           =   1620
          End
@@ -1936,7 +2004,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   32
             Left            =   -65805
-            TabIndex        =   113
+            TabIndex        =   112
             Top             =   2445
             Width           =   600
          End
@@ -1946,7 +2014,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   114
+            TabIndex        =   113
             Top             =   2415
             Width           =   4125
          End
@@ -1966,7 +2034,7 @@ Begin VB.Form frmPComprN
             Height          =   240
             Index           =   33
             Left            =   -65610
-            TabIndex        =   117
+            TabIndex        =   116
             Top             =   2805
             Width           =   405
          End
@@ -1976,7 +2044,7 @@ Begin VB.Form frmPComprN
             BorderStyle     =   1  'Fixed Single
             Height          =   300
             Left            =   -65115
-            TabIndex        =   118
+            TabIndex        =   117
             Top             =   2775
             Width           =   4110
          End
@@ -1992,13 +2060,13 @@ Begin VB.Form frmPComprN
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   750
+         Height          =   700
          Index           =   30
          Left            =   120
          MultiLine       =   -1  'True
          ScrollBars      =   2  'Vertical
          TabIndex        =   14
-         Top             =   7335
+         Top             =   7600
          Width           =   14280
       End
       Begin VB.TextBox txtCp 
@@ -2037,7 +2105,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   0
          Left            =   3540
-         TabIndex        =   36
+         TabIndex        =   35
          Top             =   120
          Width           =   1470
       End
@@ -2057,7 +2125,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   1
          Left            =   1920
-         TabIndex        =   53
+         TabIndex        =   52
          Top             =   120
          Width           =   1440
       End
@@ -2157,7 +2225,7 @@ Begin VB.Form frmPComprN
          Height          =   255
          Index           =   2
          Left            =   5040
-         TabIndex        =   55
+         TabIndex        =   54
          Top             =   120
          Width           =   1530
       End
@@ -2198,7 +2266,7 @@ Begin VB.Form frmPComprN
          Index           =   37
          Left            =   7785
          MaxLength       =   150
-         TabIndex        =   58
+         TabIndex        =   57
          Top             =   420
          Width           =   6585
       End
@@ -2217,7 +2285,7 @@ Begin VB.Form frmPComprN
          Height          =   300
          Index           =   38
          Left            =   13185
-         TabIndex        =   59
+         TabIndex        =   58
          Top             =   60
          Width           =   1185
       End
@@ -2237,7 +2305,7 @@ Begin VB.Form frmPComprN
          Height          =   465
          Index           =   0
          Left            =   1875
-         TabIndex        =   63
+         TabIndex        =   62
          Top             =   360
          Width           =   3600
       End
@@ -2257,7 +2325,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   1
          Left            =   135
-         TabIndex        =   64
+         TabIndex        =   63
          Top             =   1440
          Width           =   1170
       End
@@ -2277,7 +2345,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   2
          Left            =   2295
-         TabIndex        =   65
+         TabIndex        =   64
          Top             =   1440
          Width           =   465
       End
@@ -2297,7 +2365,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   3
          Left            =   4035
-         TabIndex        =   66
+         TabIndex        =   65
          Top             =   1440
          Width           =   870
       End
@@ -2317,7 +2385,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   4
          Left            =   5895
-         TabIndex        =   67
+         TabIndex        =   66
          Top             =   1440
          Width           =   1110
       End
@@ -2337,7 +2405,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   5
          Left            =   8895
-         TabIndex        =   68
+         TabIndex        =   67
          Top             =   1440
          Width           =   990
       End
@@ -2357,7 +2425,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   6
          Left            =   11655
-         TabIndex        =   69
+         TabIndex        =   68
          Top             =   1440
          Width           =   645
       End
@@ -2377,7 +2445,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   7
          Left            =   75
-         TabIndex        =   70
+         TabIndex        =   69
          Top             =   1860
          Width           =   1230
       End
@@ -2387,7 +2455,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   1380
-         TabIndex        =   71
+         TabIndex        =   70
          Top             =   1860
          Width           =   840
       End
@@ -2407,7 +2475,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   8
          Left            =   2280
-         TabIndex        =   73
+         TabIndex        =   72
          Top             =   1860
          Width           =   1185
       End
@@ -2417,7 +2485,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   3555
-         TabIndex        =   74
+         TabIndex        =   73
          Top             =   1860
          Width           =   5250
       End
@@ -2437,7 +2505,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   9
          Left            =   8835
-         TabIndex        =   76
+         TabIndex        =   75
          Top             =   1860
          Width           =   1425
       End
@@ -2447,7 +2515,7 @@ Begin VB.Form frmPComprN
          BorderStyle     =   1  'Fixed Single
          Height          =   300
          Left            =   10335
-         TabIndex        =   77
+         TabIndex        =   76
          Top             =   1860
          Width           =   4050
       End
@@ -2467,8 +2535,8 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   34
          Left            =   120
-         TabIndex        =   121
-         Top             =   7035
+         TabIndex        =   120
+         Top             =   7300
          Width           =   420
       End
       Begin VB.Label Label 
@@ -2486,7 +2554,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   35
          Left            =   7740
-         TabIndex        =   122
+         TabIndex        =   121
          Top             =   60
          Width           =   2745
       End
@@ -2506,7 +2574,7 @@ Begin VB.Form frmPComprN
          Height          =   270
          Index           =   36
          Left            =   1920
-         TabIndex        =   123
+         TabIndex        =   122
          Top             =   900
          Width           =   2250
       End
@@ -2528,8 +2596,8 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   37
          Left            =   600
-         TabIndex        =   124
-         Top             =   7035
+         TabIndex        =   123
+         Top             =   7300
          Width           =   13380
       End
       Begin VB.Label Label 
@@ -2547,7 +2615,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   38
          Left            =   2295
-         TabIndex        =   125
+         TabIndex        =   124
          Top             =   2310
          Width           =   1230
       End
@@ -2566,7 +2634,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   39
          Left            =   5175
-         TabIndex        =   126
+         TabIndex        =   125
          Top             =   2310
          Width           =   945
       End
@@ -2585,7 +2653,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   40
          Left            =   7095
-         TabIndex        =   127
+         TabIndex        =   126
          Top             =   2310
          Width           =   420
       End
@@ -2604,7 +2672,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   41
          Left            =   8940
-         TabIndex        =   128
+         TabIndex        =   127
          Top             =   2310
          Width           =   1320
       End
@@ -2624,7 +2692,7 @@ Begin VB.Form frmPComprN
          Height          =   240
          Index           =   42
          Left            =   10635
-         TabIndex        =   129
+         TabIndex        =   128
          Top             =   75
          Width           =   465
       End
@@ -2635,7 +2703,7 @@ Begin VB.Form frmPComprN
          Height          =   195
          Index           =   43
          Left            =   14520
-         TabIndex        =   130
+         TabIndex        =   129
          Top             =   7920
          Width           =   45
       End
@@ -2643,7 +2711,7 @@ Begin VB.Form frmPComprN
    Begin IRRIG.GListV grdBrowse 
       Height          =   795
       Left            =   60
-      TabIndex        =   131
+      TabIndex        =   130
       Top             =   330
       Width           =   1575
       _ExtentX        =   2778
@@ -2684,7 +2752,7 @@ Attribute VB_Exposed = False
 '* Função....: Pedido
 '* CopyRight.: (C)2025 IRRIGAÇÃO PENÁPOLIS
 '* Criação...: GAS-2007 - Gerador Automático de Sistemas
-'* Data......: 30/05/2025 16:33:25
+'* Data......: 19/05/2025 15:30:18
 '* * * * * * *
 
 Option Explicit
@@ -2795,7 +2863,7 @@ Private Sub AjustaValores()
    
        Set ProdAux = vgDb.OpenRecordSet("SELECT * FROM [Produtos do Pedido Compra] WHERE [Id do Pedido] = " & Id_do_Pedido)
        Do While Not ProdAux.EOF
-          ContaEstoque (ProdAux![Id do Produto])
+          ContaEstoque (ProdAux![Id Do Produto])
           ProdAux.MoveNext
        Loop
      
@@ -2927,7 +2995,7 @@ Private Sub LancaBxProdutoParcial()
       With BxProduto
          .AddNew
          ![Id do Pedido] = Id_do_Pedido
-         ![Id do Produto] = Produtos![Id do Produto]
+         ![Id Do Produto] = Produtos![Id Do Produto]
          
           'Set SeqItem = VgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Seq From [Bx Produtos Pedido Compra] WHERE [Id do Pedido] = " & Id_do_Pedido)
          '![Sequencia Do Item] = SeqItem!Seq + 1
@@ -2946,7 +3014,7 @@ Private Sub LancaBxProdutoParcial()
          .Update
          .BookMark = .LastModified
       End With
-      ContaEstoque (Produtos![Id do Produto])
+      ContaEstoque (Produtos![Id Do Produto])
       Produtos.MoveNext
    Loop
    vgDb.CommitTrans
@@ -3003,7 +3071,7 @@ Private Sub LancaBxProdutoTotal()
       With BxProduto
          .AddNew
          ![Id do Pedido] = Id_do_Pedido
-         ![Id do Produto] = Produtos![Id do Produto]
+         ![Id Do Produto] = Produtos![Id Do Produto]
            If Produtos![Sequencia do Item] = 0 Then
               Set SeqItem = vgDb.OpenRecordSet("SELECT MAX([Sequencia do Item]) Seq From [Bx Produtos Pedido Compra] WHERE [Id do Pedido] = " & Id_do_Pedido)
               ![Sequencia do Item] = SeqItem!Seq + 1
@@ -3020,7 +3088,7 @@ Private Sub LancaBxProdutoTotal()
          .Update
          .BookMark = .LastModified
       End With
-      ContaEstoque (Produtos![Id do Produto])
+      ContaEstoque (Produtos![Id Do Produto])
       Produtos.MoveNext
    Loop
    vgDb.CommitTrans
@@ -3572,7 +3640,7 @@ Private Sub LancaParcela()
    With Entrada
      .AddNew
        ![Data de Entrada] = Pedido_de_compra_novo![Data do Pedido]
-       ![Seqüência Do Geral] = Pedido_de_compra_novo![Codigo Do Fornecedor]
+       ![Seqüência do Geral] = Pedido_de_compra_novo![Codigo Do Fornecedor]
        ![Histórico] = "Referente Pedido de Compra Nº " & Format(Id_do_Pedido, "000000")
        ![Forma de Pagamento] = "Prazo"
        ![Valor Total] = Pedido_de_compra_novo![Total Do Pedido]
@@ -3629,7 +3697,7 @@ Private Sub LancaParcela()
             ![Sequencia da Compra] = Id_do_Pedido
             ![Seqüência da Origem] = SeqEntrada
             ![Parcela] = Parcelas![Número da Parcela]
-            ![Seqüência Do Geral] = Pedido_de_compra_novo![Codigo Do Fornecedor]
+            ![Seqüência do Geral] = Pedido_de_compra_novo![Codigo Do Fornecedor]
             ![Data de Entrada] = Pedido_de_compra_novo![Data do Pedido]
             !Histórico = "Referente Pedido de Compra Nº " & Format(Id_do_Pedido, "000000")
             ![Forma de Pagamento] = "Prazo"
@@ -3724,24 +3792,16 @@ Private Function InfoOrc(Id_do_Pedido As Long, Sequencia_do_Orcamento As Long, S
    
    On Error Resume Next
    
-   'Validação crítica - evita erros quando Barra de Filtro está ativa
-   If Sequencia_do_Orcamento <= 0 Then
-      InfoOrc = ""
-      Exit Function
-   End If
-   
    TbAuxiliar "Orçamento", "[Seqüência do Orçamento] = " & Sequencia_do_Orcamento, OrcAux
       
    If OrcAux.RecordCount = 0 Then Exit Function
-   TbAuxiliar "Geral", "[Seqüência do Geral] = " & OrcAux![Seqüência Do Geral] & " AND [Seqüência do Geral] > 0", ClienteAux
+   TbAuxiliar "Geral", "[Seqüência do Geral] = " & OrcAux![Seqüência do Geral] & " AND [Seqüência do Geral] > 0", ClienteAux
   
    Select Case Oq
       Case "Cliente"
          InfoOrc = ClienteAux![Razão Social]
       Case "Emissao"
          InfoOrc = OrcAux![Data de Emissão]
-      Case "Data"
-         InfoOrc = Format(OrcAux![Data de Emissão], "dd/mm/yyyy")
    End Select
 
 End Function
@@ -4474,7 +4534,6 @@ Public Sub LigaDesligaAlterar()
    PrepBotoes Me, vgSituacao                           'acerta icones dos botoes
 End Sub
 
-
 'evento - quando qq tecla for digitada no formulário
 Private Sub Form_KeyPress(KeyAscii As Integer)
    Dim Ok As Boolean
@@ -4526,139 +4585,127 @@ Public Sub Reposition(Optional ForceRebind As Boolean, Optional LockGrids As Boo
       AnalisaCondicoes
    End If
    On Error Resume Next
-   For i = 0 To 8
+   For i = 0 To 7
       Select Case i
          Case 0
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(0).CloseRecordset
             Else
-               x = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(0).SQLSource)
+               x$ = ExecutaGrid(0, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(0).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(0).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(0).CloseRecordset
                   End If
-                  Grid(0).OpenRecordSet x, CURSOR_TABLE
+                  Grid(0).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(0, vgCols(), CONDICOES_ESPECIAIS)
          Case 1
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(1).CloseRecordset
             Else
-               x = ExecutaGrid(1, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(1).SQLSource)
+               x$ = ExecutaGrid(1, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(1).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(1).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(1).CloseRecordset
                   End If
-                  Grid(1).OpenRecordSet x, CURSOR_TABLE
+                  Grid(1).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(1, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(1, vgCols(), CONDICOES_ESPECIAIS)
          Case 2
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(2).CloseRecordset
             Else
-               x = ExecutaGrid(2, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(2).SQLSource)
+               x$ = ExecutaGrid(2, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(2).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(2).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(2).CloseRecordset
                   End If
-                  Grid(2).OpenRecordSet x, CURSOR_TABLE
+                  Grid(2).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(2, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(2, vgCols(), CONDICOES_ESPECIAIS)
          Case 3
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(3).CloseRecordset
             Else
-               x = ExecutaGrid(3, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(3).SQLSource)
+               x$ = ExecutaGrid(3, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(3).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(3).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(3).CloseRecordset
                   End If
-                  Grid(3).OpenRecordSet x, CURSOR_TABLE
+                  Grid(3).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(3, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(3, vgCols(), CONDICOES_ESPECIAIS)
          Case 4
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(4).CloseRecordset
             Else
-               x = ExecutaGrid(4, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(4).SQLSource)
+               x$ = ExecutaGrid(4, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(4).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(4).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(4).CloseRecordset
                   End If
-                  Grid(4).OpenRecordSet x, CURSOR_TABLE
+                  Grid(4).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(4, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(4, vgCols(), CONDICOES_ESPECIAIS)
          Case 5
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(5).CloseRecordset
             Else
-               x = ExecutaGrid(5, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(5).SQLSource)
+               x$ = ExecutaGrid(5, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(5).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(5).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(5).CloseRecordset
                   End If
-                  Grid(5).OpenRecordSet x, CURSOR_TABLE
+                  Grid(5).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(5, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(5, vgCols(), CONDICOES_ESPECIAIS)
          Case 6
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(6).CloseRecordset
             Else
-               x = ExecutaGrid(6, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(6).SQLSource)
+               x$ = ExecutaGrid(6, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(6).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(6).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(6).CloseRecordset
                   End If
-                  Grid(6).OpenRecordSet x, CURSOR_TABLE
+                  Grid(6).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(6, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(6, vgCols(), CONDICOES_ESPECIAIS)
          Case 7
             If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
                Grid(7).CloseRecordset
             Else
-               x = ExecutaGrid(7, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(7).SQLSource)
+               x$ = ExecutaGrid(7, vgCols(), ABRE_TABELA_GRID)
+               MudouFiltro = (x$ <> Grid(7).SQLSource)
                If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(7).Status = ACAO_NAVEGANDO Then
                   If Len(Grid(0).RecordSet.RsSource) > 0 Then
                      Grid(7).CloseRecordset
                   End If
-                  Grid(7).OpenRecordSet x, CURSOR_TABLE
+                  Grid(7).OpenRecordSet x$, CURSOR_TABLE
                End If
             End If
-               x = ExecutaGrid(7, vgCols(), CONDICOES_ESPECIAIS)
-         Case 8
-            If vgSituacao = ACAO_INCLUINDO Or vgTb.EOF Or vgTb.BOF Or (vgSituacao <> ACAO_EXCLUINDO And vgEmBrowse) Then
-               Grid(8).CloseRecordset
-            Else
-               x = ExecutaGrid(8, vgCols(), ABRE_TABELA_GRID)
-               MudouFiltro = (x <> Grid(8).SQLSource)
-               If Err = 0 And (ForceRebind Or MudouFiltro) And Grid(8).Status = ACAO_NAVEGANDO Then
-                  If Len(Grid(8).RecordSet.RsSource) > 0 Then
-                     Grid(8).CloseRecordset
-                  End If
-                  Grid(8).OpenRecordSet x, CURSOR_TABLE
-               End If
-            End If
-               x = ExecutaGrid(8, vgCols(), CONDICOES_ESPECIAIS)
+               x$ = ExecutaGrid(7, vgCols(), CONDICOES_ESPECIAIS)
       End Select
    Next
-   
-   
    RepositionPedido
+
+   ' Carrega vínculos de orçamentos quando muda de registro
+   CarregaVinculosNoListView
+
    ExecutaVisivel
    ExecutaPreValidacao
    MostraFormulas
@@ -4675,7 +4722,7 @@ Private Sub ExecutaPreValidacao()
    On Error Resume Next                           'prepara para possiveis erros
    vgPV = vgPriVez
    vgPriVez = True
-   Ok = (vgPWUsuario = "YGOR" Or vgPWUsuario = "JERONIMO" Or vgPWUsuario = "KENNEDY")
+   Ok = (vgPWUsuario = "KALINE" Or vgPWUsuario = "GISELE" Or vgPWUsuario = "KENNEDY")
    txtCampo(7).Locked = Not (vgAlterar And txtCampo(7).Editable)
    txtCampo(7).Enabled = Ok Or Not vgAlterar
    Ok = (Pedido_Fechado = False And Produtos_do_Pedido_Compra.RecordCount > 0)
@@ -5009,72 +5056,72 @@ Private Sub Form_Load()
    Label(12).Caption = LoadGasString(45736)
    vgTooltips.AddTool txtCampo(11).CtPri, 0, LoadGasString(45737)
    Label(13).Caption = LoadGasString(45738)
-   vgTooltips.AddTool txtCampo(12).CtPri, 0, LoadGasString(45740)
-   Label(14).Caption = LoadGasString(45741)
-   vgTooltips.AddTool txtCampo(13).CtPri, 0, LoadGasString(45742)
-   Label(15).Caption = LoadGasString(45743)
-   vgTooltips.AddTool txtCampo(14).CtPri, 0, LoadGasString(45744)
-   Label(16).Caption = LoadGasString(45745)
-   vgTooltips.AddTool txtCampo(15).CtPri, 0, LoadGasString(45746)
-   Label(17).Caption = LoadGasString(45747)
-   vgTooltips.AddTool txtCampo(16).CtPri, 0, LoadGasString(45748)
-   Label(18).Caption = LoadGasString(45749)
-   vgTooltips.AddTool txtCampo(17).CtPri, 0, LoadGasString(45750)
-   Label(19).Caption = LoadGasString(45751)
-   vgTooltips.AddTool txtCampo(18).CtPri, 0, LoadGasString(45752)
-   Label(20).Caption = LoadGasString(45753)
-   vgTooltips.AddTool txtCampo(19).CtPri, 0, LoadGasString(45754)
-   Label(21).Caption = LoadGasString(45755)
-   vgTooltips.AddTool txtCampo(20).CtPri, 0, LoadGasString(45756)
-   Label(22).Caption = LoadGasString(45757)
-   vgTooltips.AddTool txtCampo(21).CtPri, 0, LoadGasString(45758)
-   Label(23).Caption = LoadGasString(45759)
-   vgTooltips.AddTool txtCampo(22).CtPri, 0, LoadGasString(45760)
-   Label(24).Caption = LoadGasString(45761)
-   vgTooltips.AddTool txtCampo(23).CtPri, 0, LoadGasString(45762)
-   Botao(0).Caption = LoadGasString(45763)
-   Botao(1).Caption = LoadGasString(45764)
-   labtxtCampo24.Caption = LoadGasString(45765)
-   Botao(2).Caption = LoadGasString(45766)
-   Botao(3).Caption = LoadGasString(45767)
-   labtxtCampo25.Caption = LoadGasString(45768)
-   Botao(4).Caption = LoadGasString(45769)
-   Botao(5).Caption = LoadGasString(45770)
-   Label(25).Caption = LoadGasString(45771)
-   Label(27).Caption = LoadGasString(45772)
-   Label(28).Caption = LoadGasString(45773)
-   Label(29).Caption = LoadGasString(45774)
-   Label(30).Caption = LoadGasString(45775)
-   Label(31).Caption = LoadGasString(45776)
-   vgTooltips.AddTool txtCampo(27).CtPri, 0, LoadGasString(45777)
-   Botao(6).Caption = LoadGasString(45778)
-   Label(32).Caption = LoadGasString(45779)
-   Label(33).Caption = LoadGasString(45780)
-   Botao(7).Caption = LoadGasString(45781)
-   Label(34).Caption = LoadGasString(45782)
-   vgTooltips.AddTool txtCampo(30).CtPri, 0, LoadGasString(45783)
-   Label(35).Caption = LoadGasString(45784)
-   vgTooltips.AddTool txtCampo(31).CtPri, 0, LoadGasString(45785)
-   Botao(8).Caption = LoadGasString(45786)
-   vgTooltips.AddTool chkCampo(0).CtPri, 0, LoadGasString(45787)
-   chkCampo(0).Caption = LoadGasString(45788)
-   Label(36).Caption = LoadGasString(45789)
-   vgTooltips.AddTool chkCampo(1).CtPri, 0, LoadGasString(45790)
-   chkCampo(1).Caption = LoadGasString(45791)
-   Label(38).Caption = LoadGasString(45792)
-   vgTooltips.AddTool txtCampo(32).CtPri, 0, LoadGasString(45793)
-   Label(39).Caption = LoadGasString(45794)
-   vgTooltips.AddTool txtCampo(33).CtPri, 0, LoadGasString(45795)
-   Label(40).Caption = LoadGasString(45796)
-   vgTooltips.AddTool txtCampo(34).CtPri, 0, LoadGasString(45797)
-   Label(41).Caption = LoadGasString(45798)
-   vgTooltips.AddTool txtCampo(35).CtPri, 0, LoadGasString(45799)
-   vgTooltips.AddTool chkCampo(2).CtPri, 0, LoadGasString(45800)
-   chkCampo(2).Caption = LoadGasString(45801)
-   Label(42).Caption = LoadGasString(45802)
-   vgTooltips.AddTool txtCampo(37).CtPri, 0, LoadGasString(45803)
-   vgTooltips.AddTool txtCampo(38).CtPri, 0, LoadGasString(45804)
-   Label(43).Caption = LoadGasString(45805)
+   vgTooltips.AddTool txtCampo(12).CtPri, 0, LoadGasString(45739)
+   Label(14).Caption = LoadGasString(45740)
+   vgTooltips.AddTool txtCampo(13).CtPri, 0, LoadGasString(45741)
+   Label(15).Caption = LoadGasString(45742)
+   vgTooltips.AddTool txtCampo(14).CtPri, 0, LoadGasString(45743)
+   Label(16).Caption = LoadGasString(45744)
+   vgTooltips.AddTool txtCampo(15).CtPri, 0, LoadGasString(45745)
+   Label(17).Caption = LoadGasString(45746)
+   vgTooltips.AddTool txtCampo(16).CtPri, 0, LoadGasString(45747)
+   Label(18).Caption = LoadGasString(45748)
+   vgTooltips.AddTool txtCampo(17).CtPri, 0, LoadGasString(45749)
+   Label(19).Caption = LoadGasString(45750)
+   vgTooltips.AddTool txtCampo(18).CtPri, 0, LoadGasString(45751)
+   Label(20).Caption = LoadGasString(45752)
+   vgTooltips.AddTool txtCampo(19).CtPri, 0, LoadGasString(45753)
+   Label(21).Caption = LoadGasString(45754)
+   vgTooltips.AddTool txtCampo(20).CtPri, 0, LoadGasString(45755)
+   Label(22).Caption = LoadGasString(45756)
+   vgTooltips.AddTool txtCampo(21).CtPri, 0, LoadGasString(45757)
+   Label(23).Caption = LoadGasString(45758)
+   vgTooltips.AddTool txtCampo(22).CtPri, 0, LoadGasString(45759)
+   Label(24).Caption = LoadGasString(45760)
+   vgTooltips.AddTool txtCampo(23).CtPri, 0, LoadGasString(45761)
+   Botao(0).Caption = LoadGasString(45762)
+   Botao(1).Caption = LoadGasString(45763)
+   labtxtCampo24.Caption = LoadGasString(45764)
+   Botao(2).Caption = LoadGasString(45765)
+   Botao(3).Caption = LoadGasString(45766)
+   labtxtCampo25.Caption = LoadGasString(45767)
+   Botao(4).Caption = LoadGasString(45768)
+   Botao(5).Caption = LoadGasString(45769)
+   Label(25).Caption = LoadGasString(45770)
+   Label(27).Caption = LoadGasString(45771)
+   Label(28).Caption = LoadGasString(45772)
+   Label(29).Caption = LoadGasString(45773)
+   Label(30).Caption = LoadGasString(45774)
+   Label(31).Caption = LoadGasString(45775)
+   vgTooltips.AddTool txtCampo(27).CtPri, 0, LoadGasString(45776)
+   Botao(6).Caption = LoadGasString(45777)
+   Label(32).Caption = LoadGasString(45778)
+   Label(33).Caption = LoadGasString(45779)
+   Botao(7).Caption = LoadGasString(45780)
+   Label(34).Caption = LoadGasString(45781)
+   vgTooltips.AddTool txtCampo(30).CtPri, 0, LoadGasString(45782)
+   Label(35).Caption = LoadGasString(45783)
+   vgTooltips.AddTool txtCampo(31).CtPri, 0, LoadGasString(45784)
+   Botao(8).Caption = LoadGasString(45785)
+   vgTooltips.AddTool chkCampo(0).CtPri, 0, LoadGasString(45786)
+   chkCampo(0).Caption = LoadGasString(45787)
+   Label(36).Caption = LoadGasString(45788)
+   vgTooltips.AddTool chkCampo(1).CtPri, 0, LoadGasString(45789)
+   chkCampo(1).Caption = LoadGasString(45790)
+   Label(38).Caption = LoadGasString(45791)
+   vgTooltips.AddTool txtCampo(32).CtPri, 0, LoadGasString(45792)
+   Label(39).Caption = LoadGasString(45793)
+   vgTooltips.AddTool txtCampo(33).CtPri, 0, LoadGasString(45794)
+   Label(40).Caption = LoadGasString(45795)
+   vgTooltips.AddTool txtCampo(34).CtPri, 0, LoadGasString(45796)
+   Label(41).Caption = LoadGasString(45797)
+   vgTooltips.AddTool txtCampo(35).CtPri, 0, LoadGasString(45798)
+   vgTooltips.AddTool chkCampo(2).CtPri, 0, LoadGasString(45799)
+   chkCampo(2).Caption = LoadGasString(45800)
+   Label(42).Caption = LoadGasString(45801)
+   vgTooltips.AddTool txtCampo(37).CtPri, 0, LoadGasString(45802)
+   vgTooltips.AddTool txtCampo(38).CtPri, 0, LoadGasString(45803)
+   Label(43).Caption = LoadGasString(45804)
    With Grid(0)
       .RowHeight = 285
       .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
@@ -5097,26 +5144,8 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "% ICMS", "Aliquota do Icms", TP_NUMERICO, "99,9999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 960
       .AddColumn Nothing, , "Vr do Ipi", "Vr do IPI", TP_NUMERICO, "9.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 930
       .AddColumn Nothing, , "Vr do Icms", "Vr do Icms", TP_NUMERICO, "9.999.999,99", , False, , , , , , , , , , "0", , , , "0", 1, "0", 1260
-      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_CARACTER, "999999, 888888, 777777", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1800
+      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1230
       .AddColumn Nothing, , "Cliente", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 3270
-   End With
-   With Grid(8)
-      .RowHeight = 285
-      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
-      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
-      .FullRowSelect = False
-      .BorderStyle = 1
-      .NavigationAddMode = 1
-      .CacheSize = 100
-      .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS Or POP_GRID_STRIPES
-      .AllowInsert = Permitido("Produtos do Pedido Compra", ACAO_INCLUINDO)
-      .AllowEdit = Permitido("Produtos do Pedido Compra", ACAO_EDITANDO)
-      .AllowDelete = Permitido("Produtos do Pedido Compra", ACAO_EXCLUINDO)
-      .Visible = True
-      .Enabled = True
-      .AddColumn Nothing, , "Produto", "Id do Produto", TP_NUMERICO, "", , False, , "IRRIGACAO", "Produtos", "Seqüência do Produto", "Seqüência do Produto; Descrição", "Seqüência do Produto; Descrição", "Seqüência do Produto", "", , "1", , , , "0", 1, "0", 4920
-      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "", , "1", , , , "0", 1, "0", 1200
-      .AddColumn Nothing, , "Nome Cliente", "Nome Cliente", TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 4000
    End With
    With Grid(1)
       .RowHeight = 285
@@ -5244,6 +5273,23 @@ Private Sub Form_Load()
       .AddColumn Nothing, , "Cobrança", "Seqüência da Cobrança", TP_CARACTER, "@x", , False, , "IRRIGACAO", "Tipo de Cobrança", "Seqüência da Cobrança", "Descrição", "Descrição", "Descrição", "", , "1", , , , "0", 1, "0", 1365
       .AddColumn Nothing, , "Nota", "Nota", TP_NUMERICO, "999999999", , False, , , , , , , , , , "0", , , , "0", 1, "0", 960
    End With
+   With Grid(7)
+      .RowHeight = 315
+      .AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
+      .AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
+      .FullRowSelect = False
+      .BorderStyle = 1
+      .NavigationAddMode = 1
+      .CacheSize = 100
+      .SpecialPopupDisabled POP_GRID_COLS Or POP_GRID_BARS Or POP_GRID_STRIPES
+      .AllowInsert = Permitido("Orçamentos da compra", ACAO_INCLUINDO)
+      .AllowEdit = Permitido("Orçamentos da compra", ACAO_EDITANDO)
+      .AllowDelete = Permitido("Orçamentos da compra", ACAO_EXCLUINDO)
+      .AddColumn Nothing, , "Nº", "Sequencia do Item", TP_NUMERICO, "999999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 420
+      .AddColumn Nothing, , "Orçamento", "Seqüência do Orçamento", TP_NUMERICO, "999999", , False, , "IRRIGACAO", "Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento", "Seqüência do Orçamento-", "", , "1", , , , "0", 1, "0", 930
+      .AddColumn Nothing, , "Emissão", , TP_DATA_HORA, "99/99/9999", , True, , , , , , , , , , "0", , , , "0", 1, "0", 1170
+      .AddColumn Nothing, , "Cliente", , TP_CARACTER, , , True, , , , , , , , , , "0", , , , "0", 1, "0", 5625
+   End With
    AjustaTamanho Me
    IniciaFormDados Me
    If vgTb.RecordCount > 0 Then vgTb.MoveLast
@@ -5251,12 +5297,10 @@ Private Sub Form_Load()
    vgPriVez = False
    Reposition
    CarregaTotalizador
-   
-   'Inicializar Grid(8) explicitamente
-   On Error Resume Next
-   Grid(8).RestoreListView True
-   
-   
+
+   'Inicializar ListView de Orçamentos
+   InicializaListViewOrcamentos
+
    Screen.MousePointer = vbDefault
    Exit Sub
 
@@ -5838,9 +5882,6 @@ Private Sub Form_Unload(Cancel As Integer)
    For i = 0 To Grid.Count - 1
       Grid(i).Finalize
    Next
-   'Incluir Grid(8) que tem índice fora do range
-   On Error Resume Next
-   Grid(8).Finalize
 
    grdBrowse.Finalize                             'descarrega o grid
    Set frmPComprN = Nothing                       'libera o segmento de código do form
@@ -5884,9 +5925,6 @@ Private Sub vgTb_AfterCommitTrans()
       For i = 0 To Grid.Count - 1
          Grid(i).RestoreListView True
       Next
-      'Incluir Grid(8) que tem índice fora do range
-      On Error Resume Next
-      Grid(8).RestoreListView True
    End If
 End Sub
 
@@ -5905,9 +5943,6 @@ Private Sub vgTb_AfterRollBackTrans()
       For i = 0 To Grid.Count - 1
          Grid(i).RestoreListView True                    'restaura a imagem
       Next
-      'Incluir Grid(8) que tem índice fora do range
-      On Error Resume Next
-      Grid(8).RestoreListView True
    End If
 End Sub
 
@@ -5930,8 +5965,8 @@ Private Sub Grid_SkipRecord(Index As Integer, vgColumns() As Variant, ByVal vgBo
          vgSqlGrd = ExecutaGrid5(vgColumns(), REPOSITION_NO_GRID)
       Case 6
          vgSqlGrd = ExecutaGrid6(vgColumns(), REPOSITION_NO_GRID)
-      Case 8
-         vgSqlGrd = ExecutaGrid8(vgColumns(), REPOSITION_NO_GRID)
+      Case 7
+         vgSqlGrd = ExecutaGrid7(vgColumns(), REPOSITION_NO_GRID)
    End Select
 End Sub
 
@@ -5959,9 +5994,7 @@ Private Sub Grid_AfterUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCol
    GeraLog Me, Grid(Index).Status, Index, False
       Case 6
    GeraLog Me, Grid(Index).Status, Index, False
-      Case 8
-         ExecutaGrid Index, vgColumns(), PROCESSOS_DIRETOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
-         ExecutaGrid Index, vgColumns(), APOS_EDICAO, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
+      Case 7
    GeraLog Me, Grid(Index).Status, Index, False
    End Select
 End Sub
@@ -5984,7 +6017,7 @@ Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColu
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 6
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
-      Case 8
+      Case 7
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
    End Select
 End Sub
@@ -6009,7 +6042,7 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
          Bx_Consumo_Pedido_Compra![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
       Case 6
          Parcelas_Ped_Compra_Novo![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
-      Case 8
+      Case 7
          Orcamentos_da_compra![Id do Pedido] = Pedido_de_compra_novo![Id do Pedido]
    End Select
 End Sub
@@ -6026,7 +6059,7 @@ Private Sub Grid_BeforeDeleteRecord(Index As Integer, ByVal vgItem As Long, vgCo
       Case 4
       Case 5
       Case 6
-      Case 8
+      Case 7
    End Select
 End Sub
 
@@ -6056,7 +6089,7 @@ Private Sub Grid_RecordSetChanged(Index As Integer, ByVal vgNewRecordSet As GRec
          Set Bx_Consumo_Pedido_Compra = vgNewRecordSet
       Case 6
          Set Parcelas_Ped_Compra_Novo = vgNewRecordSet
-      Case 8
+      Case 7
          Set Orcamentos_da_compra = vgNewRecordSet
    End Select
 End Sub
@@ -6106,22 +6139,12 @@ Private Sub Grid_GotFocus(Index As Integer)
          FocoNoPriControle Me                                               'vamos colocar foco no primeiro controle do pai
       End If
    End If
-   
-   ' Funcionalidade de alternância removida - ambos grids sempre ativos
-End Sub
-
-Private Sub Grid_Click(Index As Integer)
-   ' Funcionalidade de alternância removida - ambos grids sempre ativos
 End Sub
 
 Private Sub Grid_StatusChanged(Index As Integer, ByVal vgNewStatus As Integer)
    Dim vgTemAltGrdOld As Boolean
    If vgNewStatus <> ACAO_NAVEGANDO Then vgNewStatus = -vgNewStatus
    PrepBotoes Me, vgNewStatus                                     'acerta icones dos botoes
-   'Sincroniza Grid(8) quando Grid(0) muda para navegação
-   If Index = 0 And vgNewStatus = ACAO_NAVEGANDO Then
-      SincronizaGridOrcamentos
-   End If
    vgTemAltGrdOld = vgTemAlteracaoGrids
    mdiIRRIG.RemontaForm                                           'remonta dos os form da tela
    If vgSituacao = ACAO_NAVEGANDO Then
@@ -6156,8 +6179,8 @@ Private Function ExecutaGrid(Index As Integer, ColumnValue() As Variant, ByVal v
          ExecutaGrid = ExecutaGrid5(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
       Case 6
          ExecutaGrid = ExecutaGrid6(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
-      Case 8
-         ExecutaGrid = ExecutaGrid8(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
+      Case 7
+         ExecutaGrid = ExecutaGrid7(ColumnValue(), vgOq, vgItem, vgCol, vgIsValid, vgColumn, vgErrorMessage, KeyCodeAscii, Shift)
    End Select
 End Function
 
@@ -6191,16 +6214,6 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 6
             vgRetVal = (Round((Qtde * Vr_Unitario), 2))
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 11
-            'Mostra múltiplos orçamentos se existirem, senão mostra o único
-            Dim TextoOrcamentos As String
-            TextoOrcamentos = ObtemOrcamentosTexto(Id_do_Pedido, Id_do_Produto)
-            If Len(TextoOrcamentos) > 0 Then
-               vgRetVal = TextoOrcamentos
-            Else
-               vgRetVal = IIf(Sequencia_do_Orcamento > 0, CStr(Sequencia_do_Orcamento), "")
-            End If
-            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 12
             vgRetVal = (MGeral(Id_do_Pedido, Id_do_Produto, Qtde, Vr_Unitario, Vr_Total, Aliquota_do_IPI, _
    Aliquota_do_ICMS, Vr_do_IPI, Vr_do_Icms, Sequencia_do_Item, Sequencia_do_Orcamento))
@@ -6231,8 +6244,8 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Produtos do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
       GoSub IniApDaCol
@@ -6295,18 +6308,9 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            'Nova validação para múltiplos orçamentos
-            If InStr(CStr(Sequencia_do_Orcamento), ",") > 0 Then
-               'Múltiplos orçamentos separados por vírgula
-               vgIsValid = ProcessaOrcamentosMultiplos(Id_do_Pedido, Sequencia_do_Item, CStr(Sequencia_do_Orcamento))
-               If Not vgIsValid Then vgColumn = 11
-               vgErrorMessage$ = "Um ou mais orçamentos são inválidos!"
-            Else
-               'Orçamento único (validação original)
-               vgIsValid = (Sequencia_do_Orcamento >= 0)
-               If Not vgIsValid Then vgColumn = 11
-               vgErrorMessage$ = "Seqüência do Orçamento inválido!"
-            End If
+            vgIsValid = (Sequencia_do_Orcamento >= 0)
+            If Not vgIsValid Then vgColumn = 11
+            vgErrorMessage$ = "Seqüência do Orçamento inválido!"
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = APOS_EDICAO Then
@@ -6376,7 +6380,7 @@ IniApDaCol:
 IniApDaTb:
    On Error Resume Next
    If Produtos_do_Pedido_Compra.EOF = False And Produtos_do_Pedido_Compra.BOF = False And Produtos_do_Pedido_Compra.RecordCount > 0 Then
-      Id_do_Produto = Produtos_do_Pedido_Compra![Id do Produto]
+      Id_do_Produto = Produtos_do_Pedido_Compra![Id Do Produto]
       Qtde = Produtos_do_Pedido_Compra!Qtde
       Vr_Unitario = Produtos_do_Pedido_Compra![Vr Unitario]
       Vr_Total = Produtos_do_Pedido_Compra![Vr Total]
@@ -6449,7 +6453,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 8
             vgRetVal = (((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 8
+         Case 9
             vgRetVal = (((Vr_Unitario * Qtde + ((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100) * Aliquota_do_ICMS) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
@@ -6470,8 +6474,8 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Despesas do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6623,8 +6627,8 @@ Private Function ExecutaGrid2(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Produtos Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6677,7 +6681,7 @@ IniApDaCol:
 IniApDaTb:
    On Error Resume Next
    If Bx_Produtos_Pedido_Compra.EOF = False And Bx_Produtos_Pedido_Compra.BOF = False And Bx_Produtos_Pedido_Compra.RecordCount > 0 Then
-      Id_do_Produto = Bx_Produtos_Pedido_Compra![Id do Produto]
+      Id_do_Produto = Bx_Produtos_Pedido_Compra![Id Do Produto]
       Qtde_Total = Bx_Produtos_Pedido_Compra![Qtde Total]
       Vr_Unitario = Bx_Produtos_Pedido_Compra![Vr Unitario]
       Vr_Total_do_Pedido = Bx_Produtos_Pedido_Compra![Vr Total do Pedido]
@@ -6763,8 +6767,8 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Despesas Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -6881,7 +6885,7 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 8
             vgRetVal = (((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
-         Case 8
+         Case 9
             vgRetVal = (((Vr_Unitario * Qtde + ((Qtde * Vr_Unitario) * Aliquota_do_IPI) / 100) * Aliquota_do_ICMS) / 100)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
@@ -6902,8 +6906,8 @@ Private Function ExecutaGrid4(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Consumo do Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -7051,8 +7055,8 @@ Private Function ExecutaGrid5(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Bx Consumo Pedido Compra]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -7179,8 +7183,8 @@ Private Function ExecutaGrid6(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = "SELECT * FROM [Parcelas Ped Compra Novo]"
 
       'definindo a expressão de ligação com o pai
-      x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
 
    ElseIf vgOq = DEFAULTDASCOLUNAS Then
       GoSub IniApDaCol
@@ -7291,10 +7295,9 @@ End Function
 
 
 'inicializações, validações e processos do grid filho
-Private Function ExecutaGrid8(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional ByVal vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional ByVal vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
+Private Function ExecutaGrid7(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
-   Dim Sequencia_do_Orcamento As Long, Id_do_Produto As Long, Descricao_Produto As String
-   Dim Id_do_Pedido As Long, Sequencia_do_Item As Long
+   Dim Sequencia_do_Orcamento As Long, Sequencia_do_Item As Long
    vgPriVez = True
    If vgOq = PREVALIDACOES Then
       vgRetVal = False
@@ -7303,39 +7306,20 @@ Private Function ExecutaGrid8(ColumnValue() As Variant, ByVal vgOq As Integer, O
    End If
    vgNVez = 0
    On Error GoTo DeuErro
-
    If vgOq = CONTEUDODACOLUNA Then
-      If Grid(8).Status <> ACAO_NAVEGANDO And vgItem = Grid(8).SelectedItem Then
+      If Grid(7).Status <> ACAO_NAVEGANDO And vgItem = Grid(7).SelectedItem Then
          GoSub IniApDaCol
       Else
          GoSub IniApDaTb
       End If
       On Error Resume Next
       Select Case vgCol
-         Case 0
-            ' Ao clicar na coluna, buscamos o produto e a descrição
-            If Id_do_Produto > 0 Then
-                ' Consulta para buscar a descrição do produto
-                Descricao_Produto = ObtemDescricaoProduto(Id_do_Produto)
-                If Len(Descricao_Produto) > 0 Then
-                    vgRetVal = Descricao_Produto
-                Else
-                    vgRetVal = ""
-                End If
-            Else
-                vgRetVal = ""
-            End If
-            vgColumn = -1 ' flag para permitir definição desse novo valor para coluna do grid
-         Case 11
-            'Mostra múltiplos orçamentos se existirem, senão mostra o único
-            Dim TextoOrcamentos As String
-            TextoOrcamentos = ObtemOrcamentosTexto(Id_do_Pedido, Id_do_Produto)
-            If Len(TextoOrcamentos) > 0 Then
-               vgRetVal = TextoOrcamentos
-            Else
-               vgRetVal = IIf(Sequencia_do_Orcamento > 0, CStr(Sequencia_do_Orcamento), "")
-            End If
-            vgColumn = -1
+         Case 3
+            vgRetVal = (InfoOrc(Id_do_Pedido, Sequencia_do_Orcamento, Sequencia_do_Item, "Emissao"))
+            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
+         Case 4
+            vgRetVal = (InfoOrc(Id_do_Pedido, Sequencia_do_Orcamento, Sequencia_do_Item, "Cliente"))
+            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
       End Select
       If Err Then Err.Clear
    ElseIf vgOq = CONDICOES_ESPECIAIS Then
@@ -7345,61 +7329,37 @@ Private Function ExecutaGrid8(ColumnValue() As Variant, ByVal vgOq As Integer, O
       vgRetVal = ""
    ElseIf vgOq = ABRE_TABELA_GRID Then
       On Error Resume Next
-      vgRetVal = "SELECT * FROM [Produtos do Pedido Compra]"
-      ' Definindo a expressão de ligação com o pai
-      If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF Then
-         x = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
-         vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x)
-      Else
-         ' Se não tem pedido válido, mostra estrutura vazia
-         vgRetVal = "SELECT * FROM [Produtos do Pedido Compra] WHERE 1=0"
-      End If
+      vgRetVal = "SELECT * FROM [Orçamentos da compra]"
+
+      'definindo a expressão de ligação com o pai
+      x$ = "[Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido]
+      vgRetVal = InsereSQL(vgRetVal, EXP_WHERE, x$)
+
+   ElseIf vgOq = DEFAULTDASCOLUNAS Then
+      GoSub IniApDaCol
+      vgRetVal = Null
+      Select Case vgCol
+         Case 1
+            Sequencia_do_Item = SeqItem()
+            vgRetVal = Sequencia_do_Item
+      End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
       GoSub IniApDaCol
       Select Case vgCol
-         Case 0
-            ' Filtra os produtos que estão no pedido atual
-            If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF Then
-                vgRetVal = "[Seqüência do Produto] IN (SELECT DISTINCT [Id do Produto] FROM [Produtos do Pedido Compra] WHERE [Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido] & ")"
-            Else
-                vgRetVal = "1=0"  ' Se não tem pedido, não mostra nada
-            End If
+         Case 2
+            vgRetVal = "" + FiltroOrc() + ""
       End Select
    Else
       If vgOq = VALIDACOES Then
          GoSub IniApDaCol
          vgIsValid = (Sequencia_do_Orcamento > 0)
-         If Not vgIsValid Then vgColumn = 1
+         If Not vgIsValid Then vgColumn = 2
          vgErrorMessage$ = "Seqüência do orçamento inválido!"
-         
-         ' Validação para evitar vínculos duplicados
-         If vgIsValid And Grid(8).Status = ACAO_INCLUINDO Then
-            ' Verificar se todos os objetos e variáveis estão válidos
-            If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF And Id_do_Produto > 0 And Id_do_Pedido > 0 Then
-               Dim TbVerifica As New GRecordSet
-               Set TbVerifica = vgDb.OpenRecordSet("SELECT COUNT(*) AS Total FROM [Produtos do Pedido Compra] WHERE [Id do Pedido] = " & Id_do_Pedido & " AND [Id do Produto] = " & Id_do_Produto & " AND [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
-               If TbVerifica!Total > 0 Then
-                  vgIsValid = False
-                  vgColumn = 1
-                  vgErrorMessage$ = "Este produto já está vinculado a este orçamento!"
-               End If
-               TbVerifica.CloseRecordset
-               Set TbVerifica = Nothing
-            End If
-         End If
-         
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = INICIALIZACOES Then
          GoSub IniApDaCol
-         ColumnValue(0) = 0
-      ElseIf vgOq = APOS_EDICAO Then
-         ' Força atualização da coluna Cliente após editar orçamento
-         If vgCol = 1 Then ' Coluna Orçamento foi editada
-            ' Força atualização visual da linha atual
-            On Error Resume Next
-            vgColumn = -1
-         End If
+         ColumnValue(1) = SeqItem()
       End If
    End If
    GoTo FimDaSub
@@ -7407,30 +7367,17 @@ Private Function ExecutaGrid8(ColumnValue() As Variant, ByVal vgOq As Integer, O
 
 IniApDaCol:
    On Error Resume Next
-   Id_do_Produto = val(Parse$(CStr(ColumnValue(0)), Chr$(1), 1))
-   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
-   ' Obter Id_do_Pedido do contexto atual
-   If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF Then
-      Id_do_Pedido = Pedido_de_compra_novo![Id do Pedido]
-   End If
-   ' Obter Sequencia_do_Item da tabela relacionada
-   If Not Produtos_do_Pedido_Compra.EOF And Not Produtos_do_Pedido_Compra.BOF Then
-      Sequencia_do_Item = Produtos_do_Pedido_Compra![Sequencia do Item]
-   End If
+   Sequencia_do_Item = ColumnValue(1)
+   Sequencia_do_Orcamento = val(Parse$(CStr(ColumnValue(2)), Chr$(1), 1))
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
 
 IniApDaTb:
    On Error Resume Next
-   If Produtos_do_Pedido_Compra.EOF = False And Produtos_do_Pedido_Compra.BOF = False And Produtos_do_Pedido_Compra.RecordCount > 0 Then
-      Id_do_Produto = Produtos_do_Pedido_Compra![Id do Produto]
-      Sequencia_do_Orcamento = Produtos_do_Pedido_Compra![Seqüência do Orçamento]
-      Sequencia_do_Item = Produtos_do_Pedido_Compra![Sequencia do Item]
-   End If
-   ' Obter Id_do_Pedido do contexto atual
-   If Not Pedido_de_compra_novo Is Nothing And Not Pedido_de_compra_novo.EOF And Not Pedido_de_compra_novo.BOF Then
-      Id_do_Pedido = Pedido_de_compra_novo![Id do Pedido]
+   If Orcamentos_da_compra.EOF = False And Orcamentos_da_compra.BOF = False And Orcamentos_da_compra.RecordCount > 0 Then
+      Sequencia_do_Orcamento = Orcamentos_da_compra![Seqüência do Orçamento]
+      Sequencia_do_Item = Orcamentos_da_compra![Sequencia do Item]
    End If
    If Err Then Err.Clear
    On Error GoTo DeuErro
@@ -7452,50 +7399,11 @@ DeuErro:
 
 ResumeErro:
    On Error Resume Next
+
 FimDaSub:
-   ExecutaGrid8 = vgRetVal
+   ExecutaGrid7 = vgRetVal
    vgPriVez = False
 End Function
-
-
-
-
-Private Function ObtemDescricaoProduto(ByVal Id_do_Produto As Long) As String
-    Dim vgRs As GRecordSet
-    Dim x As String
-    Dim DescricaoProduto As String
-    
-    On Error GoTo DeuErro
-    
-    ' Crie a consulta SQL para buscar a descrição do produto com base no Id_do_Produto
-    x = "SELECT [Descricao do Produto] FROM [Produtos do Pedido Compra] WHERE [Id do Produto] = " & Id_do_Produto
-    
-    ' Execute a consulta
-    Set vgRs = vgDb.OpenRecordSet(x)
-    
-    ' Verifique se o produto foi encontrado
-    If Not vgRs.EOF Then
-        DescricaoProduto = vgRs![Descricao do Produto]
-    Else
-        DescricaoProduto = "" ' Caso não encontre a descrição, retorna uma string vazia
-    End If
-    
-    vgRs.CloseRecordset
-    Set vgRs = Nothing
-    
-    ' Retorne a descrição do produto
-    ObtemDescricaoProduto = DescricaoProduto
-    
-    Exit Function
-
-DeuErro:
-    ' Tratamento de erro
-    MsgBox "Erro ao obter descrição do produto: " & Err.Description
-    ObtemDescricaoProduto = ""
-End Function
-
-
-
 
 'pega definições de cores para o grid
 Private Sub PegaCoresGrid0(ByVal vgItem As Long, ByVal vgSubItem As Long, vgTextColor As Long, vgBackColor As Long, vgSelectTextColor As Long, vgSelectBakColor As Long, vgColumnTextColor As Long, vgColumnBackColor As Long)
@@ -7658,7 +7566,7 @@ Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vg
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
       Case 6
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
-      Case 8
+      Case 7
          vgLocked = ExecutaGrid(Index, vgColumns(), PREVALIDACOES, , vgCol)
    End Select
 End Sub
@@ -7766,134 +7674,368 @@ Private Sub txtCp_MouseDown(Index As Integer, Button As Integer, Shift As Intege
    txtCampo(Index).MouseDown
 End Sub
 
-'Função unificada para buscar orçamentos vinculados a um produto
-'Prioriza a tabela [Orçamentos da compra] (múltiplos vínculos)
-'Se não encontrar, usa o campo direto [Produtos do Pedido Compra].[Seqüência do Orçamento]
-Public Function BuscaOrcamentosProduto(IdPedido As Long, SeqItem As Long) As GRecordSet
-   Dim Tb As New GRecordSet
-   
-   On Error GoTo DeuErro
-   
-   'Primeiro tenta buscar na tabela de vínculos múltiplos
-   Set Tb = vgDb.OpenRecordSet("SELECT DISTINCT OC.[Seqüência do Orçamento], O.[Data de Emissão], O.[Nome Cliente] " & _
-                               "FROM [Orçamentos da compra] OC " & _
-                               "INNER JOIN Orçamento O ON OC.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
-                               "WHERE OC.[Id do Pedido] = " & IdPedido & " AND OC.[Sequencia do Item] = " & SeqItem)
-   
-   'Se não encontrou vínculos múltiplos, busca no campo direto
-   If Tb.RecordCount = 0 Then
-      Tb.CloseRecordset
-      Set Tb = vgDb.OpenRecordSet("SELECT DISTINCT PPC.[Seqüência do Orçamento], O.[Data de Emissão], O.[Nome Cliente] " & _
-                                  "FROM [Produtos do Pedido Compra] PPC " & _
-                                  "INNER JOIN Orçamento O ON PPC.[Seqüência do Orçamento] = O.[Seqüência do Orçamento] " & _
-                                  "WHERE PPC.[Id do Pedido] = " & IdPedido & " AND PPC.[Sequencia do Item] = " & SeqItem & " AND PPC.[Seqüência do Orçamento] > 0")
-   End If
-   
-   Set BuscaOrcamentosProduto = Tb
-   Exit Function
+' ============================================================================
+' FUNÇÕES DO LISTVIEW DE ORÇAMENTOS VINCULADOS
+' ============================================================================
+
+' Função para obter descrição do produto
+Private Function ObtemDescricaoProduto(ByVal Id_do_Produto As Long) As String
+    Dim vgRs As GRecordSet
+    Dim x As String
+    Dim DescricaoProduto As String
+
+    On Error GoTo DeuErro
+
+    ' Consulta SQL para buscar a descrição do produto na tabela Produtos
+    x = "SELECT [Descrição] FROM [Produtos] WHERE [Seqüência do Produto] = " & Id_do_Produto
+
+    ' Execute a consulta
+    Set vgRs = vgDb.OpenRecordSet(x)
+
+    ' Verifique se o produto foi encontrado
+    If Not vgRs.EOF Then
+        DescricaoProduto = vgRs![Descrição]
+    Else
+        DescricaoProduto = "" ' Caso não encontre a descrição, retorna uma string vazia
+    End If
+
+    vgRs.CloseRecordset
+    Set vgRs = Nothing
+
+    ' Retorne a descrição do produto
+    ObtemDescricaoProduto = DescricaoProduto
+
+    Exit Function
 
 DeuErro:
-   Set BuscaOrcamentosProduto = Nothing
+    ' Tratamento de erro
+    MsgBox "Erro ao obter descrição do produto: " & Err.Description
+    ObtemDescricaoProduto = ""
 End Function
 
-'Processa múltiplos orçamentos separados por vírgula
-'Formato: "12345, 67890, 11111"
-'Retorna True se todos são válidos
-Private Function ProcessaOrcamentosMultiplos(IdPedido As Long, SeqItem As Long, TextoOrcamentos As String) As Boolean
-   Dim orcamentos() As String
-   Dim i As Integer
-   Dim SeqOrc As Long
-   Dim Tb As GRecordSet
-   
-   On Error GoTo DeuErro
-   
-   ProcessaOrcamentosMultiplos = True
-   
-   If Len(Trim(TextoOrcamentos)) = 0 Then Exit Function
-   
-   'Remove vínculos existentes
-   vgDb.Execute "DELETE FROM [Orçamentos da compra] WHERE [Id do Pedido] = " & IdPedido & " AND [Sequencia do Item] = " & SeqItem
-   
-   'Split por vírgula
-   orcamentos = Split(TextoOrcamentos, ",")
-   
-   For i = 0 To UBound(orcamentos)
-      SeqOrc = CLng(Trim(orcamentos(i)))
-      
-      If SeqOrc > 0 Then
-         'Verifica se orçamento existe
-         Set Tb = vgDb.OpenRecordSet("SELECT COUNT(*) AS Total FROM Orçamento WHERE [Seqüência do Orçamento] = " & SeqOrc)
-         If Tb!Total > 0 Then
-            'Adiciona vínculo
-            Tb.CloseRecordset
-            Set Tb = vgDb.OpenRecordSet("SELECT * FROM [Orçamentos da compra] WHERE 1=0")
-            Tb.AddNew
-            Tb![Id do Pedido] = IdPedido
-            Tb![Sequencia do Item] = SeqItem
-            Tb![Seqüência do Orçamento] = SeqOrc
-            Tb.Update
-         Else
-            ProcessaOrcamentosMultiplos = False
-         End If
-         If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
-      End If
-   Next i
-   
-   Exit Function
-DeuErro:
-   ProcessaOrcamentosMultiplos = False
-   If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
-End Function
-
-'Retorna lista de orçamentos vinculados como texto separado por vírgula
-Private Function ObtemOrcamentosTexto(IdPedido As Long, IdProduto As Long) As String
-   Dim Tb As GRecordSet
-   Dim resultado As String
-   
-   On Error GoTo DeuErro
-   
-   'Primeiro tenta buscar na tabela de vínculos múltiplos
-   Set Tb = vgDb.OpenRecordSet("SELECT [Seqüência do Orçamento] FROM [Orçamentos da compra] WHERE [Id do Pedido] = " & IdPedido & " AND [Id_do_Produto] = " & IdProduto & " ORDER BY [Seqüência do Orçamento]")
-   
-   Do While Not Tb.EOF
-      If Len(resultado) > 0 Then resultado = resultado & ", "
-      resultado = resultado & Tb![Seqüência do Orçamento]
-      Tb.MoveNext
-   Loop
-   
-   Tb.CloseRecordset
-   Set Tb = Nothing
-   
-   ObtemOrcamentosTexto = resultado
-   Exit Function
-   
-DeuErro:
-   ObtemOrcamentosTexto = ""
-   If Not Tb Is Nothing Then Tb.CloseRecordset: Set Tb = Nothing
-End Function
-
-'Sincroniza Grid(8) com o produto selecionado no Grid(0)
-Private Sub SincronizaGridOrcamentos()
+' Inicializa o ListView de Orçamentos com colunas
+Private Sub InicializaListViewOrcamentos()
    On Error Resume Next
-   
-   'Força recarregamento completo do Grid(8) para o pedido atual
-   If Grid(8).Status = ACAO_NAVEGANDO Then
-      Dim sqlGrid8 As String, vgCols() As Variant
-      
-      'Fecha recordset atual
-      Grid(8).CloseRecordset
-      
-      'Obtem nova consulta para o pedido atual
-      sqlGrid8 = ExecutaGrid(8, vgCols(), ABRE_TABELA_GRID)
-      
-      'Reabre com dados do pedido atual
-      If Len(sqlGrid8) > 0 Then
-         Grid(8).OpenRecordSet sqlGrid8, CURSOR_TABLE
-      End If
-   End If
-   
-   'Força restauração visual
-   Grid(8).RestoreListView True
+
+   ' Limpa itens existentes
+   lvwOrcamentos.ListItems.Clear
+   lvwOrcamentos.ColumnHeaders.Clear
+
+   ' Configura as colunas com larguras otimizadas
+   lvwOrcamentos.ColumnHeaders.Add , "COD_PRODUTO", "Cód. Produto", 1400
+   lvwOrcamentos.ColumnHeaders.Add , "DESC_PRODUTO", "Descrição do Produto", 2800
+   lvwOrcamentos.ColumnHeaders.Add , "QTDE", "Qtde", 800
+   lvwOrcamentos.ColumnHeaders.Add , "COD_ORCAMENTO", "Cód. Orçamento", 1400
+   lvwOrcamentos.ColumnHeaders.Add , "NOME_CLIENTE", "Nome do Cliente", 6000
+
+   ' Configura propriedades visuais modernas
+   lvwOrcamentos.View = lvwReport
+   lvwOrcamentos.FullRowSelect = True
+   lvwOrcamentos.GridLines = True
+   lvwOrcamentos.HideSelection = False
+   lvwOrcamentos.HotTracking = True
+   lvwOrcamentos.HoverSelection = True
+
+   ' Carrega dados existentes
+   CarregaVinculosNoListView
 End Sub
 
-'teste 27
+' Carrega vínculos existentes no ListView
+Private Sub CarregaVinculosNoListView()
+   On Error Resume Next
+   Dim Rs As New GRecordSet
+   Dim Item As ListItem
+   Dim DescProduto As String, DescOrcamento As String
+
+   ' Limpa lista atual
+   lvwOrcamentos.ListItems.Clear
+
+   ' Se não há pedido selecionado, sai
+   If Pedido_de_compra_novo Is Nothing Or Pedido_de_compra_novo.EOF Or Pedido_de_compra_novo.BOF Then
+      Exit Sub
+   End If
+
+   ' Consulta vínculos do pedido atual
+   Set Rs = vgDb.OpenRecordSet("SELECT * FROM [VinculaPedidoOrcamento] WHERE [Id do Pedido] = " & Pedido_de_compra_novo![Id do Pedido] & " ORDER BY [ID_Vinculacao]")
+
+   Do While Not Rs.EOF
+      ' Busca descrições
+      DescProduto = ObtemDescricaoProduto(Rs![Seqüência do Produto])
+      DescOrcamento = ObtemDescricaoOrcamento(Rs![Seqüência do Orçamento])
+
+      ' Busca nome do cliente através da Sequência do Geral
+      Dim NomeCliente As String
+      If Not IsNull(Rs![Seqüência do Geral]) And Rs![Seqüência do Geral] > 0 Then
+         NomeCliente = ObtemNomeCliente(Rs![Seqüência do Geral])
+      Else
+         NomeCliente = "Cliente não identificado"
+      End If
+
+      ' Adiciona item ao ListView
+      Set Item = lvwOrcamentos.ListItems.Add(, "ID" & Rs![ID_Vinculacao], CStr(Rs![Seqüência do Produto]))
+      Item.SubItems(1) = DescProduto
+      Item.SubItems(2) = Format(Rs![Qtde], "0.00")  ' Quantidade formatada
+      Item.SubItems(3) = CStr(Rs![Seqüência do Orçamento])
+      Item.SubItems(4) = NomeCliente  ' Nome do cliente
+      Item.Tag = Rs![ID_Vinculacao] ' Guarda ID para edição/exclusão
+
+      Rs.MoveNext
+   Loop
+
+   Rs.CloseRecordset
+   Set Rs = Nothing
+
+   ' Atualiza estado dos botões
+   AtualizaBotoesVinculacao
+End Sub
+
+' Atualiza estado dos botões baseado na seleção
+Private Sub AtualizaBotoesVinculacao()
+   cmdEditarVinculo.Enabled = (lvwOrcamentos.SelectedItem Is Nothing = False)
+End Sub
+
+' Eventos dos botões do ListView
+Private Sub cmdInserirVinculo_Click()
+   If vgPriVez Then Exit Sub
+   InserirNovoVinculo
+End Sub
+
+Private Sub cmdEditarVinculo_Click()
+   If vgPriVez Then Exit Sub
+   If lvwOrcamentos.SelectedItem Is Nothing Then
+      MsgBox "Selecione um item para editar!", vbExclamation, vaTitulo
+      Exit Sub
+   End If
+   EditarVinculoSelecionado
+End Sub
+
+' Evento de seleção do ListView
+Private Sub lvwOrcamentos_Click()
+   AtualizaBotoesVinculacao
+End Sub
+
+Private Sub lvwOrcamentos_ItemClick(ByVal Item As MSComctlLib.ListItem)
+   AtualizaBotoesVinculacao
+End Sub
+
+' Evento KeyDown do ListView - permite excluir com tecla DELETE
+Private Sub lvwOrcamentos_KeyDown(KeyCode As Integer, Shift As Integer)
+   If KeyCode = vbKeyDelete Then
+      If Not lvwOrcamentos.SelectedItem Is Nothing Then
+         ExcluirVinculoSelecionado
+      End If
+   End If
+End Sub
+
+' Função modal unificada para inserção/edição de vínculos
+Private Sub AbreModalInsercaoVinculo(ByVal CodigoProdutoAtual As Long, ByVal NumOrcamentoAtual As Long)
+   On Error GoTo ErroModal
+   Dim ModoEdicao As Boolean
+   Dim IdVinculacao As Long
+
+   ModoEdicao = (CodigoProdutoAtual <> 0 And NumOrcamentoAtual <> 0)
+
+   ' Carrega o form modal
+   Load frmModalVinculo
+
+   ' Inicializa conexão com banco de dados
+   frmModalVinculo.SetDatabase
+
+   ' Configura o form para o modo apropriado
+   frmModalVinculo.ModoEdicao = ModoEdicao
+   frmModalVinculo.CodigoProdutoOriginal = CodigoProdutoAtual
+   frmModalVinculo.NumOrcamentoOriginal = NumOrcamentoAtual
+
+   ' Passa informações necessárias para validações
+   frmModalVinculo.IdPedidoAtual = Pedido_de_compra_novo![Id do Pedido]
+   If ModoEdicao Then
+      frmModalVinculo.IdVinculacaoAtual = lvwOrcamentos.SelectedItem.Tag
+   End If
+
+   ' No modo edição, busca a quantidade atual do banco
+   If ModoEdicao Then
+      Dim RsQtde As GRecordSet
+      Set RsQtde = vgDb.OpenRecordSet("SELECT [Qtde] FROM [VinculaPedidoOrcamento] WHERE [ID_Vinculacao] = " & lvwOrcamentos.SelectedItem.Tag)
+      If Not RsQtde.EOF Then
+         frmModalVinculo.QuantidadeOriginal = RsQtde![Qtde]
+      Else
+         frmModalVinculo.QuantidadeOriginal = 1
+      End If
+      RsQtde.CloseRecordset
+      Set RsQtde = Nothing
+   End If
+
+   ' Configura o modal após definir todas as propriedades
+   frmModalVinculo.ConfigurarModal
+
+   ' Exibe o form modal
+   frmModalVinculo.Show vbModal
+
+   ' Verifica se foi confirmado
+   If Not frmModalVinculo.Confirmado Then
+      Unload frmModalVinculo
+      Exit Sub
+   End If
+
+   ' Obtém os dados do form
+   Dim CodigoProduto As Long, NumOrcamento As Long, Quantidade As Double
+   CodigoProduto = frmModalVinculo.CodigoProduto
+   NumOrcamento = frmModalVinculo.NumOrcamento
+   Quantidade = frmModalVinculo.Quantidade
+
+   ' Executa a operação no banco
+   On Error GoTo ErroModal
+   vgDb.BeginTrans
+
+   If ModoEdicao Then
+      ' Modo edição - atualiza registro existente
+      IdVinculacao = lvwOrcamentos.SelectedItem.Tag
+
+      ' Busca o Seqüência do Geral do orçamento
+      Dim Rs As GRecordSet
+      Set Rs = vgDb.OpenRecordSet("SELECT [Seqüência do Geral] FROM [Orçamento] WHERE [Seqüência do Orçamento] = " & NumOrcamento)
+
+      If Rs.EOF Then
+         MsgBox "Erro: Orçamento não encontrado!", vbCritical, vaTitulo
+         vgDb.RollBackTrans
+         Unload frmModalVinculo
+         Exit Sub
+      End If
+
+      vgDb.Execute "UPDATE [VinculaPedidoOrcamento] SET " & _
+                   "[Seqüência do Produto] = " & CodigoProduto & ", " & _
+                   "[Seqüência do Orçamento] = " & NumOrcamento & ", " & _
+                   "[Seqüência do Geral] = " & Rs![Seqüência do Geral] & ", " & _
+                   "[Qtde] = " & Substitui(CStr(Quantidade), ",", ".", SO_UM) & " " & _
+                   "WHERE [ID_Vinculacao] = " & IdVinculacao
+
+      Rs.CloseRecordset
+      Set Rs = Nothing
+      MsgBox "Vínculo alterado com sucesso!", vbInformation, vaTitulo
+   Else
+      ' Modo inserção - cria novo registro
+      ' Primeiro busca o Seqüência do Geral do orçamento
+
+      Set Rs = vgDb.OpenRecordSet("SELECT [Seqüência do Geral] FROM [Orçamento] WHERE [Seqüência do Orçamento] = " & NumOrcamento)
+
+      If Rs.EOF Then
+         MsgBox "Erro: Orçamento não encontrado!", vbCritical, vaTitulo
+         vgDb.RollBackTrans
+         Unload frmModalVinculo
+         Exit Sub
+      End If
+
+      vgDb.Execute "INSERT INTO [VinculaPedidoOrcamento] " & _
+                   "([Seqüência do Orçamento], [Seqüência do Geral], [Id do Pedido], [Seqüência do Produto], [Qtde]) VALUES " & _
+                   "(" & NumOrcamento & ", " & Rs![Seqüência do Geral] & ", " & _
+                   Pedido_de_compra_novo![Id do Pedido] & ", " & CodigoProduto & ", " & _
+                   Substitui(CStr(Quantidade), ",", ".", SO_UM) & ")"
+
+      Rs.CloseRecordset
+      Set Rs = Nothing
+      MsgBox "Vínculo criado com sucesso!", vbInformation, vaTitulo
+   End If
+
+   vgDb.CommitTrans
+
+   ' Recarrega o ListView e fecha o form
+   CarregaVinculosNoListView
+   Unload frmModalVinculo
+   Exit Sub
+
+ErroModal:
+   On Error Resume Next
+   vgDb.RollBackTrans
+   Unload frmModalVinculo
+   On Error GoTo 0
+   MsgBox "Erro na operação: " & Err.Description, vbCritical, vaTitulo
+End Sub
+
+' Lógica de inserção de novo vínculo usando modal
+Private Sub InserirNovoVinculo()
+   ' Verifica se há pedido selecionado
+   If Pedido_de_compra_novo Is Nothing Or Pedido_de_compra_novo.EOF Or Pedido_de_compra_novo.BOF Then
+      MsgBox "Nenhum pedido selecionado!", vbExclamation, vaTitulo
+      Exit Sub
+   End If
+
+   ' Abre o modal de inserção
+   AbreModalInsercaoVinculo 0, 0 ' 0,0 = modo inserção
+End Sub
+
+' Lógica de edição de vínculo existente usando modal
+Private Sub EditarVinculoSelecionado()
+   Dim Item As ListItem
+   Set Item = lvwOrcamentos.SelectedItem
+
+   ' Abre o modal em modo edição com dados atuais
+   AbreModalInsercaoVinculo val(Item.Text), val(Item.SubItems(3))
+End Sub
+
+' Lógica de exclusão de vínculo
+Private Sub ExcluirVinculoSelecionado()
+   On Error GoTo ErroExclusao
+   Dim Item As ListItem
+   Dim IdVinculacao As Long
+   Dim Resposta As Integer
+
+   Set Item = lvwOrcamentos.SelectedItem
+   IdVinculacao = Item.Tag
+
+   ' Confirma exclusão
+   Resposta = MsgBox("Confirma a exclusão do vínculo?" & vbCrLf & vbCrLf & _
+                     "Produto: " & Item.Text & " - " & Item.SubItems(1) & vbCrLf & _
+                     "Orçamento: " & Item.SubItems(2) & vbCrLf & _
+                     "Cliente: " & Item.SubItems(3) & vbCrLf & vbCrLf & _
+                     "Esta ação não pode ser desfeita!", vbYesNo + vbQuestion, vaTitulo)
+   If Resposta <> vbYes Then Exit Sub
+
+   ' Exclui o vínculo
+   vgDb.BeginTrans
+   vgDb.Execute "DELETE FROM [VinculaPedidoOrcamento] WHERE [ID_Vinculacao] = " & IdVinculacao
+   vgDb.CommitTrans
+
+   ' Recarrega o ListView
+   CarregaVinculosNoListView
+
+   MsgBox "Vínculo excluído com sucesso!" & vbCrLf & "O item foi removido da lista.", vbInformation, vaTitulo
+   Exit Sub
+
+ErroExclusao:
+   On Error Resume Next
+   vgDb.RollBackTrans
+   On Error GoTo 0
+   MsgBox "Erro ao excluir vínculo: " & Err.Description, vbCritical, vaTitulo
+End Sub
+
+' Função para obter descrição do orçamento
+Private Function ObtemDescricaoOrcamento(IdOrcamento As Long) As String
+   On Error Resume Next
+   Dim Rs As New GRecordSet
+   Set Rs = vgDb.OpenRecordSet("SELECT [Seqüência do Orçamento] FROM [Orçamento] WHERE [Seqüência do Orçamento] = " & IdOrcamento)
+   If Not Rs.EOF Then
+      ObtemDescricaoOrcamento = "Orç. " & Rs![Seqüência do Orçamento]
+   Else
+      ObtemDescricaoOrcamento = "Orçamento não encontrado"
+   End If
+   Rs.CloseRecordset
+   Set Rs = Nothing
+End Function
+
+' Função para obter nome do cliente através da Sequência do Geral
+Private Function ObtemNomeCliente(SequenciaGeral As Long) As String
+   On Error Resume Next
+   Dim Rs As New GRecordSet
+   Set Rs = vgDb.OpenRecordSet("SELECT [Razão Social] FROM [Geral] WHERE [Seqüência do Geral] = " & SequenciaGeral)
+   If Not Rs.EOF Then
+      ObtemNomeCliente = Rs![Razão Social]
+   Else
+      ObtemNomeCliente = "Cliente não encontrado"
+   End If
+   Rs.CloseRecordset
+   Set Rs = Nothing
+End Function
+
+
+
+

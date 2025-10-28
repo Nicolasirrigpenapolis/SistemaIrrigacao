@@ -25,13 +25,13 @@ Dim vgDataBaseType As EnumDataBaseType, vgConnection As Object, _
             vgDialeto As Integer, vgProvider As String, vgDriver As String, vgTimeOut As Long, _
             vgTrustedConnection As Boolean, vgStringConnection As String, vgMaxLocks As Integer, vgTransCount As Integer
 
-Private vgTables As GTables                                 'coleção de tabelas para essa conexão
-Private vgQuerys As GQuerys                                 'coleção de querys para esse banco
+Private vgTables As GTables                                 'coleï¿½ï¿½o de tabelas para essa conexï¿½o
+Private vgQuerys As GQuerys                                 'coleï¿½ï¿½o de querys para esse banco
 Private vgRelations As GRelations
 Private vgName As String
 
 Public BdTrans As GBdTrans
-Public vgInTransaction As Boolean                            'flag que indica se o banco está no meio de uma transação
+Public vgInTransaction As Boolean                            'flag que indica se o banco estï¿½ no meio de uma transaï¿½ï¿½o
 
 Private Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Long)
 
@@ -46,7 +46,7 @@ Friend Function Init(ByVal Name As String) As Boolean
    Init = True
 End Function
 
-'inicialização de propriedades
+'inicializaï¿½ï¿½o de propriedades
 Private Sub Class_Initialize()
    On Error Resume Next
    DataBaseType = -1
@@ -94,11 +94,11 @@ Attribute StringConnection.VB_UserMemId = 0
    StringConnection = vgStringConnection
 End Property
 
-'função para corrigir as filtragens usando Null
+'funï¿½ï¿½o para corrigir as filtragens usando Null
 Public Function TrataNull(ByVal vgQuery As String) As String
    Dim x As String
    x$ = ExtraiSQL(vgQuery$, EXP_WHERE)
-   If Len(x$) > 0 Then                            'se tem expressão WHERE
+   If Len(x$) > 0 Then                            'se tem expressï¿½o WHERE
       x$ = Substitui(x$, "= 'NULL'", "IS NULL", SO_UM) 
       x$ = Substitui(x$, "= NULL", "IS NULL", SO_UM) 
       TrataNull = InsereSQL(vgQuery$, EXP_WHERE, x$)
@@ -107,7 +107,7 @@ Public Function TrataNull(ByVal vgQuery As String) As String
    End If
 End Function
 
-'função para Trocar um valores por outro, dentro de uma query
+'funï¿½ï¿½o para Trocar um valores por outro, dentro de uma query
 Public Function TrocaValores(vgAlvo As String, vgOque As String, vgPeloQue As String) As String
    Dim x As String, vgRetVal As String, i As Integer, z As String, ii As Integer, zz As String
    vgRetVal$ = vgAlvo
@@ -128,7 +128,7 @@ Public Function TrocaValores(vgAlvo As String, vgOque As String, vgPeloQue As St
                Loop
             Next
             
-            'Vamos ver se não está no final, para fazer também
+            'Vamos ver se nï¿½o estï¿½ no final, para fazer tambï¿½m
             ii = InStr(UCase(vgRetVal$), UCase(z$ & vgOque))
             If ii = Len(vgRetVal$) - Len(z$ & vgOque) + 1 Then
                vgRetVal$ = Mid(vgRetVal$, 1, ii) & vgPeloQue
@@ -339,7 +339,7 @@ TentaNovamente:
 ApagaBanco:
    Close #Ar                                      'fecha arquivo
    vgConnection.Execute "USE " & Chr$(34) & "MASTER" & Chr$(34) 'seleciona o banco master
-   vgConnection.Execute "DROP DATABASE " + vgDataBaseName$      'apaga o banco, porque deu erro após o banco ter sido criado pelo programa
+   vgConnection.Execute "DROP DATABASE " + vgDataBaseName$      'apaga o banco, porque deu erro apï¿½s o banco ter sido criado pelo programa
    If Pv = True Then                                            'se deu erro 1 vez, tenta novamente
       Pv = False
       Resume TentaNovamente
@@ -423,11 +423,11 @@ AbreNovamente:
    End If
    
    If vgErrDatabase Then
-      'Atenção!!!
-      'Ao executar o aplicativo pelo VB e ocorrer erro nesta linha, verifique se a forma de debug está corretamente definida.
+      'Atenï¿½ï¿½o!!!
+      'Ao executar o aplicativo pelo VB e ocorrer erro nesta linha, verifique se a forma de debug estï¿½ corretamente definida.
       'Verifique no menu:
       'Tools->Options, na aba General, no frame "Error trapping", 
-      'Selecione a opção: "Break on Unhanheld Errors"
+      'Selecione a opï¿½ï¿½o: "Break on Unhanheld Errors"
       Error 65500
    ElseIf vgCreateDb Then
       GoTo CriaBanco
@@ -455,7 +455,7 @@ DeuErro:
          vgConnectOnly = True
          Resume AbreNovamente
       End If
-   ElseIf Err.Number = 3024 Then                     'banco não encontrado
+   ElseIf Err.Number = 3024 Then                     'banco nï¿½o encontrado
       If vgCreateDb Then
          Resume CriaBanco
       Else
@@ -481,7 +481,7 @@ End Sub
 Public Function OpenRecordSet(ByVal vgSQL As String, Optional ByVal CursorType As EnumCursorType = -1, Optional ByVal Options As Long = -1, Optional ByVal LockType As Long = -1, Optional ByVal UpdateCriteria As Long = -1, Optional ByVal SelectColumns As String, Optional ByVal TopN As Integer = -1, Optional Where As String = "", Optional OrderBy As String = "", Optional Native As Boolean = False) As GRecordSet
    Set OpenRecordSet = New GRecordSet
 
-   'vamos definir as propriedades para abertura do recordset segundo a solicitação
+   'vamos definir as propriedades para abertura do recordset segundo a solicitaï¿½ï¿½o
    OpenRecordSet.CursorType = CursorType
    OpenRecordSet.LockType = LockType
    OpenRecordSet.Options = Options
@@ -491,7 +491,7 @@ Public Function OpenRecordSet(ByVal vgSQL As String, Optional ByVal CursorType A
    OpenRecordSet.OrderBy = OrderBy
    OpenRecordSet.Top = TopN
 
-   'vamos corrigir a query para o banco específico dessa conexão
+   'vamos corrigir a query para o banco especï¿½fico dessa conexï¿½o
    If Not Native Then
       vgSQL$ = TrataSQL(vgSQL$, SelectColumns, TopN, Where, OrderBy)
    End If
@@ -587,22 +587,22 @@ Private Sub LoadStruct()
    Dim vgBanco As Object, vgTabela As Object, vgQuery As Object, vgCampo As Object, vgIndice As Object, vgRelacao As Object
    Dim vgTabelaBase As GTable, vgTabelaEst As GTable, vgCampoBase As GColumn, vgCampoEst As GColumn
    Dim vgT As String, vgQ As String, vgI As String, vgC As String, vgR As String, vgTE As String, x As String
-   Dim vgColumn As GColumn                                     'campo temporário para ser adicionado o banco de campos
+   Dim vgColumn As GColumn                                     'campo temporï¿½rio para ser adicionado o banco de campos
 
-   Set Tables = Nothing                                        'destroi se já carregada
-   Set Querys = Nothing                                        'destroi se já carregada
-   Set Relations = Nothing                                     'destroi se já carregada
+   Set Tables = Nothing                                        'destroi se jï¿½ carregada
+   Set Querys = Nothing                                        'destroi se jï¿½ carregada
+   Set Relations = Nothing                                     'destroi se jï¿½ carregada
    
-   Set Tables = New GTables                                    'e instancia a nova coleção
-   Set Querys = New GQuerys                                    'e instancia a nova coleção
-   Set Relations = New GRelations                              'e instancia a nova coleção
+   Set Tables = New GTables                                    'e instancia a nova coleï¿½ï¿½o
+   Set Querys = New GQuerys                                    'e instancia a nova coleï¿½ï¿½o
+   Set Relations = New GRelations                              'e instancia a nova coleï¿½ï¿½o
    Set Tables.Parent = Me
    Set Querys.Parent = Me
    Set Relations.Parent = Me
    
    Set vgArqEstrutura = CreateObject("Msxml.DOMDocument")
 
-   'vamos carregar o XML para a coleção de tabelas
+   'vamos carregar o XML para a coleï¿½ï¿½o de tabelas
    vgArqEstrutura.async = False
    If vgArqEstrutura.Load(vgArqEstXML$) Then
       Set vgProjeto = vgArqEstrutura.selectSingleNode("PROJETO")
@@ -618,7 +618,7 @@ Private Sub LoadStruct()
                   vgC$ = PegaPropXML(vgCampo, "NOME")
                   Tables(vgT$).Columns.Add vgC$, PegaPropXML(vgCampo, "TITULO"), PegaPropXML(vgCampo, "TIPO"), PegaPropXML(vgCampo, "MASCARA"), Val(PegaPropXML(vgCampo, "TAMANHO")), Val(PegaPropXML(vgCampo, "DECIMAL")), Val(PegaPropXML(vgCampo, "INVISIVEL")), Val(PegaPropXML(vgCampo, "NULO")), Val(PegaPropXML(vgCampo, "SISTEMA")), Val(PegaPropXML(vgCampo, "SEQINTERNO")), Val(PegaPropXML(vgCampo, "SEQUENCIA")), False, PegaPropXML(vgCampo, "DEFAULT"), True
                   Set vgColumn = Tables(vgT$).Columns(vgC$)
-                  'vamos adicionar o campo ao BancoDeCampos. Se já existir, ignora o erro
+                  'vamos adicionar o campo ao BancoDeCampos. Se jï¿½ existir, ignora o erro
                   On Error Resume Next
                   BancoDeCampos.Add vgColumn.Name, vgColumn.Title, vgColumn.ColumnType, vgColumn.Mask, vgColumn.Size, vgColumn.QDecimal, vgColumn.Hidden, vgColumn.Nullable, vgColumn.System, vgColumn.SeqInterno, vgColumn.Sequencia, vgColumn.Descending, vgColumn.Default, vgColumn.UpdatableColumn
                   On Error GoTo 0
@@ -645,12 +645,12 @@ Private Sub LoadStruct()
             For Each vgRelacao In vgRelacoes
                vgR$ = PegaPropXML(vgRelacao, "NOME")
 
-               'tabela base da relação
+               'tabela base da relaï¿½ï¿½o
                Set vgTabelaBase = New GTable
                vgT$ = PegaPropXML(vgRelacao, "BASE")
                vgTabelaBase.Init Me, vgT$, Tables(vgT$).Title, Tables(vgT$).Hidden, Tables(vgT$).System, 0
             
-               'tabela estrangeira da relação
+               'tabela estrangeira da relaï¿½ï¿½o
                Set vgTabelaEst = New GTable
                vgTE$ = PegaPropXML(vgRelacao, "ESTRANGEIRA")
                vgTabelaEst.Init Me, vgTE$, Tables(vgTE$).Title, Tables(vgTE$).Hidden, Tables(vgTE$).System, 0
@@ -659,17 +659,17 @@ Private Sub LoadStruct()
                Set vgCampos = vgRelacao.selectNodes("CAMPO")
                For Each vgCampo In vgCampos
                
-                  'campo base da relação
+                  'campo base da relaï¿½ï¿½o
                   Set vgCampoBase = New GColumn
                   vgC$ = PegaPropXML(vgCampo, "BASE")
                   vgCampoBase.Init Relations(vgR$), vgC$, vgC$, Tables(vgT$).Columns(vgC$).ColumnType, Tables(vgT$).Columns(vgC$).Mask, Tables(vgT$).Columns(vgC$).Size, Tables(vgT$).Columns(vgC$).QDecimal, Tables(vgT$).Columns(vgC$).Hidden, Tables(vgT$).Columns(vgC$).Nullable, Tables(vgT$).Columns(vgC$).System, Tables(vgT$).Columns(vgC$).SeqInterno, Tables(vgT$).Columns(vgC$).Sequencia, Tables(vgT$).Columns(vgC$).Descending, Tables(vgT$).Columns(vgC$).Default, 0, True
 
-                  'campo estrangeiro da relação
+                  'campo estrangeiro da relaï¿½ï¿½o
                   Set vgCampoEst = New GColumn
                   vgC$ = PegaPropXML(vgCampo, "ESTRANGEIRO")
                   vgCampoEst.Init Relations(vgR$), vgC$, vgC$, Tables(vgTE$).Columns(vgC$).ColumnType, Tables(vgTE$).Columns(vgC$).Mask, Tables(vgTE$).Columns(vgC$).Size, Tables(vgTE$).Columns(vgC$).QDecimal, Tables(vgTE$).Columns(vgC$).Hidden, Tables(vgTE$).Columns(vgC$).Nullable, Tables(vgTE$).Columns(vgC$).System, Tables(vgTE$).Columns(vgC$).SeqInterno, Tables(vgTE$).Columns(vgC$).Sequencia, Tables(vgTE$).Columns(vgC$).Descending, Tables(vgTE$).Columns(vgC$).Default, 0, True
                
-                  'adiciona campo base/estrangeiro para relação
+                  'adiciona campo base/estrangeiro para relaï¿½ï¿½o
                   vgC$ = PegaPropXML(vgCampo, "NOME")
                   Relations(vgR$).RelationColumns.Add vgC$, vgCampoBase, vgCampoEst, Val(PegaPropXML(vgCampo, "INVISIVEL")), Val(PegaPropXML(vgCampo, "SISTEMA"))
                
@@ -727,12 +727,12 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
    If i Then
       j = InStrRev(vgSQL$, "SELECT", i)
       
-      'se número de " ou ' for ímpar... vamos ignorar esse UNION
+      'se nï¿½mero de " ou ' for ï¿½mpar... vamos ignorar esse UNION
       If (Tally(Left$(vgSQL$, i - 1), Chr$(34)) And 1) = 0 And (Tally(Left$(vgSQL$, i - 1), Chr$(39)) And 1) = 0 Then
          ii = j
          Do While ii > 0
             jj = ii
-            If Tally(Mid$(vgSQL$, ii, i - j), "(") <> Tally(Mid$(vgSQL$, ii, i - j), ")") Then    'se não tem mesma qtd de parânteses abrindo e fechando...
+            If Tally(Mid$(vgSQL$, ii, i - j), "(") <> Tally(Mid$(vgSQL$, ii, i - j), ")") Then    'se nï¿½o tem mesma qtd de parï¿½nteses abrindo e fechando...
                ii = InStrRev(vgSQL$, "(", ii)
             Else
                Exit Do
@@ -741,8 +741,8 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
          x$ = Trim$(Mid$(vgSQL$, jj, i - jj))
          z$ = Trim$(Mid$(vgSQL$, i + 5))          'pega segunda parte do union
          If Tally(x$, "(") = Tally(x$, ")") And Tally(z$, "(") = Tally(z$, ")") Then
-            'vamos ver se tem um "ALL" no início da segunda parte do UNION
-            If Left$(LTrim$(Mid$(vgSQL$, i + 5)), 3) = "ALL" Then 'se tem ALL, vamos tirá-lo do início da segunda parte
+            'vamos ver se tem um "ALL" no inï¿½cio da segunda parte do UNION
+            If Left$(LTrim$(Mid$(vgSQL$, i + 5)), 3) = "ALL" Then 'se tem ALL, vamos tirï¿½-lo do inï¿½cio da segunda parte
                z$ = Trim$(Mid(z$, 4))
                vgSQL$ = Trim$(TrataSQL(x$, "", -1, "", "")) + vbCrLf + "UNION ALL" + vbCrLf + Trim$(TrataSQL$(z$, "", -1, "", ""))
             Else
@@ -753,7 +753,7 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
       End If
    End If
 
-   'tira paranteses das bordas... e também crlf
+   'tira paranteses das bordas... e tambï¿½m crlf
    vgSQL$ = TrimAll$(vgSQL$, vbCrLf)
    Do While Left$(vgSQL$, 1) = "(" And Right$(vgSQL$, 1) = ")"
       vgSQL$ = Mid$(vgSQL$, 2, Len(vgSQL$) - 2)
@@ -768,12 +768,12 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
       If i > 0 Then                                               'se tem a SELECT de subquery
          Do While Len(vgOps$)                                     'parse dos operadores
             x$ = Parse$(vgOps$, " ")                              'pega o operador
-            vgPosOper = InStrRev(vgSQL$, x$, i)                   'pega a posição do operador na consulta, antes da SELECT de subquery
+            vgPosOper = InStrRev(vgSQL$, x$, i)                   'pega a posiï¿½ï¿½o do operador na consulta, antes da SELECT de subquery
             If vgPosOper > 0 And vgPosOper < i Then               'se encontrou o operador
-               Exit Do                                            'encerra o parse, mantendo a posição do último operador em vgPosOper
+               Exit Do                                            'encerra o parse, mantendo a posiï¿½ï¿½o do ï¿½ltimo operador em vgPosOper
             End If
-         Loop                                     'próximo
-         If InStrRev(vgSQL$, "(", i) < vgPosOper Then 'se o primeiro parêntese aberto, antes do SELECT de subquery, estiver numa posição antes de um operador, não iremos considerar (pode ser valor de campo)
+         Loop                                     'prï¿½ximo
+         If InStrRev(vgSQL$, "(", i) < vgPosOper Then 'se o primeiro parï¿½ntese aberto, antes do SELECT de subquery, estiver numa posiï¿½ï¿½o antes de um operador, nï¿½o iremos considerar (pode ser valor de campo)
             i = i + 1                                       
             i = InStr(i, UCase$(vgSQL$), "SELECT")    'continuamos procurando por subquerys
          End If
@@ -781,7 +781,7 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
       If i Then
          i = InStrRev(vgSQL$, "(", i)
          
-         'se número de " ou ' for ímpar... vamos ignorar esse SELECT
+         'se nï¿½mero de " ou ' for ï¿½mpar... vamos ignorar esse SELECT
          'se i = 0 a query esta errada... vai dar erro aqui
          If ((Tally(Left$(vgSQL$, i - 1), Chr$(34)) And 1) = 1 Or (Tally(Left$(vgSQL$, i - 1), Chr$(39)) And 1) = 1) Then
             i = i + 1
@@ -789,7 +789,7 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
             j = i
             Do While j > 0
                j = InStr(j, vgSQL$, ")")
-               If j Then                              'encontrou um parênteses fechando...
+               If j Then                              'encontrou um parï¿½nteses fechando...
                   If Tally(Mid$(vgSQL$, i, j - i + 1), "(") = Tally(Mid$(vgSQL$, i, j - i + 1), ")") Then
                      NSelect = NSelect + 1
                      vgNSelect = NSelect
@@ -806,14 +806,14 @@ Public Function TrataSQL(ByVal vgSQL As String, ByVal SelectColumns As String, B
       End If
    Loop
    
-   'faz o tratamento específico para cada banco
+   'faz o tratamento especï¿½fico para cada banco
    Select Case vgDataBaseType
       Case DB_SQL
          vgSQL$ = TrataSQLSQLServer(vgSQL$, SelectColumns, TopN, Where, OrderBy)
    End Select
    
 'vamos substituir sub-querys na query principal
-   If vgPV Then                                       'só vamos juntar tudo no primeiro nível de select....
+   If vgPV Then                                       'sï¿½ vamos juntar tudo no primeiro nï¿½vel de select....
       For i = 1 To UBound(vgSelects)
          If InStr(UCase$(vgSQL$), "INSERT ") Then
             vgSQL$ = Substitui(vgSQL$, "({" + CStr(i) + "})", IdentSelect(vgSelects(i), i), SO_UM)
@@ -853,7 +853,7 @@ OutraVez:
    TrimAll = RetVal$
 End Function
 
-'vamos identar select segundo seu nível hierárquico dentro da query principal
+'vamos identar select segundo seu nï¿½vel hierï¿½rquico dentro da query principal
 Private Function IdentSelect(ByVal vgSQL As String, ByVal vgIdent As Integer) As String
    Dim vgRetVal As String, i As Integer, x As String
    vgSQL$ = TrimAll(vgSQL$, vbCrLf + " ") + vbCrLf
@@ -866,7 +866,7 @@ Private Function IdentSelect(ByVal vgSQL As String, ByVal vgIdent As Integer) As
    IdentSelect = Left$(vgRetVal$, Len(vgRetVal$) - 2)
 End Function
 
-'converte o tipo do índice do banco de dados para a estrutura da GIndex
+'converte o tipo do ï¿½ndice do banco de dados para a estrutura da GIndex
 Public Function ConvIndexTypeByTypeName(vgTipo As String) As INDEX_TYPE
    Select Case UCase$(vgTipo$)
       Case "P"
@@ -909,7 +909,7 @@ Public Function ConvFieldNullable(vgNullable As String) As Boolean
    End Select
 End Function
 Public Function GetFieldDefDb(vgCp As GColumn, Optional vgDelim As String) As String
-   'faz o tratamento específico para cada banco
+   'faz o tratamento especï¿½fico para cada banco
    Select Case vgDataBaseType
       Case DB_SQL
          GetFieldDefDb = GetFieldDefDbSQL(vgCp, vgDelim) 
@@ -992,7 +992,7 @@ Private Function TrataSQLSQLServer(ByVal vgSQL As String, ByVal vgSelectColumns 
    
    x$ = UCase$(Left$(Substitui(vgRetVal$, vbCrLf, Chr$(32) + Chr$(32), UM_A_UM), 7))
 
-   'Não altere stored procedure
+   'Nï¿½o altere stored procedure
    If Left(x$, 5) = "EXEC " OR Left(UCase(vgRetVal$), 8) = "EXECUTE " Then 
       GoSub FimDaSub
    End If
@@ -1034,7 +1034,7 @@ Private Function TrataSQLSQLServer(ByVal vgSQL As String, ByVal vgSelectColumns 
       vgRetVal$ = InsereSQL(vgRetVal$, EXP_ORDERBY, OrderBy)
    End If
 
-   'vamos corrigir prováveis querys incorretas que referenciam os campos com ! ao invéz de .
+   'vamos corrigir provï¿½veis querys incorretas que referenciam os campos com ! ao invï¿½z de .
    j = 1
    Do
       i = InStr(j, vgRetVal$, "!")
@@ -1056,7 +1056,7 @@ Private Function TrataSQLSQLServer(ByVal vgSQL As String, ByVal vgSelectColumns 
    vgRetVal$ = TrocaValores(vgRetVal$, "FALSE", "0")
    
 
-   'Vamos fazer algumas correções na query para SQL ou ORACLE
+   'Vamos fazer algumas correï¿½ï¿½es na query para SQL ou ORACLE
    vgRetVal$ = TrataNull(vgRetVal$)
 
    'ajusta o like * ou %
@@ -1066,12 +1066,12 @@ Private Function TrataSQLSQLServer(ByVal vgSQL As String, ByVal vgSelectColumns 
       vgRetVal$ = Left$(vgRetVal$, j) + Substitui(Mid$(vgRetVal$, j + 1), "*", "%", UM_A_UM)
    End If
 
-   '*** conversão a função CDATE()
+   '*** conversï¿½o a funï¿½ï¿½o CDATE()
    k$ = "CDATE("
 
 OutraData:
-   j = InStr(UCase$(vgRetVal$), k$)                        'posição da função na query
-   If j > 0 Then                                           'se tem a função CDate()
+   j = InStr(UCase$(vgRetVal$), k$)                        'posiï¿½ï¿½o da funï¿½ï¿½o na query
+   If j > 0 Then                                           'se tem a funï¿½ï¿½o CDate()
       vgStrTemp$ = Mid$(vgRetVal$, j + Len(k$))             
       y = InStr(vgStrTemp$, ")") - 1
       vgValorParam$ = Retira$(LTrim$(Mid$(vgStrTemp$, 1, y)), "'", SO_UM)
@@ -1080,7 +1080,7 @@ OutraData:
       GoTo OutraData
    End If
    
-   '*** conversão da função FORMAT()
+   '*** conversï¿½o da funï¿½ï¿½o FORMAT()
    k$ = "FORMAT("
 
 OutroFormat:
@@ -1136,7 +1136,7 @@ Private Function TrataNomes(vgSQL As String, vgDeliIni As String, vgDeliFim As S
       Do While i > 0 And Len(x$) = 0
          x$ = Mid$(vgRetVal$, p + 1, i - p - 1)
          If Len(Trim$(x$)) = 0 Then
-            p = i                                           'nova posição para início...
+            p = i                                           'nova posiï¿½ï¿½o para inï¿½cio...
             
             'vamos verificar quem ocorre primeiro...
             x$ = "!(),.+-*/<>= "
@@ -1156,10 +1156,10 @@ Private Function TrataNomes(vgSQL As String, vgDeliIni As String, vgDeliFim As S
                i = InStr(p + 2, vgRetVal$, "]") + 1
             ElseIf Left$(x$, 1) = "{" Then
                i = InStr(p + 2, vgRetVal$, "}") + 1
-               p = i - 1                                    'vamos ignorar essa sentença e continuar a procura
+               p = i - 1                                    'vamos ignorar essa sentenï¿½a e continuar a procura
             Else
                i = InStr(p + 2, vgRetVal$, x$) + 1
-               p = i - 1                                    'vamos ignorar essa sentença e continuar a procura
+               p = i - 1                                    'vamos ignorar essa sentenï¿½a e continuar a procura
             End If
             x$ = ""
          End If
