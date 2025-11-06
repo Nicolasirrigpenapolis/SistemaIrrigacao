@@ -7,15 +7,19 @@
 
 ## ÍNDICE
 1. [Visão Geral](#visão-geral)
-2. [Funções Processa](#funções-processa)
-3. [Funções AtualizaValores](#funções-atualizavalores)
-4. [Funções Distribui](#funções-distribui)
-5. [Funções SuperAtualiza](#funções-superatualiza)
-6. [Rotinas de Reprocessamento em Lote](#rotinas-de-reprocessamento-em-lote)
-7. [Função AjustaValores](#função-ajustavalores)
-8. [Função CalculaImposto](#função-calculaimposto)
-9. [Fluxo de Execução](#fluxo-de-execução)
-10. [Regras de Usuário](#regras-de-usuário)
+2. [Pipeline de Cálculo - Ordem de Execução](#pipeline-de-cálculo---ordem-de-execução)
+3. [Funções de Interface (ExecutaGrid)](#funções-de-interface-executagrid)
+4. [Funções Processa](#funções-processa)
+5. [Funções AtualizaValores](#funções-atualizavalores)
+6. [Funções Distribui](#funções-distribui)
+7. [Funções SuperAtualiza](#funções-superatualiza)
+8. [Rotinas de Reprocessamento em Lote](#rotinas-de-reprocessamento-em-lote)
+9. [Função AjustaValores](#função-ajustavalores)
+10. [Função CalculaImposto](#função-calculaimposto)
+11. [Funções de Validação](#funções-de-validação)
+12. [Comandos de Teclado](#comandos-de-teclado)
+13. [Fluxo de Execução](#fluxo-de-execução)
+14. [Regras de Usuário](#regras-de-usuário)
 
 ---
 
@@ -280,7 +284,7 @@ Distribui **desconto e frete proporcionalmente** entre TODOS os produtos do orç
 **Responsabilidade:**
 Distribui **desconto e frete proporcionalmente** entre TODAS as peças do orçamento e recalcula PIS/COFINS com base distribuída.
 
-**Quando é chamada:**
+**Quando é chamada:**'
 - Após `ProcessaPecas` (somente usuários comuns)
 - **NÃO** é chamada mais por `AjustaValores`
 

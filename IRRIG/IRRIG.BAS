@@ -2530,19 +2530,13 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
                 AliqRed = CCur(41.67) 'Alíquota da Redução
                  'AliqRed = CCur(33.33)
             End If
-         Else 'Revenda dentro do estado
-               If Revenda Then
-                  BCRed = CCur(0) 'Base de Cálculo Reduzida
-                  AliqICMS = 0 'Alíquota do ICMS
-                  AliqRed = CCur(100) 'Alíquota da Redução
-               Else
-                  'BCRed = CCur(58.34)   'Base de Cálculo Reduzida
-                  'AliqICMS = 12    'Alíquota do ICMS
-                  'AliqRed = CCur(41.66) 'Alíquota da Redução
-                  BCRed = CCur(46.67)   'Base de Cálculo Reduzida
-                  AliqICMS = 12    'Alíquota do ICMS
-                  AliqRed = CCur(53.33) 'Alíquota da Redução
-               End If
+         Else
+            'BCRed = CCur(58.34)   'Base de Cálculo Reduzida
+            'AliqICMS = 12    'Alíquota do ICMS
+            'AliqRed = CCur(41.66) 'Alíquota da Redução
+            BCRed = CCur(46.67)   'Base de Cálculo Reduzida
+            AliqICMS = 12    'Alíquota do ICMS
+            AliqRed = CCur(53.33) 'Alíquota da Redução
          End If
       End If
       Else 'Opa se nw tem redução o esquema é outro

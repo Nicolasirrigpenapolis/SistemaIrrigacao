@@ -9837,11 +9837,11 @@ OcultaValor:
     Prod_CFOP = NatOpe![Código da Natureza de Operação] ' CFOP do operação, causa erro de XML se informado um código inexistente
     Prod_uCOM = "UN" ' unidade de comercialização
     
-    Prod_qCom = "2" ' quantidade de comercialização (agora definida como 2)
+    Prod_qCom = "1" ' quantidade de comercialização (agora definida como 1)
     
     ' Calcule vUnCom como total / qCom (dividido pela quantidade definida)
     If Prod_qCom > 0 And SemValores![Valor Total] > 0 Then  ' Evite divisão por zero ou total zero
-       Prod_vUnCom = Round(SemValores![Valor Total] / Prod_qCom, 2) ' Dividido pela qCom (ex: /2), com arredondamento para 2 decimais (padrão NF-e)
+       Prod_vUnCom = Round(SemValores![Valor Total] / Prod_qCom, 2) ' Dividido pela qCom (ex: /1), com arredondamento para 2 decimais (padrão NF-e)
     Else
        Prod_vUnCom = 0 ' Valor padrão se inválido
     End If
