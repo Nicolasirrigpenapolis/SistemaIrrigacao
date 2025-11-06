@@ -10735,7 +10735,7 @@ Private Function ProcessaProdutos(Bc_pis As Double, Valor_do_Tributo As Double, 
    vgDb.Execute "Update [Produtos do Orçamento] Set [Valor Unitário] = " & Substitui(CCur(Round(Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Sequencia_do_Produto_Orcamento
    vgDb.Execute "Update [Produtos do Orçamento] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Sequencia_do_Produto_Orcamento
 
-   If Not Orcamento![Orçamento Avulso] And (vgPWUsuario <> "YGOR" And vgPWUsuario <> "JUCELI" And vgPWUsuario <> "MAYSA") Then 'Se não for Orçamento Avulso fazer o Calculo Automatico
+   If Not Orcamento![Orçamento Avulso] Then 'Se não for Orçamento Avulso fazer o Calculo Automatico
       vgDb.Execute "Update [Produtos do Orçamento] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Produto, Orcamento![Seqüência Do Geral], 5, 1, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade]), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência do Produto Orçamento] = " & Sequencia_do_Produto_Orcamento 'CST
       If Entrega_Futura Then
          If MunicipioAux!UF = "SP" Then
@@ -10807,11 +10807,7 @@ Private Function ProcessaProdutos(Bc_pis As Double, Valor_do_Tributo As Double, 
     End If 'Caso Contrario Vamos deixar o Usuario Digitar os Valores
    vgDb.CommitTrans
 
-
-
-    If vgPWUsuario <> "YGOR" And vgPWUsuario <> "JUCELI" And vgPWUsuario <> "MAYSA" Then
-       AtualizaValoresProdutos
-    End If
+   AtualizaValoresProdutos
     
 DeuErro:
    If Err.Number <> 0 Then
@@ -10821,7 +10817,7 @@ DeuErro:
 End Function
 
 
-Private Function ProcessaConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Conjunto_Orcamento As Long, Sequencia_do_Conjunto As Long, _
+Private Function ProcessaConjunto(Sequencia_do_Orcamento As Long, Sequencia_Conjunto_Orcamento As Long, Sequencia_do_Conjunto As Long, _
    Quantidade As Double, Valor_Unitario As Double, Valor_Total As Double, _
    Valor_do_IPI As Double, Valor_do_ICMS As Double, Aliquota_do_IPI As Double, _
    Aliquota_do_ICMS As Single, Percentual_da_Reducao As Single, Diferido As Boolean, _
@@ -10844,7 +10840,12 @@ Private Function ProcessaConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Con
    vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor Unitário] = " & Substitui(CCur(Round(Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
    vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
    
-   If Not Orcamento![Orçamento Avulso] And (vgPWUsuario <> "YGOR" And vgPWUsuario <> "JUCELI" And vgPWUsuario <> "MAYSA") Then 'Se não for Orçamento Avulso fazer o Calculo Automatico
+   Debug.Print "=== ProcessaConjunto - Verificação Usuário ==="
+   Debug.Print "Usuário: " & vgPWUsuario
+   Debug.Print "Orçamento Avulso: " & Orcamento![Orçamento Avulso]
+   
+   If Not Orcamento![Orçamento Avulso] Then 'Se não for Orçamento Avulso fazer o Calculo Automatico
+      Debug.Print ">>> CALCULANDO impostos automaticamente (Orçamento NÃO é avulso)"
       vgDb.Execute "Update [Conjuntos do Orçamento] Set CST = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 5, 2, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao()), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'CST
       If Entrega_Futura Then
          If MunicipioAux!UF = "SP" Then
@@ -10885,16 +10886,138 @@ Private Function ProcessaConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Con
       End If
       vgDb.Execute "Update [Conjuntos do Orçamento] Set Diferido = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 9, 2, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Diferido
       
-      'vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do PIS] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 10, 2, Quantidade * Valor_Unitario, VrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'PIS
-   vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do PIS] = " & Substitui(CStr(Round(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 10, 2, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'PIS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 10, 2, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+      Debug.Print "=== PROCESSACONJUNTO - PIS/COFINS ==="
+      Debug.Print "Entrega_Futura: " & Entrega_Futura
+      Debug.Print "Quantidade: " & Quantidade
+      Debug.Print "Valor_Unitario: " & Valor_Unitario
+      Debug.Print "Valor_do_Frete: " & Valor_do_Frete
+      Debug.Print "Valor_do_Desconto: " & Valor_do_Desconto
+      Debug.Print "ICMSAuxiliar: " & ICMSAuxiliar
       
-      'vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do Cofins] = " & Substitui(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 11, 2, Quantidade * Valor_Unitario, VrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'COFINS
-   vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do Cofins] = " & Substitui(CStr(Round(CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 11, 2, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'COFINS
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 11, 2, (Quantidade * Valor_Unitario) - ICMSAuxiliar, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+      ' PIS/COFINS para entrega futura são calculados na RecalculaConjuntos com reduções regionais corretas
+      If Not Entrega_Futura Then
+         ' Calcular PIS/COFINS igual à RecalculaPecas/ProcessaPeca - considerando desconto e frete
+         Dim BasePisCofinsProcessaConj As Double, PisRedProcessaConj As Double, CofinsRedProcessaConj As Double
+         
+         ' Verificar se tem desconto ou frete (igual RecalculaConjuntos)
+         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+            Debug.Print ">>> COM desconto/frete"
+            ' COM desconto/frete: Base = (Valor + Frete - Desconto - ICMS) - 48.1%
+            BasePisCofinsProcessaConj = (Quantidade * Valor_Unitario) + Valor_do_Frete - Valor_do_Desconto - ICMSAuxiliar
+         Else
+            Debug.Print ">>> SEM desconto/frete"
+            ' SEM desconto/frete: Base = (Valor - ICMS) - 48.1%
+            BasePisCofinsProcessaConj = (Quantidade * Valor_Unitario) - ICMSAuxiliar
+         End If
+         
+         PisRedProcessaConj = BasePisCofinsProcessaConj * 48.1 / 100
+         CofinsRedProcessaConj = BasePisCofinsProcessaConj * 48.1 / 100
+         
+         Debug.Print "BasePisCofins: " & BasePisCofinsProcessaConj
+         Debug.Print "PisRed: " & PisRedProcessaConj
+         Debug.Print "CofinsRed: " & CofinsRedProcessaConj
+         
+         ' Calcula e salva Base PIS com redução de 48.1%
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Bc Pis] = " & Substitui(CStr(BasePisCofinsProcessaConj - PisRedProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Base PIS
+         
+         ' Usar mesma lógica da RecalculaConjuntos - alíquotas fixas para CONJUNTOS
+         Dim AliqPisProcessaConj As Double, AliqCofinsProcessaConj As Double
+         AliqPisProcessaConj = 2      ' Alíquota PIS para conjuntos (conforme RecalculaConjuntos)
+         AliqCofinsProcessaConj = 9.6 ' Alíquota COFINS para conjuntos (conforme RecalculaConjuntos)
+         
+         Debug.Print "Aliq PIS: " & AliqPisProcessaConj
+         Debug.Print "Aliq COFINS: " & AliqCofinsProcessaConj
+         
+         ' Salva Alíquota PIS
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Aliq Do Pis] = " & Substitui(CStr(AliqPisProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Alíquota PIS
+         
+         ' Calcula Valor PIS baseado na base corrigida
+         Dim ValorPisProcessaConj As Double
+         ValorPisProcessaConj = Round((BasePisCofinsProcessaConj - PisRedProcessaConj) * AliqPisProcessaConj / 100, 2)
+         Debug.Print "Valor PIS calculado: " & ValorPisProcessaConj
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do PIS] = " & Substitui(CStr(ValorPisProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'PIS
+
+         Tributos = Tributos + ValorPisProcessaConj
+         
+         ' Calcula e salva Base COFINS com redução de 48.1%
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Bc Cofins] = " & Substitui(CStr(BasePisCofinsProcessaConj - CofinsRedProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Base COFINS
+         
+         ' Salva Alíquota COFINS
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Aliq Do Cofins] = " & Substitui(CStr(AliqCofinsProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Alíquota COFINS
+         
+         ' Calcula Valor COFINS baseado na base corrigida
+         Dim ValorCofinsProcessaConj As Double
+         ValorCofinsProcessaConj = Round((BasePisCofinsProcessaConj - CofinsRedProcessaConj) * AliqCofinsProcessaConj / 100, 2)
+         Debug.Print "Valor COFINS calculado: " & ValorCofinsProcessaConj
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do Cofins] = " & Substitui(CStr(ValorCofinsProcessaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'COFINS
+
+         Tributos = Tributos + ValorCofinsProcessaConj
+      Else
+         ' Para entrega futura: calcula PIS/COFINS igual à RecalculaConjuntos
+         Dim BasePisCofinsEntregaFuturaConj As Double, PisRedEntregaFuturaConj As Double, CofinsRedEntregaFuturaConj As Double
+         Dim AliqPisEntregaFuturaConj As Double, AliqCofinsEntregaFuturaConj As Double
+         
+         Debug.Print "=== ENTREGA FUTURA - PROCESSACONJUNTO ==="
+         
+         ' Base = (Valor - Desconto + Frete) - ICMS Auxiliar
+         BasePisCofinsEntregaFuturaConj = (Quantidade * Valor_Unitario) + Valor_do_Frete - Valor_do_Desconto - ICMSAuxiliar
+         PisRedEntregaFuturaConj = Round(BasePisCofinsEntregaFuturaConj * 48.1 / 100, 2)
+         CofinsRedEntregaFuturaConj = Round(BasePisCofinsEntregaFuturaConj * 48.1 / 100, 2)
+         
+         Debug.Print "BasePisCofinsEntregaFutura: " & BasePisCofinsEntregaFuturaConj
+         Debug.Print "PisRedEntregaFutura: " & PisRedEntregaFuturaConj
+         Debug.Print "CofinsRedEntregaFutura: " & CofinsRedEntregaFuturaConj
+         
+         AliqPisEntregaFuturaConj = 2
+         AliqCofinsEntregaFuturaConj = 9.6
+         
+         ' Calcula e salva Base PIS
+         Dim BcPisCalcConj As Double, ValorPisCalcConj As Double
+         BcPisCalcConj = BasePisCofinsEntregaFuturaConj - PisRedEntregaFuturaConj
+         ValorPisCalcConj = Round(BcPisCalcConj * AliqPisEntregaFuturaConj / 100, 2)
+         
+         Debug.Print "Bc PIS: " & BcPisCalcConj
+         Debug.Print "Valor PIS: " & ValorPisCalcConj
+         
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Bc Pis] = " & Substitui(CStr(BcPisCalcConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Aliq Do Pis] = " & Substitui(CStr(AliqPisEntregaFuturaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do PIS] = " & Substitui(CStr(ValorPisCalcConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         
+         Tributos = Tributos + ValorPisCalcConj
+         Debug.Print "Tributos após PIS: " & Tributos
+         
+         ' Calcula e salva Base COFINS
+         Dim BcCofinsCalcConj As Double, ValorCofinsCalcConj As Double
+         BcCofinsCalcConj = BasePisCofinsEntregaFuturaConj - CofinsRedEntregaFuturaConj
+         ValorCofinsCalcConj = Round(BcCofinsCalcConj * AliqCofinsEntregaFuturaConj / 100, 2)
+         
+         Debug.Print "Bc COFINS: " & BcCofinsCalcConj
+         Debug.Print "Valor COFINS: " & ValorCofinsCalcConj
+         
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Bc Cofins] = " & Substitui(CStr(BcCofinsCalcConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Aliq Do Cofins] = " & Substitui(CStr(AliqCofinsEntregaFuturaConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do Cofins] = " & Substitui(CStr(ValorCofinsCalcConj), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
+         
+         Tributos = Tributos + ValorCofinsCalcConj
+         Debug.Print "Tributos após COFINS: " & Tributos
+         
+         ' ICMS ST (normalmente zero em entrega futura, mas mantemos o cálculo por segurança)
+         Dim IcmsStCalcConj As Double
+         IcmsStCalcConj = CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 14, 2, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+         Tributos = Tributos + IcmsStCalcConj
+         Debug.Print "ICMS ST: " & IcmsStCalcConj
+         Debug.Print "Tributos após ICMS ST: " & Tributos
+      End If
       
-      Tributos = Tributos + CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 14, 2, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+      ' Grava tributo total para ambos os cenários
+      Dim IcmsStFinalConj As Double
+      IcmsStFinalConj = CalculaImposto(Sequencia_do_Conjunto, Orcamento![Seqüência Do Geral], 14, 2, Quantidade * Valor_Unitario, vrAdicional, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+      Tributos = Tributos + IcmsStFinalConj
+      Debug.Print "ICMS ST Final (duplicado?): " & IcmsStFinalConj
+      Debug.Print "Tributos FINAL antes de gravar: " & Tributos
+      
       vgDb.Execute "Update [Conjuntos do Orçamento] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento 'Tributos
+      Debug.Print "SQL Tributo: Update [Conjuntos do Orçamento] Set [Valor do Tributo] = " & Substitui(CStr(Tributos), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
    End If 'Caso Contrario Vamos deixar o Usuario Digitar os Valores
    vgDb.Execute "UPDATE [Conjuntos do Orçamento] SET " & _
              "[Valor do PIS]     = IIf([Valor do PIS]     < 0, 0, [Valor do PIS]), " & _
@@ -10905,9 +11028,10 @@ Private Function ProcessaConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Con
              "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & _
              " AND [Seqüência Conjunto Orçamento] = " & Sequencia_Conjunto_Orcamento
 
+   vgDb.CommitTrans
 
     If vgPWUsuario <> "YGOR" And vgPWUsuario <> "JUCELI" And vgPWUsuario <> "MAYSA" Then
-       AtualizaValoresConjuntos
+       RecalculaConjuntos
     End If
       
 DeuErro:
@@ -11237,6 +11361,25 @@ Private Sub ComandosProdutos(KeyAscii As Integer, Bc_pis As Double, Valor_do_Tri
          End Select
       End With
    ElseIf KeyAscii = vbKeyF2 Then
+      ' Atualizar variáveis globais antes de ratear
+      If Not Orcamento Is Nothing Then
+         If Not Orcamento.EOF And Not Orcamento.BOF Then
+            If Not IsNull(Orcamento![Valor Do Fechamento]) Then
+               Valor_do_Fechamento = Orcamento![Valor Do Fechamento]
+            Else
+               Valor_do_Fechamento = 0
+            End If
+            
+            If Not IsNull(Orcamento![Valor Do Frete]) Then
+               Valor_do_Frete = Orcamento![Valor Do Frete]
+            Else
+               Valor_do_Frete = 0
+            End If
+         End If
+      End If
+      
+      Call DistribuiDescontoTotal
+      Call DistribuiFreteTotal
       SuperAtualizaProdutos
    End If
    
@@ -11291,7 +11434,26 @@ Private Sub ComandosConjuntos(KeyAscii As Integer, Sequencia_do_Orcamento As Lon
          End Select
       End With
    ElseIf KeyAscii = vbKeyF2 Then
-      SuperAtualizaConjuntos
+      ' Atualizar variáveis globais antes de ratear
+      If Not Orcamento Is Nothing Then
+         If Not Orcamento.EOF And Not Orcamento.BOF Then
+            If Not IsNull(Orcamento![Valor Do Fechamento]) Then
+               Valor_do_Fechamento = Orcamento![Valor Do Fechamento]
+            Else
+               Valor_do_Fechamento = 0
+            End If
+            
+            If Not IsNull(Orcamento![Valor Do Frete]) Then
+               Valor_do_Frete = Orcamento![Valor Do Frete]
+            Else
+               Valor_do_Frete = 0
+            End If
+         End If
+      End If
+      
+      Call DistribuiDescontoTotal
+      Call DistribuiFreteTotal
+      RecalculaConjuntos
    End If
    
 DeuErro:
@@ -11339,6 +11501,25 @@ Private Sub ComandosPecas(KeyAscii As Integer, Valor_do_Tributo As Double, Seque
          End Select
       End With
    ElseIf KeyAscii = vbKeyF2 Then
+      ' Atualizar variáveis globais antes de ratear
+      If Not Orcamento Is Nothing Then
+         If Not Orcamento.EOF And Not Orcamento.BOF Then
+            If Not IsNull(Orcamento![Valor Do Fechamento]) Then
+               Valor_do_Fechamento = Orcamento![Valor Do Fechamento]
+            Else
+               Valor_do_Fechamento = 0
+            End If
+            
+            If Not IsNull(Orcamento![Valor Do Frete]) Then
+               Valor_do_Frete = Orcamento![Valor Do Frete]
+            Else
+               Valor_do_Frete = 0
+            End If
+         End If
+      End If
+      
+      Call DistribuiDescontoTotal
+      Call DistribuiFreteTotal
       RecalculaPecas
    End If
    
@@ -11383,7 +11564,7 @@ Private Sub TotalizaOrcamento()
    '      AtualizaValoresProdutos
    '   End If
    '   If Conjuntos_do_Orcamento.RecordCount > 0 Then
-   '      AtualizaValoresConjuntos
+   '      RecalculaConjuntos
    '   End If
    '   If Pecas_do_Orcamento.RecordCount > 0 Then
    '      AtualizaValoresPecas
@@ -12202,94 +12383,6 @@ Private Sub SuperAtualizaProdutos()
    Screen.MousePointer = vbDefault
 
 End Sub
-
-Public Sub SuperAtualizaConjuntos()
-   Dim Tributos As Double
-   Dim ICMSAuxiliar As Double
-   
-   On Error Resume Next
-         
-   Screen.MousePointer = vbHourglass
-         
-   If Conjuntos_do_Orcamento.RecordCount > 0 Then
-   
-      Conjuntos_do_Orcamento.MoveFirst
-      Do While Not Conjuntos_do_Orcamento.EOF
-         With Conjuntos_do_Orcamento
-            .Edit
-            If Entrega_Futura Then
-               Debug.Print "  >> Modo Entrega Futura - preparando CFOP/ICMS."
-               If MunicipioAux!UF = "SP" Then
-                  !CFOP = "5922"
-                  !CST = 90
-               Else
-                  !CFOP = "6922"
-                  !CST = 90
-               End If
-               ![Valor da Base de Cálculo] = 0
-               ![Valor Do Icms] = 0
-               ![Alíquota Do ICMS] = 0
-               ![Percentual da Redução] = 0
-               !IVA = 0
-               ![Base de Cálculo ST] = 0
-               ![Valor ICMS ST] = 0
-               ![Alíquota Do ICMS ST] = 0
-               
-            Else
-               !CFOP = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 1, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Valor da Base de Cálculo] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Valor Do Icms] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               !IVA = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 12, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Base de Cálculo ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 13, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Valor ICMS ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 14, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Alíquota Do ICMS ST] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 15, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-            End If
-            If Not Entrega_Futura Then
-               !CST = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 5, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao())
-            End If
-            ![Valor IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-            Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               !Diferido = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 9, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               
-               ' PIS/COFINS - só calcular se NÃO for entrega futura
-               If Not Entrega_Futura Then
-                  ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  ![Valor Do PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  Tributos = Tributos + CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               Else
-                  ' Para entrega futura, calcular PIS/COFINS com base corrigida e redução de 48.1%
-                  Dim BasePisCofinsConjunto As Double, PisRedConjunto As Double, CofinsRedConjunto As Double
-                  BasePisCofinsConjunto = (!Quantidade * ![Valor Unitário]) - ICMSAuxiliar
-                  PisRedConjunto = BasePisCofinsConjunto * 48.1 / 100
-                  CofinsRedConjunto = BasePisCofinsConjunto * 48.1 / 100
-                  
-                  ![Valor Do PIS] = Round((BasePisCofinsConjunto - PisRedConjunto) * 2 / 100, 4)
-                  ![Valor Do Cofins] = Round((BasePisCofinsConjunto - CofinsRedConjunto) * 9.6 / 100, 4)
-                  Tributos = Tributos + ![Valor Do PIS] + ![Valor Do Cofins]
-               End If
-            ![Valor Do Tributo] = Tributos 'Tributos
-            .Update
-            .BookMark = .LastModified
-            .MoveNext
-         End With
-      Loop
-      
-      grdConjuntos.ReBind 'Atualiza do Grid
-      TotalizaOrcamento  'Totaliza valores do orçamento
-      Reposition True    'Atualiza o Formulário
-      
-   End If
-   
-   Screen.MousePointer = vbDefault
-
-End Sub
-
-
 
 Private Sub VerificaFormulario()
    On Error Resume Next
@@ -13794,61 +13887,163 @@ End Sub
 
 
 
-Private Sub AtualizaValoresConjuntos()
+Private Sub RecalculaConjuntos()
    Dim Tributos As Double, ValorFrete As Double, ValorSeguro As Double, ValorAcresDesc As Double
-   Dim TotalItens As Double, PercentualRateio As Double, VrItem As Double, PercentualFrete As Double
-   Dim BC As Double, ICMSAuxiliar As Double, BCAuxiliar As Double
-   Dim AliqAuxiliar As Double, Geral As New GRecordSet, Suframa As Boolean
+   Dim VrItem As Double, BC As Double, ICMSAuxiliar As Double
+   Dim Geral As New GRecordSet, Suframa As Boolean
    Dim PisRed As Double, CofinsRed As Double
-   
+   Dim descCj As New GRecordSet, descPecas As New GRecordSet
+   Dim descontoCj As Double, descontoPecas As Double, divergDesc As Double
+   Dim DescontoSeguroConjunto As Double
+   Dim BasePisConjuntoCompleta As Double, BasePisConjuntoSimples As Double
+   Dim BaseCofinsCompleta As Double, BaseCofinsSimples As Double
+   Dim ValorTotalCalcConjunto As Double, ReducaoRegionalConjunto As Double
           
    Screen.MousePointer = vbHourglass
+   Debug.Print ""
+   Debug.Print "=== RecalculaConjuntos - INICIO ==="
+   Debug.Print "  Horário: " & Now
+   Debug.Print "  Seq. Orçamento: " & Sequencia_do_Orcamento
+   Debug.Print "  Situação Atual: " & vgSituacao
+   Debug.Print "  Entrega_Futura: " & Entrega_Futura
    
-   Call DistribuiDescontoTotal
-   Call DistribuiFreteTotal
-     
+   ' NOTA: O rateio de desconto/frete é feito no APOS_EDICAO (antes de salvar)
+   ' Aqui apenas LEMOS os valores já rateados e calculamos os impostos
+   
    Set Geral = vgDb.OpenRecordSet("SELECT * From Geral Where [Seqüência Do Geral] = " & Orcamento![Seqüência Do Geral])
    Suframa = (CBool(Not Vazio(Geral![Código Do Suframa])))
+   Debug.Print "  Tem SUFRAMA? " & Suframa
    If Suframa Then
+      Debug.Print "  >>> SUFRAMA detectado. Zerando redução e saindo (conjuntos)."
       vgDb.Execute "Update [Conjuntos do Orçamento] Set [Percentual da Redução] = 0 WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento
-      grdConjuntos.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
+      grdConjuntos.ReBind
+      Reposition True
       Screen.MousePointer = vbDefault
+      Debug.Print "=== RecalculaConjuntos - FIM (SUFRAMA) ==="
       Exit Sub
    End If
-           
+          
+   Debug.Print "  Qtde Conjuntos no Recordset: " & Conjuntos_do_Orcamento.RecordCount
    If Conjuntos_do_Orcamento.RecordCount > 0 Then
    
+      ' Lê os valores do orçamento para usar na verificação
+      If IsNull(Orcamento![Valor Do Fechamento]) Then
+         ValorAcresDesc = 0
+      Else
+         ValorAcresDesc = Orcamento![Valor Do Fechamento]
+      End If
+      
+      If IsNull(Orcamento![Valor Do Frete]) Then
+         ValorFrete = 0
+      Else
+         ValorFrete = Orcamento![Valor Do Frete]
+      End If
+      
+      If IsNull(Orcamento![Valor do Seguro]) Then
+         ValorSeguro = 0
+      Else
+         ValorSeguro = Orcamento![Valor do Seguro]
+      End If
+      
+      Debug.Print "*** RecalculaConjuntos - Valores Lidos ***"
+      Debug.Print "  ValorAcresDesc (Desconto Total): " & ValorAcresDesc
+      Debug.Print "  ValorFrete (Frete Total): " & ValorFrete
+      Debug.Print "  ValorSeguro: " & ValorSeguro
       
       If vgSituacao = -ACAO_INCLUINDO Or vgSituacao = -ACAO_EDITANDO Then
-         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then GoTo SaiDaSub
+         If ValorAcresDesc = 0 And ValorFrete = 0 And ValorSeguro = 0 Then
+            Debug.Print "  >>> SAINDO - Nenhum valor para ratear (situação de edição/inclusão)"
+            GoTo SaiDaSub
+         Else
+            Debug.Print "  Valores para rateio detectados. Prosseguindo com recálculo (conjuntos)..."
+         End If
       End If
-   
+      
+      If Orcamento![Valor Do Fechamento] <> 0 Then
+         Set descCj = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoCj " & _
+                                    "FROM [Conjuntos do Orçamento] " & _
+                                    "WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
+
+         descontoCj = descCj!descontoCj
+
+         Set descPecas = vgDb.OpenRecordSet("SELECT SUM([Valor do Desconto]) AS descontoPecas " & _
+                                       "FROM [Peças do Orçamento] " & _
+                                       "WHERE [Seqüência do Orçamento]  = " & Sequencia_do_Orcamento)
+
+         descontoPecas = descPecas!descontoPecas
+         
+         If Conjuntos_do_Orcamento.RecordCount > 0 And Pecas_do_Orcamento.RecordCount > 0 Then
+            If Abs(Orcamento![Valor Do Fechamento]) <> Round(Abs(descontoCj + descontoPecas), 2) Then
+               Debug.Print "    Divergência detectada (conjuntos + peças)."
+               Debug.Print "      Desconto total orçamento: " & Orcamento![Valor Do Fechamento]
+               Debug.Print "      Soma desconto conjuntos: " & descontoCj
+               Debug.Print "      Soma desconto peças: " & descontoPecas
+               Debug.Print "      Entrega_Futura: " & Entrega_Futura
+               divergDesc = Round(Abs(Orcamento![Valor Do Fechamento]) - Abs(descontoCj + descontoPecas), 2)
+               Debug.Print "      Divergência calculada: " & divergDesc
+            Else
+               Debug.Print "    Descontos entre orçamento e itens coincidem (conjuntos + peças)."
+               divergDesc = 0
+            End If
+         Else
+            If Abs(Orcamento![Valor Do Fechamento]) <> Round(Abs(descontoCj), 2) Then
+               Debug.Print "    Divergência detectada (apenas conjuntos)."
+               Debug.Print "      Desconto total orçamento: " & Orcamento![Valor Do Fechamento]
+               Debug.Print "      Soma desconto conjuntos: " & descontoCj
+               Debug.Print "      Entrega_Futura: " & Entrega_Futura
+               divergDesc = Round(Abs(Orcamento![Valor Do Fechamento]) - Abs(descontoCj), 2)
+               Debug.Print "      Divergência calculada: " & divergDesc
+            Else
+               Debug.Print "    Descontos entre orçamento e conjuntos coincidem."
+               divergDesc = 0
+            End If
+         End If
+      End If
+      
+      Debug.Print "  Iniciando varredura dos conjuntos..."
       Conjuntos_do_Orcamento.MoveFirst
       Do While Not Conjuntos_do_Orcamento.EOF
          Tributos = 0
          PisRed = 0
          CofinsRed = 0
          With Conjuntos_do_Orcamento
-         .Edit
-         
-         If Orcamento![Valor Do Fechamento] = 0 Then
-            ![Valor Do Desconto] = 0
-         End If
-         If Orcamento![Valor Do Frete] = 0 Then
-            ![Valor Do Frete] = 0
-         End If
+            .Edit
+            
+            If Orcamento![Valor Do Fechamento] = 0 Then
+               ![Valor Do Desconto] = 0
+            End If
+            If Orcamento![Valor Do Frete] = 0 Then
+               ![Valor Do Frete] = 0
+            End If
 
-         ' CORREÇÃO: Rateio já foi feito pelas funções DistribuiDescontoTotal e DistribuiFreteTotal
-         ' Agora apenas LÊ os valores JÁ rateados e usa para calcular impostos
-         If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-         If Orcamento!Fechamento = 1 Then 'Valor
-            VrItem = Round((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]), 2)
-            ValorAcresDesc = ![Valor Do Desconto]  ' Usa valor JÁ rateado
-            ValorFrete = ![Valor Do Frete]         ' Usa valor JÁ rateado
-         End If
-         End If
-         
+            Debug.Print "--- Conjunto Seq: " & ![Seqüência do Conjunto] & " ---"
+            Debug.Print "Valor Unitário ORIGINAL: " & ![Valor Unitário]
+            If ![Valor Unitário] <> Round(![Valor Unitário], 2) Then
+               Debug.Print ">>> CORRIGINDO Valor Unitário de " & ![Valor Unitário] & " para " & Round(![Valor Unitário], 2)
+               ![Valor Unitário] = Round(![Valor Unitário], 2)
+            Else
+               Debug.Print "Valor Unitário já está correto (2 casas decimais)"
+            End If
+            
+            Debug.Print "Orcamento Desconto Total: " & Orcamento![Valor Do Fechamento]
+            Debug.Print "Orcamento Frete Total: " & Orcamento![Valor Do Frete]
+            Debug.Print "Conjunto - Valor Do Desconto ANTES: " & IIf(IsNull(![Valor Do Desconto]), "NULL", ![Valor Do Desconto])
+            Debug.Print "Conjunto - Valor Do Frete ANTES: " & IIf(IsNull(![Valor Do Frete]), "NULL", ![Valor Do Frete])
+
+            If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               VrItem = Round((Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2)), 2)
+               ValorAcresDesc = ![Valor Do Desconto]
+               ValorFrete = ![Valor Do Frete]
+               Debug.Print ">>> ENTROU NO IF (tem desconto ou frete)"
+               Debug.Print "ValorAcresDesc lido: " & ValorAcresDesc
+               Debug.Print "ValorFrete lido: " & ValorFrete
+               Debug.Print "VrItem calculado: " & VrItem
+            Else
+               Debug.Print ">>> NÃO ENTROU NO IF (sem desconto e frete)"
+               ValorAcresDesc = 0
+               ValorFrete = 0
+            End If
+
             If Entrega_Futura Then
                If MunicipioAux!UF = "SP" Then
                   !CFOP = "5922"
@@ -13865,117 +14060,212 @@ Private Sub AtualizaValoresConjuntos()
                ![Base de Cálculo ST] = 0
                ![Valor ICMS ST] = 0
                ![Alíquota Do ICMS ST] = 0
+
+               ' Cálculos auxiliares para entrega futura
+               If IsNull(![Valor Do Desconto]) Or ![Valor Do Desconto] = "" Then
+                  DescontoSeguroConjunto = 0
+               Else
+                  DescontoSeguroConjunto = CDbl(![Valor Do Desconto])
+               End If
+
+               ValorTotalCalcConjunto = (!Quantidade * Round(![Valor Unitário], 2) - DescontoSeguroConjunto + ValorFrete)
+
+               ReducaoRegionalConjunto = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+
+               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+               ICMSAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+
+               Debug.Print "  >> Entrega Futura - cálculos auxiliares de ICMS/PIS/COFINS (conjunto)."
+               Debug.Print "     ValorTotalCalcConjunto: " & ValorTotalCalcConjunto
+               Debug.Print "     Redução Regional: " & ReducaoRegionalConjunto
+               Debug.Print "     BC cálculo entrega futura: " & BC
+               Debug.Print "     ICMS Auxiliar: " & ICMSAuxiliar
             Else
-               '![Valor da Base de Cálculo] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * ![Valor Unitário] + ValorAcresDesc + ValorFrete), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               'Alterado em 15/07/2024, em conformidade com Maysa e Econet. Frete compondo a BC antes da redução.
-               ![Valor da Base de Cálculo] = BC '+ ValorFrete ' Alterado Pq Segundo A MARINA O frete so Acrescenta na Base dpis de reduzir o desconto acrescenta antes de reduzir
-               '![Valor Do ICMS] = CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, (!Quantidade * ![Valor Unitário]) + ValorFrete + ValorAcresDesc + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-               ![Alíquota Do ICMS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
-                  Tributos = Tributos + ![Valor Do Icms]
-               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+               Debug.Print "  >> Modo Padrão - calculando ICMS (conjunto)."
+               Dim DescontoTratadoConjunto As Double
+               If IsNull(![Valor Do Desconto]) Or ![Valor Do Desconto] = "" Then
+                  DescontoTratadoConjunto = 0
+               Else
+                  DescontoTratadoConjunto = CDbl(![Valor Do Desconto])
+               End If
+
+               Debug.Print "CALCULO ICMS (Conjunto):"
+               Debug.Print "  Quantidade: " & !Quantidade
+               Debug.Print "  Valor Unitário: " & ![Valor Unitário]
+               Debug.Print "  DescontoTratado: " & DescontoTratadoConjunto
+               Debug.Print "  ValorFrete: " & ValorFrete
+               Debug.Print "  Base Cálculo = (Qtd * VrUnit - Desc + Frete) = (" & !Quantidade & " * " & ![Valor Unitário] & " - " & DescontoTratadoConjunto & " + " & ValorFrete & ")"
+
+               BC = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, (!Quantidade * Round(![Valor Unitário], 2) - DescontoTratadoConjunto + ValorFrete), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+               Debug.Print "  BC retornado: " & BC
+               ![Valor da Base de Cálculo] = Round(BC, 2)
+               ![Alíquota Do ICMS] = Round(CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 3, 2, !Quantidade * Round(![Valor Unitário], 2), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), 2)
+               ![Valor Do Icms] = Round((![Valor da Base de Cálculo] * ![Alíquota Do ICMS] / 100), 2)
+               Tributos = Round(Tributos + ![Valor Do Icms], 2)
+               ![Percentual da Redução] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, !Quantidade * Round(![Valor Unitário], 2), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
             End If
-               If Entrega_Futura Then
-                  ' Cálculos para entrega futura - CONJUNTOS
-                  Dim ValorTotalCalcConjunto As Double, BaseICMSCalcConjunto As Double, ReducaoRegionalConjunto As Double
-                  ValorTotalCalcConjunto = (!Quantidade * ![Valor Unitário] - ![Valor Do Desconto] + ValorFrete)
-                  
-                  ' Calcular redução regional
-                  ReducaoRegionalConjunto = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 2, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  
-                  ' Usar CalculaImposto para Base de Cálculo e Valor do ICMS
-                  BaseICMSCalcConjunto = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 6, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  ICMSAuxiliar = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 7, 2, ValorTotalCalcConjunto, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-                  
-                  
-               End If
-            ![Valor do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-            Tributos = Tributos + ![Valor do IPI]
-               ![Alíquota Do IPI] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * ![Valor Unitário], 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
-               If Not Entrega_Futura Then 'Orçamento Base: 125449 - Budke
-                  'PisRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   PisRed = Round((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100, 2)
-                   ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
-                   '![Bc Pis] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - PisRed
-                   ![Aliq Do Pis] = 2
-                   '![Valor Do //PIS] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - PisRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-                   ![Valor Do PIS] = ![Bc Pis] * (![Aliq Do Pis] / 100)
-               Else
-                   Dim BasePisConjuntoCompleta As Double
-                   BasePisConjuntoCompleta = (((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar)
-                   PisRed = Round(BasePisConjuntoCompleta * 48.1 / 100, 2)
-                   ![Bc Pis] = BasePisConjuntoCompleta - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
-                   
-               End If
-             Else
+
+            ![Valor do IPI] = Round(CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 8, 2, !Quantidade * Round(![Valor Unitário], 2), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), 2)
+            Tributos = Round(Tributos + ![Valor do IPI], 2)
+            ![Alíquota Do IPI] = Round(CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 4, 2, !Quantidade * Round(![Valor Unitário], 2), 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF), 2)
+
+            If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+               Debug.Print "  >> Cenário com desconto/frete preenchido (conjunto)."
                If Not Entrega_Futura Then
-                   PisRed = Round(((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100, 2)
-                   ![Bc Pis] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - PisRed) * 2 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 10, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+                  Debug.Print "     PIS/COFINS modo padrão com rateio (conjunto)."
+                  Debug.Print "     >>> CÁLCULO PIS - INÍCIO <<<"
+                  Debug.Print "        Quantidade: " & Conjuntos_do_Orcamento!Quantidade
+                  Debug.Print "        Valor Unitário: " & Round(![Valor Unitário], 2)
+                  Debug.Print "        ValorFrete: " & ValorFrete
+                  Debug.Print "        Valor Do Desconto: " & ![Valor Do Desconto]
+                  Debug.Print "        Valor Do ICMS: " & ![Valor Do Icms]
+                  Debug.Print "        Base ANTES Redução = (Qtd * VrUnit + Frete - Desc - ICMS)"
+                  Debug.Print "        Base ANTES Redução = (" & Conjuntos_do_Orcamento!Quantidade & " * " & Round(![Valor Unitário], 2) & " + " & ValorFrete & " - " & ![Valor Do Desconto] & " - " & ![Valor Do Icms] & ")"
+                  Debug.Print "        Base ANTES Redução = " & (Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2) + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms])
+                  PisRed = Round((Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2) + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100, 2)
+                  Debug.Print "        PisRed (48.1%) = " & PisRed
+                  ![Bc Pis] = Round(((Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2)) + ValorFrete - ![Valor Do Icms] - ![Valor Do Desconto] - PisRed), 2)
+                  Debug.Print "        Bc Pis (após redução) = " & ![Bc Pis]
+                  ![Aliq Do Pis] = 2
+                  Debug.Print "        Aliq Do Pis = " & ![Aliq Do Pis]
+                  ![Valor Do PIS] = Round(![Bc Pis] * ![Aliq Do Pis] / 100, 2)
+                  Debug.Print "        Valor Do PIS = " & ![Valor Do PIS]
+                  Debug.Print "     >>> CÁLCULO PIS - FIM <<<"
                Else
-                   Dim BasePisConjuntoSimples As Double
-                   BasePisConjuntoSimples = (((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar)
-                   PisRed = Round(BasePisConjuntoSimples * 48.1 / 100, 2)
-                   ![Bc Pis] = BasePisConjuntoSimples - PisRed
-                   ![Aliq Do Pis] = 2
-                   ![Valor Do PIS] = ![Bc Pis] * ![Aliq Do Pis] / 100
-                   
+                  Debug.Print "     PIS/COFINS modo Entrega Futura com rateio (conjunto)."
+                  BasePisConjuntoCompleta = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar, 2)
+                  PisRed = Round(BasePisConjuntoCompleta * 48.1 / 100, 2)
+                  ![Bc Pis] = Round(BasePisConjuntoCompleta - PisRed, 2)
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = Round(![Bc Pis] * ![Aliq Do Pis] / 100, 2)
                End If
-             End If
-               Tributos = Tributos + ![Valor Do PIS]
-             If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
+            Else
+               Debug.Print "  >> Cenário sem desconto/frete (conjunto)."
                If Not Entrega_Futura Then
-                   'CofinsRed = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) * 48.1 / 100
-                   CofinsRed = Round((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário] + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100, 2)
-                 ' ![Bc Cofins] = (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms]) - CofinsRed
-                   ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Conjuntos_do_Orcamento![Valor Unitário]) - ![Valor Do Icms] - ![Valor Do Desconto] + ValorFrete - PisRed), 2)
-                   ![Aliq Do Cofins] = 9.6
-                   '![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ![Valor Do Icms] - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
-                   ![Valor Do Cofins] = ![Bc Cofins] * (![Aliq Do Cofins] / 100)
+                  Debug.Print "     PIS/COFINS modo padrão sem rateio (conjunto)."
+                  Debug.Print "     >>> CÁLCULO PIS SEM RATEIO - INÍCIO <<<"
+                  Debug.Print "        Quantidade: " & !Quantidade
+                  Debug.Print "        Valor Unitário: " & Round(![Valor Unitário], 2)
+                  Debug.Print "        Valor Do ICMS: " & ![Valor Do Icms]
+                  Debug.Print "        Base ANTES Redução = (Qtd * VrUnit - ICMS)"
+                  Debug.Print "        Base ANTES Redução = (" & !Quantidade & " * " & Round(![Valor Unitário], 2) & " - " & ![Valor Do Icms] & ")"
+                  Debug.Print "        Base ANTES Redução = " & ((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms])
+                  PisRed = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms]) * 48.1 / 100, 2)
+                  Debug.Print "        PisRed (48.1%) = " & PisRed
+                  ![Bc Pis] = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms]) - PisRed, 2)
+                  Debug.Print "        Bc Pis (após redução) = " & ![Bc Pis]
+                  ![Aliq Do Pis] = 2
+                  Debug.Print "        Aliq Do Pis = " & ![Aliq Do Pis]
+                  ![Valor Do PIS] = Round(![Bc Pis] * ![Aliq Do Pis] / 100, 2)
+                  Debug.Print "        Valor Do PIS = " & ![Valor Do PIS]
+                  Debug.Print "     >>> CÁLCULO PIS SEM RATEIO - FIM <<<"
                Else
-                   CofinsRed = Round((((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar) * 48.1 / 100, 2)
-                   ![Bc Cofins] = (((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar) - CofinsRed
-                   ![Aliq Do Cofins] = 9.6
-                      ![Valor Do Cofins] = CalculaImposto(![Seqüência do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (((VrItem + ValorFrete) - Abs(ValorAcresDesc)) - ICMSAuxiliar - CofinsRed), ValorAcresDesc, Orcamento![Seqüência da Propriedade], Orcamento![Seqüência da Classificação], , MunicipioAux!UF, ValorFrete)
+                  Debug.Print "     PIS/COFINS modo Entrega Futura sem rateio (conjunto)."
+                     BasePisConjuntoSimples = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar, 2)
+                  PisRed = Round(BasePisConjuntoSimples * 48.1 / 100, 2)
+                  ![Bc Pis] = Round(BasePisConjuntoSimples - PisRed, 2)
+                  ![Aliq Do Pis] = 2
+                  ![Valor Do PIS] = Round(![Bc Pis] * ![Aliq Do Pis] / 100, 2)
                End If
-             Else ' Nao tem disconto e frete
+            End If
+            Tributos = Round(Tributos + ![Valor Do PIS], 2)
+
+            If Orcamento![Valor Do Fechamento] < 0 Or Orcamento![Valor Do Frete] > 0 Then
                If Not Entrega_Futura Then
-                  CofinsRed = Round(((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) * 48.1 / 100, 2)
-                  ![Bc Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms]) - CofinsRed
+                  Debug.Print "     COFINS modo padrão com rateio (conjunto)."
+                  Debug.Print "     >>> CÁLCULO COFINS - INÍCIO <<<"
+                  Debug.Print "        Quantidade: " & Conjuntos_do_Orcamento!Quantidade
+                  Debug.Print "        Valor Unitário: " & Round(![Valor Unitário], 2)
+                  Debug.Print "        ValorFrete: " & ValorFrete
+                  Debug.Print "        Valor Do Desconto: " & ![Valor Do Desconto]
+                  Debug.Print "        Valor Do ICMS: " & ![Valor Do Icms]
+                  Debug.Print "        Base ANTES Redução = (Qtd * VrUnit + Frete - Desc - ICMS)"
+                  Debug.Print "        Base ANTES Redução = (" & Conjuntos_do_Orcamento!Quantidade & " * " & Round(![Valor Unitário], 2) & " + " & ValorFrete & " - " & ![Valor Do Desconto] & " - " & ![Valor Do Icms] & ")"
+                  Debug.Print "        Base ANTES Redução = " & (Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2) + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms])
+                  CofinsRed = Round((Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2) + ValorFrete - ![Valor Do Desconto] - ![Valor Do Icms]) * 48.1 / 100, 2)
+                  Debug.Print "        CofinsRed (48.1%) = " & CofinsRed
+                  ![Bc Cofins] = Round(((Conjuntos_do_Orcamento!Quantidade * Round(![Valor Unitário], 2)) + ValorFrete - ![Valor Do Icms] - ![Valor Do Desconto] - CofinsRed), 2)
+                  Debug.Print "        Bc Cofins (após redução) = " & ![Bc Cofins]
                   ![Aliq Do Cofins] = 9.6
-                  ![Valor Do Cofins] = ((!Quantidade * ![Valor Unitário]) - ![Valor Do Icms] - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+                  Debug.Print "        Aliq Do Cofins = " & ![Aliq Do Cofins]
+                  ![Valor Do Cofins] = Round(![Bc Cofins] * ![Aliq Do Cofins] / 100, 2)
+                  Debug.Print "        Valor Do Cofins = " & ![Valor Do Cofins]
+                  Debug.Print "     >>> CÁLCULO COFINS - FIM <<<"
                Else
-                  CofinsRed = Round((((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar) * 48.1 / 100, 2)
-                  ![Bc Cofins] = (((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar) - CofinsRed
+                  Debug.Print "     COFINS modo Entrega Futura com rateio (conjunto)."
+                  BaseCofinsCompleta = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar, 2)
+                  CofinsRed = Round(BaseCofinsCompleta * 48.1 / 100, 2)
+                  ![Bc Cofins] = Round(BaseCofinsCompleta - CofinsRed, 2)
                   ![Aliq Do Cofins] = 9.6
-                  ![Valor Do Cofins] = (((!Quantidade * ![Valor Unitário]) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar - CofinsRed) * 9.6 / 100 'CalculaImposto(![Seqüência Do Conjunto], Orcamento![Seqüência Do Geral], 11, 2, (!Quantidade * ![Valor Unitário]) + ValorAcresDesc + ValorFrete + ValorSeguro, 0, Orcamento![Seqüência da Propriedade], PegaNCMPadrao(), , MunicipioAux!UF)
+                  ![Valor Do Cofins] = Round(![Bc Cofins] * ![Aliq Do Cofins] / 100, 2)
                End If
-             End If
-               Tributos = Tributos + ![Valor Do Cofins]
-               Tributos = Tributos + ![Valor ICMS ST]
-            ![Valor Do Tributo] = Tributos 'Tributos
+            Else
+               If Not Entrega_Futura Then
+                  Debug.Print "     COFINS modo padrão sem rateio (conjunto)."
+                  Debug.Print "     >>> CÁLCULO COFINS SEM RATEIO - INÍCIO <<<"
+                  Debug.Print "        Quantidade: " & !Quantidade
+                  Debug.Print "        Valor Unitário: " & Round(![Valor Unitário], 2)
+                  Debug.Print "        Valor Do ICMS: " & ![Valor Do Icms]
+                  Debug.Print "        Base ANTES Redução = (Qtd * VrUnit - ICMS)"
+                  Debug.Print "        Base ANTES Redução = (" & !Quantidade & " * " & Round(![Valor Unitário], 2) & " - " & ![Valor Do Icms] & ")"
+                  Debug.Print "        Base ANTES Redução = " & ((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms])
+                  CofinsRed = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms]) * 48.1 / 100, 2)
+                  Debug.Print "        CofinsRed (48.1%) = " & CofinsRed
+                  ![Bc Cofins] = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Icms]) - CofinsRed, 2)
+                  Debug.Print "        Bc Cofins (após redução) = " & ![Bc Cofins]
+                  ![Aliq Do Cofins] = 9.6
+                  Debug.Print "        Aliq Do Cofins = " & ![Aliq Do Cofins]
+                  ![Valor Do Cofins] = Round(![Bc Cofins] * ![Aliq Do Cofins] / 100, 2)
+                  Debug.Print "        Valor Do Cofins = " & ![Valor Do Cofins]
+                  Debug.Print "     >>> CÁLCULO COFINS SEM RATEIO - FIM <<<"
+               Else
+                  Debug.Print "     COFINS modo Entrega Futura sem rateio (conjunto)."
+                     BaseCofinsSimples = Round(((!Quantidade * Round(![Valor Unitário], 2)) - ![Valor Do Desconto] + ValorFrete) - ICMSAuxiliar, 2)
+                  CofinsRed = Round(BaseCofinsSimples * 48.1 / 100, 2)
+                  ![Bc Cofins] = Round(BaseCofinsSimples - CofinsRed, 2)
+                  ![Aliq Do Cofins] = 9.6
+                  ![Valor Do Cofins] = Round(![Bc Cofins] * ![Aliq Do Cofins] / 100, 2)
+               End If
+            End If
+            Tributos = Round(Tributos + ![Valor Do Cofins], 2)
+            Tributos = Round(Tributos + ![Valor ICMS ST], 2)
+            ![Valor Do Tributo] = Round(Tributos, 2)
+
+            Debug.Print "  -- Resumo Final Conjunto " & ![Seqüência do Conjunto] & " --"
+            Debug.Print "     Entrega Futura: " & Entrega_Futura
+            Debug.Print "     Tributos calculados (acumulado): " & Tributos
+            Debug.Print "     Valor Base ICMS: " & ![Valor da Base de Cálculo]
+            Debug.Print "     Valor ICMS: " & ![Valor Do Icms]
+            Debug.Print "     Valor ICMS ST: " & ![Valor ICMS ST]
+            Debug.Print "     Valor IPI: " & ![Valor do IPI]
+            Debug.Print "     Base PIS: " & ![Bc Pis]
+            Debug.Print "     Valor PIS: " & ![Valor Do PIS]
+            Debug.Print "     Base COFINS: " & ![Bc Cofins]
+            Debug.Print "     Valor COFINS: " & ![Valor Do Cofins]
+            Debug.Print "     Valor Tributos total: " & ![Valor Do Tributo]
+            Debug.Print "  -- Fim Conjunto " & ![Seqüência do Conjunto] & " --"
+
             .Update
             .BookMark = .LastModified
             .MoveNext
          End With
       Loop
-      
-      grdConjuntos.ReBind 'Atualiza do Grid
-      Reposition True    'Atualiza o Formulário
-      
-      
+
+      Debug.Print "  Varredura dos conjuntos concluída."
+      Debug.Print "  Atualizando grid de conjuntos..."
+      grdConjuntos.ReBind
+      Debug.Print "  Recalculando totais do orçamento (após conjuntos)..."
+      TotalizaOrcamento
+      Debug.Print "  Reposicionando formulário..."
+      Reposition True
+
    Else
-      Debug.Print "  >>> Não há peças para recalcular."
+      Debug.Print "  >>> Não há conjuntos para recalcular."
    End If
-   
+
 SaiDaSub:
    Screen.MousePointer = vbDefault
-   Debug.Print "=== RecalculaPecas - FIM ==="
+   Debug.Print "=== RecalculaConjuntos - FIM ==="
 
 End Sub
 
@@ -16066,6 +16356,10 @@ Public Function Executar(vgOq As String, Optional ByRef vgColumn As Integer) As 
                Debug.Print "Chamando RecalculaPecas... (Total peças: " & Pecas_do_Orcamento.RecordCount & ")"
                Call RecalculaPecas
             End If
+            If Conjuntos_do_Orcamento.RecordCount > 0 Then
+               Debug.Print "Chamando RecalculaConjuntos... (Total conjuntos: " & Conjuntos_do_Orcamento.RecordCount & ")"
+               Call RecalculaConjuntos
+            End If
          Else
             Debug.Print ">>> NENHUMA MUDANÇA - Não vai ratear <<<"
          End If
@@ -16188,17 +16482,28 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
       Ok = (Me.ActiveControl.Status = ACAO_NAVEGANDO And Not Me.ActiveControl.PreEditing) 'e se grid não está em pré-edição, edição nem inclusão
    End If
    If KeyAscii = vbKeyF2 Then
-      Debug.Print ""
-      Debug.Print "=== F2 PRESSIONADO ==="
-      Debug.Print "Chamando DistribuiDescontoTotal..."
+      ' Atualizar variáveis globais antes de ratear
+      If Not Orcamento Is Nothing Then
+         If Not Orcamento.EOF And Not Orcamento.BOF Then
+            If Not IsNull(Orcamento![Valor Do Fechamento]) Then
+               Valor_do_Fechamento = Orcamento![Valor Do Fechamento]
+            Else
+               Valor_do_Fechamento = 0
+            End If
+            
+            If Not IsNull(Orcamento![Valor Do Frete]) Then
+               Valor_do_Frete = Orcamento![Valor Do Frete]
+            Else
+               Valor_do_Frete = 0
+            End If
+         End If
+      End If
+      
       Call DistribuiDescontoTotal
-      Debug.Print "Chamando DistribuiFreteTotal..."
       Call DistribuiFreteTotal
-      Debug.Print "Chamando RecalculaPecas..."
       Call RecalculaPecas
-      Debug.Print "Chamando TotalizaOrcamento..."
+      Call RecalculaConjuntos
       Call TotalizaOrcamento
-      Debug.Print "=== F2 CONCLUÍDO ==="
       
    ElseIf KeyAscii = vbKeyEscape And Ok Then                                                  'se teclou ESC
       Unload Me                                   'tira este form da memria
@@ -16877,7 +17182,7 @@ Private Sub chkCp_Click(Index As Integer)
 
             ' Recalcula todos os grids com a nova regra
             SuperAtualizaProdutos
-            SuperAtualizaConjuntos
+            RecalculaConjuntos
             RecalculaPecas
             
             ' Salva automaticamente para que o usuário não precise salvar manualmente
@@ -20460,7 +20765,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          GoSub IniApDaCol
          Conjuntos_do_Orcamento.Edit
          Set vgRsError = Conjuntos_do_Orcamento
-         If ProcessaConjuntos(Sequencia_do_Orcamento, Sequencia_Conjunto_Orcamento, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_Total, _
+         If ProcessaConjunto(Sequencia_do_Orcamento, Sequencia_Conjunto_Orcamento, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_Total, _
    Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, _
    Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
    CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
@@ -22267,8 +22572,8 @@ Private Function ProcessarConjuntosCompleto(TotalItens As Long, itensProcessados
    Set rsConjuntos = vgDb.OpenRecordSet("SELECT * FROM [Conjuntos do Orçamento] WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento)
    
    Do While Not rsConjuntos.EOF
-      ' Chamar ProcessaConjuntos com os dados do conjunto atual
-      ProcessaConjuntos rsConjuntos![Seqüência do Orçamento], rsConjuntos![Seqüência Conjunto Orçamento], _
+   ' Chamar ProcessaConjunto com os dados do conjunto atual
+   ProcessaConjunto rsConjuntos![Seqüência do Orçamento], rsConjuntos![Seqüência Conjunto Orçamento], _
                        rsConjuntos![Seqüência do Conjunto], rsConjuntos!Quantidade, _
                        rsConjuntos![Valor Unitário], rsConjuntos![Valor Total], _
                        rsConjuntos![Valor do IPI], rsConjuntos![Valor Do Icms], _
