@@ -2474,30 +2474,30 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If TB2![Anexo da Redução] = 0 Then 'Anexo I
            If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(73.43)   'Base de Cálculo Reduzida
-               AliqICMS = 7    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.57) 'Alíquota da Redução
             ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
                BCRed = CCur(73.33)   'Base de Cálculo Reduzida
-               AliqICMS = 12   'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.67) 'Alíquota da Redução
             End If
          Else 'Anexo II modificado em  2023
             If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(58.57)   'Base de Cálculo Reduzida Antes de 2021
                 'BCRed = CCur(67.14)   'Base de Cálculo Reduzida Apos 2021
-                AliqICMS = 7    'Alíquota do ICMS
+                AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(41.43) 'Alíquota da Redução Antes de 2021
                 'AliqRed = CCur(32.86) 'Alíquota da Redução Apos de 2021
             ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
                BCRed = CCur(58.33)   'Base de Cálculo Reduzida Antes de 2021
               ' BCRed = CCur(66.67)   'Base de Cálculo Reduzida apos de 2021
-               AliqICMS = 12   'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(41.67) 'Alíquota da Redução Antes de 2021
               ' AliqRed = CCur(33.33) 'Alíquota da Redução Apos de 2021
             End If
             If UF = "SP" Then 'Segundo O Sergio se Tiver Redução Em SP Calcula da Seguinte Forma Abaixo:
                BCRed = CCur(46.67)   'Base de Cálculo Reduzida
-               AliqICMS = 12    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(53.33) 'Alíquota da Redução
             End If
          End If
@@ -2508,11 +2508,11 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
         If TB2![Anexo da Redução] = 0 Then 'Anexo I
            If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(73.43)   'Base de Cálculo Reduzida
-               AliqICMS = 7    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.57) 'Alíquota da Redução
             ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
                BCRed = CCur(73.33)   'Base de Cálculo Reduzida
-               AliqICMS = 12   'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.67) 'Alíquota da Redução
             End If
          Else
@@ -2520,13 +2520,13 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(58.57) 'Base de Cálculo Reduzida
                 'BCRed = CCur(67.14)
-                AliqICMS = 7 'Alíquota do ICMS
+                AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(41.43) 'Alíquota da Redução
                ' AliqRed = CCur(32.86)
             Else
                 BCRed = CCur(58.33) 'Base de Cálculo Reduzida
                 'BCRed = CCur(66.67)
-                AliqICMS = 12 'Alíquota do ICMS
+                AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                 AliqRed = CCur(41.67) 'Alíquota da Redução
                  'AliqRed = CCur(33.33)
             End If
@@ -2535,7 +2535,7 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
             'AliqICMS = 12    'Alíquota do ICMS
             'AliqRed = CCur(41.66) 'Alíquota da Redução
             BCRed = CCur(46.67)   'Base de Cálculo Reduzida
-            AliqICMS = 12    'Alíquota do ICMS
+            AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
             AliqRed = CCur(53.33) 'Alíquota da Redução
          End If
       End If
@@ -2595,30 +2595,30 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          If TB2![Anexo da Redução] = 0 Then 'Anexo I
             If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(73.43)   'Base de Cálculo Reduzida
-               AliqICMS = 7    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.57) 'Alíquota da Redução
             ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
                BCRed = CCur(73.33)   'Base de Cálculo Reduzida
-               AliqICMS = 12   'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(26.67) 'Alíquota da Redução
             End If
          Else 'Anexo II
             If InStr(Norte, UF) > 0 Or InStr(Nordeste, UF) > 0 Or InStr(CentroOeste, UF) > 0 Or UF = "ES" Then
                BCRed = CCur(58.57)   'Base de Cálculo Reduzida
                'BCRed = CCur(67.14)   'Base de Cálculo Reduzida
-               AliqICMS = 7    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(41.43) 'Alíquota da Redução
                'AliqRed = CCur(32.86) 'Alíquota da Redução
             ElseIf InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0 Then
                BCRed = CCur(58.33)   'Base de Cálculo Reduzida
                'BCRed = CCur(66.67)   'Base de Cálculo Reduzida
-               AliqICMS = 12   'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(41.67) 'Alíquota da Redução
                'AliqRed = CCur(33.33) 'Alíquota da Redução
             End If
             If UF = "SP" Then 'Segundo O Sergio faverão maldonado se Tiver Redução Em SP Calcula da Seguinte Forma Abaixo:
                BCRed = CCur(46.67)   'Base de Cálculo Reduzida
-               AliqICMS = 12    'Alíquota do ICMS
+               AliqICMS = IIf(TB2![Alíquota do Anexo] = 2, 7, IIf(TB2![Alíquota do Anexo] = 1, 18, 12))  'Alíquota do ICMS do NCM
                AliqRed = CCur(53.33) 'Alíquota da Redução
             End If
          End If
@@ -2684,39 +2684,104 @@ Public Function CalculaImposto(SeqItem As Long, SeqGeral As Long, Oq As Integer,
          CalculaImposto = AliqRed
          Exit Function
       Case "3" '% ICMS
-         If Suframa Then CalculaImposto = 0: Exit Function
-         If Imobilizado = 4 Then CalculaImposto = 0: Exit Function ' Venda do Ativo
-         If OrgonPublico And Not ForadoEstado Then CalculaImposto = 0: Exit Function 'Orgon Publico
+         ' === DEBUG INÍCIO ===
+         Debug.Print ""
+         Debug.Print "??????????????????????????????????????????????????"
+         Debug.Print "?  CALCULAIMPOSTO - CASE 3 (ALÍQUOTA ICMS)      ?"
+         Debug.Print "??????????????????????????????????????????????????"
+         Debug.Print "DADOS DE ENTRADA:"
+         Debug.Print "  SeqItem: " & SeqItem
+         Debug.Print "  NCM: " & NCM2
+         Debug.Print "  UF Destino: " & UF
+         Debug.Print "  ForadoEstado: " & ForadoEstado
+         Debug.Print "  Contribuinte: " & Contribuinte
+         Debug.Print ""
+         Debug.Print "DADOS DO NCM (TB2):"
+         Debug.Print "  Redução BC: " & TB2![Redução de Base de Cálculo]
+         Debug.Print "  Anexo Redução: " & TB2![Anexo da Redução]
+         Debug.Print "  Alíquota do Anexo: " & TB2![Alíquota do Anexo]
+         Debug.Print "  Produto Diferido: " & TB2![Produto Diferido]
+         Debug.Print "  Tem Convênio: " & TB2![Tem Convênio]
+         Debug.Print ""
+         Debug.Print "VALORES CALCULADOS:"
+         Debug.Print "  AliqICMS (var): " & AliqICMS
+         Debug.Print "  TB6 Porc ICMS: " & TB6![Porcentagem de ICMS]
+         Debug.Print ""
+         ' === DEBUG FIM ===
+         
+         If Suframa Then
+            Debug.Print ">>> SAÍDA: 0 (Suframa)"
+            CalculaImposto = 0: Exit Function
+         End If
+         If Imobilizado = 4 Then
+            Debug.Print ">>> SAÍDA: 0 (Venda Ativo)"
+            CalculaImposto = 0: Exit Function
+         End If
+         If OrgonPublico And Not ForadoEstado Then
+            Debug.Print ">>> SAÍDA: 0 (Órgão Público)"
+            CalculaImposto = 0: Exit Function
+         End If
          'Calculos para Rebocador Aeronautico
          'Região Sul e Sudeste menos ES
          If (InStr(Sul, UF) > 0 Or InStr(Sudeste, UF) > 0) And NCM2 = "84271090" Then
+             Debug.Print ">>> SAÍDA: 12% (Rebocador Aeronáutico Sul/Sudeste)"
              CalculaImposto = 12: Exit Function
          End If
          'Calc Para conjunto de gerador Dentro do Estado calcula icms 12%  conforme contabilidade
          If Not ForadoEstado Then
-            If (NCM2 = "85021110" Or NCM2 = "85021210" Or NCM2 = "85016400" Or NCM2 = "85444200" Or NCM2 = "85389010" Or NCM2 = "90308990" Or NCM2 = "85365090") Then CalculaImposto = 12: Exit Function
-            If NCM2 = "85016100" Then CalculaImposto = 18: Exit Function
+            If (NCM2 = "85021110" Or NCM2 = "85021210" Or NCM2 = "85016400" Or NCM2 = "85444200" Or NCM2 = "85389010" Or NCM2 = "90308990" Or NCM2 = "85365090") Then
+               Debug.Print ">>> SAÍDA: 12% (NCM Especial Gerador)"
+               CalculaImposto = 12: Exit Function
+            End If
+            If NCM2 = "85016100" Then
+               Debug.Print ">>> SAÍDA: 18% (NCM 85016100)"
+               CalculaImposto = 18: Exit Function
+            End If
          End If
          ' Continua
-         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then CalculaImposto = AliqICMS: Exit Function  ' Pessoa Juridica Isento de IE
-         If Not ForadoEstado And Sucata Then CalculaImposto = 0: Exit Function 'É sucata entao nw calcula nada
-         If Substituicao And MateriaPrima And NCM2 = "85071090" Then CalculaImposto = 0: Exit Function 'Tem Substituição pago antecipado entao vamos cair fora
-         If TB2![Produto Diferido] And ProdutorPaulista And Not Tb1!Usado Then CalculaImposto = 0: Exit Function 'Se For Produtor Paulista Vamos Cair Fora
-         If Importado And Not ForadoEstado And TB2![Redução de Base de Cálculo] = False Then CalculaImposto = 18: Exit Function 'Produto Importados são cobrados 4% de ICMS qdo Fora do Estado
-         If Importado And ForadoEstado And TB2![Redução de Base de Cálculo] = False Then CalculaImposto = 4: Exit Function 'Produto Importados são cobrados 4% de ICMS qdo Fora do Estado
+         If Tb3!Tipo = 1 And Isento And TB2![Redução de Base de Cálculo] = False And Not Importado Then
+            Debug.Print ">>> SAÍDA: " & AliqICMS & "% (PJ Isento sem redução)"
+            CalculaImposto = AliqICMS: Exit Function
+         End If
+         If Not ForadoEstado And Sucata Then
+            Debug.Print ">>> SAÍDA: 0% (Sucata)"
+            CalculaImposto = 0: Exit Function
+         End If
+         If Substituicao And MateriaPrima And NCM2 = "85071090" Then
+            Debug.Print ">>> SAÍDA: 0% (ST pago antecipado)"
+            CalculaImposto = 0: Exit Function
+         End If
+         If TB2![Produto Diferido] And ProdutorPaulista And Not Tb1!Usado Then
+            Debug.Print ">>> SAÍDA: 0% (Diferido Produtor Paulista)"
+            CalculaImposto = 0: Exit Function
+         End If
+         If Importado And Not ForadoEstado And TB2![Redução de Base de Cálculo] = False Then
+            Debug.Print ">>> SAÍDA: 18% (Importado dentro estado)"
+            CalculaImposto = 18: Exit Function
+         End If
+         If Importado And ForadoEstado And TB2![Redução de Base de Cálculo] = False Then
+            Debug.Print ">>> SAÍDA: 4% (Importado fora estado)"
+            CalculaImposto = 4: Exit Function
+         End If
          If Tb1!Usado And Convenio Then 'É Usado Entao Vamos Pegar a Alíquota do Estado
+            Debug.Print ">>> SAÍDA: " & AliqICMS & "% (Usado com Convênio - AliqICMS)"
             CalculaImposto = AliqICMS 'Vamos Pegar de Acordo com A redução
          Else
             If TB2![Redução de Base de Cálculo] Then 'Tem Redução
+               Debug.Print ">>> SAÍDA: " & AliqICMS & "% (COM REDUÇÃO - AliqICMS)"
                CalculaImposto = AliqICMS 'Vamos Pegar de Acordo com A redução
             Else 'Nw Tem
                If Contribuinte Then
+                  Debug.Print ">>> SAÍDA: " & TB6![Porcentagem de ICMS] & "% (SEM REDUÇÃO + CONTRIBUINTE - TB6)"
                   CalculaImposto = TB6![Porcentagem de ICMS] 'Vamos Pegar do Estado
                Else 'Isento ou Pessoa Fisica, lembrando pessoa fisica sempre 18%
+                  Debug.Print ">>> SAÍDA: " & AliqICMS & "% (SEM REDUÇÃO + NÃO CONTRIBUINTE - AliqICMS)"
                   CalculaImposto = AliqICMS
                End If
             End If
          End If
+         Debug.Print "????????????????????????????????????????????????"
+         Debug.Print ""
          Exit Function
       Case "4", "8" '% IPI, Vr IPI
          If Not ForadoEstado And Sucata Then CalculaImposto = 0: Exit Function 'É sucata entao nw calcula nada
