@@ -19,14 +19,10 @@ Begin VB.Form frmNovoPrg
       TabStop         =   0   'False
       Top             =   15
       Width           =   16050
-      _extentx        =   28296
-      _extenty        =   15073
-      bevelouter      =   0
-      bevelinner      =   0
-      bevelwidth      =   1
-      borderwidth     =   1
-      stretch         =   -1
-      backcolor       =   -2147483633
+      _ExtentX        =   28284
+      _ExtentY        =   15081
+      BevelOuter      =   0
+      Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   480
          Index           =   14
@@ -34,16 +30,19 @@ Begin VB.Form frmNovoPrg
          TabIndex        =   33
          Top             =   75
          Width           =   1245
-         forecolor       =   -2147483630
-         font            =   "NOVOPRG.frx":0000
-         caption         =   "Imprimir"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -53,16 +52,19 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   75
          Width           =   1245
-         forecolor       =   -2147483630
-         font            =   "NOVOPRG.frx":0034
-         caption         =   "Imprimir"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -72,16 +74,19 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   75
          Width           =   1605
-         forecolor       =   -2147483630
-         font            =   "NOVOPRG.frx":0068
-         caption         =   "Gerar Pedido"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Gerar Pedido"
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -91,16 +96,19 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   75
          Width           =   1245
-         forecolor       =   -2147483630
-         font            =   "NOVOPRG.frx":009C
-         caption         =   "Duplicar"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Duplicar"
+         CaptionOffset   =   50
       End
       Begin IRRIG.GCpMM mmCampo 
          Height          =   1650
@@ -110,12 +118,21 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   675
          Width           =   1695
-         appearance      =   0
-         borderstyle     =   0
-         stretch         =   -1
-         backcolor       =   -2147483633
-         locked          =   -1
-         scrollbars      =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         Locked          =   -1  'True
+         ScrollBars      =   0   'False
+         Appearance      =   0
+         BorderStyle     =   0
+         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
       Begin VB.CommandButton bottxtCampo0 
          Height          =   270
@@ -416,12 +433,20 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   2535
          Width           =   13740
-         appearance      =   0
-         borderstyle     =   1
-         stretch         =   -1
-         backcolor       =   -2147483633
-         locked          =   -1
-         scrollbars      =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         Locked          =   -1  'True
+         ScrollBars      =   0   'False
+         Appearance      =   0
+         BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
       Begin VB.TextBox txtCp 
          Alignment       =   1  'Right Justify
@@ -484,14 +509,11 @@ Begin VB.Form frmNovoPrg
          TabStop         =   0   'False
          Top             =   2535
          Width           =   1650
-         _extentx        =   2908
-         _extenty        =   9784
-         bevelouter      =   1
-         bevelinner      =   0
-         bevelwidth      =   1
-         borderwidth     =   1
-         stretch         =   -1
-         backcolor       =   12648384
+         _ExtentX        =   2910
+         _ExtentY        =   9790
+         BevelOuter      =   1
+         Stretch         =   -1  'True
+         BackColor       =   12648384
          Begin IRRIG.GBotao Botao 
             Height          =   480
             Index           =   10
@@ -500,16 +522,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   4875
             Width           =   1500
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":00D0
-            caption         =   "M. Bocais"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "M. Bocais"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -519,16 +544,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   4395
             Width           =   1500
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":00F8
-            caption         =   "P. Executivo"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "P. Executivo"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -538,16 +566,20 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   555
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0120
-            caption         =   "Salvar"
-            captionalign    =   4
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Salvar"
+            CaptionAlign    =   4
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -557,16 +589,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   3915
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0148
-            caption         =   "Financeiro"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Financeiro"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -576,16 +611,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   3435
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0170
-            caption         =   "Itens"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Itens"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -595,16 +633,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   2475
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0198
-            caption         =   "Bombas"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Bombas"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -614,16 +655,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   2955
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":01C0
-            caption         =   "Calc. Cabos"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Calc. Cabos"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -633,16 +677,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   1995
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":01E8
-            caption         =   "MCA/Adutoras"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "MCA/Adutoras"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -652,16 +699,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   1515
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0210
-            caption         =   "Área Irrigada"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Área Irrigada"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -671,16 +721,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   1035
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0238
-            caption         =   "Lances"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Lances"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   480
@@ -690,16 +743,19 @@ Begin VB.Form frmNovoPrg
             TabStop         =   0   'False
             Top             =   75
             Width           =   1515
-            forecolor       =   -2147483630
-            font            =   "NOVOPRG.frx":0260
-            caption         =   "Novo Projeto"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Verdana"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Novo Projeto"
+            CaptionOffset   =   50
          End
       End
       Begin VB.CheckBox ChkCp 
@@ -2243,8 +2299,8 @@ Private Sub GerarOrcamento()
    frmOrcament.SetFocus
    frmOrcament.vgFiltroInicial = "[Seqüência Do Orçamento] = " & SeqOrc
    InicializaFiltro frmOrcament
-   frmOrcament.SuperAtualizaPecas
-   frmOrcament.SuperAtualizaConjuntos
+   frmOrcament.RecalculaPecas
+   frmOrcament.RecalculaConjuntos
    frmOrcament.RepositionOrcamento
    
        

@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Begin VB.Form frmProjetos 
    BorderStyle     =   4  'Fixed ToolWindow
    ClientHeight    =   8775
@@ -21,14 +21,11 @@ Begin VB.Form frmProjetos
       TabStop         =   0   'False
       Top             =   15
       Width           =   16875
-      _extentx        =   29750
-      _extenty        =   15152
-      bevelouter      =   2
-      bevelinner      =   1
-      bevelwidth      =   1
-      borderwidth     =   1
-      stretch         =   -1
-      backcolor       =   12648384
+      _ExtentX        =   29739
+      _ExtentY        =   15161
+      BevelInner      =   1
+      Stretch         =   -1  'True
+      BackColor       =   12648384
       Begin IRRIG.GBotao Botao 
          Height          =   480
          Index           =   6
@@ -37,16 +34,19 @@ Begin VB.Form frmProjetos
          TabStop         =   0   'False
          Top             =   10935
          Width           =   1725
-         forecolor       =   -2147483630
-         font            =   "PROJETOS.frx":0000
-         caption         =   "Gerar Proforma"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Gerar Proforma"
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -56,16 +56,19 @@ Begin VB.Form frmProjetos
          TabStop         =   0   'False
          Top             =   10935
          Width           =   1425
-         forecolor       =   -2147483630
-         font            =   "PROJETOS.frx":0034
-         caption         =   "Gerar Orc."
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Gerar Orc."
+         CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   480
@@ -75,16 +78,19 @@ Begin VB.Form frmProjetos
          TabStop         =   0   'False
          Top             =   10935
          Width           =   1245
-         forecolor       =   -2147483630
-         font            =   "PROJETOS.frx":0068
-         caption         =   "Duplicar"
-         captionalign    =   0
-         buttonstyle     =   0
-         buttontype      =   0
-         captionoffset   =   50
-         leftseparator   =   0
-         topseparator    =   0
-         joinseparators  =   0
+         _ExtentX        =   0
+         _ExtentY        =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Duplicar"
+         CaptionOffset   =   50
       End
       Begin VB.TextBox txtCp 
          Appearance      =   0  'Flat
@@ -136,65 +142,65 @@ Begin VB.Form frmProjetos
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "Dados da Propriedade"
-         TabPicture(0)   =   "PROJETOS.frx":009C
+         TabPicture(0)   =   "PROJETOS.frx":0000
          Tab(0).ControlEnabled=   0   'False
-         Tab(0).Control(0)=   "labFdo111"
+         Tab(0).Control(0)=   "bottxtCampo1(2)"
          Tab(0).Control(0).Enabled=   0   'False
-         Tab(0).Control(1)=   "Label(120)"
+         Tab(0).Control(1)=   "txtCp(1)"
          Tab(0).Control(1).Enabled=   0   'False
-         Tab(0).Control(2)=   "Label(119)"
+         Tab(0).Control(2)=   "txtCp(2)"
          Tab(0).Control(2).Enabled=   0   'False
-         Tab(0).Control(3)=   "Label(3)"
+         Tab(0).Control(3)=   "mmCampo(0)"
          Tab(0).Control(3).Enabled=   0   'False
-         Tab(0).Control(4)=   "labFdo1"
+         Tab(0).Control(4)=   "txtCp(66)"
          Tab(0).Control(4).Enabled=   0   'False
-         Tab(0).Control(5)=   "Label(2)"
+         Tab(0).Control(5)=   "txtCp(67)"
          Tab(0).Control(5).Enabled=   0   'False
-         Tab(0).Control(6)=   "txtCp(111)"
+         Tab(0).Control(6)=   "txtCp(110)"
          Tab(0).Control(6).Enabled=   0   'False
          Tab(0).Control(7)=   "bottxtCampo111(2)"
          Tab(0).Control(7).Enabled=   0   'False
-         Tab(0).Control(8)=   "txtCp(110)"
+         Tab(0).Control(8)=   "txtCp(111)"
          Tab(0).Control(8).Enabled=   0   'False
-         Tab(0).Control(9)=   "txtCp(67)"
+         Tab(0).Control(9)=   "Label(2)"
          Tab(0).Control(9).Enabled=   0   'False
-         Tab(0).Control(10)=   "txtCp(66)"
+         Tab(0).Control(10)=   "labFdo1"
          Tab(0).Control(10).Enabled=   0   'False
-         Tab(0).Control(11)=   "mmCampo(0)"
+         Tab(0).Control(11)=   "Label(3)"
          Tab(0).Control(11).Enabled=   0   'False
-         Tab(0).Control(12)=   "txtCp(2)"
+         Tab(0).Control(12)=   "Label(119)"
          Tab(0).Control(12).Enabled=   0   'False
-         Tab(0).Control(13)=   "txtCp(1)"
+         Tab(0).Control(13)=   "Label(120)"
          Tab(0).Control(13).Enabled=   0   'False
-         Tab(0).Control(14)=   "bottxtCampo1(2)"
+         Tab(0).Control(14)=   "labFdo111"
          Tab(0).Control(14).Enabled=   0   'False
          Tab(0).ControlCount=   15
          TabCaption(1)   =   "Equipamento"
-         TabPicture(1)   =   "PROJETOS.frx":00B8
+         TabPicture(1)   =   "PROJETOS.frx":001C
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "labFdo112"
+         Tab(1).Control(0)=   "txtCp(3)"
          Tab(1).Control(0).Enabled=   0   'False
-         Tab(1).Control(1)=   "Label(121)"
+         Tab(1).Control(1)=   "Frame(0)"
          Tab(1).Control(1).Enabled=   0   'False
-         Tab(1).Control(2)=   "Label(4)"
+         Tab(1).Control(2)=   "bottxtCampo112(2)"
          Tab(1).Control(2).Enabled=   0   'False
          Tab(1).Control(3)=   "txtCp(112)"
          Tab(1).Control(3).Enabled=   0   'False
-         Tab(1).Control(4)=   "bottxtCampo112(2)"
+         Tab(1).Control(4)=   "Label(4)"
          Tab(1).Control(4).Enabled=   0   'False
-         Tab(1).Control(5)=   "Frame(0)"
+         Tab(1).Control(5)=   "Label(121)"
          Tab(1).Control(5).Enabled=   0   'False
-         Tab(1).Control(6)=   "txtCp(3)"
+         Tab(1).Control(6)=   "labFdo112"
          Tab(1).Control(6).Enabled=   0   'False
          Tab(1).ControlCount=   7
          TabCaption(2)   =   "Ficha Tecnica"
-         TabPicture(2)   =   "PROJETOS.frx":00D4
+         TabPicture(2)   =   "PROJETOS.frx":0038
          Tab(2).ControlEnabled=   0   'False
          Tab(2).Control(0)=   "Frame(1)"
          Tab(2).Control(0).Enabled=   0   'False
          Tab(2).ControlCount=   1
          TabCaption(3)   =   "Peças"
-         TabPicture(3)   =   "PROJETOS.frx":00F0
+         TabPicture(3)   =   "PROJETOS.frx":0054
          Tab(3).ControlEnabled=   -1  'True
          Tab(3).Control(0)=   "Grid(1)"
          Tab(3).Control(0).Enabled=   0   'False
@@ -206,175 +212,175 @@ Begin VB.Form frmProjetos
          Tab(3).Control(3).Enabled=   0   'False
          Tab(3).ControlCount=   4
          TabCaption(4)   =   "Conjuntos"
-         TabPicture(4)   =   "PROJETOS.frx":010C
+         TabPicture(4)   =   "PROJETOS.frx":0070
          Tab(4).ControlEnabled=   0   'False
          Tab(4).Control(0)=   "Grid(2)"
          Tab(4).Control(0).Enabled=   0   'False
          Tab(4).ControlCount=   1
          TabCaption(5)   =   "Bombas"
-         TabPicture(5)   =   "PROJETOS.frx":0128
+         TabPicture(5)   =   "PROJETOS.frx":008C
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Linha(12)"
+         Tab(5).Control(0)=   "txtCp(68)"
          Tab(5).Control(0).Enabled=   0   'False
-         Tab(5).Control(1)=   "Label(122)"
+         Tab(5).Control(1)=   "txtCp(69)"
          Tab(5).Control(1).Enabled=   0   'False
-         Tab(5).Control(2)=   "Linha(11)"
+         Tab(5).Control(2)=   "txtCp(70)"
          Tab(5).Control(2).Enabled=   0   'False
-         Tab(5).Control(3)=   "Label(106)"
+         Tab(5).Control(3)=   "txtCp(71)"
          Tab(5).Control(3).Enabled=   0   'False
-         Tab(5).Control(4)=   "Label(105)"
+         Tab(5).Control(4)=   "txtCp(72)"
          Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "Label(104)"
+         Tab(5).Control(5)=   "txtCp(73)"
          Tab(5).Control(5).Enabled=   0   'False
-         Tab(5).Control(6)=   "Label(103)"
+         Tab(5).Control(6)=   "txtCp(74)"
          Tab(5).Control(6).Enabled=   0   'False
-         Tab(5).Control(7)=   "Label(102)"
+         Tab(5).Control(7)=   "txtCp(75)"
          Tab(5).Control(7).Enabled=   0   'False
-         Tab(5).Control(8)=   "Label(101)"
+         Tab(5).Control(8)=   "txtCp(76)"
          Tab(5).Control(8).Enabled=   0   'False
-         Tab(5).Control(9)=   "Label(100)"
+         Tab(5).Control(9)=   "txtCp(77)"
          Tab(5).Control(9).Enabled=   0   'False
-         Tab(5).Control(10)=   "Label(99)"
+         Tab(5).Control(10)=   "txtCp(78)"
          Tab(5).Control(10).Enabled=   0   'False
-         Tab(5).Control(11)=   "Label(98)"
+         Tab(5).Control(11)=   "txtCp(79)"
          Tab(5).Control(11).Enabled=   0   'False
-         Tab(5).Control(12)=   "Label(97)"
+         Tab(5).Control(12)=   "txtCp(80)"
          Tab(5).Control(12).Enabled=   0   'False
-         Tab(5).Control(13)=   "Label(96)"
+         Tab(5).Control(13)=   "txtCp(81)"
          Tab(5).Control(13).Enabled=   0   'False
-         Tab(5).Control(14)=   "Label(95)"
+         Tab(5).Control(14)=   "txtCp(82)"
          Tab(5).Control(14).Enabled=   0   'False
-         Tab(5).Control(15)=   "Label(94)"
+         Tab(5).Control(15)=   "txtCp(83)"
          Tab(5).Control(15).Enabled=   0   'False
-         Tab(5).Control(16)=   "Label(93)"
+         Tab(5).Control(16)=   "txtCp(84)"
          Tab(5).Control(16).Enabled=   0   'False
-         Tab(5).Control(17)=   "Label(92)"
+         Tab(5).Control(17)=   "txtCp(85)"
          Tab(5).Control(17).Enabled=   0   'False
-         Tab(5).Control(18)=   "Label(91)"
+         Tab(5).Control(18)=   "txtCp(86)"
          Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "Label(90)"
+         Tab(5).Control(19)=   "txtCp(87)"
          Tab(5).Control(19).Enabled=   0   'False
-         Tab(5).Control(20)=   "Label(89)"
+         Tab(5).Control(20)=   "txtCp(88)"
          Tab(5).Control(20).Enabled=   0   'False
-         Tab(5).Control(21)=   "Label(88)"
+         Tab(5).Control(21)=   "txtCp(89)"
          Tab(5).Control(21).Enabled=   0   'False
-         Tab(5).Control(22)=   "Linha(8)"
+         Tab(5).Control(22)=   "txtCp(90)"
          Tab(5).Control(22).Enabled=   0   'False
-         Tab(5).Control(23)=   "Label(87)"
+         Tab(5).Control(23)=   "txtCp(91)"
          Tab(5).Control(23).Enabled=   0   'False
-         Tab(5).Control(24)=   "Label(86)"
+         Tab(5).Control(24)=   "txtCp(92)"
          Tab(5).Control(24).Enabled=   0   'False
-         Tab(5).Control(25)=   "Label(85)"
+         Tab(5).Control(25)=   "txtCp(93)"
          Tab(5).Control(25).Enabled=   0   'False
-         Tab(5).Control(26)=   "Label(84)"
+         Tab(5).Control(26)=   "txtCp(94)"
          Tab(5).Control(26).Enabled=   0   'False
-         Tab(5).Control(27)=   "Label(83)"
+         Tab(5).Control(27)=   "txtCp(95)"
          Tab(5).Control(27).Enabled=   0   'False
-         Tab(5).Control(28)=   "Label(82)"
+         Tab(5).Control(28)=   "txtCp(96)"
          Tab(5).Control(28).Enabled=   0   'False
-         Tab(5).Control(29)=   "Label(81)"
+         Tab(5).Control(29)=   "txtCp(97)"
          Tab(5).Control(29).Enabled=   0   'False
-         Tab(5).Control(30)=   "Label(80)"
+         Tab(5).Control(30)=   "txtCp(98)"
          Tab(5).Control(30).Enabled=   0   'False
-         Tab(5).Control(31)=   "Label(79)"
+         Tab(5).Control(31)=   "txtCp(99)"
          Tab(5).Control(31).Enabled=   0   'False
-         Tab(5).Control(32)=   "Linha(7)"
+         Tab(5).Control(32)=   "txtCp(100)"
          Tab(5).Control(32).Enabled=   0   'False
-         Tab(5).Control(33)=   "Label(78)"
+         Tab(5).Control(33)=   "txtCp(101)"
          Tab(5).Control(33).Enabled=   0   'False
-         Tab(5).Control(34)=   "txtCp(122)"
+         Tab(5).Control(34)=   "txtCp(102)"
          Tab(5).Control(34).Enabled=   0   'False
-         Tab(5).Control(35)=   "txtCp(121)"
+         Tab(5).Control(35)=   "txtCp(113)"
          Tab(5).Control(35).Enabled=   0   'False
-         Tab(5).Control(36)=   "txtCp(120)"
+         Tab(5).Control(36)=   "txtCp(114)"
          Tab(5).Control(36).Enabled=   0   'False
-         Tab(5).Control(37)=   "txtCp(119)"
+         Tab(5).Control(37)=   "txtCp(115)"
          Tab(5).Control(37).Enabled=   0   'False
-         Tab(5).Control(38)=   "txtCp(118)"
+         Tab(5).Control(38)=   "txtCp(116)"
          Tab(5).Control(38).Enabled=   0   'False
          Tab(5).Control(39)=   "txtCp(117)"
          Tab(5).Control(39).Enabled=   0   'False
-         Tab(5).Control(40)=   "txtCp(116)"
+         Tab(5).Control(40)=   "txtCp(118)"
          Tab(5).Control(40).Enabled=   0   'False
-         Tab(5).Control(41)=   "txtCp(115)"
+         Tab(5).Control(41)=   "txtCp(119)"
          Tab(5).Control(41).Enabled=   0   'False
-         Tab(5).Control(42)=   "txtCp(114)"
+         Tab(5).Control(42)=   "txtCp(120)"
          Tab(5).Control(42).Enabled=   0   'False
-         Tab(5).Control(43)=   "txtCp(113)"
+         Tab(5).Control(43)=   "txtCp(121)"
          Tab(5).Control(43).Enabled=   0   'False
-         Tab(5).Control(44)=   "txtCp(102)"
+         Tab(5).Control(44)=   "txtCp(122)"
          Tab(5).Control(44).Enabled=   0   'False
-         Tab(5).Control(45)=   "txtCp(101)"
+         Tab(5).Control(45)=   "Label(78)"
          Tab(5).Control(45).Enabled=   0   'False
-         Tab(5).Control(46)=   "txtCp(100)"
+         Tab(5).Control(46)=   "Linha(7)"
          Tab(5).Control(46).Enabled=   0   'False
-         Tab(5).Control(47)=   "txtCp(99)"
+         Tab(5).Control(47)=   "Label(79)"
          Tab(5).Control(47).Enabled=   0   'False
-         Tab(5).Control(48)=   "txtCp(98)"
+         Tab(5).Control(48)=   "Label(80)"
          Tab(5).Control(48).Enabled=   0   'False
-         Tab(5).Control(49)=   "txtCp(97)"
+         Tab(5).Control(49)=   "Label(81)"
          Tab(5).Control(49).Enabled=   0   'False
-         Tab(5).Control(50)=   "txtCp(96)"
+         Tab(5).Control(50)=   "Label(82)"
          Tab(5).Control(50).Enabled=   0   'False
-         Tab(5).Control(51)=   "txtCp(95)"
+         Tab(5).Control(51)=   "Label(83)"
          Tab(5).Control(51).Enabled=   0   'False
-         Tab(5).Control(52)=   "txtCp(94)"
+         Tab(5).Control(52)=   "Label(84)"
          Tab(5).Control(52).Enabled=   0   'False
-         Tab(5).Control(53)=   "txtCp(93)"
+         Tab(5).Control(53)=   "Label(85)"
          Tab(5).Control(53).Enabled=   0   'False
-         Tab(5).Control(54)=   "txtCp(92)"
+         Tab(5).Control(54)=   "Label(86)"
          Tab(5).Control(54).Enabled=   0   'False
-         Tab(5).Control(55)=   "txtCp(91)"
+         Tab(5).Control(55)=   "Label(87)"
          Tab(5).Control(55).Enabled=   0   'False
-         Tab(5).Control(56)=   "txtCp(90)"
+         Tab(5).Control(56)=   "Linha(8)"
          Tab(5).Control(56).Enabled=   0   'False
-         Tab(5).Control(57)=   "txtCp(89)"
+         Tab(5).Control(57)=   "Label(88)"
          Tab(5).Control(57).Enabled=   0   'False
-         Tab(5).Control(58)=   "txtCp(88)"
+         Tab(5).Control(58)=   "Label(89)"
          Tab(5).Control(58).Enabled=   0   'False
-         Tab(5).Control(59)=   "txtCp(87)"
+         Tab(5).Control(59)=   "Label(90)"
          Tab(5).Control(59).Enabled=   0   'False
-         Tab(5).Control(60)=   "txtCp(86)"
+         Tab(5).Control(60)=   "Label(91)"
          Tab(5).Control(60).Enabled=   0   'False
-         Tab(5).Control(61)=   "txtCp(85)"
+         Tab(5).Control(61)=   "Label(92)"
          Tab(5).Control(61).Enabled=   0   'False
-         Tab(5).Control(62)=   "txtCp(84)"
+         Tab(5).Control(62)=   "Label(93)"
          Tab(5).Control(62).Enabled=   0   'False
-         Tab(5).Control(63)=   "txtCp(83)"
+         Tab(5).Control(63)=   "Label(94)"
          Tab(5).Control(63).Enabled=   0   'False
-         Tab(5).Control(64)=   "txtCp(82)"
+         Tab(5).Control(64)=   "Label(95)"
          Tab(5).Control(64).Enabled=   0   'False
-         Tab(5).Control(65)=   "txtCp(81)"
+         Tab(5).Control(65)=   "Label(96)"
          Tab(5).Control(65).Enabled=   0   'False
-         Tab(5).Control(66)=   "txtCp(80)"
+         Tab(5).Control(66)=   "Label(97)"
          Tab(5).Control(66).Enabled=   0   'False
-         Tab(5).Control(67)=   "txtCp(79)"
+         Tab(5).Control(67)=   "Label(98)"
          Tab(5).Control(67).Enabled=   0   'False
-         Tab(5).Control(68)=   "txtCp(78)"
+         Tab(5).Control(68)=   "Label(99)"
          Tab(5).Control(68).Enabled=   0   'False
-         Tab(5).Control(69)=   "txtCp(77)"
+         Tab(5).Control(69)=   "Label(100)"
          Tab(5).Control(69).Enabled=   0   'False
-         Tab(5).Control(70)=   "txtCp(76)"
+         Tab(5).Control(70)=   "Label(101)"
          Tab(5).Control(70).Enabled=   0   'False
-         Tab(5).Control(71)=   "txtCp(75)"
+         Tab(5).Control(71)=   "Label(102)"
          Tab(5).Control(71).Enabled=   0   'False
-         Tab(5).Control(72)=   "txtCp(74)"
+         Tab(5).Control(72)=   "Label(103)"
          Tab(5).Control(72).Enabled=   0   'False
-         Tab(5).Control(73)=   "txtCp(73)"
+         Tab(5).Control(73)=   "Label(104)"
          Tab(5).Control(73).Enabled=   0   'False
-         Tab(5).Control(74)=   "txtCp(72)"
+         Tab(5).Control(74)=   "Label(105)"
          Tab(5).Control(74).Enabled=   0   'False
-         Tab(5).Control(75)=   "txtCp(71)"
+         Tab(5).Control(75)=   "Label(106)"
          Tab(5).Control(75).Enabled=   0   'False
-         Tab(5).Control(76)=   "txtCp(70)"
+         Tab(5).Control(76)=   "Linha(11)"
          Tab(5).Control(76).Enabled=   0   'False
-         Tab(5).Control(77)=   "txtCp(69)"
+         Tab(5).Control(77)=   "Label(122)"
          Tab(5).Control(77).Enabled=   0   'False
-         Tab(5).Control(78)=   "txtCp(68)"
+         Tab(5).Control(78)=   "Linha(12)"
          Tab(5).Control(78).Enabled=   0   'False
          Tab(5).ControlCount=   79
          TabCaption(6)   =   "Serviços"
-         TabPicture(6)   =   "PROJETOS.frx":0144
+         TabPicture(6)   =   "PROJETOS.frx":00A8
          Tab(6).ControlEnabled=   0   'False
          Tab(6).Control(0)=   "Grid(4)"
          Tab(6).Control(0).Enabled=   0   'False
@@ -391,16 +397,19 @@ Begin VB.Form frmProjetos
             TabStop         =   0   'False
             Top             =   1515
             Width           =   1440
-            forecolor       =   -2147483630
-            font            =   "PROJETOS.frx":0160
-            caption         =   "Cabos"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Cabos"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   450
@@ -410,16 +419,19 @@ Begin VB.Form frmProjetos
             TabStop         =   0   'False
             Top             =   1035
             Width           =   1440
-            forecolor       =   -2147483630
-            font            =   "PROJETOS.frx":0194
-            caption         =   "Aspersores"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Aspersores"
+            CaptionOffset   =   50
          End
          Begin IRRIG.GBotao Botao 
             Height          =   450
@@ -429,16 +441,19 @@ Begin VB.Form frmProjetos
             TabStop         =   0   'False
             Top             =   555
             Width           =   1440
-            forecolor       =   -2147483630
-            font            =   "PROJETOS.frx":01C8
-            caption         =   "Parte Aerea"
-            captionalign    =   0
-            buttonstyle     =   0
-            buttontype      =   0
-            captionoffset   =   50
-            leftseparator   =   0
-            topseparator    =   0
-            joinseparators  =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Parte Aerea"
+            CaptionOffset   =   50
          End
          Begin VB.CommandButton bottxtCampo1 
             Height          =   270
@@ -500,12 +515,20 @@ Begin VB.Form frmProjetos
             TabStop         =   0   'False
             Top             =   420
             Width           =   15675
-            appearance      =   0
-            borderstyle     =   1
-            stretch         =   -1
-            backcolor       =   -2147483633
-            locked          =   -1
-            scrollbars      =   0
+            _ExtentX        =   0
+            _ExtentY        =   0
+            Locked          =   -1  'True
+            ScrollBars      =   0   'False
+            Appearance      =   0
+            BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
@@ -542,16 +565,19 @@ Begin VB.Form frmProjetos
                TabIndex        =   140
                Top             =   4455
                Width           =   2895
-               forecolor       =   -2147483630
-               font            =   "PROJETOS.frx":01FC
-               caption         =   "Detalhes do Equipamento"
-               captionalign    =   0
-               buttonstyle     =   0
-               buttontype      =   0
-               captionoffset   =   50
-               leftseparator   =   0
-               topseparator    =   0
-               joinseparators  =   0
+               _ExtentX        =   0
+               _ExtentY        =   0
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Microsoft Sans Serif"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   -1  'True
+                  Strikethrough   =   0   'False
+               EndProperty
+               Caption         =   "Detalhes do Equipamento"
+               CaptionOffset   =   50
             End
             Begin IRRIG.GListV Grid 
                Height          =   2370
@@ -560,39 +586,23 @@ Begin VB.Form frmProjetos
                TabIndex        =   10
                Top             =   480
                Width           =   9750
-               backcolor       =   -2147483643
-               editbackcolor   =   8454143
-               edittextcolor   =   -2147483640
-               cellbackcolor   =   -2147483643
-               celltextcolor   =   -2147483640
-               stripes         =   0
-               stripesbackcolor=   13750737
-               stripestextcolor=   -2147483630
-               selectbackcolor =   -2147483635
-               selecttextcolor =   -2147483634
-               colselectbackcolor=   -2147483633
-               captionbackcolor=   -2147483633
-               captiontextcolor=   -2147483630
-               filterbackcolor =   8454143
-               filtertextcolor =   -2147483640
-               statusbackcolor =   -2147483633
-               statustextcolor =   -2147483630
-               leftbackcolor   =   -2147483633
-               sumbackcolor    =   -2147483633
-               sumtextcolor    =   16711680
-               avgbackcolor    =   -2147483633
-               avgtextcolor    =   16512
-               minbackcolor    =   -2147483633
-               mintextcolor    =   255
-               maxbackcolor    =   -2147483633
-               maxtextcolor    =   49152
-               colheaderbackcolor=   -2147483633
-               colheadertextcolor=   -2147483630
-               gridlinescolor  =   14737632
-               showgridcaption =   0
-               savegridbars    =   0
-               caption         =   ""
-               font            =   "PROJETOS.frx":0230
+               _ExtentX        =   0
+               _ExtentY        =   0
+               EditTextColor   =   -2147483640
+               CellTextColor   =   -2147483640
+               RowHeight       =   315
+               ShowGridCaption =   0   'False
+               SaveGridStripes =   0   'False
+               Caption         =   ""
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Microsoft Sans Serif"
+                  Size            =   9
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
             End
             Begin VB.TextBox txtCp 
                Alignment       =   1  'Right Justify
@@ -3648,39 +3658,23 @@ Begin VB.Form frmProjetos
             TabIndex        =   68
             Top             =   555
             Width           =   14400
-            backcolor       =   -2147483643
-            editbackcolor   =   8454143
-            edittextcolor   =   -2147483640
-            cellbackcolor   =   -2147483643
-            celltextcolor   =   -2147483640
-            stripes         =   0
-            stripesbackcolor=   13750737
-            stripestextcolor=   -2147483630
-            selectbackcolor =   -2147483635
-            selecttextcolor =   -2147483634
-            colselectbackcolor=   -2147483633
-            captionbackcolor=   -2147483633
-            captiontextcolor=   -2147483630
-            filterbackcolor =   8454143
-            filtertextcolor =   -2147483640
-            statusbackcolor =   -2147483633
-            statustextcolor =   -2147483630
-            leftbackcolor   =   -2147483633
-            sumbackcolor    =   -2147483633
-            sumtextcolor    =   16711680
-            avgbackcolor    =   -2147483633
-            avgtextcolor    =   16512
-            minbackcolor    =   -2147483633
-            mintextcolor    =   255
-            maxbackcolor    =   -2147483633
-            maxtextcolor    =   49152
-            colheaderbackcolor=   -2147483633
-            colheadertextcolor=   -2147483630
-            gridlinescolor  =   14737632
-            showgridcaption =   0
-            savegridbars    =   0
-            caption         =   ""
-            font            =   "PROJETOS.frx":0264
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            RowHeight       =   330
+            ShowGridCaption =   0   'False
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin IRRIG.GListV Grid 
             Height          =   6690
@@ -3689,39 +3683,23 @@ Begin VB.Form frmProjetos
             TabIndex        =   69
             Top             =   600
             Width           =   15945
-            backcolor       =   -2147483643
-            editbackcolor   =   8454143
-            edittextcolor   =   -2147483640
-            cellbackcolor   =   -2147483643
-            celltextcolor   =   -2147483640
-            stripes         =   0
-            stripesbackcolor=   13750737
-            stripestextcolor=   -2147483630
-            selectbackcolor =   -2147483635
-            selecttextcolor =   -2147483634
-            colselectbackcolor=   -2147483633
-            captionbackcolor=   -2147483633
-            captiontextcolor=   -2147483630
-            filterbackcolor =   8454143
-            filtertextcolor =   -2147483640
-            statusbackcolor =   -2147483633
-            statustextcolor =   -2147483630
-            leftbackcolor   =   -2147483633
-            sumbackcolor    =   -2147483633
-            sumtextcolor    =   16711680
-            avgbackcolor    =   -2147483633
-            avgtextcolor    =   16512
-            minbackcolor    =   -2147483633
-            mintextcolor    =   255
-            maxbackcolor    =   -2147483633
-            maxtextcolor    =   49152
-            colheaderbackcolor=   -2147483633
-            colheadertextcolor=   -2147483630
-            gridlinescolor  =   14737632
-            showgridcaption =   0
-            savegridbars    =   0
-            caption         =   ""
-            font            =   "PROJETOS.frx":0298
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            RowHeight       =   330
+            ShowGridCaption =   0   'False
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.TextBox txtCp 
             Appearance      =   0  'Flat
@@ -4682,39 +4660,23 @@ Begin VB.Form frmProjetos
                TabIndex        =   120
                Top             =   960
                Width           =   6570
-               backcolor       =   -2147483643
-               editbackcolor   =   8454143
-               edittextcolor   =   -2147483640
-               cellbackcolor   =   -2147483643
-               celltextcolor   =   -2147483640
-               stripes         =   0
-               stripesbackcolor=   13750737
-               stripestextcolor=   -2147483630
-               selectbackcolor =   -2147483635
-               selecttextcolor =   -2147483634
-               colselectbackcolor=   -2147483633
-               captionbackcolor=   -2147483633
-               captiontextcolor=   -2147483630
-               filterbackcolor =   8454143
-               filtertextcolor =   -2147483640
-               statusbackcolor =   -2147483633
-               statustextcolor =   -2147483630
-               leftbackcolor   =   -2147483633
-               sumbackcolor    =   -2147483633
-               sumtextcolor    =   16711680
-               avgbackcolor    =   -2147483633
-               avgtextcolor    =   16512
-               minbackcolor    =   -2147483633
-               mintextcolor    =   255
-               maxbackcolor    =   -2147483633
-               maxtextcolor    =   49152
-               colheaderbackcolor=   -2147483633
-               colheadertextcolor=   -2147483630
-               gridlinescolor  =   14737632
-               showgridcaption =   0
-               savegridbars    =   0
-               caption         =   ""
-               font            =   "PROJETOS.frx":02CC
+               _ExtentX        =   0
+               _ExtentY        =   0
+               EditTextColor   =   -2147483640
+               CellTextColor   =   -2147483640
+               RowHeight       =   330
+               ShowGridCaption =   0   'False
+               SaveGridStripes =   0   'False
+               Caption         =   ""
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Microsoft Sans Serif"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
             End
             Begin VB.TextBox txtCp 
                Alignment       =   1  'Right Justify
@@ -5128,39 +5090,23 @@ Begin VB.Form frmProjetos
             TabIndex        =   121
             Top             =   540
             Width           =   15960
-            backcolor       =   -2147483643
-            editbackcolor   =   8454143
-            edittextcolor   =   -2147483640
-            cellbackcolor   =   -2147483643
-            celltextcolor   =   -2147483640
-            stripes         =   0
-            stripesbackcolor=   13750737
-            stripestextcolor=   -2147483630
-            selectbackcolor =   -2147483635
-            selecttextcolor =   -2147483634
-            colselectbackcolor=   -2147483633
-            captionbackcolor=   -2147483633
-            captiontextcolor=   -2147483630
-            filterbackcolor =   8454143
-            filtertextcolor =   -2147483640
-            statusbackcolor =   -2147483633
-            statustextcolor =   -2147483630
-            leftbackcolor   =   -2147483633
-            sumbackcolor    =   -2147483633
-            sumtextcolor    =   16711680
-            avgbackcolor    =   -2147483633
-            avgtextcolor    =   16512
-            minbackcolor    =   -2147483633
-            mintextcolor    =   255
-            maxbackcolor    =   -2147483633
-            maxtextcolor    =   49152
-            colheaderbackcolor=   -2147483633
-            colheadertextcolor=   -2147483630
-            gridlinescolor  =   14737632
-            showgridcaption =   0
-            savegridbars    =   0
-            caption         =   ""
-            font            =   "PROJETOS.frx":0300
+            _ExtentX        =   0
+            _ExtentY        =   0
+            EditTextColor   =   -2147483640
+            CellTextColor   =   -2147483640
+            RowHeight       =   315
+            ShowGridCaption =   0   'False
+            SaveGridStripes =   0   'False
+            Caption         =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
          Begin VB.TextBox txtCp 
             Alignment       =   1  'Right Justify
@@ -6527,21 +6473,31 @@ Begin VB.Form frmProjetos
       TabIndex        =   305
       Top             =   330
       Width           =   1575
-      _extentx        =   2778
-      _extenty        =   1402
-      fullrowselect   =   0
-      rowheight       =   225
-      allowedit       =   -1
-      allowinsert     =   -1
-      allowdelete     =   -1
-      manualupdate    =   -1
-      manualdelete    =   -1
-      navigationaddmode=   1
-      showfilterbar   =   -1
-      showgridcaption =   0
-      caption         =   ""
-      font            =   "PROJETOS.frx":0334
-      cachesize       =   100
+      _ExtentX        =   2778
+      _ExtentY        =   1402
+      FullRowSelect   =   0   'False
+      StripesBackColor=   14737632
+      RowHeight       =   285
+      AllowEdit       =   -1  'True
+      AllowInsert     =   -1  'True
+      AllowDelete     =   -1  'True
+      ManualUpdate    =   -1  'True
+      ManualDelete    =   -1  'True
+      NavigationAddMode=   1
+      ShowFilterBar   =   -1  'True
+      ShowGridCaption =   0   'False
+      SaveGridStripes =   0   'False
+      Caption         =   ""
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      CacheSize       =   100
    End
    Begin VB.Timer timUnLoad 
       Enabled         =   0   'False
@@ -7604,7 +7560,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 43126
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7615,7 +7571,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 2
        ![Sequencia Do Produto] = 44282
        !Quantidade = 1
-       ![Valor Unitário] = VrUnit1!Valor
+       ![Valor Unitário] = VrUnit1!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7629,7 +7585,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 43126
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7640,7 +7596,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 2
        ![Sequencia Do Produto] = 44286
        !Quantidade = 1
-       ![Valor Unitário] = VrUnit1!Valor
+       ![Valor Unitário] = VrUnit1!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7654,7 +7610,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 43126
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7665,7 +7621,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 2
        ![Sequencia Do Produto] = 44278
        !Quantidade = 1
-       ![Valor Unitário] = VrUnit1!Valor
+       ![Valor Unitário] = VrUnit1!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7678,7 +7634,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 44318
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7691,7 +7647,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 44320
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -7704,7 +7660,7 @@ If Modelo_do_Lance = 638 Then
        ![Sequencia do Item] = 1
        ![Sequencia Do Produto] = 45320
        !Quantidade = QtdLance!Qtd
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        .Update
        .BookMark = .LastModified
@@ -8660,8 +8616,8 @@ Private Sub GerarOrcamento()
    frmOrcament.SetFocus
    frmOrcament.vgFiltroInicial = "[Seqüência Do Orçamento] = " & SeqOrc
    InicializaFiltro frmOrcament
-   frmOrcament.SuperAtualizaPecas
-   frmOrcament.SuperAtualizaConjuntos
+   frmOrcament.RecalculaPecas
+   frmOrcament.RecalculaConjuntos
    frmOrcament.RepositionOrcamento
    
        
@@ -8717,7 +8673,7 @@ If Lances.RecordCount > 0 Then
        ![Sequencia Do Produto] = ProdAux
        !Quantidade = 1
         Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        ![Parte Do Pivo] = "1 AÉREA"
         Sequencial = Sequencial + 1
@@ -8792,7 +8748,7 @@ End If
        ![Sequencia Do Produto] = ProdAux
        !Quantidade = Lances!Qtde
         Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-         ![Valor Unitário] = VrUnit!Valor
+         ![Valor Unitário] = VrUnit!valor
          ![Valor Total] = !Quantidade * ![Valor Unitário]
          ![Parte Do Pivo] = "1 AÉREA"
           Sequencial = Sequencial + 1
@@ -8882,7 +8838,7 @@ If Lances.RecordCount > 0 Then
         
        !Quantidade = Lances!Qtde
         Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        ![Parte Do Pivo] = "1 AÉREA"
         Sequencial = Sequencial + 1
@@ -8966,7 +8922,7 @@ If Lances.RecordCount > 0 Then
         
        !Quantidade = Lances!Qtde
         Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        ![Parte Do Pivo] = "1 AÉREA"
         Sequencial = Sequencial + 1
@@ -9050,7 +9006,7 @@ If Lances.RecordCount > 0 Then
          
         !Quantidade = Lances!Qtde
          Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-        ![Valor Unitário] = VrUnit!Valor
+        ![Valor Unitário] = VrUnit!valor
         ![Valor Total] = !Quantidade * ![Valor Unitário]
         ![Parte Do Pivo] = "1 AÉREA"
          Sequencial = Sequencial + 1
@@ -9114,7 +9070,7 @@ If Balanco > 0 Then
        ![Sequencia Do Produto] = Balanco
        !Quantidade = 1
         Set VrUnit = vgDb.OpenRecordSet("SELECT [Valor Total] Valor From Produtos Where [Seqüência do Produto] = " & ![Sequencia Do Produto])
-       ![Valor Unitário] = VrUnit!Valor
+       ![Valor Unitário] = VrUnit!valor
        ![Valor Total] = !Quantidade * ![Valor Unitário]
        ![Parte Do Pivo] = "1 AÉREA"
         Sequencial = Sequencial + 1
@@ -10182,13 +10138,13 @@ Private Sub AnalisaCondicoes()
       If Err Then Err.Clear: i = False
       vgTemInclusao = i
       grdBrowse.AllowInsert = i
-      .BotInclui.Enabled = i
+      .botInclui.Enabled = i
       .Menu_Inclui.Enabled = i
       i = (False) And Permitido(vgIdentTab, ACAO_EXCLUINDO)
       If Err Then Err.Clear: i = False
       vgTemExclusao = i
       grdBrowse.AllowDelete = i
-      .BotExclui.Enabled = i
+      .botExclui.Enabled = i
       .Menu_Exclui.Enabled = i
       i = (False) And Permitido(vgIdentTab, ACAO_EDITANDO)
       If Err Then Err.Clear: i = False
@@ -13535,7 +13491,7 @@ End Function
 Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, Optional ByVal vgItem As Long, Optional ByVal vgCol As Integer, Optional vgIsValid As Boolean, Optional ByRef vgColumn As Integer, Optional vgErrorMessage As String, Optional KeyCodeAscii As Integer, Optional Shift As Integer) As Variant
    Dim vgRetVal As Variant, vgRsError As GRecordSet, x As String, vgNVez As Integer
    Dim Numero_da_Parcela As Integer, Dias As Integer, Data_de_Vencimento As Variant
-   Dim Valor_da_Parcela As Double, Descricao As String
+   Dim Valor_da_Parcela As Double, descricao As String
    vgPriVez = True
    If vgOq = PREVALIDACOES Then
       vgRetVal = False
@@ -13615,7 +13571,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
             End If
          End If
          If vgIsValid And vgCol = -1 Then
-            vgIsValid = (Not Vazio(Descricao))
+            vgIsValid = (Not Vazio(descricao))
             If Not vgIsValid Then vgColumn = 5
             vgErrorMessage$ = "Descrição da Cobrança não pode ser vazio!"
          End If
@@ -13634,7 +13590,7 @@ IniApDaCol:
    Dias = ColumnValue(2)
    Data_de_Vencimento = ColumnValue(3)
    Valor_da_Parcela = ColumnValue(4)
-   Descricao = ColumnValue(5) & ""
+   descricao = ColumnValue(5) & ""
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -13646,7 +13602,7 @@ IniApDaTb:
       Dias = Parcelas_do_Projeto!Dias
       Data_de_Vencimento = Parcelas_do_Projeto![Data de Vencimento]
       Valor_da_Parcela = Parcelas_do_Projeto![Valor da Parcela]
-      Descricao = Parcelas_do_Projeto!Descrição
+      descricao = Parcelas_do_Projeto!Descrição
    End If
    If Err Then Err.Clear
    On Error GoTo DeuErro

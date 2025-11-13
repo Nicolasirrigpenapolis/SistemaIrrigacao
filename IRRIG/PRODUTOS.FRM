@@ -4214,12 +4214,31 @@ End Sub
 
 'evento - quando o formulário receber o foco
 Private Sub Form_Activate()
+   Dim UsouHourglass As Boolean
+
    If vgPriVez = False Then
       Screen.MousePointer = vbHourglass           'mouse = ampulheta
+      UsouHourglass = True
    Else
       vgPriVez = False
    End If
-   PosicionaRegistro Me, "Seqüência do Produto", seqRegistro: TpProduto = vgTb![Tipo Do Produto]
+
+   If Not vgTb Is Nothing Then
+      If seqRegistro <> 0 Then
+         PosicionaRegistro Me, "Seqüência do Produto", seqRegistro
+      End If
+
+      On Error Resume Next
+      If vgTb.RecordCount > 0 And vgTb.EOF = False And vgTb.BOF = False Then
+         TpProduto = vgTb![Tipo Do Produto]
+      Else
+         TpProduto = 0
+      End If
+      On Error GoTo 0
+   Else
+      TpProduto = 0
+   End If
+
    AtivaForm Me
    
    'se tiver imprimindo registros em grade, fecha form de selecao/preview
@@ -4230,7 +4249,9 @@ Private Sub Form_Activate()
          Unload frmEnviaEMail
       End If
    End If
-   Screen.MousePointer = vbDefault
+   If UsouHourglass Then
+      Screen.MousePointer = vbDefault
+   End If
 End Sub
 
 'evento - inicialização do formulário
@@ -4434,6 +4455,12 @@ End Sub
 
 Public Sub DefineControles()
  On Error GoTo DeuErro
+ On Error Resume Next
+ grdBrowse.ClearColumns
+ grdBrowse.ClearFilterBar
+ grdBrowse.ClearSearch
+ On Error GoTo DeuErro
+
  grdBrowse.AddControlIgnoreFocus mdiIRRIG.botCancela.hWnd           'não deixa o grid tentar gravar automaticamente
  grdBrowse.AddControlIgnoreFocus mdiIRRIG.botSalva.hWnd             'se estiver perdendo o foco para esses botões
    grdBrowse.AllowDelete = True

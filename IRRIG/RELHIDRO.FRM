@@ -534,6 +534,26 @@ Begin VB.Form frmRelHidro
          Top             =   975
          Width           =   2505
       End
+      Begin VB.CheckBox ChkCp 
+         Caption         =   "Todas as entregas"
+         BeginProperty Font 
+            Name            =   "Verdana"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000080&
+         Height          =   255
+         Index           =   3
+         Left            =   1815
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   1215
+         Width           =   2505
+      End
       Begin VB.Label Label 
          AutoSize        =   -1  'True
          Caption         =   "Destino:"
@@ -931,7 +951,7 @@ Dim vgPrimeiroCab As Integer                      'flag se ja foi impresso o pri
 Dim vgFiltroInicial As String                     'filtro inicial do relatório
 Dim vgOrdemInicial As String                      'ordem incial do relatório
 Dim txtCampo(6) As New FormataCampos              'classe dos compos tipo texto do módulo
-Dim chkCampo(2) As New FormataCampos              'classe dos compos tipo lógico do módulo
+Dim chkCampo(3) As New FormataCampos              'classe dos compos tipo lógico do módulo
 Dim vgWidthRel As Single                          'lagura do relatório
 Dim vgHeightRel As Single                         'altura do relatório
 Dim vgPagRef() As Integer                         'Ordem da página dentro do intervalo
@@ -942,7 +962,7 @@ Dim vgDestRel As Integer, vgModoInt As Integer, vgIntPag As String
 Dim vgCopias As Integer, Ajuste As String, Dt_Final As Variant
 Dim Dt_Inicial As Variant, Geral As Double, Entregues As Boolean
 Dim Zebrar As Boolean, Vendedor As Double, Carretel As String
-Dim TipoFiltro As Integer, Entrega_Tec As Boolean
+Dim TipoFiltro As Integer, Entrega_Tec As Boolean, TodasEntregas As Boolean
 Public lblAjuste As Object, checkTipoFiltro0 As Object, checkTipoFiltro1 As Object
 Public chkEntrega_Tec As Object
 Dim Serie_Hidroturbo As New GRecordSet
@@ -976,28 +996,20 @@ Private Function Filtro() As String
       Filtro = Filtro & " AND [Codigo do Vendedor] = " & Vendedor
    End If
    
-   If Entregues = True Then
+   If TodasEntregas Then
       Filtro = Filtro & " AND [Entregue] = 1"
-   End If
-      
-   If Entrega_Tec = True Then
-      Filtro = "1 = 1"
-      Filtro = Filtro & " AND [Entrega Tec] = 1"
-      Exit Function
    Else
-      If vgPWUsuario = "JERONIMO" Or vgPWUsuario = "GABRIEL COSTA" Then
-         Filtro = "1 = 1"
-         Filtro = Filtro & " AND [Entrega Tec] = 0"
-         Exit Function
+      If Entregues = True Then
+         Filtro = Filtro & " AND [Entregue] = 1"
       End If
-   End If
-   
-   If Entregues = False Then
-      Filtro = Filtro & " AND [Dta da Entrega] = Null"
-   End If
-   
-   If Carretel <> "" Then
-      Filtro = Filtro & " AND [Carretel de] = " & Carretel
+
+      If Entrega_Tec = True Then
+         Filtro = Filtro & " AND [Entrega Tec] = 1"
+      End If
+
+      If Entregues = False Then
+         Filtro = Filtro & " AND [Dta da Entrega] IS NULL"
+      End If
    End If
 
    'If AEntregar = False And Entregues = False Then
@@ -1020,35 +1032,54 @@ End Function
 
 Private Function ContaRegistro() As Long
 Dim Tb As New GRecordSet
+ Dim sSQL As String, sFiltro As String
 
- Set Tb = vgDb.OpenRecordSet("SELECT * From [Serie Hidroturbo] Where Entregue = 1 And [Codigo do Vendedor] = " & Serie_Hidroturbo![Codigo do Vendedor] & " And " & FiltroData())
+ sFiltro = Trim$(FiltroData())
+ sSQL = "SELECT * From [Serie Hidroturbo] Where Entregue = 1 And [Codigo do Vendedor] = " & Serie_Hidroturbo![Codigo do Vendedor]
+ If Len(sFiltro) > 0 Then
+    sSQL = sSQL & " AND " & sFiltro
+ End If
+
+ Set Tb = vgDb.OpenRecordSet(sSQL)
  
  ContaRegistro = Tb.RecordCount
 End Function
 
 
 Private Function FiltroData() As String
-   'If Not Vazio(Dt_Inicial) Then
-   '   FiltroData =  "[Dta da Entrega] >= " & D(Dt_Inicial)
-   'End If
-   'If Not Vazio(Dt_Final) Then
-   '   FiltroData = Filtro & " AND [Dta da Entrega] <= " & D(Dt_Final)
-   'End If
-    
+   Dim parts As String
+
+   parts = ""
    If Not Vazio(Dt_Inicial) And TipoFiltro = 1 Then
-      FiltroData = FiltroData & " AND [Dta da Entrega] >= " & D(Dt_Inicial)
+      parts = parts & "[Dta da Entrega] >= " & D(Dt_Inicial)
    End If
    If Not Vazio(Dt_Final) And TipoFiltro = 1 Then
-      FiltroData = FiltroData & " AND [Dta da Entrega] <= " & D(Dt_Final)
+      If Len(parts) > 0 Then parts = parts & " AND "
+      parts = parts & "[Dta da Entrega] <= " & D(Dt_Final)
    End If
-   
    If Not Vazio(Dt_Inicial) And TipoFiltro = 0 Then
-      FiltroData = FiltroData & " AND [Data de Criação] >= " & D(Dt_Inicial)
+      If Len(parts) > 0 Then parts = parts & " AND "
+      parts = parts & "[Data de Criação] >= " & D(Dt_Inicial)
    End If
    If Not Vazio(Dt_Final) And TipoFiltro = 0 Then
-      FiltroData = FiltroData & " AND [Data de Criação] <= " & D(Dt_Final)
+      If Len(parts) > 0 Then parts = parts & " AND "
+      parts = parts & "[Data de Criação] <= " & D(Dt_Final)
    End If
-    
+   
+   FiltroData = parts
+   
+End Function
+
+Private Function OrdemRelatorio() As String
+   Dim ordemBase As String
+
+   If TipoFiltro = 1 Then
+      ordemBase = "[Serie Hidroturbo].[Dta da Entrega] ASC, [Serie Hidroturbo].[Data de Criação] ASC"
+   Else
+      ordemBase = "[Serie Hidroturbo].[Data de Criação] ASC, [Serie Hidroturbo].[Dta da Entrega] ASC"
+   End If
+
+   OrdemRelatorio = ordemBase & ", [Serie Hidroturbo].[Seq do Hidroturbo] ASC"
 End Function
 
 'Função para controlar a zebra
@@ -1106,7 +1137,7 @@ End Function
 
 Private Sub MudouF()
 
- If Entregues = True Then
+ If Entregues = True Or TodasEntregas = True Then
     checkTipoFiltro1.Value = 1
  Else
     checkTipoFiltro0.Value = 0
@@ -1156,6 +1187,7 @@ Private Sub InicializaApelidos(vgComOQue As Integer)
    Carretel = txtCampo(6).Value
    TipoFiltro = val(labopcPainel0.Caption)
    Entrega_Tec = chkCampo(2).Value
+   TodasEntregas = chkCampo(3).Value
    vgIntervalPag = vgIntPag
    If Err Then Err.Clear                          'se deu algum erro, vamos resetá-lo
 End Sub
@@ -1207,6 +1239,7 @@ Public Function Executar(vgOq As String) As String
       opcPainel0(0).Value = True
       opcPainel0(0).CtPri.TabStop = False
       chkCampo(2).Value = False
+   chkCampo(3).Value = False
    ElseIf vgOq = INI_APELIDOS Then
       InicializaApelidos COM_REGISTRO
       ExecutaVisivel
@@ -1238,8 +1271,10 @@ Private Sub ExecutaPreValidacao()
    Ok = (vgDestRel = 1)
    txtCampo(1).Enabled = (Ok And txtCampo(1).Editable)
    Ok = (Entregues)
-   chkCampo(2).Enabled = (Ok And chkCampo(2).Editable)
+   chkCampo(2).Enabled = (Ok And chkCampo(2).Editable And Not TodasEntregas)
+   chkCampo(3).Enabled = (chkCampo(3).Editable)
    If Err Then Err.Clear                          'se houve erro, limpa...
+   AtualizaOpcoesEntrega
 End Sub
 
 'coloca os campos visíveis segundo a condição
@@ -1247,6 +1282,20 @@ Private Sub ExecutaVisivel()
    On Error Resume Next                           'prepara para possiveis erros
    Label(9).Visible = (False)
    If Err Then Err.Clear                          'se houve erro, limpa...
+End Sub
+
+Private Sub AtualizaOpcoesEntrega()
+   Dim todas As Boolean
+   On Error Resume Next
+   todas = chkCampo(3).Value
+   ChkCp(0).Visible = Not todas
+   ChkCp(2).Visible = Not todas
+   If todas Then
+      If Not checkTipoFiltro1 Is Nothing Then
+         checkTipoFiltro1.Value = True
+      End If
+   End If
+   If Err Then Err.Clear
 End Sub
 
 'evento - quando o conteúdo do campo for alterado
@@ -1327,6 +1376,7 @@ Private Sub chkCp_Click(Index As Integer)
       Case 0
          MudouF
    End Select
+   AtualizaOpcoesEntrega
 End Sub
 
 'evento - quando o check receber o foco
@@ -1543,7 +1593,7 @@ Private Sub Form_Load()
    vgQueryAtual = "SELECT [Serie Hidroturbo].[Seq do Hidroturbo], [Serie Hidroturbo].[Serie do Hidroturbo], [Serie Hidroturbo].[Modelo do Hidroturbo], " + _
                      "[Serie Hidroturbo].[Data de Criação], [Serie Hidroturbo].[Nro de Serie Hidroturbo], [Serie Hidroturbo].[Codigo do Geral], " + _
                      "[Serie Hidroturbo].[Codigo do Vendedor], [Serie Hidroturbo].NF, [Serie Hidroturbo].[Dta da Entrega], " + _
-                     "Geral.[Razão Social], [Serie Hidroturbo].[Entrega Tecnica] " + _
+                     "Geral.[Razão Social], [Serie Hidroturbo].[Entrega Tecnica], [Serie Hidroturbo].Obs, [Serie Hidroturbo].[Obs 2] " + _
                      "FROM [Serie Hidroturbo] LEFT JOIN Geral ON [Serie Hidroturbo].[Codigo do Vendedor] = Geral.[Seqüência do Geral] " + _
                      "ORDER BY [Serie Hidroturbo].[Serie do Hidroturbo]"
    Set Serie_Hidroturbo = vgDb.OpenRecordSet("SELECT TOP 1" + Mid$(vgQueryAtual, 7))
@@ -1576,6 +1626,7 @@ Private Sub Form_Load()
    opcPainel0(0).Caption = LoadGasString(123749)
    opcPainel0(1).Caption = LoadGasString(123750)
    chkCampo(2).Caption = LoadGasString(123751)
+   chkCampo(3).Caption = "Todas as Entregas"
    vgSQL$ = Serie_Hidroturbo.Source
    AjustaTamanho Me
    Executar INICIALIZACOES
@@ -1717,9 +1768,11 @@ Public Sub DefineControles()
 
    Set chkCampo(0).CtPri = ChkCp(0)
    chkCampo(0).DataType = 5
+   Debug.Print "[RELHIDRO] chkCampo(0) init", ObjPtr(chkCampo(0))
 
    Set chkCampo(1).CtPri = ChkCp(1)
    chkCampo(1).DataType = 5
+    Debug.Print "[RELHIDRO] chkCampo(1) init", ObjPtr(chkCampo(1))
 
    Set opcPainel0(0).CtPri = opcPainel0Cp(0)
    Set opcPainel0(0).CtFdo = labopcPainel0
@@ -1733,6 +1786,11 @@ Public Sub DefineControles()
 
    Set chkCampo(2).CtPri = ChkCp(2)
    chkCampo(2).DataType = 5
+   Debug.Print "[RELHIDRO] chkCampo(2) init", ObjPtr(chkCampo(2))
+
+    Set chkCampo(3).CtPri = ChkCp(3)
+    chkCampo(3).DataType = 5
+   Debug.Print "[RELHIDRO] chkCampo(3) init", ObjPtr(chkCampo(3))
 
  Exit Sub
 
@@ -1750,7 +1808,10 @@ Public Sub ProssegueExecucao(vgObSaida As Object, Optional ByVal vgNumPg As IMPR
    Dim vgNParc As Integer, vgNVez As Integer, vgNCop As Integer
    Dim vgEmPapel As Boolean, vgPagOk As Boolean, vgPV As Boolean, vgDifProxReg As Single, vgNumPag As Long, vgSemControlePg As Boolean, Ok As Boolean
    Dim j As Integer, m As Integer, vgQt As Integer, vgPagOrig As Integer, vgNovaPg As Integer, k As Integer, vgIniProc As Boolean, vgTestaPriCab As Boolean
-   Dim vgQuebra20 As Variant
+   Dim vgQuebra20 As Variant, obsTexto2 As String, valueObs2 As Variant, entregaTecLegenda As String, ordemAtual As String
+   Const OFFSET_LINHA As Single = 3.17
+   Const ALTURA_REGISTRO As Single = 12.68
+   Const ALTURA_CAIXA_STR As String = "12.42"
    Screen.MousePointer = vbHourglass              'mostra ampulheta
    vgCancelou = False
    vgTemFimRel = False                            'se tem pendência para ser impressa como fim de página
@@ -1791,9 +1852,17 @@ OutraCopia:
       ElseIf Len(vgUltimoFiltro + vgFiltroInicial) > 0 Then
          x$ = InsereSQL(x$, EXP_WHERE, vgFiltroInicial + vgUltimoFiltro)
       End If
-      vgOrdemInicial = ExtraiSQL(x$, EXP_ORDERBY)
-      If Len(vgUltimaOrdem) > 0 Or Len(vgOrdemInicial) > 0 Then
-         x$ = InsereSQL(x$, EXP_ORDERBY, vgOrdemInicial + IIf(Len(vgOrdemInicial) > 0 And Len(vgUltimaOrdem) > 0, ", ", "") + vgUltimaOrdem)
+      vgOrdemInicial = OrdemRelatorio()
+      ordemAtual = vgOrdemInicial
+      If Len(vgUltimaOrdem) > 0 Then
+         If Len(ordemAtual) > 0 Then
+            ordemAtual = ordemAtual & ", " & vgUltimaOrdem
+         Else
+            ordemAtual = vgUltimaOrdem
+         End If
+      End If
+      If Len(ordemAtual) > 0 Then
+         x$ = InsereSQL(x$, EXP_ORDERBY, ordemAtual)
       End If
       Set Serie_Hidroturbo = vgDb.OpenRecordSet(x$)
       If Serie_Hidroturbo.RecordCount = 0 Then
@@ -1943,7 +2012,21 @@ Volta:
          vgQuebra20 = Serie_Hidroturbo![Data de Criação]
          Do While Not Serie_Hidroturbo.EOF
             If vgQuebra20 <> Serie_Hidroturbo![Data de Criação] Then Exit Do
-            If vgPosLin > vgLimiteInf - 6.87 Then
+            obsTexto2 = ""
+            valueObs2 = Null
+            Err.Clear
+            valueObs2 = Serie_Hidroturbo.Fields("Obs 2").Value
+            If Err.Number <> 0 Then
+               Err.Clear
+               valueObs2 = Null
+            End If
+            Debug.Print "[RELHIDRO][OBS]", "Seq:", Serie_Hidroturbo![Seq Do Hidroturbo], "Obs2:", Left$(CStr(valueObs2), 60)
+            If IsNull(valueObs2) Then
+               obsTexto2 = ""
+            Else
+               obsTexto2 = Trim$(CStr(valueObs2))
+            End If
+            If vgPosLin > vgLimiteInf - ALTURA_REGISTRO Then
                vgPagOk = False
                vgPosLin = vgPosLin - vgDifProxReg
                vgDifProxReg = 0
@@ -1953,7 +2036,7 @@ Volta:
                On Error Resume Next
             End If
             If Mudou Then
-               Imprime "", 0, vgPosLin, "L=287|BOX=F14737632/0/" + Str$(vgPosLin) + "/286.77/6.61", vgObSaida, , , , vgFP.vgProcuraPg
+               Imprime "", 0, vgPosLin, "L=287|BOX=F14737632/0/" + Str$(vgPosLin) + "/286.77/" + ALTURA_CAIXA_STR, vgObSaida, , , , vgFP.vgProcuraPg
             End If
             Imprime Serie_Hidroturbo![Razão Social], 226.45, vgPosLin, "F=Verdana|L=60", vgObSaida, , , , vgFP.vgProcuraPg
             Imprime Serie_Hidroturbo![Nro de Serie Hidroturbo], 0, vgPosLin, "F=Verdana|L=30", vgObSaida, , , , vgFP.vgProcuraPg
@@ -1964,14 +2047,15 @@ Volta:
             End If
             Imprime BuscaGeral(), 86.77, vgPosLin, "F=Verdana|L=56", vgObSaida, , , , vgFP.vgProcuraPg
             Imprime CDate(Serie_Hidroturbo![Dta da Entrega]), 204.23, vgPosLin, "F=Verdana|L=20", vgObSaida, "99/99/9999", , , vgFP.vgProcuraPg
-            Imprime "NFe:", 0, vgPosLin + 3.17, "F=Verdana|W=700|S=9|L=12", vgObSaida, , , , vgFP.vgProcuraPg
-            Imprime Serie_Hidroturbo!NF, 9.52, vgPosLin + 3.17, "F=Verdana|L=52", vgObSaida, , , , vgFP.vgProcuraPg
+            Imprime "NFe:", 0, vgPosLin + OFFSET_LINHA, "F=Verdana|W=700|S=9|L=12", vgObSaida, , , , vgFP.vgProcuraPg
+            Imprime Serie_Hidroturbo!NF, 9.52, vgPosLin + OFFSET_LINHA, "F=Verdana|L=52", vgObSaida, , , , vgFP.vgProcuraPg
             If False Then
                Imprime Serie_Hidroturbo![Codigo do Vendedor], 28.87, vgPosLin, "L=13|JD", vgObSaida, "999999", , , vgFP.vgProcuraPg
             End If
             Imprime BuscaUf(), 145.23, vgPosLin, "F=Verdana|L=54", vgObSaida, , , , vgFP.vgProcuraPg
-            Imprime EntregaTecnica, 204.23, vgPosLin + 3.17, "F=Verdana|L=82", vgObSaida, "@x", , , vgFP.vgProcuraPg
-            vgPosLin = vgPosLin + 6.87
+            Imprime EntregaTecnica, 204.23, vgPosLin + OFFSET_LINHA, "F=Verdana|L=82", vgObSaida, "@x", , , vgFP.vgProcuraPg
+            Imprime "Obs 2: " & obsTexto2, 0, vgPosLin + (OFFSET_LINHA * 2), "F=Verdana|L=280", vgObSaida, "@x", , , vgFP.vgProcuraPg
+            vgPosLin = vgPosLin + ALTURA_REGISTRO
             vgDifProxReg = 0
             Serie_Hidroturbo.MoveNext
             vgDifProxReg = 1
@@ -2222,7 +2306,18 @@ OutraFolha:
       Imprime "Entregues", 140.74, 7.4, "F=Courier New|W=700|S=15.75|L=39", vgObSaida, , , , vgFP.vgProcuraPg
    End If
    Imprime "UF", 145.23, 28.83, "F=Microsoft Sans Serif|W=700|S=9|L=11", vgObSaida, , , , vgFP.vgProcuraPg
-   Imprime IIf(Entrega_Tec, " Fez Entrega Tecnica", "Falta Entrega Tecnica"), 40.47, 18.25, "F=Courier New|W=700|S=15.75|L=108", vgObSaida, , , , vgFP.vgProcuraPg
+   If TodasEntregas Then
+      entregaTecLegenda = "Todas as Entregas"
+   ElseIf Entregues Then
+      If Entrega_Tec Then
+         entregaTecLegenda = "Fez Entrega Tecnica"
+      Else
+         entregaTecLegenda = "Entrega Tecnica: Todos"
+      End If
+   Else
+      entregaTecLegenda = "Falta Entrega Tecnica"
+   End If
+   Imprime entregaTecLegenda, 40.47, 18.25, "F=Courier New|W=700|S=15.75|L=108", vgObSaida, , , , vgFP.vgProcuraPg
    vgPrimeiroCab = False
    vgTemFimRel = False
    Return
@@ -2470,9 +2565,14 @@ Private Sub Form_Unload(Cancel As Integer)
       txtCampo(i).Finalize
       Set txtCampo(i) = Nothing
    Next
-   Set chkCampo(0) = Nothing
-   Set chkCampo(1) = Nothing
-   Set chkCampo(2) = Nothing
+   For i = 0 To UBound(chkCampo)
+      Debug.Print "[RELHIDRO] chkCampo(" & i & ") finalize start", ObjPtr(chkCampo(i))
+      chkCampo(i).Finalize
+      Debug.Print "[RELHIDRO] chkCampo(" & i & ") finalize done"
+      Set chkCampo(i) = Nothing
+      Debug.Print "[RELHIDRO] chkCampo(" & i & ") set Nothing"
+   Next
+   Set chkCampo(3) = Nothing
    If Not Serie_Hidroturbo Is Nothing Then
       Serie_Hidroturbo.CloseRecordset
       Set Serie_Hidroturbo = Nothing

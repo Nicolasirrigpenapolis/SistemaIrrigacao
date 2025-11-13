@@ -56,6 +56,32 @@ End Function
 
 Friend Function Add(ByVal NewName As String, ByVal NewTitle As String, ByVal NewType As Variant, ByVal NewMask As String, ByVal NewSize As Double, ByVal NewDecimal As Integer, ByVal NewHidden As Boolean, ByVal NewNullable As Boolean, ByVal NewSystem As Boolean, ByVal NewSeqInterno As Boolean, ByVal NewSequencia As Long, ByVal NewDescending As Boolean, ByVal NewDefault As String, ByVal NewUpdatableColumn As Boolean, Optional ByVal NewBaseColumnName As String) As GColumn
    Dim oColumn As GColumn
+   Dim existing As GColumn
+
+   On Error Resume Next
+   Set existing = vgColumns(NewName)
+   If Err.Number = 0 Then
+      On Error GoTo 0
+      existing.Title = NewTitle
+      existing.ColumnType = NewType
+      existing.Mask = NewMask
+      existing.Size = NewSize
+      existing.QDecimal = NewDecimal
+      existing.Hidden = NewHidden
+      existing.Nullable = NewNullable
+      existing.System = NewSystem
+      existing.SeqInterno = NewSeqInterno
+      existing.Sequencia = NewSequencia
+      existing.Descending = NewDescending
+      existing.Default = NewDefault
+   existing.UpdatableColumn = NewUpdatableColumn
+   If Len(NewBaseColumnName) > 0 Then existing.NameFilter = NewBaseColumnName
+      Set Add = existing
+      Exit Function
+   End If
+   Err.Clear
+   On Error GoTo 0
+
    Set oColumn = New GColumn
    oColumn.Init vgParent, NewName, NewTitle, NewType, NewMask, NewSize, NewDecimal, NewHidden, NewNullable, NewSystem, NewSeqInterno, NewSequencia, NewDescending, NewDefault, vgColumns.Count + 1, NewUpdatableColumn, NewBaseColumnName
    vgColumns.Add oColumn, NewName

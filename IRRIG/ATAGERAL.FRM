@@ -428,8 +428,14 @@ End Sub
 
 'evento - descarregando o formulário da memória
 Private Sub Form_Unload(Cancel As Integer)
+   Dim i As Integer
    On Error Resume Next
    FinalizaForm Me
+   For i = 0 To 5
+      Set Botao(i).Picture = Nothing
+   Next
+   Set Painel(0).Picture = Nothing
+   Set Painel(1).Picture = Nothing
    Set BtnCompras = Nothing
    Set BtnVendas = Nothing
    Set BtnAlmoxa = Nothing
@@ -437,8 +443,15 @@ Private Sub Form_Unload(Cancel As Integer)
    Set BtnVendas2 = Nothing
    Set BtnFatura = Nothing
    Set lblAjuste = Nothing
+   If Not vgFP Is Nothing Then
+      Unload vgFP
+      Set vgFP = Nothing
+   End If
+   If Not vgTooltips Is Nothing Then
+      vgTooltips.HideTips
+      Set vgTooltips = Nothing
+   End If
    Set vgFG = Nothing
-   Set vgTooltips = Nothing
    Set frmAtaGeral = Nothing                      'libera o segmento de código do form
 End Sub
 

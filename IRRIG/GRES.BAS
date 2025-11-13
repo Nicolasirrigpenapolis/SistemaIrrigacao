@@ -36,18 +36,36 @@ Public Function Cvl(S As String) As Long
 End Function
 
 Public Function LoadFixedGasPicture(ByVal n As Long, Optional ByVal Size As Variant, Optional ByVal ColorDepth As Variant, Optional ByVal SizeX As Variant, Optional ByVal SizeY As Variant) As IPictureDisp
-   Dim vgPic As IPictureDisp, nPic As Long, vgArq As String
+   Dim vgPic As IPictureDisp, nPic As Long, vgArq As String, vgKey As String
 
-   On Error Resume Next
+   On Error GoTo TrataErro
 
    nPic = n
-   Set vgPic = ResCollection("P" + CStr(nPic))
-   Err.Clear
+   vgKey = "P" + CStr(nPic)
+
+   On Error Resume Next
+   Set vgPic = ResCollection(vgKey)
+   If Err.Number <> 0 Then
+      Err.Clear
+      Set vgPic = Nothing
+   End If
+   On Error GoTo TrataErro
+
    If vgPic Is Nothing Then
-      vgArq$ = LoadGasPicture(n)
-      If Len(vgArq$) > 0 Then
-         Set vgPic = LoadPicture(vgArq$, Size, ColorDepth, SizeX, SizeY)
-         ResCollection.Add vgPic, "P" + CStr(nPic)
+      vgArq = LoadGasPicture(n)
+      If Len(vgArq) > 0 Then
+         Set vgPic = LoadPicture(vgArq, Size, ColorDepth, SizeX, SizeY)
+         If Not vgPic Is Nothing Then
+            On Error Resume Next
+            ResCollection.Add vgPic, vgKey
+            If Err.Number = 457 Then
+               Err.Clear
+               ResCollection.Remove vgKey
+               ResCollection.Add vgPic, vgKey
+            End If
+            Err.Clear
+            On Error GoTo TrataErro
+         End If
       End If
    End If
    
@@ -55,12 +73,11 @@ Public Function LoadFixedGasPicture(ByVal n As Long, Optional ByVal Size As Vari
 
 FimDaSub:
    Set vgPic = Nothing
-   
    Exit Function
-      
-DeuErro:
+
+TrataErro:
    Resume FimDaSub
-   
+
 End Function
 
 Public Function LoadGasStringParam(n As Long, ParamArray vgValores() As Variant) As String
@@ -203,7 +220,7 @@ End Sub
 'abre o arquivo de recursos e cria um handle 
 'e monta um nome ArqFig para extrair imagens
 Public Function AbreHandleRes() As Integer
-   Dim sTempPath As String, x As String, vgArqR As String, HE As HashEntry
+   Dim sTempPath As String, x As String, vgArqR As String, HE As HashEntry, i As Long, vgDirDestino As String, vgDirCriar As String
    On Error Goto DeuErro
    vgNomeRes$ = "IRRIG.RES"                       'nome do arquivo resource
    vgArqR$ = vgDirEXE$ + vgNomeRes$
@@ -211,10 +228,41 @@ Public Function AbreHandleRes() As Integer
       
       'monta nome para figuras
       sTempPath$ = String(256, Chr$(0))
-      GetTempPath 256, sTempPath$
-      sTempPath$ = Left$(sTempPath$, Instr(sTempPath$, Chr$(0)) - 1)
-      x$ = sTempPath$
-      If Right$(x$, 1) <> "\" Then x$ = x$ + "\"
+      If GetTempPath(256, sTempPath$) = 0 Then
+         sTempPath$ = ""
+      Else
+         i = InStr(sTempPath$, Chr$(0))
+         If i > 0 Then
+            sTempPath$ = Left$(sTempPath$, i - 1)
+         End If
+      End If
+
+      x$ = Trim$(sTempPath$)
+      If Len(x$) = 0 Then
+         x$ = vgDirEXE$
+      End If
+
+      vgDirDestino = x$
+      If Right$(vgDirDestino, 1) <> "\" Then
+         vgDirDestino = vgDirDestino + "\"
+      End If
+
+      On Error Resume Next
+      If Len(vgDirDestino) = 0 Or Len(Dir$(vgDirDestino, vbDirectory)) = 0 Then
+         vgDirCriar = vgDirDestino
+         If Right$(vgDirCriar, 1) = "\" Then
+            vgDirCriar = Left$(vgDirCriar, Len(vgDirCriar) - 1)
+         End If
+         If Len(vgDirCriar) > 0 Then MkDir vgDirCriar
+         If Err.Number <> 0 Then
+            Err.Clear
+            vgDirDestino = vgDirEXE$
+            If Right$(vgDirDestino, 1) <> "\" Then vgDirDestino = vgDirDestino + "\"
+         End If
+      End If
+      On Error GoTo DeuErro
+
+      x$ = vgDirDestino
       vgArqFig$ = x$ + "img~gas"
       
       'cria handle e abre arquivos
