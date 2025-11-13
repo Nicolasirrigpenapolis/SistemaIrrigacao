@@ -10089,6 +10089,7 @@ Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
 Private defaultBack55 As Long
+Private Grid1_ValorUnitario_Pendente As Double    'valor unitário da peça selecionada no Grid 1 (persistente entre eventos)
 
 'Variáveis para detectar troca de item (Fix: preço errado ao trocar item)
 Dim Seq_Conjunto_Anterior As Long
@@ -10590,8 +10591,6 @@ Private Function InfoProdutos(Bc_pis As Double, Valor_do_Tributo As Double, Sequ
    TbAuxiliar "Classificação Fiscal", "[Seqüência da Classificação] = " & ProdutoAux![Seqüência da Classificação] & " AND [Seqüência da Classificação] > 0", ProdutoNCMAux
    TbAuxiliar "Unidades", "[Seqüência da Unidade] = " & ProdutoAux![Seqüência da Unidade] & " AND [Seqüência da Unidade] > 0", ProdutoUnidadeAux
    
-   Debug.Print "[InfoProdutos] Oq=" & Oq & " | Seq=" & Sequencia_do_Produto
-   
    Select Case Oq
       Case "NCM"
          InfoProdutos = ProdutoNCMAux!Ncm
@@ -10601,10 +10600,8 @@ Private Function InfoProdutos(Bc_pis As Double, Valor_do_Tributo As Double, Sequ
          Set MP = vgDb.OpenRecordSet("SELECT * From [Matéria Prima] WHERE [Seqüência do Produto] = " & Sequencia_do_Produto & " And [Seqüência da Matéria Prima] = 43602")
          If ProdutoAux![Seqüência do Grupo Produto] = 20 And MP.RecordCount > 0 Then 'peças do pivo galvanizada
             InfoProdutos = ProdutoAux![Valor de Custo] * 3.5
-            Debug.Print "[InfoProdutos] Grupo 20 com MP 43602, Valor=" & InfoProdutos
          Else
            InfoProdutos = ProdutoAux![Valor Total]
-           Debug.Print "[InfoProdutos] Valor padrão=" & InfoProdutos
          End If
          Set MP = Nothing
       Case "Peso"
@@ -10675,8 +10672,6 @@ Private Function InfoConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Conjunt
    TbAuxiliar "Classificação Fiscal", "[Seqüência da Classificação] = " & PegaNCMPadrao() & " AND [Seqüência da Classificação] > 0", ConjuntoNCMAux
    TbAuxiliar "Unidades", "[Seqüência da Unidade] = " & ConjuntoAux![Seqüência da Unidade] & " AND [Seqüência da Unidade] > 0", ConjuntoUnidadeAux
       
-   Debug.Print "[InfoConjuntos] Oq=" & Oq & " | Seq=" & Sequencia_do_Conjunto
-   
    Select Case Oq
       Case "NCM"
          InfoConjuntos = "84248229"
@@ -10684,7 +10679,6 @@ Private Function InfoConjuntos(Sequencia_do_Orcamento As Long, Sequencia_Conjunt
          InfoConjuntos = ConjuntoUnidadeAux![Sigla da Unidade]
       Case "Valor Unitário"
          InfoConjuntos = ConjuntoAux![Valor Total]
-         Debug.Print "[InfoConjuntos] Retornando Valor=" & InfoConjuntos
       Case "Estoque"
          InfoConjuntos = ConjuntoAux![Quantidade Contábil]
    End Select
@@ -10710,8 +10704,6 @@ Private Function InfoPecas(Valor_do_Tributo As Double, Sequencia_do_Orcamento As
    TbAuxiliar "Classificação Fiscal", "[Seqüência da Classificação] = " & PegaNCMPadrao() & " AND [Seqüência da Classificação] > 0", PecasNCMAux
    TbAuxiliar "Unidades", "[Seqüência da Unidade] = " & PecaAux![Seqüência da Unidade] & " AND [Seqüência da Unidade] > 0", PecasUnidadeAux
      
-   Debug.Print "[InfoPecas] Oq=" & Oq & " | Seq=" & Sequencia_do_Produto
-   
    Select Case Oq
       Case "NCM"
          InfoPecas = "84248229"
@@ -10719,7 +10711,6 @@ Private Function InfoPecas(Valor_do_Tributo As Double, Sequencia_do_Orcamento As
          InfoPecas = PecasUnidadeAux![Sigla da Unidade]
       Case "Valor Unitário"
          InfoPecas = PecaAux![Valor Total]
-         Debug.Print "[InfoPecas] Retornando Valor=" & InfoPecas
       Case "Peso"
          InfoPecas = PecaAux!Peso
       Case "Estoque"
@@ -11139,8 +11130,6 @@ Private Function ProcessaPeca(Valor_do_Tributo As Double, Sequencia_do_Orcamento
    Dim valorTotalSql As String
    On Error GoTo DeuErro
    
-   Debug.Print "[ProcessaPeca] INÍCIO - Seq=" & Sequencia_do_Produto & " | Valor_Unitario RECEBIDO=" & Valor_Unitario
-   
    modoManual = Edicao_Manual_Impostos
    
    If Sequencia_Pecas_do_Orcamento = 0 Then
@@ -11162,11 +11151,8 @@ Private Function ProcessaPeca(Valor_do_Tributo As Double, Sequencia_do_Orcamento
 
    Valor_Unitario = Round(Valor_Unitario, 2)
  
-   Debug.Print "[ProcessaPeca] Após Round - Valor_Unitario=" & Valor_Unitario
-   
    vgDb.BeginTrans
    vgDb.Execute "Update [Peças do Orçamento] Set [Valor Unitário] = " & Substitui(CCur(Round(Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento
-   Debug.Print "[ProcessaPeca] SQL Valor Unitário executado: " & Substitui(CCur(Round(Valor_Unitario, 2)), ",", ".", SO_UM)
    vgDb.Execute "Update [Peças do Orçamento] Set [Valor Total] = " & Substitui(CCur(Round(Quantidade * Valor_Unitario, 2)), ",", ".", SO_UM) & " WHERE [Seqüência do Orçamento] = " & Sequencia_do_Orcamento & " AND [Seqüência Peças do Orçamento] = " & Sequencia_Pecas_do_Orcamento
 
    ' Calcula impostos automaticamente (removida condição de orçamento avulso e usuários privilegiados)
@@ -15173,10 +15159,10 @@ Private Sub PreValidaNFE()
 
         If MsgBox( _
                 "Peso Bruto, Peso Líquido e Volumes devem ser preenchidos!" & vbCrLf & _
-                "Clique Sim para corrigir agora ou Não para continuar mesmo assim.", _
-                vbYesNo + vbExclamation, vaTitulo) = vbYes Then
-            Exit Sub   ' usuário quer corrigir
-        End If         ' usuário quer continuar ? segue
+                "Deseja continuar mesmo assim?", _
+                vbYesNo + vbQuestion + vbDefaultButton2, vaTitulo) = vbNo Then
+            Exit Sub   ' usuário NÃO quer continuar - vai corrigir
+        End If         ' usuário quer continuar - segue
     End If
 
     ' 2) Placa e UF obrigatórios para frete próprio
@@ -15185,10 +15171,10 @@ Private Sub PreValidaNFE()
         If Trim(txtCp(152).Text) = "" Or Trim(txtCp(153).Text) = "" Then
             If MsgBox( _
                     "Para frete próprio é obrigatório informar Placa e UF." & vbCrLf & _
-                    "Clique Sim para corrigir agora ou Não para continuar.", _
-                    vbYesNo + vbExclamation, vaTitulo) = vbYes Then
-                Exit Sub
-            End If
+                    "Deseja continuar mesmo assim?", _
+                    vbYesNo + vbQuestion + vbDefaultButton2, vaTitulo) = vbNo Then
+                Exit Sub   ' usuário NÃO quer continuar - vai corrigir
+            End If         ' usuário quer continuar - segue
         End If
     End If
     
@@ -20800,19 +20786,14 @@ IniApDaCol:
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Conjunto_Anterior)
    
-   Debug.Print "[GRID 0 - CONJUNTO] IniApDaCol - vgOq=" & vgOq & " | Seq_Nova=" & Sequencia_Nova & " | Seq_Anterior=" & Seq_Conjunto_Anterior & " | TrocaDetectada=" & TrocaDetectada
-   
    ' Se detectou troca de item, busca novo preço IMEDIATAMENTE antes de continuar
    If TrocaDetectada Then
-      Debug.Print "[GRID 0 - CONJUNTO] TROCA DETECTADA! Buscando novo valor unitário IMEDIATAMENTE para Seq=" & Sequencia_Nova
       Dim NovoPrecoConj As Double
       ' Busca o valor unitário do novo conjunto
       NovoPrecoConj = InfoConjuntos(val(Parse$(CStr(ColumnValue(0)), Chr$(1), 1)), 0, Sequencia_Nova, _
                                    0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário")
-      Debug.Print "[GRID 0 - CONJUNTO] Novo preço do catálogo=" & NovoPrecoConj
       ' Atualiza IMEDIATAMENTE o ColumnValue antes de processar
       ColumnValue(7) = NovoPrecoConj
-      Debug.Print "[GRID 0 - CONJUNTO] ColumnValue(7) atualizado IMEDIATAMENTE=" & ColumnValue(7)
    End If
    
    ' Atualiza tracker de sequência
@@ -20939,6 +20920,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
    vgNVez = 0
    On Error GoTo DeuErro
    If vgOq = CONTEUDODACOLUNA Then
+      Debug.Print "[GRID 1 - PEÇAS] CONTEUDODACOLUNA vgCol=" & vgCol & " | Status=" & Grid(1).Status & " | vgItem=" & vgItem & " | SelectedItem=" & Grid(1).SelectedItem
       If Grid(1).Status <> ACAO_NAVEGANDO And vgItem = Grid(1).SelectedItem Then
          GoSub IniApDaCol
       Else
@@ -20973,11 +20955,9 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 9
             ' Busca valor unitário sempre do catálogo (igual produtos)
-            vgRetVal = InfoPecas(Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_Total, _
-   Valor_do_IPI, Valor_do_ICMS, Sequencia_Pecas_do_Orcamento, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, _
-   Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
-   Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
-   Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, Peso, "Valor Unitário")
+            ' Usa o Valor_Unitario já atualizado pelo IniApDaCol quando há troca de item
+            vgRetVal = Valor_Unitario
+            Debug.Print "[GRID 1 - PEÇAS] CONTEUDODACOLUNA Case 9 - Retornando Valor_Unitario=" & vgRetVal
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 12
             vgRetVal = (Quantidade * Valor_Unitario)
@@ -21058,6 +21038,10 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 3
             CFOP = IIf(Fatura_Proforma, 7101, 0)
             vgRetVal = CFOP
+         Case 9
+            ' Retorna o valor unitário que foi buscado no IniApDaCol
+            vgRetVal = Grid1_ValorUnitario_Pendente
+            Debug.Print "[GRID 1 - PEÇAS] DEFAULTDASCOLUNAS Case 9 - Retornando Grid1_ValorUnitario_Pendente=" & vgRetVal
       End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -21158,23 +21142,18 @@ IniApDaCol:
    On Error Resume Next
    Dim Sequencia_Nova As Long
    Dim TrocaDetectada As Boolean
+   Dim NovoPreco As Double
+   
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Pecas_Anterior)
    
-   Debug.Print "[GRID 1 - PEÇAS] IniApDaCol - vgOq=" & vgOq & " | Seq_Nova=" & Sequencia_Nova & " | Seq_Anterior=" & Seq_Produto_Pecas_Anterior & " | TrocaDetectada=" & TrocaDetectada
-   
-   ' Se detectou troca de item, busca novo preço IMEDIATAMENTE antes de continuar
-   If TrocaDetectada Then
-      Debug.Print "[GRID 1 - PEÇAS] TROCA DETECTADA! Buscando novo valor unitário IMEDIATAMENTE para Seq=" & Sequencia_Nova
-      Dim NovoPreco As Double
-      ' Busca o valor unitário do novo item
-      NovoPreco = InfoPecas(0, val(Parse$(CStr(ColumnValue(0)), Chr$(1), 1)), Sequencia_Nova, _
-                           0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário")
-      Debug.Print "[GRID 1 - PEÇAS] Novo preço do catálogo=" & NovoPreco
-      ' Atualiza IMEDIATAMENTE o ColumnValue antes de processar
-      ColumnValue(9) = NovoPreco
-      Debug.Print "[GRID 1 - PEÇAS] ColumnValue(9) atualizado IMEDIATAMENTE=" & ColumnValue(9)
+   ' Se começou uma nova linha (Seq_Anterior = 0), limpa o valor unitário pendente
+   If Seq_Produto_Pecas_Anterior = 0 And Sequencia_Nova = 0 Then
+      Grid1_ValorUnitario_Pendente = 0
+      Debug.Print "[GRID 1 - PEÇAS] IniApDaCol - LIMPOU Grid1_ValorUnitario_Pendente (nova linha)"
    End If
+   
+   Debug.Print "[GRID 1 - PEÇAS] IniApDaCol - vgOq=" & vgOq & " | Seq_Nova=" & Sequencia_Nova & " | Seq_Anterior=" & Seq_Produto_Pecas_Anterior & " | TrocaDetectada=" & TrocaDetectada
    
    ' Atualiza tracker de sequência
    Seq_Produto_Pecas_Anterior = Sequencia_Nova
@@ -21184,7 +21163,35 @@ IniApDaCol:
    CFOP = ColumnValue(3)
    Peso = ColumnValue(5)
    Quantidade = ColumnValue(6)
-   Valor_Unitario = ColumnValue(9)
+   
+   ' Se detectou troca de item, busca o novo valor unitário ANTES de atribuir
+   If TrocaDetectada And Sequencia_Nova > 0 Then
+      NovoPreco = InfoPecas(0, Orcamento![Seqüência do Orçamento], Sequencia_Nova, _
+                           0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário")
+      Debug.Print "[GRID 1 - PEÇAS] BUSCA NOVO PREÇO! NovoPreco=" & NovoPreco & " para Peça=" & Sequencia_Nova
+      ColumnValue(9) = NovoPreco
+      Valor_Unitario = NovoPreco
+      Grid1_ValorUnitario_Pendente = NovoPreco  ' <-- SALVA NA VARIÁVEL PERSISTENTE
+      Debug.Print "[GRID 1 - PEÇAS] Valor_Unitario atualizado=" & Valor_Unitario & " | Grid1_ValorUnitario_Pendente=" & Grid1_ValorUnitario_Pendente
+      
+      ' Como a coluna Vr. Unitário é editável, o grid NÃO chama GetColumnValue para ela
+      ' Precisamos forçar a atualização diretamente no recordset
+      On Error Resume Next
+      If Grid(1).Status = ACAO_INCLUINDO Then
+         ' Em modo de inclusão, atualiza o recordset diretamente
+         If Not Pecas_do_Orcamento Is Nothing Then
+            If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+               ' Está em modo Edit? Se sim, atualiza
+               Pecas_do_Orcamento![Valor Unitário] = NovoPreco
+               Debug.Print "[GRID 1 - PEÇAS] Pecas_do_Orcamento![Valor Unitário] forçado=" & NovoPreco
+            End If
+         End If
+      End If
+      On Error GoTo DeuErro
+   Else
+      Valor_Unitario = ColumnValue(9)
+   End If
+   
    Valor_do_Desconto = ColumnValue(10)
    Valor_do_Frete = ColumnValue(11)
    Valor_da_Base_de_Calculo = ColumnValue(13)
@@ -21660,8 +21667,6 @@ IniApDaCol:
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Anterior)
    
-   Debug.Print "[GRID 3 - PRODUTOS] IniApDaCol - vgOq=" & vgOq & " | Seq_Nova=" & Sequencia_Nova & " | Seq_Anterior=" & Seq_Produto_Anterior & " | TrocaDetectada=" & TrocaDetectada
-   
    ' Atualiza tracker de sequência
    Seq_Produto_Anterior = Sequencia_Nova
    
@@ -21708,14 +21713,12 @@ IniApDaCol:
    
    ' Detecta troca de item e reseta valor unitário (após calcular peso)
    If TrocaDetectada Then
-      Debug.Print "[GRID 3 - PRODUTOS] RESET VALOR! Antes=" & Valor_Unitario
       Valor_Unitario = InfoProdutos(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, _
       Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, _
       Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, _
       Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
       Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal, "Valor Unitário")
       ColumnValue(10) = Valor_Unitario
-      Debug.Print "[GRID 3 - PRODUTOS] RESET VALOR! Depois=" & Valor_Unitario & " | ColumnValue(10)=" & ColumnValue(10)
    End If
    If Err Then Err.Clear
    On Error GoTo DeuErro
