@@ -10088,14 +10088,19 @@ Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
 Private defaultBack55 As Long
+Private Const MSG_VALOR_UNITARIO_PADRAO As String = "Preço unitário não pode ser menor que o valor do sistema. Verifique o preço informado."
+Private GridValorUnitario_MensagemAtiva(0 To 4) As Boolean
 Private Grid0_ValorUnitario_Pendente As Double    'valor unitário do conjunto selecionado no Grid 0
 Private Grid0_ValorUnitario_Pendente_Definido As Boolean
+Private Grid0_ValorUnitario_Pendente_OrigemManual As Boolean
 Private Grid0_ForcandoRefresh As Boolean
 Private Grid1_ValorUnitario_Pendente As Double    'valor unitário da peça selecionada no Grid 1 (persistente entre eventos)
 Private Grid1_ValorUnitario_Pendente_Definido As Boolean 'indica se o valor unitário pendente possui um valor válido
+Private Grid1_ValorUnitario_Pendente_OrigemManual As Boolean
 Private Grid1_ForcandoRefresh As Boolean         'flag para evitar refresh/repaint em loop durante edição do grid 1
 Private Grid3_ValorUnitario_Pendente As Double    'valor unitário do produto selecionado no Grid 3
 Private Grid3_ValorUnitario_Pendente_Definido As Boolean
+Private Grid3_ValorUnitario_Pendente_OrigemManual As Boolean
 Private Grid3_ForcandoRefresh As Boolean
 
 'Variáveis para detectar troca de item (Fix: preço errado ao trocar item)
@@ -12811,17 +12816,34 @@ Private Function ValidaPecasx(Valor_do_Tributo As Double, Sequencia_do_Orcamento
    Valor_Anterior As Double, Bc_pis As Double, Aliq_do_pis As Single, _
    Bc_cofins As Double, Aliq_do_cofins As Single, Peso As Double) As Boolean
    
-   On Error Resume Next
-   
-   TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Sequencia_do_Produto, ProdutoAux
-      
-   ValidaPecasx = Valor_Unitario > 0 And Valor_Unitario >= ProdutoAux![Valor Total]
-    If Not ValidaPecasx Then
-      ValidaPecasx = PermissaoPecas(Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_Total, _
-         Valor_do_IPI, Valor_do_ICMS, Sequencia_Pecas_do_Orcamento, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, _
-         Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, _
-         Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, Peso)
-   End If
+    On Error Resume Next
+
+    Dim ValorMinimo As Double
+    Dim ValorComparacao As Double
+
+    TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Sequencia_do_Produto, ProdutoAux
+
+     ValorMinimo = 0
+     On Error Resume Next
+     If Not ProdutoAux Is Nothing Then
+        If ProdutoAux.RecordCount > 0 Then
+           If Not IsNull(ProdutoAux![Valor Total]) Then
+              ValorMinimo = Round(CDbl(ProdutoAux![Valor Total]), 2)
+           End If
+        End If
+     End If
+     ValorComparacao = Valor_Unitario
+     If Grid1_ValorUnitario_Pendente_Definido And Not Grid1_ValorUnitario_Pendente_OrigemManual Then
+        ValorComparacao = Grid1_ValorUnitario_Pendente
+     End If
+
+     ValidaPecasx = ValorComparacao > 0 And ValorComparacao >= ValorMinimo
+     If Not ValidaPecasx Then
+        ValidaPecasx = PermissaoPecas(Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_Total, _
+           Valor_do_IPI, Valor_do_ICMS, Sequencia_Pecas_do_Orcamento, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, _
+           Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, _
+           Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, Peso)
+     End If
    
 End Function
 
@@ -12836,14 +12858,33 @@ Private Function ValidaProdx(Bc_pis As Double, Valor_do_Tributo As Double, Seque
    Valor_do_Desconto As Double, Valor_Anterior As Double, Bc_cofins As Double, _
    Aliq_do_pis As Single, Aliq_do_cofins As Single, Peso As Double, PesoTotal As Double) As Boolean
    
-   On Error Resume Next
-   
-   TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Sequencia_do_Produto, ProdutoAux
-      
-   ValidaProdx = Valor_Unitario > 0 And Valor_Unitario >= ProdutoAux![Valor Total]
-   If Not ValidaProdx Then
-      ValidaProdx = Permissao(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal)
-   End If
+    On Error Resume Next
+
+    Dim ValorMinimo As Double
+    Dim ValorComparacao As Double
+
+    TbAuxiliar "Produtos", "[Seqüência do Produto] = " & Sequencia_do_Produto, ProdutoAux
+
+     ValorMinimo = 0
+     On Error Resume Next
+     If Not ProdutoAux Is Nothing Then
+        If ProdutoAux.RecordCount > 0 Then
+           If Not IsNull(ProdutoAux![Valor Total]) Then
+              ValorMinimo = Round(CDbl(ProdutoAux![Valor Total]), 2)
+           End If
+        End If
+     End If
+     On Error GoTo 0
+
+     ValorComparacao = Valor_Unitario
+     If Grid3_ValorUnitario_Pendente_Definido And Not Grid3_ValorUnitario_Pendente_OrigemManual Then
+        ValorComparacao = Grid3_ValorUnitario_Pendente
+     End If
+
+     ValidaProdx = ValorComparacao > 0 And ValorComparacao >= ValorMinimo
+     If Not ValidaProdx Then
+         ValidaProdx = Permissao(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal)
+     End If
    
 End Function
 
@@ -12858,14 +12899,33 @@ Private Function ValidaConjx(Sequencia_do_Orcamento As Long, Sequencia_Conjunto_
    Valor_Anterior As Double, Bc_pis As Double, Aliq_do_pis As Single, _
    Bc_cofins As Double, Aliq_do_cofins As Single) As Boolean
    
-   On Error Resume Next
-   
-   TbAuxiliar "Conjuntos", "[Seqüência do Conjunto] = " & Sequencia_do_Conjunto, ConjuntoAux
-      
-   ValidaConjx = Valor_Unitario > 0 And Valor_Unitario >= ConjuntoAux![Valor Total]
-   If Not ValidaConjx Then
-      ValidaConjx = PermissaoConj(Sequencia_do_Orcamento, Sequencia_Conjunto_Orcamento, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins)
-   End If
+    On Error Resume Next
+
+    Dim ValorMinimo As Double
+    Dim ValorComparacao As Double
+
+    TbAuxiliar "Conjuntos", "[Seqüência do Conjunto] = " & Sequencia_do_Conjunto, ConjuntoAux
+
+     ValorMinimo = 0
+     On Error Resume Next
+     If Not ConjuntoAux Is Nothing Then
+        If ConjuntoAux.RecordCount > 0 Then
+           If Not IsNull(ConjuntoAux![Valor Total]) Then
+              ValorMinimo = Round(CDbl(ConjuntoAux![Valor Total]), 2)
+           End If
+        End If
+     End If
+     On Error GoTo 0
+
+     ValorComparacao = Valor_Unitario
+     If Grid0_ValorUnitario_Pendente_Definido And Not Grid0_ValorUnitario_Pendente_OrigemManual Then
+        ValorComparacao = Grid0_ValorUnitario_Pendente
+     End If
+
+     ValidaConjx = ValorComparacao > 0 And ValorComparacao >= ValorMinimo
+     If Not ValidaConjx Then
+         ValidaConjx = PermissaoConj(Sequencia_do_Orcamento, Sequencia_Conjunto_Orcamento, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins)
+     End If
    
 End Function
 
@@ -20418,6 +20478,7 @@ Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColu
                      Pecas_do_Orcamento![Valor Unitário] = ValorUnitario_Novo
                      Grid1_ValorUnitario_Pendente = ValorUnitario_Novo
                      Grid1_ValorUnitario_Pendente_Definido = True
+                     Grid1_ValorUnitario_Pendente_OrigemManual = False
                      If IsArray(vgColumns) Then
                         On Error Resume Next
                         If UBound(vgColumns) >= 9 Then
@@ -20516,10 +20577,12 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
 
             Grid0_ValorUnitario_Pendente = ValorUnitario_Final_Conj
             Grid0_ValorUnitario_Pendente_Definido = True
+            Grid0_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord][Grid0] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final_Conj, "0.00")
          Else
             Grid0_ValorUnitario_Pendente = 0
             Grid0_ValorUnitario_Pendente_Definido = False
+            Grid0_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord][Grid0] Nenhum valor unitário válido encontrado para persistir"
          End If
          On Error GoTo 0
@@ -20594,10 +20657,12 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
 
             Grid1_ValorUnitario_Pendente = ValorUnitario_Final
             Grid1_ValorUnitario_Pendente_Definido = True
+            Grid1_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final, "0.00")
          Else
             Grid1_ValorUnitario_Pendente = 0
             Grid1_ValorUnitario_Pendente_Definido = False
+            Grid1_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord] Nenhum valor unitário válido encontrado para persistir"
          End If
          On Error GoTo 0
@@ -20686,10 +20751,12 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
 
             Grid3_ValorUnitario_Pendente = ValorUnitario_Final_Prod
             Grid3_ValorUnitario_Pendente_Definido = True
+            Grid3_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord][Grid3] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final_Prod, "0.00")
          Else
             Grid3_ValorUnitario_Pendente = 0
             Grid3_ValorUnitario_Pendente_Definido = False
+            Grid3_ValorUnitario_Pendente_OrigemManual = False
             Debug.Print "[BeforeUpdateRecord][Grid3] Nenhum valor unitário válido encontrado para persistir"
          End If
          On Error GoTo 0
@@ -20741,14 +20808,20 @@ Private Sub Grid_RecordSetChanged(Index As Integer, ByVal vgNewRecordSet As GRec
          Set Conjuntos_do_Orcamento = vgNewRecordSet
          Grid0_ValorUnitario_Pendente = 0
          Grid0_ValorUnitario_Pendente_Definido = False
+         Grid0_ValorUnitario_Pendente_OrigemManual = False
+         GridValorUnitario_MensagemAtiva(Index) = False
       Case 1
          Set Pecas_do_Orcamento = vgNewRecordSet
+         Grid1_ValorUnitario_Pendente_OrigemManual = False
+         GridValorUnitario_MensagemAtiva(Index) = False
       Case 2
          Set Parcelas_Orcamento = vgNewRecordSet
       Case 3
          Set Produtos_do_Orcamento = vgNewRecordSet
          Grid3_ValorUnitario_Pendente = 0
          Grid3_ValorUnitario_Pendente_Definido = False
+         Grid3_ValorUnitario_Pendente_OrigemManual = False
+         GridValorUnitario_MensagemAtiva(Index) = False
       Case 4
          Set Servicos_do_Orcamento = vgNewRecordSet
    End Select
@@ -20758,6 +20831,20 @@ End Sub
 Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns() As Variant, vgIsValid As Boolean, vgColumn As Integer, vgErrorMessage As String)
    Dim ValorDigitado As Variant
    Dim ValorConvertido As Double
+   Dim ControlaMensagemValorUnitario As Boolean
+
+   ControlaMensagemValorUnitario = (Index = 0 Or Index = 1 Or Index = 3)
+
+   If ControlaMensagemValorUnitario Then
+      Select Case Index
+         Case 0
+            If vgColumn = 7 Then GridValorUnitario_MensagemAtiva(Index) = False
+         Case 1
+            If vgColumn = 9 Then GridValorUnitario_MensagemAtiva(Index) = False
+         Case 3
+            If vgColumn = 10 Then GridValorUnitario_MensagemAtiva(Index) = False
+      End Select
+   End If
 
    If Index = 0 And vgColumn = 7 Then
       If IsArray(vgColumns) Then
@@ -20769,6 +20856,7 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
                If Err.Number = 0 Then
                   Grid0_ValorUnitario_Pendente = ValorConvertido
                   Grid0_ValorUnitario_Pendente_Definido = True
+                  Grid0_ValorUnitario_Pendente_OrigemManual = True
                   Debug.Print "[ValidateData][Grid0] Coluna 7 editada manualmente - Novo valor=" & Format$(Grid0_ValorUnitario_Pendente, "0.00")
                Else
                   Debug.Print "[ValidateData][Grid0] Falha ao converter Coluna 7 - Err=" & Err.Number & " - " & Err.Description
@@ -20778,6 +20866,7 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
             Else
                Grid0_ValorUnitario_Pendente = 0
                Grid0_ValorUnitario_Pendente_Definido = False
+               Grid0_ValorUnitario_Pendente_OrigemManual = False
             End If
          End If
       End If
@@ -20791,6 +20880,7 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
                If Err.Number = 0 Then
                   Grid1_ValorUnitario_Pendente = ValorConvertido
                   Grid1_ValorUnitario_Pendente_Definido = True
+                  Grid1_ValorUnitario_Pendente_OrigemManual = True
                   Debug.Print "[ValidateData][Grid1] Coluna 9 editada manualmente - Novo valor=" & Format$(Grid1_ValorUnitario_Pendente, "0.00")
                Else
                   Debug.Print "[ValidateData][Grid1] Falha ao converter Coluna 9 - Err=" & Err.Number & " - " & Err.Description
@@ -20800,6 +20890,7 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
             Else
                Grid1_ValorUnitario_Pendente = 0
                Grid1_ValorUnitario_Pendente_Definido = False
+               Grid1_ValorUnitario_Pendente_OrigemManual = False
             End If
          End If
       End If
@@ -20813,6 +20904,7 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
                If Err.Number = 0 Then
                   Grid3_ValorUnitario_Pendente = ValorConvertido
                   Grid3_ValorUnitario_Pendente_Definido = True
+                  Grid3_ValorUnitario_Pendente_OrigemManual = True
                   Debug.Print "[ValidateData][Grid3] Coluna 10 editada manualmente - Novo valor=" & Format$(Grid3_ValorUnitario_Pendente, "0.00")
                Else
                   Debug.Print "[ValidateData][Grid3] Falha ao converter Coluna 10 - Err=" & Err.Number & " - " & Err.Description
@@ -20822,12 +20914,27 @@ Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns(
             Else
                Grid3_ValorUnitario_Pendente = 0
                Grid3_ValorUnitario_Pendente_Definido = False
+               Grid3_ValorUnitario_Pendente_OrigemManual = False
             End If
          End If
       End If
    End If
    
    ExecutaGrid Index, vgColumns(), VALIDACOES, vgItem, vgColumn, vgIsValid, vgColumn, vgErrorMessage
+
+   If ControlaMensagemValorUnitario Then
+      If vgIsValid Then
+         GridValorUnitario_MensagemAtiva(Index) = False
+      ElseIf StrComp(vgErrorMessage, MSG_VALOR_UNITARIO_PADRAO, vbTextCompare) = 0 Then
+         If GridValorUnitario_MensagemAtiva(Index) Then
+            vgErrorMessage = ""
+         Else
+            GridValorUnitario_MensagemAtiva(Index) = True
+         End If
+      ElseIf Len(vgErrorMessage) > 0 Then
+         GridValorUnitario_MensagemAtiva(Index) = False
+      End If
+   End If
 End Sub
 
 'evento - pega definição de cores segundo condições
@@ -21094,7 +21201,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
    CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins))
             If Not vgIsValid Then vgColumn = 7
-            vgErrorMessage$ = "Valor Unitário inválido!"
+            vgErrorMessage$ = MSG_VALOR_UNITARIO_PADRAO
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = APOS_EDICAO Then
@@ -21144,6 +21251,7 @@ IniApDaCol:
    If Seq_Conjunto_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid0_ValorUnitario_Pendente = 0
       Grid0_ValorUnitario_Pendente_Definido = False
+      Grid0_ValorUnitario_Pendente_OrigemManual = False
    End If
 
    Seq_Conjunto_Anterior = Sequencia_Nova
@@ -21162,6 +21270,7 @@ IniApDaCol:
       Valor_Unitario = NovoPrecoConj
       Grid0_ValorUnitario_Pendente = NovoPrecoConj
       Grid0_ValorUnitario_Pendente_Definido = True
+   Grid0_ValorUnitario_Pendente_OrigemManual = False
 
       If Not Conjuntos_do_Orcamento Is Nothing Then
          If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
@@ -21221,20 +21330,24 @@ TrataAtualizacaoErro_Grid0:
                   Valor_Unitario = Round(CDbl(Conjuntos_do_Orcamento![Valor Unitário]), 2)
                   Grid0_ValorUnitario_Pendente = Valor_Unitario
                   Grid0_ValorUnitario_Pendente_Definido = True
+                  Grid0_ValorUnitario_Pendente_OrigemManual = False
                Else
                   Valor_Unitario = 0
                   Grid0_ValorUnitario_Pendente = 0
                   Grid0_ValorUnitario_Pendente_Definido = False
+                  Grid0_ValorUnitario_Pendente_OrigemManual = False
                End If
             Else
                Valor_Unitario = 0
                Grid0_ValorUnitario_Pendente = 0
                Grid0_ValorUnitario_Pendente_Definido = False
+               Grid0_ValorUnitario_Pendente_OrigemManual = False
             End If
          Else
             Valor_Unitario = 0
             Grid0_ValorUnitario_Pendente = 0
             Grid0_ValorUnitario_Pendente_Definido = False
+            Grid0_ValorUnitario_Pendente_OrigemManual = False
          End If
       End If
 
@@ -21547,7 +21660,7 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, Peso))
             If Not vgIsValid Then vgColumn = 9
-            vgErrorMessage$ = "Valor Unitário não pode ser menor que o Valor do Sistema!(Valor Unitário Invalido)"
+            vgErrorMessage$ = MSG_VALOR_UNITARIO_PADRAO
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = APOS_EDICAO Then
@@ -21600,6 +21713,7 @@ IniApDaCol:
    If Seq_Produto_Pecas_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid1_ValorUnitario_Pendente = 0
       Grid1_ValorUnitario_Pendente_Definido = False
+      Grid1_ValorUnitario_Pendente_OrigemManual = False
    End If
    
    ' Atualiza tracker de sequência
@@ -21619,6 +21733,7 @@ IniApDaCol:
       Valor_Unitario = NovoPreco
       Grid1_ValorUnitario_Pendente = NovoPreco
       Grid1_ValorUnitario_Pendente_Definido = True
+   Grid1_ValorUnitario_Pendente_OrigemManual = False
       
       ' Como coluna 9 está bound, precisa atualizar no recordset para aparecer imediatamente
       On Error Resume Next
@@ -21687,17 +21802,21 @@ TrataAtualizacaoErro:
                   Valor_Unitario = Round(CDbl(Pecas_do_Orcamento![Valor Unitário]), 2)
                   Grid1_ValorUnitario_Pendente = Valor_Unitario
                   Grid1_ValorUnitario_Pendente_Definido = True
+                  Grid1_ValorUnitario_Pendente_OrigemManual = False
                Else
                   Valor_Unitario = 0
                   Grid1_ValorUnitario_Pendente_Definido = False
+                  Grid1_ValorUnitario_Pendente_OrigemManual = False
                End If
             Else
                Valor_Unitario = 0
                Grid1_ValorUnitario_Pendente_Definido = False
+               Grid1_ValorUnitario_Pendente_OrigemManual = False
             End If
          Else
             Valor_Unitario = 0
             Grid1_ValorUnitario_Pendente_Definido = False
+            Grid1_ValorUnitario_Pendente_OrigemManual = False
          End If
       End If
    End If
@@ -22134,7 +22253,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
    Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal))
             If Not vgIsValid Then vgColumn = 10
-            vgErrorMessage$ = "Valor Unitário não pode ser menor que o Valor do Sistema!(Valor Unitário Invalido)"
+            vgErrorMessage$ = MSG_VALOR_UNITARIO_PADRAO
          End If
          If Not vgIsValid And Len(vgErrorMessage$) = 0 Then vgErrorMessage$ = "Err"
       ElseIf vgOq = INICIALIZACOES Then
@@ -22189,6 +22308,7 @@ IniApDaCol:
    If Seq_Produto_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid3_ValorUnitario_Pendente = 0
       Grid3_ValorUnitario_Pendente_Definido = False
+      Grid3_ValorUnitario_Pendente_OrigemManual = False
    End If
 
    Seq_Produto_Anterior = Sequencia_Nova
@@ -22212,6 +22332,7 @@ IniApDaCol:
       Valor_Unitario = NovoPrecoProd
       Grid3_ValorUnitario_Pendente = NovoPrecoProd
       Grid3_ValorUnitario_Pendente_Definido = True
+   Grid3_ValorUnitario_Pendente_OrigemManual = False
 
       If Not Produtos_do_Orcamento Is Nothing Then
          If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
@@ -22271,20 +22392,24 @@ TrataAtualizacaoErro_Grid3:
                   Valor_Unitario = Round(CDbl(Produtos_do_Orcamento![Valor Unitário]), 2)
                   Grid3_ValorUnitario_Pendente = Valor_Unitario
                   Grid3_ValorUnitario_Pendente_Definido = True
+                  Grid3_ValorUnitario_Pendente_OrigemManual = False
                Else
                   Valor_Unitario = 0
                   Grid3_ValorUnitario_Pendente = 0
                   Grid3_ValorUnitario_Pendente_Definido = False
+                  Grid3_ValorUnitario_Pendente_OrigemManual = False
                End If
             Else
                Valor_Unitario = 0
                Grid3_ValorUnitario_Pendente = 0
                Grid3_ValorUnitario_Pendente_Definido = False
+               Grid3_ValorUnitario_Pendente_OrigemManual = False
             End If
          Else
             Valor_Unitario = 0
             Grid3_ValorUnitario_Pendente = 0
             Grid3_ValorUnitario_Pendente_Definido = False
+            Grid3_ValorUnitario_Pendente_OrigemManual = False
          End If
       End If
 
