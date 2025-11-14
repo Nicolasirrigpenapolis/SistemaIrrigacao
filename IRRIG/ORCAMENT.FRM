@@ -1,6 +1,5 @@
 VERSION 5.00
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmOrcament 
    ClientHeight    =   9615
    ClientLeft      =   2475
@@ -27,11 +26,11 @@ Begin VB.Form frmOrcament
       Stretch         =   -1  'True
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   16
+         Index           =   0
          Left            =   13125
-         TabIndex        =   195
+         TabIndex        =   55
          TabStop         =   0   'False
-         Top             =   165
+         Top             =   180
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -45,130 +44,17 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Imprimir"
+         Caption         =   "Gerar Nota"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   15
-         Left            =   12810
-         TabIndex        =   190
+         Index           =   8
+         Left            =   14565
+         TabIndex        =   56
          TabStop         =   0   'False
-         Top             =   735
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   14
-         Left            =   7410
-         TabIndex        =   187
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   2580
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Mapa da Propriedade"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   435
-         Index           =   13
-         Left            =   10050
-         TabIndex        =   182
-         TabStop         =   0   'False
-         Top             =   615
-         Width           =   1695
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Microsoft Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Ficha Técnica"
-         CaptionAlign    =   4
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   12
-         Left            =   14580
-         TabIndex        =   6
-         TabStop         =   0   'False
-         Top             =   1650
-         Width           =   240
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   30
-         Index           =   11
-         Left            =   15180
-         TabIndex        =   59
-         Top             =   8445
-         Width           =   30
-         _ExtentX        =   0
-         _ExtentY        =   0
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         CaptionOffset   =   50
-      End
-      Begin IRRIG.GBotao Botao 
-         Height          =   300
-         Index           =   10
-         Left            =   9810
-         TabIndex        =   4
-         TabStop         =   0   'False
-         Top             =   1650
+         Top             =   750
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -210,11 +96,54 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   300
-         Index           =   8
-         Left            =   14565
-         TabIndex        =   56
+         Index           =   10
+         Left            =   9810
+         TabIndex        =   4
          TabStop         =   0   'False
-         Top             =   750
+         Top             =   1650
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   30
+         Index           =   11
+         Left            =   15180
+         TabIndex        =   59
+         Top             =   8445
+         Width           =   30
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   12
+         Left            =   14580
+         TabIndex        =   6
+         TabStop         =   0   'False
+         Top             =   1650
          Width           =   240
          _ExtentX        =   0
          _ExtentY        =   0
@@ -232,11 +161,11 @@ Begin VB.Form frmOrcament
       End
       Begin IRRIG.GBotao Botao 
          Height          =   435
-         Index           =   0
-         Left            =   13125
-         TabIndex        =   55
+         Index           =   13
+         Left            =   10050
+         TabIndex        =   182
          TabStop         =   0   'False
-         Top             =   180
+         Top             =   615
          Width           =   1695
          _ExtentX        =   0
          _ExtentY        =   0
@@ -250,7 +179,77 @@ Begin VB.Form frmOrcament
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Gerar Nota"
+         Caption         =   "Ficha Técnica"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   14
+         Left            =   7410
+         TabIndex        =   187
+         TabStop         =   0   'False
+         Top             =   615
+         Width           =   2580
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Mapa da Propriedade"
+         CaptionAlign    =   4
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   300
+         Index           =   15
+         Left            =   12810
+         TabIndex        =   190
+         TabStop         =   0   'False
+         Top             =   735
+         Width           =   240
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         CaptionOffset   =   50
+      End
+      Begin IRRIG.GBotao Botao 
+         Height          =   435
+         Index           =   16
+         Left            =   13125
+         TabIndex        =   195
+         TabStop         =   0   'False
+         Top             =   165
+         Width           =   1695
+         _ExtentX        =   0
+         _ExtentY        =   0
+         ForeColor       =   0
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Microsoft Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Imprimir"
          CaptionAlign    =   4
          CaptionOffset   =   50
       End
@@ -594,441 +593,395 @@ Begin VB.Form frmOrcament
          Tab(0).Control(143).Enabled=   0   'False
          Tab(0).Control(144)=   "txtCp(1)"
          Tab(0).Control(144).Enabled=   0   'False
-         Tab(0).Control(145)=   "Botao(4)"
+         Tab(0).Control(145)=   "Botao(5)"
          Tab(0).Control(145).Enabled=   0   'False
-         Tab(0).Control(146)=   "Botao(1)"
+         Tab(0).Control(146)=   "Botao(3)"
          Tab(0).Control(146).Enabled=   0   'False
-         Tab(0).Control(147)=   "Botao(3)"
+         Tab(0).Control(147)=   "Botao(1)"
          Tab(0).Control(147).Enabled=   0   'False
-         Tab(0).Control(148)=   "Botao(5)"
+         Tab(0).Control(148)=   "Botao(4)"
          Tab(0).Control(148).Enabled=   0   'False
          Tab(0).ControlCount=   149
          TabCaption(1)   =   "&2 - Produtos"
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Label(50)"
-         Tab(1).Control(1)=   "Grid(3)"
+         Tab(1).Control(0)=   "Grid(3)"
+         Tab(1).Control(1)=   "Label(50)"
          Tab(1).ControlCount=   2
          TabCaption(2)   =   "&3 - Serviços"
          Tab(2).ControlEnabled=   0   'False
-         Tab(2).Control(0)=   "Label(49)"
-         Tab(2).Control(1)=   "Grid(4)"
+         Tab(2).Control(0)=   "Grid(4)"
+         Tab(2).Control(1)=   "Label(49)"
          Tab(2).ControlCount=   2
          TabCaption(3)   =   "&4 - Conjuntos"
          Tab(3).ControlEnabled=   0   'False
-         Tab(3).Control(0)=   "txtCp(61)"
-         Tab(3).Control(1)=   "ChkCp(3)"
-         Tab(3).Control(2)=   "Label(47)"
-         Tab(3).Control(3)=   "Label(39)"
-         Tab(3).Control(4)=   "Botao(2)"
-         Tab(3).Control(5)=   "txtCp(34)"
-         Tab(3).Control(6)=   "bottxtCampo34(2)"
-         Tab(3).Control(6).Enabled=   0   'False
-         Tab(3).Control(7)=   "bottxtCampo34(1)"
-         Tab(3).Control(7).Enabled=   0   'False
-         Tab(3).Control(8)=   "labFdo34"
-         Tab(3).Control(9)=   "Grid(0)"
+         Tab(3).Control(0)=   "Grid(0)"
+         Tab(3).Control(1)=   "labFdo34"
+         Tab(3).Control(2)=   "bottxtCampo34(1)"
+         Tab(3).Control(2).Enabled=   0   'False
+         Tab(3).Control(3)=   "bottxtCampo34(2)"
+         Tab(3).Control(3).Enabled=   0   'False
+         Tab(3).Control(4)=   "txtCp(34)"
+         Tab(3).Control(5)=   "Botao(2)"
+         Tab(3).Control(6)=   "Label(39)"
+         Tab(3).Control(7)=   "Label(47)"
+         Tab(3).Control(8)=   "ChkCp(3)"
+         Tab(3).Control(9)=   "txtCp(61)"
          Tab(3).ControlCount=   10
          TabCaption(4)   =   "&5 - Peças"
          Tab(4).ControlEnabled=   0   'False
-         Tab(4).Control(0)=   "Label(48)"
-         Tab(4).Control(1)=   "Grid(1)"
+         Tab(4).Control(0)=   "Grid(1)"
+         Tab(4).Control(1)=   "Label(48)"
          Tab(4).ControlCount=   2
          TabCaption(5)   =   "&6 - Financeiro"
          TabPicture(5)   =   "ORCAMENT.frx":001C
          Tab(5).ControlEnabled=   0   'False
-         Tab(5).Control(0)=   "Botao(6)"
-         Tab(5).Control(1)=   "Botao(7)"
-         Tab(5).Control(2)=   "txtCp(9)"
-         Tab(5).Control(2).Enabled=   0   'False
-         Tab(5).Control(3)=   "txtCp(31)"
-         Tab(5).Control(3).Enabled=   0   'False
-         Tab(5).Control(4)=   "bottxtCampo32(0)"
-         Tab(5).Control(4).Enabled=   0   'False
-         Tab(5).Control(5)=   "txtCp(32)"
-         Tab(5).Control(6)=   "Grid(2)"
-         Tab(5).Control(7)=   "bottxtCampo35(2)"
-         Tab(5).Control(7).Enabled=   0   'False
-         Tab(5).Control(8)=   "txtCp(35)"
-         Tab(5).Control(9)=   "txtCp(36)"
-         Tab(5).Control(9).Enabled=   0   'False
-         Tab(5).Control(10)=   "txtCp(37)"
-         Tab(5).Control(10).Enabled=   0   'False
-         Tab(5).Control(11)=   "txtCp(38)"
-         Tab(5).Control(11).Enabled=   0   'False
-         Tab(5).Control(12)=   "txtCp(39)"
-         Tab(5).Control(12).Enabled=   0   'False
-         Tab(5).Control(13)=   "txtCp(40)"
-         Tab(5).Control(13).Enabled=   0   'False
-         Tab(5).Control(14)=   "txtCp(41)"
-         Tab(5).Control(14).Enabled=   0   'False
-         Tab(5).Control(15)=   "txtCp(42)"
-         Tab(5).Control(15).Enabled=   0   'False
-         Tab(5).Control(16)=   "txtCp(43)"
-         Tab(5).Control(16).Enabled=   0   'False
-         Tab(5).Control(17)=   "txtCp(44)"
-         Tab(5).Control(17).Enabled=   0   'False
-         Tab(5).Control(18)=   "bottxtCampo45(0)"
-         Tab(5).Control(18).Enabled=   0   'False
-         Tab(5).Control(19)=   "txtCp(45)"
-         Tab(5).Control(20)=   "txtCp(46)"
-         Tab(5).Control(20).Enabled=   0   'False
-         Tab(5).Control(21)=   "bottxtCampo47(0)"
-         Tab(5).Control(21).Enabled=   0   'False
-         Tab(5).Control(22)=   "txtCp(47)"
-         Tab(5).Control(23)=   "txtCp(49)"
-         Tab(5).Control(23).Enabled=   0   'False
-         Tab(5).Control(24)=   "Painel(2)"
-         Tab(5).Control(25)=   "txtCp(52)"
-         Tab(5).Control(25).Enabled=   0   'False
-         Tab(5).Control(26)=   "txtCp(53)"
-         Tab(5).Control(26).Enabled=   0   'False
-         Tab(5).Control(27)=   "txtCp(56)"
-         Tab(5).Control(27).Enabled=   0   'False
-         Tab(5).Control(28)=   "bottxtCampo57(0)"
-         Tab(5).Control(28).Enabled=   0   'False
-         Tab(5).Control(29)=   "txtCp(57)"
-         Tab(5).Control(30)=   "txtCp(148)"
-         Tab(5).Control(31)=   "Label(5)"
-         Tab(5).Control(32)=   "labFdo32"
-         Tab(5).Control(33)=   "labFdo35"
-         Tab(5).Control(34)=   "Label(7)"
-         Tab(5).Control(35)=   "Label(8)"
-         Tab(5).Control(36)=   "Formato(0)"
-         Tab(5).Control(37)=   "Label(9)"
-         Tab(5).Control(38)=   "Formato(1)"
-         Tab(5).Control(39)=   "Label(10)"
-         Tab(5).Control(40)=   "Formato(2)"
-         Tab(5).Control(41)=   "Label(11)"
-         Tab(5).Control(42)=   "Label(12)"
-         Tab(5).Control(43)=   "Label(13)"
-         Tab(5).Control(44)=   "Linha(0)"
-         Tab(5).Control(45)=   "Label(17)"
-         Tab(5).Control(46)=   "Label(18)"
-         Tab(5).Control(47)=   "Label(19)"
-         Tab(5).Control(48)=   "Label(20)"
-         Tab(5).Control(49)=   "Label(21)"
-         Tab(5).Control(50)=   "Label(22)"
-         Tab(5).Control(51)=   "Label(23)"
-         Tab(5).Control(52)=   "Label(24)"
-         Tab(5).Control(53)=   "Label(25)"
-         Tab(5).Control(54)=   "Label(26)"
-         Tab(5).Control(55)=   "Label(27)"
-         Tab(5).Control(56)=   "labFdo45"
-         Tab(5).Control(57)=   "Label(28)"
-         Tab(5).Control(58)=   "Label(29)"
-         Tab(5).Control(59)=   "labFdo47"
-         Tab(5).Control(60)=   "Label(30)"
-         Tab(5).Control(61)=   "Label(38)"
-         Tab(5).Control(62)=   "Label(54)"
-         Tab(5).Control(63)=   "Label(55)"
-         Tab(5).Control(64)=   "Label(58)"
-         Tab(5).Control(65)=   "Label(59)"
-         Tab(5).Control(66)=   "labFdo57"
-         Tab(5).Control(67)=   "Label(173)"
+         Tab(5).Control(0)=   "Label(173)"
+         Tab(5).Control(1)=   "labFdo57"
+         Tab(5).Control(2)=   "Label(59)"
+         Tab(5).Control(3)=   "Label(58)"
+         Tab(5).Control(4)=   "Label(55)"
+         Tab(5).Control(5)=   "Label(54)"
+         Tab(5).Control(6)=   "Label(38)"
+         Tab(5).Control(7)=   "Label(30)"
+         Tab(5).Control(8)=   "labFdo47"
+         Tab(5).Control(9)=   "Label(29)"
+         Tab(5).Control(10)=   "Label(28)"
+         Tab(5).Control(11)=   "labFdo45"
+         Tab(5).Control(12)=   "Label(27)"
+         Tab(5).Control(13)=   "Label(26)"
+         Tab(5).Control(14)=   "Label(25)"
+         Tab(5).Control(15)=   "Label(24)"
+         Tab(5).Control(16)=   "Label(23)"
+         Tab(5).Control(17)=   "Label(22)"
+         Tab(5).Control(18)=   "Label(21)"
+         Tab(5).Control(19)=   "Label(20)"
+         Tab(5).Control(20)=   "Label(19)"
+         Tab(5).Control(21)=   "Label(18)"
+         Tab(5).Control(22)=   "Label(17)"
+         Tab(5).Control(23)=   "Linha(0)"
+         Tab(5).Control(24)=   "Label(13)"
+         Tab(5).Control(25)=   "Label(12)"
+         Tab(5).Control(26)=   "Label(11)"
+         Tab(5).Control(27)=   "Formato(2)"
+         Tab(5).Control(28)=   "Label(10)"
+         Tab(5).Control(29)=   "Formato(1)"
+         Tab(5).Control(30)=   "Label(9)"
+         Tab(5).Control(31)=   "Formato(0)"
+         Tab(5).Control(32)=   "Label(8)"
+         Tab(5).Control(33)=   "Label(7)"
+         Tab(5).Control(34)=   "labFdo35"
+         Tab(5).Control(35)=   "labFdo32"
+         Tab(5).Control(36)=   "Label(5)"
+         Tab(5).Control(37)=   "txtCp(148)"
+         Tab(5).Control(38)=   "txtCp(57)"
+         Tab(5).Control(39)=   "bottxtCampo57(0)"
+         Tab(5).Control(39).Enabled=   0   'False
+         Tab(5).Control(40)=   "txtCp(56)"
+         Tab(5).Control(40).Enabled=   0   'False
+         Tab(5).Control(41)=   "txtCp(53)"
+         Tab(5).Control(41).Enabled=   0   'False
+         Tab(5).Control(42)=   "txtCp(52)"
+         Tab(5).Control(42).Enabled=   0   'False
+         Tab(5).Control(43)=   "Painel(2)"
+         Tab(5).Control(44)=   "txtCp(49)"
+         Tab(5).Control(44).Enabled=   0   'False
+         Tab(5).Control(45)=   "txtCp(47)"
+         Tab(5).Control(46)=   "bottxtCampo47(0)"
+         Tab(5).Control(46).Enabled=   0   'False
+         Tab(5).Control(47)=   "txtCp(46)"
+         Tab(5).Control(47).Enabled=   0   'False
+         Tab(5).Control(48)=   "txtCp(45)"
+         Tab(5).Control(49)=   "bottxtCampo45(0)"
+         Tab(5).Control(49).Enabled=   0   'False
+         Tab(5).Control(50)=   "txtCp(44)"
+         Tab(5).Control(50).Enabled=   0   'False
+         Tab(5).Control(51)=   "txtCp(43)"
+         Tab(5).Control(51).Enabled=   0   'False
+         Tab(5).Control(52)=   "txtCp(42)"
+         Tab(5).Control(52).Enabled=   0   'False
+         Tab(5).Control(53)=   "txtCp(41)"
+         Tab(5).Control(53).Enabled=   0   'False
+         Tab(5).Control(54)=   "txtCp(40)"
+         Tab(5).Control(54).Enabled=   0   'False
+         Tab(5).Control(55)=   "txtCp(39)"
+         Tab(5).Control(55).Enabled=   0   'False
+         Tab(5).Control(56)=   "txtCp(38)"
+         Tab(5).Control(56).Enabled=   0   'False
+         Tab(5).Control(57)=   "txtCp(37)"
+         Tab(5).Control(57).Enabled=   0   'False
+         Tab(5).Control(58)=   "txtCp(36)"
+         Tab(5).Control(58).Enabled=   0   'False
+         Tab(5).Control(59)=   "txtCp(35)"
+         Tab(5).Control(60)=   "bottxtCampo35(2)"
+         Tab(5).Control(60).Enabled=   0   'False
+         Tab(5).Control(61)=   "Grid(2)"
+         Tab(5).Control(62)=   "txtCp(32)"
+         Tab(5).Control(63)=   "bottxtCampo32(0)"
+         Tab(5).Control(63).Enabled=   0   'False
+         Tab(5).Control(64)=   "txtCp(31)"
+         Tab(5).Control(64).Enabled=   0   'False
+         Tab(5).Control(65)=   "txtCp(9)"
+         Tab(5).Control(65).Enabled=   0   'False
+         Tab(5).Control(66)=   "Botao(7)"
+         Tab(5).Control(67)=   "Botao(6)"
          Tab(5).ControlCount=   68
          TabCaption(6)   =   "Ficha Técnica (Hidroturbo)"
          Tab(6).ControlEnabled=   0   'False
-         Tab(6).Control(0)=   "Linha(15)"
-         Tab(6).Control(1)=   "Label(166)"
-         Tab(6).Control(2)=   "Label(165)"
-         Tab(6).Control(3)=   "Label(164)"
-         Tab(6).Control(4)=   "Label(163)"
-         Tab(6).Control(5)=   "Label(162)"
-         Tab(6).Control(6)=   "Label(161)"
-         Tab(6).Control(7)=   "Label(160)"
-         Tab(6).Control(8)=   "Linha(14)"
-         Tab(6).Control(9)=   "Label(159)"
-         Tab(6).Control(10)=   "Label(158)"
-         Tab(6).Control(11)=   "Label(157)"
-         Tab(6).Control(12)=   "Label(156)"
-         Tab(6).Control(13)=   "Label(155)"
-         Tab(6).Control(14)=   "Label(154)"
-         Tab(6).Control(15)=   "Label(153)"
-         Tab(6).Control(16)=   "txtCp(114)"
-         Tab(6).Control(16).Enabled=   0   'False
-         Tab(6).Control(17)=   "txtCp(113)"
-         Tab(6).Control(17).Enabled=   0   'False
-         Tab(6).Control(18)=   "txtCp(112)"
-         Tab(6).Control(18).Enabled=   0   'False
-         Tab(6).Control(19)=   "txtCp(111)"
-         Tab(6).Control(19).Enabled=   0   'False
-         Tab(6).Control(20)=   "Label(113)"
-         Tab(6).Control(21)=   "txtCp(110)"
-         Tab(6).Control(21).Enabled=   0   'False
-         Tab(6).Control(22)=   "txtCp(109)"
-         Tab(6).Control(22).Enabled=   0   'False
-         Tab(6).Control(23)=   "txtCp(108)"
-         Tab(6).Control(23).Enabled=   0   'False
-         Tab(6).Control(24)=   "Label(112)"
-         Tab(6).Control(25)=   "Label(111)"
-         Tab(6).Control(26)=   "txtCp(107)"
-         Tab(6).Control(26).Enabled=   0   'False
-         Tab(6).Control(27)=   "txtCp(106)"
+         Tab(6).Control(0)=   "Label(69)"
+         Tab(6).Control(1)=   "txtCp(66)"
+         Tab(6).Control(2)=   "Label(70)"
+         Tab(6).Control(3)=   "Linha(2)"
+         Tab(6).Control(4)=   "Label(71)"
+         Tab(6).Control(5)=   "txtCp(67)"
+         Tab(6).Control(6)=   "Label(72)"
+         Tab(6).Control(7)=   "txtCp(68)"
+         Tab(6).Control(8)=   "Label(73)"
+         Tab(6).Control(9)=   "Label(74)"
+         Tab(6).Control(10)=   "txtCp(69)"
+         Tab(6).Control(11)=   "Label(75)"
+         Tab(6).Control(12)=   "txtCp(70)"
+         Tab(6).Control(12).Enabled=   0   'False
+         Tab(6).Control(13)=   "Label(76)"
+         Tab(6).Control(14)=   "txtCp(71)"
+         Tab(6).Control(14).Enabled=   0   'False
+         Tab(6).Control(15)=   "Label(77)"
+         Tab(6).Control(16)=   "txtCp(72)"
+         Tab(6).Control(17)=   "Linha(3)"
+         Tab(6).Control(18)=   "Linha(4)"
+         Tab(6).Control(19)=   "Label(78)"
+         Tab(6).Control(20)=   "Label(79)"
+         Tab(6).Control(21)=   "Label(80)"
+         Tab(6).Control(22)=   "txtCp(73)"
+         Tab(6).Control(23)=   "Label(81)"
+         Tab(6).Control(24)=   "txtCp(74)"
+         Tab(6).Control(25)=   "Label(82)"
+         Tab(6).Control(26)=   "txtCp(75)"
+         Tab(6).Control(27)=   "txtCp(76)"
          Tab(6).Control(27).Enabled=   0   'False
-         Tab(6).Control(28)=   "txtCp(105)"
-         Tab(6).Control(28).Enabled=   0   'False
-         Tab(6).Control(29)=   "Label(110)"
-         Tab(6).Control(30)=   "Label(109)"
-         Tab(6).Control(31)=   "txtCp(104)"
-         Tab(6).Control(31).Enabled=   0   'False
-         Tab(6).Control(32)=   "txtCp(103)"
-         Tab(6).Control(32).Enabled=   0   'False
-         Tab(6).Control(33)=   "txtCp(102)"
+         Tab(6).Control(28)=   "Label(83)"
+         Tab(6).Control(29)=   "Label(84)"
+         Tab(6).Control(30)=   "txtCp(77)"
+         Tab(6).Control(31)=   "txtCp(78)"
+         Tab(6).Control(32)=   "Label(85)"
+         Tab(6).Control(33)=   "txtCp(79)"
          Tab(6).Control(33).Enabled=   0   'False
-         Tab(6).Control(34)=   "txtCp(101)"
-         Tab(6).Control(35)=   "bottxtCampo101(2)"
-         Tab(6).Control(35).Enabled=   0   'False
-         Tab(6).Control(36)=   "bottxtCampo101(1)"
-         Tab(6).Control(36).Enabled=   0   'False
-         Tab(6).Control(37)=   "labFdo101"
-         Tab(6).Control(38)=   "txtCp(100)"
-         Tab(6).Control(39)=   "bottxtCampo100(2)"
-         Tab(6).Control(39).Enabled=   0   'False
-         Tab(6).Control(40)=   "bottxtCampo100(1)"
+         Tab(6).Control(34)=   "txtCp(80)"
+         Tab(6).Control(34).Enabled=   0   'False
+         Tab(6).Control(35)=   "txtCp(81)"
+         Tab(6).Control(36)=   "Label(86)"
+         Tab(6).Control(37)=   "Label(87)"
+         Tab(6).Control(38)=   "txtCp(82)"
+         Tab(6).Control(39)=   "Label(88)"
+         Tab(6).Control(40)=   "txtCp(83)"
          Tab(6).Control(40).Enabled=   0   'False
-         Tab(6).Control(41)=   "labFdo100"
-         Tab(6).Control(42)=   "Linha(9)"
-         Tab(6).Control(43)=   "txtCp(99)"
-         Tab(6).Control(44)=   "bottxtCampo99(2)"
+         Tab(6).Control(41)=   "Label(89)"
+         Tab(6).Control(42)=   "txtCp(84)"
+         Tab(6).Control(42).Enabled=   0   'False
+         Tab(6).Control(43)=   "Label(90)"
+         Tab(6).Control(44)=   "txtCp(85)"
          Tab(6).Control(44).Enabled=   0   'False
-         Tab(6).Control(45)=   "bottxtCampo99(1)"
+         Tab(6).Control(45)=   "txtCp(86)"
          Tab(6).Control(45).Enabled=   0   'False
-         Tab(6).Control(46)=   "labFdo99"
-         Tab(6).Control(47)=   "Label(108)"
-         Tab(6).Control(48)=   "txtCp(98)"
-         Tab(6).Control(49)=   "txtCp(97)"
-         Tab(6).Control(50)=   "Label(107)"
-         Tab(6).Control(51)=   "txtCp(96)"
-         Tab(6).Control(52)=   "Label(106)"
-         Tab(6).Control(53)=   "Label(105)"
-         Tab(6).Control(54)=   "Linha(8)"
-         Tab(6).Control(55)=   "Label(104)"
-         Tab(6).Control(56)=   "Label(103)"
-         Tab(6).Control(57)=   "Label(102)"
-         Tab(6).Control(58)=   "Label(101)"
-         Tab(6).Control(59)=   "Label(100)"
-         Tab(6).Control(60)=   "Label(99)"
-         Tab(6).Control(61)=   "txtCp(95)"
-         Tab(6).Control(62)=   "Label(98)"
+         Tab(6).Control(46)=   "txtCp(87)"
+         Tab(6).Control(46).Enabled=   0   'False
+         Tab(6).Control(47)=   "Label(91)"
+         Tab(6).Control(48)=   "Label(92)"
+         Tab(6).Control(49)=   "txtCp(88)"
+         Tab(6).Control(50)=   "Label(93)"
+         Tab(6).Control(51)=   "txtCp(89)"
+         Tab(6).Control(52)=   "Linha(5)"
+         Tab(6).Control(53)=   "Label(94)"
+         Tab(6).Control(54)=   "Label(95)"
+         Tab(6).Control(55)=   "txtCp(90)"
+         Tab(6).Control(56)=   "txtCp(91)"
+         Tab(6).Control(56).Enabled=   0   'False
+         Tab(6).Control(57)=   "txtCp(92)"
+         Tab(6).Control(57).Enabled=   0   'False
+         Tab(6).Control(58)=   "txtCp(93)"
+         Tab(6).Control(58).Enabled=   0   'False
+         Tab(6).Control(59)=   "txtCp(94)"
+         Tab(6).Control(59).Enabled=   0   'False
+         Tab(6).Control(60)=   "Label(96)"
+         Tab(6).Control(61)=   "Linha(6)"
+         Tab(6).Control(62)=   "Linha(7)"
          Tab(6).Control(63)=   "Label(97)"
-         Tab(6).Control(64)=   "Linha(7)"
-         Tab(6).Control(65)=   "Linha(6)"
-         Tab(6).Control(66)=   "Label(96)"
-         Tab(6).Control(67)=   "txtCp(94)"
-         Tab(6).Control(67).Enabled=   0   'False
-         Tab(6).Control(68)=   "txtCp(93)"
-         Tab(6).Control(68).Enabled=   0   'False
-         Tab(6).Control(69)=   "txtCp(92)"
-         Tab(6).Control(69).Enabled=   0   'False
-         Tab(6).Control(70)=   "txtCp(91)"
-         Tab(6).Control(70).Enabled=   0   'False
-         Tab(6).Control(71)=   "txtCp(90)"
-         Tab(6).Control(72)=   "Label(95)"
-         Tab(6).Control(73)=   "Label(94)"
-         Tab(6).Control(74)=   "Linha(5)"
-         Tab(6).Control(75)=   "txtCp(89)"
-         Tab(6).Control(76)=   "Label(93)"
-         Tab(6).Control(77)=   "txtCp(88)"
-         Tab(6).Control(78)=   "Label(92)"
-         Tab(6).Control(79)=   "Label(91)"
-         Tab(6).Control(80)=   "txtCp(87)"
-         Tab(6).Control(80).Enabled=   0   'False
-         Tab(6).Control(81)=   "txtCp(86)"
+         Tab(6).Control(64)=   "Label(98)"
+         Tab(6).Control(65)=   "txtCp(95)"
+         Tab(6).Control(66)=   "Label(99)"
+         Tab(6).Control(67)=   "Label(100)"
+         Tab(6).Control(68)=   "Label(101)"
+         Tab(6).Control(69)=   "Label(102)"
+         Tab(6).Control(70)=   "Label(103)"
+         Tab(6).Control(71)=   "Label(104)"
+         Tab(6).Control(72)=   "Linha(8)"
+         Tab(6).Control(73)=   "Label(105)"
+         Tab(6).Control(74)=   "Label(106)"
+         Tab(6).Control(75)=   "txtCp(96)"
+         Tab(6).Control(76)=   "Label(107)"
+         Tab(6).Control(77)=   "txtCp(97)"
+         Tab(6).Control(78)=   "txtCp(98)"
+         Tab(6).Control(79)=   "Label(108)"
+         Tab(6).Control(80)=   "labFdo99"
+         Tab(6).Control(81)=   "bottxtCampo99(1)"
          Tab(6).Control(81).Enabled=   0   'False
-         Tab(6).Control(82)=   "txtCp(85)"
+         Tab(6).Control(82)=   "bottxtCampo99(2)"
          Tab(6).Control(82).Enabled=   0   'False
-         Tab(6).Control(83)=   "Label(90)"
-         Tab(6).Control(84)=   "txtCp(84)"
-         Tab(6).Control(84).Enabled=   0   'False
-         Tab(6).Control(85)=   "Label(89)"
-         Tab(6).Control(86)=   "txtCp(83)"
+         Tab(6).Control(83)=   "txtCp(99)"
+         Tab(6).Control(84)=   "Linha(9)"
+         Tab(6).Control(85)=   "labFdo100"
+         Tab(6).Control(86)=   "bottxtCampo100(1)"
          Tab(6).Control(86).Enabled=   0   'False
-         Tab(6).Control(87)=   "Label(88)"
-         Tab(6).Control(88)=   "txtCp(82)"
-         Tab(6).Control(89)=   "Label(87)"
-         Tab(6).Control(90)=   "Label(86)"
-         Tab(6).Control(91)=   "txtCp(81)"
-         Tab(6).Control(92)=   "txtCp(80)"
-         Tab(6).Control(92).Enabled=   0   'False
-         Tab(6).Control(93)=   "txtCp(79)"
+         Tab(6).Control(87)=   "bottxtCampo100(2)"
+         Tab(6).Control(87).Enabled=   0   'False
+         Tab(6).Control(88)=   "txtCp(100)"
+         Tab(6).Control(89)=   "labFdo101"
+         Tab(6).Control(90)=   "bottxtCampo101(1)"
+         Tab(6).Control(90).Enabled=   0   'False
+         Tab(6).Control(91)=   "bottxtCampo101(2)"
+         Tab(6).Control(91).Enabled=   0   'False
+         Tab(6).Control(92)=   "txtCp(101)"
+         Tab(6).Control(93)=   "txtCp(102)"
          Tab(6).Control(93).Enabled=   0   'False
-         Tab(6).Control(94)=   "Label(85)"
-         Tab(6).Control(95)=   "txtCp(78)"
-         Tab(6).Control(96)=   "txtCp(77)"
-         Tab(6).Control(97)=   "Label(84)"
-         Tab(6).Control(98)=   "Label(83)"
-         Tab(6).Control(99)=   "txtCp(76)"
+         Tab(6).Control(94)=   "txtCp(103)"
+         Tab(6).Control(94).Enabled=   0   'False
+         Tab(6).Control(95)=   "txtCp(104)"
+         Tab(6).Control(95).Enabled=   0   'False
+         Tab(6).Control(96)=   "Label(109)"
+         Tab(6).Control(97)=   "Label(110)"
+         Tab(6).Control(98)=   "txtCp(105)"
+         Tab(6).Control(98).Enabled=   0   'False
+         Tab(6).Control(99)=   "txtCp(106)"
          Tab(6).Control(99).Enabled=   0   'False
-         Tab(6).Control(100)=   "txtCp(75)"
-         Tab(6).Control(101)=   "Label(82)"
-         Tab(6).Control(102)=   "txtCp(74)"
-         Tab(6).Control(103)=   "Label(81)"
-         Tab(6).Control(104)=   "txtCp(73)"
-         Tab(6).Control(105)=   "Label(80)"
-         Tab(6).Control(106)=   "Label(79)"
-         Tab(6).Control(107)=   "Label(78)"
-         Tab(6).Control(108)=   "Linha(4)"
-         Tab(6).Control(109)=   "Linha(3)"
-         Tab(6).Control(110)=   "txtCp(72)"
-         Tab(6).Control(111)=   "Label(77)"
-         Tab(6).Control(112)=   "txtCp(71)"
-         Tab(6).Control(112).Enabled=   0   'False
-         Tab(6).Control(113)=   "Label(76)"
-         Tab(6).Control(114)=   "txtCp(70)"
-         Tab(6).Control(114).Enabled=   0   'False
-         Tab(6).Control(115)=   "Label(75)"
-         Tab(6).Control(116)=   "txtCp(69)"
-         Tab(6).Control(117)=   "Label(74)"
-         Tab(6).Control(118)=   "Label(73)"
-         Tab(6).Control(119)=   "txtCp(68)"
-         Tab(6).Control(120)=   "Label(72)"
-         Tab(6).Control(121)=   "txtCp(67)"
-         Tab(6).Control(122)=   "Label(71)"
-         Tab(6).Control(123)=   "Linha(2)"
-         Tab(6).Control(124)=   "Label(70)"
-         Tab(6).Control(125)=   "txtCp(66)"
-         Tab(6).Control(126)=   "Label(69)"
+         Tab(6).Control(100)=   "txtCp(107)"
+         Tab(6).Control(100).Enabled=   0   'False
+         Tab(6).Control(101)=   "Label(111)"
+         Tab(6).Control(102)=   "Label(112)"
+         Tab(6).Control(103)=   "txtCp(108)"
+         Tab(6).Control(103).Enabled=   0   'False
+         Tab(6).Control(104)=   "txtCp(109)"
+         Tab(6).Control(104).Enabled=   0   'False
+         Tab(6).Control(105)=   "txtCp(110)"
+         Tab(6).Control(105).Enabled=   0   'False
+         Tab(6).Control(106)=   "Label(113)"
+         Tab(6).Control(107)=   "txtCp(111)"
+         Tab(6).Control(107).Enabled=   0   'False
+         Tab(6).Control(108)=   "txtCp(112)"
+         Tab(6).Control(108).Enabled=   0   'False
+         Tab(6).Control(109)=   "txtCp(113)"
+         Tab(6).Control(109).Enabled=   0   'False
+         Tab(6).Control(110)=   "txtCp(114)"
+         Tab(6).Control(110).Enabled=   0   'False
+         Tab(6).Control(111)=   "Label(153)"
+         Tab(6).Control(112)=   "Label(154)"
+         Tab(6).Control(113)=   "Label(155)"
+         Tab(6).Control(114)=   "Label(156)"
+         Tab(6).Control(115)=   "Label(157)"
+         Tab(6).Control(116)=   "Label(158)"
+         Tab(6).Control(117)=   "Label(159)"
+         Tab(6).Control(118)=   "Linha(14)"
+         Tab(6).Control(119)=   "Label(160)"
+         Tab(6).Control(120)=   "Label(161)"
+         Tab(6).Control(121)=   "Label(162)"
+         Tab(6).Control(122)=   "Label(163)"
+         Tab(6).Control(123)=   "Label(164)"
+         Tab(6).Control(124)=   "Label(165)"
+         Tab(6).Control(125)=   "Label(166)"
+         Tab(6).Control(126)=   "Linha(15)"
          Tab(6).ControlCount=   127
          TabCaption(7)   =   "Bomba / Motor"
          Tab(7).ControlEnabled=   0   'False
-         Tab(7).Control(0)=   "txtCp(142)"
-         Tab(7).Control(1)=   "txtCp(141)"
-         Tab(7).Control(2)=   "txtCp(140)"
-         Tab(7).Control(3)=   "txtCp(139)"
-         Tab(7).Control(4)=   "txtCp(138)"
-         Tab(7).Control(5)=   "Label(152)"
-         Tab(7).Control(6)=   "Label(151)"
-         Tab(7).Control(7)=   "Label(150)"
-         Tab(7).Control(8)=   "Label(149)"
-         Tab(7).Control(9)=   "Label(148)"
-         Tab(7).Control(10)=   "Label(147)"
-         Tab(7).Control(11)=   "txtCp(136)"
-         Tab(7).Control(11).Enabled=   0   'False
-         Tab(7).Control(12)=   "Label(145)"
-         Tab(7).Control(13)=   "txtCp(135)"
-         Tab(7).Control(13).Enabled=   0   'False
-         Tab(7).Control(14)=   "Label(144)"
-         Tab(7).Control(15)=   "txtCp(134)"
-         Tab(7).Control(16)=   "Linha(13)"
-         Tab(7).Control(17)=   "Label(143)"
-         Tab(7).Control(18)=   "txtCp(133)"
-         Tab(7).Control(18).Enabled=   0   'False
-         Tab(7).Control(19)=   "Label(142)"
-         Tab(7).Control(20)=   "Label(141)"
-         Tab(7).Control(21)=   "Label(140)"
-         Tab(7).Control(22)=   "txtCp(132)"
-         Tab(7).Control(22).Enabled=   0   'False
-         Tab(7).Control(23)=   "txtCp(131)"
-         Tab(7).Control(24)=   "Label(139)"
-         Tab(7).Control(25)=   "Label(138)"
-         Tab(7).Control(26)=   "txtCp(130)"
-         Tab(7).Control(27)=   "txtCp(129)"
-         Tab(7).Control(28)=   "Label(137)"
-         Tab(7).Control(29)=   "Label(136)"
-         Tab(7).Control(30)=   "txtCp(128)"
-         Tab(7).Control(31)=   "txtCp(127)"
-         Tab(7).Control(32)=   "Label(135)"
-         Tab(7).Control(33)=   "Label(134)"
+         Tab(7).Control(0)=   "Label(114)"
+         Tab(7).Control(1)=   "Linha(10)"
+         Tab(7).Control(2)=   "Label(115)"
+         Tab(7).Control(3)=   "txtCp(115)"
+         Tab(7).Control(4)=   "Label(116)"
+         Tab(7).Control(5)=   "txtCp(116)"
+         Tab(7).Control(6)=   "Label(117)"
+         Tab(7).Control(7)=   "Label(118)"
+         Tab(7).Control(8)=   "txtCp(117)"
+         Tab(7).Control(9)=   "txtCp(118)"
+         Tab(7).Control(10)=   "Label(119)"
+         Tab(7).Control(11)=   "Label(120)"
+         Tab(7).Control(12)=   "txtCp(119)"
+         Tab(7).Control(13)=   "Label(121)"
+         Tab(7).Control(14)=   "txtCp(120)"
+         Tab(7).Control(15)=   "txtCp(121)"
+         Tab(7).Control(15).Enabled=   0   'False
+         Tab(7).Control(16)=   "Label(122)"
+         Tab(7).Control(17)=   "txtCp(122)"
+         Tab(7).Control(17).Enabled=   0   'False
+         Tab(7).Control(18)=   "Label(123)"
+         Tab(7).Control(19)=   "Label(124)"
+         Tab(7).Control(20)=   "txtCp(123)"
+         Tab(7).Control(21)=   "Label(125)"
+         Tab(7).Control(22)=   "txtCp(124)"
+         Tab(7).Control(23)=   "Label(126)"
+         Tab(7).Control(24)=   "Label(127)"
+         Tab(7).Control(25)=   "Label(128)"
+         Tab(7).Control(26)=   "Label(129)"
+         Tab(7).Control(27)=   "Label(130)"
+         Tab(7).Control(28)=   "txtCp(125)"
+         Tab(7).Control(28).Enabled=   0   'False
+         Tab(7).Control(29)=   "Label(131)"
+         Tab(7).Control(30)=   "Linha(11)"
+         Tab(7).Control(31)=   "Linha(12)"
+         Tab(7).Control(32)=   "Label(132)"
+         Tab(7).Control(33)=   "Label(133)"
          Tab(7).Control(34)=   "txtCp(126)"
-         Tab(7).Control(35)=   "Label(133)"
-         Tab(7).Control(36)=   "Label(132)"
-         Tab(7).Control(37)=   "Linha(12)"
-         Tab(7).Control(38)=   "Linha(11)"
-         Tab(7).Control(39)=   "Label(131)"
-         Tab(7).Control(40)=   "txtCp(125)"
-         Tab(7).Control(40).Enabled=   0   'False
-         Tab(7).Control(41)=   "Label(130)"
-         Tab(7).Control(42)=   "Label(129)"
-         Tab(7).Control(43)=   "Label(128)"
-         Tab(7).Control(44)=   "Label(127)"
-         Tab(7).Control(45)=   "Label(126)"
-         Tab(7).Control(46)=   "txtCp(124)"
-         Tab(7).Control(47)=   "Label(125)"
-         Tab(7).Control(48)=   "txtCp(123)"
-         Tab(7).Control(49)=   "Label(124)"
-         Tab(7).Control(50)=   "Label(123)"
-         Tab(7).Control(51)=   "txtCp(122)"
-         Tab(7).Control(51).Enabled=   0   'False
-         Tab(7).Control(52)=   "Label(122)"
-         Tab(7).Control(53)=   "txtCp(121)"
-         Tab(7).Control(53).Enabled=   0   'False
-         Tab(7).Control(54)=   "txtCp(120)"
-         Tab(7).Control(55)=   "Label(121)"
-         Tab(7).Control(56)=   "txtCp(119)"
-         Tab(7).Control(57)=   "Label(120)"
-         Tab(7).Control(58)=   "Label(119)"
-         Tab(7).Control(59)=   "txtCp(118)"
-         Tab(7).Control(60)=   "txtCp(117)"
-         Tab(7).Control(61)=   "Label(118)"
-         Tab(7).Control(62)=   "Label(117)"
-         Tab(7).Control(63)=   "txtCp(116)"
-         Tab(7).Control(64)=   "Label(116)"
-         Tab(7).Control(65)=   "txtCp(115)"
-         Tab(7).Control(66)=   "Label(115)"
-         Tab(7).Control(67)=   "Linha(10)"
-         Tab(7).Control(68)=   "Label(114)"
+         Tab(7).Control(35)=   "Label(134)"
+         Tab(7).Control(36)=   "Label(135)"
+         Tab(7).Control(37)=   "txtCp(127)"
+         Tab(7).Control(38)=   "txtCp(128)"
+         Tab(7).Control(39)=   "Label(136)"
+         Tab(7).Control(40)=   "Label(137)"
+         Tab(7).Control(41)=   "txtCp(129)"
+         Tab(7).Control(42)=   "txtCp(130)"
+         Tab(7).Control(43)=   "Label(138)"
+         Tab(7).Control(44)=   "Label(139)"
+         Tab(7).Control(45)=   "txtCp(131)"
+         Tab(7).Control(46)=   "txtCp(132)"
+         Tab(7).Control(46).Enabled=   0   'False
+         Tab(7).Control(47)=   "Label(140)"
+         Tab(7).Control(48)=   "Label(141)"
+         Tab(7).Control(49)=   "Label(142)"
+         Tab(7).Control(50)=   "txtCp(133)"
+         Tab(7).Control(50).Enabled=   0   'False
+         Tab(7).Control(51)=   "Label(143)"
+         Tab(7).Control(52)=   "Linha(13)"
+         Tab(7).Control(53)=   "txtCp(134)"
+         Tab(7).Control(54)=   "Label(144)"
+         Tab(7).Control(55)=   "txtCp(135)"
+         Tab(7).Control(55).Enabled=   0   'False
+         Tab(7).Control(56)=   "Label(145)"
+         Tab(7).Control(57)=   "txtCp(136)"
+         Tab(7).Control(57).Enabled=   0   'False
+         Tab(7).Control(58)=   "Label(147)"
+         Tab(7).Control(59)=   "Label(148)"
+         Tab(7).Control(60)=   "Label(149)"
+         Tab(7).Control(61)=   "Label(150)"
+         Tab(7).Control(62)=   "Label(151)"
+         Tab(7).Control(63)=   "Label(152)"
+         Tab(7).Control(64)=   "txtCp(138)"
+         Tab(7).Control(65)=   "txtCp(139)"
+         Tab(7).Control(66)=   "txtCp(140)"
+         Tab(7).Control(67)=   "txtCp(141)"
+         Tab(7).Control(68)=   "txtCp(142)"
          Tab(7).ControlCount=   69
          TabCaption(8)   =   "Mapa da Propriedade"
          Tab(8).ControlEnabled=   0   'False
-         Tab(8).Control(0)=   "mmCampo(0)"
-         Tab(8).Control(1)=   "Label(171)"
+         Tab(8).Control(0)=   "Label(171)"
+         Tab(8).Control(1)=   "mmCampo(0)"
          Tab(8).ControlCount=   2
          Begin IRRIG.GBotao Botao 
-            Height          =   315
-            Index           =   7
-            Left            =   -64005
-            TabIndex        =   105
-            TabStop         =   0   'False
-            Top             =   495
-            Width           =   2055
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Parcelamento"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
-            Height          =   375
-            Index           =   6
-            Left            =   -65505
-            TabIndex        =   104
-            TabStop         =   0   'False
-            Top             =   4695
-            Width           =   5070
-            _ExtentX        =   0
-            _ExtentY        =   0
-            ForeColor       =   32768
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Microsoft Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Caption         =   "Atualizar Valor dos Produtos"
-            CaptionOffset   =   50
-         End
-         Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   5
-            Left            =   3300
-            TabIndex        =   93
+            Index           =   4
+            Left            =   9100
+            TabIndex        =   30
             TabStop         =   0   'False
-            Top             =   4620
-            Width           =   240
-            _ExtentX        =   0
-            _ExtentY        =   0
+            Top             =   2700
+            Width           =   255
+            _ExtentX        =   450
+            _ExtentY        =   529
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "MS Sans Serif"
@@ -1043,11 +996,11 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   3
-            Left            =   10125
-            TabIndex        =   19
+            Index           =   1
+            Left            =   3300
+            TabIndex        =   28
             TabStop         =   0   'False
-            Top             =   1380
+            Top             =   2700
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1087,11 +1040,11 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   1
-            Left            =   3300
-            TabIndex        =   28
+            Index           =   3
+            Left            =   10125
+            TabIndex        =   19
             TabStop         =   0   'False
-            Top             =   2700
+            Top             =   1380
             Width           =   240
             _ExtentX        =   0
             _ExtentY        =   0
@@ -1109,14 +1062,14 @@ Begin VB.Form frmOrcament
          End
          Begin IRRIG.GBotao Botao 
             Height          =   300
-            Index           =   4
-            Left            =   9100
-            TabIndex        =   30
+            Index           =   5
+            Left            =   3300
+            TabIndex        =   93
             TabStop         =   0   'False
-            Top             =   2700
-            Width           =   255
-            _ExtentX        =   450
-            _ExtentY        =   529
+            Top             =   4620
+            Width           =   240
+            _ExtentX        =   0
+            _ExtentY        =   0
             ForeColor       =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "MS Sans Serif"
@@ -1127,6 +1080,52 @@ Begin VB.Form frmOrcament
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   375
+            Index           =   6
+            Left            =   -65505
+            TabIndex        =   104
+            TabStop         =   0   'False
+            Top             =   4695
+            Width           =   5070
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   32768
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Atualizar Valor dos Produtos"
+            CaptionOffset   =   50
+         End
+         Begin IRRIG.GBotao Botao 
+            Height          =   315
+            Index           =   7
+            Left            =   -64005
+            TabIndex        =   105
+            TabStop         =   0   'False
+            Top             =   495
+            Width           =   2055
+            _ExtentX        =   0
+            _ExtentY        =   0
+            ForeColor       =   0
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Microsoft Sans Serif"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Caption         =   "Parcelamento"
             CaptionOffset   =   50
          End
          Begin VB.TextBox txtCp 
@@ -9682,7 +9681,7 @@ Begin VB.Form frmOrcament
          Width           =   1440
       End
       Begin VB.CheckBox ChkCp 
-         Caption         =   "Cálculo manual"
+         Caption         =   "Cálculo Manual"
          DataField       =   "Edição Manual Impostos"
          BeginProperty Font 
             Name            =   "Microsoft Sans Serif"
@@ -9697,7 +9696,7 @@ Begin VB.Form frmOrcament
          Height          =   255
          Index           =   12
          Left            =   7860
-         TabIndex        =   470
+         TabIndex        =   469
          Top             =   1260
          Width           =   1700
       End
@@ -10089,7 +10088,15 @@ Public vgFrmImpCons As New frmImpCons             'impressao de consutlas
 Public vgTooltips As New cTooltips                'classe de ajuda para os controes do módulo
 Public vgFiltroOriginal As String
 Private defaultBack55 As Long
+Private Grid0_ValorUnitario_Pendente As Double    'valor unitário do conjunto selecionado no Grid 0
+Private Grid0_ValorUnitario_Pendente_Definido As Boolean
+Private Grid0_ForcandoRefresh As Boolean
 Private Grid1_ValorUnitario_Pendente As Double    'valor unitário da peça selecionada no Grid 1 (persistente entre eventos)
+Private Grid1_ValorUnitario_Pendente_Definido As Boolean 'indica se o valor unitário pendente possui um valor válido
+Private Grid1_ForcandoRefresh As Boolean         'flag para evitar refresh/repaint em loop durante edição do grid 1
+Private Grid3_ValorUnitario_Pendente As Double    'valor unitário do produto selecionado no Grid 3
+Private Grid3_ValorUnitario_Pendente_Definido As Boolean
+Private Grid3_ForcandoRefresh As Boolean
 
 'Variáveis para detectar troca de item (Fix: preço errado ao trocar item)
 Dim Seq_Conjunto_Anterior As Long
@@ -20384,6 +20391,47 @@ Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColu
       Case 0
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 1
+         ' ANTES de editar, força atualização do Valor Unitário no recordset se houver troca de peça
+         ' Importante: não sobrescrever o valor quando o usuário está editando a própria coluna 9
+         If vgColumn <> 9 Then
+            On Error Resume Next
+            If Not Pecas_do_Orcamento Is Nothing Then
+               If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+                  Dim SeqProduto_Atual As Long
+                  Dim ValorUnitario_Novo As Double
+                  
+                  ' Pega a sequência do produto atual
+                  If IsNull(Pecas_do_Orcamento![Seqüência do Produto]) Then
+                     SeqProduto_Atual = 0
+                  Else
+                     SeqProduto_Atual = Pecas_do_Orcamento![Seqüência do Produto]
+                  End If
+                  
+                  Debug.Print "[BeforeEditRecord] SeqProduto_Atual=" & SeqProduto_Atual & " | vgColumn=" & vgColumn
+                  
+                  ' Se há produto, busca o valor unitário atualizado
+                  If SeqProduto_Atual > 0 Then
+                     ValorUnitario_Novo = Round(InfoPecas(0, Orcamento![Seqüência do Orçamento], SeqProduto_Atual, _
+                                                   0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário"), 2)
+                     
+                     ' Atualiza no recordset e no buffer do grid antes de exibir
+                     Pecas_do_Orcamento![Valor Unitário] = ValorUnitario_Novo
+                     Grid1_ValorUnitario_Pendente = ValorUnitario_Novo
+                     Grid1_ValorUnitario_Pendente_Definido = True
+                     If IsArray(vgColumns) Then
+                        On Error Resume Next
+                        If UBound(vgColumns) >= 9 Then
+                           vgColumns(9) = ValorUnitario_Novo
+                        End If
+                        On Error GoTo 0
+                     End If
+                     Debug.Print "[BeforeEditRecord] Atualizou Valor Unitário no recordset=" & ValorUnitario_Novo
+                  End If
+               End If
+            End If
+            On Error GoTo 0
+         End If
+         
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 2
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
@@ -20401,8 +20449,158 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
    Select Case Index
       Case 0
          Conjuntos_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
+
+         On Error Resume Next
+         Dim ValorUnitario_Final_Conj As Double
+         Dim TemValorUnitario_Conj As Boolean
+         Dim ValorUnitario_Bruto_Conj As Variant
+         Dim ValorUnitario_BrutoTexto_Conj As String
+
+         ValorUnitario_BrutoTexto_Conj = "[Indefinido]"
+         If IsArray(vgColumns) Then
+            If UBound(vgColumns) >= 7 Then
+               ValorUnitario_Bruto_Conj = vgColumns(7)
+               If IsNull(ValorUnitario_Bruto_Conj) Then
+                  ValorUnitario_BrutoTexto_Conj = "[Null]"
+               ElseIf IsEmpty(ValorUnitario_Bruto_Conj) Then
+                  ValorUnitario_BrutoTexto_Conj = "[Empty]"
+               Else
+                  ValorUnitario_BrutoTexto_Conj = CStr(ValorUnitario_Bruto_Conj)
+                  Err.Clear
+                  ValorUnitario_Final_Conj = Round(CDbl(ValorUnitario_Bruto_Conj), 2)
+                  If Err.Number = 0 Then
+                     TemValorUnitario_Conj = True
+                  Else
+                     Debug.Print "[BeforeUpdateRecord][Grid0] Falha ao converter vgColumns(7)='" & ValorUnitario_BrutoTexto_Conj & "' -> Err=" & Err.Number & " - " & Err.Description
+                     Err.Clear
+                  End If
+               End If
+            Else
+               ValorUnitario_BrutoTexto_Conj = "[Sem índice 7]"
+            End If
+         Else
+            ValorUnitario_BrutoTexto_Conj = "[Sem array]"
+         End If
+
+         Debug.Print "[BeforeUpdateRecord][Grid0] vgColumns(7)=" & ValorUnitario_BrutoTexto_Conj & _
+                     " | Pendente=" & IIf(Grid0_ValorUnitario_Pendente_Definido, Format$(Grid0_ValorUnitario_Pendente, "0.00"), "[sem valor]")
+
+         If Not TemValorUnitario_Conj And Grid0_ValorUnitario_Pendente_Definido Then
+            ValorUnitario_Final_Conj = Round(Grid0_ValorUnitario_Pendente, 2)
+            TemValorUnitario_Conj = True
+         End If
+
+         If Not TemValorUnitario_Conj Then
+            If Not Conjuntos_do_Orcamento Is Nothing Then
+               If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+                  If Not IsNull(Conjuntos_do_Orcamento![Valor Unitário]) Then
+                     ValorUnitario_Final_Conj = Round(CDbl(Conjuntos_do_Orcamento![Valor Unitário]), 2)
+                     TemValorUnitario_Conj = True
+                  End If
+               End If
+            End If
+         End If
+
+         If TemValorUnitario_Conj Then
+            If IsArray(vgColumns) Then
+               If UBound(vgColumns) >= 7 Then
+                  vgColumns(7) = ValorUnitario_Final_Conj
+               End If
+            End If
+
+            If Not Conjuntos_do_Orcamento Is Nothing Then
+               If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+                  Conjuntos_do_Orcamento![Valor Unitário] = ValorUnitario_Final_Conj
+               End If
+            End If
+
+            Grid0_ValorUnitario_Pendente = ValorUnitario_Final_Conj
+            Grid0_ValorUnitario_Pendente_Definido = True
+            Debug.Print "[BeforeUpdateRecord][Grid0] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final_Conj, "0.00")
+         Else
+            Grid0_ValorUnitario_Pendente = 0
+            Grid0_ValorUnitario_Pendente_Definido = False
+            Debug.Print "[BeforeUpdateRecord][Grid0] Nenhum valor unitário válido encontrado para persistir"
+         End If
+         On Error GoTo 0
       Case 1  ' Grid de Peças
          Pecas_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
+
+         ' Garante que o valor unitário atualizado seja persistido no momento do salvamento
+         On Error Resume Next
+         Dim ValorUnitario_Final As Double
+         Dim TemValorUnitario As Boolean
+         Dim ValorUnitario_Bruto As Variant
+         Dim ValorUnitario_BrutoTexto As String
+
+         If IsArray(vgColumns) Then
+            If UBound(vgColumns) >= 9 Then
+               ValorUnitario_Bruto = vgColumns(9)
+               If IsNull(ValorUnitario_Bruto) Then
+                  ValorUnitario_BrutoTexto = "[Null]"
+               ElseIf IsEmpty(ValorUnitario_Bruto) Then
+                  ValorUnitario_BrutoTexto = "[Empty]"
+               Else
+                  ValorUnitario_BrutoTexto = CStr(ValorUnitario_Bruto)
+                  Err.Clear
+                  ValorUnitario_Final = Round(CDbl(ValorUnitario_Bruto), 2)
+                  If Err.Number = 0 Then
+                     TemValorUnitario = True
+                  Else
+                     Debug.Print "[BeforeUpdateRecord] Falha ao converter vgColumns(9)='" & ValorUnitario_BrutoTexto & "' -> Err=" & Err.Number & " - " & Err.Description
+                     Err.Clear
+                  End If
+               End If
+            Else
+               ValorUnitario_BrutoTexto = "[Sem índice 9]"
+            End If
+         Else
+            ValorUnitario_BrutoTexto = "[Sem array]"
+         End If
+
+         If ValorUnitario_BrutoTexto = "" Then ValorUnitario_BrutoTexto = CStr(ValorUnitario_Bruto)
+
+         Debug.Print "[BeforeUpdateRecord] vgColumns(9)=" & IIf(ValorUnitario_BrutoTexto = "", "[vazio]", ValorUnitario_BrutoTexto) & _
+                     " | Pendente=" & IIf(Grid1_ValorUnitario_Pendente_Definido, CStr(Grid1_ValorUnitario_Pendente), "[sem valor]")
+
+         If Not TemValorUnitario And Grid1_ValorUnitario_Pendente_Definido Then
+            ValorUnitario_Final = Round(Grid1_ValorUnitario_Pendente, 2)
+            TemValorUnitario = True
+         End If
+
+         If Not TemValorUnitario Then
+            If Not Pecas_do_Orcamento Is Nothing Then
+               If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+                  If Not IsNull(Pecas_do_Orcamento![Valor Unitário]) Then
+                     ValorUnitario_Final = Round(CDbl(Pecas_do_Orcamento![Valor Unitário]), 2)
+                     TemValorUnitario = True
+                  End If
+               End If
+            End If
+         End If
+
+         If TemValorUnitario Then
+            If IsArray(vgColumns) Then
+               If UBound(vgColumns) >= 9 Then
+                  vgColumns(9) = ValorUnitario_Final
+               End If
+            End If
+
+            If Not Pecas_do_Orcamento Is Nothing Then
+               If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+                  Pecas_do_Orcamento![Valor Unitário] = ValorUnitario_Final
+               End If
+            End If
+
+            Grid1_ValorUnitario_Pendente = ValorUnitario_Final
+            Grid1_ValorUnitario_Pendente_Definido = True
+            Debug.Print "[BeforeUpdateRecord] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final, "0.00")
+         Else
+            Grid1_ValorUnitario_Pendente = 0
+            Grid1_ValorUnitario_Pendente_Definido = False
+            Debug.Print "[BeforeUpdateRecord] Nenhum valor unitário válido encontrado para persistir"
+         End If
+         On Error GoTo 0
 
          ' Validação de cotação para peças - somente para novos registros
          If Grid(1).Status = ACAO_INCLUINDO Then
@@ -20421,6 +20619,80 @@ Private Sub Grid_BeforeUpdateRecord(Index As Integer, ByVal vgItem As Long, vgCo
          Parcelas_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
       Case 3  ' Grid de Produtos
          Produtos_do_Orcamento![Seqüência do Orçamento] = Orcamento![Seqüência do Orçamento]
+
+         On Error Resume Next
+         Dim ValorUnitario_Final_Prod As Double
+         Dim TemValorUnitario_Prod As Boolean
+         Dim ValorUnitario_Bruto_Prod As Variant
+         Dim ValorUnitario_BrutoTexto_Prod As String
+
+         ValorUnitario_BrutoTexto_Prod = "[Indefinido]"
+         If IsArray(vgColumns) Then
+            If UBound(vgColumns) >= 10 Then
+               ValorUnitario_Bruto_Prod = vgColumns(10)
+               If IsNull(ValorUnitario_Bruto_Prod) Then
+                  ValorUnitario_BrutoTexto_Prod = "[Null]"
+               ElseIf IsEmpty(ValorUnitario_Bruto_Prod) Then
+                  ValorUnitario_BrutoTexto_Prod = "[Empty]"
+               Else
+                  ValorUnitario_BrutoTexto_Prod = CStr(ValorUnitario_Bruto_Prod)
+                  Err.Clear
+                  ValorUnitario_Final_Prod = Round(CDbl(ValorUnitario_Bruto_Prod), 2)
+                  If Err.Number = 0 Then
+                     TemValorUnitario_Prod = True
+                  Else
+                     Debug.Print "[BeforeUpdateRecord][Grid3] Falha ao converter vgColumns(10)='" & ValorUnitario_BrutoTexto_Prod & "' -> Err=" & Err.Number & " - " & Err.Description
+                     Err.Clear
+                  End If
+               End If
+            Else
+               ValorUnitario_BrutoTexto_Prod = "[Sem índice 10]"
+            End If
+         Else
+            ValorUnitario_BrutoTexto_Prod = "[Sem array]"
+         End If
+
+         Debug.Print "[BeforeUpdateRecord][Grid3] vgColumns(10)=" & ValorUnitario_BrutoTexto_Prod & _
+                     " | Pendente=" & IIf(Grid3_ValorUnitario_Pendente_Definido, Format$(Grid3_ValorUnitario_Pendente, "0.00"), "[sem valor]")
+
+         If Not TemValorUnitario_Prod And Grid3_ValorUnitario_Pendente_Definido Then
+            ValorUnitario_Final_Prod = Round(Grid3_ValorUnitario_Pendente, 2)
+            TemValorUnitario_Prod = True
+         End If
+
+         If Not TemValorUnitario_Prod Then
+            If Not Produtos_do_Orcamento Is Nothing Then
+               If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+                  If Not IsNull(Produtos_do_Orcamento![Valor Unitário]) Then
+                     ValorUnitario_Final_Prod = Round(CDbl(Produtos_do_Orcamento![Valor Unitário]), 2)
+                     TemValorUnitario_Prod = True
+                  End If
+               End If
+            End If
+         End If
+
+         If TemValorUnitario_Prod Then
+            If IsArray(vgColumns) Then
+               If UBound(vgColumns) >= 10 Then
+                  vgColumns(10) = ValorUnitario_Final_Prod
+               End If
+            End If
+
+            If Not Produtos_do_Orcamento Is Nothing Then
+               If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+                  Produtos_do_Orcamento![Valor Unitário] = ValorUnitario_Final_Prod
+               End If
+            End If
+
+            Grid3_ValorUnitario_Pendente = ValorUnitario_Final_Prod
+            Grid3_ValorUnitario_Pendente_Definido = True
+            Debug.Print "[BeforeUpdateRecord][Grid3] Persistindo Valor Unitário final=" & Format$(ValorUnitario_Final_Prod, "0.00")
+         Else
+            Grid3_ValorUnitario_Pendente = 0
+            Grid3_ValorUnitario_Pendente_Definido = False
+            Debug.Print "[BeforeUpdateRecord][Grid3] Nenhum valor unitário válido encontrado para persistir"
+         End If
+         On Error GoTo 0
 
          ' Validação de cotação para produtos - somente para novos registros
          If Grid(3).Status = ACAO_INCLUINDO Then
@@ -20467,12 +20739,16 @@ Private Sub Grid_RecordSetChanged(Index As Integer, ByVal vgNewRecordSet As GRec
    Select Case Index
       Case 0
          Set Conjuntos_do_Orcamento = vgNewRecordSet
+         Grid0_ValorUnitario_Pendente = 0
+         Grid0_ValorUnitario_Pendente_Definido = False
       Case 1
          Set Pecas_do_Orcamento = vgNewRecordSet
       Case 2
          Set Parcelas_Orcamento = vgNewRecordSet
       Case 3
          Set Produtos_do_Orcamento = vgNewRecordSet
+         Grid3_ValorUnitario_Pendente = 0
+         Grid3_ValorUnitario_Pendente_Definido = False
       Case 4
          Set Servicos_do_Orcamento = vgNewRecordSet
    End Select
@@ -20480,6 +20756,77 @@ End Sub
 
 'evento - quer validar dados, está gravando
 Private Sub Grid_ValidateData(Index As Integer, ByVal vgItem As Long, vgColumns() As Variant, vgIsValid As Boolean, vgColumn As Integer, vgErrorMessage As String)
+   Dim ValorDigitado As Variant
+   Dim ValorConvertido As Double
+
+   If Index = 0 And vgColumn = 7 Then
+      If IsArray(vgColumns) Then
+         If UBound(vgColumns) >= 7 Then
+            ValorDigitado = vgColumns(7)
+            If Not IsNull(ValorDigitado) And Not IsEmpty(ValorDigitado) Then
+               On Error Resume Next
+               ValorConvertido = Round(CDbl(ValorDigitado), 2)
+               If Err.Number = 0 Then
+                  Grid0_ValorUnitario_Pendente = ValorConvertido
+                  Grid0_ValorUnitario_Pendente_Definido = True
+                  Debug.Print "[ValidateData][Grid0] Coluna 7 editada manualmente - Novo valor=" & Format$(Grid0_ValorUnitario_Pendente, "0.00")
+               Else
+                  Debug.Print "[ValidateData][Grid0] Falha ao converter Coluna 7 - Err=" & Err.Number & " - " & Err.Description
+                  Err.Clear
+               End If
+               On Error GoTo 0
+            Else
+               Grid0_ValorUnitario_Pendente = 0
+               Grid0_ValorUnitario_Pendente_Definido = False
+            End If
+         End If
+      End If
+   ElseIf Index = 1 And vgColumn = 9 Then
+      If IsArray(vgColumns) Then
+         If UBound(vgColumns) >= 9 Then
+            ValorDigitado = vgColumns(9)
+            If Not IsNull(ValorDigitado) And Not IsEmpty(ValorDigitado) Then
+               On Error Resume Next
+               ValorConvertido = Round(CDbl(ValorDigitado), 2)
+               If Err.Number = 0 Then
+                  Grid1_ValorUnitario_Pendente = ValorConvertido
+                  Grid1_ValorUnitario_Pendente_Definido = True
+                  Debug.Print "[ValidateData][Grid1] Coluna 9 editada manualmente - Novo valor=" & Format$(Grid1_ValorUnitario_Pendente, "0.00")
+               Else
+                  Debug.Print "[ValidateData][Grid1] Falha ao converter Coluna 9 - Err=" & Err.Number & " - " & Err.Description
+                  Err.Clear
+               End If
+               On Error GoTo 0
+            Else
+               Grid1_ValorUnitario_Pendente = 0
+               Grid1_ValorUnitario_Pendente_Definido = False
+            End If
+         End If
+      End If
+   ElseIf Index = 3 And vgColumn = 10 Then
+      If IsArray(vgColumns) Then
+         If UBound(vgColumns) >= 10 Then
+            ValorDigitado = vgColumns(10)
+            If Not IsNull(ValorDigitado) And Not IsEmpty(ValorDigitado) Then
+               On Error Resume Next
+               ValorConvertido = Round(CDbl(ValorDigitado), 2)
+               If Err.Number = 0 Then
+                  Grid3_ValorUnitario_Pendente = ValorConvertido
+                  Grid3_ValorUnitario_Pendente_Definido = True
+                  Debug.Print "[ValidateData][Grid3] Coluna 10 editada manualmente - Novo valor=" & Format$(Grid3_ValorUnitario_Pendente, "0.00")
+               Else
+                  Debug.Print "[ValidateData][Grid3] Falha ao converter Coluna 10 - Err=" & Err.Number & " - " & Err.Description
+                  Err.Clear
+               End If
+               On Error GoTo 0
+            Else
+               Grid3_ValorUnitario_Pendente = 0
+               Grid3_ValorUnitario_Pendente_Definido = False
+            End If
+         End If
+      End If
+   End If
+   
    ExecutaGrid Index, vgColumns(), VALIDACOES, vgItem, vgColumn, vgIsValid, vgColumn, vgErrorMessage
 End Sub
 
@@ -20612,11 +20959,7 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
    Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, "Estoque"))
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 7
-            vgRetVal = (InfoConjuntos(Sequencia_do_Orcamento, Sequencia_Conjunto_Orcamento, Sequencia_do_Conjunto, Quantidade, Valor_Unitario, Valor_Total, _
-   Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, Percentual_da_Reducao, Diferido, _
-   Valor_da_Base_de_Calculo, Valor_do_Tributo, Valor_do_PIS, Valor_do_Cofins, IVA, Base_de_Calculo_ST, _
-   CFOP, CST, Valor_ICMS_ST, Aliquota_do_ICMS_ST, Valor_do_Desconto, Valor_do_Frete, _
-   Valor_Anterior, Bc_pis, Aliq_do_pis, Bc_cofins, Aliq_do_cofins, "Valor Unitário"))
+            vgRetVal = Valor_Unitario
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 10
             vgRetVal = (Quantidade * Valor_Unitario)
@@ -20697,6 +21040,13 @@ Private Function ExecutaGrid0(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 3
             CFOP = IIf(Fatura_Proforma, 7101, 0)
             vgRetVal = CFOP
+         Case 7
+            If Grid0_ValorUnitario_Pendente_Definido Then
+               vgRetVal = Grid0_ValorUnitario_Pendente
+            Else
+               vgRetVal = Null
+            End If
+            Debug.Print "[GRID 0 - CONJUNTOS] DEFAULTDASCOLUNAS Case 7 - Retornando ValorUnitario=" & IIf(Grid0_ValorUnitario_Pendente_Definido, Format$(Grid0_ValorUnitario_Pendente, "0.00"), "[sem valor]")
       End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -20783,27 +21133,116 @@ IniApDaCol:
    On Error Resume Next
    Dim Sequencia_Nova As Long
    Dim TrocaDetectada As Boolean
+   Dim NovoPrecoConj As Double
+   Dim ValorEmEdicao As Variant
+   Dim ValorConvertido As Double
+   Dim TemValorEmEdicao As Boolean
+
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Conjunto_Anterior)
-   
-   ' Se detectou troca de item, busca novo preço IMEDIATAMENTE antes de continuar
-   If TrocaDetectada Then
-      Dim NovoPrecoConj As Double
-      ' Busca o valor unitário do novo conjunto
-      NovoPrecoConj = InfoConjuntos(val(Parse$(CStr(ColumnValue(0)), Chr$(1), 1)), 0, Sequencia_Nova, _
-                                   0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário")
-      ' Atualiza IMEDIATAMENTE o ColumnValue antes de processar
-      ColumnValue(7) = NovoPrecoConj
+
+   If Seq_Conjunto_Anterior = 0 And Sequencia_Nova = 0 Then
+      Grid0_ValorUnitario_Pendente = 0
+      Grid0_ValorUnitario_Pendente_Definido = False
    End If
-   
-   ' Atualiza tracker de sequência
+
    Seq_Conjunto_Anterior = Sequencia_Nova
-   
+
    Sequencia_do_Conjunto = Sequencia_Nova
    CST = ColumnValue(2)
    CFOP = ColumnValue(3)
    Quantidade = ColumnValue(5)
    Valor_Unitario = ColumnValue(7)
+   TemValorEmEdicao = False
+
+   If TrocaDetectada And Sequencia_Nova > 0 Then
+      NovoPrecoConj = Round(InfoConjuntos(val(Parse$(CStr(ColumnValue(0)), Chr$(1), 1)), 0, Sequencia_Nova, _
+                                   0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário"), 2)
+      ColumnValue(7) = NovoPrecoConj
+      Valor_Unitario = NovoPrecoConj
+      Grid0_ValorUnitario_Pendente = NovoPrecoConj
+      Grid0_ValorUnitario_Pendente_Definido = True
+
+      If Not Conjuntos_do_Orcamento Is Nothing Then
+         If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+            Conjuntos_do_Orcamento![Valor Unitário] = NovoPrecoConj
+            Debug.Print "[IniApDaCol][Grid0] TROCA DETECTADA - Valor Unitário atualizado para " & Format$(NovoPrecoConj, "0.00")
+            If Grid(0).Status = 3 Then
+               If Not Grid0_ForcandoRefresh Then
+                  Grid0_ForcandoRefresh = True
+                  On Error GoTo TrataAtualizacaoErro_Grid0
+                  Conjuntos_do_Orcamento.Update
+                  Conjuntos_do_Orcamento.Edit
+                  Grid(0).ColumnValue(Grid(0).SelectedItem, 7) = NovoPrecoConj
+                  Grid(0).Repaint -1
+TrataAtualizacaoSaida_Grid0:
+                  Grid0_ForcandoRefresh = False
+                  On Error GoTo DeuErro
+               End If
+            End If
+         End If
+      End If
+      On Error GoTo DeuErro
+   GoTo ContinuaIniApDaCol
+TrataAtualizacaoErro_Grid0:
+   Debug.Print "[IniApDaCol][Grid0] ERRO ao forçar atualização visual: " & Err.Number & " - " & Err.Description
+   Resume TrataAtualizacaoSaida_Grid0
+   Else
+      ValorEmEdicao = Null
+      Err.Clear
+      If UBound(ColumnValue) >= 7 Then
+         ValorEmEdicao = ColumnValue(7)
+      End If
+      If Err.Number <> 0 Then
+         ValorEmEdicao = Null
+         Err.Clear
+      End If
+
+      If Not IsNull(ValorEmEdicao) And Not IsEmpty(ValorEmEdicao) Then
+         Err.Clear
+         ValorConvertido = Round(CDbl(ValorEmEdicao), 2)
+         If Err.Number = 0 Then
+            Valor_Unitario = ValorConvertido
+            Grid0_ValorUnitario_Pendente = ValorConvertido
+            Grid0_ValorUnitario_Pendente_Definido = True
+            TemValorEmEdicao = True
+         Else
+            Debug.Print "[IniApDaCol][Grid0] Falha ao converter ColumnValue(7)='" & ValorEmEdicao & "' -> Err=" & Err.Number & " - " & Err.Description
+            Err.Clear
+         End If
+      End If
+
+      If Not TemValorEmEdicao Then
+         If Grid0_ValorUnitario_Pendente_Definido Then
+            Valor_Unitario = Grid0_ValorUnitario_Pendente
+         ElseIf Not Conjuntos_do_Orcamento Is Nothing Then
+            If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+               If Not IsNull(Conjuntos_do_Orcamento![Valor Unitário]) Then
+                  Valor_Unitario = Round(CDbl(Conjuntos_do_Orcamento![Valor Unitário]), 2)
+                  Grid0_ValorUnitario_Pendente = Valor_Unitario
+                  Grid0_ValorUnitario_Pendente_Definido = True
+               Else
+                  Valor_Unitario = 0
+                  Grid0_ValorUnitario_Pendente = 0
+                  Grid0_ValorUnitario_Pendente_Definido = False
+               End If
+            Else
+               Valor_Unitario = 0
+               Grid0_ValorUnitario_Pendente = 0
+               Grid0_ValorUnitario_Pendente_Definido = False
+            End If
+         Else
+            Valor_Unitario = 0
+            Grid0_ValorUnitario_Pendente = 0
+            Grid0_ValorUnitario_Pendente_Definido = False
+         End If
+      End If
+
+      Valor_Unitario = Round(Valor_Unitario, 2)
+      ColumnValue(7) = Valor_Unitario
+   End If
+
+ContinuaIniApDaCol:
    Valor_do_Desconto = ColumnValue(8)
    Valor_do_Frete = ColumnValue(9)
    Valor_da_Base_de_Calculo = ColumnValue(11)
@@ -20831,7 +21270,9 @@ IniApDaCol:
          Valor_Anterior = Conjuntos_do_Orcamento![Valor Anterior]
       End If
    End If
-   
+
+   Debug.Print "[IniApDaCol][Grid0] Valor Unitário corrente = " & Format$(Valor_Unitario, "0.00")
+
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -20954,11 +21395,10 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = (Peso * Quantidade)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 9
-            ' Busca valor unitário sempre do catálogo (igual produtos)
-            ' Usa o Valor_Unitario já atualizado pelo IniApDaCol quando há troca de item
+            ' Força sempre exibir o valor unitário calculado/pendente, mesmo com coluna bound
             vgRetVal = Valor_Unitario
-            Debug.Print "[GRID 1 - PEÇAS] CONTEUDODACOLUNA Case 9 - Retornando Valor_Unitario=" & vgRetVal
-            vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
+            vgColumn = -1
+            Debug.Print "[GRID 1 - PEÇAS] CONTEUDODACOLUNA vgCol=9 retornando Valor_Unitario=" & Valor_Unitario & " | Status=" & Grid(1).Status
          Case 12
             vgRetVal = (Quantidade * Valor_Unitario)
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
@@ -20971,6 +21411,9 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = (Not Orcamento![Orçamento Avulso]) And (Not Edicao_Manual_Impostos)
          Case 3  ' CFOP
             vgRetVal = (Not Orcamento![Orçamento Avulso]) And (Not Edicao_Manual_Impostos)
+         Case 9  ' Vr. Unitário - SEMPRE permite edição
+            vgRetVal = False  ' False = NÃO bloqueado = permite editar
+            Debug.Print "[PREVALIDACOES] Coluna 9 - Permitindo edição (vgRetVal=False)"
          Case 13  ' Alíquota do IPI
             vgRetVal = (Not Orcamento![Orçamento Avulso]) And (Not Edicao_Manual_Impostos)
          Case 14  ' Alíquota do ICMS
@@ -21040,8 +21483,12 @@ Private Function ExecutaGrid1(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = CFOP
          Case 9
             ' Retorna o valor unitário que foi buscado no IniApDaCol
-            vgRetVal = Grid1_ValorUnitario_Pendente
-            Debug.Print "[GRID 1 - PEÇAS] DEFAULTDASCOLUNAS Case 9 - Retornando Grid1_ValorUnitario_Pendente=" & vgRetVal
+            If Grid1_ValorUnitario_Pendente_Definido Then
+               vgRetVal = Grid1_ValorUnitario_Pendente
+            Else
+               vgRetVal = Null
+            End If
+            Debug.Print "[GRID 1 - PEÇAS] DEFAULTDASCOLUNAS Case 9 - Retornando Grid1_ValorUnitario=" & IIf(Grid1_ValorUnitario_Pendente_Definido, Format$(Grid1_ValorUnitario_Pendente, "0.00"), "[sem valor]")
       End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -21145,15 +21592,15 @@ IniApDaCol:
    Dim NovoPreco As Double
    
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   
+   ' Detecta troca de item comparando com o tracker
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Pecas_Anterior)
    
    ' Se começou uma nova linha (Seq_Anterior = 0), limpa o valor unitário pendente
    If Seq_Produto_Pecas_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid1_ValorUnitario_Pendente = 0
-      Debug.Print "[GRID 1 - PEÇAS] IniApDaCol - LIMPOU Grid1_ValorUnitario_Pendente (nova linha)"
+      Grid1_ValorUnitario_Pendente_Definido = False
    End If
-   
-   Debug.Print "[GRID 1 - PEÇAS] IniApDaCol - vgOq=" & vgOq & " | Seq_Nova=" & Sequencia_Nova & " | Seq_Anterior=" & Seq_Produto_Pecas_Anterior & " | TrocaDetectada=" & TrocaDetectada
    
    ' Atualiza tracker de sequência
    Seq_Produto_Pecas_Anterior = Sequencia_Nova
@@ -21164,34 +21611,98 @@ IniApDaCol:
    Peso = ColumnValue(5)
    Quantidade = ColumnValue(6)
    
-   ' Se detectou troca de item, busca o novo valor unitário ANTES de atribuir
+   ' Se detectou troca de item, busca o novo valor unitário
    If TrocaDetectada And Sequencia_Nova > 0 Then
-      NovoPreco = InfoPecas(0, Orcamento![Seqüência do Orçamento], Sequencia_Nova, _
-                           0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário")
-      Debug.Print "[GRID 1 - PEÇAS] BUSCA NOVO PREÇO! NovoPreco=" & NovoPreco & " para Peça=" & Sequencia_Nova
+      NovoPreco = Round(InfoPecas(0, Orcamento![Seqüência do Orçamento], Sequencia_Nova, _
+               0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário"), 2)
       ColumnValue(9) = NovoPreco
       Valor_Unitario = NovoPreco
-      Grid1_ValorUnitario_Pendente = NovoPreco  ' <-- SALVA NA VARIÁVEL PERSISTENTE
-      Debug.Print "[GRID 1 - PEÇAS] Valor_Unitario atualizado=" & Valor_Unitario & " | Grid1_ValorUnitario_Pendente=" & Grid1_ValorUnitario_Pendente
+      Grid1_ValorUnitario_Pendente = NovoPreco
+      Grid1_ValorUnitario_Pendente_Definido = True
       
-      ' Como a coluna Vr. Unitário é editável, o grid NÃO chama GetColumnValue para ela
-      ' Precisamos forçar a atualização diretamente no recordset
+      ' Como coluna 9 está bound, precisa atualizar no recordset para aparecer imediatamente
       On Error Resume Next
-      If Grid(1).Status = ACAO_INCLUINDO Then
-         ' Em modo de inclusão, atualiza o recordset diretamente
-         If Not Pecas_do_Orcamento Is Nothing Then
-            If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
-               ' Está em modo Edit? Se sim, atualiza
-               Pecas_do_Orcamento![Valor Unitário] = NovoPreco
-               Debug.Print "[GRID 1 - PEÇAS] Pecas_do_Orcamento![Valor Unitário] forçado=" & NovoPreco
+      If Not Pecas_do_Orcamento Is Nothing Then
+         If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+            Pecas_do_Orcamento![Valor Unitário] = NovoPreco
+            Debug.Print "[IniApDaCol] TROCA DETECTADA - Atualizou Valor Unitário no recordset=" & NovoPreco
+            
+            ' Se está em modo de edição (Status=3), precisa forçar refresh
+            ' porque o grid tem cópia dos dados em memória
+            If Grid(1).Status = 3 Then ' ACAO_EDITANDO
+               If Not Grid1_ForcandoRefresh Then
+                  Debug.Print "[IniApDaCol] Grid em modo edição - Forçando atualização visual"
+                  Grid1_ForcandoRefresh = True
+                  On Error GoTo TrataAtualizacaoErro
+                  Pecas_do_Orcamento.Update ' Salva a alteração no recordset
+                  Pecas_do_Orcamento.Edit   ' Re-entra em modo edição com dados atualizados
+                  Grid(1).ColumnValue(Grid(1).SelectedItem, 9) = NovoPreco
+                  Grid(1).Repaint -1
+TrataAtualizacaoSaida:
+                  Grid1_ForcandoRefresh = False
+                  On Error GoTo DeuErro
+               End If
             End If
          End If
       End If
       On Error GoTo DeuErro
+   GoTo ContinuaIniApDaCol
+TrataAtualizacaoErro:
+   Debug.Print "[IniApDaCol] ERRO ao forçar atualização visual: " & Err.Number & " - " & Err.Description
+   Resume TrataAtualizacaoSaida
    Else
-      Valor_Unitario = ColumnValue(9)
+      Dim ValorEmEdicao As Variant
+      Dim ValorConvertido As Double
+      Dim TemValorEmEdicao As Boolean
+
+      ValorEmEdicao = Null
+      Err.Clear
+      If UBound(ColumnValue) >= 9 Then
+         ValorEmEdicao = ColumnValue(9)
+      End If
+      If Err.Number <> 0 Then
+         ValorEmEdicao = Null
+         Err.Clear
+      End If
+      If Not IsNull(ValorEmEdicao) And Not IsEmpty(ValorEmEdicao) Then
+         Err.Clear
+         ValorConvertido = Round(CDbl(ValorEmEdicao), 2)
+         If Err.Number = 0 Then
+            Valor_Unitario = ValorConvertido
+            Grid1_ValorUnitario_Pendente = ValorConvertido
+            Grid1_ValorUnitario_Pendente_Definido = True
+            TemValorEmEdicao = True
+         Else
+            Debug.Print "[IniApDaCol] Falha ao converter ColumnValue(9)='" & ValorEmEdicao & "' -> Err=" & Err.Number & " - " & Err.Description
+            Err.Clear
+         End If
+      End If
+
+      If Not TemValorEmEdicao Then
+         If Grid1_ValorUnitario_Pendente_Definido Then
+            Valor_Unitario = Grid1_ValorUnitario_Pendente
+         ElseIf Not Pecas_do_Orcamento Is Nothing Then
+            If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+               If Not IsNull(Pecas_do_Orcamento![Valor Unitário]) Then
+                  Valor_Unitario = Round(CDbl(Pecas_do_Orcamento![Valor Unitário]), 2)
+                  Grid1_ValorUnitario_Pendente = Valor_Unitario
+                  Grid1_ValorUnitario_Pendente_Definido = True
+               Else
+                  Valor_Unitario = 0
+                  Grid1_ValorUnitario_Pendente_Definido = False
+               End If
+            Else
+               Valor_Unitario = 0
+               Grid1_ValorUnitario_Pendente_Definido = False
+            End If
+         Else
+            Valor_Unitario = 0
+            Grid1_ValorUnitario_Pendente_Definido = False
+         End If
+      End If
    End If
    
+ContinuaIniApDaCol:
    Valor_do_Desconto = ColumnValue(10)
    Valor_do_Frete = ColumnValue(11)
    Valor_da_Base_de_Calculo = ColumnValue(13)
@@ -21502,11 +22013,7 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
             vgRetVal = PesoTotal
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 10
-            vgRetVal = (InfoProdutos(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, _
-   Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, _
-   Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, _
-   Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
-   Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal, "Valor Unitário"))
+            vgRetVal = Valor_Unitario
             vgColumn = -1                   'flag para permitir definição desse novo valor para coluna do grid
          Case 13
             vgRetVal = (Round((Quantidade * Valor_Unitario), 2))
@@ -21551,6 +22058,13 @@ Private Function ExecutaGrid3(ColumnValue() As Variant, ByVal vgOq As Integer, O
          Case 4
             CFOP = IIf(Fatura_Proforma, 7101, 0)
             vgRetVal = CFOP
+         Case 10
+            If Grid3_ValorUnitario_Pendente_Definido Then
+               vgRetVal = Grid3_ValorUnitario_Pendente
+            Else
+               vgRetVal = Null
+            End If
+            Debug.Print "[GRID 3 - PRODUTOS] DEFAULTDASCOLUNAS Case 10 - Retornando ValorUnitario=" & IIf(Grid3_ValorUnitario_Pendente_Definido, Format$(Grid3_ValorUnitario_Pendente, "0.00"), "[sem valor]")
       End Select
    ElseIf vgOq = PEGAFILTRODASCOLUNAS Then
       On Error Resume Next
@@ -21664,12 +22178,21 @@ IniApDaCol:
    Dim Sequencia_Nova As Long
    Dim rs_MP As GRecordSet
    Dim TrocaDetectada As Boolean
+   Dim NovoPrecoProd As Double
+   Dim ValorEmEdicao As Variant
+   Dim ValorConvertido As Double
+   Dim TemValorEmEdicao As Boolean
+
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
    TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Anterior)
-   
-   ' Atualiza tracker de sequência
+
+   If Seq_Produto_Anterior = 0 And Sequencia_Nova = 0 Then
+      Grid3_ValorUnitario_Pendente = 0
+      Grid3_ValorUnitario_Pendente_Definido = False
+   End If
+
    Seq_Produto_Anterior = Sequencia_Nova
-   
+
    Sequencia_do_Produto = Sequencia_Nova
    CST = ColumnValue(3)
    CFOP = ColumnValue(4)
@@ -21677,6 +22200,99 @@ IniApDaCol:
    Quantidade = ColumnValue(7)
    PesoTotal = ColumnValue(9)
    Valor_Unitario = ColumnValue(10)
+   TemValorEmEdicao = False
+
+   If TrocaDetectada And Sequencia_Nova > 0 Then
+      NovoPrecoProd = Round(InfoProdutos(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, _
+   Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, _
+   Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, _
+   Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
+   Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal, "Valor Unitário"), 2)
+      ColumnValue(10) = NovoPrecoProd
+      Valor_Unitario = NovoPrecoProd
+      Grid3_ValorUnitario_Pendente = NovoPrecoProd
+      Grid3_ValorUnitario_Pendente_Definido = True
+
+      If Not Produtos_do_Orcamento Is Nothing Then
+         If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+            Produtos_do_Orcamento![Valor Unitário] = NovoPrecoProd
+            Debug.Print "[IniApDaCol][Grid3] TROCA DETECTADA - Valor Unitário atualizado para " & Format$(NovoPrecoProd, "0.00")
+            If Grid(3).Status = 3 Then
+               If Not Grid3_ForcandoRefresh Then
+                  Grid3_ForcandoRefresh = True
+                  On Error GoTo TrataAtualizacaoErro_Grid3
+                  Produtos_do_Orcamento.Update
+                  Produtos_do_Orcamento.Edit
+                  Grid(3).ColumnValue(Grid(3).SelectedItem, 10) = NovoPrecoProd
+                  Grid(3).Repaint -1
+TrataAtualizacaoSaida_Grid3:
+                  Grid3_ForcandoRefresh = False
+                  On Error GoTo DeuErro
+               End If
+            End If
+         End If
+      End If
+      On Error GoTo DeuErro
+   GoTo ContinuaIniApDaCol_Grid3
+TrataAtualizacaoErro_Grid3:
+   Debug.Print "[IniApDaCol][Grid3] ERRO ao forçar atualização visual: " & Err.Number & " - " & Err.Description
+   Resume TrataAtualizacaoSaida_Grid3
+   Else
+      ValorEmEdicao = Null
+      Err.Clear
+      If UBound(ColumnValue) >= 10 Then
+         ValorEmEdicao = ColumnValue(10)
+      End If
+      If Err.Number <> 0 Then
+         ValorEmEdicao = Null
+         Err.Clear
+      End If
+
+      If Not IsNull(ValorEmEdicao) And Not IsEmpty(ValorEmEdicao) Then
+         Err.Clear
+         ValorConvertido = Round(CDbl(ValorEmEdicao), 2)
+         If Err.Number = 0 Then
+            Valor_Unitario = ValorConvertido
+            Grid3_ValorUnitario_Pendente = ValorConvertido
+            Grid3_ValorUnitario_Pendente_Definido = True
+            TemValorEmEdicao = True
+         Else
+            Debug.Print "[IniApDaCol][Grid3] Falha ao converter ColumnValue(10)='" & ValorEmEdicao & "' -> Err=" & Err.Number & " - " & Err.Description
+            Err.Clear
+         End If
+      End If
+
+      If Not TemValorEmEdicao Then
+         If Grid3_ValorUnitario_Pendente_Definido Then
+            Valor_Unitario = Grid3_ValorUnitario_Pendente
+         ElseIf Not Produtos_do_Orcamento Is Nothing Then
+            If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+               If Not IsNull(Produtos_do_Orcamento![Valor Unitário]) Then
+                  Valor_Unitario = Round(CDbl(Produtos_do_Orcamento![Valor Unitário]), 2)
+                  Grid3_ValorUnitario_Pendente = Valor_Unitario
+                  Grid3_ValorUnitario_Pendente_Definido = True
+               Else
+                  Valor_Unitario = 0
+                  Grid3_ValorUnitario_Pendente = 0
+                  Grid3_ValorUnitario_Pendente_Definido = False
+               End If
+            Else
+               Valor_Unitario = 0
+               Grid3_ValorUnitario_Pendente = 0
+               Grid3_ValorUnitario_Pendente_Definido = False
+            End If
+         Else
+            Valor_Unitario = 0
+            Grid3_ValorUnitario_Pendente = 0
+            Grid3_ValorUnitario_Pendente_Definido = False
+         End If
+      End If
+
+      Valor_Unitario = Round(Valor_Unitario, 2)
+      ColumnValue(10) = Valor_Unitario
+   End If
+
+ContinuaIniApDaCol_Grid3:
    Valor_do_Desconto = ColumnValue(11)
    Valor_do_Frete = ColumnValue(12)
    Valor_da_Base_de_Calculo = ColumnValue(14)
@@ -21710,16 +22326,9 @@ IniApDaCol:
    Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
    Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal, "Peso")
    PesoTotal = Peso * Quantidade
-   
-   ' Detecta troca de item e reseta valor unitário (após calcular peso)
-   If TrocaDetectada Then
-      Valor_Unitario = InfoProdutos(Bc_pis, Valor_do_Tributo, Sequencia_do_Orcamento, Sequencia_do_Produto_Orcamento, Sequencia_do_Produto, Quantidade, _
-      Valor_Unitario, Valor_Total, Valor_do_IPI, Valor_do_ICMS, Aliquota_do_IPI, Aliquota_do_ICMS, _
-      Percentual_da_Reducao, Diferido, Valor_da_Base_de_Calculo, Valor_do_PIS, Valor_do_Cofins, IVA, _
-      Base_de_Calculo_ST, Valor_ICMS_ST, CFOP, CST, Aliquota_do_ICMS_ST, Valor_do_Frete, _
-      Valor_do_Desconto, Valor_Anterior, Bc_cofins, Aliq_do_pis, Aliq_do_cofins, Peso, PesoTotal, "Valor Unitário")
-      ColumnValue(10) = Valor_Unitario
-   End If
+
+   Debug.Print "[IniApDaCol][Grid3] Valor Unitário corrente = " & Format$(Valor_Unitario, "0.00")
+
    If Err Then Err.Clear
    On Error GoTo DeuErro
    Return
@@ -22204,6 +22813,13 @@ End Sub
 
 'evento - quer pegar valores para cada célula
 Private Sub Grid_GetColumnLocked(Index As Integer, ByVal vgRow As Long, ByVal vgCol As Long, vgColumns() As Variant, ByRef FormField As FormataCampos, ByRef vgLocked As Boolean)
+
+   ' Permite edição manual da coluna 9 (Vr. Unitário) do Grid 1 mesmo sendo ReadOnly
+   If Index = 1 And vgCol = 9 Then
+      Debug.Print "[GetColumnLocked] Grid 1, Col 9 - DESBLOQUEANDO para edição"
+      vgLocked = False
+      Exit Sub
+   End If
 
    If ColunaEhImposto(Index, vgCol) Then
       vgLocked = Not PodeEditarImpostos()
