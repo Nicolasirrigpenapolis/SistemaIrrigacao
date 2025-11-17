@@ -20449,54 +20449,42 @@ Private Sub Grid_BeforeEditRecord(Index As Integer, ByVal vgItem As Long, vgColu
    End If
    Select Case Index
       Case 0
-         ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
-      Case 1
-         ' ANTES de editar, força atualização do Valor Unitário no recordset se houver troca de peça
-         ' Importante: não sobrescrever o valor quando o usuário está editando a própria coluna 9
-         If vgColumn <> 9 Then
-            On Error Resume Next
-            If Not Pecas_do_Orcamento Is Nothing Then
-               If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
-                  Dim SeqProduto_Atual As Long
-                  Dim ValorUnitario_Novo As Double
-                  
-                  ' Pega a sequência do produto atual
-                  If IsNull(Pecas_do_Orcamento![Seqüência do Produto]) Then
-                     SeqProduto_Atual = 0
-                  Else
-                     SeqProduto_Atual = Pecas_do_Orcamento![Seqüência do Produto]
-                  End If
-                  
-                  Debug.Print "[BeforeEditRecord] SeqProduto_Atual=" & SeqProduto_Atual & " | vgColumn=" & vgColumn
-                  
-                  ' Se há produto, busca o valor unitário atualizado
-                  If SeqProduto_Atual > 0 Then
-                     ValorUnitario_Novo = Round(InfoPecas(0, Orcamento![Seqüência do Orçamento], SeqProduto_Atual, _
-                                                   0, 0, 0, 0, 0, 0, 0, 0, 0, False, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Valor Unitário"), 2)
-                     
-                     ' Atualiza no recordset e no buffer do grid antes de exibir
-                     Pecas_do_Orcamento![Valor Unitário] = ValorUnitario_Novo
-                     Grid1_ValorUnitario_Pendente = ValorUnitario_Novo
-                     Grid1_ValorUnitario_Pendente_Definido = True
-                     Grid1_ValorUnitario_Pendente_OrigemManual = False
-                     If IsArray(vgColumns) Then
-                        On Error Resume Next
-                        If UBound(vgColumns) >= 9 Then
-                           vgColumns(9) = ValorUnitario_Novo
-                        End If
-                        On Error GoTo 0
-                     End If
-                     Debug.Print "[BeforeEditRecord] Atualizou Valor Unitário no recordset=" & ValorUnitario_Novo
-                  End If
+         On Error Resume Next
+         Seq_Conjunto_Anterior = 0
+         If Not Conjuntos_do_Orcamento Is Nothing Then
+            If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+               If Not IsNull(Conjuntos_do_Orcamento![Seqüência do Conjunto]) Then
+                  Seq_Conjunto_Anterior = Conjuntos_do_Orcamento![Seqüência do Conjunto]
                End If
             End If
-            On Error GoTo 0
          End If
-         
+         On Error GoTo 0
+         ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
+      Case 1
+         On Error Resume Next
+         Seq_Produto_Pecas_Anterior = 0
+         If Not Pecas_do_Orcamento Is Nothing Then
+            If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+               If Not IsNull(Pecas_do_Orcamento![Seqüência do Produto]) Then
+                  Seq_Produto_Pecas_Anterior = Pecas_do_Orcamento![Seqüência do Produto]
+               End If
+            End If
+         End If
+         On Error GoTo 0
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 2
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 3
+         On Error Resume Next
+         Seq_Produto_Anterior = 0
+         If Not Produtos_do_Orcamento Is Nothing Then
+            If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+               If Not IsNull(Produtos_do_Orcamento![Seqüência do Produto]) Then
+                  Seq_Produto_Anterior = Produtos_do_Orcamento![Seqüência do Produto]
+               End If
+            End If
+         End If
+         On Error GoTo 0
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
       Case 4
          ExecutaGrid Index, Grid(Index).GetColumnValues(vgItem), PROCESSOS_INVERSOS, vgItem, 0, vgIsValid, vgColumn, vgErrorMessage
@@ -21240,13 +21228,15 @@ IniApDaCol:
    On Error Resume Next
    Dim Sequencia_Nova As Long
    Dim TrocaDetectada As Boolean
+   Dim EstaEditandoGrid0 As Boolean
    Dim NovoPrecoConj As Double
    Dim ValorEmEdicao As Variant
    Dim ValorConvertido As Double
    Dim TemValorEmEdicao As Boolean
 
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
-   TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Conjunto_Anterior)
+   EstaEditandoGrid0 = (Grid(0).Status = ACAO_INCLUINDO Or Grid(0).Status = ACAO_EDITANDO)
+   TrocaDetectada = EstaEditandoGrid0 And (Sequencia_Nova <> Seq_Conjunto_Anterior)
 
    If Seq_Conjunto_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid0_ValorUnitario_Pendente = 0
@@ -21254,7 +21244,9 @@ IniApDaCol:
       Grid0_ValorUnitario_Pendente_OrigemManual = False
    End If
 
-   Seq_Conjunto_Anterior = Sequencia_Nova
+   If Not EstaEditandoGrid0 Then
+      Seq_Conjunto_Anterior = Sequencia_Nova
+   End If
 
    Sequencia_do_Conjunto = Sequencia_Nova
    CST = ColumnValue(2)
@@ -21272,11 +21264,13 @@ IniApDaCol:
       Grid0_ValorUnitario_Pendente_Definido = True
    Grid0_ValorUnitario_Pendente_OrigemManual = False
 
-      If Not Conjuntos_do_Orcamento Is Nothing Then
-         If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
-            Conjuntos_do_Orcamento![Valor Unitário] = NovoPrecoConj
-            Debug.Print "[IniApDaCol][Grid0] TROCA DETECTADA - Valor Unitário atualizado para " & Format$(NovoPrecoConj, "0.00")
-            If Grid(0).Status = 3 Then
+      Debug.Print "[IniApDaCol][Grid0] TROCA DETECTADA - Valor Unitário calculado = " & Format$(NovoPrecoConj, "0.00")
+
+      If Grid(0).Status = ACAO_EDITANDO Then
+         If Not Conjuntos_do_Orcamento Is Nothing Then
+            If Not Conjuntos_do_Orcamento.EOF And Not Conjuntos_do_Orcamento.BOF Then
+               Conjuntos_do_Orcamento![Valor Unitário] = NovoPrecoConj
+               Debug.Print "[IniApDaCol][Grid0] Persistindo novo valor no registro em edição"
                If Not Grid0_ForcandoRefresh Then
                   Grid0_ForcandoRefresh = True
                   On Error GoTo TrataAtualizacaoErro_Grid0
@@ -21353,6 +21347,10 @@ TrataAtualizacaoErro_Grid0:
 
       Valor_Unitario = Round(Valor_Unitario, 2)
       ColumnValue(7) = Valor_Unitario
+   End If
+
+   If EstaEditandoGrid0 Then
+      Seq_Conjunto_Anterior = Sequencia_Nova
    End If
 
 ContinuaIniApDaCol:
@@ -21703,11 +21701,13 @@ IniApDaCol:
    Dim Sequencia_Nova As Long
    Dim TrocaDetectada As Boolean
    Dim NovoPreco As Double
+   Dim EstaEditandoGrid1 As Boolean
    
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
+   EstaEditandoGrid1 = (Grid(1).Status = ACAO_INCLUINDO Or Grid(1).Status = ACAO_EDITANDO)
    
-   ' Detecta troca de item comparando com o tracker
-   TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Pecas_Anterior)
+   ' Detecta troca de item comparando com o tracker somente em modo de edição/inclusão
+   TrocaDetectada = EstaEditandoGrid1 And (Sequencia_Nova <> Seq_Produto_Pecas_Anterior)
    
    ' Se começou uma nova linha (Seq_Anterior = 0), limpa o valor unitário pendente
    If Seq_Produto_Pecas_Anterior = 0 And Sequencia_Nova = 0 Then
@@ -21716,8 +21716,10 @@ IniApDaCol:
       Grid1_ValorUnitario_Pendente_OrigemManual = False
    End If
    
-   ' Atualiza tracker de sequência
-   Seq_Produto_Pecas_Anterior = Sequencia_Nova
+   ' Quando não está editando, manter o tracker sincronizado com o valor em exibição
+   If Not EstaEditandoGrid1 Then
+      Seq_Produto_Pecas_Anterior = Sequencia_Nova
+   End If
    
    Sequencia_do_Produto = Sequencia_Nova
    CST = ColumnValue(2)
@@ -21735,16 +21737,15 @@ IniApDaCol:
       Grid1_ValorUnitario_Pendente_Definido = True
    Grid1_ValorUnitario_Pendente_OrigemManual = False
       
-      ' Como coluna 9 está bound, precisa atualizar no recordset para aparecer imediatamente
-      On Error Resume Next
-      If Not Pecas_do_Orcamento Is Nothing Then
-         If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
-            Pecas_do_Orcamento![Valor Unitário] = NovoPreco
-            Debug.Print "[IniApDaCol] TROCA DETECTADA - Atualizou Valor Unitário no recordset=" & NovoPreco
-            
-            ' Se está em modo de edição (Status=3), precisa forçar refresh
-            ' porque o grid tem cópia dos dados em memória
-            If Grid(1).Status = 3 Then ' ACAO_EDITANDO
+      Debug.Print "[IniApDaCol] TROCA DETECTADA - Valor Unitário calculado (peças)=" & NovoPreco
+
+      ' Como coluna 9 está bound, só persistimos no recordset quando realmente estamos editando um registro existente
+      If Grid(1).Status = ACAO_EDITANDO Then
+         On Error Resume Next
+         If Not Pecas_do_Orcamento Is Nothing Then
+            If Not Pecas_do_Orcamento.EOF And Not Pecas_do_Orcamento.BOF Then
+               Pecas_do_Orcamento![Valor Unitário] = NovoPreco
+               Debug.Print "[IniApDaCol] Persistindo novo valor diretamente no recordset de peças"
                If Not Grid1_ForcandoRefresh Then
                   Debug.Print "[IniApDaCol] Grid em modo edição - Forçando atualização visual"
                   Grid1_ForcandoRefresh = True
@@ -21819,6 +21820,10 @@ TrataAtualizacaoErro:
             Grid1_ValorUnitario_Pendente_OrigemManual = False
          End If
       End If
+   End If
+   
+   If EstaEditandoGrid1 Then
+      Seq_Produto_Pecas_Anterior = Sequencia_Nova
    End If
    
 ContinuaIniApDaCol:
@@ -22297,13 +22302,15 @@ IniApDaCol:
    Dim Sequencia_Nova As Long
    Dim rs_MP As GRecordSet
    Dim TrocaDetectada As Boolean
+   Dim EstaEditandoGrid3 As Boolean
    Dim NovoPrecoProd As Double
    Dim ValorEmEdicao As Variant
    Dim ValorConvertido As Double
    Dim TemValorEmEdicao As Boolean
 
    Sequencia_Nova = val(Parse$(CStr(ColumnValue(1)), Chr$(1), 1))
-   TrocaDetectada = (Sequencia_Nova > 0 And Sequencia_Nova <> Seq_Produto_Anterior)
+   EstaEditandoGrid3 = (Grid(3).Status = ACAO_INCLUINDO Or Grid(3).Status = ACAO_EDITANDO)
+   TrocaDetectada = EstaEditandoGrid3 And (Sequencia_Nova <> Seq_Produto_Anterior)
 
    If Seq_Produto_Anterior = 0 And Sequencia_Nova = 0 Then
       Grid3_ValorUnitario_Pendente = 0
@@ -22311,7 +22318,9 @@ IniApDaCol:
       Grid3_ValorUnitario_Pendente_OrigemManual = False
    End If
 
-   Seq_Produto_Anterior = Sequencia_Nova
+   If Not EstaEditandoGrid3 Then
+      Seq_Produto_Anterior = Sequencia_Nova
+   End If
 
    Sequencia_do_Produto = Sequencia_Nova
    CST = ColumnValue(3)
@@ -22334,11 +22343,13 @@ IniApDaCol:
       Grid3_ValorUnitario_Pendente_Definido = True
    Grid3_ValorUnitario_Pendente_OrigemManual = False
 
-      If Not Produtos_do_Orcamento Is Nothing Then
-         If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
-            Produtos_do_Orcamento![Valor Unitário] = NovoPrecoProd
-            Debug.Print "[IniApDaCol][Grid3] TROCA DETECTADA - Valor Unitário atualizado para " & Format$(NovoPrecoProd, "0.00")
-            If Grid(3).Status = 3 Then
+      Debug.Print "[IniApDaCol][Grid3] TROCA DETECTADA - Valor Unitário calculado = " & Format$(NovoPrecoProd, "0.00")
+
+      If Grid(3).Status = ACAO_EDITANDO Then
+         If Not Produtos_do_Orcamento Is Nothing Then
+            If Not Produtos_do_Orcamento.EOF And Not Produtos_do_Orcamento.BOF Then
+               Produtos_do_Orcamento![Valor Unitário] = NovoPrecoProd
+               Debug.Print "[IniApDaCol][Grid3] Persistindo novo valor no registro em edição"
                If Not Grid3_ForcandoRefresh Then
                   Grid3_ForcandoRefresh = True
                   On Error GoTo TrataAtualizacaoErro_Grid3
@@ -22415,6 +22426,10 @@ TrataAtualizacaoErro_Grid3:
 
       Valor_Unitario = Round(Valor_Unitario, 2)
       ColumnValue(10) = Valor_Unitario
+   End If
+
+   If EstaEditandoGrid3 Then
+      Seq_Produto_Anterior = Sequencia_Nova
    End If
 
 ContinuaIniApDaCol_Grid3:
